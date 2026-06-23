@@ -20,7 +20,8 @@ Mira：
 After user confirmation:
 
 - delete target `.agentpal/`
-- remove only the `BEGIN AGENTPAL WORKGROUP` / `END AGENTPAL WORKGROUP` block from root `AGENTS.md`
+- remove only the `<!-- BEGIN AGENTPAL WORKGROUP -->` / `<!-- END AGENTPAL WORKGROUP -->` block from root `AGENTS.md`
+- remove the same block from root `CLAUDE.md` when present
 - if root `AGENTS.md` becomes empty or did not exist, write the non-workgroup deactivation marker
 - clean AgentPal registered project records
 - clear active project state if it points to that project

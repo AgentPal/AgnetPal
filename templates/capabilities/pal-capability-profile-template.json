@@ -1,0 +1,21 @@
+{
+  "schema": "agentpal.pal-capability-profile.v0.1",
+  "id": "pal-id",
+  "name": "Pal Name",
+  "type": "pal-capability-profile",
+  "status": "template",
+  "source": "contacts-and-registry-plus-pal-pack",
+  "version": "0.1",
+  "non_binding": true,
+  "pal_pack_path": "pals/<pal-directory>",
+  "role": "role-name",
+  "can_contribute": [],
+  "cannot_do": [
+    "execute runtime actions directly"
+  ],
+  "context_needs": [],
+  "output_contract": "pals/<pal-directory>/core/output-contract.md",
+  "verification_role_candidates": [],
+  "risk_notes": [],
+  "profile_note": "Pal capability profiles inform AI Judgement but do not create fixed routes."
+}

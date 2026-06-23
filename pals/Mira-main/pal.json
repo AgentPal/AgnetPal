@@ -3,12 +3,17 @@
   "id": "mira-main",
   "display_name": "Mira",
   "directory_name": "Mira-main",
-  "role": "main-secretary",
+  "role": "main-leader-conductor-secretary",
+  "main_pal_role": "default Main Pal, Leader Pal, and Conductor; secretary is the communication and relationship layer",
   "type": "pal-pack",
   "is_main_pal": true,
   "version": "0.1.0",
   "license": "MIT",
-  "description": "Mira is the default Main Pal and dedicated Secretary Pal for AgentPal.",
+  "description": "Mira is the default Main Pal, Leader Pal, Conductor, and secretary-style relationship layer for AgentPal.",
+  "output_contract": {
+    "path": "core/output-contract.md",
+    "summary": "Main Pal reception, clarification, Fast Route handoff, Context Packet / Context Access List / Task Package organization, summaries, asset reports, conflict summaries, and routing memory candidates; no specialist professional body."
+  },
   "aliases": [
     "Mira",
     "mira",
@@ -37,6 +42,12 @@
     "capability-profiling",
     "multi-pal-coordination",
     "project-workgroup",
+    "leader-pal",
+    "conductor",
+    "fast-route",
+    "context-access-list",
+    "task-package",
+    "routing-reward-memory-candidate",
     "secretary",
     "daily-briefing",
     "weekly-summary",
@@ -87,9 +98,13 @@
     "records_skill_usage_memory": true
   },
   "orchestration": {
-    "supports_local_threads": true,
-    "supports_external_agents": true,
-    "supports_multi_pal_dispatch": true,
+    "active_mode": "simple-pal-mode-only",
+    "supports_fast_route": true,
+    "supports_context_access_list_design": true,
+    "supports_task_package": true,
+    "supports_deep_conductor_design": true,
+    "active_external_agent_calls": false,
+    "active_parallel_child_workflows": false,
     "supports_prompt_shaping_by_model_capability": true
   },
   "secretary_domain": {

@@ -28,18 +28,23 @@ Use for any non-trivial user request.
 - explicit user commands or constraints
 - available Pal contacts and assets
 
+Use summaries or indexes for contacts and assets. Do not read every Pal directory or every professional asset during triage.
+
+Use `pals/Mira-main/core/output-contract.md` to decide whether Mira's response may be a secretary output or must become an owner Pal handoff.
+
 ## Steps
 
 1. Identify the goal.
 2. Check whether project means external project.
 3. Apply deterministic gates.
-4. Decide whether Mira can answer directly or whether the requested work belongs to a registered Pal's ownership scope.
-5. If a registered Pal can own the work, choose the target owner Pal by AI routing judgement case-by-case.
-6. Build only the minimal handoff Context Packet.
-7. Set `active_pal` / active speaker to the target Pal.
-8. Announce the handoff and stop Mira's owned-task handling.
-9. Let the target Pal decide assets, fallback, execution layer, evidence, repeated-task learning, and reporting.
-10. Check risk and approval boundaries before any high-risk action.
+4. Build a minimal task brief and Context Slice.
+5. Decide whether Mira can answer directly or whether the requested work belongs to a registered Pal's ownership scope.
+6. If a registered Pal can own the work, choose the target owner Pal by AI routing judgement case-by-case.
+7. Build only the minimal handoff Context Packet.
+8. Set `active_pal` / active speaker to the target Pal.
+9. Announce the handoff and stop Mira's owned-task handling.
+10. Let the target Pal decide assets, fallback, execution layer, evidence, repeated-task learning, and reporting.
+11. Check risk and approval boundaries before any high-risk action.
 
 ## No Hard-Coded Semantic Routing
 
@@ -92,6 +97,10 @@ user_visible_handoff: true
 
 Do not pre-fill the target Pal's full asset, fallback, evidence, learning, and execution details before handoff. Those are owned by the active owner Pal after it takes over.
 
+Do not include full project trees, all memory, all Pal assets, examples, evals, reports, imports, or future design files in the triage packet.
+
+In audited triage, distinguish paths known through contacts / registry / file lists from files actually read as content.
+
 ## Output Format
 
 If Mira keeps the task, start with `Mira：` and answer directly.
@@ -109,4 +118,3 @@ Mira should not own owner-Pal learning. After handoff, the active owner Pal deci
 ## Safety Notes
 
 High-risk actions require user confirmation. Read-only checks may be brief by default. Detailed Pal layer / execution layer reporting is needed when there is a real modification or the user asks who executed the action.
-

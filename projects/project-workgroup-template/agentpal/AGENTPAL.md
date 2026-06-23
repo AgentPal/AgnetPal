@@ -6,9 +6,15 @@ When copied into a real external project, rename this folder to `.agentpal/`.
 
 Ordinary messages go to Mira. Specialist Pals do not listen by default.
 
+Runtime hint is stored in `.agentpal/project.json` as `runtime_hint`. Expected values include `claude-code`, `codex`, `generic-cli`, `codewhale`, `gemini-cli`, or `unknown`.
+
+Current mode is Simple Pal Mode only. Do not activate Subagent Mode or external Agent orchestration from this binding.
+
 Project means the external project that owns this `.agentpal/` folder.
 
 `active_project_root` is the external user project directory. `agentpal_workspace_root` is only a Pal source and routing reference.
+
+For Pal discovery, direct Pal calls, owner routing, and selected Pal asset loading, `agentpal_workspace_root` is the source for contacts / registry and selected Pal files. This bounded Pal-source read does not make AgentPal workspace part of the current project.
 
 Current project means `active_project_root`. Do not list AgentPal workspace as project root. Do not treat the AgentPal workspace as part of this project.
 
@@ -18,11 +24,15 @@ Replies should include the speaking Pal prefix, such as `Mira：`, `Atlas：`, o
 
 Owned tasks may be delegated through Context Packet after case-by-case AI routing judgement. No hard-coded semantic routing. Pal capability reference is not a route map.
 
-The external project root `AGENTS.md` must include the protected `BEGIN AGENTPAL WORKGROUP` / `END AGENTPAL WORKGROUP` block. Codex sessions in this external project should read root `AGENTS.md`, then `.agentpal/INIT_AGENTPAL_PROJECT_PROMPT.md`, `.agentpal/project.json`, `.agentpal/AGENTPAL.md`, and `.agentpal/PAL_GROUP.md`.
+The external project root `AGENTS.md` must include the protected `<!-- BEGIN AGENTPAL WORKGROUP -->` / `<!-- END AGENTPAL WORKGROUP -->` block. Claude Code projects may also include the same block in root `CLAUDE.md`. Runtime sessions in this external project should read the root instruction file, then `.agentpal/INIT_AGENTPAL_PROJECT_PROMPT.md`, `.agentpal/project.json`, `.agentpal/AGENTPAL.md`, and `.agentpal/PAL_GROUP.md`.
 
 If a session has not loaded AgentPal rules yet, read `.agentpal/INIT_AGENTPAL_PROJECT_PROMPT.md` and enter AgentPal project-bound mode.
 
 Do not copy all AgentPal Pals into this project.
+
+Do not import or paste the full AgentPal `AGENTS.md`, `README.md`, or whole workspace into the project instruction file. Use the lightweight block and load selected Pal assets on demand.
+
+Do not look inside this project's `.agentpal/` folder for full Pal portraits, output templates, or professional assets. The binding points to the AgentPal workspace where contacts / registry and Pal Packs live.
 
 This binding is removable. Removing the workgroup should delete `.agentpal/` and remove only the protected AgentPal block from root `AGENTS.md`; do not delete project source or user-authored AGENTS content.
 
@@ -33,6 +43,8 @@ Do not say two project roots. Do not answer ordinary project questions by saying
 Capability descriptions for Atlas, Rhea, Quinn, Nova, Vega, Morgan, and Harper are non-binding examples, not route rules.
 
 Use project files as shared knowledge only when a task requires them. Sensitive files, credentials, tokens, secrets, private customer data, and unrelated private material are not shared by default.
+
+For Claude Code, `.claude/settings.local.json` may grant file access to the AgentPal workspace through `permissions.additionalDirectories`. That setting grants access only; it does not mean AgentPal files are preloaded.
 
 When real file, command, system, or tool execution occurs, report Pal layer and Execution layer separately. If Codex performs the action, call it `当前 Codex 执行层`.
 

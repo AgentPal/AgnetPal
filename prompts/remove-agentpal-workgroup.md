@@ -30,12 +30,15 @@ Mira：
 
 After user confirmation, remove only:
 1. The target project's `.agentpal/` directory.
-2. The target root `AGENTS.md` block from `BEGIN AGENTPAL WORKGROUP` to `END AGENTPAL WORKGROUP`.
-3. If root `AGENTS.md` becomes empty or did not exist, write the non-workgroup deactivation marker from `templates/project-binding/agentpal-removed-agents-template.md`.
-4. The matching record in AgentPal `projects/registered-projects.json`.
-5. The matching entry in `projects/registered-projects.md`, or mark it removed.
-6. The matching AgentPal project memory under `memory/projects/`, archived by default.
-7. The matching `state/active-project.md` state if it is the active project.
+2. The target root `AGENTS.md` block from `<!-- BEGIN AGENTPAL WORKGROUP -->` to `<!-- END AGENTPAL WORKGROUP -->`.
+3. If present in a Claude Code project, the target root `CLAUDE.md` block from `<!-- BEGIN AGENTPAL WORKGROUP -->` to `<!-- END AGENTPAL WORKGROUP -->`.
+4. Legacy bindings may use `BEGIN AGENTPAL WORKGROUP` / `END AGENTPAL WORKGROUP`; remove that protected block only if the HTML marker block is not present.
+5. If root `AGENTS.md` becomes empty or did not exist, write the non-workgroup deactivation marker from `templates/project-binding/agentpal-removed-agents-template.md`.
+6. For Claude Code, remove the AgentPal workspace path from `.claude/settings.local.json` `permissions.additionalDirectories`, preserving all other settings.
+7. The matching record in AgentPal `projects/registered-projects.json`.
+8. The matching entry in `projects/registered-projects.md`, or mark it removed.
+9. The matching AgentPal project memory under `memory/projects/`, archived by default.
+10. The matching `state/active-project.md` state if it is the active project.
 
 Do not delete:
 - external project source
@@ -46,6 +49,7 @@ Do not delete:
 - AgentPal `pals/`
 - other projects' `.agentpal/`
 - user-authored content outside the AgentPal protected AGENTS block
+- user-authored content outside the AgentPal protected CLAUDE block
 
 After successful removal, say:
 

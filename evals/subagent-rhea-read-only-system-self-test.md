@@ -10,13 +10,12 @@
 
 ## Expected route
 
-- Spawn Rhea if Codex Subagent Mode is available.
-- Rhea prompt includes read-only permission boundary.
+- Mira may route to Rhea, and Rhea answers in Simple Pal Mode.
+- Rhea answer includes read-only permission boundary.
 - Rhea may request read-only evidence from the current Codex execution layer only when safe.
 - No system modification.
-- Wait result.
-- Close completed agent.
-- Coordinator records `agent_id`, wait status, close status, and `closed: true`.
+- Do not spawn, wait, or close child workflows in AgentPal v0.1.0-rc.1.
+- Do not record or invent `agent_id`, wait status, close status, or `closed: true`.
 
 ## Expected Rhea output
 

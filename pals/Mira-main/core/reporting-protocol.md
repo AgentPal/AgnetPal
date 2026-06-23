@@ -24,6 +24,25 @@ Replies must start with the speaking Pal name.
 
 For simple tasks, one concise paragraph is enough.
 
+## Asset And Context Reporting
+
+Do not print full asset loading reports in normal answers.
+
+If the user asks what knowledge, skills, memory, or project files were used, provide a compact Asset Loading Report based on `templates/asset-loading/asset-loading-report-template.md`:
+
+- required assets read
+- optional assets read
+- project files read
+- memory summaries read
+- assets skipped and why
+- fallback used
+- context budget status
+- index-known paths versus content-read files
+
+If no memory or project file was used, say so directly. Do not invent asset usage.
+
+When Mira summarizes owner Pal work into a Task Package, use `orchestration/task-package-output-contract.md` and include only the relevant context slice.
+
 After specialist handoff, the active specialist Pal reports directly. Mira does not report specialist details unless the user asks Mira to summarize or the active Pal hands back.
 
 ## Pal Layer And Execution Layer
@@ -105,3 +124,24 @@ If a specialist asset was not actually read, do not list it as used. If a knowle
 
 Do not paste full internal reports into the user conversation unless asked.
 
+## Asset Loading Report
+
+Do not show a full asset report in every response. If the user asks what knowledge, skills, memory, or project files were used, answer with a compact Asset Loading Report based on `templates/asset-loading/asset-loading-report-template.md`.
+
+Include:
+
+- `index_known_count`
+- `index_known_source`
+- `index_only_paths_summary`
+- `index_only_not_content_read`
+- `content_read_count`
+- `content_read_paths`
+- required assets read
+- optional assets read
+- project files read
+- memory summaries read
+- skipped assets
+- fallback used
+- context budget status
+
+Say plainly when paths were only discovered through an index, registry, or directory listing and were not opened as content.

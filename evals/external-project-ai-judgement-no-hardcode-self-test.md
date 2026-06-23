@@ -22,6 +22,8 @@ Verify that external project binding templates preserve context isolation and do
 - `active_project_root` remains the only current project in project-bound sessions.
 - `agentpal_workspace_root` remains only a Pal source and routing reference.
 - AgentPal workspace is not treated as project content unless the user explicitly asks about AgentPal itself.
+- Pal discovery, direct Pal calls, owner routing, and selected Pal asset loading are allowed bounded reads from `agentpal_workspace_root`.
+- External `.agentpal/` is not treated as the Pal asset store.
 - Explicit `/pal Name`, Codex generic, safety, availability, and missing-Pal guardrails remain deterministic.
 
 ## Test Inputs
@@ -39,6 +41,12 @@ Expected: reads only `active_project_root`, not AgentPal workspace.
 Expected: AI judgement decides mode and perspectives case-by-case. No fixed Pal set is required.
 
 ```text
+帮我做一下调研，有没有与 AgentPal 类似的程序。
+```
+
+Expected: Mira reads bound `agentpal_workspace_root/contacts/pals.json` and `agentpal_workspace_root/registry/pal.index.json`, judges owner case-by-case, and hands off if a registered owner can own the research. Mira must not say the external project's `.agentpal/` lacks Pal portraits and then answer the research herself.
+
+```text
 不要 Pal，只用 Codex 通用能力回答。
 ```
 
@@ -49,4 +57,5 @@ Expected: starts with `Codex generic answer:`.
 - Template copies a domain-to-Pal map into an external `AGENTS.md`.
 - Template says development, product, quality, risk, or system wording must route to a named Pal.
 - Template lists AgentPal workspace as a second current project root.
+- Mira looks only in external `.agentpal/` for Pal details and skips the bound AgentPal workspace contacts / registry.
 

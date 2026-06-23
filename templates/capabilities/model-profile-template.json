@@ -1,0 +1,19 @@
+{
+  "schema": "agentpal.model-profile.v0.1",
+  "id": "model-id",
+  "name": "Model Name",
+  "type": "model-profile",
+  "status": "template",
+  "source": "user-or-maintainer-provided",
+  "version": "0.1",
+  "non_binding": true,
+  "available_in": [],
+  "strengths": [],
+  "limits": [],
+  "reasoning_modes": [],
+  "default_reasoning": null,
+  "cost_tier": "unknown",
+  "latency_tier": "unknown",
+  "evidence_required": [],
+  "profile_note": "Template only. Do not treat this as a model benchmark."
+}

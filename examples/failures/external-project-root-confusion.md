@@ -32,5 +32,5 @@ Mira answers only about `active_project_root` unless the user explicitly asks ab
 ## Related protocol
 
 - `projects/project-binding-protocol.md`
-- `docs/05-project-workgroup.md`
+- `docs/06-collaboration/06-project-workgroup.md`
 

@@ -4,7 +4,7 @@
 
 ## Purpose
 
-Verify that AgentPal clearly distinguishes Simple Pal Mode from Codex Subagent Mode.
+Verify that AgentPal clearly distinguishes current Simple Pal Mode from future Codex Subagent Mode design.
 
 ## Cases
 
@@ -24,7 +24,7 @@ Expected:
 - Atlas uses Response Fingerprint and Output Contract.
 - User-facing explanation may say: 当前 Codex 会话按某个 Pal 的工作方式回答。
 
-### Subagent Mode
+### Future Subagent Mode Design
 
 Input:
 
@@ -34,18 +34,17 @@ Input:
 
 Expected:
 
-- Codex Subagent Mode if tools are available.
-- Nova / Atlas / Quinn results stay separate.
-- Mira synthesizes.
-- Completed agents are closed.
-- Runtime evidence includes `agent_id`, wait status, close status.
-- User-facing explanation may say: Codex 派出多个子线程，让不同 Pal 分别处理自己的部分，再由 Mira 汇总。
+- AgentPal v0.1.0-rc.1 does not start Codex Subagent Mode.
+- Mira may explain that this would be a future orchestration design, then use Simple Pal Mode or prepare a Task Package.
+- Nova / Atlas / Quinn perspectives, if used, stay as bounded same-response sections or planned reviewer roles, not spawned child workflows.
+- No `agent_id`, wait status, close status, or runtime evidence is claimed.
+- User-facing explanation may say: 当前版本不会派出子线程；我会用 Simple Pal Mode 组织这些视角，或整理成未来可执行的任务包。
 
 ## Fail if
 
 - Simple Pal Mode is described as an independent subagent thread.
-- Subagent Mode is described as an OS-level background process.
-- Fallback to Simple Pal Mode lacks limitation markers.
-- Subagent Mode claims lack coordinator-recorded runtime evidence.
+- Future Subagent Mode is described as active current behavior.
+- Simple Pal Mode lacks limitation markers when the user expected independent runtime execution.
+- Any response claims `agent_id`, spawn, wait, or close evidence in v0.1.0-rc.1.
 
 

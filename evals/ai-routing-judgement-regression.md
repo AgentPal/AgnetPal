@@ -4,13 +4,13 @@
 
 ## Purpose
 
-Verify that AgentPal chooses Mira direct answer, Codex generic, Simple Pal Mode, multi-Pal consultation, or Codex Subagent Mode through AI judgement, not fixed keywords.
+Verify that AgentPal chooses Mira direct answer, Codex generic, Simple Pal Mode, or same-response Pal consultation through AI judgement, not fixed keywords.
 
 ## Global Pass Criteria
 
 - No response may say a phrase "hits" a route rule.
 - No task/domain wording may require a fixed Pal set.
-- Subagent Mode may be used only with a case-specific reason.
+- Subagent Mode is not active in AgentPal v0.1.0-rc.1 task handling.
 - Simple explanation and low-token requests must stay lightweight.
 - Explicit `/pal Name` and explicit Codex generic requests remain deterministic.
 
@@ -32,9 +32,9 @@ Inputs:
 
 Expected:
 
-- Mira / Brain identifies that several independent perspectives may be useful.
-- If Subagent Mode is used, the answer explains the case-specific reason and records runtime evidence.
-- If Simple Pal Mode is used, the answer explains why one owner or lightweight coordination is enough.
+- Mira identifies that several independent perspectives may be useful.
+- Mira uses Simple Pal Mode: one owner, bounded consultant/reviewer sections, or a Task Package.
+- The answer must not claim Subagent Mode or parallel child workflows were started.
 - The answer does not claim Nova, Atlas, or Quinn are required by wording alone.
 
 ## Case 2: Explicit Single Pal
@@ -49,7 +49,7 @@ Expected:
 
 - Direct Pal command is honored if Atlas exists.
 - Atlas may answer in Simple Pal Mode.
-- No automatic Nova / Quinn / Subagent spawn unless the active AI explains why it is materially needed and the user allows the extra cost.
+- No automatic Nova / Quinn consultation unless the active AI explains why it is materially needed; no Subagent spawn in v0.1.0-rc.1.
 
 ## Case 3: Simple Explanation
 
@@ -105,7 +105,7 @@ Expected:
 
 - Mira may ask a clarifying question or give a lightweight judgement.
 - No fixed Pal route.
-- If Subagent Mode is suggested, the reason must mention uncertainty, needed independent perspectives, and cost tradeoff.
+- If multiple perspectives are useful, Mira should keep them inside Simple Pal Mode or prepare a Task Package. Do not suggest active Subagent Mode for v0.1.0-rc.1.
 
 ## Fail Signs
 

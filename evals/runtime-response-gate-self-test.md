@@ -28,7 +28,7 @@ Verify that Runtime Response Gate runs before every answer and does not contain 
 - Semantic owner selection -> AI routing judgement is case-by-case.
 - Pal capability reference is not a route map.
 - Safety and availability guardrails are deterministic.
-- Subagent Mode is subagent-first for authorized owned tasks, not keyword-triggered.
+- Subagent Mode is future design only in v0.1.0-rc.1; owned tasks use Simple Pal Mode and same-response handoff.
 - User asks fixed workflow / Skill / Runbook -> candidate is triggered.
 
 ## Fail Criteria

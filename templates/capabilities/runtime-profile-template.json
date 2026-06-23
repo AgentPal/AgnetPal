@@ -1,0 +1,24 @@
+{
+  "schema": "agentpal.runtime-profile.v0.1",
+  "id": "runtime-id",
+  "name": "Runtime Name",
+  "type": "agent-runtime",
+  "status": "template",
+  "source": "user-or-maintainer-provided",
+  "version": "0.1",
+  "non_binding": true,
+  "capabilities": {
+    "can_read_files": null,
+    "can_write_files": null,
+    "can_run_commands": null,
+    "supports_instruction_files": [],
+    "supports_external_directories": null,
+    "supports_skills": null,
+    "supports_plugins": null,
+    "supports_mcp": null
+  },
+  "limits": [],
+  "risk_notes": [],
+  "evidence_required": [],
+  "profile_note": "Template only. Not an automatic probe result."
+}

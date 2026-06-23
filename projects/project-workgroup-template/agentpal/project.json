@@ -6,6 +6,13 @@
   "active_project_role": "user_project",
   "agentpal_enabled": true,
   "created_by": "AgentPal",
+  "runtime": "REPLACE_WITH_RUNTIME_HINT",
+  "runtime_hint": "REPLACE_WITH_RUNTIME_HINT",
+  "mode": "simple-pal-mode-only",
+  "agentpal_is_pal_layer": true,
+  "agentpal_is_agent_layer": false,
+  "agentpal_is_multi_agent_runtime": false,
+  "agentpal_is_execution_layer": false,
   "removable": true,
   "agentpal_workspace": "REPLACE_WITH_AGENTPAL_WORKSPACE_PATH",
   "agentpal_workspace_root": "REPLACE_WITH_AGENTPAL_WORKSPACE_PATH",
@@ -19,21 +26,49 @@
     "do_not_list_agentpal_workspace_as_project_root": true,
     "do_not_answer_project_questions_with_multiple_roots": true,
     "project_terms_mean": "active_project_root",
-    "read_agentpal_workspace_only_when_user_explicitly_asks_about_agentpal": true
+    "read_agentpal_workspace_only_when_user_explicitly_asks_about_agentpal": true,
+    "allow_agentpal_workspace_contacts_registry_for_routing": true,
+    "allow_selected_pal_assets_after_owner_selection": true
+  },
+  "pal_source_policy": {
+    "contacts_registry_source": "agentpal_workspace_root",
+    "required_for_owner_routing": [
+      "contacts/pals.json",
+      "registry/pal.index.json"
+    ],
+    "allowed_lazy_reads": [
+      "contacts/mention-aliases.md",
+      "pals/<selected-owner>/PAL.md",
+      "pals/<selected-owner>/pal.json",
+      "pals/<selected-owner>/SKILL.md",
+      "pals/<selected-owner>/core/output-contract.md",
+      "pals/<selected-owner>/skills/index.md",
+      "pals/<selected-owner>/knowledge/index.md",
+      "pals/<selected-owner>/runbooks/index.md",
+      "pals/<selected-owner>/workflows/index.md"
+    ],
+    "external_agentpal_dir_is_not_pal_asset_store": true,
+    "fail_closed_if_contacts_registry_unavailable": true
   },
   "available_pal_scope": "all-installed-pals",
   "pal_access_mode": "lazy",
   "project_bound_mode": true,
   "root_agents_required": true,
   "root_agents_block": {
-    "begin_marker": "BEGIN AGENTPAL WORKGROUP",
-    "end_marker": "END AGENTPAL WORKGROUP",
+    "begin_marker": "<!-- BEGIN AGENTPAL WORKGROUP -->",
+    "end_marker": "<!-- END AGENTPAL WORKGROUP -->",
     "template": "templates/project-binding/root-agents-agentpal-block-template.md"
   },
   "block_markers": [
-    "BEGIN AGENTPAL WORKGROUP",
-    "END AGENTPAL WORKGROUP"
+    "<!-- BEGIN AGENTPAL WORKGROUP -->",
+    "<!-- END AGENTPAL WORKGROUP -->"
   ],
+  "claude_code_binding": {
+    "project_instruction_file": "CLAUDE.md",
+    "local_settings_file": ".claude/settings.local.json",
+    "additional_directories_setting": "permissions.additionalDirectories",
+    "add_dir_is_fallback_not_required_default": true
+  },
   "remove_policy": {
     "requires_confirmation": true,
     "delete_agentpal_dir": true,
@@ -48,6 +83,8 @@
   "cleanup_targets": [
     ".agentpal/",
     "AGENTS.md AgentPal block",
+    "CLAUDE.md AgentPal block when present",
+    ".claude/settings.local.json additionalDirectories entry when present",
     "AgentPal registered project record",
     "AgentPal active project state"
   ],

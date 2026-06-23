@@ -1,88 +1,106 @@
 # AgentPal v0.1.0-rc.1 Release Notes
 
-AgentPal v0.1.0-rc.1 is a public release candidate for the AgentPal Pal Workspace.
+AgentPal v0.1.0-rc.1 is a release candidate for the AgentPal Workspace and Pal Pack Standard practice.
+
+## Who This Release Is For
+
+This release is for users and contributors who want to try Pal Packs inside Codex, Claude Code, or another runtime that can read Markdown and JSON files.
+
+It is especially useful if you want to:
+
+- keep multiple professional Pal Packs in one workspace
+- initialize Mira as the default Main Pal
+- call registered Pals with `/pal Name`
+- study the Pal Pack file structure
+- author or review release-safe Pal Pack templates, protocols, and examples
+
+## R32 Methodology Clarification
+
+- Mira is documented as the default Main Pal, Leader Pal, and Conductor. The secretary identity remains her communication and relationship layer, not the whole product role.
+- AgentPal separates Fast Route and Deep Conductor. Fast Route is the current Simple Pal Mode clear-task handoff pattern. Deep Conductor is future complex-workflow design only.
+- Context Access List, Pal Isolation, Shared Memory, Routing Reward Memory, PalBench evals, and orchestration examples were strengthened for auditability.
+- R33 adds a small-sample PalBench smoke validation. It shows initial evidence for task-package clarity, context-scope control, verification quality, and lower user routing burden. It is not a model benchmark and not statistically significant.
+
+## Who This Release Is Not For
+
+This release is not a finished app or automation platform. It is not the right fit if you need:
+
+- a desktop app or web UI
+- a marketplace or hosted Pal Hub
+- an automatic installer, daemon, scanner, validator, or service
+- an execution engine that runs actions without the host runtime
+- active subagent, remote agent, or MCP-hosted agent orchestration
+- production enterprise permission management
 
 ## What Is Included
 
-- A Markdown / JSON AgentPal workspace for supported agent runtimes.
-- Mira as the default Main Pal and secretary coordinator.
-- Seven bundled specialist Pals: Atlas, Nova, Vega, Rhea, Quinn, Morgan, and Harper.
-- Clara was removed from the default bundled Pal set and may return later as a separate Pal package.
-- Bundled specialist Pals are slim embedded AgentPal modules, not standalone repositories.
-- `/pal Name` direct call protocol.
-- Simple Pal Mode as the only active v0.1 task-handling path.
-- AI Judgement routing governance.
-- Pal discovery source-of-truth: contacts / registry are the source for Pal names, aliases, paths, and collaboration availability.
+- AgentPal Workspace root files: `AGENTS.md`, `PAL.md`, `SKILL.md`, `INIT_PROMPT.md`, and `agentpal.json`.
+- Mira as the default Main Pal, Leader Pal, Conductor, and secretary-style coordinator.
+- Official bundled Pal Packs: Mira, Atlas, Vega, Rhea, Quinn, Morgan, Harper, and Nova.
+- Contacts and registry files for Pal discovery, aliases, and direct `/pal Name` calls.
+- Simple Pal Mode as the only active v0.1.0-rc.1 runtime path.
 - Runtime Response Gate and Pal Mode validity rules.
+- Context slicing, asset loading budget, memory summary loading, and Task Package output contract protocols.
+- AgentPal orchestration methodology, Fugu-inspired method transfer notes, and PalBench design as research/design foundation.
+- R33 PalBench small-sample smoke validation report.
+- Capability Inventory, Task Judgement, Workflow Topology, Context Access List, Pal Isolation, and Routing Reward Memory protocols as future-oriented design assets.
 - External project workgroup templates.
-- Release-safe examples, evals, prompts, and failure examples.
+- Claude Code one-prompt project install using `CLAUDE.md`, `AGENTS.md`, `.agentpal/`, and `.claude/settings.local.json`.
+- Generic CLI Agent one-prompt project install using `AGENTS.md` and `.agentpal/`.
+- Public-safe examples, evals, prompts, templates, release notes, checklist, and contribution guidance.
 
 ## What Is Not Included
 
 - No desktop app.
 - No web UI.
-- No Tauri / React app.
-- No background daemon.
-- No scanner, validator, installer, or workspace service.
-- No required Python, Node.js, Rust, or Go dependency for AgentPal initialization.
+- No CLI requirement.
+- No required Python, Node.js, Rust, Go, service, daemon, scanner, validator, or installer.
 - No automatic execution layer.
-- No active subagent or non-Pal runtime orchestration in v0.1.
+- No active multi-agent runtime.
+- No active subagent orchestration.
+- No active Deep Conductor or automatic external Agent orchestration; orchestration research docs are design foundation only.
+- No marketplace or commercial Pal distribution system.
+- No bundled private user memory, private project state, real reports, or secrets.
 
-## How To Use
+## How It Works
 
-1. Add the AgentPal directory as a project/workspace in a supported runtime.
-2. Open the AgentPal Workspace.
-3. Copy the full contents of `INIT_PROMPT.md`.
-4. Start with Mira.
-5. Use `/pal Name` to call a specialist Pal directly when needed.
+AgentPal v0.1.0-rc.1 uses Simple Pal Mode.
 
-## Built-In Pals
+Mira receives ordinary messages. When Mira judges that a registered Pal should own a substantive request, Mira gives a short handoff and stops. The owner Pal answers immediately in the same response, using its own Pal assets, Output Contract, and fallback rules when needed.
 
-- Mira: Main Pal, triage, context, project workgroups, and summaries.
-- Atlas: development-oriented planning and evidence review.
-- Nova: product thinking, PRDs, scope, and decisions.
-- Vega: research, sources, comparisons, and uncertainty.
-- Rhea: system setup planning, permissions, and recovery.
-- Quinn: quality, risk, evidence, and release gates.
-- Morgan: files, documents, PDFs, spreadsheets, and organization.
-- Harper: writing, rewriting, communication, and style.
+Direct calls such as `/pal Harper` enter that Pal's working mode. They do not start an independent agent process.
 
-Capability descriptions are non-binding orientation. They are not task-domain route rules.
+## Getting Started
 
-Contacts / registry are the source of truth for Pal discovery. Individual Pal Packs do not maintain hard-coded lists of other Pals, so adding or removing a Pal should mainly update contacts / registry and public bundled lists.
+1. Open the AgentPal Workspace in a supported runtime.
+2. Paste or run `INIT_PROMPT.md`.
+3. Start with Mira for ordinary messages.
+4. Use `/pal Name` to call a registered Pal directly.
+5. Use `RESOURCE_INDEX.md` as navigation when you need to find a specific root asset or directory.
 
-## Simple Pal Mode
+## Claude Code Project Setup
 
-Simple Pal Mode is the active AgentPal v0.1 behavior.
+For project work in Claude Code:
 
-Mira receives ordinary messages. When Mira judges that a registered Pal owns a substantive request, Mira gives only a short ownership judgement and handoff. The owner Pal answers immediately in the same response, using its own Pal assets, Output Contract, and honest fallback if relevant assets are missing.
+```text
+cd <your-project>
+claude
+```
 
-AgentPal does not show runtime-mode metadata in normal answers.
+Then paste `prompts/claude-code/install-agentpal-current-project.md` and provide `<path-to-AgentPal>`.
 
-## Future Runtime Orchestration
+The prompt updates `.claude/settings.local.json` `permissions.additionalDirectories`, `CLAUDE.md`, `AGENTS.md`, and `.agentpal/`. `--add-dir` remains a fallback / advanced option, not the required default path.
 
-Future subagent / non-Pal runtime / remote agent / MCP-hosted agent orchestration is documented in `docs/future-agent-orchestration.md`. It is not active in AgentPal v0.1 runtime behavior.
+## Generic CLI Agent Project Setup
 
-## AI Judgement Routing Governance
+For Markdown/JSON-capable CLI Agents, run the CLI Agent inside `<your-project>` and paste `prompts/cli-agent/install-agentpal-current-project.md`. The generic prompt updates `.agentpal/` and `AGENTS.md` without relying on Claude Code settings.
 
-AgentPal does not use hard-coded semantic routing. Mira judges owner Pal selection case-by-case from user goal, context, current registered Pal ownership scopes, risk, available Pal assets, user constraints, and expected output.
+## Safety And Public Release Boundary
 
-Explicit commands such as `/pal Atlas`, Codex generic requests, safety boundaries, and availability guardrails remain deterministic.
+Runtime-private memory, private state, real reports, internal development notes, secrets, credentials, customer data, and local absolute paths must stay out of the public repository.
 
-## External Project Workgroup
-
-AgentPal can be bound to an external project using `.agentpal/` and a protected root `AGENTS.md` block. In project-bound mode, the external project is `active_project_root`; the AgentPal workspace remains only a Pal source and routing reference.
-
-Removal deletes only the AgentPal binding files and protected block. It must not delete user project source or user-authored `AGENTS.md` content.
-
-## Known Limitations
-
-- AgentPal v0.1 is file-driven and prompt-driven.
-- AgentPal does not execute real filesystem, system, or publishing actions by itself.
-- Pal responses require assets, output contracts, or explicit fallback methods to be valid.
-- Future runtime orchestration requires a separate design before activation.
+Examples and templates should use synthetic or placeholder data. Future designs should be marked as future work and must not be described as active v0.1.0-rc.1 behavior.
 
 ## License
 
 AgentPal is released under the MIT License. See `LICENSE`.
-

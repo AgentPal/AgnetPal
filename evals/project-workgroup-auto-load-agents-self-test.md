@@ -17,7 +17,7 @@ Keyword: read root AGENTS.md.
 
 - Binding creates or updates `.agentpal/`.
 - Binding creates or updates root `AGENTS.md`.
-- Root `AGENTS.md` includes `BEGIN AGENTPAL WORKGROUP` and `END AGENTPAL WORKGROUP`.
+- Root `AGENTS.md` includes `<!-- BEGIN AGENTPAL WORKGROUP -->` and `<!-- END AGENTPAL WORKGROUP -->`.
 - Root `AGENTS.md` tells Codex to read `.agentpal/INIT_AGENTPAL_PROJECT_PROMPT.md` if AgentPal rules have not loaded yet.
 - Join completion reply includes:
 

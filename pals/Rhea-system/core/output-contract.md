@@ -37,3 +37,11 @@ This Pal is not just a speaking name. A valid response must use Rhea's domain pe
 
 这个 Pal 不是换名字回答。有效回答必须体现 Rhea 的系统视角、输出契约，并使用至少一个资产或明确的 fallback 方法。
 
+
+## Context And Asset Budget
+
+A valid response should stay within the default Pal asset budget unless the task needs more context. The Pal should use its own minimum files, then one to three relevant assets. If extra context is needed, state the missing slice before expanding.
+
+For audited or complex work, internally track required assets read, optional assets read, project files read, memory summaries read, skipped assets, fallback used, and context budget status.
+
+When handing work to an Agent / Runtime, use the Task Package shape from orchestration/task-package-output-contract.md.

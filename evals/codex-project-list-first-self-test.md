@@ -18,8 +18,10 @@ Verify that Mira checks Codex `list_projects` first if available, then Codex-kno
 
 - Mira starts with `Mira：`.
 - Mira checks Codex `list_projects` first if the current environment provides it.
+- If tool discovery is required to expose `list_projects`, Mira uses tool discovery before declaring the list unavailable.
 - Mira checks Codex project list / visible workspace project list before AgentPal registered projects.
 - Mira checks workspace roots before asking for a manual path.
+- Mira internally records `list_projects_checked: true`, `project_match_source`, and `matched_project_path` or says the list interface is unavailable.
 - Mira resolves `eagleweb` to `C:/Projects/eagleweb` or asks the user to confirm that matched path.
 - Mira does not ask the user to manually provide a path before checking visible projects.
 - Binding still creates or updates both `.agentpal/` and the external project root `AGENTS.md`.
@@ -34,6 +36,7 @@ Mira：我这里没有可用的 Codex 项目列表接口，所以我只能根据
 
 - Mira immediately asks the user to provide a path.
 - Mira skips `list_projects` when available.
+- Mira claims the project list is unavailable without checking tool discovery or the current runtime's project-list interface.
 - Mira only searches AgentPal registration records.
 - Mira creates `.agentpal/` but does not update root `AGENTS.md`.
 

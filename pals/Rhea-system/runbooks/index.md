@@ -13,3 +13,23 @@ Runbook 指导 Rhea 如何组织系统与应用任务，不直接执行命令、
 
 所有 Runbook 都要求来源、时间、可信度、权限、回滚和 evidence。
 
+
+## Context Loading Rule
+
+Read this index only after this Pal is selected as owner, consultant, reviewer, or direct /pal Name target.
+
+Use this index to choose the smallest relevant asset slice. Do not load every file in this directory by default.
+
+Read assets here when:
+
+- the current task requires this Pal's professional method;
+- the output contract needs a specific skill, knowledge card, runbook, or workflow;
+- the user asks which assets were used;
+- an eval or release check is inspecting this Pal.
+
+Do not read assets here when:
+
+- Mira is only doing initial routing;
+- another Pal owns the task and no consultation was requested;
+- the task is ordinary chat, Codex generic, or Mira-owned secretary work;
+- examples, evals, reports, memory, or future design material would be enough only by curiosity rather than task need.

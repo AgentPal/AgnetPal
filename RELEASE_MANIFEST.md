@@ -1,0 +1,81 @@
+# AgentPal v0.1.0-rc.1 Release Manifest
+
+Generated: 2026-06-24
+
+## Release Identity
+
+| Field | Value |
+| --- | --- |
+| Release name | AgentPal v0.1.0-rc.1 |
+| Version | `v0.1.0-rc.1` |
+| Git tag | `v0.1.0-rc.1` |
+| Git commit hash | Resolve locally with `git rev-parse v0.1.0-rc.1^{}` after the R34 final tag is created. The exact hash is also recorded in the internal R34 completion report. |
+| License | MIT |
+| Release type | Public release candidate |
+| Runtime policy | Simple Pal Mode only |
+
+## Scope
+
+AgentPal v0.1.0-rc.1 is a Markdown / JSON / protocol workspace for Pal Packs. It is a Pal layer for existing agent runtimes, not an Agent layer, not a multi-agent runtime, and not an execution layer.
+
+Included:
+
+- root initialization files: `AGENTS.md`, `PAL.md`, `SKILL.md`, `INIT_PROMPT.md`, and `agentpal.json`
+- public release docs: `README.md`, `README.zh-CN.md`, `RELEASE_NOTES.md`, `CHANGELOG.md`, `GITHUB_RELEASE_DRAFT.md`, `RELEASE_CHECKLIST.md`, `CONTRIBUTING.md`, `THIRD_PARTY_NOTICES.md`, and this manifest
+- navigation index: `RESOURCE_INDEX.md`
+- official bundled Pal Packs under `pals/`
+- contacts and registry files under `contacts/` and `registry/`
+- orchestration protocols, templates, examples, evals, prompts, runtime compatibility notes, capability profiles, and research docs
+- external project binding templates and Claude Code / generic CLI Agent one-prompt setup prompts
+- release evidence drafts under `release/v0.1.0-rc.1/`
+
+Not included:
+
+- desktop app, web UI, daemon, service, scanner, validator, installer, or required runtime dependency
+- active Subagent Mode, active Deep Conductor execution, remote Agent orchestration, MCP-hosted Agent execution, or marketplace runtime
+- private user memory, private project state, real customer data, real secrets, local machine paths, copied internal development reports, temporary screenshots, or temporary pasted text attachments
+
+## Official Pal Pack Set
+
+| Pal | Directory | Role |
+| --- | --- | --- |
+| Mira | `pals/Mira-main` | Main Pal, Leader Pal, Conductor, and secretary-style coordinator |
+| Atlas | `pals/Atlas-developer` | Development perspective |
+| Vega | `pals/Vega-research` | Research and evidence perspective |
+| Rhea | `pals/Rhea-system` | Local system and environment perspective |
+| Quinn | `pals/Quinn-quality` | Quality, risk, evidence, and acceptance perspective |
+| Morgan | `pals/Morgan-document` | Document and file workflow perspective |
+| Harper | `pals/Harper-writing` | Writing and communication perspective |
+| Nova | `pals/Nova-product` | Product and decision perspective |
+
+Contacts / registry source of truth:
+
+- `contacts/pals.json`
+- `contacts/PAL_CONTACTS.md`
+- `registry/pal.index.json`
+- `registry/pal.index.md`
+
+## Verification Summary
+
+R34 local checks:
+
+- JSON parse check passed for root JSON, contacts / registry JSON, project template JSON, Pal `pal.json`, capability profile JSON, and JSON templates.
+- Official Pal directory count: 8.
+- Contacts count: 8.
+- Registry count: 8.
+- No local absolute maintainer paths, attachment traces, temporary pasted text traces, or private maintenance-directory references were found in public release files.
+- No binary screenshot / archive / document artifacts were found in the release workspace.
+- No required runtime code, package manifest, installer, scanner, validator, daemon, or service entrypoint was found.
+- Secret-key keyword hits were reviewed as public safety-boundary language, not real credentials.
+- Hard-coded semantic routing hits were reviewed as prohibitions, negative examples, or non-binding examples.
+- Subagent / Deep Conductor hits were reviewed as future-design or negative-boundary references, not active v0.1.0-rc.1 behavior.
+
+## Local Git Boundary
+
+R34 prepares local Git state only:
+
+- create or update the local release commit
+- create annotated local tag `v0.1.0-rc.1`
+- do not push to a remote
+- do not create a GitHub release online
+- do not add or change remote configuration

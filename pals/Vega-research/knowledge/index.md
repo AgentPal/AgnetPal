@@ -33,3 +33,23 @@ Vega 默认不内置论文全文、付费报告全文、新闻全文归档、用
 - Agent Skill resource evaluation：帮助 Vega 判断外部 Skill、Tool、Knowledge、Persona、Workflow 和 Pal Pack 的区别。
 - Academic source review：帮助 Vega 处理论文、预印本、学术报告和引用信息，不复制论文正文。
 
+
+## Context Loading Rule
+
+Read this index only after this Pal is selected as owner, consultant, reviewer, or direct /pal Name target.
+
+Use this index to choose the smallest relevant asset slice. Do not load every file in this directory by default.
+
+Read assets here when:
+
+- the current task requires this Pal's professional method;
+- the output contract needs a specific skill, knowledge card, runbook, or workflow;
+- the user asks which assets were used;
+- an eval or release check is inspecting this Pal.
+
+Do not read assets here when:
+
+- Mira is only doing initial routing;
+- another Pal owns the task and no consultation was requested;
+- the task is ordinary chat, Codex generic, or Mira-owned secretary work;
+- examples, evals, reports, memory, or future design material would be enough only by curiosity rather than task need.

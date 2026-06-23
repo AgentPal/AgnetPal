@@ -10,28 +10,28 @@
 
 ## Mira routing decision
 
-Use Simple Pal Mode when one Pal can answer cheaply and clearly. Use Codex Subagent Mode when independent Pal separation matters.
+Use Simple Pal Mode for AgentPal v0.1.0-rc.1 task handling. Treat Codex Subagent Mode as future design material only.
 
 ## Subagents spawned
 
 None for Simple Pal Mode.
 
-For Subagent Mode, spawn only the required owner Pal / consultant Pal / reviewer Pal set, usually at most 3.
+For future Subagent Mode design, a later release may define bounded owner Pal / consultant Pal / reviewer Pal child workflows.
 
 ## Required files each subagent reads
 
-Each subagent reads the required files in `registry/pal-subagent-map.json`.
+In v0.1, no subagent files are loaded for current task handling. Future design notes may reference `registry/pal-subagent-map.json`.
 
 ## Expected result
 
 - Simple Pal Mode: one active Pal, lower token cost, file-driven Pal work mode.
-- Codex Subagent Mode: separate Codex subagent thread / workflow per specialist Pal, higher token cost, thread limit, close completed agents.
+- Future Codex Subagent Mode: separate Codex subagent thread / workflow per specialist Pal, higher token cost, thread limit, close completed agents.
 - Simple Pal Mode user wording: 当前 Codex 会话按某个 Pal 的工作方式回答。
-- Subagent Mode user wording: Codex 派出多个子线程，让不同 Pal 分别处理自己的部分，再由 Mira 汇总。
+- Future Subagent Mode wording: 未来版本可能派出多个子线程；当前 v0.1 不会这样执行。
 
 ## Runtime evidence in Subagent Mode
 
-Mira records:
+Mira does not record these fields in v0.1 because no subagent is started. A future design may record:
 
 - `agent_id`
 - `wait_agent` status
@@ -44,6 +44,6 @@ Mira recommends the simplest mode that preserves role quality.
 
 ## Fallback if unavailable
 
-Fallback to Simple Pal Mode and mark limitations.
+Use Simple Pal Mode and mark limitations if the user expected independent runtime execution.
 
 

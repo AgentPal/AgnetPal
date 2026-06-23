@@ -1,0 +1,17 @@
+{
+  "schema": "agentpal.plugin-profile.v0.1",
+  "id": "plugin-id",
+  "name": "Plugin Name",
+  "type": "plugin-profile",
+  "status": "template",
+  "source": "user-or-maintainer-provided",
+  "version": "0.1",
+  "non_binding": true,
+  "available_in": [],
+  "capabilities": [],
+  "permissions": [],
+  "limits": [],
+  "risk_notes": [],
+  "evidence_required": [],
+  "profile_note": "Template only. Plugin availability is not automatically detected in v0.1."
+}

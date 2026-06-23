@@ -1,4 +1,4 @@
-# Runtime and private memory
+# Runtime-private memory, state, and reports
 memory/user/*
 memory/projects/*
 memory/runtime/*
@@ -6,19 +6,53 @@ state/*
 reports/task-reports/*
 reports/verification-reports/*
 reports/user-reports/*
+
+# Pal-local runtime-private data
+pals/*/memory/user/*
+pals/*/memory/project/*
+pals/*/memory/projects/*
+pals/*/memory/runtime/*
+pals/*/memory/*.local.md
 pals/*/state/*
 pals/*/reports/*
-pals/*/memory/*.local.md
+
+# Collaboration and import staging
 contacts/collaboration-memory.md
 imports/raw/*
+imports/private/*
+imports/tmp/*
 
-# Keep release-safe README and templates
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*.log
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+.claude/settings.local.json
+
+# Keep release-safe README and placeholder files
 !memory/user/README.md
 !memory/projects/README.md
 !memory/runtime/README.md
 !state/README.md
 !reports/**/README.md
-!pals/*/state/README.md
 !pals/*/memory/README.md
+!pals/*/memory/user/README.md
+!pals/*/memory/project/README.md
+!pals/*/memory/projects/README.md
+!pals/*/memory/runtime/README.md
+!pals/*/state/README.md
+!pals/*/reports/README.md
 !imports/raw/README.md
-
+!imports/private/README.md
+!imports/tmp/README.md

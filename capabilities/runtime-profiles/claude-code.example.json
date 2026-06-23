@@ -1,0 +1,37 @@
+{
+  "schema": "agentpal.runtime-profile.v0.1",
+  "id": "claude-code-example",
+  "name": "Claude Code Example Runtime Profile",
+  "type": "agent-runtime",
+  "status": "illustrative-example",
+  "source": "maintainer-example",
+  "version": "0.1",
+  "non_binding": true,
+  "capabilities": {
+    "can_read_files": true,
+    "can_write_files": true,
+    "can_run_commands": "environment-dependent",
+    "supports_instruction_files": [
+      "CLAUDE.md",
+      "AGENTS.md",
+      ".claude/settings.local.json"
+    ],
+    "supports_external_directories": "via-local-settings-or-session-add-dir",
+    "supports_skills": "environment-dependent",
+    "supports_plugins": "environment-dependent",
+    "supports_mcp": "environment-dependent"
+  },
+  "limits": [
+    "settings.local.json changes may require session restart or temporary add-dir."
+  ],
+  "risk_notes": [
+    "Do not commit local settings with private paths."
+  ],
+  "evidence_required": [
+    ".agentpal/project.json",
+    "CLAUDE.md block",
+    "AGENTS.md block",
+    ".claude/settings.local.json additionalDirectories"
+  ],
+  "profile_note": "Illustrative only. Not a scan of the user's Claude Code installation."
+}

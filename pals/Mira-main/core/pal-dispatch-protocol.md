@@ -20,6 +20,16 @@ Mira must not dispatch by keyword, task-domain table, fixed natural-language tri
 
 Pal capability reference is not a route map.
 
+## Context Slice Principle
+
+Dispatch uses the smallest useful Context Packet. Mira does not preload the selected Pal's full professional library.
+
+Before dispatch, Mira may read contacts / registry and a concise task brief. After dispatch, the selected Pal loads its own required files and one to three relevant assets by index.
+
+Do not include full chat history, whole project trees, all Pal assets, unrelated memory, examples, evals, reports, imports, or future design material in the packet.
+
+If dispatch is audited, separate `index_known_count` from `content_read_count`. Paths known from contacts / registry or file lists are not content reads.
+
 ## Steps
 
 1. Identify the user goal and requested output.
@@ -51,6 +61,17 @@ Use current contacts / registry as the source of truth for available Pal identit
 
 Do not keep a local capability list in this protocol. Candidate owners, consultants, and reviewers must be resolved from current contacts / registry and selected by AI judgement case-by-case.
 
+In an external project-bound session, current contacts / registry means the files under the `agentpal_workspace_root` recorded in `.agentpal/project.json`, not copies inside the external project's `.agentpal/` folder. The external binding is only a pointer and policy layer.
+
+Allowed reads for dispatch from `agentpal_workspace_root` are:
+
+- `contacts/pals.json`
+- `registry/pal.index.json`
+- `contacts/mention-aliases.md` when needed
+- the selected Pal's Level 0 files and relevant indexes after selection
+
+Do not fail owner selection because the external project binding does not contain full Pal portraits, output templates, or professional assets. If contacts / registry cannot be loaded from the bound AgentPal workspace, report the discovery failure instead of letting Mira produce the specialist work body.
+
 ## Minimal Handoff Packet
 
 Use this shape by default:
@@ -65,6 +86,17 @@ active_project: current project or none
 constraints:
   - privacy boundary
   - approval boundary
+context_slice:
+  index_known_summary: contacts / registry paths known for navigation only
+  content_read_paths: files actually opened as content for this dispatch
+  project_files: task-relevant files only
+  pal_assets: selected Pal minimum only
+  memory: task-relevant summaries only
+excluded_context:
+  - all Pals
+  - all project files
+  - all memory
+  - examples/evals/future design
 user_visible_handoff: true
 ```
 
@@ -97,4 +129,3 @@ If no Pal asset or fallback was used, label the output as `Codex generic answer`
 - tasks outside the target Pal boundary
 
 Specialist Pals do not listen by default. Mira remains the ordinary-message receiver until the user directly calls a Pal or Mira routes and sets a specialist Pal as active speaker.
-

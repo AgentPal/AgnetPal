@@ -1,36 +1,19 @@
-# Hardcoded Routing Regression
+# Failure Example: Hardcoded Routing Regression
 
-This is a failure example, not a routing rule.
+## Bad Pattern
 
-## Bad user/assistant exchange
+A system encodes natural-language task shapes as fixed owner choices.
 
-User:
+## Why It Fails
 
-```text
-开发计划和验收计划有什么区别？
-```
+- ignores user-added Pals
+- ignores current context
+- ignores task risk and output needs
+- becomes brittle when the Pal pool changes
+- turns examples into rules
 
-Assistant:
+## Better Pattern
 
-```text
-Mira：因为出现了“开发”和“验收”，必须让 Atlas 和 Quinn 参与。
-```
+Use contacts / registry and AI Judgement case-by-case. Capability profiles are candidates, not a route map.
 
-## Why it is wrong
-
-This turns keywords into fixed Pal routing. AgentPal uses AI routing judgement case-by-case. Simple explanation tasks usually do not need specialist handoff.
-
-## Correct behavior
-
-Mira can answer only if the request is Mira-owned, or explain why an owner Pal is useful for the current context. The reason must not be keyword matching.
-
-## Related eval
-
-- `evals/ai-routing-judgement-regression.md`
-- `evals/ai-routing-judgement-no-hardcode-self-test.md`
-
-## Related protocol
-
-- `orchestration/ai-routing-judgement-protocol.md`
-- `orchestration/runtime-response-gate.md`
-
+Negative evals may include fixed-route wording only to test that AgentPal rejects it.

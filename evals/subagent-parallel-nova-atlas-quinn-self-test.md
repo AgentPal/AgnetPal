@@ -12,22 +12,19 @@ This self-test is a non-binding example. It must not be used as a keyword routin
 
 ## Expected Judgement
 
-Mira decides case-by-case whether Codex Subagent Mode is useful, authorized, and available.
+Mira decides case-by-case whether bounded Simple Pal Mode perspectives or a Task Package are useful.
 
-Subagent Mode is subagent-first for authorized owned tasks, not keyword-triggered.
+Subagent Mode is future design only in AgentPal v0.1.0-rc.1 and is not keyword-triggered or invoked.
 
-If Mira chooses Subagent Mode, the selected Pal set must be justified by the current task and available assets. No fixed Pal set is required by the wording alone.
+If a future design document discusses Subagent Mode, the selected Pal set must be justified by the current task and available assets. No fixed Pal set is required by the wording alone.
 
-## Expected Route When Subagent Mode Is Chosen
+## Expected Current Route
 
 - select owner Pal case-by-case
-- select consultant Pal(s) case-by-case
-- select reviewer Pal(s) case-by-case
-- spawn only the selected Pals
-- wait all
-- close completed agents
-- Mira synthesis
-- coordinator records `agent_id`, wait results, and close results for spawned agents
+- select consultant Pal(s) or reviewer Pal(s) case-by-case only when useful
+- keep the work in Simple Pal Mode or produce a Task Package
+- do not spawn, wait, or close child workflows
+- do not record `agent_id` evidence
 
 ## Expected Role Boundaries
 
@@ -38,12 +35,11 @@ If Mira chooses Subagent Mode, the selected Pal set must be justified by the cur
 ## Fail If
 
 - Mira answers all professional content herself.
-- A fixed Pal set is spawned because of a keyword phrase.
+- A fixed Pal set is required because of a keyword phrase.
 - Any Pal omits required assets or output contract.
-- Completed agents are left open.
-- Fallback is used without limitation marker.
+- The answer claims Subagent Mode started in v0.1.0-rc.1.
 - Mira merges Pal conclusions into one unlabeled paragraph.
-- No `agent_id` / wait / close evidence is recorded when Subagent Mode is used.
+- Any `agent_id` / wait / close evidence is invented.
 
 
 

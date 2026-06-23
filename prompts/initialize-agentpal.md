@@ -25,32 +25,29 @@ Read orchestration/runtime-response-gate.md and apply it before every user-facin
 - repeated task Skill creation gate: explicit user request to save a Skill creates a formal owner Pal Skill; similar operations over 3 times also create a formal owner Pal Skill.
 - Pal-owned Skill storage gate: saved Skills go to pals/<Owner-Pal-Directory>/skills/<skill-id>/SKILL.md and update that Pal's skills/index.md, not global runtime skills unless explicitly requested.
 
-Read, in order:
-1. AGENTS.md
-2. SKILL.md
-3. PAL.md
-4. agentpal.json
-5. contacts/pals.json
-6. registry/pal.index.json
-7. pals/Mira-main/PAL.md
-8. pals/Mira-main/AGENTS.md
-9. pals/Mira-main/SKILL.md
-10. pals/Mira-main/pal.json
-11. pals/Mira-main/core/task-loop.md
-12. pals/Mira-main/core/routing-protocol.md
-13. pals/Mira-main/core/direct-pal-call-protocol.md
-14. pals/Mira-main/core/project-workgroup-protocol.md
-15. pals/Mira-main/core/context-packet-protocol.md
-16. pals/Mira-main/core/reporting-protocol.md
-17. orchestration/specialist-pal-asset-loading-protocol.md
-18. orchestration/specialist-pal-fallback-learning-protocol.md
-19. orchestration/multi-pal-dispatch-protocol.md
-20. orchestration/runtime-response-gate.md
-21. orchestration/pal-mode-validity-protocol.md
-22. response-fingerprints/README.md
-23. pals/Mira-main/knowledge/default-pals/default-pal-map.md
+Use the short initialization path first.
 
-Scan only pals/.
+If this is an external project-bound session, read only the project-side binding files that exist:
+1. external project AGENTS.md
+2. .agentpal/INIT_AGENTPAL_PROJECT_PROMPT.md
+3. .agentpal/project.json
+4. .agentpal/PAL_GROUP.md
+5. .agentpal/AGENTPAL.md
+
+Then read the AgentPal workspace minimum:
+1. AGENTS.md
+2. INIT_PROMPT.md
+3. agentpal.json
+4. contacts/pals.json
+5. registry/pal.index.json
+6. pals/Mira-main/PAL.md
+7. pals/Mira-main/AGENTS.md
+8. pals/Mira-main/SKILL.md
+9. orchestration/runtime-response-gate.md
+
+If this is the AgentPal Workspace itself, do not read external project .agentpal files.
+
+Do not scan all Pal contents. Use contacts / registry as the Pal list. Directory listings and registry paths are index exposure, not content reading.
 
 Expected bundled Pal directories:
 - Mira-main
@@ -64,12 +61,11 @@ Expected bundled Pal directories:
 
 If an expected Pal is missing, report it as missing. Do not invent it.
 
-During initialization, automatically detect valid Pal Packs under pals/ and refresh or confirm:
-- registry/pal.index.md
-- registry/pal.index.json
-- contacts/PAL_CONTACTS.md
-- contacts/pals.json
-- contacts/mention-aliases.md
+During normal initialization, confirm registered Pals from contacts/pals.json and registry/pal.index.json. Refreshing or rebuilding registry/contact Markdown files is a deep initialization or maintenance task, not the default first-run path.
+
+Deep initialization is optional. Use it only for diagnostics, release checks, registry repair, failed initialization, or explicit user request. It may load RESOURCE_INDEX.md, registry/pal.index.md, contacts/PAL_CONTACTS.md, mention aliases, Mira core details, additional orchestration protocols, or templates, but it still must not load all Pals, all examples/evals, future design, all memory, or whole projects by default.
+
+If the user asks what initialization read, output a compact Asset Loading Report with index_known_count and content_read_count separated. Do not include a long Asset Loading Report in the first welcome message.
 
 Do not mention Pal index maintenance in the first welcome message. Explain add/refresh steps only when the user asks how to add a new Pal or when a Pal cannot be found.
 
@@ -114,4 +110,3 @@ Pal capability reference is not a route map.
 Explicit commands are deterministic.
 Safety and availability guardrails are deterministic.
 ```
-

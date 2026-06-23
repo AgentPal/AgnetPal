@@ -11,3 +11,7 @@
 9. Verify：复验结果。
 10. Write Back：写回记忆、任务账本、决策、协作记录和 routing decisions。
 11. Report：汇报完成、验证、风险、路由理由和下一步。
+
+## Context Slice Step
+
+Before loading extra files, build a Context Slice: user goal, task state, selected Pal, relevant project slice, selected Pal assets, memory summaries, constraints, and output contract. Use indexes to choose assets and avoid broad context loading.

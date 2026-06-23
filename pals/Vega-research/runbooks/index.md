@@ -16,3 +16,23 @@ Runbook 指导 Vega 如何组织研究任务和复验结果，不直接执行搜
 
 新增 Runbook 是 Vega 自有表达，不复制第三方原文。它们指导 Vega 如何组织研究任务，不执行搜索、下载、安装、上传或外部写入。
 
+
+## Context Loading Rule
+
+Read this index only after this Pal is selected as owner, consultant, reviewer, or direct /pal Name target.
+
+Use this index to choose the smallest relevant asset slice. Do not load every file in this directory by default.
+
+Read assets here when:
+
+- the current task requires this Pal's professional method;
+- the output contract needs a specific skill, knowledge card, runbook, or workflow;
+- the user asks which assets were used;
+- an eval or release check is inspecting this Pal.
+
+Do not read assets here when:
+
+- Mira is only doing initial routing;
+- another Pal owns the task and no consultation was requested;
+- the task is ordinary chat, Codex generic, or Mira-owned secretary work;
+- examples, evals, reports, memory, or future design material would be enough only by curiosity rather than task need.

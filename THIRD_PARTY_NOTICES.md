@@ -1,14 +1,31 @@
 # Third-Party Notices
 
-AgentPal is released under the MIT License.
+AgentPal v0.1.0-rc.1 is released under the MIT License.
 
-Third-party materials, Skills, tools, GitHub projects, documents, models, plugins, and MCP servers keep their original licenses and notices.
+## Current Release State
 
-This repository should not copy third-party source code, long README content, long SKILL.md content, or copyrighted documentation text. Use short references, summaries, and links where appropriate.
+The default AgentPal v0.1.0-rc.1 release is a Markdown/JSON workspace. It does not bundle third-party runtime engines, desktop app code, web UI frameworks, package-manager dependencies, model weights, or external tool binaries.
 
-Users who import resources into `imports/` are responsible for following the original license terms.
+The repository may contain references, summaries, templates, or compatibility notes for external runtimes, tools, models, plugins, MCP servers, or projects. Those references do not change the license of the referenced material.
 
-AgentPal examples and prompts should summarize ideas rather than copy third-party implementations. Imported resources in `imports/` remain subject to their original licenses.
+## Third-Party Material Policy
 
-AgentPal v0.1 default release does not include bundled runtime tool engines. External Pal Packs may carry their own tool assets under their own licenses and notices.
+Third-party materials keep their original licenses and notices.
 
+Do not copy long third-party source code, README content, Skill files, documentation pages, examples, datasets, or proprietary text into AgentPal. Prefer short summaries, links, and clearly attributed references where appropriate.
+
+Users who import resources into `imports/` are responsible for following the original license terms. Imported resources should not be treated as AgentPal-owned content unless their license permits redistribution and the notice is preserved.
+
+## Future Maintenance
+
+If a future AgentPal release bundles third-party code, generated assets, datasets, model files, package dependencies, or external Pal Packs, this file should be updated with:
+
+- the third-party component name
+- source or project URL
+- license name
+- copyright or notice text required by that license
+- whether the material is bundled, referenced, or optional
+
+## Release Boundary
+
+AgentPal examples and prompts should use synthetic or placeholder data. Do not include unauthorized third-party full text, private user data, customer data, internal reports, secrets, tokens, or local absolute paths.

@@ -8,6 +8,8 @@ In an external project-bound session:
 - Do not list AgentPal workspace as project root.
 - Do not treat the AgentPal workspace as current project content.
 - Only read AgentPal workspace files when the user explicitly asks about AgentPal itself, Mira files, Pal configuration, or the AgentPal workspace.
+- Exception: Pal discovery, direct Pal calls, owner routing, and selected Pal asset loading may read bounded contacts / registry and selected Pal files from `agentpal_workspace_root`.
+- Do not look only inside the external project's `.agentpal/` folder for full Pal assets.
 - Even if Codex exposes multiple workspace roots, AgentPal must choose one active context.
 - Do not answer project questions by listing both the external project and the AgentPal workspace.
 

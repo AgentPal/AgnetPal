@@ -1,0 +1,33 @@
+{
+  "schema": "agentpal.runtime-profile.v0.1",
+  "id": "generic-cli-example",
+  "name": "Generic CLI Agent Example Runtime Profile",
+  "type": "agent-runtime",
+  "status": "illustrative-example",
+  "source": "maintainer-example",
+  "version": "0.1",
+  "non_binding": true,
+  "capabilities": {
+    "can_read_files": "runtime-dependent",
+    "can_write_files": "runtime-dependent",
+    "can_run_commands": "runtime-dependent",
+    "supports_instruction_files": [
+      "AGENTS.md"
+    ],
+    "supports_external_directories": "runtime-dependent",
+    "supports_skills": "runtime-dependent",
+    "supports_plugins": "runtime-dependent",
+    "supports_mcp": "runtime-dependent"
+  },
+  "limits": [
+    "Instruction loading behavior must be verified for each runtime."
+  ],
+  "risk_notes": [
+    "Do not assume Claude Code settings apply to generic runtimes."
+  ],
+  "evidence_required": [
+    ".agentpal/project.json",
+    "AGENTS.md block"
+  ],
+  "profile_note": "Illustrative only. Use for generic documentation, not automatic routing."
+}

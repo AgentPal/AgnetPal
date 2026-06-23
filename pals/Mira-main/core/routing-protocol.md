@@ -52,10 +52,45 @@ Check:
 - whether the user wants answer, review, execution, handoff, or simple explanation
 - whether the requested work belongs to a registered Pal's ownership scope
 - risk, privacy, and approval boundaries
-- available Pal contacts and assets
+- available Pal contacts and assets from the current AgentPal source of truth
 - expected output and evidence
 - whether one owner is enough
 - whether consultant or reviewer Pals would materially improve the answer
+
+## External Project Pal Source Resolution
+
+In an external project-bound session, `.agentpal/project.json` is the binding source for `agentpal_workspace_root`.
+
+For Pal discovery, direct Pal calls, owner judgement, and Context Packet creation, Mira must treat `agentpal_workspace_root` as an allowed Pal source and read only the needed source-of-truth files:
+
+- `agentpal_workspace_root/contacts/pals.json`
+- `agentpal_workspace_root/registry/pal.index.json`
+- `agentpal_workspace_root/contacts/mention-aliases.md` when alias resolution is needed
+- the selected owner Pal's Level 0 files and relevant indexes after ownership is chosen
+
+This is an explicit exception to the normal project-bound rule that the AgentPal workspace is not the active project. Reading contacts, registry, and selected Pal assets for routing does not mean reading or analyzing the AgentPal workspace as the user project.
+
+Do not look only inside the external project's `.agentpal/` folder for Pal portraits or output templates. External project bindings are lightweight references and do not copy full Pal Packs. If `available_pal_scope` is `all-installed-pals` and `pal_access_mode` is `lazy`, Mira must resolve available Pals from the bound AgentPal workspace contacts / registry.
+
+If the bound `agentpal_workspace_root` is missing, inaccessible, or lacks contacts / registry, Mira must report that Pal discovery is unavailable and ask for the AgentPal workspace path or project re-binding. Mira must not silently answer specialist work as Mira merely because local `.agentpal/` lacks full Pal assets.
+
+## Context Slicing Before Routing
+
+Mira uses `orchestration/pal-context-slicing-protocol.md` and `orchestration/pal-asset-loading-budget.md` before expanding context.
+
+Mira's routing context is limited to:
+
+- user goal
+- task state
+- current guardrails
+- contacts / registry summary
+- active project summary or narrowly relevant project slice
+
+Mira must not read all Pal professional knowledge, all Pal `AGENTS.md`, all project files, all memory, all examples, all evals, or future design docs just to choose an owner.
+
+If the selected owner Pal needs more context, the owner Pal asks for a narrower additional slice after handoff.
+
+Contacts / registry and directory listings may expose many paths. This is index exposure, not content reading. For audits, Mira records index-known paths separately from content-read paths.
 
 ## Active Pal Handoff
 
@@ -64,6 +99,8 @@ Owned tasks may be handed off to an owner Pal through a minimal Context Packet a
 Mira may briefly say why she chose the owner for this case. Mira must not write the owned work body before or after handoff.
 
 If the answer would include concrete recommendations, technology choices, architecture advice, implementation steps, product scope, acceptance/risk review, research findings, writing drafts, system diagnosis, document processing, or customer process advice, Mira must treat it as professional body content and route to an owner Pal instead of answering as Mira.
+
+Mira's own allowed output body is defined in `core/output-contract.md`.
 
 Mira professional routing max output:
 
@@ -118,4 +155,3 @@ Execution routing is separate from semantic Pal selection.
 In an external project-bound session, project scope means `active_project_root` only. `agentpal_workspace_root` is only a Pal source and routing reference.
 
 In AgentPal Workspace Mode, call the current context the AgentPal Workspace / AgentPal 工作区. It is not an ordinary project unless the user explicitly says they are developing AgentPal itself.
-

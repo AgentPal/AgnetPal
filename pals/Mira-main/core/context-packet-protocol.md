@@ -22,6 +22,8 @@ When Mira hands off to a specialist Pal, use the minimum task packet:
 - `allow_codex_generic_answer`
 - `fallback_if_no_asset`
 - `asset_usage_proof_required`
+- `index_known_summary`
+- `content_read_paths`
 
 ## Principles
 
@@ -40,6 +42,9 @@ When Mira hands off to a specialist Pal, use the minimum task packet:
 - Require the owner Pal to answer immediately after Mira handoff.
 - After handoff, the target Pal becomes active speaker and decides whether to add assets used, Knowledge gap, fallback method, execution layer, evidence, repeated task record, formal Skill trigger, or formal Skill target.
 - Mira should not fill all specialist fields before handoff.
+- Use `orchestration/context-packet-minimalism-protocol.md` for packet size control.
+- Use `templates/context-slice/pal-context-slice-template.md` when an audited handoff needs a visible slice record.
+- Distinguish index-known paths from content-read files in audited packets.
 
 Mira route-only applies before the Context Packet is handed off: max 2 short sentences, only ownership judgment and handoff, no owned work body.
 
@@ -54,6 +59,17 @@ mode: handoff
 user_goal: 检查系统启动项都有哪些
 task_type: system-startup-audit
 active_project: none
+relevant_project_slice:
+  - none unless task-specific project files are needed
+index_known_summary:
+  - contacts / registry paths known for navigation only
+content_read_paths:
+  - files actually opened as content for this handoff
+excluded_context:
+  - full chat history
+  - all Pal assets
+  - all memory
+  - examples/evals/future design
 constraints:
   - read-only first
   - do not modify startup items without user confirmation
@@ -106,6 +122,8 @@ The active Pal owns these fields, not Mira.
 
 `asset_usage_proof_required` is required for complex tasks, release gates, evals, and reports.
 
+Index-known paths in a Context Packet are navigation hints only. Do not claim their contents were used unless they are also listed as content-read paths.
+
 ## Ownership Content
 
 For owned tasks, the Context Packet should name why the owner Pal is required:
@@ -139,4 +157,3 @@ If the target Pal needs more context, ask the user or request a narrower file sc
 `formal_skill_target` points to the owner Pal's `skills/<skill-id>/SKILL.md`.
 
 Mira should not own specialist learning. Domain learning belongs to the specialist Pal. The active specialist Pal reports fallback and learning details directly.
-

@@ -49,7 +49,7 @@ Cover real-use regression inputs for Pal validity, Mira route-only behavior, Cod
    - expected: Atlas says the answer must use Atlas Response Fingerprint, Output Contract, and at least one asset or fallback method.
 
 10. `这个项目下一版值不值得继续做？如果值得，怎么开发，怎么验收？`
-    - expected: Mira uses AI judgement to decide whether Simple Pal Mode or Subagent Mode is useful; no fixed Pal set is required by the wording alone.
+    - expected: Mira uses AI judgement to decide whether one owner, same-response consultant/reviewer sections, or a Task Package is useful; no fixed Pal set is required by the wording alone, and no Subagent Mode is invoked in v0.1.0-rc.1.
 
 11. `不要使用任何 Pal 的知识和流程，只用 Codex 通用能力回答：这个项目继续开发应该注意什么？`
     - expected: starts with `Codex generic answer:`, no Pal prefix.

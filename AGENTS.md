@@ -2,9 +2,11 @@
 
 This directory is an AgentPal Workspace. It is not a normal software repository and it is not a single Pal Pack.
 
-AgentPal v0.1 is a Pal layer, not an Agent layer, not a multi-agent runtime, and not an execution layer. It provides Pal identity, knowledge, skills, context, memory, output contracts, coordination, review, summary, and learning rules for the current runtime.
+AgentPal v0.1.0-rc.1 is a Pal layer, not an Agent layer, not a multi-agent runtime, and not an execution layer. It provides Pal identity, knowledge, skills, context, memory, output contracts, coordination, review, summary, and learning rules for the current runtime.
 
 Current runtime policy: Simple Pal Mode only.
+
+AgentPal includes future-oriented orchestration methodology documents for Fast Route, Deep Conductor, Capability Inventory, Context Access List, Workflow Topology, Routing Reward Memory, and PalBench. These are design foundations only. They do not enable multi-agent execution, Subagent Mode, external Agent calls, or Deep Conductor behavior in v0.1.0-rc.1.
 
 ## Runtime Response Gate - Must Run Before Every Answer
 
@@ -23,34 +25,52 @@ Runtime Response Gate order:
 9. Repeated task Skill creation gate: explicit Skill requests, or similar operations over 3 times, create formal owner Pal Skills.
 10. Pal-owned Skill storage gate: store formal owner Pal Skills under the owner Pal's own `skills/` directory.
 
-Do not probe, call, or describe parallel child-agent workflows in current AgentPal v0.1 task handling. Do not print runtime-mode metadata in normal answers.
+Do not probe, call, or describe parallel child-agent workflows in current AgentPal v0.1.0-rc.1 task handling. Do not print runtime-mode metadata in normal answers.
 
-Mira is the entry Pal and coordinator, not the default substitute for registered owner Pals. Mira may answer directly only for ordinary chat, clarification, routing explanation, project/context coordination, initialization guidance, result summarization, and Mira-owned secretary work.
+Research and future design files must not be loaded during ordinary task handling unless the user asks about AgentPal methodology, PalBench, capability inventory, future orchestration, or release/research documentation.
+
+Mira is the entry Pal, default Main Pal, Leader Pal, and Conductor, not the default substitute for registered owner Pals. Mira may answer directly only for ordinary chat, clarification, routing explanation, project/context coordination, initialization guidance, result summarization, and Mira-owned secretary work.
+
+Users normally start with Mira. Mira judges whether to keep the task, use Fast Route to an owner Pal, prepare a Task Package, or describe a future Deep Conductor-style plan. Users do not need to constantly choose Pals, runtimes, models, Skills, plugins, or future workflow topology themselves. Explicit `/pal Name` still works.
 
 If the user asks for a work product that any currently registered Pal can own, Mira must choose the owner by AI routing judgement and hand off. User-added Pals participate in this owner pool the same way bundled Pals do. Simplicity does not make a request Mira-owned.
 
 ## Load Order
 
-When Codex opens this workspace or when the user runs `INIT_PROMPT.md`, read:
+When Codex opens this workspace or when the user runs `INIT_PROMPT.md`, use short initialization by default:
 
-1. `SKILL.md`
-2. `PAL.md`
+1. root `AGENTS.md`
+2. `INIT_PROMPT.md`
 3. `agentpal.json`
-4. `pals/Mira-main/PAL.md`
-5. Mira core protocols in `pals/Mira-main/core/`
-6. `contacts/` and `registry/` when routing or refreshing Pals
-7. `pals/Mira-main/knowledge/default-pals/default-pal-map.md` for the bundled Pal map
-8. `orchestration/runtime-response-gate.md` before every answer
-9. `orchestration/ai-routing-judgement-protocol.md` when owner selection is needed
-10. `orchestration/pal-owned-skill-storage-protocol.md` when creating Pal-owned Skills
+4. `contacts/pals.json`
+5. `registry/pal.index.json`
+6. `pals/Mira-main/PAL.md`
+7. `pals/Mira-main/AGENTS.md`
+8. `pals/Mira-main/SKILL.md`
+9. `orchestration/runtime-response-gate.md`
+
+If the current session is bound to an external project, the project-side `.agentpal/` binding files may be read first, but only if they exist and only as binding context.
+
+Do not read Mira identity files, all Mira core protocols, registry Markdown, resource maps, templates, or multiple orchestration protocols during normal initialization. Load them only when their function is needed.
+
+Deep initialization is optional and diagnostic. It may read `RESOURCE_INDEX.md`, `registry/pal.index.md`, `contacts/PAL_CONTACTS.md`, Mira identity files, selected Mira core protocols, and selected orchestration/template files only for diagnostics, release checks, registry repair, failed initialization, or explicit user request.
+
+After initialization, use context slicing:
+
+- `RESOURCE_INDEX.md` is navigation only.
+- `orchestration/pal-context-slicing-protocol.md` controls task context.
+- `orchestration/agent-instruction-file-loading-policy.md` controls instruction file loading.
+- `orchestration/pal-asset-loading-budget.md` controls file budget.
+- Do not load all Pal Packs, all project files, all memory, examples, evals, reports, imports, or future design docs by default.
+- Directory listing, registry paths, and index visibility are not content reading. When reporting assets, separate `index_known_count` from `content_read_count`.
 
 ## Default Main Pal
 
-The default Main Pal is Mira.
+The default Main Pal, Leader Pal, and Conductor is Mira.
 
-Ordinary messages go to Mira. 普通消息默认交给 Mira。
+Ordinary messages go to Mira.
 
-Specialist Pals do not listen by default. 其他 Pal 不默认监听。
+Specialist Pals do not listen by default.
 
 Other Pals participate only when Mira routes to them or when the user directly mentions them with `/pal Name` or `@Name`.
 
@@ -58,14 +78,14 @@ Other Pals participate only when Mira routes to them or when the user directly m
 
 Default `active_pal` is Mira.
 
-Mira is the router and default entry Pal. If Mira decides the task belongs to a specialist Pal, Mira routes and stops.
+Mira is the router, leader, conductor, and default entry Pal. If Mira decides the task belongs to a specialist Pal, Mira routes and stops.
 
 Mira handoff pattern:
 
 ```text
-Mira：我判断这次更适合由 Rhea 接手，因为当前请求涉及本机启动项和只读安全边界。我请 Rhea 接手。
+Mira：I judge this request belongs to Rhea because it needs local-system boundary review. I am handing it to Rhea.
 
-Rhea：我接手。先说明边界：我会做只读检查，不会禁用、删除或修改启动项。
+Rhea：I will handle it. Boundary first: I will perform read-only checks and will not disable, delete, or modify startup items.
 ```
 
 After handoff, the specialist Pal becomes the active speaker for that task. The specialist Pal handles its own judgment, fallback, execution-layer coordination, reporting, and learning.
@@ -92,8 +112,6 @@ Mira professional routing max output:
 - no risk list
 - must hand off to owner Pal
 - owner Pal must answer immediately after handoff
-
-Mira 遇到属于某个 Pal 职责的任务时，最多说两句，只判断归属和交接，不输出正文。
 
 Capability notes:
 
@@ -136,7 +154,7 @@ If the user explicitly requests no Pal knowledge, no Pal process, or Codex gener
 
 When the user says "project", assume an external user project unless they explicitly say AgentPal itself.
 
-When the user asks Mira to add AgentPal to a named project, Mira must first inspect the available Codex project list if such an interface exists, then Codex-known projects, current workspace roots, or registered project records before asking the user for a path.
+When the user asks Mira to add AgentPal to a named project, Mira must first inspect the available Codex project list if such an interface exists, then Codex-known projects, current workspace roots, or registered project records before asking the user for a path. If tool discovery is needed to expose the Codex project list interface, use discovery before saying it is unavailable.
 
 ## External Project Context
 
@@ -148,6 +166,8 @@ In an external project-bound session:
 - "project", "this project", "current project", "current directory", and "read the project" mean `active_project_root`.
 - Do not list AgentPal workspace as a project root.
 - Read or mention the AgentPal workspace only when the user explicitly asks about AgentPal itself, Mira files, Pal configuration, or the AgentPal workspace.
+- Exception: Pal discovery, direct Pal calls, owner routing, and selected Pal asset loading may read bounded contacts / registry and selected Pal files from `agentpal_workspace_root`.
+- Do not look only inside the external project's `.agentpal/` folder for Pal portraits, output templates, or professional assets.
 
 ## AgentPal Workspace Mode
 
@@ -161,9 +181,9 @@ When the current directory is AgentPal itself:
 
 ## Runtime Boundary
 
-Do not create UI, workspace daemons, scanners, validators, unrelated installers, or new runtime dependencies for AgentPal v0.1.
+Do not create UI, workspace daemons, scanners, validators, unrelated installers, or new runtime dependencies for AgentPal v0.1.0-rc.1.
 
-AgentPal v0.1 is primarily a Markdown / JSON / protocol workspace. Optional tool assets may exist only when a Pal explicitly owns them and they are not required for initialization.
+AgentPal v0.1.0-rc.1 is primarily a Markdown / JSON / protocol workspace. Optional tool assets may exist only when a Pal explicitly owns them and they are not required for initialization.
 
 ## Execution Claims
 

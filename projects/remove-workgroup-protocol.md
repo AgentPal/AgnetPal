@@ -42,19 +42,24 @@ Do not remove anything until the user confirms.
 After confirmation:
 
 1. Delete the target project's `.agentpal/` directory.
-2. Remove only the target root `AGENTS.md` block between `BEGIN AGENTPAL WORKGROUP` and `END AGENTPAL WORKGROUP`.
-3. If `AGENTS.md` is empty or blank after removing the block, replace it with the non-workgroup deactivation marker from `templates/project-binding/agentpal-removed-agents-template.md`.
-4. If root `AGENTS.md` did not exist, create that same non-workgroup deactivation marker.
-5. Remove the matching project record from `projects/registered-projects.json`.
-6. Remove or mark removed in `projects/registered-projects.md`.
-7. Archive matching AgentPal binding memory under `memory/projects/` by default.
-8. Clear `state/active-project.md` if it points to the removed project.
-9. Generate a concise removal summary that warns about old Codex thread context.
+2. Remove only the target root `AGENTS.md` block between `<!-- BEGIN AGENTPAL WORKGROUP -->` and `<!-- END AGENTPAL WORKGROUP -->`.
+3. If present in a Claude Code project, remove only the root `CLAUDE.md` AgentPal block between the same markers.
+4. Legacy bindings may use `BEGIN AGENTPAL WORKGROUP` and `END AGENTPAL WORKGROUP`; remove that legacy block only when no HTML marker block is present.
+5. If `AGENTS.md` is empty or blank after removing the block, replace it with the non-workgroup deactivation marker from `templates/project-binding/agentpal-removed-agents-template.md`.
+6. If root `AGENTS.md` did not exist, create that same non-workgroup deactivation marker.
+7. For Claude Code, remove the AgentPal workspace path from `.claude/settings.local.json` `permissions.additionalDirectories`, preserving all other settings.
+8. Remove the matching project record from `projects/registered-projects.json`.
+9. Remove or mark removed in `projects/registered-projects.md`.
+10. Archive matching AgentPal binding memory under `memory/projects/` by default.
+11. Clear `state/active-project.md` if it points to the removed project.
+12. Generate a concise removal summary that warns about old runtime thread context.
 
 Keyword rules:
 
 - delete .agentpal
 - remove AGENTS.md AgentPal block
+- remove CLAUDE.md AgentPal block when present
+- remove only AgentPal path from Claude Code additionalDirectories when present
 - leave deactivation marker if AGENTS.md would otherwise be empty or missing
 - do not delete user AGENTS content
 - cleanup registered projects
@@ -72,11 +77,15 @@ Remove AgentPal workgroup does not delete:
 - AgentPal `pals/`
 - other projects' `.agentpal/`
 - user-authored `AGENTS.md` content outside the AgentPal protected block
+- user-authored `CLAUDE.md` content outside the AgentPal protected block
+- other `.claude/settings.local.json` settings
 
 Only delete:
 
 - target project `.agentpal/`
 - target project `AGENTS.md` AgentPal block
+- target project `CLAUDE.md` AgentPal block when present
+- target project `.claude/settings.local.json` AgentPal additionalDirectories entry when present
 - AgentPal registered project record
 - AgentPal active project state for that target
 

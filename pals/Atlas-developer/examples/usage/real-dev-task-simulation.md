@@ -35,8 +35,8 @@ Define the AgentPal release readiness rules as a user-facing Markdown checklist.
 Read:
 - README.md
 - README.zh-CN.md
-- docs/07-github-release-boundary.md
-- docs/08-official-bundled-pals.md
+- docs/08-release-and-maintenance/00-release-process.md
+- docs/99-reference/official-pals.md
 
 Allowed changes:
 - RELEASE_CHECKLIST.md

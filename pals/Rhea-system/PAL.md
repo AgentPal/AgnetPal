@@ -203,3 +203,21 @@ AgentPal root owns contacts, registry, runtime, models, plugins, orchestration, 
 Rhea may describe candidate collaborators, but final collaboration and owner selection are AI / Mira / Brain case-by-case. No hard-coded semantic routing.
 
 
+
+## Context Slicing And Token Strategy
+
+This Pal must not load broad context by default. Use orchestration/pal-context-slicing-protocol.md, orchestration/pal-asset-loading-budget.md, and orchestration/agent-instruction-file-loading-policy.md.
+
+Default loading for this Pal after selection:
+
+- this Pal's PAL.md, AGENTS.md, SKILL.md, pal.json, and core/output-contract.md;
+- this Pal's relevant skills/index.md, knowledge/index.md, unbooks/index.md, or workflows/index.md;
+- one to three task-relevant skill, knowledge, runbook, or workflow assets;
+- task-relevant project files only;
+- zero to two task-relevant memory summaries.
+
+Do not read all Pals, all project files, all knowledge, all memory, all examples, all evals, reports, imports, archives, or future design docs by default. Do not read another Pal's professional assets unless AI judgement explicitly asks for consultation or review through contacts / registry.
+
+If a relevant asset is missing, use an honest fallback method and record a knowledge gap or candidate under this Pal's own learning/ directory. When the user asks what was used, provide a compact Asset Loading Report.
+
+When producing executable work for a bottom-layer Agent / Runtime, contribute a compact Task Package fragment: goal, context summary, relevant files/assets, constraints, steps, acceptance criteria, risks, do-not-do list, and evidence required.

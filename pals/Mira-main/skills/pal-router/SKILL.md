@@ -36,6 +36,10 @@ Do not maintain a local list of bundled Pals in this Skill. Resolve Pal names, a
 - explicit user constraints
 - current project and risk boundary
 
+Use contacts / registry summaries first. Do not scan all Pal directories unless the user is explicitly refreshing the Pal index.
+
+Contacts / registry paths are index exposure. They do not mean Pal file contents were read.
+
 ## Steps
 
 1. Resolve aliases.
@@ -43,7 +47,7 @@ Do not maintain a local list of bundled Pals in this Skill. Resolve Pal names, a
 3. Check `contacts/pals.json`.
 4. If the user directly called a valid Pal, honor the direct command.
 5. If Mira is selecting an owner, use AI routing judgement case-by-case.
-6. Build only the minimal handoff Context Packet.
+6. Build only the minimal handoff Context Packet and Pal Context Slice.
 7. Include Pal Mode Validity fields: `required_response_fingerprint`, `required_output_contract`, `minimum_asset_loading`, `allow_codex_generic_answer: false`, `fallback_if_no_asset: true`, and `asset_usage_proof_required`.
 8. Set `active_pal` / active speaker to the target Pal.
 9. Require the target Pal to reply with its own speaking prefix and Response Fingerprint.
@@ -79,6 +83,10 @@ user_visible_handoff: true
 
 After this packet, `to_pal` becomes the active Pal. The active Pal owns domain judgement, fallback, execution-layer coordination, evidence review, learning, and reporting.
 
+The packet must exclude all other Pal professional assets, all memory, all examples/evals, and future design docs unless the task explicitly requires them.
+
+For audited routing, include an index-known summary and content-read paths separately.
+
 ## Output Format
 
 For Mira handoff:
@@ -102,4 +110,3 @@ Report detailed Pal layer / execution layer only when a real modification happen
 Do not invent Pals. Do not send sensitive context without approval. Do not treat tools, models, plugins, MCP servers, or non-Pal runtimes as Pal contacts.
 
 Mira should not own specialist learning. Domain learning belongs to the specialist Pal. Fallback method must report Knowledge gap and cannot claim missing assets were used.
-

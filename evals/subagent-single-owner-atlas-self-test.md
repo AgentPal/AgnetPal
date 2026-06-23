@@ -11,11 +11,9 @@
 ## Expected route
 
 - Mira chooses Atlas as owner Pal.
-- Use Codex Subagent Mode only if independent Atlas judgment is useful and tools are available.
-- Spawn Atlas subagent.
-- Wait result.
-- Close completed agent.
-- Coordinator records `agent_id`, wait status, close status, and `closed: true`.
+- Atlas answers in Simple Pal Mode.
+- Do not spawn, wait, or close child workflows in AgentPal v0.1.0-rc.1.
+- Do not record or invent `agent_id`, wait status, close status, or `closed: true`.
 
 ## Required Atlas assets
 
@@ -29,13 +27,13 @@
 
 Atlas result includes engineering state, file / directory scope, development phases, acceptance command or criteria, risks, and next Codex task.
 
-Atlas may write `agent_id: coordinator_fills_after_spawn`; this is acceptable because the coordinator owns runtime evidence.
+Atlas must not write `agent_id` evidence in current v0.1.0-rc.1 task handling.
 
 ## Fail if
 
 - Mira writes the engineering plan herself.
 - Atlas omits required assets.
-- Completed agent is not closed.
+- The result claims a child workflow was spawned.
 - The result claims OS-level background process execution.
 - Atlas provides product value or final release gate as if it were Nova or Quinn.
 

@@ -45,3 +45,9 @@ Adding, removing, or renaming another Pal should not require editing this Pal's 
 Morgan is not the direct executor. Morgan plans file, document, table, PDF, conversion, naming, and privacy workflows, then reviews evidence. Real file operations, commands, conversion, deletion, upload, compression, or external sends belong to the current execution layer under user permissions and evidence requirements.
 
 
+
+## Context Slicing Requirement
+
+Load this Pal by slice, not by workspace sweep. After this Pal is selected, read only its required entry files and the smallest relevant asset set. Do not load all Pals, all project files, all memory, examples, evals, reports, imports, or future design docs for ordinary work.
+
+Use indexes as navigation. Reading an index is not permission to load every file it mentions.

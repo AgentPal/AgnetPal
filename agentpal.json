@@ -3,7 +3,14 @@
   "id": "agentpal-workspace",
   "name": "AgentPal",
   "type": "agentpal-workspace",
-  "version": "0.1.0",
+  "version": "v0.1.0-rc.1",
+  "release_status": "release-candidate",
+  "methodology": {
+    "design_foundation": "AgentPal does not compete with foundation models. It studies how to use existing Agent runtimes better through Pal identity, context control, task packaging, verification, and routing memory.",
+    "active_mode": "simple-pal-mode-only",
+    "active_clear_task_pattern": "fast-route",
+    "future_complex_task_design": "deep-conductor"
+  },
   "agentpal_layer_definition": {
     "is_pal_layer": true,
     "is_agent_layer": false,
@@ -38,7 +45,8 @@
   "default_pal": {
     "display_name": "Mira",
     "id": "mira-main",
-    "path": "pals/Mira-main"
+    "path": "pals/Mira-main",
+    "main_pal_role": "default Main Pal, Leader Pal, and Conductor"
   },
   "pals_dir": "pals",
   "default_listener": "Mira",
@@ -235,6 +243,80 @@
       "Level 3 fallback method"
     ]
   },
+  "context_strategy": {
+    "protocol": "orchestration/pal-context-slicing-protocol.md",
+    "resource_index": "RESOURCE_INDEX.md",
+    "instruction_loading_policy": "orchestration/agent-instruction-file-loading-policy.md",
+    "asset_loading_budget": "orchestration/pal-asset-loading-budget.md",
+    "memory_summary_loading": "orchestration/memory-summary-loading-protocol.md",
+    "task_package_output_contract": "orchestration/task-package-output-contract.md",
+    "default_policy": "short-initialization-then-load-indexes-and-task-relevant-slices-only",
+    "initialization_default": {
+      "mode": "short-initialization",
+      "content_read_count_target": "10-15",
+      "agentpal_workspace_minimum_files": [
+        "AGENTS.md",
+        "INIT_PROMPT.md",
+        "agentpal.json",
+        "contacts/pals.json",
+        "registry/pal.index.json",
+        "pals/Mira-main/PAL.md",
+        "pals/Mira-main/AGENTS.md",
+        "pals/Mira-main/SKILL.md",
+        "orchestration/runtime-response-gate.md"
+      ],
+      "external_project_binding_files_if_present": [
+        "AGENTS.md",
+        ".agentpal/INIT_AGENTPAL_PROJECT_PROMPT.md",
+        ".agentpal/project.json",
+        ".agentpal/PAL_GROUP.md",
+        ".agentpal/AGENTPAL.md"
+      ],
+      "deep_initialization_only_for": [
+        "explicit_user_request",
+        "diagnostics",
+        "release_check",
+        "registry_or_contacts_repair",
+        "failed_initialization",
+        "eval_or_debug"
+      ]
+    },
+    "asset_report_fields": [
+      "index_known_count",
+      "index_known_source",
+      "index_known_paths",
+      "content_read_count",
+      "content_read_paths",
+      "index_only_paths_summary",
+      "index_only_not_content_read",
+      "not_content_read_note"
+    ],
+    "index_exposure_is_not_content_read": true,
+    "exact_token_metering_available": false,
+    "do_not_load_by_default": [
+      "all-pals",
+      "all-project-files",
+      "all-knowledge",
+      "all-memory",
+      "all-examples",
+      "all-evals",
+      "reports",
+      "imports",
+      "future-design-docs"
+    ],
+    "owner_pal_default_budget": {
+      "required_entry_files": [
+        "PAL.md",
+        "AGENTS.md",
+        "SKILL.md",
+        "pal.json",
+        "core/output-contract.md"
+      ],
+      "relevant_assets_default_max": 3,
+      "project_files_default_max": 5,
+      "memory_summaries_default_max": 2
+    }
+  },
   "pal_mode_validity": {
     "protocol": "orchestration/pal-mode-validity-protocol.md",
     "mode_statement": "/pal Name enters Pal work mode",
@@ -271,16 +353,45 @@
     ]
   },
   "future_design": {
+    "agentpal_orchestration_methodology": {
+      "active_in_v0_1_runtime": false,
+      "future_design_only": true,
+      "docs": [
+        "docs/research/agentpal-orchestration-methodology.md",
+        "docs/research/fugu-inspired-agentpal-methodology.md",
+        "docs/research/palbench-design.md"
+      ],
+      "protocols": [
+        "orchestration/fast-route-protocol.md",
+        "orchestration/deep-conductor-protocol.md",
+        "orchestration/capability-inventory-protocol.md",
+        "orchestration/task-judgement-protocol.md",
+        "orchestration/workflow-topology-protocol.md",
+        "orchestration/context-access-list-protocol.md",
+        "orchestration/pal-isolation-and-shared-memory-protocol.md",
+        "orchestration/routing-reward-memory-protocol.md"
+      ],
+      "future_orchestration_design": [
+        "fast-route",
+        "deep-conductor",
+        "context-access-list",
+        "pal-isolation",
+        "shared-memory",
+        "routing-reward-memory",
+        "palbench"
+      ],
+      "purpose": "Design foundation for transparent scheduling of Pals, runtimes, model profiles, reasoning profiles, Skills, plugins, context, verification, and routing memory. Not active Deep Conductor behavior in v0.1."
+    },
     "agent_runtime_orchestration": {
       "active_in_v0_1_runtime": false,
-      "documentation": "docs/future-agent-orchestration.md",
+      "documentation": "docs/99-reference/future-agent-orchestration.md",
       "purpose": "Reserved for a later design that may coordinate Codex child workflows, non-Pal runtimes, MCP-hosted agents, or remote agent services."
     },
     "codex_subagent_mode": {
       "active_in_v0_1_runtime": false,
       "future_design_only": true,
       "docs": [
-        "docs/09-codex-subagent-mode.md",
+        "docs/99-reference/future-codex-subagent-mode.md",
         "orchestration/codex-subagent-mode-protocol.md",
         "registry/pal-subagent-map.json",
         "registry/pal-subagent-map.md"
@@ -301,11 +412,28 @@
     "enabled": true,
     "binding_dir": ".agentpal",
     "default_project_listener": "Mira",
+    "one_prompt_project_install": {
+      "claude_code": {
+        "install_prompt": "prompts/claude-code/install-agentpal-current-project.md",
+        "remove_prompt": "prompts/claude-code/remove-agentpal-current-project.md",
+        "verify_prompt": "prompts/claude-code/verify-agentpal-current-project.md",
+        "project_instruction_file": "CLAUDE.md",
+        "local_settings_file": ".claude/settings.local.json",
+        "additional_directories_setting": "permissions.additionalDirectories",
+        "add_dir_is_fallback_not_required_default": true
+      },
+      "generic_cli": {
+        "install_prompt": "prompts/cli-agent/install-agentpal-current-project.md",
+        "remove_prompt": "prompts/cli-agent/remove-agentpal-current-project.md",
+        "project_instruction_file": "AGENTS.md"
+      }
+    },
     "root_agents_required": true,
-    "root_agents_block_begin": "BEGIN AGENTPAL WORKGROUP",
-    "root_agents_block_end": "END AGENTPAL WORKGROUP",
+    "root_agents_block_begin": "<!-- BEGIN AGENTPAL WORKGROUP -->",
+    "root_agents_block_end": "<!-- END AGENTPAL WORKGROUP -->",
     "project_lookup_order": [
       "codex_list_projects_tool_if_available",
+      "tool_discovery_for_codex_list_projects_if_needed",
       "codex_known_projects",
       "workspace_roots",
       "agentpal_registered_external_projects",
@@ -315,7 +443,23 @@
     ],
     "codex_project_list_first": true,
     "list_projects_first_if_available": true,
+    "tool_discovery_before_declaring_list_projects_unavailable": true,
     "workspace_roots_first": true,
+    "project_resolution_evidence_required": [
+      "list_projects_checked",
+      "project_match_source",
+      "matched_project_path"
+    ],
+    "external_project_pal_source_policy": {
+      "contacts_registry_source": "agentpal_workspace_root",
+      "allowed_for_routing_even_when_agentpal_workspace_is_not_project": true,
+      "required_files": [
+        "contacts/pals.json",
+        "registry/pal.index.json"
+      ],
+      "external_agentpal_dir_is_not_pal_asset_store": true,
+      "fail_closed_if_contacts_registry_unavailable": true
+    },
     "context_isolation_policy": {
       "single_active_context_required": true,
       "agentpal_workspace_mode_label": "AgentPal Workspace",
@@ -353,6 +497,10 @@
     "pal-contact-source-of-truth",
     "pal-indexing",
     "ai-routing-judgement",
+    "pal-context-slicing",
+    "asset-loading-budget",
+    "memory-summary-loading",
+    "task-package-output-contract",
     "context-packet",
     "specialist-pal-asset-loading",
     "pal-mode-validity",
@@ -363,9 +511,19 @@
     "specialist-fallback-learning",
     "project-workgroup",
     "pal-owned-skill-storage",
+    "fast-route-protocol",
+    "deep-conductor-design",
+    "mira-conductor-role",
     "memory-writeback",
     "solution-reasoning",
-    "verification"
+    "verification",
+    "capability-inventory-design",
+    "task-judgement-design",
+    "workflow-topology-design",
+    "context-access-list-design",
+    "pal-isolation-design",
+    "routing-reward-memory-design",
+    "palbench-design"
   ],
   "compatible_runtimes": [
     "codex",

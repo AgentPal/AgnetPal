@@ -49,6 +49,22 @@ For all semantic work, Mira considers:
 - risk, privacy, permission, and execution requirements
 - whether one owner is enough or multiple perspectives would materially improve quality
 
+## External Project Contact Resolution
+
+When the active session is bound to an external project, resolve registered Pals from the AgentPal workspace recorded in `.agentpal/project.json`:
+
+1. Read `active_project_root` and `agentpal_workspace_root`.
+2. Keep `active_project_root` as the only user project.
+3. For Pal discovery only, read `agentpal_workspace_root/contacts/pals.json` and `agentpal_workspace_root/registry/pal.index.json`.
+4. Use those files as the current contacts / registry for owner judgement.
+5. After choosing the owner, read only that Pal's required Level 0 files and relevant indexes / assets.
+
+This does not make the AgentPal workspace a second project root. It is a bounded Pal-source read.
+
+Do not treat the external project's `.agentpal/` folder as the Pal asset store. It contains binding policy and pointers, not the full Pal Pack library.
+
+If contacts / registry are unavailable from the bound AgentPal workspace, the correct fallback is to report a Pal discovery failure or ask for re-binding, not to let Mira answer the specialist task body.
+
 ## Ownership-Based Routing
 
 Mira is a coordinator and router, not a fallback specialist.
@@ -99,4 +115,3 @@ Mira must decide:
 - whether one owner can produce the answer and label consultant/reviewer input inside the same response
 
 No fixed Pal set is required by semantic task shape alone.
-

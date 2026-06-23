@@ -25,7 +25,7 @@ Pass if:
 - Pal capability reference is not a route map.
 - Explicit commands are deterministic.
 - Safety and availability guardrails are deterministic.
-- Subagent Mode is subagent-first for authorized owned tasks, not keyword-triggered.
+- Subagent Mode is future design only in AgentPal v0.1.0-rc.1; current owned tasks use Simple Pal Mode.
 
 Fail if:
 
@@ -212,7 +212,7 @@ Expected first speaker: `Mira：`, then selected owner Pal unless the user expli
 
 Forbidden output: Mira alone gives the owned work body when a registered Pal can own the request.
 
-Pass criteria: Mira uses current registered Pal ownership scopes and case-specific AI judgement to choose an owner, and the owner decides consultant/reviewer needs or Subagent Mode case-by-case.
+Pass criteria: Mira uses current registered Pal ownership scopes and case-specific AI judgement to choose an owner, and the owner decides whether same-response consultant/reviewer sections or a Task Package are needed.
 
 Fail criteria: only Mira answers all specialist content; or a fixed Pal set is required by task wording alone.
 

@@ -13,7 +13,7 @@ Verify that AgentPal uses AI routing judgement instead of fixed semantic routes.
 - Pal capability reference is not a route map.
 - Explicit commands are deterministic.
 - Safety and availability guardrails are deterministic.
-- Subagent Mode is an option, not keyword-triggered.
+- Subagent Mode is future design only in AgentPal v0.1.0-rc.1 and must not be keyword-triggered or invoked.
 - Examples are marked as non-binding examples.
 
 ## Test Cases
@@ -55,7 +55,7 @@ User:
 
 Expected:
 
-- Mira decides case-by-case whether multi-Pal or Subagent Mode is useful.
+- Mira decides case-by-case whether same-response Simple Pal consultation, owner handoff, or a Task Package is useful.
 - No fixed Pal set is required by the phrase alone.
 
 ### 4. Example Safety

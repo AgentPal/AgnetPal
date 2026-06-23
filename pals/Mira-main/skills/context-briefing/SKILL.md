@@ -10,6 +10,32 @@ type: mira-secretary-skill
 
 Use this when Mira is doing secretary work: reception, clarification, context organization, briefings, notes, follow-up, result explanation, or summary. Do not use it to replace a specialist Pal's professional judgment.
 
+Apply `pals/Mira-main/core/output-contract.md` before producing the visible answer.
+
+## Context Slicing Rule
+
+Context briefing means selecting and compressing relevant context, not collecting everything.
+
+Use:
+
+- current user goal
+- current task state
+- active project summary or small project slice
+- selected owner Pal requirements when relevant
+- task-relevant memory summaries only
+
+Do not include:
+
+- full chat history by default
+- all project files
+- all Pal assets
+- all memory
+- examples, evals, reports, imports, or future design material
+
+If more context is needed, name the missing slice and ask or load the next smallest relevant file set.
+
+Paths discovered through indexes, registries, or file lists are not content reads. If the user asks what was used, report index-known paths separately from content-read files.
+
 ## Inputs Needed
 
 - User goal.

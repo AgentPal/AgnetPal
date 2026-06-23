@@ -9,6 +9,13 @@
   "active_project_role": "user_project",
   "agentpal_enabled": true,
   "created_by": "AgentPal",
+  "runtime": "REPLACE_WITH_RUNTIME_HINT",
+  "runtime_hint": "REPLACE_WITH_RUNTIME_HINT",
+  "mode": "simple-pal-mode-only",
+  "agentpal_is_pal_layer": true,
+  "agentpal_is_agent_layer": false,
+  "agentpal_is_multi_agent_runtime": false,
+  "agentpal_is_execution_layer": false,
   "removable": true,
   "agentpal_workspace": "REPLACE_WITH_AGENTPAL_WORKSPACE_PATH",
   "agentpal_workspace_root": "REPLACE_WITH_AGENTPAL_WORKSPACE_PATH",
@@ -22,20 +29,42 @@
     "do_not_list_agentpal_workspace_as_project_root": true,
     "do_not_answer_project_questions_with_multiple_roots": true,
     "project_terms_mean": "active_project_root",
-    "read_agentpal_workspace_only_when_user_explicitly_asks_about_agentpal": true
+    "read_agentpal_workspace_only_when_user_explicitly_asks_about_agentpal": true,
+    "allow_agentpal_workspace_contacts_registry_for_routing": true,
+    "allow_selected_pal_assets_after_owner_selection": true
+  },
+  "pal_source_policy": {
+    "contacts_registry_source": "agentpal_workspace_root",
+    "required_for_owner_routing": [
+      "contacts/pals.json",
+      "registry/pal.index.json"
+    ],
+    "allowed_lazy_reads": [
+      "contacts/mention-aliases.md",
+      "pals/<selected-owner>/PAL.md",
+      "pals/<selected-owner>/pal.json",
+      "pals/<selected-owner>/SKILL.md",
+      "pals/<selected-owner>/core/output-contract.md",
+      "pals/<selected-owner>/skills/index.md",
+      "pals/<selected-owner>/knowledge/index.md",
+      "pals/<selected-owner>/runbooks/index.md",
+      "pals/<selected-owner>/workflows/index.md"
+    ],
+    "external_agentpal_dir_is_not_pal_asset_store": true,
+    "fail_closed_if_contacts_registry_unavailable": true
   },
   "available_pal_scope": "all-installed-pals",
   "pal_access_mode": "lazy",
   "project_bound_mode": true,
   "root_agents_required": true,
   "root_agents_block": {
-    "begin_marker": "BEGIN AGENTPAL WORKGROUP",
-    "end_marker": "END AGENTPAL WORKGROUP",
+    "begin_marker": "<!-- BEGIN AGENTPAL WORKGROUP -->",
+    "end_marker": "<!-- END AGENTPAL WORKGROUP -->",
     "template": "templates/project-binding/root-agents-agentpal-block-template.md"
   },
   "block_markers": [
-    "BEGIN AGENTPAL WORKGROUP",
-    "END AGENTPAL WORKGROUP"
+    "<!-- BEGIN AGENTPAL WORKGROUP -->",
+    "<!-- END AGENTPAL WORKGROUP -->"
   ],
   "remove_policy": {
     "requires_confirmation": true,
@@ -76,13 +105,15 @@ When copied to an external project, the containing directory should be named `.a
 
 `active_project_root` is the external user project. `agentpal_workspace_root` is only a Pal source and routing reference. Current project means `active_project_root`; do not list AgentPal workspace as project root.
 
+For Pal discovery, direct Pal calls, owner routing, and selected Pal asset loading, the runtime may read the bounded contacts / registry and selected Pal files from `agentpal_workspace_root`. This does not make AgentPal workspace a second project root.
+
 项目默认只指 `active_project_root`。AgentPal 工作区不是当前项目内容，只是 Pal 来源。
 
 The binding is removable. Removal deletes `.agentpal/`, removes only the protected AgentPal block from root `AGENTS.md`, and cleans AgentPal registered project state. If root `AGENTS.md` becomes empty or did not exist, removal writes a non-workgroup deactivation marker so new Codex sessions do not continue Mira mode. It must not delete project source files or user-authored `AGENTS.md` content.
 
 Removal does not erase rules already loaded into an existing Codex thread. The removal completion message must recommend starting a new project thread or explicitly using `Codex generic answer` in the old thread.
 
-External project binding must also create or update the external project root `AGENTS.md` with the `BEGIN AGENTPAL WORKGROUP` / `END AGENTPAL WORKGROUP` protected block. The root block is the Codex entry point; `.agentpal/` alone is not enough.
+External project binding must also create or update the external project root `AGENTS.md` with the `<!-- BEGIN AGENTPAL WORKGROUP -->` / `<!-- END AGENTPAL WORKGROUP -->` protected block. The root block is the cross-runtime entry point; `.agentpal/` alone is not enough.
 
 Do not copy all Pal Packs into the external project. Default listener remains Mira, and specialist Pals do not listen or read project files unless Mira routes a task or the user calls `/pal Name`.
 

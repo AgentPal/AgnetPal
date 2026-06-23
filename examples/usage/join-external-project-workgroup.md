@@ -30,7 +30,8 @@ Binding must create or update:
 - `.agentpal/AGENTPAL.md`
 - `.agentpal/PAL_GROUP.md`
 - `.agentpal/INIT_AGENTPAL_PROJECT_PROMPT.md`
-- external project root `AGENTS.md` with `BEGIN AGENTPAL WORKGROUP` / `END AGENTPAL WORKGROUP`
+- external project root `AGENTS.md` with `<!-- BEGIN AGENTPAL WORKGROUP -->` / `<!-- END AGENTPAL WORKGROUP -->`
+- root `CLAUDE.md` with the same block when using Claude Code
 
 The root `AGENTS.md` block must tell Codex to read `.agentpal/INIT_AGENTPAL_PROJECT_PROMPT.md` if the session has not loaded AgentPal rules yet.
 

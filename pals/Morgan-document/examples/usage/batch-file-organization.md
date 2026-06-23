@@ -2,7 +2,7 @@
 
 ## 用户请求
 
-帮我整理 `D:\Downloads\ProjectDocs`，里面有报告、合同、图片和压缩包。
+帮我整理 `<authorized-folder>`，里面有报告、合同、图片和压缩包。
 
 ## Morgan 的判断
 
@@ -14,7 +14,7 @@
 
 ## 任务包 / Handoff
 
-- Allowed Paths: `D:\Downloads\ProjectDocs`
+- Allowed Paths: `<authorized-folder>`
 - Forbidden Paths: 系统目录、项目依赖目录、未授权目录
 - Operations: list, classify, dry-run only
 - Output: 分类表、建议目录结构、old_path -> proposed_path 预演表

@@ -2,13 +2,33 @@
 
 ## Workspace Identity
 
-AgentPal is a Codex-ready workspace for organizing Pal Packs around one default Main Pal: Mira.
+AgentPal is an AgentPal Workspace and Pal Pack Standard practice for agent runtimes. It is not a normal software repository, not a single Pal, and not a single Pal Pack.
 
-This root `PAL.md` describes the workspace identity. It is not Mira's personal `PAL.md` and it is not a specialist Pal.
+This root `PAL.md` describes the identity of the whole AgentPal Workspace. It is not Mira's personal `PAL.md`, and it is not the identity file for any specialist Pal.
+
+AgentPal v0.1.0-rc.1 is a Pal layer. It provides Pal identity, knowledge, skills, context, memory boundaries, output contracts, coordination rules, review habits, summaries, and learning storage for the current execution runtime. It is not an Agent layer, not a multi-agent runtime, and not an execution layer.
+
+## Workspace And Pal Pack Levels
+
+The AgentPal Workspace owns the shared layer:
+
+- root runtime instructions such as `AGENTS.md`, `INIT_PROMPT.md`, `SKILL.md`, and `agentpal.json`
+- Pal discovery through `contacts/` and `registry/`
+- workspace-level orchestration protocols
+- reusable templates, prompts, examples, evals, and public-safe placeholders
+- external project workgroup binding templates
+
+Each `pals/<Pal-Directory>/` directory owns one Pal Pack:
+
+- that Pal's `PAL.md`, `SKILL.md`, `AGENTS.md`, and `pal.json`
+- that Pal's output contract and response habits
+- that Pal's professional knowledge, skills, runbooks, workflows, learning notes, and public-safe placeholders
+
+Do not treat this root `PAL.md` as a substitute for the selected Pal's own identity files. When Mira routes to an owner Pal, that Pal must load its own assets and answer through its own Output Contract.
 
 ## Purpose
 
-AgentPal helps users keep one Codex project for many Pals. It provides:
+AgentPal helps users keep one runtime-readable Pal workspace for many Pals. It provides:
 
 - a Pal pool in `pals/`
 - Pal discovery and indexing rules
@@ -18,7 +38,7 @@ AgentPal helps users keep one Codex project for many Pals. It provides:
 - external project workgroup binding templates
 - runtime-awareness and model-routing notes
 
-The official bundled Pal set is Mira, Atlas, Vega, Rhea, Quinn, Morgan, Harper, and Nova.
+The official bundled Pal set for v0.1.0-rc.1 is Mira, Atlas, Vega, Rhea, Quinn, Morgan, Harper, and Nova.
 
 ## Default Main Pal
 
@@ -30,7 +50,7 @@ All AgentPal-mode natural-language replies identify the speaking Pal first. Mira
 
 ## Pal Pool
 
-`pals/` contains Pal Packs. A valid Pal Pack needs `PAL.md`, `SKILL.md`, `pal.json`, a Pal identity, and collaboration permissions before it can enter contacts.
+`pals/` contains Pal Packs. A valid contributed Pal Pack should include `PAL.md`, `pal.json`, `SKILL.md`, `README.md`, `AGENTS.md`, `core/output-contract.md`, a clear identity, responsibility boundaries, collaboration permissions, and public-safe placeholders where needed.
 
 Tools inside external Pal directories are not contacts unless the directory itself is a valid Pal Pack and is intentionally registered.
 
@@ -50,7 +70,7 @@ Project means external user project by default, not the AgentPal workspace itsel
 
 ## Runtime Awareness Policy
 
-AgentPal records runtime, model, skill, plugin, tool, cost, context, and capability boundaries as documents and templates. v0.1 does not claim that any runtime has been automatically scanned.
+AgentPal records runtime, model, skill, plugin, tool, cost, context, and capability boundaries as documents and templates. v0.1.0-rc.1 does not claim that any runtime has been automatically scanned.
 
 Unknown facts remain `unknown until scanned`.
 

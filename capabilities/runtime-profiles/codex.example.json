@@ -1,0 +1,34 @@
+{
+  "schema": "agentpal.runtime-profile.v0.1",
+  "id": "codex-example",
+  "name": "Codex Example Runtime Profile",
+  "type": "agent-runtime",
+  "status": "illustrative-example",
+  "source": "maintainer-example",
+  "version": "0.1",
+  "non_binding": true,
+  "capabilities": {
+    "can_read_files": true,
+    "can_write_files": true,
+    "can_run_commands": true,
+    "supports_instruction_files": [
+      "AGENTS.md"
+    ],
+    "supports_external_directories": "environment-dependent",
+    "supports_skills": "environment-dependent",
+    "supports_plugins": "environment-dependent",
+    "supports_mcp": "environment-dependent"
+  },
+  "limits": [
+    "Exact available tools vary by session."
+  ],
+  "risk_notes": [
+    "File writes and commands need evidence from the current execution layer."
+  ],
+  "evidence_required": [
+    "tool output",
+    "file diff",
+    "command result"
+  ],
+  "profile_note": "Illustrative only. Not a scan of the current user's Codex installation."
+}

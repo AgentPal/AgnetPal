@@ -4,9 +4,9 @@
 
 ## Purpose
 
-Check whether the current Codex environment supports Codex Subagent Mode.
+Future diagnostic for checking whether a Codex environment supports Codex Subagent Mode. Do not run this as current AgentPal v0.1.0-rc.1 task handling.
 
-## Minimum test
+## Future diagnostic test
 
 1. Spawn Subagent A.
 2. Prompt Subagent A to read `README.md` only and return three bullets.
@@ -46,6 +46,6 @@ Fail:
 
 ## Failure handling
 
-If subagent tools are unavailable or thread limit remains after close/retry, use fallback to Simple Pal Mode.
+In AgentPal v0.1.0-rc.1, use Simple Pal Mode regardless of this future diagnostic.
 
 

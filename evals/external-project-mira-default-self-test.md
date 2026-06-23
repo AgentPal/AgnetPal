@@ -12,7 +12,7 @@ Verify that an external project connected to AgentPal defaults ordinary conversa
 
 ## Preconditions
 
-- External project root `AGENTS.md` includes `BEGIN AGENTPAL WORKGROUP` and `END AGENTPAL WORKGROUP`.
+- External project root `AGENTS.md` includes `<!-- BEGIN AGENTPAL WORKGROUP -->` and `<!-- END AGENTPAL WORKGROUP -->`.
 - Root `AGENTS.md` tells Codex to read `.agentpal/INIT_AGENTPAL_PROJECT_PROMPT.md` if AgentPal rules have not loaded yet.
 - `.agentpal/project.json` exists.
 - `.agentpal/INIT_AGENTPAL_PROJECT_PROMPT.md` exists.

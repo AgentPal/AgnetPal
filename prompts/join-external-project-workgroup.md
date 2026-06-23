@@ -2,6 +2,8 @@
 
 Use this prompt when you want AgentPal to bind to an external project.
 
+For Claude Code project-local setup, prefer `prompts/claude-code/install-agentpal-current-project.md`: the user opens Claude Code inside the target project, provides the AgentPal path, and the prompt updates `.claude/settings.local.json`, `CLAUDE.md`, `AGENTS.md`, and `.agentpal/`.
+
 ```text
 Help me add AgentPal to an external project workgroup.
 
@@ -9,7 +11,7 @@ Important: "project" means external user project by default, not the AgentPal wo
 
 Do not treat the current AgentPal directory as the target project unless I explicitly say I am developing AgentPal itself.
 
-Codex project list first. list_projects first if the current environment provides it. Workspace roots first.
+Codex project list first. list_projects first if the current environment provides it. If tool discovery is needed to expose list_projects, use tool discovery before saying the list is unavailable. Workspace roots first.
 
 When I name a project, the first step must be checking the current project list / current visible workspace project list.
 
@@ -17,7 +19,7 @@ If no project-list interface is available, Mira should say:
 
 Mira：我这里没有可用的项目列表接口，所以我只能根据当前可见工作区和已登记项目查找。你也可以直接给我项目路径。
 
-Then inspect known projects, current workspace roots, and current-session visible project roots before asking me for a manual path.
+Then inspect known projects, current workspace roots, and current-session visible project roots before asking me for a manual path. Record the resolution route internally: list_projects_checked, project_match_source, and matched_project_path.
 
 Lookup order:
 1. Project list tool, if the current environment provides it.
@@ -31,7 +33,9 @@ After I confirm the path:
 1. Use projects/project-workgroup-template/agentpal/ as the template.
 2. Create or update .agentpal/ in the external project.
 3. Create or update the external project root AGENTS.md with a protected AgentPal workgroup block.
-4. If AGENTS.md already exists, preserve existing content and append or replace only the block between BEGIN AGENTPAL WORKGROUP and END AGENTPAL WORKGROUP.
+4. If AGENTS.md already exists, preserve existing content and append or replace only the block between <!-- BEGIN AGENTPAL WORKGROUP --> and <!-- END AGENTPAL WORKGROUP -->.
+4a. If the runtime is Claude Code, also create or update CLAUDE.md with the same protected block.
+4b. If the runtime is Claude Code, merge .claude/settings.local.json permissions.additionalDirectories and add the AgentPal workspace path.
 5. Do not copy all Pal Packs into the external project.
 6. Set default listener to Mira.
 7. Keep specialist Pals lazy.
@@ -42,6 +46,8 @@ After I confirm the path:
 12. Set active_project_root to the external user project directory.
 13. Set agentpal_workspace_root to the AgentPal workspace directory.
 14. Set current_project_semantics to active_project_root_only.
+14a. Set Pal source policy so contacts / registry are resolved from agentpal_workspace_root, and the external .agentpal/ folder is not treated as the Pal asset store.
+14b. Set runtime_hint to the current runtime if known: claude-code, codex, generic-cli, codewhale, gemini-cli, or unknown.
 15. Make the external project root AGENTS.md tell the runtime to read .agentpal/INIT_AGENTPAL_PROJECT_PROMPT.md if the current session has not loaded AgentPal rules yet.
 16. After binding succeeds, include the "next step in the external project" prompt shown below.
 
@@ -51,12 +57,16 @@ External project root AGENTS.md must also say:
 - The current external project directory is the active user project.
 - The AgentPal workspace is only a Pal source and routing reference.
 - AgentPal workspace is not part of this project.
+- For routing and direct Pal calls, read contacts / registry from agentpal_workspace_root.
+- Do not look only inside the external project's .agentpal/ folder for Pal portraits or output templates.
 - When the user says "project", "this project", "current directory", or "read the project", answer only about active_project_root.
 - Do not list or analyze the AgentPal workspace unless the user explicitly asks about AgentPal itself.
 - If this session has not loaded AgentPal rules yet, read .agentpal/INIT_AGENTPAL_PROJECT_PROMPT.md.
 - AgentPal v0.1 uses Simple Pal Mode only.
 - Do not probe, call, or narrate parallel child-agent workflows.
 - Do not output runtime-mode metadata in normal answers.
+- Do not import the whole AgentPal workspace or AgentPal AGENTS.md into the project instruction context.
+- Distinguish index-known paths from content-read files.
 
 Keep the current owner judgement and validity rules in the external project block:
 - Runtime Response Gate must run before every answer.
@@ -98,4 +108,3 @@ Mira：
 
 请读取当前项目根 AGENTS.md，以及 .agentpal/INIT_AGENTPAL_PROJECT_PROMPT.md，进入 AgentPal project-bound mode。普通消息默认交给 Mira，当前项目只以本项目目录为准。
 ```
-

@@ -67,26 +67,28 @@ Mira：
 ## When the user asks to add AgentPal to a project
 
 1. Treat the target as an external user project.
-2. Codex project list first: check Codex `list_projects` if the current environment provides it.
-3. Then inspect Codex-known projects, the current Codex project list, current-session visible projects, or current Codex workspace roots.
-4. If no `list_projects` interface is available, say: `Mira：我这里没有可用的 Codex 项目列表接口，所以我只能根据当前可见工作区和已登记项目查找。你也可以直接给我项目路径。`
-5. Then inspect AgentPal registered external project records.
-6. Then inspect recent project records.
-7. Then use a user-provided path if one was explicitly provided.
-8. If still unresolved, ask for the project path.
-9. If one candidate is found, confirm the exact path with the user or proceed if the user already allowed it.
-10. If multiple candidates are found, list candidates and ask the user to choose.
-11. Use the template in `projects/project-workgroup-template/agentpal/`.
-12. In the external project, the target folder name should be `.agentpal/`.
-13. Set `active_project_root` to the external user project directory.
-14. Set `agentpal_workspace_root` to the AgentPal workspace directory.
-15. Set `current_project_semantics` to `active_project_root_only`.
-16. Create or update the external project root `AGENTS.md` with the protected AgentPal workgroup block.
-17. Ensure the root `AGENTS.md` block tells Codex to read `.agentpal/INIT_AGENTPAL_PROJECT_PROMPT.md` if this session has not loaded AgentPal rules yet.
-18. Record only non-private registration metadata in this AgentPal workspace.
-19. After successful binding, give the external project next-step prompt.
+2. Codex project list first is mandatory when available: if the runtime exposes a Codex project-list interface such as `list_projects`, Mira must use it before asking for a path or relying on AgentPal registered records.
+3. If the runtime supports tool discovery that can reveal `list_projects`, use that discovery path before declaring that no project-list interface exists.
+4. Mira must record the resolution route internally: `list_projects_checked: true/false`, `project_match_source`, and `matched_project_path`.
+5. Then inspect Codex-known projects, the current Codex project list, current-session visible projects, or current Codex workspace roots.
+6. If no `list_projects` interface is available, say: `Mira：我这里没有可用的 Codex 项目列表接口，所以我只能根据当前可见工作区和已登记项目查找。你也可以直接给我项目路径。`
+7. Then inspect AgentPal registered external project records.
+8. Then inspect recent project records.
+9. Then use a user-provided path if one was explicitly provided.
+10. If still unresolved, ask for the project path.
+11. If one candidate is found, confirm the exact path with the user or proceed if the user already allowed it.
+12. If multiple candidates are found, list candidates and ask the user to choose.
+13. Use the template in `projects/project-workgroup-template/agentpal/`.
+14. In the external project, the target folder name should be `.agentpal/`.
+15. Set `active_project_root` to the external user project directory.
+16. Set `agentpal_workspace_root` to the AgentPal workspace directory.
+17. Set `current_project_semantics` to `active_project_root_only`.
+18. Create or update the external project root `AGENTS.md` with the protected AgentPal workgroup block.
+19. Ensure the root `AGENTS.md` block tells Codex to read `.agentpal/INIT_AGENTPAL_PROJECT_PROMPT.md` if this session has not loaded AgentPal rules yet.
+20. Record only non-private registration metadata in this AgentPal workspace.
+21. After successful binding, give the external project next-step prompt.
 
-When the user asks Mira to add AgentPal to a named project, Mira must first inspect Codex `list_projects` if available, then Codex-known projects or workspace roots, before asking the user for a path.
+When the user asks Mira to add AgentPal to a named project, Mira must first inspect Codex `list_projects` if available, then Codex-known projects or workspace roots, before asking the user for a path. If `list_projects` exists and Mira does not check it, the workgroup add flow has failed.
 
 当用户说“把 AgentPal 工作组加入某某项目”时，Mira 必须先查 Codex 当前项目列表或工作区根目录。只有无法确定目标项目时，才向用户索要路径。
 
@@ -106,6 +108,7 @@ External `.agentpal/` should describe:
 - project files are read only until a task requires them
 - sensitive files, private data, credentials, tokens, and secrets are not shared by default
 - the project directory is a shared knowledge source only by task need
+- Pal discovery in this external project must read contacts / registry from `agentpal_workspace_root`, not from copied Pal files inside `.agentpal/`
 
 External project root `AGENTS.md` should include:
 
@@ -113,6 +116,8 @@ External project root `AGENTS.md` should include:
 - the current external project directory is the active user project
 - the AgentPal workspace is only a Pal source and routing reference
 - do not treat the AgentPal workspace as part of this project
+- for routing and direct Pal calls, read contacts / registry from the bound `agentpal_workspace_root`
+- do not look only inside the external project's `.agentpal/` folder for Pal portraits or output templates
 - ordinary messages in this project should be handled as if addressed to Mira
 - Mira is the default Main Pal
 - specialist Pals do not listen by default
@@ -168,7 +173,7 @@ When Mira answers inside an external project-bound session:
 - Treat AgentPal workspace only as Mira's Pal source and routing reference.
 - If Mira needs AgentPal protocols, she may read them, but should not report them as project directories.
 - For "read the project directory", read only `active_project_root`.
-- Read `agentpal_workspace_root` only when the user explicitly asks about AgentPal itself.
+- Read `agentpal_workspace_root` only when the user explicitly asks about AgentPal itself, or when Pal discovery / direct Pal call / owner routing / selected Pal asset loading requires bounded contacts, registry, or selected Pal files.
 
 Even if Codex exposes multiple workspace roots, AgentPal must choose one active context. Do not answer project questions by listing both the external project and the AgentPal workspace.
 

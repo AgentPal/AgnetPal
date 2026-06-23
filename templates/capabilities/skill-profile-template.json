@@ -1,0 +1,19 @@
+{
+  "schema": "agentpal.skill-profile.v0.1",
+  "id": "skill-id",
+  "name": "Skill Name",
+  "type": "skill-profile",
+  "status": "template",
+  "source": "user-or-maintainer-provided",
+  "version": "0.1",
+  "non_binding": true,
+  "available_in": [],
+  "capabilities": [],
+  "required_tools": [],
+  "inputs": [],
+  "outputs": [],
+  "limits": [],
+  "risk_notes": [],
+  "evidence_required": [],
+  "profile_note": "Template only. Skill use still requires task judgement and safety review."
+}

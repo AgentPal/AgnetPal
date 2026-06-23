@@ -18,7 +18,9 @@ Mira：
 ## Remove only AgentPal-managed content
 
 - [ ] Delete target `.agentpal/`.
-- [ ] Remove only the `BEGIN AGENTPAL WORKGROUP` / `END AGENTPAL WORKGROUP` block from root `AGENTS.md`.
+- [ ] Remove only the `<!-- BEGIN AGENTPAL WORKGROUP -->` / `<!-- END AGENTPAL WORKGROUP -->` block from root `AGENTS.md`.
+- [ ] Remove the same block from root `CLAUDE.md` when present.
+- [ ] Support legacy `BEGIN AGENTPAL WORKGROUP` / `END AGENTPAL WORKGROUP` removal only for old bindings.
 - [ ] Preserve all user-authored `AGENTS.md` content outside the block.
 - [ ] If root `AGENTS.md` becomes empty or whitespace-only, replace it with the non-workgroup deactivation marker from `templates/project-binding/agentpal-removed-agents-template.md`.
 - [ ] If root `AGENTS.md` did not exist, create the same non-workgroup deactivation marker.

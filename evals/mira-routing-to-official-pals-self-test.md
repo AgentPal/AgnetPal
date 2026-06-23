@@ -10,7 +10,7 @@ Manual routing checks for Mira.
 - [ ] Pal capability reference is not a route map.
 - [ ] Explicit commands are deterministic: `/pal Name` resolves through contacts and registry.
 - [ ] Safety and availability guardrails are deterministic.
-- [ ] Subagent Mode is an option, not keyword-triggered.
+- [ ] Subagent Mode is future design only in v0.1.0-rc.1 and is not invoked or keyword-triggered.
 - [ ] A specialist-like request receives a case-specific owner judgement when handoff is useful.
 - [ ] A simple request can remain with Mira without forced specialist routing.
 - [ ] Missing Pal names produce a missing-Pal response instead of roleplay.

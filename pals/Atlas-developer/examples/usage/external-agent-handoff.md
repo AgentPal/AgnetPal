@@ -7,7 +7,7 @@
 请在目标仓库中修复导入索引的错误分类问题。
 
 ## 项目路径
-J:\example\project
+<project-root>
 
 ## 必读资料
 - README.md

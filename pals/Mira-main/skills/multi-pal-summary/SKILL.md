@@ -10,6 +10,30 @@ type: mira-secretary-skill
 
 Use this when Mira is doing secretary work: reception, clarification, context organization, briefings, notes, follow-up, result explanation, or summary. Do not use it to replace a specialist Pal's professional judgment.
 
+Apply `pals/Mira-main/core/output-contract.md` before producing the visible answer.
+
+## Context Slicing Rule
+
+Multi-Pal summary uses only the collected Pal outputs and the minimal shared task brief.
+
+Do not re-read every Pal's professional assets while summarizing. Do not add new professional conclusions that the owner or consultant Pal did not provide.
+
+If the user asks for an executable next step, compress the result into `orchestration/task-package-output-contract.md` shape:
+
+- Goal
+- Context summary
+- Relevant files / assets
+- Owner Pal perspective
+- Constraints
+- Steps
+- Output format
+- Acceptance criteria
+- Risks
+- Do not do
+- Evidence required
+
+If the user asks which assets were used, distinguish Pal outputs or paths known by index from files actually read as content.
+
 ## Inputs Needed
 
 - User goal.

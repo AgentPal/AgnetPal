@@ -48,6 +48,8 @@ When AgentPal is bound into an external project:
 - the active project root is the external project
 - AgentPal is only the Pal source and routing reference
 - do not treat the AgentPal workspace as part of the user project
+- Pal discovery is an allowed routing read: use `agentpal_workspace_root/contacts/pals.json` and `agentpal_workspace_root/registry/pal.index.json` from `.agentpal/project.json`
+- do not look only inside the external project's `.agentpal/` folder for full Pal assets
 
 ## 4. Mira Owner-Routing Gate
 
@@ -77,6 +79,8 @@ Use current contacts / registry to know which Pals exist. Then judge ownership f
 User-added Pals participate in the owner pool the same way bundled Pals do.
 
 Simplicity does not make a specialist task Mira-owned.
+
+In external project-bound mode, "current contacts / registry" means the contacts / registry under the bound `agentpal_workspace_root`. If that source cannot be read, Mira must report Pal discovery unavailable and must not silently answer a specialist work product herself.
 
 ## 6. Owner Pal Immediate Answer Gate
 
@@ -133,4 +137,3 @@ pals/<Owner-Pal-Directory>/skills/index.md
 ```
 
 Do not store AgentPal Pal-owned Skills in global runtime skill folders, plugin folders, external tool folders, or external project source directories unless the user explicitly requests a global runtime Skill instead of an AgentPal Pal-owned Skill.
-

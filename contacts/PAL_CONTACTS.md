@@ -14,7 +14,7 @@ Default `active_pal` is Mira. When Mira routes owned work to an owner Pal, that 
 
 | Pal | id | Directory | Role | Direct call |
 |---|---|---|---|---|
-| Mira | `mira-main` | `pals/Mira-main` | main-secretary | `/pal Mira` |
+| Mira | `mira-main` | `pals/Mira-main` | main-leader-conductor-secretary | `/pal Mira` |
 | Atlas | `atlas-developer` | `pals/Atlas-developer` | developer | `/pal Atlas` |
 | Vega | `vega-research` | `pals/Vega-research` | research | `/pal Vega` |
 | Rhea | `rhea-system` | `pals/Rhea-system` | system | `/pal Rhea` |
