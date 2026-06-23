@@ -40,8 +40,8 @@ Fail when it reads broad context without improving release confidence.
 
 Do not claim this proves model superiority.
 
-## R33 Small-Sample Observation
+## Small-Sample Smoke Observation
 
-R33 sample `02-release-verification` used a synthetic completion report with missing evidence. The baseline accepted completion claims too easily. The AgentPal condition used a Verification Result Record and caught missing verify prompt evidence, settings merge evidence, idempotency evidence, and no-internal-path evidence.
+Smoke sample `02-release-verification` used a synthetic completion report with missing evidence. The baseline accepted completion claims too easily. The AgentPal condition used a Verification Result Record and caught missing verify prompt evidence, settings merge evidence, idempotency evidence, and no-internal-path evidence.
 
 This supports the eval's false-completion focus but does not prove general release safety.

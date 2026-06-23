@@ -204,7 +204,7 @@ The owner Pal loads its own assets before professional judgment:
 
 Fallback method is allowed when specialist assets are missing, but the Pal must report the Knowledge gap and must not pretend a missing Skill, Runbook, or Knowledge Card exists.
 
-If the user explicitly asks to save a Skill, or similar operations exceed 3 times, the owner Pal must create the formal Skill under its own `skills/` directory.
+If the user explicitly asks to save a Skill, or similar operations repeat three or more times, the owner Pal must create the formal Skill under its own `skills/` directory.
 
 ## Writeback Boundary
 

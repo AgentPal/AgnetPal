@@ -36,9 +36,9 @@ Fail when AgentPal reads all Pals, all memory, all examples, or all project file
 
 Do not claim exact token savings unless a real token meter exists.
 
-## R33 Small-Sample Observation
+## Small-Sample Smoke Observation
 
-R33 sample `03-context-efficiency` compared a broad allowed context set with a five-file Context Access List for Claude Code install review.
+Smoke sample `03-context-efficiency` compared a broad allowed context set with a five-file Context Access List for Claude Code install review.
 
 Observed difference:
 

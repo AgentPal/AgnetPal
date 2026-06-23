@@ -34,5 +34,5 @@ When a specialist Pal is selected, it reads its embedded assets and uses its out
 
 Do not recreate per-Pal contacts, registry, runtime, models, plugins, orchestration, adapters, or import staging directories inside official bundled specialist Pals.
 
-If the user explicitly asks to save a Skill, or similar operations exceed three times, the owner Pal stores the formal Skill under its own `skills/<skill-id>/SKILL.md` and updates its own `skills/index.md`.
+If the user explicitly asks to save a Skill, or similar operations repeat three or more times, the owner Pal stores the formal Skill under its own `skills/<skill-id>/SKILL.md` and updates its own `skills/index.md`.
 

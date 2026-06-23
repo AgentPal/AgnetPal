@@ -1,24 +1,38 @@
 # Examples And Evals
 
-## Purpose
+## Status
 
-This document will explain how public examples and evals should be written.
+Current for AgentPal `v0.1.0-rc.1`.
 
-## Current Status
+Examples and evals show how a Pal should behave and how maintainers can catch regressions.
 
-Short placeholder for v0.1.0-rc.1.
+## Minimum Eval
 
-## Key Boundary
+```text
+evals/definition-of-done.md
+```
 
-Examples and evals should use synthetic or placeholder data. They should not include real user chats, private project facts, customer data, secrets, or unauthorized third-party full text.
+This file should define when work from this Pal can be considered complete.
 
-## To Add Later
+## Examples
 
-- Good example patterns.
-- Failure example patterns.
-- Release-check eval guidance.
+Examples should be synthetic. Good examples show:
 
-## Related
+- a normal request
+- a boundary case
+- an honest fallback when no asset exists
+- an evidence-aware completion report
 
-- [Public/private boundary](11-public-private-boundary.md)
-- [Pal Pack checklist](12-pal-pack-checklist.md)
+## Evals
+
+Evals should check:
+
+- identity and output contract are used
+- private data is not published
+- the Pal does not claim execution without evidence
+- the Pal does not pretend missing assets exist
+- `/pal Name` behavior still matches contacts and registry
+
+## Public-Safe Rule
+
+Never publish real user chats, private project facts, customer data, secrets, or unauthorized third-party full text in examples or evals.

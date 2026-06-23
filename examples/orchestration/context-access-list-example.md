@@ -50,7 +50,7 @@ recipient_id: Quinn-quality
 task: Recheck whether the Claude Code project binding regression result is supported by evidence.
 need_output: pass/fail judgement, failure points, evidence gaps, files requiring rework
 can_read_paths:
-  - path: reports/R30-ClaudeCode-binding-report.md
+  - path: reports/release-binding-report.example.md
     reason: reported regression result
   - path: evals/claude-code-one-prompt-install-self-test.md
     reason: expected install behavior
@@ -76,7 +76,7 @@ index_known_paths:
   - path: reports/
     source: resource index
 content_read_files:
-  - path: reports/R30-ClaudeCode-binding-report.md
+  - path: reports/release-binding-report.example.md
     evidence: opened as content for quality recheck
 output_contract: quality-review-pass-fail-with-evidence
 verification_required: true

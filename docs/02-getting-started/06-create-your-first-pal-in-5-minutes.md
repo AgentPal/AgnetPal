@@ -27,6 +27,6 @@ Create a directory under `pals/<Name-role>/`, then add the minimum files:
 
 ## Related
 
-- [Authoring overview](../05-authoring-pals/00-authoring-overview.md)
+- [Authoring overview](../07-authoring-pals/00-authoring-overview.md)
 - [Pal Pack structure](../03-pal-pack-standard/01-pal-pack-structure.md)
-- [Publish your Pal Pack](../05-authoring-pals/11-publish-your-pal-pack.md)
+- [Publish your Pal Pack](../07-authoring-pals/11-publish-your-pal-pack.md)

@@ -1,27 +1,59 @@
 # Use With Claude Code
 
-## Purpose
+This is the recommended Claude Code path for AgentPal v0.1.0-rc.1.
 
-This document is the runtime guide for Claude Code.
+## Project-First Path
 
-## Recommended Project-First Workflow
-
-Use Claude Code from the target project:
+Start from the real user project:
 
 ```text
 cd <your-project>
 claude
 ```
 
-Then paste `prompts/claude-code/install-agentpal-current-project.md`.
+Then paste the one-prompt AgentPal connection prompt from `prompts/claude-code/install-agentpal-current-project.md`.
 
-The one-prompt install writes lightweight project binding files and updates `.claude/settings.local.json` `permissions.additionalDirectories`. It does not copy all Pal Packs, does not import the whole AgentPal workspace, and does not activate Subagent Mode.
+The install prompt begins with:
 
-If the current session cannot access AgentPal immediately after the settings update, restart Claude Code or use temporary `/add-dir <path-to-AgentPal>`.
+```text
+Please connect AgentPal to the current project.
+
+AGENTPAL_HOME = <replace-with-your-AgentPal-path>
+```
+
+## What This Path Does
+
+- keeps the current user project as the active task context
+- connects the project to the AgentPal Workspace through `.agentpal/`
+- updates `CLAUDE.md` and `AGENTS.md` with a lightweight AgentPal workgroup block
+- updates `.claude/settings.local.json` so Claude Code can read the AgentPal Workspace path
+
+## Important Boundary
+
+- `.claude/settings.local.json` is local machine configuration and should not be committed.
+- This is not a deep Claude Code plugin.
+- This is not an automatic installer outside the current project.
+- AgentPal must not mistake its own workspace directory for the user's project.
+- Project questions should resolve to the current user project directory first.
+
+## If Access Does Not Apply Immediately
+
+If the current Claude Code session still cannot read the AgentPal path after the local settings update:
+
+- restart Claude Code in the project
+- or temporarily use `/add-dir <path-to-AgentPal>`
+- or restart with `claude --add-dir <path-to-AgentPal>`
+
+These are fallback options, not the default setup path.
+
+## Current Runtime Boundary
+
+- AgentPal is a Pal layer, not an Agent runtime.
+- The active path is `Simple Pal Mode only`.
+- Deep Conductor is future design only.
+- Subagent Mode and external Agent orchestration are not active in this release.
 
 ## Related
 
-- [Quick start](../02-getting-started/00-quick-start.md)
-- [Runtime compatibility](00-runtime-compatibility.md)
-- [AgentPal vs agent runtime](../00-overview/03-agentpal-vs-agent-runtime.md)
-- [Claude Code project install](../10-using-agentpal-with-claude-code.md)
+- [Project-First Connection](04-project-first-connection.md)
+- [Runtime Compatibility](00-runtime-compatibility.md)

@@ -14,18 +14,18 @@ User:
 我不想只听技术建议，你帮我判断继续做有没有价值、工程上怎么推进、发布前怎么把关。
 ```
 
-One valid response shape when Subagent Mode is available and worth the cost:
+Future-design response shape only, not active in AgentPal v0.1:
 
 ```text
 Mira：
-我判断这次适合用 Codex Subagent Mode，因为你明确要求价值、工程推进和发布把关三个相互独立的视角，分开判断能减少互相覆盖。我会让逐案选定的 Pal 分别给结论，再汇总差异。
+如果未来启用 Deep Conductor 或外部多 Agent 编排，这类任务可以拆成价值、工程推进和发布把关三个独立视角。当前 v0.1 使用 Simple Pal Mode only，所以我会先选择一个 owner Pal 接手，必要时在同一回复中标注需要哪些补充视角。
 ```
 
 One valid response shape when Simple Pal Mode is enough:
 
 ```text
 Mira：
-我判断这次先用 Simple Pal Mode 更合适，因为当前缺少项目材料，直接并行开多个 subagent 成本高且可能空转。我先给一个轻量判断，并列出需要补充的信息。
+我判断这次先用 Simple Pal Mode 处理，因为当前缺少项目材料。我先选择一个 owner Pal 接手，并列出需要补充的信息。
 ```
 
 ## Simple Explanation Request
@@ -40,7 +40,7 @@ Valid response shape:
 
 ```text
 Mira：
-开发计划说明怎么把东西做出来；验收计划说明怎么判断它是否真的达标。这个问题是概念解释，不需要开 Subagent Mode。
+开发计划说明怎么把东西做出来；验收计划说明怎么判断它是否真的达标。这个问题是概念解释，直接由当前 Pal 回答即可。
 ```
 
 ## Explicit Codex Generic Request

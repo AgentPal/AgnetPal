@@ -8,15 +8,15 @@
 帮我检查系统启动项都有哪些，会不会影响开机速度
 ```
 
-## Mira routing decision
+## Mira routing decision in v0.1
 
-Mira uses AI routing judgement case-by-case. If Mira selects Rhea and Codex Subagent Mode is available, a separate Rhea system perspective may be spawned with a read-only boundary.
+Mira uses AI routing judgement case-by-case. If Mira selects Rhea in AgentPal v0.1.0-rc.1, Rhea answers through Simple Pal Mode with a read-only boundary. Mira does not start Codex Subagent Mode.
 
-## Subagents spawned
+## Current Pal handling
 
-- Rhea as owner Pal
+- Rhea as owner Pal in Simple Pal Mode
 
-## Required files Rhea reads
+## Required files Rhea reads on demand
 
 - `pals/Rhea-system/PAL.md`
 - `pals/Rhea-system/SKILL.md`
@@ -35,8 +35,8 @@ If Rhea requests current Codex execution-layer evidence, it must remain read-onl
 
 Mira may summarize that Rhea performed only read-only inspection through the current Codex execution layer if evidence was actually collected.
 
-## Fallback if unavailable
+## Future-design note
 
-Use Simple Pal Mode with Rhea as active Pal. Do not claim an independent subagent ran.
+Future external orchestration may run Rhea as an independent workflow, but AgentPal v0.1 does not claim an independent subagent ran.
 
 

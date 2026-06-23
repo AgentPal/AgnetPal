@@ -68,7 +68,7 @@ Do not say "I see two project roots" unless the user explicitly asks about works
 
 Only read agentpal_workspace_root when the user explicitly asks about AgentPal itself, Mira files, Pal configuration, or the AgentPal workspace, or when Pal discovery / direct Pal call / owner routing / selected Pal asset loading requires bounded contacts, registry, or selected Pal files.
 
-Ordinary messages go to Mira. Mira is the default Main Pal for this project-bound session.
+Ordinary messages go to Mira. Mira is the default Main Pal, Leader Pal, and Conductor for this project-bound session.
 
 Specialist Pals do not listen by default. Other Pals participate only when Mira delegates through Context Packet or when the user calls /pal Name.
 

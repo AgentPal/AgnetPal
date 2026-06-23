@@ -1,16 +1,12 @@
 # Pal Pack Structure
 
-A Pal Pack is one directory that represents one Pal.
+## Status
 
-In the AgentPal Workspace, official and user-added Pal Packs live under:
+Current for AgentPal `v0.1.0-rc.1`.
 
-```text
-pals/<Pal-Directory>/
-```
+A Pal Pack is one directory under `pals/<Pal-Directory>/`. The AgentPal root is the workspace; it is not itself a single Pal Pack.
 
-The AgentPal root is not one Pal Pack. It is the workspace that contains multiple Pal Packs and shared workspace assets.
-
-## Recommended Structure
+## Minimal Usable Structure
 
 ```text
 pals/<Pal-Directory>/
@@ -20,62 +16,44 @@ pals/<Pal-Directory>/
 ├─ SKILL.md
 ├─ pal.json
 ├─ core/
-│  └─ output-contract.md
+│  ├─ output-contract.md
+│  └─ task-loop.md
 ├─ identity/
+│  ├─ persona.md
+│  ├─ boundaries.md
+│  └─ voice.md
 ├─ knowledge/
+│  └─ index.md
 ├─ skills/
+│  └─ index.md
 ├─ runbooks/
+│  └─ index.md
 ├─ workflows/
-├─ learning/
+│  └─ index.md
 ├─ memory/
+│  └─ README.md
 ├─ state/
+│  └─ README.md
 ├─ reports/
-├─ examples/
+│  └─ README.md
 └─ evals/
+   └─ definition-of-done.md
 ```
 
-## Minimum Required Files
+`memory/user/README.md` is also acceptable when the Pal separates user memory from other memory types.
 
-A contributed Pal Pack should include:
+## Standard Additions
 
-- `PAL.md`
-- `pal.json`
-- `SKILL.md`
-- `README.md`
-- `AGENTS.md`
-- `core/output-contract.md`
+- `examples/` with synthetic examples.
+- `learning/` with knowledge gaps and candidates.
+- `skills/<skill-id>/SKILL.md` for formal Pal-owned Skills.
+- `runbooks/<topic>/<runbook>.md` for repeatable procedures.
+- `workflows/<workflow-id>/README.md` for multi-step lifecycle flows.
 
-## Directory Purposes
+## Official Pattern
 
-| Path | Purpose |
-| --- | --- |
-| `PAL.md` | Human-readable Pal identity, role, boundaries, and collaboration rules. |
-| `pal.json` | Machine-readable Pal metadata, aliases, capabilities, and compatibility. |
-| `SKILL.md` | Runtime entry for Skill-aware systems; must say this is a Pal Pack, not one ordinary Skill. |
-| `AGENTS.md` | Runtime instructions local to this Pal Pack. |
-| `README.md` | Human entry point for maintainers and users. |
-| `core/output-contract.md` | What a valid answer from this Pal must include. |
-| `identity/` | Additional identity and voice material. |
-| `knowledge/` | Short knowledge cards and indexes. |
-| `skills/` | Formal Pal-owned Skills. |
-| `runbooks/` | Repeatable operational procedures. |
-| `workflows/` | Higher-level lifecycle flows. |
-| `learning/` | Public-safe learning candidates and reusable improvements. |
-| `memory/` | Public-safe placeholders; private user memory should not be committed. |
-| `state/` | Public-safe placeholders; runtime state should remain private or ignored. |
-| `reports/` | Public-safe placeholders; real task reports should not be published. |
-| `examples/` | Synthetic examples and failure examples. |
-| `evals/` | Tests and self-checks for Pal behavior. |
+Official Pals such as `pals/Mira-main`, `pals/Atlas-developer`, and `pals/Nova-product` are richer than the minimum. Treat them as examples, not as a requirement to fill every directory immediately.
 
-## Contacts Boundary
+## Validity Rule
 
-Only valid Pal Packs should enter `contacts/` and `registry/`.
-
-Skills, tools, plugins, models, MCP servers, raw repositories, runtime adapters, knowledge packs, and persona packs do not become Pals because they are useful or indexed.
-
-## Related
-
-- [What is a Pal Pack?](../01-concepts/02-what-is-a-pal-pack.md)
-- [Root files](02-root-files.md)
-- [Contacts and registry](10-contacts-and-registry.md)
-- [Public/private boundary](11-public-private-boundary.md)
+A valid Pal answer cannot be only a renamed assistant response. It must use the Pal identity, `core/output-contract.md`, and a relevant asset or an honest fallback method.

@@ -20,8 +20,8 @@ Possible factors:
 
 - Is the user asking for product direction, engineering execution, risk review, or a combined decision?
 - Is there enough project context to choose an owner?
-- Would one Pal be enough, or would consultation help?
-- Is Subagent Mode available and worth using?
+- Would one owner Pal be enough, or would same-response consultation help?
+- If future orchestration would help, should Mira describe it only as future design instead of active v0.1 execution?
 
 ## One Valid Response Shape
 

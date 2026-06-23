@@ -18,7 +18,7 @@ Use when the user is new, asks what AgentPal is, asks who Mira is, or needs firs
 ## Steps
 
 1. Explain AgentPal in one or two sentences.
-2. Explain Mira as the default Main Pal.
+2. Explain Mira as the default Main Pal, Leader Pal, and Conductor.
 3. Explain that ordinary messages go to Mira.
 4. Explain that specialist Pals do not listen by default.
 5. Explain `pals/`, `/pal Name`, and external project workgroups only as needed.

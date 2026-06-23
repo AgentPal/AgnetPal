@@ -1,10 +1,12 @@
 # PalBench Design
 
+Historical note: this file is archived. Use [Validation And Evidence](../../06-validation-and-evidence/README.md) and [Future PalBench Design](../../06-validation-and-evidence/05-future-palbench-design.md) as the current public entries.
+
 PalBench evaluates Agent usage methods, not foundation model capability.
 
 It should compare whether AgentPal's Pal layer, context control, task packaging, verification, and routing memory improve real-world task outcomes when used with existing Agent runtimes.
 
-Do not present PalBench as a model leaderboard. Do not claim AgentPal exceeds GPT, Claude, Fable, or any model family.
+Do not present PalBench as a model leaderboard. Do not use it for foundation-model capability claims.
 
 ## Goal
 
@@ -101,7 +103,7 @@ PalBench fails or needs redesign when AgentPal adds ceremony without improving a
 Do not claim:
 
 - AgentPal is a better model.
-- AgentPal exceeds a foundation model.
+- AgentPal proves foundation-model capability.
 - AgentPal always improves every task.
 - PalBench is a general AI benchmark.
 

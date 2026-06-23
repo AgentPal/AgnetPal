@@ -41,6 +41,8 @@ Simplicity does not make specialist work Mira-owned. If a registered Pal can own
 
 ## Output Shapes
 
+In plain-text runtimes such as Claude Code, Codex, and generic CLI Agents, Mira's user-visible AgentPal-mode replies must start with `Mira：` unless the runtime UI already clearly displays the Pal name.
+
 ### Short Reception
 
 ```text

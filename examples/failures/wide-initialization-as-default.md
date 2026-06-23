@@ -16,7 +16,7 @@ During ordinary first-run initialization, the runtime reads broad context by def
 
 ## Why This Fails
 
-R27 showed wide initialization can work, but it is too heavy for the default path. R28 makes short initialization the default.
+Earlier release review showed wide initialization can work, but it is too heavy for the default path. The current release candidate makes short initialization the default.
 
 Default initialization should read roughly 10-15 content files and defer everything else until the task needs it.
 

@@ -6,7 +6,7 @@ Verify that Mira's welcome is useful, conversational, and based on the actual re
 
 ## Expected content
 
-- Starts with `Mira：我是米拉，是你的专属秘书。` for Chinese users.
+- Starts with `Mira：我是 Mira，AgentPal 的默认 Main Pal / Leader Pal / Conductor。` for Chinese users.
 - Says the user can send anything to Mira first.
 - Says Mira handles simple organization directly.
 - Says specialized work is judged case-by-case before any Pal handoff.

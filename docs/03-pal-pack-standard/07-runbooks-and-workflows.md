@@ -1,21 +1,40 @@
 # Runbooks And Workflows
 
-## Purpose
+## Status
 
-This document will explain runbooks and workflows in a Pal Pack.
+Current for AgentPal `v0.1.0-rc.1`.
 
-## Current Status
+Runbooks and workflows help a Pal repeat good work without turning AgentPal into an execution engine.
 
-Short placeholder for v0.1.0-rc.1.
+## Minimum
 
-## To Add Later
+```text
+runbooks/index.md
+workflows/index.md
+```
 
-- Difference between a runbook and a workflow.
-- When a Pal should use each one.
-- Indexing conventions.
-- Examples.
+Both indexes may be empty placeholders at first.
 
-## Related
+## Runbooks
 
-- [Add runbooks](../05-authoring-pals/08-add-runbooks.md)
-- [Pal Pack structure](01-pal-pack-structure.md)
+A runbook is a repeatable procedure for a known task family. It should include:
+
+- when to use it
+- required inputs
+- read-only checks first
+- approval gates
+- evidence required
+- what the Pal reports
+
+## Workflows
+
+A workflow is a larger lifecycle that may combine Skills, knowledge, runbooks, and handoffs. It should include:
+
+- stages
+- owner Pal responsibilities
+- optional collaborators resolved from contacts / registry
+- evidence and completion rules
+
+## Boundary
+
+Runbooks and workflows guide the current host runtime. They do not create active Subagent Mode, Deep Conductor, parallel child workflows, or external Agent orchestration in `v0.1.0-rc.1`.

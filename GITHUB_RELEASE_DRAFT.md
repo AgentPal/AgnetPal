@@ -1,69 +1,76 @@
 # AgentPal v0.1.0-rc.1
 
-AgentPal v0.1.0-rc.1 is the first public release candidate for AgentPal as a Pal layer and Pal Pack Standard practice for Markdown/JSON-capable agent runtimes.
+AgentPal v0.1.0-rc.1 is a release candidate for the AgentPal Workspace and Pal Pack Standard practice.
 
-AgentPal is not an Agent layer, not a multi-agent runtime, and not an execution layer. It gives an existing runtime a structured Pal Workspace for identity, knowledge, skills, context, memory boundaries, output contracts, coordination rules, review habits, summaries, and learning storage.
+AgentPal is a Markdown / JSON / protocol Pal layer for existing agent runtimes. It provides Pal identity, public knowledge, skills, context rules, memory boundaries, output contracts, coordination rules, verification habits, summaries, and learning storage.
+
+It is not an Agent layer, not a multi-agent runtime, and not an execution layer.
 
 ## What's Included
 
 - AgentPal Workspace root files for initialization and release-safe navigation.
 - Simple Pal Mode as the only active task-handling path in v0.1.0-rc.1.
 - Mira as the default Main Pal, Leader Pal, Conductor, and secretary-style coordinator.
-- Fast Route as the current clear-task handoff pattern, with Deep Conductor documented as future complex-workflow design only.
-- R33 small-sample PalBench smoke validation showing initial evidence for clearer task packages, stronger verification awareness, lower file-scope context risk, and lower user routing burden.
 - Official bundled Pal Packs: Mira, Atlas, Vega, Rhea, Quinn, Morgan, Harper, and Nova.
 - Contacts and registry files as the source of truth for Pal discovery and `/pal Name` direct calls.
-- Runtime Response Gate, AI routing judgement, Pal context slicing, asset loading budget, memory summary loading, and Task Package output contract protocols.
-- Orchestration methodology research docs, Fugu-inspired method transfer notes, PalBench design, and future-oriented capability / context / isolation / shared-memory / routing-memory protocols.
-- External project workgroup templates for binding AgentPal to a user project.
-- Claude Code one-prompt project install using `.agentpal/`, `CLAUDE.md`, `AGENTS.md`, and `.claude/settings.local.json`.
-- Generic CLI Agent one-prompt project install using `.agentpal/` and `AGENTS.md`.
-- MIT License, contribution guide, release notes, checklist, resource index, and third-party notices.
+- Runtime Response Gate, AI routing judgement, Pal context slicing, asset loading budget, memory boundary, and Task Package output contract protocols.
+- Fast Route as the current clear-task handoff pattern, with Deep Conductor documented as future complex-workflow design only.
+- R33 small-sample PalBench smoke validation for observed workflow benefits.
+- Public-safe release evidence under `release/v0.1.0-rc.1/`.
+- External project workgroup templates and one-prompt setup prompts for Markdown/JSON-capable runtimes.
+- MIT License, contribution guidance, release notes, checklist, manifest, and documentation navigation.
 
 ## Current Status
 
 - Release type: release candidate.
-- Version: v0.1.0-rc.1.
+- Version: `v0.1.0-rc.1`.
 - Runtime path: Simple Pal Mode only.
-- Primary use: opening the AgentPal Workspace in Codex, Claude Code, or another runtime that can read Markdown and JSON.
-- Required dependencies: none for AgentPal initialization.
+- Required AgentPal runtime dependencies: none.
+- Local tag evidence observed during documentation review: `v0.1.0-rc.1`.
+- Local tagged commit observed during documentation review: `f2abd6f8a0635f0501c86c6951939a23d92816cc`.
+- Remote push status: not confirmed by the repository evidence observed during documentation review.
+- GitHub Release status: this draft is for manual publication; an online GitHub Release should not be considered created until maintainers publish it from the intended tag.
+
+Maintainers should verify the final commit, tag, remote, and release page before publication.
+
+## R33 PalBench Boundary
+
+R33 PalBench is six-sample smoke validation. It compares AgentPal-style usage workflows with baseline usage conditions for task clarity, verification awareness, context-scope control, user routing burden, routing-record reuse, and current/future workflow boundaries.
+
+It is not statistically significant. It is not an underlying-model benchmark. It does not prove broad performance improvement across all tasks.
+
+Safe claim:
+
+```text
+In a six-sample smoke validation, AgentPal showed observed benefits for task clarity, verification awareness, context-scope control, user routing burden, reusable routing records, and clear current/future workflow boundaries.
+```
 
 ## Known Limitations
 
-- AgentPal does not include a desktop app, web UI, CLI, daemon, scanner, validator, installer, or service.
-- AgentPal does not execute filesystem, system, publishing, account, or automation actions by itself; the host runtime performs execution and must provide evidence.
-- Future subagent, remote agent, MCP-hosted agent, marketplace, and deep runtime-adapter designs are not active in v0.1.0-rc.1.
-- Capability Inventory, Context Access List, Workflow Topology, Routing Reward Memory, PalBench, and Deep Conductor materials are design foundations only in v0.1.0-rc.1.
-- Context Access List, Pal Isolation, Shared Memory, Routing Reward Memory, and PalBench now include R32 boundary-focused protocol/eval examples.
-- The R33 PalBench report is small-sample smoke evidence only. It is not statistically significant and does not compare foundation models.
+- AgentPal does not include a desktop app, web UI, CLI runtime, daemon, scanner, validator, installer, or service.
+- AgentPal does not execute filesystem, system, publishing, account, or automation actions by itself.
+- Host runtimes and user-controlled tools perform actual execution and must provide evidence.
+- Active multi-agent runtime behavior is not included.
+- Active Subagent Mode, remote-agent orchestration, and active Deep Conductor execution are not included in v0.1.0-rc.1.
+- Capability Inventory, Context Access List, Workflow Topology, Routing Reward Memory, expanded PalBench, and Deep Conductor materials are design foundations unless a future release activates them.
+- Exact token metering is not provided in v0.1.0-rc.1.
 - Pal Packs are working assets for a runtime, not independent agent processes.
-- Exact token metering is not provided in v0.1.0-rc.1; the workspace instead defines context budgets and asset loading reports.
+- Private user memory, private project state, customer data, secrets, credentials, internal development notes, and local absolute paths must not be published.
 
 ## Getting Started
 
 1. Download or clone the AgentPal Workspace.
-2. Open the AgentPal directory in Codex, Claude Code, or another Markdown/JSON-capable agent runtime.
+2. Open the AgentPal directory in a Markdown/JSON-capable agent runtime.
 3. Paste or run `INIT_PROMPT.md`.
 4. Start ordinary messages with Mira.
 5. Use `/pal Name` to call a registered Pal directly, for example `/pal Harper`.
 
-For Claude Code project-local setup:
-
-```text
-cd <your-project>
-claude
-```
-
-Then paste `prompts/claude-code/install-agentpal-current-project.md` and provide `<path-to-AgentPal>`. The prompt updates `.claude/settings.local.json` `permissions.additionalDirectories`; `--add-dir` is a fallback / advanced option, not the required default.
-
-For generic CLI Agents, paste `prompts/cli-agent/install-agentpal-current-project.md` inside `<your-project>`.
-
 ## Safety Notes
 
-- Do not publish runtime-private memory, private state, real reports, customer data, internal development notes, secrets, tokens, credentials, or local absolute paths.
 - Treat `contacts/` and `registry/` as the source of truth for Pal discovery.
 - Keep future designs clearly marked as future, not active v0.1.0-rc.1 behavior.
 - Use synthetic or placeholder data in public examples and templates.
+- Review release archives before publication to ensure ignored local runtime files are not included.
 
 ## License
 

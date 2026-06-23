@@ -1,30 +1,54 @@
 # Runtime Compatibility
 
-AgentPal v0.1.0-rc.1 is a Pal layer, not an execution layer.
+AgentPal v0.1.0-rc.1 is a Pal layer, not an execution layer. Compatibility depends on whether a runtime can read structured workspace files, follow Markdown / JSON instructions, preserve context, and report execution evidence honestly.
 
-It is designed for runtimes that can read Markdown and JSON workspace files, respect project instructions, and report execution evidence.
+## Current Quick-Start Paths
 
-## Primary Runtime Targets
+- Codex
+- Claude Code
+- generic CLI agents
 
-- Codex.
-- Claude Code.
-- CodeWhale.
-- Gemini CLI.
+These are the three user-facing paths documented for the current release candidate.
 
-## Other Possible Runtimes
+## Codex
 
-Other Markdown/JSON-capable runtimes may be able to use AgentPal files, but compatibility should be verified case by case.
+Codex can open the AgentPal Workspace directly and initialize from `INIT_PROMPT.md`. Mira becomes the default entry Pal, and `/pal Name` can call a specialist.
 
-## Boundary
+See [Use With Codex](01-use-with-codex.md).
 
-Tools, models, plugins, MCP servers, and execution systems are not Pal contacts. They may provide evidence or perform actions only when the user request and safety boundary allow it.
+## Claude Code
 
-Future runtime adapters are not active in v0.1.0-rc.1.
+Claude Code should usually use the project-first path:
 
-Claude Code can use `CLAUDE.md` and `.claude/settings.local.json` for project-local binding. Generic CLI Agents primarily use `AGENTS.md` and `.agentpal/`.
+```text
+cd <your-project>
+claude
+```
+
+Then paste the one-prompt AgentPal connection prompt. The current project remains the task context. AgentPal must not become the user project by mistake.
+
+See [Use With Claude Code](02-use-with-claude-code.md).
+
+## Generic CLI Agent
+
+A generic CLI agent can use AgentPal if it can:
+
+- read directories and local files
+- follow Markdown / JSON instructions
+- maintain working context
+- report execution evidence
+
+This is a compatibility guide, not a promise that every CLI agent has been validated.
+
+See [Use With Generic CLI Agent](03-use-with-generic-cli-agent.md).
+
+## Common Boundary
+
+- AgentPal is not a runtime adapter that guarantees identical behavior everywhere.
+- AgentPal is not a deep plugin for Codex or Claude Code in `v0.1.0-rc.1`.
+- Deep Conductor, Subagent Mode, parallel child workflows, and external Agent orchestration are not active runtime paths in this release.
 
 ## Related
 
-- [Use with Codex](../02-getting-started/02-open-in-codex.md)
-- [Use with Claude Code](../02-getting-started/03-open-in-claude-code.md)
-- [Future runtime adapters](99-future-runtime-adapters.md)
+- [Project-First Connection](04-project-first-connection.md)
+- [Current Status](../00-overview/01-current-status.md)

@@ -1,22 +1,37 @@
 # Use With Codex
 
-## Purpose
+This is the current Codex path for AgentPal v0.1.0-rc.1.
 
-This document is the runtime guide for Codex.
+## Quick Start
 
-## Current Status
+1. Open the AgentPal Workspace in Codex.
+2. Copy the contents of `INIT_PROMPT.md`.
+3. Initialize AgentPal in the current workspace.
+4. Start with Mira for ordinary messages.
+5. Use `/pal Name` when you want to call a specialist directly.
 
-Short placeholder. The current quick start lives in [Use with Codex](../02-getting-started/02-open-in-codex.md).
+## What To Expect
 
-## To Add Later
+- Mira is the default Main Pal / Leader / Conductor.
+- Ordinary messages go to Mira first.
+- Specialist Pals do not listen by default.
+- `/pal Name` enters the selected Pal working mode inside the current runtime.
+- The active path is `Simple Pal Mode only`.
 
-- Codex-specific project setup notes.
-- How Codex reads `AGENTS.md`.
-- How to recover from over-loading context.
-- How to report execution evidence.
+## Important Boundary
+
+- AgentPal is not a Codex replacement.
+- AgentPal is not a Codex subagent system in `v0.1.0-rc.1`.
+- Deep Conductor is future design only.
+- Do not describe parallel child workflows as the current AgentPal runtime path.
+
+## Good First Commands
+
+- Ask Mira what AgentPal can do in the current release.
+- Ask Mira to route a task if you are unsure which Pal should own it.
+- Call a specialist directly with `/pal Atlas`, `/pal Quinn`, or `/pal Harper`.
 
 ## Related
 
-- [Quick start](../02-getting-started/00-quick-start.md)
-- [Initialize AgentPal](../02-getting-started/04-initialize-agentpal.md)
-- [Runtime compatibility](00-runtime-compatibility.md)
+- [Runtime Compatibility](00-runtime-compatibility.md)
+- [Current Status](../00-overview/01-current-status.md)

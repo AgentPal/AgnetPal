@@ -1,21 +1,36 @@
 # Knowledge
 
-## Purpose
+## Status
 
-This document will explain knowledge cards and knowledge indexes inside a Pal Pack.
+Current for AgentPal `v0.1.0-rc.1`.
 
-## Current Status
+`knowledge/` stores short, public-safe knowledge cards and an index that helps the runtime choose the right slice.
 
-Short placeholder for v0.1.0-rc.1.
+## Minimum
 
-## To Add Later
+```text
+knowledge/index.md
+```
 
-- Knowledge card format.
-- Index design.
-- Source and copyright boundaries.
-- Current-information refresh rules.
+An empty or early Pal can start with only `knowledge/index.md`. The index should say what knowledge exists now, what is missing, and that the runtime should not load every file by default.
 
-## Related
+## Standard Pattern
 
-- [Add knowledge](../05-authoring-pals/06-add-knowledge.md)
-- [Public/private boundary](11-public-private-boundary.md)
+```text
+knowledge/
+├─ index.md
+├─ identity/
+├─ methods/
+├─ safety/
+└─ references/
+```
+
+Use whatever subdirectories fit the Pal. Do not invent heavy structure before there is real content.
+
+## Source Boundary
+
+Do not copy large third-party documents, private user material, customer data, or unreleased project facts into knowledge cards. Link, summarize cautiously, and keep copyright and privacy boundaries visible.
+
+## Current Information
+
+Facts that change over time, such as prices, laws, API behavior, model names, or software versions, need fresh verification by the host runtime before use.

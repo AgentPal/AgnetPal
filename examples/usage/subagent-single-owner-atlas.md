@@ -8,15 +8,15 @@
 请 Atlas 评估这个开发任务下一步怎么做。
 ```
 
-## Mira routing decision
+## Mira routing decision in v0.1
 
-Mira chooses Codex Subagent Mode only if the task needs independent Atlas judgment and Codex exposes subagent tools directly or through allowed deferred discovery. For a simple `/pal Atlas` consult, Simple Pal Mode is enough.
+Mira does not start Codex Subagent Mode in AgentPal v0.1.0-rc.1. For this request, Mira routes or consults Atlas through Simple Pal Mode, and Atlas answers in the same runtime response.
 
-## Subagents spawned
+## Current Pal handling
 
-- Atlas as owner Pal
+- Atlas as owner Pal in Simple Pal Mode
 
-## Required files Atlas reads
+## Required files Atlas reads on demand
 
 - `pals/Atlas-developer/PAL.md`
 - `pals/Atlas-developer/SKILL.md`
@@ -32,12 +32,10 @@ Atlas returns engineering state, file / directory scope, development phases, acc
 
 Mira summarizes Atlas's conclusion without rewriting it as Mira's own engineering advice.
 
-## Fallback if unavailable
+## Future-design note
 
 ```text
-Subagent Mode unavailable
-Using Simple Pal Mode
-Limitations: Atlas is not an independent Codex subagent thread in this response.
+Future external orchestration may run Atlas as an independent workflow, but AgentPal v0.1 does not start that path.
 ```
 
 

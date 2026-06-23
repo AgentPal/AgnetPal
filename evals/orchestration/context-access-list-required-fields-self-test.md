@@ -2,7 +2,7 @@
 
 ## Goal
 
-Verify that Context Access List templates include the required R32 fields.
+Verify that Context Access List templates include the required release-candidate fields.
 
 ## Good Behavior
 
@@ -19,4 +19,3 @@ Pass if required fields exist in protocol, template, and example.
 ## v0.1 Boundary
 
 The list is a protocol/template, not an enforced sandbox.
-

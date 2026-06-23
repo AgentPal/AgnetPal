@@ -1,36 +1,36 @@
 # Public And Private Boundary
 
-AgentPal public repositories should contain only release-safe Markdown, JSON, templates, protocols, examples, evals, and placeholders.
+## Status
+
+Current for AgentPal `v0.1.0-rc.1`.
+
+Public Pal Packs should contain release-safe Markdown, JSON, templates, examples, evals, and placeholders. They must not contain private runtime data.
 
 ## Do Not Publish
 
-- API keys, tokens, passwords, secrets, credentials, or private keys.
-- Private user memory.
-- Real user conversation history.
-- Private project state.
-- Customer data.
-- Proprietary project data.
-- Real task reports, verification reports, or internal development reports.
-- Local absolute paths.
-- Unauthorized third-party full text.
-- Unlicensed source code or documentation copied from another project.
-- Future feature claims written as current behavior.
+- API keys, tokens, passwords, secrets, credentials, or private keys
+- private user memory
+- real user conversation history
+- private project state
+- customer data
+- proprietary project data
+- real task reports or internal development reports
+- local absolute paths
+- unauthorized third-party full text
+- future feature claims written as current behavior
 
 ## Public-Safe Content
 
-Allowed public content includes:
-
-- Pal Pack templates.
-- Synthetic examples.
-- Public-safe evals.
-- Placeholder README files for memory, state, and reports.
-- Protocol docs.
-- Release notes and checklists.
-- Short attributed references or links to third-party resources.
+- Pal Pack root files
+- public-safe identity, knowledge, Skills, runbooks, and workflows
+- placeholder README files for memory, state, and reports
+- synthetic examples
+- public-safe evals
+- templates and checklists
 
 ## Directory Watchlist
 
-Review these carefully before release:
+Review these before release:
 
 - `memory/`
 - `state/`
@@ -41,14 +41,7 @@ Review these carefully before release:
 - `examples/`
 - `evals/`
 - `imports/`
-- `docs/`
 
 ## Future Design Boundary
 
-Future child workflow, subagent, marketplace, desktop app, and runtime-adapter materials must be marked as future or not active in v0.1.0-rc.1.
-
-## Related
-
-- [Public-safe checklist](../08-release-and-maintenance/02-public-safe-checklist.md)
-- [Third-party notices](../../THIRD_PARTY_NOTICES.md)
-- [Release checklist](../../RELEASE_CHECKLIST.md)
+Future child workflow, Subagent Mode, marketplace, desktop app, web app, and runtime-adapter material must be marked as future or not active in `v0.1.0-rc.1`.

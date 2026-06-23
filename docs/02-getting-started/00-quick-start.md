@@ -27,7 +27,7 @@ Example:
 
 ## What Should Happen
 
-- Mira is the default Main Pal.
+- Mira is the default Main Pal, Leader Pal, and Conductor.
 - Specialist Pals do not listen by default.
 - Direct calls resolve from `contacts/` and `registry/`.
 - Simple Pal Mode remains the only active task-handling path.

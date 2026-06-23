@@ -41,10 +41,12 @@ Verify:
     - Morgan
     - Harper
     - Nova
-12. Clara is not in the default bundled Pal set.
+12. No non-bundled Pal is included in the default bundled Pal set.
 13. Current mode is Simple Pal Mode only.
 14. No active Subagent Mode or external Agent orchestration is required by the binding.
 15. The block does not import the whole AgentPal workspace or AgentPal AGENTS.md.
+16. The AgentPal block describes Mira as the default Main Pal, Leader Pal, and Conductor, not primarily as a secretary-style support role.
+17. If you are verifying immediately after install, the install response should include a first welcome message that starts with `Mira：`, lists the 8 official bundled Pals, mentions `/pal Name`, says ordinary tasks start with Mira, and states that v0.1 uses Simple Pal Mode only.
 
 Output a concise checklist:
 - pass / fail / warning
@@ -52,4 +54,6 @@ Output a concise checklist:
 - fix suggestion
 
 If the current session cannot access the AgentPal path even though settings.local.json contains it, recommend restarting Claude Code or using temporary /add-dir <path-to-AgentPal> for this session.
+
+If the binding files are correct but the first post-install response had no `Mira：` welcome message, report a warning and recommend rerunning the latest AgentPal Claude Code install prompt.
 ```

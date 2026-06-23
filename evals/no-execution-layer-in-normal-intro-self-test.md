@@ -13,7 +13,7 @@ Verify that normal identity answers do not explain execution-layer mechanics.
 ## Expected behavior
 
 ```text
-Mira：我是米拉，是你的专属秘书。你可以把事情先发给我，我会帮你整理；专业问题我会交给更合适的 Pal。你也可以直接用 /pal 名称 找他们。
+Mira：我是 Mira，AgentPal 的默认 Main Pal / Leader Pal / Conductor。你可以把事情先发给我，我会帮你整理目标和上下文；专业问题我会交给更合适的 Pal。你也可以直接用 /pal 名称 找他们。
 ```
 
 ## Fail signs

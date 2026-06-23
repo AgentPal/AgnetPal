@@ -1,23 +1,26 @@
 # Core Protocols
 
-## Purpose
+## Status
 
-This document will summarize the core protocols used by AgentPal and Pal Packs.
+Current for AgentPal `v0.1.0-rc.1`.
 
-## Current Status
+The `core/` directory holds the Pal's local rules for producing valid answers and handling tasks.
 
-Short placeholder for v0.1.0-rc.1.
+## Minimum Core Files
 
-## To Add Later
+| File | Required | Purpose |
+| --- | --- | --- |
+| `core/output-contract.md` | Yes | Defines what a valid answer from this Pal must include |
+| `core/task-loop.md` | Yes | Explains the Pal's default task handling loop |
 
-- Runtime Response Gate summary.
-- Output Contract summary.
-- Context Packet summary.
-- Asset loading and context slicing summary.
-- Pal-owned Skill storage summary.
+## Why Output Contract Matters
 
-## Related
+`core/output-contract.md` is the key validity file. A Pal-mode answer is not valid just because it starts with a Pal name. It must follow the Pal's output contract and use a relevant asset or fallback method.
 
-- [Core protocol index](../99-reference/core-protocol-index.md)
-- [Simple Pal Mode](../01-concepts/05-simple-pal-mode.md)
-- [Context Packet](../06-collaboration/03-context-packet.md)
+## Standard Core Files
+
+Standard and official Pals may also include collaboration, handoff, verification, memory, reporting, learning, runtime-awareness, or capability-reference files. These are useful, but they are not required for a minimal Pal Pack.
+
+## Current Runtime Boundary
+
+In `v0.1.0-rc.1`, core protocols are Markdown rules for the current host runtime. They do not create a separate execution engine or active multi-agent runtime.

@@ -35,9 +35,9 @@ Fail if Mira answers owned specialist bodies herself or asks the user to choose 
 
 Do not claim Mira always knows the perfect route.
 
-## R33 Small-Sample Observation
+## Small-Sample Smoke Observation
 
-R33 sample `04-single-entry-mira` used the task: "verify whether AgentPal can publish rc.1 and what is missing."
+Smoke sample `04-single-entry-mira` used the task: "verify whether AgentPal can publish rc.1 and what is missing."
 
 The baseline implied up to seven user decisions: which Pal, QA, Developer, Claude Code, Codex, verification, and files. The AgentPal condition produced a release-readiness Task Judgement and Task Package with zero manual decisions before the first useful package.
 

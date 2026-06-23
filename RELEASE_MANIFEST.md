@@ -9,7 +9,9 @@ Generated: 2026-06-24
 | Release name | AgentPal v0.1.0-rc.1 |
 | Version | `v0.1.0-rc.1` |
 | Git tag | `v0.1.0-rc.1` |
-| Git commit hash | Resolve locally with `git rev-parse v0.1.0-rc.1^{}` after the R34 final tag is created. The exact hash is also recorded in the internal R34 completion report. |
+| Git commit hash observed for local tag | `f2abd6f8a0635f0501c86c6951939a23d92816cc` |
+| Git remote status observed | No remote output was available during the final documentation readiness pass. |
+| GitHub Release status observed | No online GitHub Release was created or verified during the final documentation readiness pass. |
 | License | MIT |
 | Release type | Public release candidate |
 | Runtime policy | Simple Pal Mode only |
@@ -27,6 +29,7 @@ Included:
 - contacts and registry files under `contacts/` and `registry/`
 - orchestration protocols, templates, examples, evals, prompts, runtime compatibility notes, capability profiles, and research docs
 - external project binding templates and Claude Code / generic CLI Agent one-prompt setup prompts
+- Claude Code post-install Mira welcome output requirements
 - release evidence drafts under `release/v0.1.0-rc.1/`
 
 Not included:
@@ -72,10 +75,11 @@ R34 local checks:
 
 ## Local Git Boundary
 
-R34 prepares local Git state only:
+The final documentation readiness pass observed local Git state only:
 
-- create or update the local release commit
-- create annotated local tag `v0.1.0-rc.1`
-- do not push to a remote
-- do not create a GitHub release online
-- do not add or change remote configuration
+- local tag `v0.1.0-rc.1` points at `f2abd6f8a0635f0501c86c6951939a23d92816cc`
+- no configured remote was shown by `git remote -v`
+- no push was performed
+- no GitHub Release was created or verified
+
+If maintainers accept additional documentation changes after the observed local tag, they should create the final intended release commit, retag `v0.1.0-rc.1` if needed, then push the commit and tag before creating the GitHub Release.

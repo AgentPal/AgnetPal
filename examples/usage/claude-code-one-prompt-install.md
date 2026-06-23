@@ -23,6 +23,7 @@ AGENTPAL_HOME = <path-to-AgentPal>
 - Existing `CLAUDE.md`, `AGENTS.md`, and Claude Code settings are preserved.
 - `.gitignore` contains `.claude/settings.local.json`.
 - AgentPal remains Simple Pal Mode only.
+- The final install response includes a `Mira：` welcome that introduces Mira as Main Pal / Leader Pal / Conductor, lists Mira, Atlas, Nova, Vega, Rhea, Quinn, Morgan, and Harper, and explains `/pal Name`.
 - No Subagent Mode or external Agent orchestration is activated.
 
 ## Fallback

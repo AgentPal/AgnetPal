@@ -1,25 +1,39 @@
 # Skills
 
-## Purpose
+## Status
 
-This document will explain Pal-owned Skills.
+Current for AgentPal `v0.1.0-rc.1`.
 
-## Current Status
+`skills/` stores formal Pal-owned Skills. A Skill is a focused capability; a Pal is the broader working companion that owns identity, judgment, context, memory boundaries, and output contracts.
 
-Short placeholder for v0.1.0-rc.1.
+## Minimum
 
-## Key Boundary
+```text
+skills/index.md
+```
 
-A Skill is a focused capability. A Pal is a broader working companion. Pal-owned Skills should live under the owner Pal's own `skills/` directory.
+The index can be short. It may say no formal Skills exist yet.
 
-## To Add Later
+## Standard Skill Structure
 
-- Skill directory structure.
-- `SKILL.md` entry expectations.
-- Repeated-task trigger rules.
-- Index maintenance rules.
+```text
+skills/<skill-id>/
+├─ SKILL.md
+└─ README.md
+```
 
-## Related
+`SKILL.md` is the runtime entry. `README.md` is human notes.
 
-- [Pal vs Agent vs Skill](../01-concepts/03-pal-vs-agent-vs-skill.md)
-- [Add skills](../05-authoring-pals/07-add-skills.md)
+## Pal-Owned Storage Rule
+
+When the user explicitly asks to save a Skill, or similar operations repeat three or more times, the formal Skill belongs under the owner Pal's own `skills/` directory:
+
+```text
+pals/<Owner-Pal-Directory>/skills/<skill-id>/SKILL.md
+```
+
+Do not default to global runtime Skill folders.
+
+## Not Contacts
+
+Skills are not Pals. Do not add ordinary Skills to `contacts/` or `registry/pal.index.*`.

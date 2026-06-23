@@ -1,0 +1,51 @@
+# Use With Generic CLI Agent
+
+This guide covers the generic compatibility path for AgentPal v0.1.0-rc.1.
+
+## When This Path Fits
+
+Use this path when your CLI agent can:
+
+- read directories and local files
+- follow Markdown / JSON instructions
+- keep project context stable across the task
+- report what it really executed
+
+AgentPal does not promise that every CLI agent has been validated. This is a generic compatibility guide.
+
+## Quick Start
+
+```text
+cd <your-project>
+<your-cli-agent>
+```
+
+Then paste the one-prompt project connection prompt from `prompts/cli-agent/install-agentpal-current-project.md`.
+
+The prompt begins with:
+
+```text
+Please connect AgentPal to the current project.
+
+AGENTPAL_HOME = <replace-with-your-AgentPal-path>
+```
+
+## What This Path Creates
+
+- `.agentpal/` project binding files
+- `AGENTS.md` workgroup block for the current project
+
+It does not require Claude Code local settings, and it should not create runtime-specific files unless the current project already uses them or the user asks.
+
+## Important Boundary
+
+- The current project stays the active task context.
+- The AgentPal Workspace is a reference workspace, not the user project.
+- AgentPal is a Pal layer, not an Agent runtime or execution layer.
+- The active path is `Simple Pal Mode only`.
+- Deep Conductor, Subagent Mode, and external Agent orchestration are not active here.
+
+## Related
+
+- [Runtime Compatibility](00-runtime-compatibility.md)
+- [Project-First Connection](04-project-first-connection.md)

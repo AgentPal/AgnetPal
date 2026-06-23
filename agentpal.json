@@ -6,7 +6,7 @@
   "version": "v0.1.0-rc.1",
   "release_status": "release-candidate",
   "methodology": {
-    "design_foundation": "AgentPal does not compete with foundation models. It studies how to use existing Agent runtimes better through Pal identity, context control, task packaging, verification, and routing memory.",
+    "design_foundation": "AgentPal does not compete with foundation models. It defines an original Pal Layer methodology for using existing Agent runtimes through Pal identity, context control, task packaging, verification, and routing memory.",
     "active_mode": "simple-pal-mode-only",
     "active_clear_task_pattern": "fast-route",
     "future_complex_task_design": "deep-conductor"
@@ -145,7 +145,7 @@
     "welcome_message_language": "user_current_language",
     "welcome_message_must_use_user_current_language": true,
     "normal_intro_omit_execution_layer": true,
-    "chinese_welcome_first_sentence": "Mira：我是米拉，是你的专属秘书。",
+    "chinese_welcome_first_sentence": "Mira：我是 Mira，AgentPal 的默认 Main Pal / Leader Pal / Conductor。",
     "examples": [
       "Mira：",
       "Atlas：",
@@ -357,9 +357,10 @@
       "active_in_v0_1_runtime": false,
       "future_design_only": true,
       "docs": [
-        "docs/research/agentpal-orchestration-methodology.md",
-        "docs/research/fugu-inspired-agentpal-methodology.md",
-        "docs/research/palbench-design.md"
+        "docs/05-orchestration-methodology/README.md",
+        "docs/05-orchestration-methodology/00-methodology-overview.md",
+        "docs/06-validation-and-evidence/README.md",
+        "docs/06-validation-and-evidence/05-future-palbench-design.md"
       ],
       "protocols": [
         "orchestration/fast-route-protocol.md",

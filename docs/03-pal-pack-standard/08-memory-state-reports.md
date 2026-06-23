@@ -1,24 +1,49 @@
 # Memory, State, And Reports
 
-## Purpose
+## Status
 
-This document will explain which memory, state, and report files can be public and which must remain private.
+Current for AgentPal `v0.1.0-rc.1`.
 
-## Current Status
+`memory/`, `state/`, and `reports/` are sensitive areas. Public Pal Packs should ship placeholders, not real runtime data.
 
-Short placeholder for v0.1.0-rc.1.
+## Minimum Public Placeholders
 
-## Key Boundary
+Use one of these memory shapes:
 
-Public repositories may include placeholders and templates. They must not include private user memory, private project state, real task reports, secrets, or internal development notes.
+```text
+memory/README.md
+```
 
-## To Add Later
+or:
 
-- Public-safe examples.
-- Private runtime examples.
-- `.gitignore` expectations.
+```text
+memory/user/README.md
+```
 
-## Related
+Also include:
 
-- [Public/private boundary](11-public-private-boundary.md)
-- [Memory overview](../07-memory-and-learning/00-memory-overview.md)
+```text
+state/README.md
+reports/README.md
+```
+
+## What Can Be Public
+
+- README placeholders.
+- Synthetic examples.
+- Public-safe templates.
+- Non-sensitive guidance for what belongs in each directory.
+
+## What Must Stay Private
+
+- private user memory
+- private project state
+- real task reports
+- credentials, tokens, secrets, or keys
+- customer data
+- internal development notes
+- local absolute paths
+
+## Writeback Rule
+
+Before writing memory, state, or reports, decide whether the target is public release content or runtime-private content. When in doubt, keep it private or use a placeholder.

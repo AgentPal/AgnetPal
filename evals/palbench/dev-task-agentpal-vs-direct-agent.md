@@ -47,9 +47,9 @@ Fail when AgentPal adds ceremony but produces no better task package or verifica
 
 Do not claim AgentPal is a stronger model. This eval compares usage method.
 
-## R33 Small-Sample Observation
+## Small-Sample Smoke Observation
 
-R33 sample `01-dev-prompt-quality` compared a direct prompt for a Codex development prompt against an AgentPal Task Judgement + Context Access List + Task Package.
+Smoke sample `01-dev-prompt-quality` compared a direct prompt for a Codex development prompt against an AgentPal Task Judgement + Context Access List + Task Package.
 
 Observed difference:
 

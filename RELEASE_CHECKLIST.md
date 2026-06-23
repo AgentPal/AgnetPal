@@ -96,6 +96,21 @@ Use this checklist before publishing AgentPal v0.1.0-rc.1 as a public MIT GitHub
 - [ ] `CHANGELOG.md` records user-visible release changes for `v0.1.0-rc.1`.
 - [ ] `RELEASE_NOTES.md` is user-facing and explains who the release is for, who it is not for, what is included, and what is not included.
 - [ ] `GITHUB_RELEASE_DRAFT.md` is suitable for manual GitHub Release drafting and includes What's included, Current status, Known limitations, Getting started, and Safety notes.
+- [ ] `GITHUB_RELEASE_DRAFT.md` does not claim a remote push or online GitHub Release exists unless that has been verified.
+- [ ] `RELEASE_MANIFEST.md` records the observed local tag, commit, remote, and GitHub Release state.
+
+## GitHub Publication
+
+- [ ] Final intended release contents are committed.
+- [ ] Local tag `v0.1.0-rc.1` points to the final intended release commit.
+- [ ] If no remote exists, create an empty GitHub repository before adding a remote.
+- [ ] Add or verify the intended remote.
+- [ ] Push the final release commit.
+- [ ] Push tag `v0.1.0-rc.1`.
+- [ ] Create the GitHub Release from tag `v0.1.0-rc.1`.
+- [ ] Paste and review `GITHUB_RELEASE_DRAFT.md` as the release body.
+- [ ] Mark the GitHub Release as a pre-release or release candidate if that matches the repository policy.
+- [ ] Confirm the published release page links to the intended tag and commit.
 
 ## Validation
 
@@ -107,3 +122,4 @@ Use this checklist before publishing AgentPal v0.1.0-rc.1 as a public MIT GitHub
 - [ ] Relative links in root release files were reviewed.
 - [ ] Public-safety keyword search was reviewed by a human.
 - [ ] Version references in root release files use `v0.1.0-rc.1`.
+- [ ] If `SECURITY.md` is absent, maintainers have accepted that as a release-candidate limitation or added a release-safe security policy before publication.

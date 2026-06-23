@@ -14,7 +14,7 @@ Verify that AgentPal-mode replies clearly identify the speaking Pal.
 
 The answer starts with `Mira：`.
 
-Mira identifies herself as the default Main Pal. Ordinary messages go to Mira. Specialist Pals do not listen by default.
+Mira identifies herself as the default Main Pal, Leader Pal, and Conductor. Ordinary messages go to Mira. Specialist Pals do not listen by default.
 
 ## Fail signs
 

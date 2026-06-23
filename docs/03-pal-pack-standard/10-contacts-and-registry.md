@@ -1,25 +1,42 @@
 # Contacts And Registry
 
-## Purpose
+## Status
 
-This document explains Pal discovery source of truth.
+Current for AgentPal `v0.1.0-rc.1`.
 
-## Current Status
+`contacts/` and `registry/` are the source of truth for Pal discovery.
 
-Short placeholder for v0.1.0-rc.1.
+## Source Files
 
-## Source Of Truth
+- `contacts/pals.json`
+- `contacts/PAL_CONTACTS.md`
+- `contacts/mention-aliases.md`
+- `registry/pal.index.json`
+- `registry/pal.index.md`
 
-`contacts/` and `registry/` are the source of truth for Pal discovery, display names, aliases, paths, and contactability.
+## What They Control
 
-Individual Pal Packs should not maintain hard-coded route maps for other Pals.
+- display name
+- aliases
+- directory path
+- role
+- direct call such as `/pal Atlas`
+- discoverable / contactable state
+- allowed collaboration modes
 
-## Not Contacts
+## What Must Not Enter Contacts
 
-Skills, tools, plugins, models, MCP servers, raw repositories, runtime adapters, knowledge packs, and persona packs are not Pal contacts unless they are packaged as valid Pal Packs.
+- ordinary Skills
+- plugins
+- models
+- MCP servers
+- runtimes
+- raw repositories
+- knowledge packs
+- persona packs
 
-## Related
+These can support a Pal, but they are not Pals unless packaged as valid Pal Pack directories and intentionally registered.
 
-- [Repository map](../00-overview/02-repository-map.md)
-- [Pal contacts](../06-collaboration/01-pal-contacts.md)
-- [Official Pals](../99-reference/official-pals.md)
+## Maintenance Rule
+
+Adding, removing, or renaming a Pal should mainly update contacts and registry. Individual Pal Packs should not maintain hard-coded route maps for other Pals.

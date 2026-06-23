@@ -1,5 +1,7 @@
 # PalBench R33 Small-Sample Smoke Validation
 
+Historical note: this file is archived. Use [R33 PalBench Small-Sample Report](../../06-validation-and-evidence/01-palbench-small-sample-report.md) as the current public entry.
+
 This is a small-sample smoke validation, not a statistically significant benchmark.
 It compares agent usage workflows, not foundation model capabilities.
 
@@ -84,7 +86,7 @@ This report does not prove:
 - statistical significance
 - general improvement across all tasks
 - model capability improvement
-- that AgentPal is better than any foundation model
+- foundation-model capability improvement
 - that future Deep Conductor behavior is active in v0.1.0-rc.1
 
 The samples are small and qualitative. They are useful as release smoke evidence and as a guide for future PalBench runs.
@@ -94,7 +96,7 @@ The samples are small and qualitative. They are useful as release smoke evidence
 Do not claim:
 
 - AgentPal has proven broad performance improvement.
-- AgentPal exceeds GPT, Claude, Fable, or any other model.
+- AgentPal proves foundation-model capability.
 - AgentPal is a model benchmark leaderboard.
 - Deep Conductor is active in v0.1.0-rc.1.
 
@@ -113,4 +115,3 @@ Future PalBench work should:
 - compare more runtimes while keeping the model and context conditions clear
 - measure rework count over multiple real user tasks
 - separate Simple Pal Mode results from future Deep Conductor simulations
-

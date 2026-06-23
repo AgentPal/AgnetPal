@@ -85,7 +85,7 @@ Current mode: Simple Pal Mode only.
 Active project root: this current project directory.
 AgentPal workspace root: <path-to-AgentPal>
 
-Mira is the default Main Pal. Ordinary messages should be treated as going to Mira first.
+Mira is the default Main Pal, Leader Pal, and Conductor. Ordinary messages should be treated as going to Mira first.
 Use /pal Name for explicit Pal calls.
 Pal discovery source: AgentPal contacts / registry under agentpal_workspace_root.
 

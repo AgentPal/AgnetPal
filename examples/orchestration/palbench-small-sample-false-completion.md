@@ -17,7 +17,6 @@ AgentPal uses a Verification Result Record:
 
 ## Observation
 
-In the R33 small sample, the AgentPal condition caught missing evidence for verify prompt coverage, settings merge, idempotent reinstall, and internal-path checks.
+In the small-sample smoke validation, the AgentPal condition caught missing evidence for verify prompt coverage, settings merge, idempotent reinstall, and internal-path checks.
 
 This is smoke evidence only.
-

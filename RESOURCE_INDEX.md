@@ -67,7 +67,10 @@ Use:
 | `capabilities/` | capability-profile notes | diagnostics or capability documentation |
 | `response-fingerprints/` | Pal response fingerprint references | selected Pal validation |
 | `docs/` | user documentation and reference material | docs work or user questions |
-| `docs/research/` | orchestration methodology and PalBench design | methodology, release research, or future design questions only |
+| `docs/05-orchestration-methodology/` | current AgentPal Pal orchestration methodology | methodology questions and docs navigation |
+| `docs/06-validation-and-evidence/` | current PalBench and evidence interpretation | validation, PalBench, and evidence questions |
+| `docs/08-release-candidate/` | current v0.1.0-rc.1 release candidate notes | release candidate scope and evidence questions |
+| `docs/research/` | archived research notes | historical traceability only; not a primary entry point |
 | `examples/` | public-safe examples and failure examples | examples, evals, or regression checks |
 | `evals/` | self-tests and release checks | eval or release validation only |
 | `memory/` | public-safe memory placeholders | not ordinary task context |
@@ -118,16 +121,21 @@ Do not load all Pal directories by default. Load Mira for ordinary entry and the
 - `orchestration/pal-owned-skill-storage-protocol.md`
 - `orchestration/specialist-pal-asset-loading-protocol.md`
 
-## Orchestration Research And Future Design
+## Methodology, Validation, Release Candidate, And Archive
 
-These files are navigation entries for design and evaluation work. They are not ordinary task context and do not activate Deep Conductor, Subagent Mode, or external Agent calls.
+Use the current docs directories as the public entry points. Archived research notes are kept only for traceability. None of these files activate Deep Conductor, Subagent Mode, or external Agent calls.
 
 | Path | Purpose |
 | --- | --- |
-| `docs/research/agentpal-orchestration-methodology.md` | AgentPal orchestration methodology and roadmap |
-| `docs/research/fugu-inspired-agentpal-methodology.md` | method transfer from orchestration research to AgentPal |
-| `docs/research/palbench-design.md` | PalBench evaluation design |
-| `docs/research/palbench-r33-small-sample-report.md` | R33 small-sample smoke validation; not statistically significant |
+| `docs/05-orchestration-methodology/README.md` | current Pal Orchestration Methodology entry |
+| `docs/05-orchestration-methodology/00-methodology-overview.md` | current methodology overview |
+| `docs/06-validation-and-evidence/README.md` | current validation and PalBench entry |
+| `docs/06-validation-and-evidence/01-palbench-small-sample-report.md` | current R33 PalBench small-sample report |
+| `docs/06-validation-and-evidence/05-future-palbench-design.md` | current future PalBench design notes |
+| `docs/08-release-candidate/README.md` | current release candidate entry |
+| `docs/08-release-candidate/02-release-manifest.md` | current release candidate manifest |
+| `docs/research/README.md` | archive status note; not a primary docs entry |
+| `docs/research/archive/` | historical research notes retained for traceability |
 | `orchestration/fast-route-protocol.md` | current Simple Pal Mode clear-task handoff pattern |
 | `orchestration/deep-conductor-protocol.md` | future complex-workflow orchestration design |
 | `orchestration/capability-inventory-protocol.md` | runtime/model/skill/plugin/MCP/Pal profile design |

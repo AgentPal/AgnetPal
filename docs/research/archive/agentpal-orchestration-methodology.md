@@ -1,12 +1,14 @@
 # AgentPal Orchestration Methodology
 
-AgentPal is not a benchmark competitor to foundation models. It does not claim to exceed GPT, Claude, Fable, or any model family.
+Historical note: this file is archived. Use [Pal Orchestration Methodology](../../05-orchestration-methodology/README.md) as the current public entry.
 
-AgentPal studies a different problem: how to help people use existing Agent runtimes more reliably. The core claim is that a transparent scheduling layer can improve real-world task results by choosing the right Pal, runtime, model profile, reasoning level, Skill, plugin, context slice, and verification path for the current job.
+AgentPal is not a benchmark competitor to foundation models. It does not rank or compare foundation-model capability.
+
+AgentPal defines its own problem space: how to help people use existing Agent runtimes more reliably. The core claim is that a transparent scheduling layer can improve real-world task results by choosing the right Pal, runtime, model profile, reasoning level, Skill, plugin, context slice, and verification path for the current job.
 
 AgentPal v0.1.0-rc.1 does not implement a multi-agent runtime. The active path remains Simple Pal Mode only. The methodology in this document is a design foundation for future versions.
 
-AgentPal does not compete with foundation models. It studies how to use existing Agent runtimes better.
+AgentPal does not compete with foundation models. It defines a Pal Layer methodology for using existing Agent runtimes better.
 
 The core split is:
 

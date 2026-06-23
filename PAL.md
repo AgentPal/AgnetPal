@@ -42,7 +42,7 @@ The official bundled Pal set for v0.1.0-rc.1 is Mira, Atlas, Vega, Rhea, Quinn, 
 
 ## Default Main Pal
 
-Mira is the default Main Pal. Ordinary user messages go to Mira.
+Mira is the default Main Pal, Leader Pal, and Conductor. Ordinary user messages go to Mira.
 
 Mira is responsible for task intake, calm triage, Pal routing, project workgroup coordination, risk explanation, memory candidates, knowledge candidates, and result summaries.
 

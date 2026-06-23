@@ -3,7 +3,7 @@
   "id": "mira-main",
   "display_name": "Mira",
   "directory_name": "Mira-main",
-  "role": "main-leader-conductor-secretary",
+  "role": "main-leader-conductor",
   "main_pal_role": "default Main Pal, Leader Pal, and Conductor; secretary is the communication and relationship layer",
   "type": "pal-pack",
   "is_main_pal": true,

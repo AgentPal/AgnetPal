@@ -41,11 +41,12 @@ This release is not a finished app or automation platform. It is not the right f
 - Simple Pal Mode as the only active v0.1.0-rc.1 runtime path.
 - Runtime Response Gate and Pal Mode validity rules.
 - Context slicing, asset loading budget, memory summary loading, and Task Package output contract protocols.
-- AgentPal orchestration methodology, Fugu-inspired method transfer notes, and PalBench design as research/design foundation.
+- AgentPal original Pal Layer methodology and PalBench validation docs under the current docs information architecture.
 - R33 PalBench small-sample smoke validation report.
 - Capability Inventory, Task Judgement, Workflow Topology, Context Access List, Pal Isolation, and Routing Reward Memory protocols as future-oriented design assets.
 - External project workgroup templates.
 - Claude Code one-prompt project install using `CLAUDE.md`, `AGENTS.md`, `.agentpal/`, and `.claude/settings.local.json`.
+- Claude Code install first welcome output: a `Mira：` welcome that introduces Mira as Main Pal / Leader Pal / Conductor, lists the official Pal set, and explains `/pal Name`.
 - Generic CLI Agent one-prompt project install using `AGENTS.md` and `.agentpal/`.
 - Public-safe examples, evals, prompts, templates, release notes, checklist, and contribution guidance.
 
@@ -58,7 +59,7 @@ This release is not a finished app or automation platform. It is not the right f
 - No automatic execution layer.
 - No active multi-agent runtime.
 - No active subagent orchestration.
-- No active Deep Conductor or automatic external Agent orchestration; orchestration research docs are design foundation only.
+- No active Deep Conductor or automatic external Agent orchestration; future orchestration notes are design material only.
 - No marketplace or commercial Pal distribution system.
 - No bundled private user memory, private project state, real reports, or secrets.
 
@@ -100,6 +101,10 @@ For Markdown/JSON-capable CLI Agents, run the CLI Agent inside `<your-project>` 
 Runtime-private memory, private state, real reports, internal development notes, secrets, credentials, customer data, and local absolute paths must stay out of the public repository.
 
 Examples and templates should use synthetic or placeholder data. Future designs should be marked as future work and must not be described as active v0.1.0-rc.1 behavior.
+
+## Publication Status
+
+This release note describes the v0.1.0-rc.1 release candidate content. A local `v0.1.0-rc.1` tag may exist in a maintainer workspace, but a GitHub Release should be considered published only after the intended commit and tag are pushed to the intended remote and the GitHub Release page is created.
 
 ## License
 

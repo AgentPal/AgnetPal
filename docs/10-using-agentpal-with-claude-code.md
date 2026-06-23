@@ -33,6 +33,8 @@ The one-prompt install creates or updates:
 
 It writes `permissions.additionalDirectories` into `.claude/settings.local.json` so Claude Code can access the AgentPal workspace path.
 
+After a successful install, the prompt should also print a short Mira welcome message that starts with `Mira：`. That welcome introduces Mira as AgentPal's default Main Pal / Leader Pal / Conductor, lists the 8 official bundled Pals, explains `/pal Name`, and reminds the user that v0.1 uses Simple Pal Mode only.
+
 ## Local Settings Boundary
 
 `.claude/settings.local.json` is local machine configuration and should not be committed.
@@ -82,6 +84,8 @@ AgentPal v0.1.0-rc.1 uses Simple Pal Mode only.
 AgentPal is a Pal layer, not an Agent runtime, not a multi-agent runtime, and not an execution layer.
 
 Do not activate Subagent Mode or external Agent orchestration from this binding.
+
+Deep Conductor is future design material. It is not automatically executed by the Claude Code binding in v0.1.0-rc.1.
 
 ## Context Boundary
 

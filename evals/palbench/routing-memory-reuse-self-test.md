@@ -38,9 +38,9 @@ Fail when routing memory becomes a fixed route or stores sensitive information.
 
 Do not claim memory is model training or deterministic routing.
 
-## R33 Small-Sample Observation
+## Small-Sample Smoke Observation
 
-R33 sample `05-routing-memory-reuse` created a Routing Decision Record for Claude Code binding verification and reused it in a second similar task.
+Smoke sample `05-routing-memory-reuse` created a Routing Decision Record for Claude Code binding verification and reused it in a second similar task.
 
 The second task reused the prior evidence lesson non-bindingly: use Quinn-style verification and a five-file Claude binding CAL before accepting completion.
 

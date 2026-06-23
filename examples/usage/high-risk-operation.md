@@ -17,7 +17,7 @@ If any execution happens later, Mira reports:
 - Specialist assets used: only assets actually read
 - Knowledge gap: any missing Skill / Runbook / Knowledge Card
 - Fallback method: if used
-- Learning: owner Pal repeated-task record and formal Skill trigger when explicitly requested or similar operations exceed 3 times
+- Learning: owner Pal repeated-task record and formal Skill trigger when explicitly requested or similar operations repeat three or more times
 - Execution layer: current Codex execution layer, Runtime, tool, shell, plugin, MCP, or non-Pal runtime
 - evidence: paths, command output, state values, or check results
 

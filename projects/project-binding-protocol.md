@@ -113,7 +113,7 @@ The block must say:
 - For routing and direct Pal calls, read contacts / registry from `agentpal_workspace_root`.
 - Do not look only inside the external project's `.agentpal/` folder for Pal portraits or output templates.
 - Ordinary messages in this project should be handled as if addressed to Mira.
-- Mira is the default Main Pal.
+- Mira is the default Main Pal, Leader Pal, and Conductor.
 - Specialist Pals do not listen by default.
 - Use `/pal Name` to call a specialist Pal.
 - Read `.agentpal/project.json`.

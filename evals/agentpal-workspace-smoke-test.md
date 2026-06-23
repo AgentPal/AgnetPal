@@ -15,7 +15,7 @@
 
 - [ ] `pals/Mira-main/PAL.md`
 - [ ] `pals/Mira-main/pal.json`
-- [ ] Mira is default Main Pal.
+- [ ] Mira is default Main Pal, Leader Pal, and Conductor.
 - [ ] Ordinary messages go to Mira.
 - [ ] Specialist Pals do not listen by default.
 

@@ -1,34 +1,28 @@
-# Pal Pack Standard Overview
+# Standard Overview
 
-AgentPal v0.1.0-rc.1 is both a Pal Workspace and an early Pal Pack Standard practice.
+## Status
 
-The standard describes how to package a Pal so an agent runtime can read it, use it, verify its output, and maintain it over time.
+Current for AgentPal `v0.1.0-rc.1`.
 
-## What The Standard Covers
+AgentPal is a Pal Workspace and Pal Pack standard practice for agent runtimes. A Pal Pack is one directory that packages a Pal's identity, output contract, knowledge, Skills, runbooks, workflows, examples, evals, and public-safe placeholders.
 
-- Pal identity and responsibility boundaries.
-- Machine-readable metadata.
-- Runtime entry files.
-- Output contracts.
-- Knowledge, skills, runbooks, and workflows.
-- Memory, state, and report boundaries.
-- Examples and evals.
-- Contacts and registry rules.
-- Public/private release boundaries.
+## What This Standard Does
 
-## Workspace Vs Pal Pack
+- Gives external users a concrete directory shape for creating a Pal.
+- Keeps Pal Packs readable by Codex, Claude Code, and generic Markdown / JSON capable CLI agents.
+- Separates Pal identity from ordinary Skills, plugins, models, MCP servers, runtimes, and raw repositories.
+- Defines public/private boundaries for memory, state, reports, examples, and evals.
 
-The AgentPal root is the workspace. It owns shared contacts, registry, orchestration, runtime notes, templates, prompts, examples, evals, release files, and public-safe placeholders.
+## Current v0.1 Boundary
 
-A single Pal Pack lives under `pals/<Pal-Directory>/`. It owns one Pal's identity, professional assets, output contract, and learning rules.
+`v0.1.0-rc.1` is file-driven. It does not provide an automatic scanner, validator, installer, desktop app, web app, marketplace, or active multi-agent runtime.
 
-## v0.1.0-rc.1 Boundary
+## Standard Levels
 
-This standard is file-driven. It does not require a service, package manager, UI, scanner, or installer.
+- Minimal: enough files for a runtime to load one Pal and produce valid Pal-mode answers.
+- Standard: enough structure to maintain the Pal over time.
+- Official: the richer pattern used by bundled Pals such as Mira, Atlas, and Nova.
 
-## Related
+## Next
 
-- [Pal Pack structure](01-pal-pack-structure.md)
-- [Root files](02-root-files.md)
-- [Public/private boundary](11-public-private-boundary.md)
-- [Pal Pack checklist](12-pal-pack-checklist.md)
+Use [Pal Pack structure](01-pal-pack-structure.md), then follow the authoring guide in [docs/07-authoring-pals](../07-authoring-pals/00-authoring-overview.md).

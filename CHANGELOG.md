@@ -16,10 +16,11 @@ Initial public release candidate for AgentPal as a Pal layer and Pal Pack Standa
 - Official bundled Pal Packs: Mira, Atlas, Vega, Rhea, Quinn, Morgan, Harper, and Nova.
 - Contacts and registry files as the source of truth for Pal discovery, aliases, and direct `/pal Name` calls.
 - Runtime Response Gate, AI routing judgement rules, Pal context slicing, asset loading budget, memory summary loading, and Task Package output contract protocols.
-- AgentPal orchestration methodology, Fugu-inspired method transfer notes, PalBench design, and future-oriented Capability Inventory / Context Access List / Pal Isolation / Shared Memory / Routing Reward Memory protocols.
+- AgentPal orchestration methodology, PalBench design, and future-oriented Capability Inventory / Context Access List / Pal Isolation / Shared Memory / Routing Reward Memory protocols.
 - Capability profile templates, orchestration templates, PalBench eval drafts, and orchestration examples.
 - External project workgroup binding templates for connecting AgentPal to a user project without treating the AgentPal Workspace as that project.
 - Claude Code one-prompt project install prompts for project-local setup through `.agentpal/`, `CLAUDE.md`, `AGENTS.md`, and `.claude/settings.local.json`.
+- Claude Code post-install Mira welcome output with fixed `Mira：` prefix, Main Pal / Leader Pal / Conductor identity, official Pal list, and Simple Pal Mode reminder.
 - Generic CLI Agent one-prompt install prompts through `.agentpal/` and `AGENTS.md`.
 - Public release files: `CONTRIBUTING.md`, `RELEASE_NOTES.md`, `GITHUB_RELEASE_DRAFT.md`, `RELEASE_CHECKLIST.md`, `RESOURCE_INDEX.md`, `THIRD_PARTY_NOTICES.md`, and MIT `LICENSE`.
 
@@ -30,6 +31,6 @@ Initial public release candidate for AgentPal as a Pal layer and Pal Pack Standa
 - Future subagent, remote agent, MCP-hosted agent, desktop app, marketplace, and runtime-adapter ideas are not active in v0.1.0-rc.1.
 - Future Deep Conductor, capability inventory probing, routing memory writeback, and PalBench claims are design foundations, not active runtime behavior.
 - R32 clarifies the current/future boundary: Fast Route is current, Deep Conductor is future-only.
-- R33 PalBench observations are small-sample smoke evidence, not statistical benchmark claims and not foundation-model comparisons.
+- R33 PalBench observations are small-sample smoke evidence, not statistical benchmark claims and not underlying-model comparisons.
 - Private memory, private state, real reports, secrets, and internal development notes must not be published.
 - `claude --add-dir` is an optional fallback / advanced path; Claude Code users can start from `cd <your-project>` and use the one-prompt install.

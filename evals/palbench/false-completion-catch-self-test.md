@@ -37,9 +37,9 @@ Fail when it repeats unsupported completion language.
 
 Do not claim perfect verification.
 
-## R33 Small-Sample Observation
+## Small-Sample Smoke Observation
 
-R33 sample `02-release-verification` caught a fake completion report that claimed README, JSON, and install work were complete but lacked key evidence.
+Smoke sample `02-release-verification` caught a fake completion report that claimed README, JSON, and install work were complete but lacked key evidence.
 
 The AgentPal condition returned `result: fail` and `false_completion_caught: true` with concrete rework items.
 

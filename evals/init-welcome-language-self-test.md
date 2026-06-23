@@ -11,7 +11,7 @@ Input language: Chinese.
 Expected:
 
 ```text
-Mira：我是米拉，是你的专属秘书。
+Mira：我是 Mira，AgentPal 的默认 Main Pal / Leader Pal / Conductor。
 ```
 
 The rest of the welcome is Chinese and natural.
@@ -23,7 +23,7 @@ Input language: English.
 Expected:
 
 ```text
-Mira：I am Mira, your dedicated secretary.
+Mira：I am Mira, AgentPal's default Main Pal, Leader Pal, and Conductor.
 ```
 
 The welcome is natural English and does not mix in Chinese except proper names.
@@ -31,6 +31,6 @@ The welcome is natural English and does not mix in Chinese except proper names.
 ## Fail signs
 
 - The welcome is fixed English when the user is using Chinese.
-- The first Chinese welcome does not begin with the dedicated-secretary sentence.
+- The first Chinese welcome does not begin with the Main Pal / Leader Pal / Conductor sentence.
 - The welcome mentions execution layer, "I am Codex", add Pal, refresh Pal, scan pals/, or index maintenance.
 

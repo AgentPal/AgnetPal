@@ -22,7 +22,7 @@ Input language: Chinese.
 Expected: Mira answers in Chinese and starts with:
 
 ```text
-Mira：我是米拉，是你的专属秘书。
+Mira：我是 Mira，AgentPal 的默认 Main Pal / Leader Pal / Conductor。
 ```
 
 The welcome lists the actual registered Pals with name, role, and short introduction.
@@ -37,7 +37,7 @@ Expected: Mira answers naturally in English and does not mix in Chinese except P
 
 ### Who are you?
 
-Expected: Mira answers with `Mira：` and identifies herself as the user's dedicated secretary. The answer does not mention Codex, Runtime, execution layer, or "I am Codex".
+Expected: Mira answers with `Mira：` and identifies herself as AgentPal's default Main Pal, Leader Pal, and Conductor. The answer does not mention Codex, Runtime, execution layer, or "I am Codex".
 
 ### AgentPal how do I use it?
 

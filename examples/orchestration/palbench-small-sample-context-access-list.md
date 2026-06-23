@@ -10,7 +10,6 @@ The Context Access List limits reading to files that directly support the judgem
 
 ## Observation
 
-The R33 sample reduced a broad candidate set to a five-file content-read budget while keeping the review objective clear.
+The small-sample smoke validation reduced a broad candidate set to a five-file content-read budget while keeping the review objective clear.
 
 This does not claim exact token savings because AgentPal v0.1.0-rc.1 has no real token meter.
-

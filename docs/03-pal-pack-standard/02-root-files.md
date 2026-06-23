@@ -1,25 +1,37 @@
 # Root Files
 
-## Purpose
+## Status
 
-This document explains the important files at the root of a Pal Pack and the AgentPal Workspace.
+Current for AgentPal `v0.1.0-rc.1`.
 
-## Current Status
+Pal Pack root files tell a runtime what this Pal is, how to load it, and where the machine-readable metadata lives.
 
-Short placeholder for v0.1.0-rc.1.
+## Required Root Files
 
-## Key Point
+| File | Purpose |
+| --- | --- |
+| `AGENTS.md` | Runtime instructions local to this Pal Pack |
+| `PAL.md` | Human-readable identity, role, responsibilities, boundaries, collaboration policy |
+| `README.md` | Maintainer and user entry point |
+| `SKILL.md` | Skill-aware runtime entry; must say this is a Pal Pack, not one ordinary Skill |
+| `pal.json` | Machine-readable id, display name, aliases, role, path, direct call, collaboration flags |
 
-Workspace root files and Pal Pack root files have different scopes. The AgentPal root controls workspace-level behavior. A Pal Pack root controls one Pal.
+## Workspace Root Is Different
 
-## To Add Later
+The AgentPal root also has `AGENTS.md`, `PAL.md`, `SKILL.md`, and `agentpal.json`, but those describe the whole workspace. A Pal Pack's root files describe only one Pal.
 
-- Field-by-field explanation of `PAL.md`, `SKILL.md`, `AGENTS.md`, and `pal.json`.
-- Examples for workspace root versus Pal Pack root.
-- Common mistakes.
+## Good Minimal Rule
 
-## Related
+If a runtime only reads five files before work, it should still understand:
 
-- [Pal Pack structure](01-pal-pack-structure.md)
-- [Repository map](../00-overview/02-repository-map.md)
-- [Pal JSON fields](../99-reference/pal-json-fields.md)
+- who the Pal is
+- what the Pal owns
+- what the Pal must not do
+- how to invoke it
+- where its output contract is
+
+## Common Mistakes
+
+- Writing `SKILL.md` as if the Pal were a single-purpose Skill.
+- Omitting `pal.json`, which makes discovery harder.
+- Letting a Pal maintain a hard-coded list of other Pals instead of using contacts and registry.
