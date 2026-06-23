@@ -9,7 +9,7 @@ Generated: 2026-06-24
 | Release name | AgentPal v0.1.0-rc.1 |
 | Version | `v0.1.0-rc.1` |
 | Git tag | `v0.1.0-rc.1` |
-| Git commit hash observed for local tag | `f2abd6f8a0635f0501c86c6951939a23d92816cc` |
+| Git commit hash observed for local tag | Verify with `git rev-list -n 1 v0.1.0-rc.1` before publishing. |
 | Git remote status observed | No remote output was available during the final documentation readiness pass. |
 | GitHub Release status observed | No online GitHub Release was created or verified during the final documentation readiness pass. |
 | License | MIT |
@@ -75,11 +75,11 @@ R34 local checks:
 
 ## Local Git Boundary
 
-The final documentation readiness pass observed local Git state only:
+The final release gate should observe local Git state only until maintainers explicitly publish:
 
-- local tag `v0.1.0-rc.1` points at `f2abd6f8a0635f0501c86c6951939a23d92816cc`
+- local tag `v0.1.0-rc.1` must point at the final intended release commit
 - no configured remote was shown by `git remote -v`
 - no push was performed
 - no GitHub Release was created or verified
 
-If maintainers accept additional documentation changes after the observed local tag, they should create the final intended release commit, retag `v0.1.0-rc.1` if needed, then push the commit and tag before creating the GitHub Release.
+If maintainers accept additional documentation changes after a local tag is created, they should create the final intended release commit, retag `v0.1.0-rc.1` if needed, then push the commit and tag before creating the GitHub Release.

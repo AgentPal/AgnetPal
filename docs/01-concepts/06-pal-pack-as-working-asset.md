@@ -24,4 +24,4 @@ It should contain enough structure for a runtime to work consistently without pr
 
 - [What is a Pal Pack?](02-what-is-a-pal-pack.md)
 - [Pal Pack structure](../03-pal-pack-standard/01-pal-pack-structure.md)
-- [Publish your Pal Pack](../05-authoring-pals/11-publish-your-pal-pack.md)
+- [Publish your Pal Pack](../07-authoring-pals/11-publish-your-pal-pack.md)

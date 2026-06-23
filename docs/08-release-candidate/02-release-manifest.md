@@ -40,8 +40,8 @@ This page gives a public-readable manifest for v0.1.0-rc.1. The root [Release Ma
 
 ## Publication State
 
-The observed repository state includes a local `v0.1.0-rc.1` tag at commit `f2abd6f8a0635f0501c86c6951939a23d92816cc`.
+The repository state should include a local `v0.1.0-rc.1` tag pointing at the final intended release commit before publication.
 
-No remote push or online GitHub Release was performed or verified during this documentation pass. No configured remote was shown by the observed repository state. Publish only after maintainers verify the final intended commit, tag, remote, and release page.
+No remote push or online GitHub Release was performed or verified during this documentation pass. Publish only after maintainers verify the final intended commit, tag, remote, and release page.
 
-If additional documentation changes are accepted after the observed local tag, maintainers should create the final intended release commit and move or recreate the `v0.1.0-rc.1` tag before pushing.
+If additional documentation changes are accepted after a local tag is created, maintainers should create the final intended release commit and move or recreate the `v0.1.0-rc.1` tag before pushing.

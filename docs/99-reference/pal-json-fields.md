@@ -18,5 +18,5 @@ Short placeholder for v0.1.0-rc.1.
 
 ## Related
 
-- [Write pal.json](../05-authoring-pals/02-write-pal-json.md)
+- [Write pal.json](../07-authoring-pals/02-write-pal-json.md)
 - [Pal Pack structure](../03-pal-pack-standard/01-pal-pack-structure.md)

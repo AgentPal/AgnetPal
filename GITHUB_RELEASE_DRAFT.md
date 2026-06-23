@@ -27,7 +27,7 @@ It is not an Agent layer, not a multi-agent runtime, and not an execution layer.
 - Runtime path: Simple Pal Mode only.
 - Required AgentPal runtime dependencies: none.
 - Local tag evidence observed during documentation review: `v0.1.0-rc.1`.
-- Local tagged commit observed during documentation review: `f2abd6f8a0635f0501c86c6951939a23d92816cc`.
+- Local tagged commit: verify with `git rev-list -n 1 v0.1.0-rc.1` before publishing.
 - Remote push status: not confirmed by the repository evidence observed during documentation review.
 - GitHub Release status: this draft is for manual publication; an online GitHub Release should not be considered created until maintainers publish it from the intended tag.
 

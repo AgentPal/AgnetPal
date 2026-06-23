@@ -4,16 +4,15 @@ This page records the release-process boundary for v0.1.0-rc.1.
 
 ## Observed Local Git Evidence
 
-During this documentation pass, the repository showed:
+Before publication, the repository should show:
 
 - local tag: `v0.1.0-rc.1`
-- tagged commit observed: `f2abd6f8a0635f0501c86c6951939a23d92816cc`
-- commit subject observed: `chore: finalize AgentPal v0.1.0-rc.1 release`
-- commit date observed: `2026-06-24T03:30:10+08:00`
+- tagged commit: the final intended release commit
+- working tree: clean
 
-No remote output was available from the observed repository state, and no online GitHub Release was created or verified during this pass.
+No online GitHub Release should be considered created until maintainers push the intended commit and tag, then create the release page.
 
-The working tree may contain documentation changes after the observed local tag. If so, maintainers should commit those final contents and retag `v0.1.0-rc.1` before publishing.
+If the working tree contains documentation changes after a local tag is created, maintainers should commit those final contents and retag `v0.1.0-rc.1` before publishing.
 
 ## Maintainer Process
 
