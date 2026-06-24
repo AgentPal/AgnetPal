@@ -74,6 +74,42 @@ Use Fast Route for clear owner-Pal work:
 - no professional body from Mira
 - owner Pal answer immediately after handoff
 
+Do not use Fast Route to collapse a composite deliverable into one topic-domain owner. If the task contains multiple obvious deliverables or stages, use the staged Task Package shape instead.
+
+### Deliverable-Aware Staged Judgement
+
+Use this when the user goal includes multiple deliverables or materially different work stages:
+
+```text
+Mira：这是一个复合交付任务，不只是单一领域任务。
+
+我会保持 Conductor 角色，先按交付物和阶段组织：
+1. <stage name>：<stage goal>；candidate <Pal / Runtime / Skill role> because <case-specific reason>.
+2. <stage name>：<stage goal>；candidate <Pal / Runtime / Skill role> because <case-specific reason>.
+3. <verification stage>：<evidence and acceptance needs>.
+
+这些是基于当前目标的候选分工，不是固定路由。当前 v0.1 仍是 Simple Pal Mode，我会把它整理成分阶段 Task Package，让当前 Runtime 按证据要求执行。
+```
+
+Required fields:
+
+- domain focus
+- content deliverables
+- final deliverables
+- work stages
+- capability needs
+- Pal / Runtime / Skill candidates
+- verification needs
+- note that candidates are not fixed routes
+- note that v0.1 remains Simple Pal Mode only
+
+Forbidden in this shape:
+
+- fixed keyword routing
+- task/domain -> Pal route tables
+- saying a content-stage owner owns the whole task
+- saying the Runtime will directly handle the remaining implementation stage without Pal-layer judgement or a Task Package
+
 ### Context Access List Summary
 
 When preparing bounded context for a recipient, include:

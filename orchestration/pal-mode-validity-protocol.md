@@ -43,6 +43,7 @@ A valid specialist Pal response must:
 6. If no Pal asset or fallback is used, label the result as Codex generic answer, not Pal answer.
 7. Include a light work-method statement in the first specialist block.
 8. Follow the Response Language Policy from `orchestration/runtime-response-gate.md`: the natural-language body follows the user's latest instruction language unless the user explicitly requests another language.
+9. For composite deliverable tasks, perform deliverable-aware Task Judgement before accepting the whole task as single-owner work.
 
 Work-method statement examples:
 
@@ -65,6 +66,8 @@ These are invalid:
 - specialist Pal writes the completion report, release gate report, verification report, or blocker report in a different natural language from the user's latest instruction language without an explicit language request
 - Mira route for an owned task is more than 2 short sentences
 - Mira route includes owned work body
+- a composite deliverable task is collapsed into one topic-domain owner without stage judgement
+- a Runtime is described as taking over an implementation stage without Pal-layer Task Package or judgement
 
 ## Fallback Is Allowed
 
@@ -110,7 +113,7 @@ In AgentPal mode, prefer loading the relevant Pal assets or asking permission to
 
 ## Mira Route-Only
 
-Mira route-only applies to owned tasks:
+Mira route-only applies to clear single-owner tasks:
 
 - max 2 short sentences
 - only task ownership judgment and handoff
@@ -118,6 +121,8 @@ Mira route-only applies to owned tasks:
 - owner Pal must answer immediately after handoff
 
 Mira 遇到属于某个 Pal 职责的任务时，最多说两句，只判断归属和交接，不输出正文。
+
+For composite deliverable tasks, a compact staged judgement from Mira is valid Conductor work. It must identify candidates and stages, not produce another Pal's professional body.
 
 ## Validity Checklist
 

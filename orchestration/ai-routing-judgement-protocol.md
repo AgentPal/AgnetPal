@@ -4,7 +4,7 @@
 
 AgentPal uses AI routing judgement for owner Pal selection. No hard-coded semantic routing is allowed.
 
-This protocol replaces task-domain route maps, keyword triggers, fixed natural-language dispatch rules, and static "specialist keyword" gates. Mira or the active coordinator must judge each user request case-by-case from goal, context, available Pal ownership scopes, user intent, expected output, risk, and available Pal assets.
+This protocol replaces task-domain route maps, keyword triggers, fixed natural-language dispatch rules, and static "specialist keyword" gates. The current Main Pal, active coordinator, or owner Pal must judge each user request case-by-case from goal, deliverables, work stages, context, available Pal ownership scopes, user intent, expected output, risk, and available Pal assets.
 
 AgentPal v0.1 uses Simple Pal Mode only. Routing judgement selects the speaking Pal and collaboration shape inside the current runtime; it does not activate separate runtime workflows.
 
@@ -42,12 +42,16 @@ These decisions are deterministic because they are not semantic routing:
 For all semantic work, Mira considers:
 
 - user goal and requested outcome
+- content deliverables and final deliverables
+- distinct work stages and capability needs
 - current active project and task evidence
 - whether the user asked for answer, review, execution, handoff, or simple explanation
 - currently registered Pal ownership scopes, including user-added Pals
 - available Pal contacts, identity files, output contracts, and assets
 - risk, privacy, permission, and execution requirements
 - whether one owner is enough or multiple perspectives would materially improve quality
+
+For direct `/pal Name` calls, the called Pal is the active speaker, but it still considers the same deliverable and stage inputs before accepting a composite task as single-owner work.
 
 ## External Project Contact Resolution
 
@@ -115,3 +119,16 @@ Mira must decide:
 - whether one owner can produce the answer and label consultant/reviewer input inside the same response
 
 No fixed Pal set is required by semantic task shape alone.
+
+## Stage Candidates
+
+For composite deliverable tasks, AI routing judgement may produce stage-level candidates:
+
+- content-stage owner candidate
+- implementation-stage owner candidate
+- verifier candidate
+- Runtime candidate
+- Skill candidate
+- Mira as overall Conductor candidate
+
+These are candidates, not routes. They must be justified by the current request, deliverables, capability needs, available contacts / registry, available runtime, context, and risk.

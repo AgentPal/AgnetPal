@@ -75,7 +75,7 @@
   "semantic_routing_policy": "ai-judged-case-by-case",
   "pal_capability_reference": {
     "not_a_route_map": true,
-    "selection_rule": "Mira judges the owner Pal case-by-case from user goal, context, constraints, risk, available Pal assets, and requested output.",
+    "selection_rule": "The current Main Pal or owner Pal judges owner and stage candidates case-by-case from user goal, deliverables, context, constraints, risk, available Pal assets, and requested output.",
     "non_binding_examples_only": true,
     "items": [
       {
@@ -164,6 +164,8 @@
     ],
     "semantic_routing_policy": "ai-judged-case-by-case",
     "hardcoded_semantic_routes_allowed": false,
+    "deliverable_aware_task_judgement_required_for_composite_tasks": true,
+    "composite_tasks_use_stage_candidates_not_fixed_routes": true,
     "requires_context_packet": true,
     "default_mode_for_owned_route": "handoff",
     "owned_tasks_require_owner_pal_when_handed_off": true,
@@ -196,7 +198,9 @@
       "enabled": true,
       "policy": "ai-judged-case-by-case",
       "pal_capability_reference_is_not_route_map": true,
-      "fixed_pal_set_required_by_semantic_shape": false
+      "fixed_pal_set_required_by_semantic_shape": false,
+      "deliverable_aware_task_judgement_for_composite_tasks": true,
+      "stage_candidates_are_not_routes": true
     },
     "owner_pal_immediate_response_gate": {
       "enabled": true,
@@ -502,6 +506,8 @@
     "asset-loading-budget",
     "memory-summary-loading",
     "task-package-output-contract",
+    "deliverable-aware-task-judgement",
+    "staged-task-package",
     "context-packet",
     "specialist-pal-asset-loading",
     "pal-mode-validity",

@@ -119,7 +119,9 @@ The block must say:
 - Read `.agentpal/project.json`.
 - Read `.agentpal/AGENTPAL.md`.
 - Read `.agentpal/PAL_GROUP.md`.
-- If this session has not loaded AgentPal rules yet, read `.agentpal/INIT_AGENTPAL_PROJECT_PROMPT.md`.
+- AgentPal project-bound mode is active whenever the protected AgentPal block exists in the project root `AGENTS.md`.
+- Before the first AgentPal-mode answer in a new session, read `.agentpal/INIT_AGENTPAL_PROJECT_PROMPT.md`.
+- Every user-facing answer must start with a speaking Pal prefix such as `Mira：`, unless the user explicitly requests Codex generic / no Pal mode.
 - If the user asks project questions, current project means `active_project_root`.
 - Do not list AgentPal workspace as project root.
 - Do not confuse this external project with the AgentPal workspace directory.
@@ -164,7 +166,7 @@ Mira：
 
 下一步你进入这个项目的 Codex 会话后，如果它没有自动进入 Mira 模式，就复制执行：
 
-请读取当前项目根 AGENTS.md，以及 .agentpal/INIT_AGENTPAL_PROJECT_PROMPT.md，进入 AgentPal project-bound mode。普通消息默认交给 Mira，当前项目只以本项目目录为准。
+请读取当前项目根 AGENTS.md，以及 .agentpal/INIT_AGENTPAL_PROJECT_PROMPT.md，进入 AgentPal project-bound mode。普通消息默认交给 Mira，回答必须以当前 speaking Pal 前缀开头，例如 Mira：。当前项目只以本项目目录为准。
 
 如果当前 Codex 能自动读取根 AGENTS.md，则用户无需手动执行这段提示。
 ```

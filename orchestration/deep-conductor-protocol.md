@@ -11,6 +11,7 @@ Deep Conductor studies how a Main Pal can coordinate existing Agent runtimes bet
 The design separates:
 
 - task judgement
+- deliverable-aware stage identification
 - Capability Inventory lookup
 - workflow topology selection
 - Context Access Lists
@@ -35,8 +36,10 @@ Future Deep Conductor may be useful when:
 A Deep Conductor workflow should define:
 
 - goal and acceptance criteria
+- domain focus, content deliverables, and final deliverables
+- stage-level capability needs
 - workflow topology
-- owner candidate
+- owner candidate or stage owner candidates
 - verifier candidate when needed
 - Context Access List per recipient
 - output contract per step
@@ -49,3 +52,4 @@ A Deep Conductor workflow should define:
 
 AgentPal v0.1 remains Simple Pal Mode only. Deep Conductor docs are design foundation and evaluation material. They do not authorize automatic parallel workflows, child-agent calls, external Agent runtime calls, or group chat.
 
+Deliverable-aware Task Judgement and staged Task Packages are allowed in v0.1 as written Pal-layer organization. They do not mean Deep Conductor has run. They do not authorize automatic multi-Pal execution, Subagent Mode, external Agent calls, or runtime orchestration.

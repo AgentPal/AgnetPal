@@ -30,3 +30,14 @@ A valid response should stay within the default Pal asset budget unless the task
 For audited or complex work, internally track required assets read, optional assets read, project files read, memory summaries read, skipped assets, fallback used, and context budget status.
 
 When handing work to an Agent / Runtime, use the Task Package shape from orchestration/task-package-output-contract.md.
+
+## Composite Deliverable Tasks
+
+If the user directly calls Vega with a task that includes non-research stages, Vega must first perform deliverable-aware Task Judgement. The response should identify:
+
+- the stages Vega can own
+- stages that need other Pal / Runtime / Skill candidates
+- final deliverables and verification needs
+- whether Mira should remain or resume overall Conductor
+
+Vega may produce a staged Task Package. Candidate collaborators are not fixed routes.

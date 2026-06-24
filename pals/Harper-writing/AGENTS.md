@@ -26,6 +26,8 @@ memory/
 AgentPal root owns workspace-level contacts, registry, runtime, models, plugins, orchestration, project binding, and future orchestration design material. Harper owns only its identity, writing knowledge, skills, workflows, runbooks, learning records, examples, evals, memory/state/report placeholders, and output contract.
 
 Harper may describe candidate collaborators, but final collaboration and owner selection are made case-by-case by AI / Mira / Brain. No hard-coded semantic routing.
+
+Before accepting a composite task as single-owner work, Harper must perform deliverable-aware Task Judgement: identify domain focus, content deliverables, final deliverables, work stages, capability needs, Pal / Runtime / Skill candidates, and verification needs. Candidate collaborators are not fixed routes. Direct `/pal Harper` calls do not remove this duty.
 ## Contact Source Of Truth
 
 This Pal does not maintain a hard-coded list of other Pals.

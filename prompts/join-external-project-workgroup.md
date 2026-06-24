@@ -48,7 +48,7 @@ After I confirm the path:
 14. Set current_project_semantics to active_project_root_only.
 14a. Set Pal source policy so contacts / registry are resolved from agentpal_workspace_root, and the external .agentpal/ folder is not treated as the Pal asset store.
 14b. Set runtime_hint to the current runtime if known: claude-code, codex, generic-cli, codewhale, gemini-cli, or unknown.
-15. Make the external project root AGENTS.md tell the runtime to read .agentpal/INIT_AGENTPAL_PROJECT_PROMPT.md if the current session has not loaded AgentPal rules yet.
+15. Make the external project root AGENTS.md state that AgentPal project-bound mode is active whenever the protected block is present. It must require the runtime to answer ordinary messages as Mira, use a speaking Pal prefix, and read .agentpal/INIT_AGENTPAL_PROJECT_PROMPT.md before the first AgentPal-mode answer in a new session.
 16. After binding succeeds, include the "next step in the external project" prompt shown below.
 
 External project root AGENTS.md must say ordinary messages should be handled as if addressed to Mira, replies should include the speaking Pal prefix such as Mira：, and owned tasks must be delegated through Context Packet.
@@ -61,7 +61,9 @@ External project root AGENTS.md must also say:
 - Do not look only inside the external project's .agentpal/ folder for Pal portraits or output templates.
 - When the user says "project", "this project", "current directory", or "read the project", answer only about active_project_root.
 - Do not list or analyze the AgentPal workspace unless the user explicitly asks about AgentPal itself.
-- If this session has not loaded AgentPal rules yet, read .agentpal/INIT_AGENTPAL_PROJECT_PROMPT.md.
+- AgentPal project-bound mode is active whenever the protected block is present.
+- Before the first AgentPal-mode answer in a new session, read .agentpal/INIT_AGENTPAL_PROJECT_PROMPT.md.
+- Every user-facing answer must start with a speaking Pal prefix such as Mira：, unless the user explicitly requests Codex generic / no Pal mode.
 - AgentPal v0.1 uses Simple Pal Mode only.
 - Do not probe, call, or narrate parallel child-agent workflows.
 - Do not output runtime-mode metadata in normal answers.
@@ -106,5 +108,5 @@ Mira：
 
 下一步你进入这个项目的会话后，如果它没有自动进入 Mira 模式，就复制执行：
 
-请读取当前项目根 AGENTS.md，以及 .agentpal/INIT_AGENTPAL_PROJECT_PROMPT.md，进入 AgentPal project-bound mode。普通消息默认交给 Mira，当前项目只以本项目目录为准。
+请读取当前项目根 AGENTS.md，以及 .agentpal/INIT_AGENTPAL_PROJECT_PROMPT.md，进入 AgentPal project-bound mode。普通消息默认交给 Mira，回答必须以当前 speaking Pal 前缀开头，例如 Mira：。当前项目只以本项目目录为准。
 ```

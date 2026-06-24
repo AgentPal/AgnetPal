@@ -5,7 +5,9 @@ Copy this prompt into your runtime after opening an external project that has be
 ```text
 Initialize this external project as an AgentPal project-bound workspace.
 
-If this session has not loaded AgentPal rules yet, read the current project root AGENTS.md and this .agentpal/INIT_AGENTPAL_PROJECT_PROMPT.md, then enter AgentPal project-bound mode.
+AgentPal project-bound mode is active for this project whenever the protected AgentPal block exists in the current project root AGENTS.md.
+
+If this session has not loaded AgentPal rules yet, read the current project root AGENTS.md and this .agentpal/INIT_AGENTPAL_PROJECT_PROMPT.md before answering, then enter AgentPal project-bound mode.
 
 AgentPal v0.1 is a Pal layer. Current task handling uses Simple Pal Mode only.
 
@@ -103,5 +105,5 @@ Mira：
 
 如果这个会话没有自动进入 Mira 模式，就复制执行：
 
-请读取当前项目根 AGENTS.md，以及 .agentpal/INIT_AGENTPAL_PROJECT_PROMPT.md，进入 AgentPal project-bound mode。普通消息默认交给 Mira，当前项目只以本项目目录为准。
+请读取当前项目根 AGENTS.md，以及 .agentpal/INIT_AGENTPAL_PROJECT_PROMPT.md，进入 AgentPal project-bound mode。普通消息默认交给 Mira，回答必须以当前 speaking Pal 前缀开头，例如 Mira：。当前项目只以本项目目录为准。
 ```

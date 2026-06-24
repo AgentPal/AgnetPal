@@ -24,9 +24,11 @@ Use this checklist before publishing AgentPal v0.1.0-rc.1 as a public MIT GitHub
 - [ ] R32 Fast Route / Deep Conductor boundary is documented: Fast Route current, Deep Conductor future-only.
 - [ ] Mira is documented as Main Pal / Leader Pal / Conductor, with secretary as communication layer.
 - [ ] Capability Inventory, Context Access List, Workflow Topology, Pal Isolation, and Routing Reward Memory protocols are present.
+- [ ] Deliverable-aware Task Judgement is documented as a Main Pal / owner Pal capability for composite deliverables.
 - [ ] Context Access List, Pal Isolation, Shared Memory, Routing Reward Memory, and PalBench additions are present.
 - [ ] Orchestration templates, capability profile templates, and PalBench result template are present.
 - [ ] PalBench eval drafts and orchestration examples are present.
+- [ ] R36 deliverable-aware examples and self-test are present: `examples/orchestration/deliverable-aware-task-judgement-example.md`, `examples/failures/domain-only-owner-handoff.md`, and `evals/orchestration/deliverable-aware-task-judgement-self-test.md`.
 - [ ] PalBench R33 examples are public-safe and use synthetic or placeholder data.
 - [ ] No internal development reports are linked from public onboarding navigation.
 

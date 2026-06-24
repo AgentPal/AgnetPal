@@ -29,6 +29,7 @@ Included:
 - official bundled Pal Packs under `pals/`
 - contacts and registry files under `contacts/` and `registry/`
 - orchestration protocols, templates, examples, evals, prompts, runtime compatibility notes, capability profiles, and research docs
+- deliverable-aware task judgement protocol, staged Task Package example, failure regression example, and orchestration self-test
 - external project binding templates and Claude Code / generic CLI Agent one-prompt setup prompts
 - Claude Code post-install Mira welcome output requirements
 - release evidence drafts under `release/v0.1.0-rc.1/`

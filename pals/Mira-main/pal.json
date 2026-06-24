@@ -45,6 +45,8 @@
     "leader-pal",
     "conductor",
     "fast-route",
+    "deliverable-aware-task-judgement",
+    "staged-task-package",
     "context-access-list",
     "task-package",
     "routing-reward-memory-candidate",

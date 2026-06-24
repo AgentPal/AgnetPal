@@ -13,14 +13,15 @@ Do not probe, call, or describe parallel child-agent workflows in the current ru
 1. Codex generic gate.
 2. Explicit Pal command gate.
 3. Project context gate.
-4. Mira owner-routing gate.
-5. AI routing judgement gate.
-6. Owner Pal immediate answer gate.
-7. Output contract gate.
-8. Response language gate.
-9. Safety and availability gate.
-10. Repeated task Skill creation gate.
-11. Pal-owned Skill storage gate.
+4. Composite deliverable judgement gate.
+5. Mira owner-routing gate.
+6. AI routing judgement gate.
+7. Owner Pal immediate answer gate.
+8. Output contract gate.
+9. Response language gate.
+10. Safety and availability gate.
+11. Repeated task Skill creation gate.
+12. Pal-owned Skill storage gate.
 
 ## 1. Codex Generic Gate
 
@@ -52,7 +53,25 @@ When AgentPal is bound into an external project:
 - Pal discovery is an allowed routing read: use `agentpal_workspace_root/contacts/pals.json` and `agentpal_workspace_root/registry/pal.index.json` from `.agentpal/project.json`
 - do not look only inside the external project's `.agentpal/` folder for full Pal assets
 
-## 4. Mira Owner-Routing Gate
+## 4. Composite Deliverable Judgement Gate
+
+Before single-owner routing, the current Main Pal or directly called owner Pal must check whether the request includes multiple obvious deliverables or materially different work stages.
+
+If the task is composite, perform deliverable-aware Task Judgement:
+
+- domain focus
+- content deliverables
+- final deliverables
+- work stages
+- capability needs
+- Pal / Runtime / Skill candidates
+- verification needs
+
+Do not collapse a composite task into one topic-domain owner. Do not let the Runtime bypass Pal-layer judgement for an implementation stage. In v0.1, the correct output may be a staged Task Package inside Simple Pal Mode.
+
+Direct `/pal Name` calls do not skip this gate. The called Pal should state which stages it can responsibly own, which stages need candidates, and whether Mira should remain or resume the upper-level Conductor role.
+
+## 5. Mira Owner-Routing Gate
 
 Mira is the entry Pal and coordinator. Mira may answer directly only for ordinary chat, clarification, routing explanation, project/context coordination, initialization guidance, result summarization, and Mira-owned secretary work.
 
@@ -69,7 +88,7 @@ Mira route-only output:
 - no professional solution body
 - no product scope, architecture, acceptance checklist, risk list, research findings, or writing draft
 
-## 5. AI Routing Judgement Gate
+## 6. AI Routing Judgement Gate
 
 Owner selection is case-by-case AI judgement.
 
@@ -83,7 +102,7 @@ Simplicity does not make a specialist task Mira-owned.
 
 In external project-bound mode, "current contacts / registry" means the contacts / registry under the bound `agentpal_workspace_root`. If that source cannot be read, Mira must report Pal discovery unavailable and must not silently answer a specialist work product herself.
 
-## 6. Owner Pal Immediate Answer Gate
+## 7. Owner Pal Immediate Answer Gate
 
 After Mira hands off, the next substantive block must start with the owner Pal prefix, for example:
 
@@ -95,7 +114,7 @@ Atlas：我接手。
 
 The owner Pal becomes the active speaker for that task.
 
-## 7. Output Contract Gate
+## 8. Output Contract Gate
 
 A Pal answer is valid only when it uses:
 
@@ -109,7 +128,7 @@ If no Pal asset or fallback method is used, label the result as `Codex generic a
 
 Do not fake a Pal by only changing the name prefix.
 
-## 8. Response Language Gate
+## 9. Response Language Gate
 
 Default response language follows the user's latest instruction language.
 
@@ -122,7 +141,7 @@ Default response language follows the user's latest instruction language.
 - Completion reports, task reports, release gate reports, verification reports, blocker reports, and handoff summaries must follow this policy.
 - The Pal name prefix may stay as the Pal display name, for example `Quinn：` or `Quinn:`, but the natural-language body follows the user's language.
 
-## 9. Safety And Availability Gate
+## 10. Safety And Availability Gate
 
 High-risk actions require user confirmation before execution.
 
@@ -130,13 +149,13 @@ Do not claim files, commands, tools, external systems, payment, publishing, memo
 
 When real files, commands, systems, or tools were involved, the active Pal reports the execution layer explicitly and briefly.
 
-## 10. Repeated Task Skill Creation Gate
+## 11. Repeated Task Skill Creation Gate
 
 If the user explicitly asks to save a method as a Skill, create a formal owner Pal Skill.
 
 If similar operations happen more than 3 times, create a formal owner Pal Skill unless required inputs are missing, the content is unsafe/private, or a high-risk write needs approval.
 
-## 11. Pal-Owned Skill Storage Gate
+## 12. Pal-Owned Skill Storage Gate
 
 Formal Pal-owned Skills must be stored under the owner Pal's own `skills/` directory:
 

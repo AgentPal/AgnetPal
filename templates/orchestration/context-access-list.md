@@ -6,8 +6,14 @@ Use this template to state what a recipient may read for a specific workflow ste
 schema: agentpal.context-access-list.v0.1
 workflow_id:
 step_id:
+stage_id:
+stage_goal:
 recipient_type: pal | runtime | skill | plugin | mcp | verifier | secretary-summary
 recipient_id:
+recipient_candidate:
+  id:
+  why_candidate:
+  not_a_fixed_route: true
 task:
 need_output:
 can_read_paths:
@@ -43,4 +49,8 @@ verification_required: false
 verification:
   expected_evidence:
   verifier:
+stage_boundary:
+  can_receive_outputs_from:
+  must_not_read_unrelated_stage_drafts: true
+  implementation_stage_must_use_pal_layer_task_package: true
 ```

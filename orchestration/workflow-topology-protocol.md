@@ -2,7 +2,7 @@
 
 Workflow Topology describes possible shapes for organizing Pal, runtime, Skill, and verification work.
 
-AgentPal v0.1.0-rc.1 only uses Simple Pal Mode. The active shapes are Fast Route, Single Owner, and Task Package. Deep Conductor topologies are future design only.
+AgentPal v0.1.0-rc.1 only uses Simple Pal Mode. The active shapes are Fast Route, Single Owner, and Task Package. A Task Package may be staged when the user goal contains multiple deliverables or work phases. Deep Conductor topologies are future design only.
 
 See also:
 
@@ -16,6 +16,7 @@ See also:
 | Fast Route | Yes | Mira chooses an owner or answers secretary work quickly |
 | Single Owner | Yes | One owner Pal answers in the same response |
 | Task Package | Yes | Pal compresses work for an execution runtime |
+| Staged Task Package | Yes | Current Main Pal / owner Pal organizes multiple stages as candidates without automated multi-agent execution |
 | Owner + Verifier | Future | Owner produces, verifier reviews evidence |
 | Plan -> Execute -> Verify | Future | Planner prepares, runtime executes, verifier checks |
 | Parallel Independent Review | Future | reviewers work independently before summary |
@@ -30,6 +31,7 @@ Suitable when:
 - task is clear
 - risk is low
 - one Pal can own it
+- the final deliverable does not require materially different work stages
 - no extra verification workflow is needed
 
 Inputs:
@@ -57,13 +59,30 @@ Suitable when:
 - one registered Pal can reasonably own the output
 - the user expects a professional answer
 - the context slice is bounded
+- the task does not contain multiple obvious final deliverables or capability phases
 
 Not suitable when:
 
 - independent verification is required
 - multiple conflicting perspectives are materially useful
+- the topic domain and final deliverable require different stage-level capabilities
 
 v0.1 active: yes.
+
+## Staged Task Package
+
+Suitable when:
+
+- the user goal contains multiple obvious deliverables
+- the final deliverable differs from the content-stage work
+- one directly called Pal can own only part of the task
+- implementation, verification, research, product, writing, document, or system stages need different capability candidates
+
+The current Main Pal or owner Pal should identify domain focus, content deliverables, final deliverables, work stages, capability needs, Pal / Runtime / Skill candidates, and verification needs.
+
+All stage recipients are candidates, not fixed routes. Capability profiles and Pal descriptions are judgement inputs only.
+
+v0.1 active: yes, as a written Task Package inside Simple Pal Mode. It does not run multiple Pals, Subagents, external Agents, or Deep Conductor automatically.
 
 ## Owner + Verifier
 

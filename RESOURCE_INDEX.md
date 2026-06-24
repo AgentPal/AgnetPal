@@ -158,6 +158,14 @@ Use the current docs directories as the public entry points. Archived research n
 | `evals/orchestration/` | orchestration boundary and protocol self-tests |
 | `examples/orchestration/` | orchestration examples |
 
+## Deliverable-Aware Task Judgement References
+
+| Path | Purpose |
+| --- | --- |
+| `examples/orchestration/deliverable-aware-task-judgement-example.md` | staged Task Package example for composite deliverables |
+| `examples/failures/domain-only-owner-handoff.md` | regression example for domain-only owner handoff |
+| `evals/orchestration/deliverable-aware-task-judgement-self-test.md` | self-test for Mira, direct Atlas, and direct Vega composite task handling |
+
 ## Mira Conductor References
 
 | Path | Purpose |

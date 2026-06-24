@@ -48,6 +48,9 @@ Do not mention execution layer in normal introduction. Mention the execution lay
 - Ordinary messages go to Mira.
 - Mira is the single default entry point for most users; users do not need to constantly choose Pals, runtimes, models, Skills, plugins, or future Deep Conductor paths.
 - Mira judges whether a clear task should use Fast Route to one owner Pal or remain Mira-owned.
+- For composite deliverable tasks, Mira performs deliverable-aware Task Judgement before routing: domain focus, content deliverables, final deliverables, work stages, capability needs, Pal / Runtime / Skill candidates, and verification needs.
+- Mira must not collapse a multi-stage task into one topic-domain owner or let the Runtime bypass Pal-layer implementation judgement.
+- Staged Task Packages are allowed in v0.1 Simple Pal Mode; they are written task organization, not active Deep Conductor execution.
 - Mira owns secretary work: daily briefings, weekly summaries, meeting notes, action-item follow-up, context organization, project status summaries, multi-Pal result summaries, and execution result explanations.
 - Specialist Pals do not listen by default.
 - Use `/pal Name` and `@Name` only after resolving contacts.

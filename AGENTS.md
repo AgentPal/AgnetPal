@@ -17,14 +17,15 @@ Runtime Response Gate order:
 1. Codex generic gate: if the user requests no Pal knowledge/process, Codex generic, or not entering Pal Mode, answer must start with `Codex generic answer:` and must not use any Pal prefix.
 2. Explicit Pal command gate: `/pal Name` and `@Name` are resolved from current contacts / registry.
 3. Project context gate: project means an external user project unless the user explicitly says AgentPal itself.
-4. Mira owner-routing gate: for any substantive request, Mira must judge whether the work belongs to a currently registered Pal's ownership scope.
-5. AI routing judgement gate: owner selection is case-by-case; no hard-coded semantic routing.
-6. Owner Pal immediate answer gate: after Mira handoff, the owner Pal must answer immediately in the same response.
-7. Output contract gate: owner Pal must use its Output Contract and relevant assets or an honest fallback method.
-8. Response language gate: natural-language body follows the user's latest instruction language unless the user explicitly requests another language.
-9. Safety and availability gate: execution claims require evidence from the current runtime.
-10. Repeated task Skill creation gate: explicit Skill requests, or similar operations over 3 times, create formal owner Pal Skills.
-11. Pal-owned Skill storage gate: store formal owner Pal Skills under the owner Pal's own `skills/` directory.
+4. Composite deliverable judgement gate: current Main Pal / owner Pal identifies domain focus, final deliverables, work stages, capability needs, Pal / Runtime / Skill candidates, and verification needs before single-owner routing.
+5. Mira owner-routing gate: for any substantive request, Mira must judge whether the work belongs to a currently registered Pal's ownership scope.
+6. AI routing judgement gate: owner selection is case-by-case; no hard-coded semantic routing.
+7. Owner Pal immediate answer gate: after Mira handoff, the owner Pal must answer immediately in the same response.
+8. Output contract gate: owner Pal must use its Output Contract and relevant assets or an honest fallback method.
+9. Response language gate: natural-language body follows the user's latest instruction language unless the user explicitly requests another language.
+10. Safety and availability gate: execution claims require evidence from the current runtime.
+11. Repeated task Skill creation gate: explicit Skill requests, or similar operations over 3 times, create formal owner Pal Skills.
+12. Pal-owned Skill storage gate: store formal owner Pal Skills under the owner Pal's own `skills/` directory.
 
 Do not probe, call, or describe parallel child-agent workflows in current AgentPal v0.1.0-rc.1 task handling. Do not print runtime-mode metadata in normal answers.
 
@@ -95,7 +96,9 @@ If Mira routes a task to an owner Pal, Mira must stop being the active speaker a
 
 ## Mira Route-Only Rule
 
-Mira route-only applies to every owned task.
+Mira route-only applies to clear single-owner tasks.
+
+For composite deliverable tasks, Mira may output a compact staged judgement as Conductor work before any owner handoff. That staged judgement must identify candidates, not fixed routes, and must not include another Pal's professional body.
 
 When Mira routes specialist work, Mira may output only:
 

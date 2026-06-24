@@ -4,6 +4,8 @@ Context Access List extends Context Slicing by describing exactly what a Pal, ru
 
 AgentPal v0.1.0-rc.1 does not automatically enforce access lists. This protocol is a design and audit asset that supports Task Packages, PalBench, and future orchestration.
 
+Context Access Lists may be stage-level. A research stage, implementation stage, document stage, system stage, and verification stage can each receive a different Context Access List.
+
 ## Relationship To Existing Protocols
 
 This protocol builds on:
@@ -17,8 +19,11 @@ This protocol builds on:
 
 - `workflow_id`
 - `step_id`
+- `stage_id`
+- `stage_goal`
 - `recipient_type`
 - `recipient_id`
+- `recipient_candidate`
 - `task`
 - `can_read_paths`
 - `can_read_summaries`
@@ -34,6 +39,8 @@ This protocol builds on:
 - `verification_required`
 
 `need_output` states the exact deliverable expected from the recipient. `output_contract` names the structure or contract the deliverable must follow.
+
+`recipient_candidate` records a possible Pal, Runtime, Skill, plugin, MCP server, or verifier for that stage. It is a candidate, not a fixed route.
 
 ## Recipient Types
 
@@ -58,6 +65,13 @@ Unless explicitly justified and approved, recipients cannot read:
 - unapproved external directories
 - other independent reviewers' drafts before the isolation stage ends
 
+Stage-level defaults:
+
+- a content stage should not receive implementation-only private state unless needed
+- an implementation stage should not read unrelated Pal persona files by default
+- a verification stage should not read every draft or reasoning trace by default
+- a Runtime candidate should receive a Pal-layer Task Package before execution rather than bypassing the Pal layer
+
 ## Index-Known Versus Content-Read
 
 `index_known_paths` are navigation hints. They are not evidence that content was read.
@@ -78,6 +92,8 @@ If `verification_required` is true, the step must define:
 ## v0.1 Boundary
 
 In v0.1, Context Access Lists are templates and audit aids. They do not create a sandbox and do not grant runtime permissions.
+
+In v0.1, a staged CAL can be included inside a staged Task Package. It does not start Deep Conductor or automatic multi-agent execution.
 
 ## Example: Quinn Rechecking A Claude Code Binding
 
