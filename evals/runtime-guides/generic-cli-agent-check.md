@@ -14,7 +14,7 @@ cd <your-project>
 Then paste:
 
 ```text
-prompts/cli-agent/install-agentpal-current-project.md
+prompts/generic-cli-agent/install-agentpal-current-project.md
 ```
 
 ## Pass

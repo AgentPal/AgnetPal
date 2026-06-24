@@ -3,7 +3,7 @@
 ## User
 
 ```text
-请按 INIT_PROMPT.md 初始化 AgentPal，并说明读取了哪些内容。
+请按 prompts/codex/initialize-agentpal-workspace.md 初始化 AgentPal，并说明读取了哪些内容。
 ```
 
 ## Expected Behavior
@@ -13,7 +13,7 @@ AgentPal uses the short initialization path by default.
 Expected content reads:
 
 - root `AGENTS.md`
-- `INIT_PROMPT.md`
+- `prompts/codex/initialize-agentpal-workspace.md`
 - `agentpal.json`
 - `contacts/pals.json`
 - `registry/pal.index.json`

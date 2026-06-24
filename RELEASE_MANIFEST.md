@@ -22,7 +22,8 @@ AgentPal v0.1.0-rc.1 is a Markdown / JSON / protocol workspace for Pal Packs. It
 
 Included:
 
-- root initialization files: `AGENTS.md`, `PAL.md`, `SKILL.md`, `INIT_PROMPT.md`, and `agentpal.json`
+- root initialization files: `AGENTS.md`, `PAL.md`, `SKILL.md`, and `agentpal.json`
+- Codex initialization prompt: `prompts/codex/initialize-agentpal-workspace.md`
 - public release docs: `README.md`, `README.zh-CN.md`, `RELEASE_NOTES.md`, `CHANGELOG.md`, `GITHUB_RELEASE_DRAFT.md`, `RELEASE_CHECKLIST.md`, `CONTRIBUTING.md`, `THIRD_PARTY_NOTICES.md`, and this manifest
 - navigation index: `RESOURCE_INDEX.md`
 - official bundled Pal Packs under `pals/`

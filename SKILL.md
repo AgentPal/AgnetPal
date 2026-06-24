@@ -14,7 +14,7 @@ AgentPal is a Pal layer for an existing execution runtime. It is not an Agent la
 When invoked:
 
 1. Read root `AGENTS.md`.
-2. Read `INIT_PROMPT.md`.
+2. Read `prompts/codex/initialize-agentpal-workspace.md`.
 3. Read `agentpal.json`.
 4. Read `contacts/pals.json`.
 5. Read `registry/pal.index.json`.

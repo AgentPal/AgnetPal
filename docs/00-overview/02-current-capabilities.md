@@ -7,7 +7,7 @@ This page describes what AgentPal v0.1.0-rc.1 can do today without treating futu
 - Provide an AgentPal Workspace with runtime-readable Markdown / JSON / protocol assets.
 - Organize official and user-added Pal Packs under `pals/`.
 - Expose Pal discovery through `contacts/` and `registry/`.
-- Define runtime-facing root files such as `AGENTS.md`, `INIT_PROMPT.md`, `PAL.md`, `SKILL.md`, and `agentpal.json`.
+- Define runtime-facing release assets such as `AGENTS.md`, `PAL.md`, `SKILL.md`, `agentpal.json`, and the Codex initialization prompt at `prompts/codex/initialize-agentpal-workspace.md`.
 
 ## Pal Interaction Capabilities
 

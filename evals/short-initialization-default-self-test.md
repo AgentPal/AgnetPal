@@ -3,7 +3,7 @@
 ## Input
 
 ```text
-请按 INIT_PROMPT.md 初始化 AgentPal，并说明读取了哪些内容。
+请按 prompts/codex/initialize-agentpal-workspace.md 初始化 AgentPal，并说明读取了哪些内容。
 ```
 
 ## Pass

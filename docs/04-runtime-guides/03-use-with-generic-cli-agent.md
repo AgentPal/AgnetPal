@@ -20,7 +20,7 @@ cd <your-project>
 <your-cli-agent>
 ```
 
-Then paste the one-prompt project connection prompt from `prompts/cli-agent/install-agentpal-current-project.md`.
+Then paste the one-prompt project connection prompt from `prompts/generic-cli-agent/install-agentpal-current-project.md`.
 
 The prompt begins with:
 
@@ -29,6 +29,15 @@ Please connect AgentPal to the current project.
 
 AGENTPAL_HOME = <replace-with-your-AgentPal-path>
 ```
+
+Before pasting, replace that `AGENTPAL_HOME` line with your real AgentPal Workspace path:
+
+```text
+AGENTPAL_HOME = D:/Tools/AgentPal
+AGENTPAL_HOME = /Users/you/AgentPal
+```
+
+Do not ask the CLI Agent to scan the whole disk for AgentPal.
 
 ## What This Path Creates
 

@@ -23,5 +23,6 @@ Multiple Pals can exist in the workspace, but they are working assets for the cu
 ## Related
 
 - [Simple Pal Mode](05-simple-pal-mode.md)
+- [Pal Teams and Deep Conductor](../05-orchestration-methodology/11-pal-teams-and-deep-conductor.md)
 - [Future runtime adapters](../04-runtime-guides/99-future-runtime-adapters.md)
 - [Future orchestration reference](../99-reference/future-agent-orchestration.md)

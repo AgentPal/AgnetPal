@@ -7,7 +7,7 @@ Verify that AgentPal v0.1 does not activate future runtime orchestration during 
 Check current runtime entry files:
 
 - `AGENTS.md`
-- `INIT_PROMPT.md`
+- `prompts/codex/initialize-agentpal-workspace.md`
 - `prompts/initialize-agentpal.md`
 - `prompts/join-external-project-workgroup.md`
 - `projects/project-workgroup-template/agentpal/INIT_AGENTPAL_PROJECT_PROMPT.md`

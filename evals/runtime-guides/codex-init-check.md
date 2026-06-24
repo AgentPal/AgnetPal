@@ -8,7 +8,7 @@ Verify the Codex path from README and `docs/04-runtime-guides/01-use-with-codex.
 
 ```text
 Open the AgentPal Workspace in Codex.
-Paste INIT_PROMPT.md.
+Paste prompts/codex/initialize-agentpal-workspace.md.
 ```
 
 ## Pass

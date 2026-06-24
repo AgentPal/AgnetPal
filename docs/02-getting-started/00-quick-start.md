@@ -9,13 +9,13 @@ cd <your-project>
 claude
 ```
 
-Then paste the one-prompt install prompt from `prompts/claude-code/install-agentpal-current-project.md` and provide `<path-to-AgentPal>`.
+Then paste the one-prompt install prompt from `prompts/claude-code/install-agentpal-current-project.md` after replacing `AGENTPAL_HOME` with your AgentPal Workspace path.
 
 ## Steps
 
 1. Clone or download the AgentPal Workspace.
-2. Open the AgentPal directory in your runtime.
-3. Paste or run the contents of `INIT_PROMPT.md`.
+2. For Codex, open the AgentPal directory in Codex.
+3. Paste the contents of `prompts/codex/initialize-agentpal-workspace.md`.
 4. Start ordinary messages with Mira.
 5. Use `/pal Name` to call a registered Pal directly.
 

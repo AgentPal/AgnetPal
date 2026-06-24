@@ -2,6 +2,8 @@
 
 Copy this whole prompt into Claude Code while your shell is already inside the target project directory.
 
+Before pasting, replace `AGENTPAL_HOME = <replace-with-your-AgentPal-path>` with your real AgentPal Workspace path, for example `AGENTPAL_HOME = D:/Tools/AgentPal` or `AGENTPAL_HOME = /Users/you/AgentPal`.
+
 ```text
 Please connect AgentPal to the current project.
 
@@ -23,7 +25,7 @@ Step 1 - Confirm current project root:
 2. If the current directory appears to be the AgentPal workspace itself, stop and tell me to cd into my target project first.
 3. AgentPal workspace indicators are:
    - root agentpal.json
-   - root INIT_PROMPT.md
+   - prompts/codex/initialize-agentpal-workspace.md
    - pals/Mira-main/
    - contacts/pals.json
 
@@ -41,7 +43,7 @@ Do not scan the whole disk.
 Step 3 - Verify AgentPal path:
 The AgentPal path is valid only if these files exist:
 - README.md
-- INIT_PROMPT.md
+- prompts/codex/initialize-agentpal-workspace.md
 - agentpal.json
 - RESOURCE_INDEX.md
 - contacts/pals.json

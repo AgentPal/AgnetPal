@@ -34,7 +34,7 @@ This release is not a finished app or automation platform. It is not the right f
 
 ## What Is Included
 
-- AgentPal Workspace root files: `AGENTS.md`, `PAL.md`, `SKILL.md`, `INIT_PROMPT.md`, and `agentpal.json`.
+- AgentPal Workspace release assets: `AGENTS.md`, `PAL.md`, `SKILL.md`, `agentpal.json`, and the Codex initialization prompt at `prompts/codex/initialize-agentpal-workspace.md`.
 - Mira as the default Main Pal, Leader Pal, Conductor, and secretary-style coordinator.
 - Official bundled Pal Packs: Mira, Atlas, Vega, Rhea, Quinn, Morgan, Harper, and Nova.
 - Contacts and registry files for Pal discovery, aliases, and direct `/pal Name` calls.
@@ -74,7 +74,7 @@ Direct calls such as `/pal Harper` enter that Pal's working mode. They do not st
 ## Getting Started
 
 1. Open the AgentPal Workspace in a supported runtime.
-2. Paste or run `INIT_PROMPT.md`.
+2. Paste or run `prompts/codex/initialize-agentpal-workspace.md`.
 3. Start with Mira for ordinary messages.
 4. Use `/pal Name` to call a registered Pal directly.
 5. Use `RESOURCE_INDEX.md` as navigation when you need to find a specific root asset or directory.
@@ -88,13 +88,13 @@ cd <your-project>
 claude
 ```
 
-Then paste `prompts/claude-code/install-agentpal-current-project.md` and provide `<path-to-AgentPal>`.
+Then paste `prompts/claude-code/install-agentpal-current-project.md` after replacing `AGENTPAL_HOME` with your AgentPal Workspace path.
 
 The prompt updates `.claude/settings.local.json` `permissions.additionalDirectories`, `CLAUDE.md`, `AGENTS.md`, and `.agentpal/`. `--add-dir` remains a fallback / advanced option, not the required default path.
 
 ## Generic CLI Agent Project Setup
 
-For Markdown/JSON-capable CLI Agents, run the CLI Agent inside `<your-project>` and paste `prompts/cli-agent/install-agentpal-current-project.md`. The generic prompt updates `.agentpal/` and `AGENTS.md` without relying on Claude Code settings.
+For Markdown/JSON-capable CLI Agents, run the CLI Agent inside `<your-project>` and paste `prompts/generic-cli-agent/install-agentpal-current-project.md` after replacing `AGENTPAL_HOME` with your AgentPal Workspace path. The generic prompt updates `.agentpal/` and `AGENTS.md` without relying on Claude Code settings.
 
 ## Safety And Public Release Boundary
 

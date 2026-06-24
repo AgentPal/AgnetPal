@@ -10,14 +10,14 @@ These files are Markdown instructions, not programs. They do not install depende
 | --- | --- | --- |
 | Codex | `codex/initialize-agentpal-workspace.md` | You opened the AgentPal Workspace directly in Codex and want to initialize Mira. |
 | Claude Code | `claude-code/install-agentpal-current-project.md` | You are already inside `<your-project>` in Claude Code and want project-first AgentPal binding. |
-| Generic CLI Agent | `cli-agent/install-agentpal-current-project.md` | Your CLI agent can read directories, follow Markdown / JSON instructions, and maintain context. |
+| Generic CLI Agent | `generic-cli-agent/install-agentpal-current-project.md` | Your CLI agent can read directories, follow Markdown / JSON instructions, and maintain context. |
 
 ## Project Workgroup Prompts
 
 - `join-external-project-workgroup.md`: AgentPal-led external project binding from an AgentPal Workspace session.
 - `remove-agentpal-workgroup.md`: AgentPal-led external project binding removal.
 - `claude-code/remove-agentpal-current-project.md`: Claude Code project-local removal.
-- `cli-agent/remove-agentpal-current-project.md`: generic CLI project-local removal.
+- `generic-cli-agent/remove-agentpal-current-project.md`: generic CLI project-local removal.
 
 For Claude Code, prefer the project-first path:
 
@@ -27,6 +27,15 @@ claude
 ```
 
 Then paste `claude-code/install-agentpal-current-project.md`.
+
+Before pasting a project-first install prompt, replace the `AGENTPAL_HOME` line with your AgentPal Workspace path, for example:
+
+```text
+AGENTPAL_HOME = D:/Tools/AgentPal
+AGENTPAL_HOME = /Users/you/AgentPal
+```
+
+Keep local machine paths in project-local files such as `.agentpal/project.json` or `.claude/settings.local.json`; do not commit private local configuration.
 
 ## Maintenance Prompts
 

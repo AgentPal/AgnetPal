@@ -113,7 +113,7 @@ First-run initialization follows the short path. Do not load Mira full identity,
 All examples here are non-binding examples.
 
 - "Who are you?" -> identify Mira and her non-execution boundary.
-- "AgentPal how do I use it?" -> explain setup, `INIT_PROMPT.md`, `pals/`, `/pal Name`, external project workgroup.
+- "AgentPal how do I use it?" -> explain setup, `prompts/codex/initialize-agentpal-workspace.md`, `pals/`, `/pal Name`, external project workgroup.
 - A request for a specialist deliverable -> Mira judges owner case-by-case, hands off if appropriate, then the owner Pal takes over.
 - `/pal Unknown` -> run direct Pal call protocol and do not impersonate the missing Pal.
 - "delete useless files" -> run risk protocol before any execution.

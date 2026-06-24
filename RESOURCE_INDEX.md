@@ -9,7 +9,7 @@ Reading this file does not authorize loading every referenced file.
 Use the short initialization path by default:
 
 - `AGENTS.md`
-- `INIT_PROMPT.md`
+- `prompts/codex/initialize-agentpal-workspace.md`
 - `agentpal.json`
 - `contacts/pals.json`
 - `registry/pal.index.json`
@@ -39,7 +39,7 @@ Use:
 | `AGENTS.md` | project-level runtime instructions | initialization and context switches |
 | `PAL.md` | AgentPal Workspace identity | workspace identity questions and initialization |
 | `SKILL.md` | Workspace-level Skill entry | Skill-aware runtime entry |
-| `INIT_PROMPT.md` | copyable initialization prompt | first run or re-initialization |
+| `prompts/codex/initialize-agentpal-workspace.md` | copyable initialization prompt | first run or re-initialization |
 | `agentpal.json` | machine-readable workspace metadata | initialization, validation, release checks |
 | `CHANGELOG.md` | public version history | release review |
 | `RELEASE_NOTES.md` | user-facing release notes | release review or user onboarding |
@@ -67,7 +67,9 @@ Use:
 | `capabilities/` | capability-profile notes | diagnostics or capability documentation |
 | `response-fingerprints/` | Pal response fingerprint references | selected Pal validation |
 | `docs/` | user documentation and reference material | docs work or user questions |
+| `docs/01-concepts/07-why-pal.md` | why AgentPal uses the Pal concept between Skills and Agent teams | concept questions and onboarding |
 | `docs/05-orchestration-methodology/` | current AgentPal Pal orchestration methodology | methodology questions and docs navigation |
+| `docs/05-orchestration-methodology/11-pal-teams-and-deep-conductor.md` | Pal Team, runtime-layer agent execution, and future Deep Conductor boundaries | Pal Team and orchestration questions |
 | `docs/06-validation-and-evidence/` | current PalBench and evidence interpretation | validation, PalBench, and evidence questions |
 | `docs/08-release-candidate/` | current v0.1.0-rc.1 release candidate notes | release candidate scope and evidence questions |
 | `docs/research/` | archived research notes | historical traceability only; not a primary entry point |
@@ -87,8 +89,8 @@ For user-facing documentation, start with `docs/README.md`. For root-level relea
 | `prompts/claude-code/install-agentpal-current-project.md` | one-prompt Claude Code project install from inside `<your-project>` |
 | `prompts/claude-code/remove-agentpal-current-project.md` | remove AgentPal binding from a Claude Code project |
 | `prompts/claude-code/verify-agentpal-current-project.md` | verify Claude Code project binding and `settings.local.json` |
-| `prompts/cli-agent/install-agentpal-current-project.md` | one-prompt generic CLI Agent project install |
-| `prompts/cli-agent/remove-agentpal-current-project.md` | remove generic CLI Agent project binding |
+| `prompts/generic-cli-agent/install-agentpal-current-project.md` | one-prompt generic CLI Agent project install |
+| `prompts/generic-cli-agent/remove-agentpal-current-project.md` | remove generic CLI Agent project binding |
 
 These prompts are Markdown instructions, not scripts or installers.
 
@@ -129,6 +131,7 @@ Use the current docs directories as the public entry points. Archived research n
 | --- | --- |
 | `docs/05-orchestration-methodology/README.md` | current Pal Orchestration Methodology entry |
 | `docs/05-orchestration-methodology/00-methodology-overview.md` | current methodology overview |
+| `docs/05-orchestration-methodology/11-pal-teams-and-deep-conductor.md` | Pal Team and future Deep Conductor relationship |
 | `docs/06-validation-and-evidence/README.md` | current validation and PalBench entry |
 | `docs/06-validation-and-evidence/01-palbench-small-sample-report.md` | current R33 PalBench small-sample report |
 | `docs/06-validation-and-evidence/05-future-palbench-design.md` | current future PalBench design notes |

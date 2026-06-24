@@ -58,10 +58,10 @@ Expected output:
 
 ```text
 Goal:
-Check that INIT_PROMPT.md can initialize AgentPal from repository files alone.
+Check that `prompts/codex/initialize-agentpal-workspace.md` can initialize AgentPal from repository files alone.
 
 Read:
-- INIT_PROMPT.md
+- prompts/codex/initialize-agentpal-workspace.md
 - contacts/pals.json
 - registry/pal.index.json
 - pals/Mira-main/knowledge/default-pals/default-pal-map.md

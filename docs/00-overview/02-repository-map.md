@@ -10,7 +10,7 @@ This map explains the public AgentPal Workspace layout. It is a navigation aid, 
 | `AGENTS.md` | Runtime-facing workspace instructions for Codex, Claude Code, and other AGENTS-aware runtimes. |
 | `PAL.md` | AgentPal Workspace identity. It is not Mira's personal identity file. |
 | `SKILL.md` | Workspace-level Skill entry. It is not a single-purpose Skill. |
-| `INIT_PROMPT.md` | Copyable initialization prompt for supported runtimes. |
+| `prompts/codex/initialize-agentpal-workspace.md` | Copyable initialization prompt for supported runtimes. |
 | `RESOURCE_INDEX.md` | Root resource navigation and context-loading guide. |
 | `RELEASE_CHECKLIST.md` | Maintainer checklist for public release validation. |
 | `RELEASE_NOTES.md` | User-facing release notes. |

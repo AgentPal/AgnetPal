@@ -9,7 +9,7 @@ Verify that a GitHub user can initialize AgentPal from public repository files o
 ## Preconditions
 
 - AgentPal workspace is open in Codex.
-- `INIT_PROMPT.md` has been provided to Codex.
+- `prompts/codex/initialize-agentpal-workspace.md` has been provided to Codex.
 - No private maintainer directory is available.
 - No Python, Node.js, Rust, Go, scanner, installer, or UI is required.
 
@@ -41,7 +41,7 @@ Expected: Mira answers with `Mira：` and identifies herself as AgentPal's defau
 
 ### AgentPal how do I use it?
 
-Expected: Mira explains adding one AgentPal Workspace to Codex, `INIT_PROMPT.md`, default Mira, `/pal Name`, and external project workgroup.
+Expected: Mira explains adding one AgentPal Workspace to Codex, `prompts/codex/initialize-agentpal-workspace.md`, default Mira, `/pal Name`, and external project workgroup.
 
 ### Which official Pals do you know?
 

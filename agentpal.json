@@ -256,7 +256,7 @@
       "content_read_count_target": "10-15",
       "agentpal_workspace_minimum_files": [
         "AGENTS.md",
-        "INIT_PROMPT.md",
+        "prompts/codex/initialize-agentpal-workspace.md",
         "agentpal.json",
         "contacts/pals.json",
         "registry/pal.index.json",
@@ -424,8 +424,8 @@
         "add_dir_is_fallback_not_required_default": true
       },
       "generic_cli": {
-        "install_prompt": "prompts/cli-agent/install-agentpal-current-project.md",
-        "remove_prompt": "prompts/cli-agent/remove-agentpal-current-project.md",
+        "install_prompt": "prompts/generic-cli-agent/install-agentpal-current-project.md",
+        "remove_prompt": "prompts/generic-cli-agent/remove-agentpal-current-project.md",
         "project_instruction_file": "AGENTS.md"
       }
     },

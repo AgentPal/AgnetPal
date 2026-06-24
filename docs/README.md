@@ -9,6 +9,7 @@ AgentPal is a Pal layer and Pal Pack Standard practice for Markdown/JSON-capable
 - [What is AgentPal?](00-overview/00-what-is-agentpal.md)
 - [Current status](00-overview/01-current-status.md)
 - [Repository map](00-overview/02-repository-map.md)
+- [Why Pal?](01-concepts/07-why-pal.md)
 - [Quick start](02-getting-started/00-quick-start.md)
 - [Use AgentPal with Claude Code](10-using-agentpal-with-claude-code.md)
 - [Use AgentPal with generic CLI agents](11-using-agentpal-with-cli-agents.md)
@@ -16,6 +17,7 @@ AgentPal is a Pal layer and Pal Pack Standard practice for Markdown/JSON-capable
 - [Pal Pack Standard](03-pal-pack-standard/README.md)
 - [Author your own Pal](07-authoring-pals/README.md)
 - [Orchestration methodology](05-orchestration-methodology/README.md)
+- [Pal Teams and Deep Conductor](05-orchestration-methodology/11-pal-teams-and-deep-conductor.md)
 - [Validation and evidence](06-validation-and-evidence/README.md)
 - [v0.1.0-rc.1 release candidate](08-release-candidate/README.md)
 
@@ -24,11 +26,11 @@ AgentPal is a Pal layer and Pal Pack Standard practice for Markdown/JSON-capable
 | Area | Use it for |
 | --- | --- |
 | [00-overview](00-overview/00-what-is-agentpal.md) | Product definition, current status, repository map, and runtime boundary |
-| [01-concepts](01-concepts/01-what-is-a-pal.md) | Pal, Pal Pack, Skill, Agent, and Simple Pal Mode concepts |
+| [01-concepts](01-concepts/01-what-is-a-pal.md) | Pal, Pal Pack, Skill, Agent, Why Pal, Pal Team, and Simple Pal Mode concepts |
 | [02-getting-started](02-getting-started/00-quick-start.md) | Opening AgentPal, initializing Mira, and calling a Pal |
 | [03-pal-pack-standard](03-pal-pack-standard/README.md) | Pal Pack structure, root files, public/private boundary, and checklist |
 | [04-runtime-guides](04-runtime-guides/00-runtime-compatibility.md) | Runtime compatibility, Codex, Claude Code, and future adapters |
-| [05-orchestration-methodology](05-orchestration-methodology/README.md) | Fast Route, Task Package, Context Slicing, Asset Loading Budget, evidence records, and future orchestration boundaries |
+| [05-orchestration-methodology](05-orchestration-methodology/README.md) | Fast Route, Task Package, Context Slicing, Asset Loading Budget, Pal Teams, evidence records, and future orchestration boundaries |
 | [06-collaboration](06-collaboration/00-collaboration-overview.md) | Contacts, mention protocol, Context Packets, handoff, and project workgroups |
 | [06-validation-and-evidence](06-validation-and-evidence/README.md) | PalBench meaning, limits, observed benefits, and future validation design |
 | [07-authoring-pals](07-authoring-pals/README.md) | Designing, writing, testing, and publishing Pal Packs |

@@ -4,7 +4,7 @@
 
 ```text
 Open the AgentPal Workspace in Codex.
-Copy INIT_PROMPT.md.
+Copy prompts/codex/initialize-agentpal-workspace.md.
 Paste it into Codex.
 ```
 

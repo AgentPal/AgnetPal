@@ -21,6 +21,15 @@ Please connect AgentPal to the current project.
 AGENTPAL_HOME = <replace-with-your-AgentPal-path>
 ```
 
+Before pasting, replace that `AGENTPAL_HOME` line with your real AgentPal Workspace path:
+
+```text
+AGENTPAL_HOME = D:/Tools/AgentPal
+AGENTPAL_HOME = /Users/you/AgentPal
+```
+
+Do not use those examples as fixed paths. They are placeholders for the path on your machine.
+
 ## What This Path Does
 
 - keeps the current user project as the active task context

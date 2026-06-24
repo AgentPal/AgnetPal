@@ -5,7 +5,7 @@ This is the current Codex path for AgentPal v0.1.0-rc.1.
 ## Quick Start
 
 1. Open the AgentPal Workspace in Codex.
-2. Copy the contents of `INIT_PROMPT.md`.
+2. Copy the contents of `prompts/codex/initialize-agentpal-workspace.md`.
 3. Initialize AgentPal in the current workspace.
 4. Start with Mira for ordinary messages.
 5. Use `/pal Name` when you want to call a specialist directly.

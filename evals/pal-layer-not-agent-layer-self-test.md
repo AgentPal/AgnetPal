@@ -27,7 +27,7 @@ The definition appears consistently in:
 - `README.md`
 - `README.zh-CN.md`
 - `AGENTS.md`
-- `INIT_PROMPT.md`
+- `prompts/codex/initialize-agentpal-workspace.md`
 - `agentpal.json`
 - `RELEASE_NOTES.md`
 

@@ -16,6 +16,13 @@ Please connect AgentPal to the current project.
 AGENTPAL_HOME = <path-to-AgentPal>
 ```
 
+Replace `<path-to-AgentPal>` with your real AgentPal Workspace path before pasting, for example:
+
+```text
+AGENTPAL_HOME = D:/Tools/AgentPal
+AGENTPAL_HOME = /Users/you/AgentPal
+```
+
 Or paste the full prompt from:
 
 ```text

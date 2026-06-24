@@ -8,7 +8,7 @@ This document explains the basic Codex path for AgentPal v0.1.0-rc.1.
 
 1. Add the AgentPal directory as a Codex workspace or project.
 2. Open the AgentPal Workspace.
-3. Paste or run `INIT_PROMPT.md`.
+3. Paste or run `prompts/codex/initialize-agentpal-workspace.md`.
 4. Let Codex read the short initialization path.
 5. Start with Mira.
 

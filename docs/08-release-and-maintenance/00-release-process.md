@@ -8,7 +8,8 @@ AgentPal v0.1.0-rc.1 is a Markdown/JSON AgentPal Workspace. It is not a desktop 
 
 The release package may include:
 
-- root release files such as `README.md`, `README.zh-CN.md`, `AGENTS.md`, `PAL.md`, `SKILL.md`, `INIT_PROMPT.md`, `agentpal.json`, release notes, notices, and checklists
+- root release files such as `README.md`, `README.zh-CN.md`, `AGENTS.md`, `PAL.md`, `SKILL.md`, `agentpal.json`, release notes, notices, and checklists
+- prompt assets such as `prompts/codex/initialize-agentpal-workspace.md`
 - public documentation under `docs/`
 - official public Pal Packs under `pals/`
 - contacts and registry files used for Pal discovery

@@ -8,7 +8,7 @@
 - [ ] `SKILL.md`
 - [ ] `PAL.md`
 - [ ] `agentpal.json`
-- [ ] `INIT_PROMPT.md`
+- [ ] `prompts/codex/initialize-agentpal-workspace.md`
 - [ ] `LICENSE`
 
 ## Mira

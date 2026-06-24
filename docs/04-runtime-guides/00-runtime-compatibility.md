@@ -12,7 +12,7 @@ These are the three user-facing paths documented for the current release candida
 
 ## Codex
 
-Codex can open the AgentPal Workspace directly and initialize from `INIT_PROMPT.md`. Mira becomes the default entry Pal, and `/pal Name` can call a specialist.
+Codex can open the AgentPal Workspace directly and initialize from `prompts/codex/initialize-agentpal-workspace.md`. Mira becomes the default entry Pal, and `/pal Name` can call a specialist.
 
 See [Use With Codex](01-use-with-codex.md).
 

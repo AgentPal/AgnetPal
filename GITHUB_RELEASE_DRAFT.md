@@ -60,10 +60,10 @@ In a six-sample smoke validation, AgentPal showed observed benefits for task cla
 ## Getting Started
 
 1. Download or clone the AgentPal Workspace.
-2. Open the AgentPal directory in a Markdown/JSON-capable agent runtime.
-3. Paste or run `INIT_PROMPT.md`.
-4. Start ordinary messages with Mira.
-5. Use `/pal Name` to call a registered Pal directly, for example `/pal Harper`.
+2. For Codex, open the AgentPal directory and paste `prompts/codex/initialize-agentpal-workspace.md`.
+3. For Claude Code, start from `<your-project>` and paste `prompts/claude-code/install-agentpal-current-project.md` after replacing `AGENTPAL_HOME`.
+4. For a generic CLI Agent, start from `<your-project>` and paste `prompts/generic-cli-agent/install-agentpal-current-project.md` after replacing `AGENTPAL_HOME`.
+5. Start ordinary messages with Mira, or use `/pal Name` to call a registered Pal directly, for example `/pal Harper`.
 
 ## Safety Notes
 

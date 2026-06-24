@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Verify that `INIT_PROMPT.md` can initialize AgentPal from public repository files only.
+Verify that `prompts/codex/initialize-agentpal-workspace.md` can initialize AgentPal from public repository files only.
 
 ## Preconditions
 
@@ -12,7 +12,7 @@ Verify that `INIT_PROMPT.md` can initialize AgentPal from public repository file
 
 ## Manual Steps
 
-1. Read `INIT_PROMPT.md`.
+1. Read `prompts/codex/initialize-agentpal-workspace.md`.
 2. Follow the listed read order.
 3. Confirm only `pals/` is scanned for Pal Pack directories.
 4. Confirm Mira plus Atlas, Vega, Rhea, Quinn, Morgan, Harper, and Nova are expected.

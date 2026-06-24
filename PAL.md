@@ -12,7 +12,7 @@ AgentPal v0.1.0-rc.1 is a Pal layer. It provides Pal identity, knowledge, skills
 
 The AgentPal Workspace owns the shared layer:
 
-- root runtime instructions such as `AGENTS.md`, `INIT_PROMPT.md`, `SKILL.md`, and `agentpal.json`
+- root runtime instructions such as `AGENTS.md`, `SKILL.md`, `agentpal.json`, and the Codex initialization prompt under `prompts/codex/`
 - Pal discovery through `contacts/` and `registry/`
 - workspace-level orchestration protocols
 - reusable templates, prompts, examples, evals, and public-safe placeholders

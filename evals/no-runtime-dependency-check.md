@@ -11,7 +11,7 @@ Verify that AgentPal initialization has no required local runtime dependency.
 
 ## Manual Steps
 
-1. Read `README.md`, `README.zh-CN.md`, and `INIT_PROMPT.md`.
+1. Read `README.md`, `README.zh-CN.md`, and `prompts/codex/initialize-agentpal-workspace.md`.
 2. Confirm they do not require Python, Node.js, Rust, or Go for initialization.
 3. Confirm no UI, desktop app, web app, daemon, scanner, validator, installer, or CLI is required.
 4. Confirm no code or package manifests are present in the default release.
@@ -24,7 +24,7 @@ A user can initialize AgentPal in Codex without installing any local runtime.
 ## Failure Signs
 
 - README instructs users to install Go before initializing AgentPal.
-- INIT_PROMPT runs scripts or commands.
+- Codex initialization prompt runs scripts or commands.
 - Required setup depends on a CLI, daemon, scanner, or validator.
 
 ## Notes

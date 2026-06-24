@@ -14,6 +14,8 @@ Please connect AgentPal to the current project.
 AGENTPAL_HOME = <path-to-AgentPal>
 ```
 
+Replace `<path-to-AgentPal>` with the real AgentPal Workspace path before pasting.
+
 ## Expected Result
 
 - `.agentpal/` is created or updated.

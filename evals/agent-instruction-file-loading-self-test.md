@@ -6,7 +6,7 @@ Verify `AGENTS.md`, `PAL.md`, `SKILL.md`, and README loading policy.
 
 ## Pass
 
-- Initialization uses the short path: root instructions, `INIT_PROMPT.md`, `agentpal.json`, contacts / registry JSON, Mira entry files, and Runtime Response Gate.
+- Initialization uses the short path: root instructions, `prompts/codex/initialize-agentpal-workspace.md`, `agentpal.json`, contacts / registry JSON, Mira entry files, and Runtime Response Gate.
 - Default initialization does not read registry Markdown, resource maps, templates, multiple orchestration protocols, or Mira full identity.
 - Owner Pal handoff reads only selected Pal instruction files.
 - Other Pal `AGENTS.md` files are not loaded.

@@ -19,6 +19,13 @@ Then paste `prompts/claude-code/install-agentpal-current-project.md` and provide
 AGENTPAL_HOME = <path-to-AgentPal>
 ```
 
+Replace `<path-to-AgentPal>` with your real AgentPal Workspace path before pasting, for example:
+
+```text
+AGENTPAL_HOME = D:/Tools/AgentPal
+AGENTPAL_HOME = /Users/you/AgentPal
+```
+
 The prompt creates or updates `.agentpal/`, `CLAUDE.md`, `AGENTS.md`, and `.claude/settings.local.json`.
 
 `settings.local.json` is local machine configuration. It can store `permissions.additionalDirectories` for the AgentPal workspace path and should not be committed.

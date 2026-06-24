@@ -7,7 +7,7 @@ Final manual check before tagging `v0.1.0-rc.1`.
 ## Checklist
 
 - [ ] README / README.zh-CN are understandable for new GitHub users.
-- [ ] INIT_PROMPT.md can be copied directly into Codex.
+- [ ] prompts/codex/initialize-agentpal-workspace.md can be copied directly into Codex.
 - [ ] No internal maintainer docs are included.
 - [ ] No private data, local maintainer paths, screenshots, or task reports are included.
 - [ ] No runtime dependency is required for AgentPal initialization.
@@ -32,7 +32,7 @@ All checklist items can pass with no release blocker.
 ## Failure Signs
 
 - README implies AgentPal is a desktop app or background service.
-- INIT_PROMPT requires running a script or installing a runtime.
+- Codex initialization prompt requires running a script or installing a runtime.
 - Examples contain real maintainer paths.
 - Future runtime orchestration is described as active v0.1 behavior.
 - Contacts include tools, models, plugins, MCP servers, or non-Pal runtimes.

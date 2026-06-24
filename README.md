@@ -6,141 +6,199 @@ AgentPal gives every agent a Pal.
 
 AgentPal v0.1.0-rc.1 is a Markdown / JSON / protocol workspace for runtimes such as Codex, Claude Code, and other CLI agents that can read structured workspace files. It is not an Agent runtime, not a multi-agent runtime, not an execution layer, not a desktop app, not a web app, and not an installer.
 
-## Current Release Candidate
+## Why AgentPal?
 
-- Version: `v0.1.0-rc.1`
-- Active path: `Simple Pal Mode only`
-- Default Main Pal / Leader / Conductor: `Mira`
-- Official bundled Pals: `Mira`, `Atlas`, `Vega`, `Rhea`, `Quinn`, `Morgan`, `Harper`, `Nova`
-- Direct specialist call: `/pal Name`
+When users want agents to work better, they usually try one of two paths:
+
+- add more Skills
+- build Agent teams
+
+Skills are lightweight, but they can become fragmented. A Skill is often single-purpose, easy to forget, hard to combine, and usually does not own memory, workflow, verification, or long-term context.
+
+Agent teams can be powerful, but they are often heavy. They may require complex configuration, repeated context, more token cost, role coordination, result merging, and stronger permission boundaries.
+
+AgentPal adds the missing middle layer: Pal. A Pal turns many skills, knowledge cards, workflows, memories, and verification rules into a few memorable working companions.
+
+Users should not need to remember hundreds of skills. They should be able to remember a few Pals and what each Pal is responsible for.
+
+## What Is A Pal?
+
+A Pal is not a single Skill.
+
+A Pal is not a new Agent runtime.
+
+A Pal is a portable working companion made of identity, knowledge, skills, memory rules, workflows, context rules, output contracts, verification habits, and collaboration protocols.
+
+The name Pal means a memorable working companion, not a tool name. In AgentPal, a Pal helps the current runtime understand the user's goal, load the right context, shape a Task Package, use relevant Skills or fallback methods, and check whether the result is actually complete.
 
 ## What Works Today
 
-- AgentPal works as an AgentPal Workspace and a Pal Pack standard practice for agent runtimes.
-- It gives runtimes a Pal layer for identity, knowledge, skills, context, memory boundaries, output contracts, coordination, review, summary, and learning rules.
-- Mira is the default entry Pal for ordinary messages.
-- Mira can use Fast Route to hand off substantive work to an owner Pal in the same response.
-- The current runtime path supports Task Package, Context Slicing, and Asset Loading Budget rules.
-- Contacts and registry support `/pal Name` direct calls for the current registered Pal set.
-- You can use AgentPal today with Codex, Claude Code, or a generic CLI agent that can read Markdown / JSON instructions and maintain context.
+AgentPal v0.1.0-rc.1 currently provides:
 
-## What Is Not Active In v0.1
-
-- AgentPal is not an Agent runtime or execution engine.
-- AgentPal is not a multi-agent runtime, Subagent Mode, or parallel child workflow system in `v0.1.0-rc.1`.
-- Deep Conductor is future design only.
-- External Agent orchestration is future design only.
-- AgentPal is not a desktop app, web app, hosted service, marketplace, daemon, scanner, validator, or automatic installer.
-- PalBench in this release is small-sample validation, not a statistically significant benchmark.
+- Markdown / JSON / protocol workspace assets
+- Simple Pal Mode only
+- Mira as the default Main Pal / Leader / Conductor
+- 8 official bundled Pals
+- `/pal Name` explicit Pal calls
+- Fast Route for clear owner-Pal handoff
+- Task Package rules
+- Context Slicing
+- Asset Loading Budget
+- Codex, Claude Code, and Generic CLI Agent usage guides
+- PalBench small-sample validation
 
 ## Quick Start
 
 ### Codex
 
+Use this when you open the AgentPal Workspace directly in Codex.
+
 1. Open the AgentPal Workspace in Codex.
-2. Copy the contents of [`INIT_PROMPT.md`](INIT_PROMPT.md).
-3. Let Codex initialize AgentPal with Mira as the default entry.
-4. Start with Mira, or call a specialist directly with `/pal Name`.
-5. Use AgentPal in `Simple Pal Mode only`.
+2. Open [`prompts/codex/initialize-agentpal-workspace.md`](prompts/codex/initialize-agentpal-workspace.md).
+3. Copy the whole prompt.
+4. Paste it into Codex to initialize AgentPal.
+5. Start ordinary messages with Mira, or call a specialist with `/pal Name`.
+
+Codex prompt files now live under [`prompts/codex/`](prompts/codex/). Codex workspace initialization does not require `AGENTPAL_HOME`.
 
 More: [`docs/04-runtime-guides/01-use-with-codex.md`](docs/04-runtime-guides/01-use-with-codex.md)
 
 ### Claude Code
 
-1. Open your real user project first:
+Use this when you want to connect AgentPal to an existing user project in Claude Code.
+
+1. Start in your real project:
 
    ```text
    cd <your-project>
    claude
    ```
 
-2. Paste the one-prompt install from [`prompts/claude-code/install-agentpal-current-project.md`](prompts/claude-code/install-agentpal-current-project.md).
-3. Keep the current project directory as task context. Do not treat the AgentPal Workspace as the user project.
-4. `.claude/settings.local.json` is local machine configuration and should not be committed.
-5. This path is a lightweight project binding, not a deep Claude Code plugin or automatic installer.
+2. Open [`prompts/claude-code/install-agentpal-current-project.md`](prompts/claude-code/install-agentpal-current-project.md).
+3. Find this line:
+
+   ```text
+   AGENTPAL_HOME = <replace-with-your-AgentPal-path>
+   ```
+
+4. Replace `<replace-with-your-AgentPal-path>` with your local AgentPal repository path, for example:
+
+   ```text
+   AGENTPAL_HOME = D:/Tools/AgentPal
+   AGENTPAL_HOME = /Users/you/AgentPal
+   ```
+
+5. Copy the whole prompt file.
+6. Paste it into Claude Code.
+
+The Claude Code path updates project-local binding files and may update `.claude/settings.local.json`. That file is local machine configuration and should not be committed.
 
 More: [`docs/04-runtime-guides/02-use-with-claude-code.md`](docs/04-runtime-guides/02-use-with-claude-code.md)
 
 ### Generic CLI Agent
 
-1. Open your real user project first:
+Use this with a CLI agent that can read project files, follow Markdown / JSON instructions, keep context, and report execution evidence.
+
+1. Start in your real project:
 
    ```text
    cd <your-project>
    <your-cli-agent>
    ```
 
-2. Paste the generic install prompt from [`prompts/cli-agent/install-agentpal-current-project.md`](prompts/cli-agent/install-agentpal-current-project.md).
-3. Use this path only if the CLI agent can read directories, follow Markdown / JSON instructions, and maintain task context.
-4. This is a generic compatibility path. Not every CLI agent has been validated.
+2. Open [`prompts/generic-cli-agent/install-agentpal-current-project.md`](prompts/generic-cli-agent/install-agentpal-current-project.md).
+3. Find this line and replace `<replace-with-your-AgentPal-path>` with your local AgentPal repository path:
+
+   ```text
+   AGENTPAL_HOME = <replace-with-your-AgentPal-path>
+   ```
+
+4. Copy the whole prompt into the CLI Agent.
+
+This is a generic compatibility path. AgentPal does not claim every CLI Agent has been fully validated.
 
 More: [`docs/04-runtime-guides/03-use-with-generic-cli-agent.md`](docs/04-runtime-guides/03-use-with-generic-cli-agent.md)
 
 ## Official Pals
 
-| Pal | Role | Direct call |
+| Pal | Responsibility | Direct call |
 | --- | --- | --- |
 | Mira | Main Pal / Leader / Conductor | `/pal Mira` |
-| Atlas | Development | `/pal Atlas` |
-| Vega | Research | `/pal Vega` |
-| Rhea | System | `/pal Rhea` |
-| Quinn | Quality | `/pal Quinn` |
-| Morgan | Document | `/pal Morgan` |
-| Harper | Writing | `/pal Harper` |
-| Nova | Product | `/pal Nova` |
+| Atlas | Development and engineering | `/pal Atlas` |
+| Nova | Product and requirements | `/pal Nova` |
+| Vega | Research and analysis | `/pal Vega` |
+| Rhea | System, environment, and tools | `/pal Rhea` |
+| Quinn | Quality, verification, and release checks | `/pal Quinn` |
+| Morgan | Documents, Office, PDF, and file work | `/pal Morgan` |
+| Harper | Writing, communication, and editing | `/pal Harper` |
 
-Mira is the default entry Pal. Specialist Pals do not listen by default.
+Mira is the default entry Pal. Specialist Pals do not listen by default; Mira routes to them when appropriate, or users can call them directly with `/pal Name`.
 
-## How Simple Pal Mode Works
+## How AgentPal Works
 
-In `v0.1.0-rc.1`, ordinary messages start with Mira. Mira judges ownership case by case. If a registered specialist Pal should own the request, Mira gives a short handoff and stops. The owner Pal answers immediately in the same response by using its own Pal assets and output contract.
+1. The user gives a goal.
+2. Mira receives ordinary tasks.
+3. Mira or the owner Pal loads selected context.
+4. The Pal shapes a Task Package.
+5. The host runtime executes file reads, writes, commands, tools, or publishing actions.
+6. The Pal verifies evidence and reports the result.
+7. Reusable experience can become a Skill, Runbook, Workflow, knowledge note, or memory candidate.
 
-`/pal Name` does not start a separate agent process. It tells the current runtime to enter that Pal's working mode.
+## Pal Vs Skill
 
-## Fast Route, Task Package, Context Slicing
-
-- Fast Route is the active clear-task handoff pattern in `v0.1.0-rc.1`.
-- Task Package helps compress goals, context, constraints, evidence requirements, and acceptance criteria for the current runtime.
-- Context Slicing means AgentPal loads only the files needed for the current task.
-- Asset Loading Budget limits how much Pal context should be loaded by default.
-- Deep Conductor is documented as future design only, not an active runtime path.
-
-## PalBench Small-Sample Validation
-
-AgentPal includes PalBench material as small-sample validation for the current release candidate. It is useful as cautious evidence for the RC, but it is not a statistically significant benchmark and it does not claim model superiority.
-
-## Repository Structure
-
-| Path | Purpose |
+| Skill | Pal |
 | --- | --- |
-| `pals/` | Official and user-added Pal Packs |
-| `contacts/` | Pal contacts and aliases |
-| `registry/` | Pal indexes and discovery records |
-| `orchestration/` | Runtime rules and protocol documents |
-| `prompts/` | Copy-and-paste prompts for setup and maintenance |
-| `docs/` | User-facing documentation |
-| `projects/` | External project binding templates |
-| `templates/` | Reusable templates |
+| A single capability | A working companion |
+| Usually focused on one method or task type | Organizes capabilities, context, memory, workflow, and verification |
+| User often needs to remember when to use it | User remembers the Pal responsible for the work |
+
+Skill is capability. Pal is a working companion that organizes capabilities.
+
+## Pal Team Vs Agent Team
+
+| Agent Team | Pal Team |
+| --- | --- |
+| Multiple agents executing work | Multiple Pal Packs organizing work |
+| Execution belongs to agent runtimes | Execution still belongs to the host runtime |
+| Can add configuration, context, and coordination overhead | Shapes context, Task Packages, collaboration, and verification |
+| Useful for heavy multi-agent execution | Useful for professional perspectives without making AgentPal a runtime |
+
+Subagents and multi-agent execution belong to the runtime layer. A Pal Team can prepare and review tasks for runtime agents, but AgentPal v0.1.0-rc.1 is not a multi-agent runtime.
+
+## Deep Conductor
+
+Deep Conductor is AgentPal's future advanced orchestration design for complex tasks. It is not active in v0.1.0-rc.1. For the current release, use Simple Pal Mode, Fast Route, Task Packages, Context Slicing, and bounded Pal collaboration. More: [`docs/05-orchestration-methodology/11-pal-teams-and-deep-conductor.md`](docs/05-orchestration-methodology/11-pal-teams-and-deep-conductor.md)
+
+## What AgentPal Is Not
+
+AgentPal is not:
+
+- an Agent Runtime
+- a multi-agent runtime
+- a desktop app
+- a web app
+- an installer
+- a daemon or service
+- a marketplace
+- a replacement for Codex, Claude Code, OpenHands, or other runtimes
+
+AgentPal is a Pal layer for existing runtimes. The host runtime performs actual execution and must provide evidence for real actions.
 
 ## Documentation
 
-- Documentation home: [`docs/README.md`](docs/README.md)
-- Overview: [`docs/00-overview/`](docs/00-overview/)
-- Pal Pack standard: [`docs/03-pal-pack-standard/`](docs/03-pal-pack-standard/)
-- Runtime guides: [`docs/04-runtime-guides/`](docs/04-runtime-guides/)
-- Authoring Pals: [`docs/07-authoring-pals/`](docs/07-authoring-pals/)
-- Orchestration methodology: [`docs/05-orchestration-methodology/`](docs/05-orchestration-methodology/)
-- Validation and evidence: [`docs/06-validation-and-evidence/`](docs/06-validation-and-evidence/)
-- Release candidate notes: [`docs/08-release-candidate/`](docs/08-release-candidate/)
-- Current status: [`docs/00-overview/01-current-status.md`](docs/00-overview/01-current-status.md)
-- Current capabilities: [`docs/00-overview/02-current-capabilities.md`](docs/00-overview/02-current-capabilities.md)
-- What AgentPal is not: [`docs/00-overview/04-what-agentpal-is-not.md`](docs/00-overview/04-what-agentpal-is-not.md)
-- Release candidate summary: [`docs/00-overview/05-release-candidate-summary.md`](docs/00-overview/05-release-candidate-summary.md)
-- Project-first connection: [`docs/04-runtime-guides/04-project-first-connection.md`](docs/04-runtime-guides/04-project-first-connection.md)
+- [Why Pal?](docs/01-concepts/07-why-pal.md)
+- [Concepts](docs/01-concepts/)
+- [Pal Pack Standard](docs/03-pal-pack-standard/)
+- [Runtime Guides](docs/04-runtime-guides/)
+- [Orchestration Methodology](docs/05-orchestration-methodology/)
+- [Validation and Evidence](docs/06-validation-and-evidence/)
+- [Authoring Pals](docs/07-authoring-pals/)
+- [Prompts](prompts/)
+- [Documentation Home](docs/README.md)
 
 ## Contributing
 
-Contributions should preserve the `v0.1.0-rc.1` boundary: AgentPal is a Pal Workspace and Pal Pack standard practice for agent runtimes, with `Simple Pal Mode only` as the active path. Do not describe future design material as active runtime behavior.
+Contributions should preserve the v0.1.0-rc.1 boundary: AgentPal is a Pal Workspace and Pal Pack standard practice for agent runtimes, with Simple Pal Mode as the only active task-handling path.
 
 See [`CONTRIBUTING.md`](CONTRIBUTING.md).
 

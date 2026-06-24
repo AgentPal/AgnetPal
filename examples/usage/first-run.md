@@ -40,7 +40,7 @@ The list should come from current contacts / registry. For the current bundled s
 
 ## Files or Protocols Involved
 
-- `INIT_PROMPT.md`
+- `prompts/codex/initialize-agentpal-workspace.md`
 - `AGENTS.md`
 - `SKILL.md`
 - `PAL.md`

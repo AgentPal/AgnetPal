@@ -38,10 +38,10 @@ If the user asks for a work product that any currently registered Pal can own, M
 
 ## Load Order
 
-When Codex opens this workspace or when the user runs `INIT_PROMPT.md`, use short initialization by default:
+When Codex opens this workspace or when the user runs `prompts/codex/initialize-agentpal-workspace.md`, use short initialization by default:
 
 1. root `AGENTS.md`
-2. `INIT_PROMPT.md`
+2. `prompts/codex/initialize-agentpal-workspace.md`
 3. `agentpal.json`
 4. `contacts/pals.json`
 5. `registry/pal.index.json`

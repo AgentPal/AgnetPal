@@ -9,7 +9,7 @@ Use this checklist before publishing AgentPal v0.1.0-rc.1 as a public MIT GitHub
 - [ ] `AGENTS.md` exists and states the Runtime Response Gate, Simple Pal Mode only, Mira default routing, contacts/registry source of truth, and public-safe boundaries.
 - [ ] `PAL.md` exists and describes the AgentPal Workspace identity, not a single Pal.
 - [ ] `SKILL.md` exists and identifies AgentPal as a Workspace-level Skill entry, not a single-purpose Skill.
-- [ ] `INIT_PROMPT.md` can be copied into Codex, Claude Code, or another supported runtime for initialization.
+- [ ] `prompts/codex/initialize-agentpal-workspace.md` can be copied into Codex for AgentPal Workspace initialization.
 - [ ] `agentpal.json` parses as valid JSON and uses version `v0.1.0-rc.1`.
 - [ ] `RESOURCE_INDEX.md` exists as navigation, not a default full-context bundle.
 
@@ -57,6 +57,7 @@ Use this checklist before publishing AgentPal v0.1.0-rc.1 as a public MIT GitHub
 - [ ] `claude --add-dir <path-to-AgentPal>` is documented only as fallback / advanced use, not the required default path.
 - [ ] `.claude/settings.local.json` is documented as local machine configuration and not for commit.
 - [ ] Generic CLI Agent setup is documented through `AGENTS.md` and `.agentpal/`.
+- [ ] Claude Code and Generic CLI Agent setup prompts clearly tell users to replace `AGENTPAL_HOME` with their own AgentPal Workspace path before pasting.
 - [ ] Research/future orchestration docs do not activate Subagent Mode, external Agent calls, Deep Conductor, or runtime dependency requirements.
 
 ## Project Install Prompts
@@ -64,8 +65,8 @@ Use this checklist before publishing AgentPal v0.1.0-rc.1 as a public MIT GitHub
 - [ ] `prompts/claude-code/install-agentpal-current-project.md` exists.
 - [ ] `prompts/claude-code/remove-agentpal-current-project.md` exists.
 - [ ] `prompts/claude-code/verify-agentpal-current-project.md` exists.
-- [ ] `prompts/cli-agent/install-agentpal-current-project.md` exists.
-- [ ] `prompts/cli-agent/remove-agentpal-current-project.md` exists.
+- [ ] `prompts/generic-cli-agent/install-agentpal-current-project.md` exists.
+- [ ] `prompts/generic-cli-agent/remove-agentpal-current-project.md` exists.
 - [ ] Claude Code install prompt preserves existing `CLAUDE.md`, `AGENTS.md`, and settings content.
 - [ ] Claude Code install prompt merges only `permissions.additionalDirectories`.
 - [ ] Generic CLI prompt does not depend on Claude Code settings.

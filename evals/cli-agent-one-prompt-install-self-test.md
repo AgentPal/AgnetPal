@@ -7,7 +7,7 @@ cd <your-project>
 <your-cli-agent>
 ```
 
-Then paste `prompts/cli-agent/install-agentpal-current-project.md` with `AGENTPAL_HOME = <path-to-AgentPal>`.
+Then paste `prompts/generic-cli-agent/install-agentpal-current-project.md` with `AGENTPAL_HOME = <path-to-AgentPal>`.
 
 ## Pass
 

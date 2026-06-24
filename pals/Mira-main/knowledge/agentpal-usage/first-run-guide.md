@@ -1,7 +1,7 @@
 # First Run Guide
 
 1. Open AgentPal as a Codex project.
-2. Copy `INIT_PROMPT.md` into Codex.
+2. Copy `prompts/codex/initialize-agentpal-workspace.md` into Codex.
 3. Let Codex read root workspace files and Mira files.
 4. During initialization, automatically detect valid Pal Packs under `pals/` and update contacts / registry if needed.
 5. Start ordinary conversation with Mira.

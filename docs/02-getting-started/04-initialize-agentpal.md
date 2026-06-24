@@ -10,7 +10,7 @@ Short placeholder.
 
 ## Initialization File
 
-Use the root [`INIT_PROMPT.md`](../../INIT_PROMPT.md).
+For Codex, use [`prompts/codex/initialize-agentpal-workspace.md`](../../prompts/codex/initialize-agentpal-workspace.md).
 
 The short initialization path reads root guardrails, workspace metadata, contacts and registry, Mira's minimum assets, and the Runtime Response Gate. It should not load all Pals, all memory, all reports, all examples, all evals, or future design docs.
 

@@ -7,7 +7,7 @@ This policy controls how AgentPal loads `AGENTS.md`, `PAL.md`, `SKILL.md`, `READ
 During normal initialization or workspace context setup, use the short path and load:
 
 - root `AGENTS.md`
-- `INIT_PROMPT.md`
+- `prompts/codex/initialize-agentpal-workspace.md`
 - `agentpal.json`
 - `contacts/pals.json` or summary
 - `registry/pal.index.json` or summary

@@ -36,7 +36,7 @@ If this is an external project-bound session, read only the project-side binding
 
 Then read the AgentPal workspace minimum:
 1. AGENTS.md
-2. INIT_PROMPT.md
+2. prompts/codex/initialize-agentpal-workspace.md
 3. agentpal.json
 4. contacts/pals.json
 5. registry/pal.index.json

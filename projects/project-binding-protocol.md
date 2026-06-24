@@ -11,7 +11,7 @@ claude
 
 Then paste `prompts/claude-code/install-agentpal-current-project.md` with the AgentPal path. The prompt writes `.claude/settings.local.json` so the user does not need to remember `claude --add-dir <path-to-AgentPal>` as the default entry.
 
-For generic Markdown/JSON CLI Agents, use `prompts/cli-agent/install-agentpal-current-project.md`.
+For generic Markdown/JSON CLI Agents, use `prompts/generic-cli-agent/install-agentpal-current-project.md`.
 
 ## Core rule
 

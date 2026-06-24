@@ -26,7 +26,7 @@ Verify:
 9. AgentPal workspace path is readable.
 10. AgentPal required files exist:
     - README.md
-    - INIT_PROMPT.md
+    - prompts/codex/initialize-agentpal-workspace.md
     - agentpal.json
     - RESOURCE_INDEX.md
     - contacts/pals.json

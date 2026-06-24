@@ -19,6 +19,8 @@ with:
 AGENTPAL_HOME = <path-to-AgentPal>
 ```
 
+Replace `<path-to-AgentPal>` with the real AgentPal Workspace path before pasting, for example `AGENTPAL_HOME = D:/Tools/AgentPal` or `AGENTPAL_HOME = /Users/you/AgentPal`.
+
 ## Expected Result
 
 - the current project remains the active project
@@ -34,4 +36,3 @@ AGENTPAL_HOME = <path-to-AgentPal>
 - all Pal Packs are not copied into the project
 - the whole AgentPal Workspace is not imported into project instructions
 - `claude --add-dir` is not the default required path; it is only a fallback
-

@@ -15,7 +15,7 @@ Manual link review for README, runtime guides, prompts, examples, and evals.
 - `docs/04-runtime-guides/04-project-first-connection.md`
 - `prompts/codex/initialize-agentpal-workspace.md`
 - `prompts/claude-code/install-agentpal-current-project.md`
-- `prompts/cli-agent/install-agentpal-current-project.md`
+- `prompts/generic-cli-agent/install-agentpal-current-project.md`
 - `examples/quickstart/README.md`
 - `evals/runtime-guides/README.md`
 

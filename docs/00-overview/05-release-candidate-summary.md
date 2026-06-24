@@ -12,7 +12,7 @@ AgentPal v0.1.0-rc.1 is the release candidate for an AgentPal Workspace and Pal 
 
 ## Ready For Current Use
 
-- Open the AgentPal Workspace in Codex and initialize with `INIT_PROMPT.md`.
+- Open the AgentPal Workspace in Codex and initialize with `prompts/codex/initialize-agentpal-workspace.md`.
 - Connect AgentPal to a real project in Claude Code through the one-prompt install.
 - Connect AgentPal to a real project in a generic CLI agent through the generic install prompt.
 

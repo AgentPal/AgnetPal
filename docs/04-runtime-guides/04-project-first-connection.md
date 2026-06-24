@@ -22,7 +22,7 @@ cd <your-project>
 <your-cli-agent>
 ```
 
-Then paste the prompt from `prompts/cli-agent/install-agentpal-current-project.md`.
+Then paste the prompt from `prompts/generic-cli-agent/install-agentpal-current-project.md` after replacing `AGENTPAL_HOME` with your AgentPal Workspace path.
 
 ## What The Binding Should Preserve
 

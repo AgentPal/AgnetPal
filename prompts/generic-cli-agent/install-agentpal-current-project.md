@@ -2,6 +2,8 @@
 
 Copy this prompt into a Markdown/JSON-capable CLI Agent while your shell is already inside the target project directory.
 
+Before pasting, replace `AGENTPAL_HOME = <replace-with-your-AgentPal-path>` with your real AgentPal Workspace path, for example `AGENTPAL_HOME = D:/Tools/AgentPal` or `AGENTPAL_HOME = /Users/you/AgentPal`.
+
 ```text
 Please connect AgentPal to the current project.
 
@@ -19,7 +21,7 @@ Do not create scripts, installers, CLIs, daemons, scanners, validators, or runti
 Step 1 - Confirm current project root:
 - Treat the current working directory as the target user project.
 - If the current directory appears to be the AgentPal workspace itself, stop and tell me to cd into my target project first.
-- AgentPal workspace indicators: agentpal.json, INIT_PROMPT.md, pals/Mira-main/, contacts/pals.json.
+- AgentPal workspace indicators: agentpal.json, prompts/codex/initialize-agentpal-workspace.md, pals/Mira-main/, contacts/pals.json.
 
 Step 2 - Resolve and verify AgentPal path:
 Use AGENTPAL_HOME above if it is not a placeholder.
@@ -31,7 +33,7 @@ If missing, try only:
 
 Verify the AgentPal path contains:
 - README.md
-- INIT_PROMPT.md
+- prompts/codex/initialize-agentpal-workspace.md
 - agentpal.json
 - RESOURCE_INDEX.md
 - contacts/pals.json

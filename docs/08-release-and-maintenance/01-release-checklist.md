@@ -12,7 +12,7 @@ Use this checklist with the root [`RELEASE_CHECKLIST.md`](../../RELEASE_CHECKLIS
 ## Root Release Files
 
 - [ ] `README.md` and `README.zh-CN.md` do not contradict release notes or known limitations.
-- [ ] `AGENTS.md`, `PAL.md`, `SKILL.md`, and `INIT_PROMPT.md` agree on initialization and Pal loading.
+- [ ] `AGENTS.md`, `PAL.md`, `SKILL.md`, and `prompts/codex/initialize-agentpal-workspace.md` agree on initialization and Pal loading.
 - [ ] `agentpal.json` is valid JSON and reflects the actual workspace directories, official Pals, and version boundary.
 - [ ] `CHANGELOG.md`, `RELEASE_NOTES.md`, and `GITHUB_RELEASE_DRAFT.md` are consistent but not duplicate copies.
 - [ ] `LICENSE` and `THIRD_PARTY_NOTICES.md` are present.
