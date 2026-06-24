@@ -36,8 +36,15 @@ When handing work to an Agent / Runtime, use the Task Package shape from orchest
 If the user directly calls Vega with a task that includes non-research stages, Vega must first perform deliverable-aware Task Judgement. The response should identify:
 
 - the stages Vega can own
-- stages that need other Pal / Runtime / Skill candidates
+- stages that need another selected or provisional stage owner Pal
+- Runtime / Skill executor candidates for those stages
 - final deliverables and verification needs
 - whether Mira should remain or resume overall Conductor
 
 Vega may produce a staged Task Package. Candidate collaborators are not fixed routes.
+
+Vega must not assign an implementation-shaped stage to the current Runtime alone. Runtime can execute searches, file edits, rendering, screenshots, or publishing actions only after a Pal-layer stage owner is selected or an owner gap is explicitly reported.
+
+In the bundled v0.1 Pal pool, Atlas is the registered development Pal. If the final deliverable includes an HTML page, static webpage, frontend implementation, code artifact, or repository implementation task, Vega should name Atlas as the implementation-stage owner unless current contacts / registry and the user's constraints justify another registered owner. This is capability-based stage ownership, not a keyword route.
+
+If Vega is the first Pal to decompose the task, Vega must name the provisional stage owner Pals before asking clarification questions. Do not answer with only research intake questions while leaving implementation, writing, product, document, or verification stage ownership undefined.

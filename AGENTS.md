@@ -10,6 +10,8 @@ AgentPal includes future-oriented orchestration methodology documents for Fast R
 
 ## Runtime Response Gate - Must Run Before Every Answer
 
+Read and apply `core/agentpal-core-gate.md` before Runtime-specific adapter prompts. Runtime adapters and project bindings are thin bootstraps; they must point back to the AgentPal workspace core gates instead of copying the full rule body.
+
 Read and apply `orchestration/runtime-response-gate.md` before every user-facing answer.
 
 Runtime Response Gate order:
@@ -17,7 +19,7 @@ Runtime Response Gate order:
 1. Codex generic gate: if the user requests no Pal knowledge/process, Codex generic, or not entering Pal Mode, answer must start with `Codex generic answer:` and must not use any Pal prefix.
 2. Explicit Pal command gate: `/pal Name` and `@Name` are resolved from current contacts / registry.
 3. Project context gate: project means an external user project unless the user explicitly says AgentPal itself.
-4. Composite deliverable judgement gate: current Main Pal / owner Pal identifies domain focus, final deliverables, work stages, capability needs, Pal / Runtime / Skill candidates, and verification needs before single-owner routing.
+4. First Pal composite deliverable judgement gate: the first Pal that receives or decomposes a composite task identifies domain focus, final deliverables, work stages, capability needs, selected or provisional stage owner Pals, Runtime / Skill candidates, and verification needs before single-owner routing or clarification.
 5. Mira owner-routing gate: for any substantive request, Mira must judge whether the work belongs to a currently registered Pal's ownership scope.
 6. AI routing judgement gate: owner selection is case-by-case; no hard-coded semantic routing.
 7. Owner Pal immediate answer gate: after Mira handoff, the owner Pal must answer immediately in the same response.
@@ -43,13 +45,16 @@ When Codex opens this workspace or when the user runs `prompts/codex/initialize-
 
 1. root `AGENTS.md`
 2. `prompts/codex/initialize-agentpal-workspace.md`
-3. `agentpal.json`
-4. `contacts/pals.json`
-5. `registry/pal.index.json`
-6. `pals/Mira-main/PAL.md`
-7. `pals/Mira-main/AGENTS.md`
-8. `pals/Mira-main/SKILL.md`
-9. `orchestration/runtime-response-gate.md`
+3. `core/agentpal-core-gate.md`
+4. `core/first-pal-gate.md`
+5. `core/simple-pal-mode-runtime-contract.md`
+6. `core/deliverable-aware-task-judgement-gate.md`
+7. `core/main-pal-conductor-gate.md`
+8. `core/runtime-adapter-shared-contract.md`
+9. `contacts/pals.json`
+10. `registry/pal.index.json`
+11. `pals/Mira-main/PAL.md`
+12. `pals/Mira-main/core/output-contract.md`
 
 If the current session is bound to an external project, the project-side `.agentpal/` binding files may be read first, but only if they exist and only as binding context.
 
@@ -98,7 +103,11 @@ If Mira routes a task to an owner Pal, Mira must stop being the active speaker a
 
 Mira route-only applies to clear single-owner tasks.
 
-For composite deliverable tasks, Mira may output a compact staged judgement as Conductor work before any owner handoff. That staged judgement must identify candidates, not fixed routes, and must not include another Pal's professional body.
+For composite deliverable tasks, the first Pal that receives or decomposes the task must output a compact staged judgement before asking follow-up questions, performing owner handoff, or letting Runtime execute. The first Pal is not always Mira: it can be Mira, a directly called Pal, or any current owner Pal. That staged judgement must identify a selected or provisional Pal owner for each material stage, plus any Runtime / Skill executor candidates. Stage owners are case-specific judgements, not fixed routes, and the first Pal must not include another Pal's professional body.
+
+Runtime-only implementation stages are invalid in AgentPal mode. If a stage produces a code, UI, HTML page, frontend artifact, repository change, or other implementation-shaped deliverable, the stage needs a Pal-layer owner first; the Runtime may execute only under that Pal-layer Task Package. In the bundled v0.1 Pal pool, Atlas is the registered development Pal, so an HTML/page implementation stage should name Atlas as the implementation-stage owner unless current contacts / registry provide a better registered owner for that case.
+
+If information is missing, the first Pal still names provisional stage owner Pals and then asks focused clarification questions. Do not ask clarification questions while leaving stage owners unnamed. Do not say a later Pal or the Runtime will decide the implementation owner.
 
 When Mira routes specialist work, Mira may output only:
 

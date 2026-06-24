@@ -13,7 +13,7 @@ Do not probe, call, or describe parallel child-agent workflows in the current ru
 1. Codex generic gate.
 2. Explicit Pal command gate.
 3. Project context gate.
-4. Composite deliverable judgement gate.
+4. First Pal composite deliverable judgement gate.
 5. Mira owner-routing gate.
 6. AI routing judgement gate.
 7. Owner Pal immediate answer gate.
@@ -53,9 +53,11 @@ When AgentPal is bound into an external project:
 - Pal discovery is an allowed routing read: use `agentpal_workspace_root/contacts/pals.json` and `agentpal_workspace_root/registry/pal.index.json` from `.agentpal/project.json`
 - do not look only inside the external project's `.agentpal/` folder for full Pal assets
 
-## 4. Composite Deliverable Judgement Gate
+## 4. First Pal Composite Deliverable Judgement Gate
 
-Before single-owner routing, the current Main Pal or directly called owner Pal must check whether the request includes multiple obvious deliverables or materially different work stages.
+Before single-owner routing, clarification, handoff, or Runtime execution, the first Pal that receives or decomposes the task must check whether the request includes multiple obvious deliverables or materially different work stages.
+
+The first Pal is not always Mira. It can be Mira, a directly called Pal such as `/pal Vega` or `/pal Atlas`, or any current owner Pal that is asked to handle a composite task.
 
 If the task is composite, perform deliverable-aware Task Judgement:
 
@@ -64,12 +66,19 @@ If the task is composite, perform deliverable-aware Task Judgement:
 - final deliverables
 - work stages
 - capability needs
-- Pal / Runtime / Skill candidates
+- selected or provisional stage owner Pal for each material stage
+- Runtime / Skill executor candidates
 - verification needs
 
-Do not collapse a composite task into one topic-domain owner. Do not let the Runtime bypass Pal-layer judgement for an implementation stage. In v0.1, the correct output may be a staged Task Package inside Simple Pal Mode.
+Do not collapse a composite task into one topic-domain owner. Do not let the Runtime bypass Pal-layer judgement for an implementation stage. Runtime is an execution layer, not the Pal owner of a page, code, UI, repository, or HTML deliverable. In v0.1, the correct output may be a staged Task Package inside Simple Pal Mode.
 
-Direct `/pal Name` calls do not skip this gate. The called Pal should state which stages it can responsibly own, which stages need candidates, and whether Mira should remain or resume the upper-level Conductor role.
+For each material stage, select or name a stage owner Pal from current contacts / registry. If no registered Pal can own a stage, say that explicitly and use a fallback Task Package. Do not leave an implementation-shaped stage as `current Runtime executes this` without a selected or provisional Pal owner.
+
+In the bundled v0.1 Pal pool, Atlas is the registered development Pal. If the final deliverable includes an HTML page, static webpage, frontend implementation, code artifact, or repository implementation task, the implementation stage should name Atlas as the stage owner unless current contacts / registry and the user's constraints justify a different registered owner. This is a capability-based stage owner judgement, not a keyword route.
+
+If information is missing, the first Pal must still give a provisional staged judgement with provisional stage owner Pals before asking focused clarification questions. Clarification questions may refine the Task Package, but they must not replace the first-stage owner judgement.
+
+Direct `/pal Name` calls do not skip this gate. The called Pal should state which stages it can responsibly own, which stages need other selected or provisional stage owner Pals, and whether Mira should remain or resume the upper-level Conductor role.
 
 ## 5. Mira Owner-Routing Gate
 

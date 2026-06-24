@@ -3,57 +3,56 @@
 Copy this prompt into Claude Code while your shell is inside the target project directory.
 
 ```text
-Please verify whether AgentPal is correctly connected to the current project.
+Verify whether AgentPal thin binding is correctly connected to the current project.
 
-Check only the current project and the AgentPal path recorded in .agentpal/project.json or .claude/settings.local.json. Do not scan the whole disk.
+Check only:
+- the current project
+- `.agentpal/project.json`
+- the AgentPal workspace path recorded in project.json or `.claude/settings.local.json`
+
+Do not scan the whole disk.
 
 Verify:
 1. Current directory is the active project root and is not the AgentPal workspace itself.
-2. .agentpal/project.json exists.
-3. .agentpal/project.json contains:
+2. `.agentpal/project.json` exists and is valid JSON.
+3. `project.json` has:
    - active_project_root
    - agentpal_workspace_root
-   - runtime or runtime_hint: claude-code
-   - mode: simple-pal-mode-only
-   - agentpal_is_pal_layer: true
-4. CLAUDE.md contains exactly one AgentPal block between:
-   - <!-- BEGIN AGENTPAL WORKGROUP -->
-   - <!-- END AGENTPAL WORKGROUP -->
-5. AGENTS.md contains exactly one AgentPal block between the same markers.
-6. .claude/settings.local.json exists and is valid JSON.
-7. permissions.additionalDirectories contains the AgentPal workspace path.
-8. .gitignore contains .claude/settings.local.json.
-9. AgentPal workspace path is readable.
-10. AgentPal required files exist:
-    - README.md
-    - prompts/codex/initialize-agentpal-workspace.md
-    - agentpal.json
-    - RESOURCE_INDEX.md
-    - contacts/pals.json
-    - registry/pal.index.json
-    - pals/Mira-main/PAL.md
-11. contacts / registry list exactly 8 default Pals for v0.1.0-rc.1:
-    - Mira
-    - Atlas
-    - Vega
-    - Rhea
-    - Quinn
-    - Morgan
-    - Harper
-    - Nova
-12. No non-bundled Pal is included in the default bundled Pal set.
-13. Current mode is Simple Pal Mode only.
-14. No active Subagent Mode or external Agent orchestration is required by the binding.
-15. The block does not import the whole AgentPal workspace or AgentPal AGENTS.md.
-16. The AgentPal block describes Mira as the default Main Pal, Leader Pal, and Conductor, not primarily as a secretary-style support role.
-17. If you are verifying immediately after install, the install response should include a first welcome message that starts with `Mira：`, lists the 8 official bundled Pals, mentions `/pal Name`, says ordinary tasks start with Mira, and states that v0.1 uses Simple Pal Mode only.
+   - runtime_hint
+   - active_mode: simple-pal-mode-only
+   - read_core_from_agentpal_workspace: true
+   - core_gate_paths
+   - pal_source_of_truth
+4. AgentPal workspace path is readable.
+5. These AgentPal workspace files exist:
+   - core/agentpal-core-gate.md
+   - core/first-pal-gate.md
+   - core/simple-pal-mode-runtime-contract.md
+   - core/deliverable-aware-task-judgement-gate.md
+   - core/main-pal-conductor-gate.md
+   - core/runtime-adapter-shared-contract.md
+   - core/project-binding-thin-contract.md
+   - core/runtime-response-gate.md
+   - contacts/pals.json
+   - registry/pal.index.json
+   - pals/Mira-main/PAL.md
+   - pals/Mira-main/core/output-contract.md
+6. `CLAUDE.md` contains exactly one AgentPal block between:
+   - `<!-- BEGIN AGENTPAL WORKGROUP -->`
+   - `<!-- END AGENTPAL WORKGROUP -->`
+7. `AGENTS.md` contains exactly one AgentPal block between the same markers.
+8. Both blocks point to AgentPal core gates and do not embed a full Pal roster or full protocols.
+9. `.claude/settings.local.json` exists and is valid JSON.
+10. `permissions.additionalDirectories` contains the AgentPal workspace path.
+11. `.gitignore` contains `.claude/settings.local.json`.
+12. `.agentpal/` does not contain copied full protocols, full Mira assets, release docs, examples, evals, or PalBench reports.
+13. The active mode is Simple Pal Mode only.
+14. Deep Conductor, Subagent Mode, and external Agent orchestration are not activated by the binding.
 
 Output a concise checklist:
 - pass / fail / warning
 - evidence path
 - fix suggestion
 
-If the current session cannot access the AgentPal path even though settings.local.json contains it, recommend restarting Claude Code or using temporary /add-dir <path-to-AgentPal> for this session.
-
-If the binding files are correct but the first post-install response had no `Mira：` welcome message, report a warning and recommend rerunning the latest AgentPal Claude Code install prompt.
+If the current session cannot access the AgentPal path even though settings.local.json contains it, recommend restarting Claude Code or using `/add-dir <path-to-AgentPal>` for this session.
 ```

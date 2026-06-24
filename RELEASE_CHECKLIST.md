@@ -12,6 +12,7 @@ Use this checklist before publishing AgentPal v0.1.0-rc.1 as a public MIT GitHub
 - [ ] `prompts/codex/initialize-agentpal-workspace.md` can be copied into Codex for AgentPal Workspace initialization.
 - [ ] `agentpal.json` parses as valid JSON and uses version `v0.1.0-rc.1`.
 - [ ] `RESOURCE_INDEX.md` exists as navigation, not a default full-context bundle.
+- [ ] `core/` exists and centralizes shared AgentPal gates for runtime adapters.
 
 ## README And Docs
 
@@ -29,6 +30,7 @@ Use this checklist before publishing AgentPal v0.1.0-rc.1 as a public MIT GitHub
 - [ ] Orchestration templates, capability profile templates, and PalBench result template are present.
 - [ ] PalBench eval drafts and orchestration examples are present.
 - [ ] R36 deliverable-aware examples and self-test are present: `examples/orchestration/deliverable-aware-task-judgement-example.md`, `examples/failures/domain-only-owner-handoff.md`, and `evals/orchestration/deliverable-aware-task-judgement-self-test.md`.
+- [ ] R37 runtime adapter thin binding examples and self-tests are present under `examples/runtime-adapters/`, `examples/failures/`, and `evals/runtime-adapters/`.
 - [ ] PalBench R33 examples are public-safe and use synthetic or placeholder data.
 - [ ] No internal development reports are linked from public onboarding navigation.
 
@@ -60,6 +62,7 @@ Use this checklist before publishing AgentPal v0.1.0-rc.1 as a public MIT GitHub
 - [ ] `.claude/settings.local.json` is documented as local machine configuration and not for commit.
 - [ ] Generic CLI Agent setup is documented through `AGENTS.md` and `.agentpal/`.
 - [ ] Claude Code and Generic CLI Agent setup prompts clearly tell users to replace `AGENTPAL_HOME` with their own AgentPal Workspace path before pasting.
+- [ ] Runtime adapters point to shared `core/` gates instead of duplicating full AgentPal rules.
 - [ ] Research/future orchestration docs do not activate Subagent Mode, external Agent calls, Deep Conductor, or runtime dependency requirements.
 
 ## Project Install Prompts
@@ -76,6 +79,8 @@ Use this checklist before publishing AgentPal v0.1.0-rc.1 as a public MIT GitHub
 - [ ] Generic CLI prompt does not depend on Claude Code settings.
 - [ ] Install prompts do not copy all Pal Packs into the user project.
 - [ ] Install prompts do not import the whole AgentPal workspace into project instruction files.
+- [ ] Project bindings are thin: they store `.agentpal/project.json`, `.agentpal/AGENTPAL.md`, root protected blocks, and runtime-specific local settings only.
+- [ ] Project bindings do not copy full protocols, full Mira assets, release docs, examples, evals, or a Pal roster as source of truth.
 
 ## Public-Safe Boundary
 

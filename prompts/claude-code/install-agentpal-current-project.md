@@ -1,282 +1,69 @@
-# Claude Code One-Prompt AgentPal Project Install
+# Claude Code Install AgentPal In Current Project
 
-Copy this whole prompt into Claude Code while your shell is already inside the target project directory.
+Use this when your shell is inside an external user project and you want Claude Code to use AgentPal as a Pal Workspace.
 
-Before pasting, replace `AGENTPAL_HOME = <replace-with-your-AgentPal-path>` with your real AgentPal Workspace path, for example `AGENTPAL_HOME = D:/Tools/AgentPal` or `AGENTPAL_HOME = /Users/you/AgentPal`.
+This is a thin binding prompt. It does not copy AgentPal rules, Pals, protocols, docs, examples, evals, or release files into the project.
 
 ```text
-Please connect AgentPal to the current project.
+Connect the current project to AgentPal for Claude Code.
 
-AGENTPAL_HOME = <replace-with-your-AgentPal-path>
+Inputs:
+- current project root: the current working directory
+- AgentPal workspace root: ask me if it is not already known
 
-Goal:
-Connect this current project to AgentPal without making AgentPal the project, without copying all Pal Packs into this project, and without requiring me to start Claude Code with --add-dir.
+Hard boundaries:
+- Do not scan the whole disk.
+- Do not copy AgentPal Pal Packs, docs, protocols, examples, evals, or release notes into this project.
+- Do not create runtime code, scripts, services, daemons, installers, or UI.
+- Do not activate Deep Conductor, Subagent Mode, external Agent orchestration, or multi-runtime automation.
 
-Current runtime:
-- Claude Code.
-- AgentPal is a Pal layer, not an Agent layer, not a multi-agent runtime, and not an execution layer.
-- AgentPal v0.1.0-rc.1 uses Simple Pal Mode only.
-- Do not call Subagent Mode.
-- Do not call external agents.
-- Do not create scripts, installers, daemons, CLIs, scanners, validators, or runtime dependencies.
+Create or update only the thin binding:
+1. `.agentpal/project.json`
+2. `.agentpal/AGENTPAL.md`
+3. root `AGENTS.md` protected block
+4. root `CLAUDE.md` protected block
+5. `.claude/settings.local.json` with `permissions.additionalDirectories` containing the AgentPal workspace root
+6. `.gitignore` entry for `.claude/settings.local.json`
 
-Step 1 - Confirm current project root:
-1. Treat the current working directory as the target user project.
-2. If the current directory appears to be the AgentPal workspace itself, stop and tell me to cd into my target project first.
-3. AgentPal workspace indicators are:
-   - root agentpal.json
-   - prompts/codex/initialize-agentpal-workspace.md
-   - pals/Mira-main/
-   - contacts/pals.json
+The binding must say that AgentPal rules are read from the AgentPal workspace root.
 
-Step 2 - Resolve AgentPal path:
-Use AGENTPAL_HOME above if it is not a placeholder.
-If AGENTPAL_HOME is still a placeholder or empty, try only these bounded sources:
-1. current project .agentpal/project.json -> agentpal_workspace_root
-2. environment variable AGENTPAL_HOME
-3. current project parent or sibling directory named AgentPal or agentpal
-4. common examples such as C:/Tools/AgentPal or ~/AgentPal only as examples, not a disk-wide search
-If unresolved, stop and ask me to paste the AgentPal path.
+Before responding as AgentPal in this project, Claude Code must read from the AgentPal workspace root:
+1. core/agentpal-core-gate.md
+2. core/first-pal-gate.md
+3. core/simple-pal-mode-runtime-contract.md
+4. core/deliverable-aware-task-judgement-gate.md
+5. core/main-pal-conductor-gate.md
+6. core/runtime-adapter-shared-contract.md
+7. core/project-binding-thin-contract.md
+8. core/runtime-response-gate.md
+9. contacts/pals.json
+10. registry/pal.index.json
+11. pals/Mira-main/PAL.md
+12. pals/Mira-main/core/output-contract.md
 
-Do not scan the whole disk.
+Use `templates/project-binding/root-agents-agentpal-block-template.md` from the AgentPal workspace as the protected block shape.
 
-Step 3 - Verify AgentPal path:
-The AgentPal path is valid only if these files exist:
-- README.md
-- prompts/codex/initialize-agentpal-workspace.md
-- agentpal.json
-- RESOURCE_INDEX.md
-- contacts/pals.json
-- registry/pal.index.json
-- pals/Mira-main/PAL.md
+Use `projects/project-workgroup-template/agentpal/` from the AgentPal workspace only as the thin `.agentpal/` template. Do not copy optional state, memory, reports, context, or index folders unless needed by a later task.
 
-If any required file is missing, stop and do not create partial binding files.
-
-Step 4 - Create or update .agentpal/:
-Create or update:
-- .agentpal/project.json
-- .agentpal/AGENTPAL.md
-- .agentpal/PAL_GROUP.md
-- .agentpal/INIT_AGENTPAL_PROJECT_PROMPT.md
-- .agentpal/context/README.md
-- .agentpal/index/README.md
-- .agentpal/memory/README.md
-- .agentpal/state/README.md
-
-.agentpal/project.json must include:
-- schema: agentpal.project.v0.1
-- active_project_root: current project root
-- agentpal_workspace_root: resolved AgentPal path
-- runtime: claude-code
+For `.agentpal/project.json`, include at least:
+- schema
+- binding_version
+- active_project_root
+- agentpal_workspace_root
 - runtime_hint: claude-code
-- mode: simple-pal-mode-only
-- agentpal_is_pal_layer: true
-- agentpal_is_agent_layer: false
-- agentpal_is_multi_agent_runtime: false
-- agentpal_is_execution_layer: false
-- current_project_semantics: active_project_root_only
-- created_by: agentpal-one-prompt-install
-- version: v0.1.0-rc.1
-- updated_at: current timestamp if available, otherwise a human-readable "updated by current runtime"
+- active_mode: simple-pal-mode-only
+- read_core_from_agentpal_workspace: true
+- core_gate_paths
+- pal_source_of_truth
 
-Do not write private project facts, credentials, secrets, tokens, customer data, or unrelated personal memory into .agentpal/.
+For `.claude/settings.local.json`, merge with any existing valid JSON. Preserve unrelated settings. Add the AgentPal workspace root under `permissions.additionalDirectories`.
 
-Step 5 - Create or update .claude/settings.local.json:
-1. Create .claude/ if missing.
-2. If .claude/settings.local.json exists, read it as JSON.
-3. If it is invalid JSON, stop and ask me whether to fix or back it up. Do not overwrite it.
-4. Preserve all existing settings.
-5. Merge only permissions.additionalDirectories.
-6. Append the resolved AgentPal path if it is not already present.
-7. Preserve existing allow / deny / ask rules.
-8. Do not write the local AgentPal absolute path into .claude/settings.json.
-
-Expected shape:
-{
-  "permissions": {
-    "additionalDirectories": [
-      "<path-to-AgentPal>"
-    ]
-  }
-}
-
-Update .gitignore if needed so it contains:
-.claude/settings.local.json
-
-Step 6 - Create or update CLAUDE.md:
-If CLAUDE.md does not exist, create it.
-If it exists, preserve all user-authored content and replace only the block between:
-<!-- BEGIN AGENTPAL WORKGROUP -->
-<!-- END AGENTPAL WORKGROUP -->
-
-Use this lightweight block:
-
-<!-- BEGIN AGENTPAL WORKGROUP -->
-This project is connected to AgentPal.
-
-This block is managed by AgentPal.
-When removing the AgentPal workgroup, delete only this block.
-Do not delete user-authored CLAUDE.md content outside this block.
-
-Runtime hint: claude-code
-
-AgentPal is a Pal layer, not an Agent runtime, not a multi-agent runtime, and not an execution layer.
-Current mode: Simple Pal Mode only.
-
-AgentPal project-bound mode is active for this project whenever this block is present.
-
-Active project root: this current project directory.
-AgentPal workspace root: <path-to-AgentPal>
-
-Mira is the default Main Pal, Leader Pal, and Conductor. Ordinary messages should be treated as going to Mira first.
-In plain-text runtimes such as Claude Code, Mira's user-visible replies must start with `Mira：` unless the runtime UI already clearly displays the Pal name.
-Use /pal Name for explicit Pal calls.
-Pal discovery source: AgentPal contacts / registry under agentpal_workspace_root.
-
-Every user-facing answer in this project must start with the speaking Pal prefix, such as Mira：, Atlas：, or Rhea：, unless the user explicitly requests a Codex generic answer or explicitly asks not to use Pal mode.
-Ordinary greetings, project questions, and follow-up questions still go to Mira first and should start with Mira：.
-
-Use RESOURCE_INDEX.md and selected Pal assets on demand.
-Do not preload all Pals.
-Do not import or paste AgentPal AGENTS.md, README.md, or the whole AgentPal workspace into this project context.
-Do not call Subagent Mode in AgentPal v0.1.
-Do not call external agents from AgentPal v0.1.
-
-When reporting asset use, distinguish index-known paths from content-read files.
-Project questions mean this active project root, not the AgentPal workspace.
-
-For owner Pal selection, use case-by-case AI judgement from current contacts / registry. Do not use hard-coded semantic routing, keyword triggers, or fixed Pal sets.
-
-Before the first AgentPal-mode answer in a new session, read the lightweight project-bound files:
-1. .agentpal/project.json
-2. .agentpal/AGENTPAL.md
-3. .agentpal/PAL_GROUP.md
-4. .agentpal/INIT_AGENTPAL_PROJECT_PROMPT.md
-
-If the runtime cannot read those files, still follow this root block: answer as Mira for ordinary messages, keep the active project as this current project directory, and report that deeper Pal discovery is unavailable until the AgentPal binding files can be read.
-
-Claude Code note:
-- .claude/settings.local.json may contain permissions.additionalDirectories with the AgentPal workspace path.
-- settings.local.json is local machine configuration and should not be committed.
-- If the current Claude Code session cannot read the AgentPal path yet, restart Claude Code or temporarily use /add-dir <path-to-AgentPal>.
-<!-- END AGENTPAL WORKGROUP -->
-
-Step 7 - Create or update AGENTS.md:
-If AGENTS.md does not exist, create it.
-If it exists, preserve all user-authored content and replace only the block between:
-<!-- BEGIN AGENTPAL WORKGROUP -->
-<!-- END AGENTPAL WORKGROUP -->
-
-Use the same lightweight block as CLAUDE.md, adjusted for generic Markdown/JSON runtimes:
-
-<!-- BEGIN AGENTPAL WORKGROUP -->
-This project is connected to AgentPal.
-
-This block is managed by AgentPal.
-When removing the AgentPal workgroup, delete only this block.
-Do not delete user-authored AGENTS.md content outside this block.
-
-Runtime hint: claude-code
-
-AgentPal is a Pal layer, not an Agent runtime, not a multi-agent runtime, and not an execution layer.
-Current mode: Simple Pal Mode only.
-
-AgentPal project-bound mode is active for this project whenever this block is present.
-
-Active project root: this current project directory.
-AgentPal workspace root: <path-to-AgentPal>
-
-Mira is the default Main Pal, Leader Pal, and Conductor. Ordinary messages should be treated as going to Mira first.
-In plain-text runtimes such as Claude Code, Mira's user-visible replies must start with `Mira：` unless the runtime UI already clearly displays the Pal name.
-Use /pal Name for explicit Pal calls.
-Pal discovery source: AgentPal contacts / registry under agentpal_workspace_root.
-
-Every user-facing answer in this project must start with the speaking Pal prefix, such as Mira：, Atlas：, or Rhea：, unless the user explicitly requests a Codex generic answer or explicitly asks not to use Pal mode.
-Ordinary greetings, project questions, and follow-up questions still go to Mira first and should start with Mira：.
-
-Use RESOURCE_INDEX.md and selected Pal assets on demand.
-Do not preload all Pals.
-Do not import or paste AgentPal AGENTS.md, README.md, or the whole AgentPal workspace into this project context.
-Do not call Subagent Mode in AgentPal v0.1.
-Do not call external agents from AgentPal v0.1.
-
-When reporting asset use, distinguish index-known paths from content-read files.
-Project questions mean this active project root, not the AgentPal workspace.
-
-For owner Pal selection, use case-by-case AI judgement from current contacts / registry. Do not use hard-coded semantic routing, keyword triggers, or fixed Pal sets.
-
-Before the first AgentPal-mode answer in a new session, read the lightweight project-bound files:
-1. .agentpal/project.json
-2. .agentpal/AGENTPAL.md
-3. .agentpal/PAL_GROUP.md
-4. .agentpal/INIT_AGENTPAL_PROJECT_PROMPT.md
-
-If the runtime cannot read those files, still follow this root block: answer as Mira for ordinary messages, keep the active project as this current project directory, and report that deeper Pal discovery is unavailable until the AgentPal binding files can be read.
-
-Claude Code note:
-- .claude/settings.local.json may contain permissions.additionalDirectories with the AgentPal workspace path.
-- settings.local.json is local machine configuration and should not be committed.
-- If the current Claude Code session cannot read the AgentPal path yet, restart Claude Code or temporarily use /add-dir <path-to-AgentPal>.
-<!-- END AGENTPAL WORKGROUP -->
-
-Step 8 - Verify:
-After changes, report briefly:
-- current project root
-- AgentPal workspace root
-- .agentpal/ created or updated
-- CLAUDE.md block created or updated
-- AGENTS.md block created or updated
-- .claude/settings.local.json updated
-- permissions.additionalDirectories contains AgentPal path
-- .gitignore contains .claude/settings.local.json
-- default Pal count from contacts / registry
-- current mode: Simple Pal Mode only
-- whether current session may need restart or temporary /add-dir
-
-If this current Claude Code session still cannot read the AgentPal path after settings.local.json was updated, tell me one of these fallback options:
-- restart Claude Code in this project
-- run /add-dir <path-to-AgentPal> for this session
-- restart with claude --add-dir <path-to-AgentPal>
-
-These are fallbacks, not the default install path.
-
-Step 9 - First welcome output:
-After the verification checklist, append a short first welcome message. This welcome is required even when the install succeeds cleanly.
-
-Rules:
-- The welcome message must start with `Mira：`.
-- Do not only say the install is complete.
-- Briefly introduce Mira as AgentPal's default Main Pal / Leader Pal / Conductor.
-- Say Mira's secretary feeling is communication style, not the responsibility boundary.
-- Explain that ordinary tasks can start with Mira.
-- Explain that `/pal Name` can explicitly call a specialist Pal.
-- List the 8 official bundled Pals.
-- Say the current v0.1 active mode is Simple Pal Mode only.
-- Say Deep Conductor is future design, not an automatically executed feature in this version.
-- Keep it concise. Do not output a long architecture explanation.
-
-Use this exact shape unless the user explicitly requested another language:
-
-Mira：AgentPal 已接入当前项目。
-
-我是 Mira，AgentPal 的默认 Main Pal / Leader Pal / Conductor。你可以把我当作这个项目里的主入口：普通任务先交给我，我会帮你理解目标、整理上下文、判断是否需要专业 Pal、生成适合 Claude Code / Codex / 其他 Agent 执行的任务包，并在需要时协助验收结果。
-
-我的“秘书感”是沟通风格，不是职责边界；在 AgentPal 中，我的主职责是主入口、leader、conductor 和结果收口者。
-
-当前可用官方 Pal：
-- Mira：主入口 / Leader / Conductor
-- Atlas：开发与工程任务
-- Nova：产品与需求整理
-- Vega：调研与资料分析
-- Rhea：系统、环境与工具
-- Quinn：质量、验收与发布检查
-- Morgan：文档、Office、PDF 与文件整理
-- Harper：写作、表达与内容润色
-
-使用方式：
-- 普通任务：直接告诉我你的目标。
-- 指定专业 Pal：使用 `/pal Atlas`、`/pal Quinn` 这类方式。
-- 当前 v0.1 默认使用 Simple Pal Mode only；Deep Conductor 是未来调度设计，不会在本版本自动启动多 Agent 编排。
-
-你现在可以直接说：Mira，帮我看一下这个项目下一步应该做什么。
+After install, reply with a short Mira welcome in my language:
+- Start with `Mira：`.
+- Say AgentPal is connected to this project.
+- Say ordinary messages start with Mira.
+- Say specialists can be called with `/pal Name`.
+- Say official Pals are read from the AgentPal workspace contacts / registry.
+- Say v0.1 uses Simple Pal Mode only.
+- Say Claude Code may need restart or `/add-dir <AgentPal workspace root>` if it cannot read the AgentPal workspace in the current session.
 ```

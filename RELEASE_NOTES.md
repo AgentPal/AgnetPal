@@ -35,6 +35,7 @@ This release is not a finished app or automation platform. It is not the right f
 ## What Is Included
 
 - AgentPal Workspace release assets: `AGENTS.md`, `PAL.md`, `SKILL.md`, `agentpal.json`, and the Codex initialization prompt at `prompts/codex/initialize-agentpal-workspace.md`.
+- Shared core gates under `core/` so Codex, Claude Code, generic CLI, and project-bound sessions read the same AgentPal rules.
 - Mira as the default Main Pal, Leader Pal, Conductor, and secretary-style coordinator.
 - Official bundled Pal Packs: Mira, Atlas, Vega, Rhea, Quinn, Morgan, Harper, and Nova.
 - Contacts and registry files for Pal discovery, aliases, and direct `/pal Name` calls.
@@ -45,9 +46,11 @@ This release is not a finished app or automation platform. It is not the right f
 - R33 PalBench small-sample smoke validation report.
 - Capability Inventory, Task Judgement, Workflow Topology, Context Access List, Pal Isolation, and Routing Reward Memory protocols as future-oriented design assets.
 - External project workgroup templates.
-- Claude Code one-prompt project install using `CLAUDE.md`, `AGENTS.md`, `.agentpal/`, and `.claude/settings.local.json`.
+- Thin external project workgroup templates that store pointers and minimal metadata instead of copying full AgentPal rules.
+- Claude Code one-prompt project install using thin `CLAUDE.md`, `AGENTS.md`, `.agentpal/`, and `.claude/settings.local.json`.
 - Claude Code install first welcome output: a `Mira：` welcome that introduces Mira as Main Pal / Leader Pal / Conductor, lists the official Pal set, and explains `/pal Name`.
 - Generic CLI Agent one-prompt project install using `AGENTS.md` and `.agentpal/`.
+- Runtime adapter thin binding examples and self-tests.
 - Public-safe examples, evals, prompts, templates, release notes, checklist, and contribution guidance.
 
 ## What Is Not Included

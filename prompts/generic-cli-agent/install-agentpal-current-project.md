@@ -1,132 +1,64 @@
-# Generic CLI Agent One-Prompt AgentPal Project Install
+# Generic CLI Agent Install AgentPal In Current Project
 
-Copy this prompt into a Markdown/JSON-capable CLI Agent while your shell is already inside the target project directory.
+Use this with a Markdown/JSON-capable CLI Agent while your shell is inside an external user project.
 
-Before pasting, replace `AGENTPAL_HOME = <replace-with-your-AgentPal-path>` with your real AgentPal Workspace path, for example `AGENTPAL_HOME = D:/Tools/AgentPal` or `AGENTPAL_HOME = /Users/you/AgentPal`.
+This is a thin binding prompt. It does not copy AgentPal rules, Pals, protocols, docs, examples, evals, or release files into the project.
 
 ```text
-Please connect AgentPal to the current project.
+Connect the current project to AgentPal for a generic CLI Agent.
 
-AGENTPAL_HOME = <replace-with-your-AgentPal-path>
+Inputs:
+- current project root: the current working directory
+- AgentPal workspace root: ask me if it is not already known
 
-This is a generic CLI Agent install path for runtimes such as CodeWhale, Gemini CLI, or another Markdown/JSON-capable Agent Runtime.
+Hard boundaries:
+- Do not scan the whole disk.
+- Do not create Claude-specific files.
+- Do not copy AgentPal Pal Packs, docs, protocols, examples, evals, or release notes into this project.
+- Do not create runtime code, scripts, services, daemons, installers, or UI.
+- Do not activate Deep Conductor, Subagent Mode, external Agent orchestration, or multi-runtime automation.
 
-AgentPal is a Pal layer, not an Agent layer, not a multi-agent runtime, and not an execution layer.
-Current mode: Simple Pal Mode only.
+Create or update only the thin binding:
+1. `.agentpal/project.json`
+2. `.agentpal/AGENTPAL.md`
+3. root `AGENTS.md` protected block
 
-Do not call Subagent Mode.
-Do not call external agents.
-Do not create scripts, installers, CLIs, daemons, scanners, validators, or runtime dependencies.
+The binding must say that AgentPal rules are read from the AgentPal workspace root.
 
-Step 1 - Confirm current project root:
-- Treat the current working directory as the target user project.
-- If the current directory appears to be the AgentPal workspace itself, stop and tell me to cd into my target project first.
-- AgentPal workspace indicators: agentpal.json, prompts/codex/initialize-agentpal-workspace.md, pals/Mira-main/, contacts/pals.json.
+Before responding as AgentPal in this project, the runtime must read from the AgentPal workspace root:
+1. core/agentpal-core-gate.md
+2. core/first-pal-gate.md
+3. core/simple-pal-mode-runtime-contract.md
+4. core/deliverable-aware-task-judgement-gate.md
+5. core/main-pal-conductor-gate.md
+6. core/runtime-adapter-shared-contract.md
+7. core/project-binding-thin-contract.md
+8. core/runtime-response-gate.md
+9. contacts/pals.json
+10. registry/pal.index.json
+11. pals/Mira-main/PAL.md
+12. pals/Mira-main/core/output-contract.md
 
-Step 2 - Resolve and verify AgentPal path:
-Use AGENTPAL_HOME above if it is not a placeholder.
-If missing, try only:
-1. current project .agentpal/project.json -> agentpal_workspace_root
-2. environment variable AGENTPAL_HOME
-3. current project parent or sibling directory named AgentPal or agentpal
-4. common examples only as examples, not a full disk scan
+Use `templates/project-binding/root-agents-agentpal-block-template.md` from the AgentPal workspace as the protected block shape.
 
-Verify the AgentPal path contains:
-- README.md
-- prompts/codex/initialize-agentpal-workspace.md
-- agentpal.json
-- RESOURCE_INDEX.md
-- contacts/pals.json
-- registry/pal.index.json
-- pals/Mira-main/PAL.md
+Use `projects/project-workgroup-template/agentpal/` from the AgentPal workspace only as the thin `.agentpal/` template. Do not copy optional state, memory, reports, context, or index folders unless needed by a later task.
 
-If verification fails, stop and ask me for the AgentPal path.
-
-Step 3 - Create or update .agentpal/:
-Create or update:
-- .agentpal/project.json
-- .agentpal/AGENTPAL.md
-- .agentpal/PAL_GROUP.md
-- .agentpal/INIT_AGENTPAL_PROJECT_PROMPT.md
-- .agentpal/context/README.md
-- .agentpal/index/README.md
-- .agentpal/memory/README.md
-- .agentpal/state/README.md
-
-.agentpal/project.json must include:
-- schema: agentpal.project.v0.1
-- active_project_root: current project root
-- agentpal_workspace_root: resolved AgentPal path
-- runtime: generic-cli
+For `.agentpal/project.json`, include at least:
+- schema
+- binding_version
+- active_project_root
+- agentpal_workspace_root
 - runtime_hint: generic-cli
-- mode: simple-pal-mode-only
-- agentpal_is_pal_layer: true
-- created_by: agentpal-one-prompt-install
-- version: v0.1.0-rc.1
+- active_mode: simple-pal-mode-only
+- read_core_from_agentpal_workspace: true
+- core_gate_paths
+- pal_source_of_truth
 
-Step 4 - Create or update AGENTS.md:
-If AGENTS.md does not exist, create it.
-If it exists, preserve user-authored content and replace only the block between:
-<!-- BEGIN AGENTPAL WORKGROUP -->
-<!-- END AGENTPAL WORKGROUP -->
-
-Use this lightweight block:
-
-<!-- BEGIN AGENTPAL WORKGROUP -->
-This project is connected to AgentPal.
-
-This block is managed by AgentPal.
-When removing the AgentPal workgroup, delete only this block.
-Do not delete user-authored AGENTS.md content outside this block.
-
-Runtime hint: generic-cli
-
-AgentPal is a Pal layer, not an Agent runtime, not a multi-agent runtime, and not an execution layer.
-Current mode: Simple Pal Mode only.
-
-AgentPal project-bound mode is active for this project whenever this block is present.
-
-Active project root: this current project directory.
-AgentPal workspace root: <path-to-AgentPal>
-
-Mira is the default Main Pal, Leader Pal, and Conductor. Ordinary messages should be treated as going to Mira first.
-Use /pal Name for explicit Pal calls.
-Pal discovery source: AgentPal contacts / registry under agentpal_workspace_root.
-
-Every user-facing answer in this project must start with the speaking Pal prefix, such as Mira：, Atlas：, or Rhea：, unless the user explicitly requests a Codex generic answer or explicitly asks not to use Pal mode.
-Ordinary greetings, project questions, and follow-up questions still go to Mira first and should start with Mira：.
-
-Use RESOURCE_INDEX.md and selected Pal assets on demand.
-Do not preload all Pals.
-Do not import or paste AgentPal AGENTS.md, README.md, or the whole AgentPal workspace into this project context.
-Do not call Subagent Mode in AgentPal v0.1.
-Do not call external agents from AgentPal v0.1.
-
-When reporting asset use, distinguish index-known paths from content-read files.
-Project questions mean this active project root, not the AgentPal workspace.
-
-For owner Pal selection, use case-by-case AI judgement from current contacts / registry. Do not use hard-coded semantic routing, keyword triggers, or fixed Pal sets.
-
-Before the first AgentPal-mode answer in a new session, read the lightweight project-bound files:
-1. .agentpal/project.json
-2. .agentpal/AGENTPAL.md
-3. .agentpal/PAL_GROUP.md
-4. .agentpal/INIT_AGENTPAL_PROJECT_PROMPT.md
-
-If the runtime cannot read those files, still follow this root block: answer as Mira for ordinary messages, keep the active project as this current project directory, and report that deeper Pal discovery is unavailable until the AgentPal binding files can be read.
-<!-- END AGENTPAL WORKGROUP -->
-
-Step 5 - Optional runtime-specific notes:
-Do not create CLAUDE.md unless Claude Code is detected or I explicitly ask.
-Do not create GEMINI.md, CODEWHALE.md, or other runtime-specific files unless the project already uses that standard or I ask for it.
-
-Step 6 - Verify:
-Report briefly:
-- current project root
-- AgentPal workspace root
-- .agentpal/ created or updated
-- AGENTS.md block created or updated
-- default Pal count from contacts / registry
-- current mode: Simple Pal Mode only
-- no Subagent Mode or external Agent orchestration activated
+After install, reply with a short Mira welcome in my language:
+- Start with `Mira：`.
+- Say AgentPal is connected to this project.
+- Say ordinary messages start with Mira.
+- Say specialists can be called with `/pal Name`.
+- Say official Pals are read from the AgentPal workspace contacts / registry.
+- Say v0.1 uses Simple Pal Mode only.
 ```

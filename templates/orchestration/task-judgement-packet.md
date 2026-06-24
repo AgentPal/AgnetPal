@@ -5,6 +5,11 @@ Use this template when a task needs explicit scheduling judgement. It is optiona
 ```yaml
 schema: agentpal.task-judgement.v0.1
 task_goal:
+first_pal:
+  name:
+  role: main_pal | directly_called_pal | current_owner_pal
+  first_decomposition_complete: false
+  clarification_before_stage_owners: false
 domain_focus:
 deliverables:
   content_deliverables:
@@ -36,6 +41,10 @@ work_stages:
     stage_goal:
     capability_needs:
       - need:
+    selected_stage_owner_pal:
+      pal_id:
+      status: selected | provisional | owner_gap
+      why:
     pal_candidates:
       - pal_id:
         candidate_role: content_stage_owner | implementation_stage_owner | verifier | consultant | conductor
@@ -87,4 +96,6 @@ do_not_do:
   - do_not_use_keyword_routing
   - do_not_collapse_multi_stage_task_to_domain_owner
   - do_not_let_runtime_bypass_pal_layer
+  - do_not_ask_only_clarifying_questions_before_stage_owner_pals
+  - do_not_leave_implementation_stage_owned_by_runtime_only
 ```

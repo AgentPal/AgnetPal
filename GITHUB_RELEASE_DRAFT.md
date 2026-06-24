@@ -10,10 +10,12 @@ It is not an Agent layer, not a multi-agent runtime, and not an execution layer.
 
 - AgentPal Workspace root files for initialization and release-safe navigation.
 - Simple Pal Mode as the only active task-handling path in v0.1.0-rc.1.
+- Shared `core/` gates for Codex, Claude Code, generic CLI, and project-bound runtime adapters.
 - Mira as the default Main Pal, Leader Pal, Conductor, and secretary-style coordinator.
 - Official bundled Pal Packs: Mira, Atlas, Vega, Rhea, Quinn, Morgan, Harper, and Nova.
 - Contacts and registry files as the source of truth for Pal discovery and `/pal Name` direct calls.
 - Runtime Response Gate, AI routing judgement, Pal context slicing, asset loading budget, memory boundary, and Task Package output contract protocols.
+- Thin project binding contracts that point external projects back to the AgentPal workspace instead of copying full rules.
 - Fast Route as the current clear-task handoff pattern, with Deep Conductor documented as future complex-workflow design only.
 - R33 small-sample PalBench smoke validation for observed workflow benefits.
 - Public-safe release evidence under `release/v0.1.0-rc.1/`.

@@ -19,9 +19,11 @@ Initial public release candidate for AgentPal as a Pal layer and Pal Pack Standa
 - AgentPal orchestration methodology, PalBench design, and future-oriented Capability Inventory / Context Access List / Pal Isolation / Shared Memory / Routing Reward Memory protocols.
 - Capability profile templates, orchestration templates, PalBench eval drafts, and orchestration examples.
 - External project workgroup binding templates for connecting AgentPal to a user project without treating the AgentPal Workspace as that project.
+- Shared AgentPal core gates under `core/` so Runtime adapters can use thin binding instead of duplicating full rules.
 - Claude Code one-prompt project install prompts for project-local setup through `.agentpal/`, `CLAUDE.md`, `AGENTS.md`, and `.claude/settings.local.json`.
 - Claude Code post-install Mira welcome output with fixed `Mira：` prefix, Main Pal / Leader Pal / Conductor identity, official Pal list, and Simple Pal Mode reminder.
 - Generic CLI Agent one-prompt install prompts through `.agentpal/` and `AGENTS.md`.
+- Runtime adapter thin binding examples and evals for Codex, Claude Code, and generic CLI consistency.
 - Public release files: `CONTRIBUTING.md`, `RELEASE_NOTES.md`, `GITHUB_RELEASE_DRAFT.md`, `RELEASE_CHECKLIST.md`, `RESOURCE_INDEX.md`, `THIRD_PARTY_NOTICES.md`, and MIT `LICENSE`.
 
 ### Clarified
@@ -34,3 +36,4 @@ Initial public release candidate for AgentPal as a Pal layer and Pal Pack Standa
 - R33 PalBench observations are small-sample smoke evidence, not statistical benchmark claims and not underlying-model comparisons.
 - Private memory, private state, real reports, secrets, and internal development notes must not be published.
 - `claude --add-dir` is an optional fallback / advanced path; Claude Code users can start from `cd <your-project>` and use the one-prompt install.
+- Runtime adapter prompts should point to shared core gates rather than keeping independent copies of First Pal Gate, Deliverable-aware Task Judgement, or Pal roster rules.

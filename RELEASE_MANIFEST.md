@@ -26,11 +26,13 @@ Included:
 - Codex initialization prompt: `prompts/codex/initialize-agentpal-workspace.md`
 - public release docs: `README.md`, `README.zh-CN.md`, `RELEASE_NOTES.md`, `CHANGELOG.md`, `GITHUB_RELEASE_DRAFT.md`, `RELEASE_CHECKLIST.md`, `CONTRIBUTING.md`, `THIRD_PARTY_NOTICES.md`, and this manifest
 - navigation index: `RESOURCE_INDEX.md`
+- shared core gates under `core/` for Codex, Claude Code, generic CLI, and project-bound sessions
 - official bundled Pal Packs under `pals/`
 - contacts and registry files under `contacts/` and `registry/`
 - orchestration protocols, templates, examples, evals, prompts, runtime compatibility notes, capability profiles, and research docs
 - deliverable-aware task judgement protocol, staged Task Package example, failure regression example, and orchestration self-test
-- external project binding templates and Claude Code / generic CLI Agent one-prompt setup prompts
+- thin external project binding templates and Claude Code / generic CLI Agent one-prompt setup prompts
+- runtime-adapter thin binding examples and self-tests
 - Claude Code post-install Mira welcome output requirements
 - release evidence drafts under `release/v0.1.0-rc.1/`
 
@@ -39,6 +41,7 @@ Not included:
 - desktop app, web UI, daemon, service, scanner, validator, installer, or required runtime dependency
 - active Subagent Mode, active Deep Conductor execution, remote Agent orchestration, MCP-hosted Agent execution, or marketplace runtime
 - private user memory, private project state, real customer data, real secrets, local machine paths, copied internal development reports, temporary screenshots, or temporary pasted text attachments
+- copied full AgentPal rule bodies, full Pal rosters, full protocols, release docs, examples, or evals inside external project bindings
 
 ## Official Pal Pack Set
 

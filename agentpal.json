@@ -172,6 +172,12 @@
     "pal_capability_reference_is_not_route_map": true
   },
   "runtime_response_gate": {
+    "core_gate": "core/agentpal-core-gate.md",
+    "core_runtime_response_gate": "core/runtime-response-gate.md",
+    "first_pal_gate": "core/first-pal-gate.md",
+    "deliverable_aware_gate": "core/deliverable-aware-task-judgement-gate.md",
+    "runtime_adapter_shared_contract": "core/runtime-adapter-shared-contract.md",
+    "project_binding_thin_contract": "core/project-binding-thin-contract.md",
     "protocol": "orchestration/runtime-response-gate.md",
     "ai_routing_judgement_protocol": "orchestration/ai-routing-judgement-protocol.md",
     "must_run_before_every_answer": true,
@@ -261,13 +267,18 @@
       "agentpal_workspace_minimum_files": [
         "AGENTS.md",
         "prompts/codex/initialize-agentpal-workspace.md",
-        "agentpal.json",
+        "core/agentpal-core-gate.md",
+        "core/first-pal-gate.md",
+        "core/simple-pal-mode-runtime-contract.md",
+        "core/deliverable-aware-task-judgement-gate.md",
+        "core/main-pal-conductor-gate.md",
+        "core/runtime-adapter-shared-contract.md",
+        "core/project-binding-thin-contract.md",
+        "core/runtime-response-gate.md",
         "contacts/pals.json",
         "registry/pal.index.json",
         "pals/Mira-main/PAL.md",
-        "pals/Mira-main/AGENTS.md",
-        "pals/Mira-main/SKILL.md",
-        "orchestration/runtime-response-gate.md"
+        "pals/Mira-main/core/output-contract.md"
       ],
       "external_project_binding_files_if_present": [
         "AGENTS.md",
@@ -416,6 +427,28 @@
   "project_workgroup": {
     "enabled": true,
     "binding_dir": ".agentpal",
+    "binding_style": "thin-binding",
+    "read_core_from_agentpal_workspace": true,
+    "core_gate_paths": [
+      "core/agentpal-core-gate.md",
+      "core/first-pal-gate.md",
+      "core/simple-pal-mode-runtime-contract.md",
+      "core/deliverable-aware-task-judgement-gate.md",
+      "core/main-pal-conductor-gate.md",
+      "core/runtime-adapter-shared-contract.md",
+      "core/project-binding-thin-contract.md",
+      "core/runtime-response-gate.md"
+    ],
+    "do_not_copy_into_project_binding": [
+      "full-pal-list-as-source-of-truth",
+      "full-mira-assets",
+      "full-orchestration-protocols",
+      "full-docs",
+      "examples",
+      "evals",
+      "release-notes",
+      "palbench-reports"
+    ],
     "default_project_listener": "Mira",
     "one_prompt_project_install": {
       "claude_code": {

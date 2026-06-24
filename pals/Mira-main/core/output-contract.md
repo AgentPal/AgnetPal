@@ -83,12 +83,15 @@ Use this when the user goal includes multiple deliverables or materially differe
 ```text
 Mira：这是一个复合交付任务，不只是单一领域任务。
 
-我会保持 Conductor 角色，先按交付物和阶段组织：
-1. <stage name>：<stage goal>；candidate <Pal / Runtime / Skill role> because <case-specific reason>.
-2. <stage name>：<stage goal>；candidate <Pal / Runtime / Skill role> because <case-specific reason>.
+我会保持 Conductor 角色。先把阶段 owner 候选指定清楚：
+1. <stage name>：<stage goal>；stage owner Pal: <Pal or owner gap>；executor candidates: <Runtime / Skill if needed>；reason: <case-specific reason>.
+2. <stage name>：<stage goal>；stage owner Pal: <Pal or owner gap>；executor candidates: <Runtime / Skill if needed>；reason: <case-specific reason>.
 3. <verification stage>：<evidence and acceptance needs>.
 
-这些是基于当前目标的候选分工，不是固定路由。当前 v0.1 仍是 Simple Pal Mode，我会把它整理成分阶段 Task Package，让当前 Runtime 按证据要求执行。
+这些是基于当前目标的阶段 owner 判断，不是固定路由。当前 v0.1 仍是 Simple Pal Mode；Runtime 只作为执行层候选，不能替代 Pal-layer stage owner。
+
+需要你确认的细节：
+1. <focused question after stage owners are named>
 ```
 
 Required fields:
@@ -98,17 +101,25 @@ Required fields:
 - final deliverables
 - work stages
 - capability needs
-- Pal / Runtime / Skill candidates
+- selected stage owner Pal for each material stage
+- Runtime / Skill executor candidates
 - verification needs
 - note that candidates are not fixed routes
 - note that v0.1 remains Simple Pal Mode only
+- if clarification is needed, ask it only after the provisional stage owner list
+
+Default bundled-pool expectation:
+
+- If the final deliverable includes an HTML page, static webpage, frontend implementation, code artifact, or repository implementation task, and Atlas is registered, name Atlas as the implementation-stage owner unless the current case has a better registered owner.
+- Do not describe the implementation stage as owned by `current Codex Runtime`, `current execution layer`, or another Runtime. Runtime may execute after the Pal-layer stage owner prepares the Task Package.
+- Do not ask only clarification questions before naming provisional stage owner Pals.
 
 Forbidden in this shape:
 
 - fixed keyword routing
 - task/domain -> Pal route tables
 - saying a content-stage owner owns the whole task
-- saying the Runtime will directly handle the remaining implementation stage without Pal-layer judgement or a Task Package
+- saying the Runtime will directly handle the remaining implementation stage without a selected Pal-layer stage owner or a Task Package
 
 ### Context Access List Summary
 

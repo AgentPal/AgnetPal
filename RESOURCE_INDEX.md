@@ -10,13 +10,16 @@ Use the short initialization path by default:
 
 - `AGENTS.md`
 - `prompts/codex/initialize-agentpal-workspace.md`
-- `agentpal.json`
+- `core/agentpal-core-gate.md`
+- `core/first-pal-gate.md`
+- `core/simple-pal-mode-runtime-contract.md`
+- `core/deliverable-aware-task-judgement-gate.md`
+- `core/main-pal-conductor-gate.md`
+- `core/runtime-adapter-shared-contract.md`
 - `contacts/pals.json`
 - `registry/pal.index.json`
 - `pals/Mira-main/PAL.md`
-- `pals/Mira-main/AGENTS.md`
-- `pals/Mira-main/SKILL.md`
-- `orchestration/runtime-response-gate.md`
+- `pals/Mira-main/core/output-contract.md`
 
 If an external project is already bound to AgentPal, project-side `.agentpal/` binding files may be read first when they exist. They are binding context, not permission to treat the AgentPal Workspace as the user project.
 
@@ -50,6 +53,19 @@ Use:
 | `LICENSE` | MIT License | release validation |
 | `.gitignore` | public-safe ignore rules | release validation |
 
+## Core Gates
+
+| Path | Purpose |
+| --- | --- |
+| `core/agentpal-core-gate.md` | shared first-read gate for Runtime adapters |
+| `core/first-pal-gate.md` | First Pal task and composite deliverable gate |
+| `core/simple-pal-mode-runtime-contract.md` | Simple Pal Mode and future-boundary contract |
+| `core/deliverable-aware-task-judgement-gate.md` | shared deliverable-aware Task Judgement gate |
+| `core/main-pal-conductor-gate.md` | Mira Main Pal / Conductor boundary |
+| `core/runtime-adapter-shared-contract.md` | thin adapter contract for Codex, Claude Code, and generic CLI |
+| `core/project-binding-thin-contract.md` | minimal external project binding contract |
+| `core/runtime-response-gate.md` | core pointer to detailed response gate |
+
 ## Main Directories
 
 | Directory | Purpose | Default Loading |
@@ -57,6 +73,7 @@ Use:
 | `pals/` | official and user-added Pal Pack pool | selected Pal only |
 | `contacts/` | Pal contact source of truth | routing and discovery |
 | `registry/` | Pal and resource indexes | routing and selected navigation |
+| `core/` | shared AgentPal core gates | runtime adapter and project binding bootstrap |
 | `orchestration/` | current protocols and future-design notes | selected current protocols only |
 | `templates/` | reusable Context Packet, output, binding, and task templates | selected template only |
 | `prompts/` | copyable maintenance and setup prompts | when running that prompt flow |
@@ -165,6 +182,20 @@ Use the current docs directories as the public entry points. Archived research n
 | `examples/orchestration/deliverable-aware-task-judgement-example.md` | staged Task Package example for composite deliverables |
 | `examples/failures/domain-only-owner-handoff.md` | regression example for domain-only owner handoff |
 | `evals/orchestration/deliverable-aware-task-judgement-self-test.md` | self-test for Mira, direct Atlas, and direct Vega composite task handling |
+
+## Runtime Adapter Thin Binding References
+
+| Path | Purpose |
+| --- | --- |
+| `examples/runtime-adapters/thin-binding-project-example.md` | expected thin project binding shape |
+| `examples/runtime-adapters/core-gate-shared-by-codex-claude-generic.md` | shared core gate example across adapters |
+| `examples/failures/stale-project-copied-pal-list.md` | failure example for copied Pal rosters |
+| `examples/failures/runtime-adapter-rule-drift.md` | failure example for adapter rule drift |
+| `evals/runtime-adapters/thin-binding-core-gate-self-test.md` | thin binding self-test |
+| `evals/runtime-adapters/core-gate-update-propagation-self-test.md` | core gate propagation self-test |
+| `evals/runtime-adapters/no-stale-pal-list-in-project-binding-self-test.md` | stale Pal list self-test |
+| `evals/runtime-adapters/claude-code-thin-binding-self-test.md` | Claude Code thin binding self-test |
+| `evals/runtime-adapters/generic-cli-thin-binding-self-test.md` | Generic CLI thin binding self-test |
 
 ## Mira Conductor References
 
