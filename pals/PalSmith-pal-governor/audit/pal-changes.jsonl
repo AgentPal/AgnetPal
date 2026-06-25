@@ -1,1 +1,0 @@
-{"schema":"agentpal.audit.pal-change.v0.1","example":true,"operation":"pal-change","permission_level":"L2","target_pal":"example-pal","affected_paths":["pals/example-pal/PAL.md"],"runtime_evidence":"example only","private_data_included":false}

@@ -12,7 +12,7 @@ Verify that contacts, registry, mention aliases, and Mira's default Pal map agre
 ## Manual Steps
 
 1. Compare `contacts/pals.json` with `registry/pal.index.json`.
-2. Confirm both contain Mira plus eight official specialist Pals.
+2. Confirm both contain Mira plus seven official specialist Pals.
 3. Confirm each id, display name, directory name, path, and direct call match.
 4. Confirm each path exists under `pals/`.
 5. Confirm `contacts/mention-aliases.md` lists `/pal Name` calls.

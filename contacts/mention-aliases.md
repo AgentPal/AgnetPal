@@ -10,7 +10,6 @@ Use display names for direct Pal calls.
 | `/pal Atlas` | Atlas | consult by default |
 | `/pal Vega` | Vega | consult by default |
 | `/pal Rhea` | Rhea | consult by default |
-| `/pal PalSmith` | PalSmith | consult by default |
 | `/pal Quinn` | Quinn | consult by default |
 | `/pal Morgan` | Morgan | consult by default |
 | `/pal Harper` | Harper | consult by default |
@@ -32,12 +31,6 @@ Use display names for direct Pal calls.
 | `@Rhea` | Rhea |
 | `@rhea` | Rhea |
 | `@瑞亚` | Rhea |
-| `@PalSmith` | PalSmith |
-| `@palsmith` | PalSmith |
-| `@帕匠` | PalSmith |
-| `@Pal 创建师` | PalSmith |
-| `@Pal创建师` | PalSmith |
-| `@Pal管家` | PalSmith |
 | `@Quinn` | Quinn |
 | `@quinn` | Quinn |
 | `@昆恩` | Quinn |

@@ -31,7 +31,7 @@ This release is not suitable if you need:
 - initialization prompt for Codex / Claude Code style runtimes
 - `agentpal.json` workspace manifest
 - contacts and registry files for Pal discovery
-- nine official public Pal Packs: Mira, Atlas, Vega, Rhea, PalSmith, Quinn, Morgan, Harper, and Nova
+- eight official public Pal Packs: Mira, Atlas, Vega, Rhea, Quinn, Morgan, Harper, and Nova
 - Pal Pack Standard documentation
 - release maintenance and public-safe checklist docs
 - public examples, evals, prompts, templates, and protocols

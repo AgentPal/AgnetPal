@@ -6,13 +6,12 @@
 
 ## Scope
 
-This audit covers the nine official Pal Packs bundled in AgentPal v0.1.0-rc.1:
+This audit covers the eight official Pal Packs bundled in AgentPal v0.1.0-rc.1:
 
 - Mira
 - Atlas
 - Vega
 - Rhea
-- PalSmith
 - Quinn
 - Morgan
 - Harper
@@ -22,7 +21,7 @@ The audit checks structure, JSON validity, memory/state/report boundaries, examp
 
 ## Required Files
 
-All nine official Pal Packs were checked for:
+All eight official Pal Packs were checked for:
 
 - `PAL.md`
 - `pal.json`
@@ -37,7 +36,6 @@ All nine official Pal Packs were checked for:
 | Atlas | `pals/Atlas-developer` | Pass | Pass |
 | Vega | `pals/Vega-research` | Pass | Pass |
 | Rhea | `pals/Rhea-system` | Pass | Pass |
-| PalSmith | `pals/PalSmith-pal-governor` | Pass | Pass |
 | Quinn | `pals/Quinn-quality` | Pass | Pass |
 | Morgan | `pals/Morgan-document` | Pass | Pass |
 | Harper | `pals/Harper-writing` | Pass | Pass |
@@ -77,8 +75,8 @@ Manual caution:
 
 The official Pal IDs are synchronized:
 
-- contacts count: 9
-- registry count: 9
+- contacts count: 8
+- registry count: 8
 - missing in registry: none
 - missing in contacts: none
 

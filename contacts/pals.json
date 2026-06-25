@@ -102,32 +102,6 @@
       ]
     },
     {
-      "id": "palsmith-pal-governor",
-      "display_name": "PalSmith",
-      "directory_name": "PalSmith-pal-governor",
-      "path": "pals/PalSmith-pal-governor",
-      "role": "pal-asset-governor",
-      "type": "pal-pack",
-      "is_main_pal": false,
-      "aliases": [
-        "PalSmith",
-        "palsmith",
-        "帕匠",
-        "Pal 创建师",
-        "Pal管家"
-      ],
-      "direct_call": "/pal PalSmith",
-      "discoverable": true,
-      "contactable": true,
-      "allowed_modes": [
-        "consult",
-        "delegate",
-        "handoff",
-        "review",
-        "joint_work"
-      ]
-    },
-    {
       "id": "quinn-quality",
       "display_name": "Quinn",
       "directory_name": "Quinn-quality",

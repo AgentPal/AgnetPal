@@ -1,6 +1,6 @@
 # Official Pal Slim Structure Self-Test
 
-Purpose: verify that the eight official specialist Pals are slim embedded AgentPal modules, not standalone repositories.
+Purpose: verify that the seven official specialist Pals are slim embedded AgentPal modules, not standalone repositories.
 
 ## Scope
 
@@ -10,7 +10,6 @@ Check:
 - `pals/Nova-product`
 - `pals/Quinn-quality`
 - `pals/Rhea-system`
-- `pals/PalSmith-pal-governor`
 - `pals/Vega-research`
 - `pals/Morgan-document`
 - `pals/Harper-writing`
@@ -55,7 +54,7 @@ Each specialist Pal must not contain duplicate system-layer directories:
 - `registry/`
 - `runtime/`
 
-Atlas, Nova, Quinn, Rhea, PalSmith, Vega, Morgan, and Harper must not contain placeholder `tools/` folders.
+Atlas, Nova, Quinn, Rhea, Vega, Morgan, and Harper must not contain placeholder `tools/` folders.
 
 Specialist Pal directories must not contain runtime tool engines by default. Optional Pal-owned tool assets belong in separate Pal Packs or future extension packages, not in the v0.1 bundled Pal set.
 
