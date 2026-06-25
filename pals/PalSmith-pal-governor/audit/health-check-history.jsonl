@@ -1,0 +1,1 @@
+{"schema":"agentpal.audit.health-check.v0.1","example":true,"operation":"health-check","target":"example-pal","permission_level":"L0","health_score":100,"writes_performed":false}

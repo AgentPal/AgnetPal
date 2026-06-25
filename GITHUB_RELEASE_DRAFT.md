@@ -12,7 +12,7 @@ It is not an Agent layer, not a multi-agent runtime, and not an execution layer.
 - Simple Pal Mode as the only active task-handling path in v0.1.0-rc.1.
 - Shared `core/` gates for Codex, Claude Code, generic CLI, and project-bound runtime adapters.
 - Mira as the default Main Pal, Leader Pal, Conductor, and Pal team leader and coordinator.
-- Official bundled Pal Packs: Mira, Atlas, Vega, Rhea, Quinn, Morgan, Harper, and Nova.
+- Official bundled Pal Packs: Mira, Atlas, Vega, Rhea, PalSmith, Quinn, Morgan, Harper, and Nova.
 - Contacts and registry files as the source of truth for Pal discovery and `/pal Name` direct calls.
 - Runtime Response Gate, AI routing judgement, Pal context slicing, asset loading budget, memory boundary, and Task Package output contract protocols.
 - Thin project binding contracts that point external projects back to the AgentPal workspace instead of copying full rules.

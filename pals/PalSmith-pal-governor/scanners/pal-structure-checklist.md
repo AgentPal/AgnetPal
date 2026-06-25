@@ -1,0 +1,22 @@
+# Pal Structure Checklist
+
+- [ ] `PAL.md`
+- [ ] `pal.json`
+- [ ] `SKILL.md`
+- [ ] `AGENTS.md`
+- [ ] `README.md`
+- [ ] `core/output-contract.md`
+- [ ] `core/task-loop.md`
+- [ ] `identity/persona.md`
+- [ ] `identity/boundaries.md`
+- [ ] `identity/voice.md`
+- [ ] `knowledge/index.md`
+- [ ] `skills/index.md`
+- [ ] `runbooks/index.md`
+- [ ] `workflows/index.md`
+- [ ] `memory/README.md` or `memory/user/README.md`
+- [ ] `state/README.md`
+- [ ] `reports/README.md`
+- [ ] `evals/definition-of-done.md`
+- [ ] no private memory in public files
+- [ ] contacts / registry updated only for valid Pal Packs

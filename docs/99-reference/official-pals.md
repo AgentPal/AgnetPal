@@ -1,6 +1,6 @@
 # Official Bundled Pals
 
-AgentPal v0.1.0-rc.1 includes Mira plus seven official bundled specialist Pal Packs.
+AgentPal v0.1.0-rc.1 includes Mira plus eight official bundled specialist Pal Packs.
 
 The official list below is a contacts and registry display, not a route map. Owner selection is case-by-case AI judgement. Individual Pal Packs should not maintain hard-coded route maps for other Pals.
 
@@ -10,6 +10,7 @@ The official list below is a contacts and registry display, not a route map. Own
 | Atlas | `atlas-developer` | `pals/Atlas-developer` | Development perspective | `/pal Atlas` |
 | Vega | `vega-research` | `pals/Vega-research` | Research and evidence perspective | `/pal Vega` |
 | Rhea | `rhea-system` | `pals/Rhea-system` | Local system and environment perspective | `/pal Rhea` |
+| PalSmith | `palsmith-pal-governor` | `pals/PalSmith-pal-governor` | Pal asset governance, creation, health, import/export, versioning and privacy perspective | `/pal PalSmith` |
 | Quinn | `quinn-quality` | `pals/Quinn-quality` | Quality, risk, evidence, and acceptance perspective | `/pal Quinn` |
 | Morgan | `morgan-document` | `pals/Morgan-document` | Document and file workflow perspective | `/pal Morgan` |
 | Harper | `harper-writing` | `pals/Harper-writing` | Writing and communication perspective | `/pal Harper` |

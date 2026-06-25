@@ -34,7 +34,7 @@ The name Pal means a memorable working companion, not a tool name. In AgentPal, 
 Learn more about Pal:
 
 - [Why Pal?](docs/01-concepts/07-why-pal.md)
-- [Pal Teams and Deep Conductor](docs/05-orchestration-methodology/11-pal-teams-and-deep-conductor.md)
+- [Pal Teams, Multi-Pal Collaboration, and Deep Conductor](docs/01-concepts/08-pal-teams-collaboration-and-deep-conductor.md)
 
 ## What Works Today
 
@@ -43,7 +43,7 @@ AgentPal v0.1.0-rc.1 currently provides:
 - Markdown / JSON / protocol workspace assets
 - Simple Pal Mode only
 - Mira as the default Main Pal / Leader / Conductor
-- 8 official bundled Pals
+- 9 official bundled Pals
 - `/pal Name` explicit Pal calls
 - Fast Route for clear owner-Pal handoff
 - Task Package rules
@@ -134,6 +134,7 @@ Most users run AgentPal from an external project during daily work. Pal registra
 | Nova | Product and requirements | `/pal Nova` |
 | Vega | Research and analysis | `/pal Vega` |
 | Rhea | System, environment, and tools | `/pal Rhea` |
+| PalSmith | Pal creation, governance, import/export, health checks, and versioning | `/pal PalSmith` |
 | Quinn | Quality, verification, and release checks | `/pal Quinn` |
 | Morgan | Documents, Office, PDF, and file work | `/pal Morgan` |
 | Harper | Writing, communication, and editing | `/pal Harper` |

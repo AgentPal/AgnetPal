@@ -37,7 +37,7 @@ This release is not a finished app or automation platform. It is not the right f
 - AgentPal Workspace release assets: `AGENTS.md`, `PAL.md`, `SKILL.md`, `agentpal.json`, and the Codex initialization prompt at `prompts/codex/initialize-agentpal-workspace.md`.
 - Shared core gates under `core/` so Codex, Claude Code, generic CLI, and project-bound sessions read the same AgentPal rules.
 - Mira as the default Main Pal, Leader Pal, Conductor, and Pal team leader and coordinator.
-- Official bundled Pal Packs: Mira, Atlas, Vega, Rhea, Quinn, Morgan, Harper, and Nova.
+- Official bundled Pal Packs: Mira, Atlas, Vega, Rhea, PalSmith, Quinn, Morgan, Harper, and Nova.
 - Contacts and registry files for Pal discovery, aliases, and direct `/pal Name` calls.
 - Simple Pal Mode as the only active v0.1.0-rc.1 runtime path.
 - Runtime Response Gate and Pal Mode validity rules.

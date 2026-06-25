@@ -8,7 +8,7 @@ AgentPal v0.1.0-rc.1 is the release candidate for an AgentPal Workspace and Pal 
 - The current release is a Markdown / JSON / protocol workspace.
 - The active runtime path is `Simple Pal Mode only`.
 - Mira is the default Main Pal / Leader / Conductor.
-- The official bundled Pals are Mira, Atlas, Vega, Rhea, Quinn, Morgan, Harper, and Nova.
+- The official bundled Pals are Mira, Atlas, Vega, Rhea, PalSmith, Quinn, Morgan, Harper, and Nova.
 
 ## Ready For Current Use
 

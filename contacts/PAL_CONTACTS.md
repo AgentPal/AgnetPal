@@ -1,6 +1,6 @@
 # Pal Contacts
 
-AgentPal starts with Mira as the default Main Pal and seven official bundled owner-capable Pals.
+AgentPal starts with Mira as the default Main Pal and eight official bundled owner-capable Pals.
 
 This file and `contacts/pals.json` are part of the AgentPal source of truth for Pal discovery. Individual Pal Packs must not keep their own hard-coded list of other Pals. If collaboration is needed, the current AI / Mira / Brain resolves available collaborators from contacts / registry case-by-case.
 
@@ -18,6 +18,7 @@ Default `active_pal` is Mira. When Mira routes owned work to an owner Pal, that 
 | Atlas | `atlas-developer` | `pals/Atlas-developer` | developer | `/pal Atlas` |
 | Vega | `vega-research` | `pals/Vega-research` | research | `/pal Vega` |
 | Rhea | `rhea-system` | `pals/Rhea-system` | system | `/pal Rhea` |
+| PalSmith | `palsmith-pal-governor` | `pals/PalSmith-pal-governor` | pal-asset-governor | `/pal PalSmith` |
 | Quinn | `quinn-quality` | `pals/Quinn-quality` | quality | `/pal Quinn` |
 | Morgan | `morgan-document` | `pals/Morgan-document` | document | `/pal Morgan` |
 | Harper | `harper-writing` | `pals/Harper-writing` | writing | `/pal Harper` |

@@ -103,6 +103,12 @@
         "non_binding": true
       },
       {
+        "pal_id": "palsmith-pal-governor",
+        "display_name": "PalSmith",
+        "perspective": "Pal asset governance, creation, health, import/export, versioning, privacy, and audit perspective",
+        "non_binding": true
+      },
+      {
         "pal_id": "quinn-quality",
         "display_name": "Quinn",
         "perspective": "quality, risk, evidence, and acceptance-oriented perspective",
@@ -149,7 +155,8 @@
     "examples": [
       "Mira：",
       "Atlas：",
-      "Rhea："
+      "Rhea：",
+      "PalSmith："
     ],
     "mira_summary_labels_specialist_advice": true,
     "no_runtime_mode_metadata_in_normal_answers": true
@@ -419,6 +426,7 @@
     "atlas-developer",
     "vega-research",
     "rhea-system",
+    "palsmith-pal-governor",
     "quinn-quality",
     "morgan-document",
     "harper-writing",

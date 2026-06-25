@@ -13,6 +13,7 @@ Quinn-quality
 Morgan-document
 Harper-writing
 Nova-product
+PalSmith-pal-governor
 ```
 
 Directory names use:

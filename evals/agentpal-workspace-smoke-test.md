@@ -24,12 +24,13 @@
 - [ ] `pals/Atlas-developer`
 - [ ] `pals/Vega-research`
 - [ ] `pals/Rhea-system`
+- [ ] `pals/PalSmith-pal-governor`
 - [ ] `pals/Quinn-quality`
 - [ ] `pals/Morgan-document`
 - [ ] `pals/Harper-writing`
 - [ ] `pals/Nova-product`
 - [ ] `pals/`
-- [ ] `/pal Atlas`, `/pal Vega`, `/pal Rhea`, `/pal Quinn`, `/pal Morgan`, `/pal Harper`, `/pal Nova`, and `` are documented.
+- [ ] `/pal Atlas`, `/pal Vega`, `/pal Rhea`, `/pal PalSmith`, `/pal Quinn`, `/pal Morgan`, `/pal Harper`, and `/pal Nova` are documented.
 
 ## JSON
 

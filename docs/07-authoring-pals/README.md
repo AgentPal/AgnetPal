@@ -20,6 +20,7 @@ This directory is the tutorial entry for creating your own Pal Pack. It assumes 
 10. [Add examples](09-add-examples.md)
 11. [Add evals](10-add-evals.md)
 12. [Publish your Pal Pack](11-publish-your-pal-pack.md)
+13. [Use PalSmith](12-use-palsmith.md)
 
 ## Minimum Goal
 

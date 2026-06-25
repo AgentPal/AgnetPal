@@ -8,7 +8,7 @@ AgentPal v0.1.0-rc.1 releases the current Pal Workspace and Pal Pack Standard pr
 - English and Chinese README entry points
 - AgentPal workspace metadata
 - contacts and registry files for Pal discovery
-- eight official bundled Pal Packs
+- nine official bundled Pal Packs
 - Simple Pal Mode rules
 - Runtime Response Gate and Pal Mode validity rules
 - context slicing, asset loading budget, memory boundary, Task Package, and verification protocols

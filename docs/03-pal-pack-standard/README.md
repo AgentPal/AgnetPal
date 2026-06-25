@@ -15,6 +15,7 @@ This directory is the public standard entry for Pal Packs. It explains the files
 - [Contacts and registry](10-contacts-and-registry.md)
 - [Public/private boundary](11-public-private-boundary.md)
 - [Pal Pack checklist](12-pal-pack-checklist.md)
+- [Pal import and export](13-pal-import-export.md)
 
 ## Three Levels
 

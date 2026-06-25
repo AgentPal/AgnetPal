@@ -13,7 +13,7 @@ Initial public release candidate for AgentPal as a Pal layer and Pal Pack Standa
 - Mira as the default Main Pal, Leader Pal, Conductor, and Pal team leader and coordinator.
 - R32 Fast Route and Deep Conductor protocol split. Fast Route supports current Simple Pal Mode; Deep Conductor remains future design.
 - R33 small-sample PalBench smoke validation report with cautious release-safe wording.
-- Official bundled Pal Packs: Mira, Atlas, Vega, Rhea, Quinn, Morgan, Harper, and Nova.
+- Official bundled Pal Packs: Mira, Atlas, Vega, Rhea, PalSmith, Quinn, Morgan, Harper, and Nova.
 - Contacts and registry files as the source of truth for Pal discovery, aliases, and direct `/pal Name` calls.
 - Runtime Response Gate, AI routing judgement rules, Pal context slicing, asset loading budget, memory summary loading, and Task Package output contract protocols.
 - AgentPal orchestration methodology, PalBench design, and future-oriented Capability Inventory / Context Access List / Pal Isolation / Shared Memory / Routing Reward Memory protocols.
