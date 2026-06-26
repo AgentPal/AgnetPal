@@ -1,0 +1,90 @@
+{
+  "schema": "agentpal.reasoning-profile.v0.2",
+  "id": "reasoning-strengths-example",
+  "display_name": "Reasoning Strengths Example",
+  "type": "reasoning-profile",
+  "example_status": "illustrative",
+  "not_auto_detected": true,
+  "used_for": "AI judgement input, not fixed routing",
+  "levels": [
+    {
+      "id": "low",
+      "use_when_candidates": [
+        "small formatting changes",
+        "low-risk summary from clear source text",
+        "simple path or index lookup"
+      ],
+      "avoid_when_candidates": [
+        "ambiguous owner judgement",
+        "release readiness",
+        "high-risk local actions"
+      ],
+      "prompt_shaping_notes": [
+        "keep instructions narrow",
+        "ask for exact output format"
+      ],
+      "cost_latency_notes": [
+        "candidate for faster low-risk work"
+      ]
+    },
+    {
+      "id": "medium",
+      "use_when_candidates": [
+        "ordinary task intake",
+        "bounded documentation edits",
+        "single-owner Task Package drafting"
+      ],
+      "avoid_when_candidates": [
+        "complex evidence conflicts",
+        "large composite deliverables"
+      ],
+      "prompt_shaping_notes": [
+        "include acceptance criteria",
+        "ask to label assumptions"
+      ],
+      "cost_latency_notes": [
+        "candidate default for ordinary work"
+      ]
+    },
+    {
+      "id": "high",
+      "use_when_candidates": [
+        "composite deliverable judgement",
+        "Capability Inventory design",
+        "quality and release evidence review",
+        "multi-stage Task Package creation"
+      ],
+      "avoid_when_candidates": [
+        "tiny mechanical edits where cost matters more than depth"
+      ],
+      "prompt_shaping_notes": [
+        "require stage owners and evidence needs",
+        "separate facts, assumptions, and candidates"
+      ],
+      "cost_latency_notes": [
+        "candidate for complex or risky work"
+      ]
+    },
+    {
+      "id": "xhigh",
+      "use_when_candidates": [
+        "deep architecture or methodology design",
+        "high-stakes release audits",
+        "conflicting evidence synthesis"
+      ],
+      "avoid_when_candidates": [
+        "routine low-risk edits",
+        "tasks with strict latency constraints"
+      ],
+      "prompt_shaping_notes": [
+        "ask for requirement-by-requirement audit",
+        "define evidence standards before completion claims"
+      ],
+      "cost_latency_notes": [
+        "candidate only when extra reasoning is worth the cost"
+      ]
+    }
+  ],
+  "not_a_fixed_route": true,
+  "refresh_policy": "manual review when runtime reasoning controls or observed task outcomes change"
+}

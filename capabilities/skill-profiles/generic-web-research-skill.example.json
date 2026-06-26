@@ -1,0 +1,49 @@
+{
+  "schema": "agentpal.skill-profile.v0.2",
+  "id": "generic-web-research-skill-example",
+  "display_name": "Generic Web Research Skill Example",
+  "type": "skill-profile",
+  "example_status": "illustrative",
+  "not_auto_detected": true,
+  "used_for": "AI judgement input, not fixed routing",
+  "skill_kind": "research",
+  "available_in_runtime_candidates": [
+    "depends on current runtime and network permission"
+  ],
+  "capability_candidates": [
+    "source discovery",
+    "source credibility review",
+    "citation capture",
+    "freshness-sensitive research"
+  ],
+  "required_tools": [
+    "approved web access or source files"
+  ],
+  "input_needs": [
+    "research question",
+    "allowed source types",
+    "recency requirement",
+    "citation format"
+  ],
+  "output_contract": [
+    "source inventory",
+    "evidence matrix",
+    "uncertainty notes"
+  ],
+  "limits_as_candidates": [
+    "does not prove web access is available",
+    "does not replace Vega research judgement"
+  ],
+  "risk_notes": [
+    "current facts need current sources",
+    "copyrighted source text should be summarized within policy"
+  ],
+  "evidence_required": [
+    "sources read",
+    "access date or source date",
+    "claim-to-evidence mapping"
+  ],
+  "not_a_pal": true,
+  "not_a_fixed_route": true,
+  "refresh_policy": "manual review when web access or research tooling changes"
+}

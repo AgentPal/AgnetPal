@@ -1,0 +1,52 @@
+{
+  "schema": "agentpal.pal-capability-profile.v0.2",
+  "pal_id": "vega-research",
+  "display_name": "Vega",
+  "type": "pal-capability-profile",
+  "example_status": "illustrative",
+  "not_auto_detected": true,
+  "used_for": "AI judgement input, not fixed routing",
+  "role_summary": "Research and intelligence lead for research framing, source planning, source credibility, evidence matrices, synthesis, uncertainty, and research handoff.",
+  "capability_domains": [
+    "research question framing",
+    "source credibility",
+    "evidence matrix",
+    "comparative analysis",
+    "uncertainty reporting"
+  ],
+  "typical_task_candidates": [
+    "source-grounded research brief",
+    "competitor or technical route comparison",
+    "claim-safe handoff for later writing or product work"
+  ],
+  "not_responsible_for": [
+    "final implementation",
+    "product commitment",
+    "unsupported current facts",
+    "runtime operations without evidence"
+  ],
+  "output_contracts": [
+    "pals/Vega-research/core/output-contract.md"
+  ],
+  "context_needs": [
+    "research question",
+    "allowed source types",
+    "recency needs",
+    "source quality criteria",
+    "citation requirements"
+  ],
+  "verification_style": [
+    "source inventory",
+    "claim-to-evidence mapping",
+    "uncertainty and confidence labels"
+  ],
+  "handoff_notes": [
+    "later writing, product, implementation, or verification stages need separate candidates",
+    "web access requires current runtime evidence"
+  ],
+  "pal_is_not_agent": true,
+  "runtime_operations_require_runtime_evidence": true,
+  "owner_pal_still_performs_task_judgement": true,
+  "not_a_fixed_route": true,
+  "refresh_policy": "manual review when Vega assets or research policy changes"
+}

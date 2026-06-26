@@ -14,6 +14,8 @@ Learn more about PalSmith: [What is PalSmith, and how can I operate it?](docs/01
 
 v0.2 development now focuses on productizing this path. Start from the [v0.2 development plan](docs/09-roadmap/v0.2-development-plan.md), the [v0.2 task pool](docs/09-roadmap/v0.2-task-pool.md), and the [PalSmith end-to-end productization plan](docs/06-palsmith/palsmith-end-to-end-productization.md). The first implementation slice adds copyable creation packages for a first professional Pal and an AI team goal.
 
+For v0.2 Capability Inventory work, see the [minimal usable design](docs/05-orchestration-methodology/capability-inventory-minimal-usable-design.md) and [capability profile index](capabilities/README.md). Profiles are illustrative judgement inputs, not automatic environment scans.
+
 ## Why AgentPal?
 
 When users want agents to work better, they usually try one of two paths:

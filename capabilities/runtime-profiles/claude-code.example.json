@@ -1,39 +1,62 @@
 {
-  "schema": "agentpal.runtime-profile.v0.1",
+  "schema": "agentpal.runtime-profile.v0.2",
   "id": "claude-code-example",
   "name": "Claude Code Example Runtime Profile",
-  "type": "agent-runtime",
-  "status": "illustrative-example",
+  "type": "runtime-profile",
+  "example_status": "illustrative",
+  "not_auto_detected": true,
+  "used_for": "AI judgement input, not fixed routing",
   "source": "maintainer-example",
-  "version": "0.1",
-  "non_binding": true,
-  "used_for_judgement": true,
-  "must_not_be_used_for_routing": true,
-  "capabilities": {
-    "can_read_files": true,
-    "can_write_files": true,
-    "can_run_commands": "environment-dependent",
-    "supports_instruction_files": [
-      "CLAUDE.md",
+  "version": "0.2",
+  "instruction_files": [
+    "CLAUDE.md",
+    "AGENTS.md"
+  ],
+  "project_binding": {
+    "binding_files": [
+      ".agentpal/project.json",
+      ".agentpal/AGENTPAL.md",
       "AGENTS.md",
+      "CLAUDE.md",
       ".claude/settings.local.json"
     ],
-    "supports_external_directories": "via-local-settings-or-session-add-dir",
-    "supports_skills": "environment-dependent",
-    "supports_plugins": "environment-dependent",
-    "supports_mcp": "environment-dependent"
+    "reads_core_from_agentpal_workspace": true
   },
-  "limits": [
-    "settings.local.json changes may require session restart or temporary add-dir."
+  "can_read_files": "depends on project and additional directory settings",
+  "can_write_files": "depends on runtime permissions and user approval",
+  "can_run_commands": "depends on runtime permissions",
+  "supports_skills": "depends on current runtime session",
+  "supports_mcp": "depends on current runtime session",
+  "supports_plugins": "depends on current runtime session",
+  "supports_external_dirs": "may require local settings or session directory access",
+  "external_dir_config": [
+    ".claude/settings.local.json may include additionalDirectories",
+    "local settings should remain local and uncommitted"
+  ],
+  "known_strengths": [
+    "project-first workflow",
+    "thin binding can point back to AgentPal core gates",
+    "can keep active project root separate from AgentPal workspace root when configured correctly"
+  ],
+  "known_limits": [
+    "settings changes may require restart or a runtime-specific directory grant",
+    "availability of tools and external directory reads varies by session"
   ],
   "risk_notes": [
-    "Do not commit local settings with private paths."
+    "do not commit local settings containing private machine configuration",
+    "do not copy full AgentPal Pal Packs into the external project"
+  ],
+  "recommended_use_as_candidate": [
+    "external project binding",
+    "project-local file work with AgentPal as Pal source",
+    "runtime adapter troubleshooting with evidence"
   ],
   "evidence_required": [
     ".agentpal/project.json",
-    "CLAUDE.md block",
-    "AGENTS.md block",
-    ".claude/settings.local.json additionalDirectories"
+    "protected instruction blocks",
+    "local settings state when relevant",
+    "current runtime read/write evidence"
   ],
-  "profile_note": "Illustrative only. Not a scan of the user's Claude Code installation."
+  "not_a_fixed_route": true,
+  "refresh_policy": "manual review when Claude Code binding files or local directory access change"
 }

@@ -22,6 +22,7 @@ AgentPal is a Pal layer and Pal Pack Standard practice for Markdown/JSON-capable
 - [Author your own Pal](07-authoring-pals/README.md)
 - [Orchestration methodology](05-orchestration-methodology/README.md)
 - [Pal Teams and Deep Conductor](05-orchestration-methodology/11-pal-teams-and-deep-conductor.md)
+- [Capability Inventory minimal usable design](05-orchestration-methodology/capability-inventory-minimal-usable-design.md)
 - [Validation and evidence](06-validation-and-evidence/README.md)
 - [v0.1.0-rc.1 release candidate](08-release-candidate/README.md)
 - [v0.2 development plan](09-roadmap/v0.2-development-plan.md)
@@ -71,6 +72,18 @@ AgentPal is a Pal layer and Pal Pack Standard practice for Markdown/JSON-capable
 - [Cross-Pal product/research/dev/QA/docs example](../examples/orchestration/cross-pal-product-research-dev-qa-docs.md)
 - [Cross-Pal PalSmith AI team example](../examples/orchestration/cross-pal-palsmith-create-ai-team.md)
 - [Cross-Pal release readiness example](../examples/orchestration/cross-pal-release-readiness-review.md)
+
+## Capability Inventory Quick Links
+
+- [Capability Inventory minimal usable design](05-orchestration-methodology/capability-inventory-minimal-usable-design.md)
+- [Capability profiles index](../capabilities/README.md)
+- [Runtime profiles](../capabilities/runtime-profiles/README.md)
+- [Model profiles](../capabilities/model-profiles/README.md)
+- [Reasoning profiles](../capabilities/reasoning-profiles/README.md)
+- [Skill profiles](../capabilities/skill-profiles/README.md)
+- [Pal capability profiles](../capabilities/pal-profiles/README.md)
+- [Capability Inventory self-test](../evals/capability-inventory/capability-inventory-minimal-usable-self-test.md)
+- [Capability Inventory task judgement example](../examples/orchestration/capability-inventory-task-judgement-example.md)
 
 ## Atlas Developer Quick Links
 

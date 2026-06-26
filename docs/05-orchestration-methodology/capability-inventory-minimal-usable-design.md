@@ -1,110 +1,94 @@
 # Capability Inventory Minimal Usable Design
 
-Capability Inventory in v0.2 is a manual or maintainer-provided profile set. It is an input to AI judgement, not an automatic scanner and not a routing table.
+Capability Inventory is AgentPal's public-safe profile set for describing possible runtime, model, reasoning, Skill, plugin, MCP, and Pal capabilities. It helps Mira and owner Pals make better AI Judgement decisions without turning those decisions into hard-coded routes.
 
-## Minimal Profile Types
+## What It Is
 
-v0.2 uses three practical profile types:
+Capability Inventory is a small set of hand-written or maintainer-provided profiles:
 
-- runtime profile: what a host runtime can probably read, write, run, and report;
-- model profile: what a model is suitable for and what evidence supports that claim;
-- Skill profile: what a Skill can help with, required tools, inputs, outputs, limits, and risks.
+- Runtime Profiles describe what a host runtime may be able to read, write, execute, configure, and report.
+- Model Profiles describe model tendencies, availability candidates, cost/latency notes, and reasoning modes.
+- Reasoning Profiles describe when low, medium, high, or xhigh reasoning may be useful.
+- Skill Profiles describe what a Skill can help with, inputs, outputs, tools, limits, and evidence needs.
+- Plugin Profiles describe plugin capabilities, permissions, risk, and evidence needs.
+- MCP Profiles describe MCP-hosted tools/resources, access boundaries, and evidence needs.
+- Pal Capability Profiles describe Pal identity, capability domains, output contracts, context needs, handoff notes, and verification style.
 
-## Required Common Fields
+Profiles are inputs to Task Judgement. They are not automatic decisions.
 
-Every profile should include:
+## Why v0.2 Uses Manual Profiles
 
-- `schema`;
-- `id`;
-- `name`;
-- `type`;
-- `status`;
-- `source`;
-- `version`;
-- `non_binding`;
-- limits;
-- risk notes;
-- evidence required;
-- profile note.
+v0.2 deliberately starts with manual or semi-manual profiles because AgentPal remains a no-code Pal layer. Automatic environment scanning would create a new runtime product surface, new permission questions, and new failure modes.
 
-## Runtime Profile Minimum
+Manual profiles are enough for the first useful version:
 
-Runtime profiles should answer:
+- maintainers can document common runtime shapes;
+- users can copy and adapt examples;
+- Mira or an owner Pal can read a small relevant profile slice;
+- Task Packages can name evidence required before execution claims;
+- false confidence is avoided because examples do not claim to describe the user's current machine.
 
-- can it read files?
-- can it write files?
-- can it run commands?
-- which instruction files can it read?
-- can it access external directories?
-- does it support Skills, plugins, or MCP?
-- what evidence can it return?
+## How Profiles Support AI Judgement
 
-Existing examples:
+Typical flow:
 
-- `capabilities/runtime-profiles/codex.example.json`
-- `capabilities/runtime-profiles/claude-code.example.json`
-- `capabilities/runtime-profiles/generic-cli.example.json`
+1. Mira or the current owner Pal performs Task Judgement from the user goal.
+2. The Pal decides whether Capability Inventory would materially improve the decision.
+3. The Pal reads the smallest relevant profile index or profile, not the whole inventory.
+4. The profile becomes one judgement input alongside user intent, deliverables, risk, contacts, registry, Pal assets, and available Runtime evidence.
+5. The Pal outputs candidates, not rules.
+6. If execution is needed, the Pal produces a Task Package or Context Access List.
+7. After completion, experience may be recorded manually in an appropriate public-safe asset. v0.2 does not auto-write Routing Reward Memory.
 
-These examples are illustrative. They are not scans of the user's current environment.
+## Profile Loading Budget
 
-## Model Profile Minimum
+Profile loading follows Context Slicing:
 
-Model profiles should answer:
+- read one profile family index before opening examples when possible;
+- load only the profile needed for the current stage;
+- keep Runtime, Model, Skill, Plugin, MCP, and Pal profiles separate;
+- do not read all profiles by default;
+- report profile paths as content-read only when actually opened.
 
-- where the model is available;
-- strengths and limits;
-- reasoning modes;
-- default reasoning;
-- cost and latency tier;
-- evidence behind the profile.
+## Not A Routing Table
 
-Model profiles must not claim benchmark superiority unless a separate validated benchmark supports it.
+Profiles must not say:
 
-## Skill Profile Minimum
+- a task type always belongs to one Pal;
+- one runtime always handles one artifact type;
+- one model is always required for one task;
+- one Skill, plugin, or MCP server should be invoked automatically.
 
-Skill profiles should answer:
+Allowed wording:
 
-- what the Skill does;
-- where it is available;
-- required tools;
-- inputs and outputs;
-- limits and risks;
-- evidence required when the Skill is used.
+- "candidate";
+- "may help when";
+- "depends on current runtime setup";
+- "requires current evidence";
+- "not a fixed route".
 
-Skill profiles do not trigger execution by themselves.
+## Relationship To v0.3
 
-## How Profiles Are Used
+Capability Inventory is useful now as a manual judgement input. In a later v0.3 track, richer Deep Conductor design, Routing Reward Memory, PalBench feedback, or runtime-provided capability data may refine profiles.
 
-Mira or an owner Pal may use profiles when judging:
+That future direction does not make v0.2 an automatic capability scanner. v0.2 does not activate Deep Conductor, automatic multi-agent execution, automatic profile refresh, or automatic model selection.
 
-- whether a runtime can safely execute a Task Package;
-- whether a model is suitable for a high-reasoning or low-risk step;
-- whether a Skill is a candidate for a task.
+## What v0.2 Does Not Do
 
-Profiles must not become:
-
-- keyword routing;
-- fixed task/domain maps;
-- proof that a tool is available in the current session;
-- permission to skip evidence.
-
-## v0.2 Boundary
-
-Allowed:
-
-- hand-written profiles;
-- illustrative examples;
-- profile templates;
-- documentation that explains how to verify current availability.
-
-Not allowed:
-
-- automatic scanner;
-- validator script;
-- environment probe;
-- hidden runtime discovery;
-- fake profile data for a user's machine.
+- It does not automatically scan the user's machine.
+- It does not automatically call external Agents.
+- It does not automatically choose or switch models.
+- It does not replace user or runtime permission settings.
+- It does not prove a runtime, model, Skill, plugin, or MCP server is available now.
+- It does not replace current Task Judgement.
+- It does not remove the need for evidence before execution claims.
 
 ## Acceptance
 
-Capability Inventory is minimally usable when a maintainer can fill a profile, a Pal can cite it as a non-binding judgement input, and the final answer still requires current runtime evidence before execution claims.
+Capability Inventory is minimally usable when:
+
+- runtime, model, reasoning, Skill, plugin, MCP, and Pal profile templates exist;
+- illustrative examples parse as JSON;
+- examples are marked `illustrative` and `not_auto_detected`;
+- profiles are documented as AI Judgement inputs, not fixed routes;
+- self-tests check profile loading budget, no fixed routing, and no runtime-code boundary.

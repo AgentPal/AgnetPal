@@ -1,0 +1,48 @@
+{
+  "schema": "agentpal.skill-profile.v0.2",
+  "id": "generic-document-skill-example",
+  "display_name": "Generic Document Skill Example",
+  "type": "skill-profile",
+  "example_status": "illustrative",
+  "not_auto_detected": true,
+  "used_for": "AI judgement input, not fixed routing",
+  "skill_kind": "document",
+  "available_in_runtime_candidates": [
+    "depends on current runtime"
+  ],
+  "capability_candidates": [
+    "document structure",
+    "format conversion planning",
+    "render or export verification guidance"
+  ],
+  "required_tools": [
+    "runtime-provided document tooling if available"
+  ],
+  "input_needs": [
+    "source material",
+    "target format",
+    "layout requirements",
+    "output location"
+  ],
+  "output_contract": [
+    "document task package",
+    "artifact path when generated",
+    "verification evidence"
+  ],
+  "limits_as_candidates": [
+    "does not prove document tooling is installed",
+    "does not replace Morgan document judgement"
+  ],
+  "risk_notes": [
+    "private source material needs approval before sharing",
+    "generated artifacts need render or preview evidence"
+  ],
+  "evidence_required": [
+    "current Skill availability",
+    "artifact output",
+    "render or preview result when layout matters"
+  ],
+  "not_a_pal": true,
+  "not_a_fixed_route": true,
+  "refresh_policy": "manual review when Skill availability or document tooling changes"
+}

@@ -1,13 +1,14 @@
 {
-  "schema": "agentpal.plugin-profile.v0.2",
-  "id": "plugin-profile-id",
-  "display_name": "Plugin Profile Name",
-  "type": "plugin-profile",
+  "schema": "agentpal.mcp-profile.v0.2",
+  "id": "mcp-profile-id",
+  "display_name": "MCP Profile Name",
+  "type": "mcp-profile",
   "example_status": "template",
   "not_auto_detected": true,
   "used_for": "AI judgement input, not fixed routing",
+  "server_kind": "generic",
+  "tool_or_resource_candidates": [],
   "available_in_runtime_candidates": [],
-  "capability_candidates": [],
   "permissions_needed": [],
   "input_needs": [],
   "output_contract": [],
@@ -16,5 +17,5 @@
   "evidence_required": [],
   "not_a_pal": true,
   "not_a_fixed_route": true,
-  "refresh_policy": "manual review when plugin availability or permissions change"
+  "refresh_policy": "manual review when MCP server availability or permissions change"
 }

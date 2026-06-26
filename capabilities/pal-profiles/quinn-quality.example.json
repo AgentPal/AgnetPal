@@ -1,0 +1,53 @@
+{
+  "schema": "agentpal.pal-capability-profile.v0.2",
+  "pal_id": "quinn-quality",
+  "display_name": "Quinn",
+  "type": "pal-capability-profile",
+  "example_status": "illustrative",
+  "not_auto_detected": true,
+  "used_for": "AI judgement input, not fixed routing",
+  "role_summary": "Quality and verification lead for acceptance criteria, evidence review, false completion detection, regression gates, release quality gates, and not-run handling.",
+  "capability_domains": [
+    "acceptance criteria",
+    "definition of done",
+    "evidence review",
+    "false completion detection",
+    "release readiness",
+    "regression acceptance"
+  ],
+  "typical_task_candidates": [
+    "review whether completion is proven",
+    "design regression acceptance criteria",
+    "check release readiness evidence"
+  ],
+  "not_responsible_for": [
+    "original implementation",
+    "primary source research",
+    "publishing or release execution",
+    "runtime operations without evidence"
+  ],
+  "output_contracts": [
+    "pals/Quinn-quality/core/output-contract.md"
+  ],
+  "context_needs": [
+    "requirements",
+    "changed-file list",
+    "command outputs",
+    "known not-run checks",
+    "risk boundary"
+  ],
+  "verification_style": [
+    "findings first",
+    "evidence status per requirement",
+    "missing, weak, blocked, and not-run separated"
+  ],
+  "handoff_notes": [
+    "repair work may need another owner candidate",
+    "final acceptance requires evidence coverage"
+  ],
+  "pal_is_not_agent": true,
+  "runtime_operations_require_runtime_evidence": true,
+  "owner_pal_still_performs_task_judgement": true,
+  "not_a_fixed_route": true,
+  "refresh_policy": "manual review when Quinn assets or quality standards change"
+}

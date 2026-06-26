@@ -1,32 +1,41 @@
 {
-  "schema": "agentpal.reasoning-profile.v0.1",
+  "schema": "agentpal.reasoning-profile.v0.2",
   "id": "reasoning-profile-id",
-  "name": "Reasoning Profile",
+  "display_name": "Reasoning Strength Profile",
   "type": "reasoning-profile",
-  "status": "template",
-  "source": "user-or-maintainer-provided",
-  "version": "0.1",
-  "non_binding": true,
+  "example_status": "template",
+  "not_auto_detected": true,
+  "used_for": "AI judgement input, not fixed routing",
   "levels": [
     {
       "id": "low",
-      "use_when": [],
-      "avoid_when": [],
-      "cost_note": "unknown"
+      "use_when_candidates": [],
+      "avoid_when_candidates": [],
+      "prompt_shaping_notes": [],
+      "cost_latency_notes": []
     },
     {
       "id": "medium",
-      "use_when": [],
-      "avoid_when": [],
-      "cost_note": "unknown"
+      "use_when_candidates": [],
+      "avoid_when_candidates": [],
+      "prompt_shaping_notes": [],
+      "cost_latency_notes": []
     },
     {
       "id": "high",
-      "use_when": [],
-      "avoid_when": [],
-      "cost_note": "unknown"
+      "use_when_candidates": [],
+      "avoid_when_candidates": [],
+      "prompt_shaping_notes": [],
+      "cost_latency_notes": []
+    },
+    {
+      "id": "xhigh",
+      "use_when_candidates": [],
+      "avoid_when_candidates": [],
+      "prompt_shaping_notes": [],
+      "cost_latency_notes": []
     }
   ],
-  "evidence_required": [],
-  "profile_note": "Reasoning level suggestions are judgement inputs, not hard rules."
+  "not_a_fixed_route": true,
+  "refresh_policy": "manual review when runtime reasoning controls change"
 }

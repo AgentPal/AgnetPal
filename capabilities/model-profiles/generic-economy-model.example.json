@@ -1,0 +1,43 @@
+{
+  "schema": "agentpal.model-profile.v0.2",
+  "id": "generic-economy-model-example",
+  "display_name": "Generic Economy Model Example",
+  "type": "model-profile",
+  "example_status": "illustrative",
+  "not_auto_detected": true,
+  "used_for": "AI judgement input, not fixed routing",
+  "provider_optional": "generic",
+  "available_in_runtime_candidates": [
+    "depends on current runtime configuration"
+  ],
+  "strengths_as_candidates": [
+    "short summaries",
+    "low-risk formatting",
+    "simple classification",
+    "draft cleanup when source material is clear"
+  ],
+  "limits_as_candidates": [
+    "may be less suitable for high-risk evidence review",
+    "may need tighter prompts for complex staged judgement",
+    "availability is not guaranteed"
+  ],
+  "reasoning_modes_supported": [
+    "low",
+    "medium"
+  ],
+  "default_reasoning_candidate": "medium",
+  "prompt_shaping_guidance": [
+    "keep context small and explicit",
+    "ask for uncertainty labels when facts matter",
+    "reserve complex decomposition for a stronger candidate model when available"
+  ],
+  "cost_latency_notes": [
+    "treat as lower-cost or faster only when current runtime evidence supports that"
+  ],
+  "evidence_required": [
+    "current model availability from runtime",
+    "output review for task risk"
+  ],
+  "not_a_fixed_route": true,
+  "refresh_policy": "manual review when runtime model options or observed behavior change"
+}

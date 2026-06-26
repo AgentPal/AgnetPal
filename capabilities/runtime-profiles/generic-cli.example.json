@@ -1,35 +1,58 @@
 {
-  "schema": "agentpal.runtime-profile.v0.1",
+  "schema": "agentpal.runtime-profile.v0.2",
   "id": "generic-cli-example",
   "name": "Generic CLI Agent Example Runtime Profile",
-  "type": "agent-runtime",
-  "status": "illustrative-example",
+  "type": "runtime-profile",
+  "example_status": "illustrative",
+  "not_auto_detected": true,
+  "used_for": "AI judgement input, not fixed routing",
   "source": "maintainer-example",
-  "version": "0.1",
-  "non_binding": true,
-  "used_for_judgement": true,
-  "must_not_be_used_for_routing": true,
-  "capabilities": {
-    "can_read_files": "runtime-dependent",
-    "can_write_files": "runtime-dependent",
-    "can_run_commands": "runtime-dependent",
-    "supports_instruction_files": [
+  "version": "0.2",
+  "instruction_files": [
+    "AGENTS.md"
+  ],
+  "project_binding": {
+    "binding_files": [
+      ".agentpal/project.json",
+      ".agentpal/AGENTPAL.md",
       "AGENTS.md"
     ],
-    "supports_external_directories": "runtime-dependent",
-    "supports_skills": "runtime-dependent",
-    "supports_plugins": "runtime-dependent",
-    "supports_mcp": "runtime-dependent"
+    "reads_core_from_agentpal_workspace": true
   },
-  "limits": [
-    "Instruction loading behavior must be verified for each runtime."
+  "can_read_files": "runtime-dependent",
+  "can_write_files": "runtime-dependent",
+  "can_run_commands": "runtime-dependent",
+  "supports_skills": "runtime-dependent",
+  "supports_mcp": "runtime-dependent",
+  "supports_plugins": "runtime-dependent",
+  "supports_external_dirs": "runtime-dependent",
+  "external_dir_config": [
+    "check the specific runtime's directory and instruction loading behavior"
+  ],
+  "known_strengths": [
+    "portable Markdown and JSON instruction shape",
+    "can use thin AgentPal project binding when the runtime follows AGENTS.md",
+    "works as a conservative fallback profile for unknown CLI runtimes"
+  ],
+  "known_limits": [
+    "instruction loading behavior varies",
+    "file and command capabilities need current evidence",
+    "Claude Code local settings do not apply automatically"
   ],
   "risk_notes": [
-    "Do not assume Claude Code settings apply to generic runtimes."
+    "do not assume external directory access",
+    "do not assume Skill, plugin, or MCP support"
+  ],
+  "recommended_use_as_candidate": [
+    "generic documentation",
+    "manual project binding review",
+    "low-assumption Task Package planning"
   ],
   "evidence_required": [
     ".agentpal/project.json",
-    "AGENTS.md block"
+    "AGENTS.md protected block",
+    "current runtime tool evidence"
   ],
-  "profile_note": "Illustrative only. Use for generic documentation, not automatic routing."
+  "not_a_fixed_route": true,
+  "refresh_policy": "manual review for each specific CLI runtime"
 }

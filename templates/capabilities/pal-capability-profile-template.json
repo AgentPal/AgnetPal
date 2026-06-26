@@ -1,21 +1,25 @@
 {
-  "schema": "agentpal.pal-capability-profile.v0.1",
-  "id": "pal-id",
-  "name": "Pal Name",
+  "schema": "agentpal.pal-capability-profile.v0.2",
+  "pal_id": "pal-id",
+  "display_name": "Pal Name",
   "type": "pal-capability-profile",
-  "status": "template",
-  "source": "contacts-and-registry-plus-pal-pack",
-  "version": "0.1",
-  "non_binding": true,
-  "pal_pack_path": "pals/<pal-directory>",
-  "role": "role-name",
-  "can_contribute": [],
-  "cannot_do": [
-    "execute runtime actions directly"
+  "example_status": "template",
+  "not_auto_detected": true,
+  "used_for": "AI judgement input, not fixed routing",
+  "role_summary": "",
+  "capability_domains": [],
+  "typical_task_candidates": [],
+  "not_responsible_for": [
+    "runtime operations",
+    "tasks outside judged ownership"
   ],
+  "output_contracts": [],
   "context_needs": [],
-  "output_contract": "pals/<pal-directory>/core/output-contract.md",
-  "verification_role_candidates": [],
-  "risk_notes": [],
-  "profile_note": "Pal capability profiles inform AI Judgement but do not create fixed routes."
+  "verification_style": [],
+  "handoff_notes": [],
+  "pal_is_not_agent": true,
+  "runtime_operations_require_runtime_evidence": true,
+  "owner_pal_still_performs_task_judgement": true,
+  "not_a_fixed_route": true,
+  "refresh_policy": "manual review when Pal assets or registry entries change"
 }

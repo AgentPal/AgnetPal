@@ -1,36 +1,60 @@
 {
-  "schema": "agentpal.runtime-profile.v0.1",
+  "schema": "agentpal.runtime-profile.v0.2",
   "id": "codex-example",
   "name": "Codex Example Runtime Profile",
-  "type": "agent-runtime",
-  "status": "illustrative-example",
+  "type": "runtime-profile",
+  "example_status": "illustrative",
+  "not_auto_detected": true,
+  "used_for": "AI judgement input, not fixed routing",
   "source": "maintainer-example",
-  "version": "0.1",
-  "non_binding": true,
-  "used_for_judgement": true,
-  "must_not_be_used_for_routing": true,
-  "capabilities": {
-    "can_read_files": true,
-    "can_write_files": true,
-    "can_run_commands": true,
-    "supports_instruction_files": [
+  "version": "0.2",
+  "instruction_files": [
+    "AGENTS.md"
+  ],
+  "project_binding": {
+    "binding_files": [
+      ".agentpal/project.json",
+      ".agentpal/AGENTPAL.md",
       "AGENTS.md"
     ],
-    "supports_external_directories": "environment-dependent",
-    "supports_skills": "environment-dependent",
-    "supports_plugins": "environment-dependent",
-    "supports_mcp": "environment-dependent"
+    "reads_core_from_agentpal_workspace": true
   },
-  "limits": [
-    "Exact available tools vary by session."
+  "can_read_files": "depends on workspace and runtime permissions",
+  "can_write_files": "depends on workspace and runtime permissions",
+  "can_run_commands": "depends on runtime permissions",
+  "supports_skills": "depends on current runtime session",
+  "supports_mcp": "depends on current runtime session",
+  "supports_plugins": "depends on current runtime session",
+  "supports_external_dirs": "depends on configured workspace access",
+  "external_dir_config": [
+    "project binding may point to AgentPal workspace as a Pal source",
+    "external directory access needs current runtime evidence"
+  ],
+  "known_strengths": [
+    "can work well with Markdown and JSON workspaces when files are available",
+    "can produce file diffs and command evidence when the runtime exposes tools",
+    "can follow thin AgentPal binding instructions through AGENTS.md"
+  ],
+  "known_limits": [
+    "available tools vary by session",
+    "workspace and filesystem access are permission-dependent",
+    "this profile is not a live scan of the user's Codex environment"
   ],
   "risk_notes": [
-    "File writes and commands need evidence from the current execution layer."
+    "file writes and commands need evidence from the current execution layer",
+    "do not infer external project access without current binding evidence"
+  ],
+  "recommended_use_as_candidate": [
+    "bounded Markdown or JSON edits",
+    "evidence-backed repository inspection",
+    "Runtime Task Package execution when current permissions allow"
   ],
   "evidence_required": [
     "tool output",
     "file diff",
-    "command result"
+    "command result",
+    "changed-file list"
   ],
-  "profile_note": "Illustrative only. Not a scan of the current user's Codex installation."
+  "not_a_fixed_route": true,
+  "refresh_policy": "manual review when Codex project binding or runtime permissions change"
 }

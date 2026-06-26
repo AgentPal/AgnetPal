@@ -104,6 +104,18 @@ Use:
 | `docs/07-official-pals/official-pal-examples-index.md` | Official 9 Pal real task examples index | official Pal examples and v0.2 R42 navigation |
 | `docs/07-official-pals/official-pal-example-library-plan.md` | Official Pal example library plan | official Pal examples planning and R42 first implementation status |
 | `evals/official-pals/official-pal-example-library-self-test.md` | Official Pal example library self-test | R42 example structure and boundary checks |
+| `docs/05-orchestration-methodology/capability-inventory-minimal-usable-design.md` | Capability Inventory minimal usable design | v0.2 R43 manual profile design |
+| `capabilities/README.md` | Capability Inventory profile index | runtime/model/reasoning/skill/plugin/MCP/Pal profile navigation |
+| `capabilities/runtime-profiles/` | Runtime profile examples | runtime capability judgement inputs |
+| `capabilities/model-profiles/` | Model profile examples | model tendency judgement inputs |
+| `capabilities/reasoning-profiles/` | Reasoning strength profile examples | prompt-shaping judgement inputs |
+| `capabilities/skill-profiles/` | Skill profile examples | Skill capability judgement inputs |
+| `capabilities/plugin-profiles/` | Plugin profile notes | plugin capability judgement inputs |
+| `capabilities/mcp-profiles/` | MCP profile notes | MCP capability judgement inputs |
+| `capabilities/pal-profiles/` | Pal capability profile examples | Pal capability judgement inputs |
+| `evals/capability-inventory/` | Capability Inventory self-tests | R43 profile structure, loading budget, and no fixed route checks |
+| `examples/orchestration/capability-inventory-task-judgement-example.md` | Capability Inventory successful use example | profile-as-judgement-input example |
+| `examples/failures/capability-profile-used-as-fixed-route.md` | Capability Inventory failure example | profile-as-route regression example |
 | `docs/05-orchestration-methodology/11-pal-teams-and-deep-conductor.md` | Pal Team, runtime-layer agent execution, and future Deep Conductor boundaries | Pal Team and orchestration questions |
 | `docs/06-validation-and-evidence/` | current PalBench and evidence interpretation | validation, PalBench, and evidence questions |
 | `docs/08-release-candidate/` | current v0.1.0-rc.1 release candidate notes | release candidate scope and evidence questions |

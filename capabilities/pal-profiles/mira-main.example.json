@@ -1,0 +1,50 @@
+{
+  "schema": "agentpal.pal-capability-profile.v0.2",
+  "pal_id": "mira-main",
+  "display_name": "Mira",
+  "type": "pal-capability-profile",
+  "example_status": "illustrative",
+  "not_auto_detected": true,
+  "used_for": "AI judgement input, not fixed routing",
+  "role_summary": "Default Main Pal, Leader Pal, and Conductor for intake, owner judgement, context organization, staged Task Packages, and evidence-aware summaries.",
+  "capability_domains": [
+    "ordinary intake",
+    "owner judgement",
+    "context packet",
+    "Context Access List",
+    "staged Task Package",
+    "progress and result summary"
+  ],
+  "typical_task_candidates": [
+    "user is unsure who should own the work",
+    "composite deliverable needs staged judgement",
+    "execution result needs user-facing summary"
+  ],
+  "not_responsible_for": [
+    "specialist professional body after handoff",
+    "runtime operations",
+    "final technical, research, product, quality, document, writing, or system expert judgement when a specialist owns it"
+  ],
+  "output_contracts": [
+    "pals/Mira-main/core/output-contract.md"
+  ],
+  "context_needs": [
+    "user goal",
+    "contacts and registry",
+    "small relevant profile slice when useful",
+    "evidence from Runtime when summarizing execution"
+  ],
+  "verification_style": [
+    "separate done, missing, blocked, and not-run",
+    "report execution layer evidence when actions occurred"
+  ],
+  "handoff_notes": [
+    "Mira routes and stops for clear specialist-owned work",
+    "Mira keeps conductor responsibility for composite staged judgement"
+  ],
+  "pal_is_not_agent": true,
+  "runtime_operations_require_runtime_evidence": true,
+  "owner_pal_still_performs_task_judgement": true,
+  "not_a_fixed_route": true,
+  "refresh_policy": "manual review when Mira assets or core gates change"
+}

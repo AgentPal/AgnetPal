@@ -1,0 +1,44 @@
+{
+  "schema": "agentpal.model-profile.v0.2",
+  "id": "generic-strong-model-example",
+  "display_name": "Generic Strong Model Example",
+  "type": "model-profile",
+  "example_status": "illustrative",
+  "not_auto_detected": true,
+  "used_for": "AI judgement input, not fixed routing",
+  "provider_optional": "generic",
+  "available_in_runtime_candidates": [
+    "depends on current runtime configuration"
+  ],
+  "strengths_as_candidates": [
+    "complex multi-stage planning",
+    "large context synthesis when available",
+    "careful evidence review",
+    "structured JSON and Markdown generation"
+  ],
+  "limits_as_candidates": [
+    "may have higher cost or latency",
+    "availability is not guaranteed",
+    "still needs current evidence for execution claims"
+  ],
+  "reasoning_modes_supported": [
+    "medium",
+    "high",
+    "xhigh"
+  ],
+  "default_reasoning_candidate": "high",
+  "prompt_shaping_guidance": [
+    "ask for explicit evidence tables on verification tasks",
+    "use staged Task Judgement for composite deliverables",
+    "keep profile-derived recommendations candidate-based"
+  ],
+  "cost_latency_notes": [
+    "treat as higher-cost or slower unless the current runtime says otherwise"
+  ],
+  "evidence_required": [
+    "current model availability from runtime",
+    "task result quality evidence"
+  ],
+  "not_a_fixed_route": true,
+  "refresh_policy": "manual review when runtime model options or observed behavior change"
+}

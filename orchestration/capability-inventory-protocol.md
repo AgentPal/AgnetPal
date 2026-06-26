@@ -2,7 +2,7 @@
 
 Capability Inventory describes what the current AgentPal environment may be able to use. It is a set of profiles, not a hard-coded routing system.
 
-AgentPal v0.1.0-rc.1 does not automatically probe runtimes, models, Skills, plugins, MCP servers, or external agents. This protocol is a design foundation for future versions and for manual capability documentation.
+AgentPal v0.1.0-rc.1 does not automatically probe runtimes, models, Skills, plugins, MCP servers, or external agents. In v0.2, Capability Inventory remains manual or maintainer-provided. Profiles are illustrative unless a user or maintainer explicitly marks them as maintained for a specific environment.
 
 ## Purpose
 
@@ -15,7 +15,7 @@ Capability Inventory helps Mira or an owner Pal judge:
 - which Pal profile may own, consult, or verify
 - which capabilities require user approval or execution-layer evidence
 
-These profiles are judgement inputs only. They do not replace AI Judgement and must not become keyword triggers or fixed task-domain routes.
+These profiles are judgement inputs only. They do not replace AI Judgement and must not become keyword-based dispatch rules or fixed task-domain routes.
 
 ## Profile Types
 
@@ -39,7 +39,7 @@ Profiles may be maintained by:
 - future runtime probes
 - future routing memory updates
 
-v0.1 only ships templates and illustrative examples. It does not claim to know a user's installed runtime capabilities.
+v0.2 ships templates and illustrative examples. It does not claim to know a user's installed runtime capabilities.
 
 ## Required Profile Fields
 
@@ -49,14 +49,16 @@ Every profile should include:
 - `id`
 - `name`
 - `type`
-- `status`
+- `example_status` or `status`
+- `not_auto_detected`
+- `used_for`
 - `source`
 - `version`
 - `capabilities`
 - `limits`
 - `risk_notes`
 - `evidence_required`
-- `non_binding`
+- `not_a_fixed_route`
 
 ## Use In Judgement
 
@@ -64,23 +66,29 @@ Mira or an owner Pal may use profiles as follows:
 
 1. Read current contacts / registry.
 2. Read task goal and constraints.
-3. Read only relevant capability indexes or profiles.
-4. Select candidate capabilities.
-5. Explain the judgement if asked.
-6. Record outcome later through Routing Reward Memory when appropriate.
+3. Perform Task Judgement before selecting profile files.
+4. Decide whether a profile would materially improve the judgement.
+5. Read only the relevant capability index or the smallest relevant profile.
+6. Select candidate capabilities.
+7. Produce a Task Package or Context Access List when execution or bounded context is needed.
+8. Record outcome later only through a manual, public-safe process when appropriate.
+
+Profile loading follows Context Slicing. Do not read all profiles by default.
 
 ## Forbidden Use
 
 Do not use Capability Inventory to create:
 
 - task/domain route tables
-- keyword-triggered routes
+- keyword-based dispatch rules
 - fixed Pal sets
 - fixed runtime choices
+- fixed model choices
+- automatic Skill/plugin/MCP calls
 - hidden external Agent calls
 
 ## Future Versions
 
-v0.2 may add manually refreshed capability inventory and simple validation.
+v0.2 may add manually refreshed capability inventory and Markdown self-tests.
 
 v0.3 may add richer probes, routing memory feedback, and PalBench-driven profile tuning.

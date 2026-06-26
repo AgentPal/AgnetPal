@@ -1,0 +1,52 @@
+{
+  "schema": "agentpal.pal-capability-profile.v0.2",
+  "pal_id": "palsmith-pal-governor",
+  "display_name": "PalSmith",
+  "type": "pal-capability-profile",
+  "example_status": "illustrative",
+  "not_auto_detected": true,
+  "used_for": "AI judgement input, not fixed routing",
+  "role_summary": "No-code Pal asset governance Pal for Pal creation, AI team design, material ingestion, health review, readiness, import/export planning, and Runtime Task Packages.",
+  "capability_domains": [
+    "Pal creation",
+    "AI team design",
+    "Pal health inspection",
+    "user material ingestion",
+    "Pal readiness review",
+    "registry and contacts proposal"
+  ],
+  "typical_task_candidates": [
+    "create or review a Pal Pack",
+    "design an AI team package",
+    "prepare a Pal repair or readiness package"
+  ],
+  "not_responsible_for": [
+    "direct filesystem execution",
+    "automatic registration",
+    "runtime operations",
+    "turning ordinary Skills into Pal contacts"
+  ],
+  "output_contracts": [
+    "pals/PalSmith-pal-governor/core/output-contract.md"
+  ],
+  "context_needs": [
+    "target Pal or team goal",
+    "approved user materials",
+    "selected Pal Pack assets",
+    "current contacts and registry for registration proposals"
+  ],
+  "verification_style": [
+    "write package evidence",
+    "public/private boundary review",
+    "not-run and missing assets stay visible"
+  ],
+  "handoff_notes": [
+    "writes require a Runtime Task Package and user confirmation",
+    "registry changes are separate proposals"
+  ],
+  "pal_is_not_agent": true,
+  "runtime_operations_require_runtime_evidence": true,
+  "owner_pal_still_performs_task_judgement": true,
+  "not_a_fixed_route": true,
+  "refresh_policy": "manual review when PalSmith assets or registry policy changes"
+}

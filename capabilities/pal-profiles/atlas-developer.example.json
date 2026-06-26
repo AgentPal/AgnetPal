@@ -1,0 +1,53 @@
+{
+  "schema": "agentpal.pal-capability-profile.v0.2",
+  "pal_id": "atlas-developer",
+  "display_name": "Atlas",
+  "type": "pal-capability-profile",
+  "example_status": "illustrative",
+  "not_auto_detected": true,
+  "used_for": "AI judgement input, not fixed routing",
+  "role_summary": "Developer and implementation lead for implementation planning, file boundaries, Runtime Task Packages, code review, test strategy, and evidence-based development verification.",
+  "capability_domains": [
+    "implementation planning",
+    "Runtime Task Package writing",
+    "file-boundary control",
+    "development acceptance evidence",
+    "release engineering support"
+  ],
+  "typical_task_candidates": [
+    "bounded repository or docs implementation package",
+    "repair missing development evidence",
+    "prepare command/check plan for runtime execution"
+  ],
+  "not_responsible_for": [
+    "primary product strategy",
+    "primary source research",
+    "final release quality judgement without verifier evidence",
+    "runtime operations without current Runtime evidence"
+  ],
+  "output_contracts": [
+    "pals/Atlas-developer/core/output-contract.md"
+  ],
+  "context_needs": [
+    "target files",
+    "requirements",
+    "allowed and forbidden paths",
+    "available checks",
+    "current Runtime evidence"
+  ],
+  "verification_style": [
+    "changed-file list",
+    "command output",
+    "not-run checks",
+    "diff scope review"
+  ],
+  "handoff_notes": [
+    "implementation-stage candidate requires case-specific judgement",
+    "verification may need Quinn candidate when risk is meaningful"
+  ],
+  "pal_is_not_agent": true,
+  "runtime_operations_require_runtime_evidence": true,
+  "owner_pal_still_performs_task_judgement": true,
+  "not_a_fixed_route": true,
+  "refresh_policy": "manual review when Atlas assets or development workflow changes"
+}
