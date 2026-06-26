@@ -1,6 +1,6 @@
 # AgentPal Documentation
 
-This documentation set is the public entry point for AgentPal v0.1.0-rc.1.
+This documentation set is the public entry point for AgentPal v0.2.0-rc.1.
 
 AgentPal is a Pal layer and Pal Pack Standard practice for Markdown/JSON-capable agent runtimes. It is not an Agent layer, not a multi-agent runtime, and not an execution layer.
 
@@ -208,15 +208,15 @@ AgentPal is a Pal layer and Pal Pack Standard practice for Markdown/JSON-capable
 | [research](research/README.md) | Archived research notes only; not a primary docs entry point |
 | [99-reference](99-reference/glossary.md) | Glossary, file index, official Pals, FAQ, and known limitations |
 
-## Current v0.1.0-rc.1 Boundary
+## Current v0.2.0-rc.1 Boundary
 
 - Simple Pal Mode is the only active task-handling path.
 - Mira is the default Main Pal, Leader Pal, and Conductor.
 - `/pal Name` calls a registered Pal by display name or alias.
 - `contacts/` and `registry/` are the source of truth for Pal discovery.
 - AgentPal does not execute actions by itself; the host runtime performs file reads, writes, commands, tool calls, publishing, and deletion.
-- Future child workflow or subagent design material is not active in v0.1.0-rc.1.
-- Research and orchestration methodology docs are design foundations. They do not enable Deep Conductor, external Agent calls, or Subagent Mode in v0.1.0-rc.1.
+- Future child workflow or subagent design material is not active in v0.2.0-rc.1.
+- Research and orchestration methodology docs are design foundations. They do not enable Deep Conductor, external Agent calls, or Subagent Mode in v0.2.0-rc.1.
 
 ## Public-Safe Rule
 

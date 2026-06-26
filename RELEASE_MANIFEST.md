@@ -1,4 +1,41 @@
-# AgentPal v0.1.0-rc.1 Release Manifest
+# AgentPal Release Manifest
+
+## v0.2.0-rc.1 Release Snapshot
+
+Generated: 2026-06-27
+
+| Field | Value |
+| --- | --- |
+| Release name | AgentPal v0.2.0-rc.1 |
+| Version | `v0.2.0-rc.1` |
+| Git tag | `v0.2.0-rc.1` |
+| Release type | Public release candidate / pre-release |
+| Runtime policy | Simple Pal Mode only |
+
+Scope:
+
+- PalSmith end-to-end creation flows for a first professional Pal and a small AI team.
+- Mira-first usage flows.
+- Official Pal task examples for all 9 bundled Pals.
+- Minimal Capability Inventory profiles as manual AI judgement inputs.
+- PalBench Light qualitative release regression suite with 24 cases and scoring rubric.
+- Runtime Adapter thin binding stability guidance and troubleshooting cards.
+
+Not included:
+
+- desktop app, web UI, CLI runtime, daemon, scanner, validator, installer, or service
+- active Deep Conductor execution, autonomous multi-agent runtime behavior, remote-agent orchestration, or active Subagent Mode
+- automatic capability probing or automatic Routing Reward Memory writeback
+- statistical benchmark evidence or underlying-model comparison
+
+Publication boundary:
+
+- Create the release from tag `v0.2.0-rc.1`.
+- Mark the GitHub Release as a pre-release.
+- Do not mark this release as stable `v0.2.0`.
+- Use `GITHUB_RELEASE_DRAFT.md` as the GitHub Release body.
+
+## v0.1.0-rc.1 Release Archive
 
 Generated: 2026-06-25
 

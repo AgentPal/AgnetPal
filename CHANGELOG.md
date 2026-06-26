@@ -2,6 +2,25 @@
 
 All notable public changes to AgentPal are recorded here.
 
+## v0.2.0-rc.1
+
+Release candidate for the v0.2 first-phase no-code Pal layer improvements.
+
+### Added
+
+- PalSmith end-to-end creation flows for a first professional Pal and a small AI team, using copyable Runtime Task Packages.
+- Mira-first usage guides, prompt cards, task package templates, examples, and self-tests.
+- Official Pal task example library covering all 9 bundled Pals, plus cross-Pal examples.
+- Minimal Capability Inventory profiles as manual AI judgement inputs.
+- PalBench Light as a 24-case qualitative release regression suite with scoring rubric.
+- Runtime Adapter stability guidance, troubleshooting prompt cards, upgrade notes, and regression coverage for thin project binding.
+
+### Clarified
+
+- AgentPal remains a Markdown / JSON / protocol Pal layer for existing runtimes.
+- Simple Pal Mode remains the active runtime policy.
+- Deep Conductor, autonomous multi-agent runtime behavior, automatic capability probing, automatic Routing Reward Memory writeback, and statistical benchmark claims are not current v0.2 behavior.
+
 ## v0.1.0-rc.1
 
 Initial public release candidate for AgentPal as a Pal layer and Pal Pack Standard practice.

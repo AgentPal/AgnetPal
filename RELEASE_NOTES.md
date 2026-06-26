@@ -1,4 +1,32 @@
-# AgentPal v0.1.0-rc.1 Release Notes
+# AgentPal Release Notes
+
+## v0.2.0-rc.1
+
+AgentPal v0.2.0-rc.1 is a release candidate for the first integrated no-code Pal layer improvements after v0.1.
+
+This release strengthens:
+
+- PalSmith end-to-end creation flows for a first professional Pal and a small AI team.
+- Mira-first usage flows for users who want one default entry point.
+- Official Pal task examples for all 9 bundled Pals.
+- Minimal Capability Inventory profiles as manual AI judgement inputs.
+- PalBench Light as a qualitative release regression suite.
+- Runtime Adapter troubleshooting and thin binding guidance for Codex, Claude Code, and generic CLI agents.
+
+Current boundary:
+
+- AgentPal remains a Markdown / JSON / protocol workspace for existing runtimes.
+- Simple Pal Mode remains the active runtime policy.
+- Host runtimes perform real file reads, writes, commands, publishing, and tool calls.
+- Deep Conductor, autonomous multi-agent runtime behavior, automatic capability probing, automatic Routing Reward Memory writeback, and statistical benchmark claims are not included.
+- PalSmith is not a CLI, scanner, importer, exporter, builder, installer, UI, daemon, or service.
+
+Publication note:
+
+- This is a release candidate, not a stable `v0.2.0` release.
+- The GitHub Release should be marked as a pre-release.
+
+## v0.1.0-rc.1
 
 AgentPal v0.1.0-rc.1 is a release candidate for the AgentPal Workspace and Pal Pack Standard practice.
 

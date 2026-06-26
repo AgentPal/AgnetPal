@@ -3,7 +3,7 @@
   "id": "agentpal-workspace",
   "name": "AgentPal",
   "type": "agentpal-workspace",
-  "version": "v0.1.0-rc.1",
+  "version": "v0.2.0-rc.1",
   "release_status": "release-candidate",
   "methodology": {
     "design_foundation": "AgentPal does not compete with foundation models. It defines an original Pal Layer methodology for using existing Agent runtimes through Pal identity, context control, task packaging, verification, and routing memory.",
@@ -402,7 +402,7 @@
         "routing-reward-memory",
         "palbench"
       ],
-      "purpose": "Design foundation for transparent scheduling of Pals, runtimes, model profiles, reasoning profiles, Skills, plugins, context, verification, and routing memory. Not active Deep Conductor behavior in v0.1."
+      "purpose": "Design foundation for transparent scheduling of Pals, runtimes, model profiles, reasoning profiles, Skills, plugins, context, verification, and routing memory. Not active Deep Conductor behavior in v0.2.0-rc.1."
     },
     "agent_runtime_orchestration": {
       "active_in_v0_1_runtime": false,

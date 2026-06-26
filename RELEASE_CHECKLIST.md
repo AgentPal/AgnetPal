@@ -9,7 +9,7 @@ Use this section before entering `v0.2.0-rc.1` tag / push / GitHub Release work.
 - [ ] `docs/09-roadmap/v0.2-release-readiness.md` recommends entering `v0.2.0-rc.1` release preparation.
 - [ ] `docs/09-roadmap/v0.2-public-capability-summary.md` states supported and unsupported v0.2 claims without presenting future design as current behavior.
 - [ ] `evals/v0.2-integration/v0.2-integration-test-matrix.md` records pass / candidate integrated readiness.
-- [ ] JSON parse check passes for `agentpal.json`, contacts, registry, Pal `pal.json`, templates, and capability profiles.
+- [ ] JSON parse check passes for `agentpal.json`, contacts, registry, Pal `pal.json`, templates, and capability profiles; `agentpal.json` uses version `v0.2.0-rc.1`.
 - [ ] no-runtime check confirms no scripts, package manifests, UI, installer, daemon, scanner, or validator were added.
 - [ ] no-hardcoded-routing check confirms no new static task/domain routing rule.
 - [ ] no-future-as-current review confirms Deep Conductor is future design, multi-agent execution is not current v0.2 behavior, Capability Inventory is not automatic probing, Routing Reward Memory is not automatic writeback, and PalBench Light is not benchmark evidence.

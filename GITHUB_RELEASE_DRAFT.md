@@ -1,84 +1,53 @@
-# AgentPal v0.1.0-rc.1
+# AgentPal v0.2.0-rc.1
 
-AgentPal v0.1.0-rc.1 is a release candidate for the AgentPal Workspace and Pal Pack Standard practice.
+AgentPal v0.2.0-rc.1 is a release candidate for the first integrated no-code Pal layer improvements after v0.1.
 
-AgentPal is a Markdown / JSON / protocol Pal layer for existing agent runtimes. It provides Pal identity, public knowledge, skills, context rules, memory boundaries, output contracts, coordination rules, verification habits, summaries, and learning storage.
-
-It is not an Agent layer, not a multi-agent runtime, and not an execution layer.
+AgentPal remains a Markdown / JSON / protocol Pal layer for existing agent runtimes. It is not an Agent runtime, not a multi-agent runtime, and not an execution layer.
 
 ## What's Included
 
-- AgentPal Workspace root files for initialization and release-safe navigation.
-- Simple Pal Mode as the only active task-handling path in v0.1.0-rc.1.
-- Shared `core/` gates for Codex, Claude Code, generic CLI, and project-bound runtime adapters.
-- Mira as the default Main Pal, Leader Pal, Conductor, and Pal team leader and coordinator.
-- Official bundled Pal Packs: Mira, Atlas, Vega, Rhea, PalSmith, Quinn, Morgan, Harper, and Nova.
-- Contacts and registry files as the source of truth for Pal discovery and `/pal Name` direct calls.
-- Runtime Response Gate, AI routing judgement, Pal context slicing, asset loading budget, memory boundary, and Task Package output contract protocols.
-- PalSmith as the official no-code Pal asset governance Pal, including Runtime Task Package planning, Pal creation/team creation workflows, import staging, clean export, with-memory export, health inspection, registry/contacts proposals, examples, and Markdown evals.
-- Thin project binding contracts that point external projects back to the AgentPal workspace instead of copying full rules.
-- Fast Route as the current clear-task handoff pattern, with Deep Conductor documented as future complex-workflow design only.
-- R33 small-sample PalBench smoke validation for observed workflow benefits.
-- Public-safe release evidence under `release/v0.1.0-rc.1/`.
-- External project workgroup templates and one-prompt setup prompts for Markdown/JSON-capable runtimes.
-- MIT License, contribution guidance, release notes, checklist, manifest, and documentation navigation.
+- PalSmith end-to-end creation flows for a first professional Pal and a small AI team.
+- Mira-first usage guides, prompt cards, task package templates, examples, and self-tests.
+- Official Pal task examples for all 9 bundled Pals, plus cross-Pal examples.
+- Minimal Capability Inventory profiles as manual AI judgement inputs.
+- PalBench Light as a 24-case qualitative release regression suite with scoring rubric.
+- Runtime Adapter stability guidance, troubleshooting prompt cards, upgrade notes, and regression coverage for thin project binding.
+- v0.2 readiness, capability summary, and integration matrix records.
 
 ## Current Status
 
-- Release type: release candidate.
-- Version: `v0.1.0-rc.1`.
+- Release type: release candidate / pre-release.
+- Version: `v0.2.0-rc.1`.
 - Runtime path: Simple Pal Mode only.
 - Required AgentPal runtime dependencies: none.
-- Local tag evidence observed during documentation review: `v0.1.0-rc.1` and `v0.1.0-rc.2`.
-- Local tagged commit: verify the intended final tag with `git rev-list -n 1 <tag>` before publishing.
-- Remote status observed during the local gate: `origin https://github.com/AgentPal/AgnetPal.git` is configured; push has not been performed by this draft.
-- GitHub Release status: this draft is for manual publication; an online GitHub Release should not be considered created until maintainers publish it from the intended tag.
-
-Maintainers should verify the final commit, tag, remote, and release page before publication. R14 maintainer handoff says stage review and commit review can proceed, but publish-ready remains no until a maintainer manually stages, commits, confirms tag strategy, pushes, and creates the GitHub Release.
-
-## R33 PalBench Boundary
-
-R33 PalBench is six-sample smoke validation. It compares AgentPal-style usage workflows with baseline usage conditions for task clarity, verification awareness, context-scope control, user routing burden, routing-record reuse, and current/future workflow boundaries.
-
-It is not statistically significant. It is not an underlying-model benchmark. It does not prove broad performance improvement across all tasks.
-
-Safe claim:
-
-```text
-In a six-sample smoke validation, AgentPal showed observed benefits for task clarity, verification awareness, context-scope control, user routing burden, reusable routing records, and clear current/future workflow boundaries.
-```
+- GitHub Release should be created from tag `v0.2.0-rc.1`.
 
 ## Known Limitations
 
-- AgentPal does not include a desktop app, web UI, CLI runtime, daemon, scanner, validator, installer, or service.
-- PalSmith does not include an executable command layer, importer program, exporter program, UI, daemon, or required runtime dependency.
+- AgentPal is not a desktop app, web UI, CLI runtime, daemon, scanner, validator, installer, or service.
 - AgentPal does not execute filesystem, system, publishing, account, or automation actions by itself.
 - Host runtimes and user-controlled tools perform actual execution and must provide evidence.
-- Active multi-agent runtime behavior is not included.
-- Active Subagent Mode, remote-agent orchestration, and active Deep Conductor execution are not included in v0.1.0-rc.1.
-- Capability Inventory, Context Access List, Workflow Topology, Routing Reward Memory, expanded PalBench, and Deep Conductor materials are design foundations unless a future release activates them.
-- Exact token metering is not provided in v0.1.0-rc.1.
-- Pal Packs are working assets for a runtime, not independent agent processes.
-- Private user memory, private project state, customer data, secrets, credentials, internal development notes, and local absolute paths must not be published.
-- Native `/pal` runtime API behavior, live web fetch, and external link checking remain not-run unless maintainers verify them separately.
-- Confirm whether `origin https://github.com/AgentPal/AgnetPal.git` is the intended remote before publishing.
-- Existing local tags observed: `v0.1.0-rc.1` and `v0.1.0-rc.2`; choose the final tag strategy before release creation.
+- Active Deep Conductor execution, autonomous multi-agent runtime behavior, remote-agent orchestration, and active Subagent Mode are not included.
+- Capability Inventory profiles are manual illustrative judgement inputs, not automatic environment probing.
+- Routing Reward Memory is not automatic writeback.
+- PalBench Light is qualitative release regression, not statistically significant benchmark evidence and not a model comparison.
+- PalSmith is not a CLI, scanner, importer, exporter, builder, installer, UI, daemon, or service.
 
 ## Getting Started
 
 1. Download or clone the AgentPal Workspace.
 2. For Codex, open the AgentPal directory and paste `prompts/codex/initialize-agentpal-workspace.md`.
-3. For Claude Code, start from `<your-project>` and paste `prompts/claude-code/install-agentpal-current-project.md` after replacing `AGENTPAL_HOME`.
-4. For a generic CLI Agent, start from `<your-project>` and paste `prompts/generic-cli-agent/install-agentpal-current-project.md` after replacing `AGENTPAL_HOME`.
-5. Start ordinary messages with Mira, or use `/pal Name` to call a registered Pal directly, for example `/pal Harper` or `/pal PalSmith`.
+3. For Claude Code, start from `<your-project>` and paste `prompts/claude-code/install-agentpal-current-project.md`.
+4. For a generic CLI agent, start from `<your-project>` and paste `prompts/generic-cli-agent/install-agentpal-current-project.md`.
+5. Start ordinary messages with Mira, or use `/pal Name` to call a registered Pal directly.
 
 ## Safety Notes
 
 - Treat `contacts/` and `registry/` as the source of truth for Pal discovery.
-- Keep future designs clearly marked as future, not active v0.1.0-rc.1 behavior.
+- Keep future designs clearly marked as future, not active v0.2.0-rc.1 behavior.
 - Use synthetic or placeholder data in public examples and templates.
-- Review release archives before publication to ensure ignored local runtime files are not included.
+- Do not publish private user memory, private project state, customer data, sensitive access material, internal development notes, or local absolute paths.
 
-## License
+## Release Notes
 
-MIT License. See `LICENSE`.
+This release should be marked as a pre-release. It should not be marked as the latest stable `v0.2.0` release.
