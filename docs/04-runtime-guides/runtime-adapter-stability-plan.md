@@ -10,6 +10,19 @@ This plan defines the v0.2 regression surface for AgentPal runtime adapter behav
 - Preserve `active_project_root` vs `agentpal_workspace_root`.
 - Ensure core gate updates propagate through thin binding.
 - Avoid stale copied Pal rosters in external projects.
+- Keep Mira-first user experience consistent across Codex, Claude Code, and generic CLI agents.
+
+## Mira-First Runtime Experience
+
+Across supported Markdown/JSON-capable runtimes:
+
+- ordinary user messages should start with Mira;
+- users do not need to manually choose a specialist Pal unless they want `/pal Name`;
+- Mira performs case-specific owner judgement before substantive execution;
+- thin bindings locate the AgentPal workspace and read current core gates instead of copying the full rule body;
+- Runtime is only the execution carrier and evidence source, not a Pal;
+- project-bound sessions keep `active_project_root` separate from `agentpal_workspace_root`;
+- composite deliverables use Simple Pal Mode / staged Task Package, not automatic Deep Conductor or multi-agent execution.
 
 ## Covered Paths
 

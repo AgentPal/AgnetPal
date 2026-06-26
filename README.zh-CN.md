@@ -67,6 +67,8 @@ AgentPal v0.1.0-rc.3 当前提供：
 
 ## 快速开始
 
+日常使用可以先找 Mira。Mira 是默认 Main Pal / Leader Pal / Conductor：你把目标告诉她，她会判断是直接整理、补问关键问题、交给专业 Pal，还是生成 staged Runtime Task Package。可以先看 [Mira-first usage](docs/02-getting-started/mira-first-usage.md) 和 [Mira-first prompt cards](docs/02-getting-started/mira-first-prompt-cards.md)。
+
 ### Codex
 
 适合直接在 Codex 中打开 AgentPal Workspace。

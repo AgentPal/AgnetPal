@@ -65,6 +65,8 @@ AgentPal v0.1.0-rc.3 currently provides:
 
 ## Quick Start
 
+Most day-to-day use can start with Mira. Mira is the default Main Pal / Leader Pal / Conductor: tell her the goal, and she will either answer as team leader, ask a focused question, hand off to a specialist Pal, or prepare a staged Runtime Task Package. Start with [Mira-first usage](docs/02-getting-started/mira-first-usage.md) and [Mira-first prompt cards](docs/02-getting-started/mira-first-prompt-cards.md).
+
 ### Codex
 
 Use this when you open the AgentPal Workspace directly in Codex.

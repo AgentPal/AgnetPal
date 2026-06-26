@@ -13,6 +13,7 @@ AgentPal is a Pal layer and Pal Pack Standard practice for Markdown/JSON-capable
 - [Pal Teams, Multi-Pal Collaboration, and Deep Conductor](01-concepts/08-pal-teams-collaboration-and-deep-conductor.md)
 - [Quick start](02-getting-started/00-quick-start.md)
 - [Mira-first usage](02-getting-started/mira-first-usage.md)
+- [Mira-first prompt cards](02-getting-started/mira-first-prompt-cards.md)
 - [Use AgentPal with Claude Code](10-using-agentpal-with-claude-code.md)
 - [Use AgentPal with generic CLI agents](11-using-agentpal-with-cli-agents.md)
 - [Simple Pal Mode](01-concepts/05-simple-pal-mode.md)
@@ -48,6 +49,11 @@ AgentPal is a Pal layer and Pal Pack Standard practice for Markdown/JSON-capable
 ## Mira Leader Quick Links
 
 - [Mira Pal Pack](../pals/Mira-main/README.md)
+- [Mira-first usage](02-getting-started/mira-first-usage.md)
+- [Mira-first prompt cards](02-getting-started/mira-first-prompt-cards.md)
+- [Mira first task intake template](../pals/Mira-main/templates/task-packages/mira-first-task-intake.md)
+- [Mira composite deliverable template](../pals/Mira-main/templates/task-packages/mira-composite-deliverable-task-package.md)
+- [Mira runtime brief template](../pals/Mira-main/templates/task-packages/mira-runtime-brief.md)
 - [Mira leader skills](../pals/Mira-main/skills/index.md)
 - [Mira leader knowledge](../pals/Mira-main/knowledge/INDEX.md)
 - [Mira workflows](../pals/Mira-main/workflows/index.md)

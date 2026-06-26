@@ -18,8 +18,12 @@ Each task example should include:
 
 First concrete samples in this round:
 
+Mira-first examples status: started / first implementation / R41. This updates the Mira examples and adds runtime-brief coverage; it does not mark the full official 9 Pal example library complete.
+
 - Mira: `pals/Mira-main/examples/mira-first-daily-task.md`
 - Mira: `pals/Mira-main/examples/mira-composite-deliverable-task.md`
+- Mira: `pals/Mira-main/examples/mira-owner-judgement-examples.md`
+- Mira: `pals/Mira-main/examples/mira-runtime-brief-example.md`
 - PalSmith: `pals/PalSmith-pal-governor/examples/create-first-professional-pal.md`
 - PalSmith: `pals/PalSmith-pal-governor/examples/create-ai-team-from-user-goal.md`
 - Atlas: `pals/Atlas-developer/examples/tasks/runtime-task-package-for-docs-change.md`

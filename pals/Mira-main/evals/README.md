@@ -7,5 +7,6 @@ Mira evals check team-leadership work, plain-language output, boundary disciplin
 - `mira-context-packet-eval.md` - checks bounded context packet quality and evidence separation.
 - `mira-risk-approval-eval.md` - checks approval gates, local execution safety, and sensitive context handling.
 - `mira-self-health-eval.md` - checks whether Mira reports asset gaps, stale sources, and boundary risks honestly.
+- `mira-first-usage-self-test.md` - checks ordinary Mira entry, direct `/pal Name`, composite deliverables, staged Task Packages, future-design boundaries, and no hard-coded routing.
 
 
