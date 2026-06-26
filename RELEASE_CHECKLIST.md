@@ -2,6 +2,30 @@
 
 Use this checklist before publishing AgentPal v0.1.0-rc.1 as a public MIT GitHub release.
 
+## v0.2.0-rc.1 Pre-Release Checklist
+
+Use this section before entering `v0.2.0-rc.1` tag / push / GitHub Release work. It supplements the v0.1 release checklist below and does not authorize tag, push, or release creation by itself.
+
+- [ ] `docs/09-roadmap/v0.2-release-readiness.md` recommends entering `v0.2.0-rc.1` release preparation.
+- [ ] `docs/09-roadmap/v0.2-public-capability-summary.md` states supported and unsupported v0.2 claims without presenting future design as current behavior.
+- [ ] `evals/v0.2-integration/v0.2-integration-test-matrix.md` records pass / candidate integrated readiness.
+- [ ] JSON parse check passes for `agentpal.json`, contacts, registry, Pal `pal.json`, templates, and capability profiles.
+- [ ] no-runtime check confirms no scripts, package manifests, UI, installer, daemon, scanner, or validator were added.
+- [ ] no-hardcoded-routing check confirms no new static task/domain routing rule.
+- [ ] no-future-as-current review confirms Deep Conductor is future design, multi-agent execution is not current v0.2 behavior, Capability Inventory is not automatic probing, Routing Reward Memory is not automatic writeback, and PalBench Light is not benchmark evidence.
+- [ ] no-internal-path review confirms public files do not include local absolute paths, private project data, internal report directories, or real credential material.
+- [ ] Claude Code thin binding replay is recorded and passes or has an explicit blocker.
+- [ ] Generic CLI thin binding replay is recorded and passes or has an explicit blocker.
+- [ ] Codex workspace initialization check is recorded and passes or has an explicit blocker.
+- [ ] PalSmith E2E entry is reachable from public docs.
+- [ ] Mira-first entry is reachable from public docs.
+- [ ] Official Pal example library entry is reachable from public docs.
+- [ ] Capability Inventory profile entry is reachable from public docs.
+- [ ] PalBench Light case count is at least 20 and the scoring rubric exists.
+- [ ] Runtime Adapter stability guide and troubleshooting cards are reachable from public docs.
+- [ ] `git status --short` is clean before tag / push / release work.
+- [ ] Tag, push, and GitHub Release creation remain not done until the maintainer explicitly authorizes release operations.
+
 ## Root Release Files
 
 - [ ] `README.md` exists and presents AgentPal as a Pal layer and Pal Pack Standard practice.
