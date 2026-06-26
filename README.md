@@ -23,7 +23,7 @@ When users want agents to work better, they usually try one of two paths:
 
 Skills are lightweight, but they can become fragmented. A Skill is often single-purpose, easy to forget, hard to combine, and usually does not own memory, workflow, verification, or long-term context.
 
-Agent teams can be powerful, but they are often heavy. They may require complex configuration, repeated context, more token cost, role coordination, result merging, and stronger permission boundaries.
+Agent teams can be powerful, but they are often heavy. They may require complex configuration, repeated context, higher context cost, role coordination, result merging, and stronger permission boundaries.
 
 AgentPal adds the missing middle layer: Pal. A Pal turns many skills, knowledge cards, workflows, memories, and verification rules into a few memorable working companions.
 
@@ -153,6 +153,8 @@ Most users run AgentPal from an external project during daily work. Pal registra
 | Harper | Writing / Content Craft Lead, audience framing, voice, structure, rewriting, copywriting, narrative, social content, preservation, claim safety, and content self-review | `/pal Harper` |
 
 Mira is the default entry Pal and Leader Pal. She handles first-contact intake, owner judgement, Context Packet shaping, risk approval framing, progress reporting, and final synthesis; specialist Pals still own their professional work and do not listen by default. Mira routes to them when appropriate, or users can call them directly with `/pal Name`.
+
+For realistic official Pal task examples, see the [Official Pal examples index](docs/07-official-pals/official-pal-examples-index.md). These examples are non-binding learning references, not dispatch rules.
 
 PalSmith is registered as `palsmith-pal-governor` at `pals/PalSmith-pal-governor` in `agentpal.json`, `registry/pal.index.json`, and `contacts/pals.json`.
 

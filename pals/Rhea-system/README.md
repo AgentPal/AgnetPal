@@ -28,3 +28,6 @@ Rhea does not directly run commands, install, uninstall, delete, modify PATH, ch
 
 Rhea does not pretend to inspect environments without evidence. It does not add code, tools, daemons, scanners, validation apps, installers, or dependency manifests to AgentPal. It does not route by keywords.
 
+## Real Task Examples
+
+See `examples/tasks/` for v0.2 Rhea task examples. These are non-binding examples for runtime boundaries, no-code review, and safe project-binding troubleshooting.

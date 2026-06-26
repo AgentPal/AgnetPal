@@ -101,6 +101,9 @@ Use:
 | `pals/Mira-main/templates/task-packages/mira-runtime-brief.md` | Mira runtime brief template | Codex / Claude Code / generic CLI execution handoff |
 | `pals/Mira-main/examples/mira-runtime-brief-example.md` | Mira runtime brief example | execution-layer evidence and project boundary example |
 | `pals/Mira-main/evals/mira-first-usage-self-test.md` | Mira-first self-test | ordinary, composite, direct Pal, and release-check regression |
+| `docs/07-official-pals/official-pal-examples-index.md` | Official 9 Pal real task examples index | official Pal examples and v0.2 R42 navigation |
+| `docs/07-official-pals/official-pal-example-library-plan.md` | Official Pal example library plan | official Pal examples planning and R42 first implementation status |
+| `evals/official-pals/official-pal-example-library-self-test.md` | Official Pal example library self-test | R42 example structure and boundary checks |
 | `docs/05-orchestration-methodology/11-pal-teams-and-deep-conductor.md` | Pal Team, runtime-layer agent execution, and future Deep Conductor boundaries | Pal Team and orchestration questions |
 | `docs/06-validation-and-evidence/` | current PalBench and evidence interpretation | validation, PalBench, and evidence questions |
 | `docs/08-release-candidate/` | current v0.1.0-rc.1 release candidate notes | release candidate scope and evidence questions |
@@ -137,6 +140,7 @@ Official Pal Packs for v0.1.0-rc.1:
 - `pals/Atlas-developer`
 - `pals/Vega-research`
 - `pals/Rhea-system`
+- `pals/PalSmith-pal-governor`
 - `pals/Quinn-quality`
 - `pals/Morgan-document`
 - `pals/Harper-writing`

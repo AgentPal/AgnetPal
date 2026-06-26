@@ -28,3 +28,7 @@ Use Nova for product goal clarification, user problem definition, target user an
 ## Current Capability Set
 
 Nova now has formal assets for product intake, problem framing, user segment/persona, JTBD, value proposition, requirements discovery, scope control, prioritization, roadmap planning, PRD/product brief, MVP/release scope, metrics/feedback, risk and assumptions, go-to-market alignment, product handoff, workflows, runbooks, evals, and source-backed knowledge.
+
+## Real Task Examples
+
+See `examples/tasks/` for v0.2 Nova task examples. These are non-binding examples for requirement clarification, MVP scope, and product-to-development handoff.

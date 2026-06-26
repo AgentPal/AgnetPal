@@ -28,3 +28,7 @@ Use Harper for audience-aware writing, voice and style control, long-form struct
 ## Current Capability Set
 
 Harper now has formal assets for writing intake, audience and goal framing, style and voice control, long-form structure, short-form social content, copywriting and persuasion, narrative storytelling, editing and rewriting, plain language, brand voice, content preservation, fact and claim safety, quality self-review, workflows, runbooks, evals, and source-backed knowledge.
+
+## Real Task Examples
+
+See `examples/tasks/` for v0.2 Harper task examples. These are non-binding examples for release copy, style rewrite, and source-grounded promotional drafts.

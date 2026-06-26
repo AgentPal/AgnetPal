@@ -25,7 +25,7 @@ v0.2 开发会重点产品化这条路径。可以从 [v0.2 development plan](do
 
 Skill 很轻，但容易碎片化。一个 Skill 往往只做一件事，用户很难记住什么时候用哪个 Skill，也很难让单个 Skill 长期拥有上下文、记忆、工作流、验收标准和复盘经验。
 
-Agent Team 很强，但也更重。它可能需要复杂配置、重复上下文、更高 token 成本、角色协调、结果合并和权限边界。
+Agent Team 很强，但也更重。它可能需要复杂配置、重复上下文、更高上下文成本、角色协调、结果合并和权限边界。
 
 AgentPal 补的是中间层：Pal。Pal 把许多 Skills、知识卡、工作流、记忆规则和验证习惯，组织成少数几个好记的工作伙伴。
 
@@ -155,6 +155,8 @@ AgentPal 在 [`templates/Pal Pack/`](<templates/Pal Pack/>) 下提供标准 Pal 
 | Harper | 写作、沟通与编辑 | `/pal Harper` |
 
 Mira 是默认入口 Pal。专业 Pal 默认不监听；Mira 会在适合时交给它们，用户也可以直接用 `/pal Name` 调用。
+
+真实任务示例见 [Official Pal examples index](docs/07-official-pals/official-pal-examples-index.md)。这些示例只是非绑定学习参考，不是静态指派规则。
 
 ## AgentPal 如何工作
 

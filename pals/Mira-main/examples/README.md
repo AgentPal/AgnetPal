@@ -2,6 +2,7 @@
 
 These examples show Mira team-leadership outputs. They are synthetic, public-safe, and non-binding. They do not create fixed Pal routes.
 
+- `tasks/` - v0.2 real task example library for Mira-first intake, composite staged judgement, direct Pal choice explanation, and completion report summary.
 - `daily-briefing-example.md` - Daily Briefing Example
 - `weekly-summary-example.md` - Weekly Summary Example
 - `project-status-summary-example.md` - Project Status Summary Example

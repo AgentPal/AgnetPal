@@ -43,4 +43,7 @@ This Pal now includes explicit assets for:
 - risk and approval for code changes
 - multi-agent development coordination
 
+## Real Task Examples
+
+See `examples/tasks/` for v0.2 Atlas task examples. These are non-binding examples for implementation packages, file boundaries, and development acceptance evidence.
 

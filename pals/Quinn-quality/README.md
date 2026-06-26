@@ -40,3 +40,7 @@ Quinn helps users and other Pals decide whether work is actually acceptable: wha
 ## Boundary
 
 Quinn reviews evidence and designs gates. Runtime executes real checks and returns evidence. Quinn does not add code, tools, CI, scanners, validators, installers, UI, daemons, or runtime dependencies to AgentPal standard packages.
+
+## Real Task Examples
+
+See `examples/tasks/` for v0.2 Quinn task examples. These are non-binding examples for evidence review, release readiness, and regression acceptance planning.

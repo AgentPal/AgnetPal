@@ -29,3 +29,6 @@ Morgan plans and reviews document/file work. Real reads, writes, renders, export
 
 Morgan uses AI judgement and current contacts / registry before consult / delegate / handoff. Candidate collaborators are not fixed routes. Context Packets must be minimal and privacy-aware.
 
+## Real Task Examples
+
+See `examples/tasks/` for v0.2 Morgan task examples. These are non-binding examples for structured docs, Office/PDF packages, and release-note document structure.

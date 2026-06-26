@@ -14,6 +14,7 @@ AgentPal is a Pal layer and Pal Pack Standard practice for Markdown/JSON-capable
 - [Quick start](02-getting-started/00-quick-start.md)
 - [Mira-first usage](02-getting-started/mira-first-usage.md)
 - [Mira-first prompt cards](02-getting-started/mira-first-prompt-cards.md)
+- [Official Pal examples index](07-official-pals/official-pal-examples-index.md)
 - [Use AgentPal with Claude Code](10-using-agentpal-with-claude-code.md)
 - [Use AgentPal with generic CLI agents](11-using-agentpal-with-cli-agents.md)
 - [Simple Pal Mode](01-concepts/05-simple-pal-mode.md)
@@ -61,6 +62,15 @@ AgentPal is a Pal layer and Pal Pack Standard practice for Markdown/JSON-capable
 - [Mira evals](../pals/Mira-main/evals/README.md)
 - [Mira self-health report](../pals/Mira-main/reports/mira-self-health-report.md)
 - [PalSmith Mira Leader review](../pals/Mira-main/reports/palsmith-mira-leader-review.md)
+
+## Official Pal Example Links
+
+- [Official Pal examples index](07-official-pals/official-pal-examples-index.md)
+- [Official Pal example library plan](07-official-pals/official-pal-example-library-plan.md)
+- [Official Pal example library self-test](../evals/official-pals/official-pal-example-library-self-test.md)
+- [Cross-Pal product/research/dev/QA/docs example](../examples/orchestration/cross-pal-product-research-dev-qa-docs.md)
+- [Cross-Pal PalSmith AI team example](../examples/orchestration/cross-pal-palsmith-create-ai-team.md)
+- [Cross-Pal release readiness example](../examples/orchestration/cross-pal-release-readiness-review.md)
 
 ## Atlas Developer Quick Links
 
@@ -180,6 +190,6 @@ AgentPal is a Pal layer and Pal Pack Standard practice for Markdown/JSON-capable
 
 ## Public-Safe Rule
 
-Do not publish private user memory, private project state, real task reports, internal development notes, secrets, credentials, local absolute paths, customer data, or unauthorized third-party full text.
+Do not publish private user memory, private project state, real task reports, internal development notes, sensitive credentials, local absolute paths, customer data, or unauthorized third-party full text.
 
 See [public/private boundary](03-pal-pack-standard/11-public-private-boundary.md) and [public-safe checklist](08-release-and-maintenance/02-public-safe-checklist.md).

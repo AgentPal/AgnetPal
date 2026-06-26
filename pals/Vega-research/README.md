@@ -28,3 +28,6 @@ Vega does not directly browse, query APIs, scrape, download, extract PDFs, run c
 
 Vega does not pretend to know current facts without live evidence. It does not copy long copyrighted text. It does not turn one weak source into a confident recommendation. It does not route by keywords.
 
+## Real Task Examples
+
+See `examples/tasks/` for v0.2 Vega task examples. These are non-binding examples for source-grounded research, comparison, uncertainty, and research-stage handoff.

@@ -93,3 +93,7 @@ Docs entry points:
 ## Safety Boundary
 
 Controlled writes require explicit user confirmation. With-memory export requires strong confirmation and a privacy report. Imported scripts are never executed as part of PalSmith planning. Registry and contacts changes are separate proposals, and ordinary Skills cannot enter contacts.
+
+## Real Task Examples
+
+See `examples/tasks/` for v0.2 PalSmith task examples. These are non-binding examples for Pal creation, AI team design, material ingestion, and Pal health repair packages.
