@@ -18,6 +18,8 @@ v0.2 开发会重点产品化这条路径。可以从 [v0.2 development plan](do
 
 v0.2 Capability Inventory 见 [minimal usable design](docs/05-orchestration-methodology/capability-inventory-minimal-usable-design.md) 和 [capability profile index](capabilities/README.md)。这些 profile 是示例性的判断输入，不是自动环境扫描结果。
 
+v0.2 release regression 见 [PalBench Light Suite](evals/palbench-light/README.md) 和 [suite plan](docs/research/palbench-light-suite-plan.md)。
+
 ## 为什么需要 AgentPal？
 
 用户想让 Agent 更好用时，通常会走两条路：

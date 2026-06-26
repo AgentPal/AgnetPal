@@ -116,6 +116,11 @@ Use:
 | `evals/capability-inventory/` | Capability Inventory self-tests | R43 profile structure, loading budget, and no fixed route checks |
 | `examples/orchestration/capability-inventory-task-judgement-example.md` | Capability Inventory successful use example | profile-as-judgement-input example |
 | `examples/failures/capability-profile-used-as-fixed-route.md` | Capability Inventory failure example | profile-as-route regression example |
+| `docs/research/palbench-light-suite-plan.md` | PalBench Light suite plan | v0.2 R44 release regression suite design |
+| `evals/palbench-light/README.md` | PalBench Light eval entry | v0.2 release regression suite navigation |
+| `evals/palbench-light/task-index.md` | PalBench Light task index | R44 first 24 case index |
+| `evals/palbench-light/scoring-rubric.md` | PalBench Light scoring rubric | 0 / 1 / 2 release regression scoring |
+| `evals/palbench-light/palbench-light-suite-self-test.md` | PalBench Light suite self-test | R44 suite structure and boundary check |
 | `docs/05-orchestration-methodology/11-pal-teams-and-deep-conductor.md` | Pal Team, runtime-layer agent execution, and future Deep Conductor boundaries | Pal Team and orchestration questions |
 | `docs/06-validation-and-evidence/` | current PalBench and evidence interpretation | validation, PalBench, and evidence questions |
 | `docs/08-release-candidate/` | current v0.1.0-rc.1 release candidate notes | release candidate scope and evidence questions |
@@ -205,6 +210,8 @@ Use the current docs directories as the public entry points. Archived research n
 | `templates/research/` | PalBench result template |
 | `evals/palbench/` | PalBench evaluation drafts |
 | `evals/palbench-light/` | v0.2 PalBench Light regression suite |
+| `evals/palbench-light/task-index.md` | R44 PalBench Light first implementation index |
+| `evals/palbench-light/scoring-rubric.md` | R44 PalBench Light shared scoring protocol |
 | `evals/orchestration/` | orchestration boundary and protocol self-tests |
 | `examples/orchestration/` | orchestration examples |
 

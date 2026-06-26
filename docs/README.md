@@ -23,6 +23,8 @@ AgentPal is a Pal layer and Pal Pack Standard practice for Markdown/JSON-capable
 - [Orchestration methodology](05-orchestration-methodology/README.md)
 - [Pal Teams and Deep Conductor](05-orchestration-methodology/11-pal-teams-and-deep-conductor.md)
 - [Capability Inventory minimal usable design](05-orchestration-methodology/capability-inventory-minimal-usable-design.md)
+- [PalBench Light Suite](../evals/palbench-light/README.md)
+- [PalBench Light suite plan](research/palbench-light-suite-plan.md)
 - [Validation and evidence](06-validation-and-evidence/README.md)
 - [v0.1.0-rc.1 release candidate](08-release-candidate/README.md)
 - [v0.2 development plan](09-roadmap/v0.2-development-plan.md)
@@ -84,6 +86,14 @@ AgentPal is a Pal layer and Pal Pack Standard practice for Markdown/JSON-capable
 - [Pal capability profiles](../capabilities/pal-profiles/README.md)
 - [Capability Inventory self-test](../evals/capability-inventory/capability-inventory-minimal-usable-self-test.md)
 - [Capability Inventory task judgement example](../examples/orchestration/capability-inventory-task-judgement-example.md)
+
+## PalBench Light Quick Links
+
+- [PalBench Light suite plan](research/palbench-light-suite-plan.md)
+- [PalBench Light eval index](../evals/palbench-light/task-index.md)
+- [PalBench Light scoring rubric](../evals/palbench-light/scoring-rubric.md)
+- [PalBench Light case template](../evals/palbench-light/case-template.md)
+- [PalBench Light suite self-test](../evals/palbench-light/palbench-light-suite-self-test.md)
 
 ## Atlas Developer Quick Links
 
@@ -183,6 +193,7 @@ AgentPal is a Pal layer and Pal Pack Standard practice for Markdown/JSON-capable
 | [06-palsmith](06-palsmith/README.md) | PalSmith v0.2 end-to-end productization path |
 | [06-collaboration](06-collaboration/00-collaboration-overview.md) | Contacts, mention protocol, Context Packets, handoff, and project workgroups |
 | [06-validation-and-evidence](06-validation-and-evidence/README.md) | PalBench meaning, limits, observed benefits, and future validation design |
+| [evals/palbench-light](../evals/palbench-light/README.md) | v0.2 PalBench Light release regression suite |
 | [07-authoring-pals](07-authoring-pals/README.md) | Designing, writing, testing, publishing, and governing Pal Packs with PalSmith |
 | [07-memory-and-learning](07-memory-and-learning/00-memory-overview.md) | User memory, project memory, skill memory, and repeated-task learning |
 | [08-release-and-maintenance](08-release-and-maintenance/00-release-process.md) | Release process, public-safety checks, versioning, and maintenance |

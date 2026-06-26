@@ -16,6 +16,8 @@ v0.2 development now focuses on productizing this path. Start from the [v0.2 dev
 
 For v0.2 Capability Inventory work, see the [minimal usable design](docs/05-orchestration-methodology/capability-inventory-minimal-usable-design.md) and [capability profile index](capabilities/README.md). Profiles are illustrative judgement inputs, not automatic environment scans.
 
+For v0.2 release regression work, see the [PalBench Light Suite](evals/palbench-light/README.md) and [suite plan](docs/research/palbench-light-suite-plan.md).
+
 ## Why AgentPal?
 
 When users want agents to work better, they usually try one of two paths:
