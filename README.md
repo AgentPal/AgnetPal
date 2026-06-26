@@ -1,10 +1,16 @@
 # AgentPal
 
-AgentPal is a Pal Team and Pal Pack standard practice for agent runtimes.
+AgentPal is a lightweight framework for building AI teams on top of agent runtimes such as Codex, Claude Code, OpenCode, OpenHands, and other CLI agents.
 
-AgentPal gives every agent a Pal.
+Create role-based Pals with knowledge, skills, memory, workflows, output contracts, and collaboration rules, then organize them into a working AI team.
 
-AgentPal v0.1.0-rc.1 is a Markdown / JSON / protocol workspace for runtimes such as Codex, Claude Code, and other CLI agents that can read structured workspace files. It is not an Agent runtime, not a multi-agent runtime, not an execution layer, not a desktop app, not a web app, and not an installer.
+AgentPal gives every agent a Pal. AgentPal v0.1.0-rc.1 is a Markdown / JSON / protocol workspace for runtimes that can read structured workspace files. It is not an Agent runtime, not a multi-agent runtime, not an execution layer, not a desktop app, not a web app, and not an installer.
+
+## PalSmith
+
+PalSmith is the AI team builder and Pal asset governance Pal for AgentPal. It helps users create, improve, inspect, import, export, version, and maintain Pals and Pal teams through natural language, without needing to understand the full Pal Pack directory structure.
+
+Learn more about PalSmith: [What is PalSmith, and how can I operate it?](docs/01-concepts/09-What-is-PalSmith-how-can-I-operate-it.md)
 
 ## Why AgentPal?
 

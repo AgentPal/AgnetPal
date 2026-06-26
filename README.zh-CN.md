@@ -1,12 +1,18 @@
 # AgentPal
 
-AgentPal 是面向 Agent Runtime 的 Pal团队，也是 Pal Pack 标准实践。
+AgentPal 是一个搭建 AI 团队的轻量框架，可运行在 Codex、Claude Code、OpenCode、OpenHands 等 Agent Runtime 之上。
+
+它让用户创建不同职责的 Pal，并把这些 Pal 组织成一个有分工、有记忆、有知识、有技能、有工作流、有协作规则的 AI 团队。
 
 AgentPal，让每个 Agent 都有自己的 Pal。
 
-一句话说：Skill 太碎，Agent Team 太重，AgentPal 提供 Pal 这个中间层。
+AgentPal v0.1.0-rc.1 是一个 Markdown / JSON / protocol workspace，可用于能读取结构化工作区文件的 Runtime。它不是 Agent Runtime，不是多 Agent Runtime，不是执行层，不是桌面 App，不是 Web App，也不是安装器。
 
-AgentPal v0.1.0-rc.1 是一个 Markdown / JSON / protocol workspace，可用于 Codex、Claude Code，以及其他能读取结构化工作区文件的 CLI Agent。它不是 Agent Runtime，不是多 Agent Runtime，不是执行层，不是桌面 App，不是 Web App，也不是安装器。
+## PalSmith
+
+PalSmith 是 AgentPal 的 AI 团队创建师，也是 Pal 资产治理 Pal。它帮助用户通过自然语言创建、完善、体检、导入、导出、升级和维护 Pal 与 Pal 团队，不需要用户先理解完整的 Pal Pack 目录结构。
+
+详细了解 PalSmith：[PalSmith是什么，怎么使用？](docs/01-concepts/09-What-is-PalSmith-how-can-I-operate-it.md)
 
 ## 为什么需要 AgentPal？
 
