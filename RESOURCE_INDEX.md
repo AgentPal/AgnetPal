@@ -87,7 +87,12 @@ Use:
 | `docs/01-concepts/07-why-pal.md` | why AgentPal uses the Pal concept between Skills and Agent teams | concept questions and onboarding |
 | `docs/05-orchestration-methodology/` | current AgentPal Pal orchestration methodology | methodology questions and docs navigation |
 | `docs/09-roadmap/` | v0.2 roadmap and task pool | v0.2 planning and development sequencing |
+| `docs/06-palsmith/README.md` | PalSmith v0.2 productization index | PalSmith creation and AI team productization work |
 | `docs/06-palsmith/palsmith-end-to-end-productization.md` | PalSmith v0.2 end-to-end user path | PalSmith creation and AI team productization work |
+| `pals/PalSmith-pal-governor/templates/task-packages/create-first-professional-pal.md` | Copyable first professional Pal creation task package | PalSmith v0.2 single-Pal creation work |
+| `pals/PalSmith-pal-governor/templates/task-packages/create-ai-team-from-goal.md` | Copyable AI team creation task package | PalSmith v0.2 AI team creation work |
+| `pals/PalSmith-pal-governor/runbooks/pal-health-check.md` | Pal health check runbook | PalSmith v0.2 creation and repair checks |
+| `pals/PalSmith-pal-governor/runbooks/ai-team-health-check.md` | AI team health check runbook | PalSmith v0.2 team readiness checks |
 | `docs/02-getting-started/mira-first-usage.md` | Mira-first user path | onboarding and daily-use examples |
 | `docs/05-orchestration-methodology/11-pal-teams-and-deep-conductor.md` | Pal Team, runtime-layer agent execution, and future Deep Conductor boundaries | Pal Team and orchestration questions |
 | `docs/06-validation-and-evidence/` | current PalBench and evidence interpretation | validation, PalBench, and evidence questions |

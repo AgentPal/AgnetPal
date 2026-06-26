@@ -10,6 +10,8 @@ PalSmith E2E testing passed the core functional loop in an independent test copy
 
 PalSmith is now entering v0.2 product enhancement. v0.2 strengthens PalSmith as an AI team-building entry point and Pal quality governance Pal: Pal quality inspection, responsibility conflict detection, capability maps, team design, version governance, Eval Lab, and lifecycle workflow.
 
+R40 adds the first v0.2 end-to-end creation productization slice: copyable first-Pal and AI-team task packages, user material ingestion mapping, Pal and AI team health-check runbooks, repair package templates, realistic demos, and an expanded self-test. This is a started / first implementation state, not full v0.2 completion.
+
 This is not a final release state; v0.1 publication is paused while v0.2 is developed.
 
 v0.3 extends PalSmith into an AI Team Builder, team governance guide, cross-Pal review coordinator, publish quality gate, runtime call verification workflow, and GitHub import verification workflow. These remain no-code Runtime Task Package workflows.
@@ -35,6 +37,8 @@ Release readiness is checked through Markdown evals, including `evals/palsmith-r
 Docs entry points:
 
 - `docs/PalSmith.md`
+- `docs/06-palsmith/README.md`
+- `docs/06-palsmith/palsmith-end-to-end-productization.md`
 - `docs/03-pal-pack-standard/14-runtime-task-package.md`
 - `docs/07-authoring-pals/12-use-palsmith.md`
 - `docs/07-authoring-pals/13-palsmith-end-to-end-workflows.md`
@@ -54,7 +58,19 @@ Docs entry points:
 - `pals/PalSmith-pal-governor/skills/README.md`
 - `pals/PalSmith-pal-governor/knowledge/README.md`
 - `pals/PalSmith-pal-governor/templates/source-coverage-report-template.md`
+- `pals/PalSmith-pal-governor/templates/task-packages/create-first-professional-pal.md`
+- `pals/PalSmith-pal-governor/templates/task-packages/create-ai-team-from-goal.md`
+- `pals/PalSmith-pal-governor/templates/user-material-ingestion-map.md`
+- `pals/PalSmith-pal-governor/templates/health-check-report.md`
+- `pals/PalSmith-pal-governor/templates/repair-package.md`
+- `pals/PalSmith-pal-governor/workflows/user-material-ingestion-to-pal-assets.md`
+- `pals/PalSmith-pal-governor/runbooks/classify-user-materials.md`
+- `pals/PalSmith-pal-governor/runbooks/pal-health-check.md`
+- `pals/PalSmith-pal-governor/runbooks/ai-team-health-check.md`
 - `pals/PalSmith-pal-governor/examples/task-packages/example-long-user-material-ingestion.md`
+- `pals/PalSmith-pal-governor/examples/create-first-professional-pal.md`
+- `pals/PalSmith-pal-governor/examples/create-ai-team-from-user-goal.md`
+- `pals/PalSmith-pal-governor/evals/palsmith-e2e-creation-self-test.md`
 
 ## Direct Call Examples
 

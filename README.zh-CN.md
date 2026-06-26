@@ -14,7 +14,7 @@ PalSmith 是 AgentPal 的 AI 团队创建师，也是 Pal 资产治理 Pal。它
 
 详细了解 PalSmith：[PalSmith是什么，怎么使用？](docs/01-concepts/09-What-is-PalSmith-how-can-I-operate-it.md)
 
-v0.2 开发会重点产品化这条路径。可以从 [v0.2 development plan](docs/09-roadmap/v0.2-development-plan.md)、[v0.2 task pool](docs/09-roadmap/v0.2-task-pool.md) 和 [PalSmith end-to-end productization](docs/06-palsmith/palsmith-end-to-end-productization.md) 开始。
+v0.2 开发会重点产品化这条路径。可以从 [v0.2 development plan](docs/09-roadmap/v0.2-development-plan.md)、[v0.2 task pool](docs/09-roadmap/v0.2-task-pool.md) 和 [PalSmith end-to-end productization](docs/06-palsmith/palsmith-end-to-end-productization.md) 开始。首个实现切片补齐了创建首个专业 Pal 与从目标创建 AI team 的可复制任务包。
 
 ## 为什么需要 AgentPal？
 

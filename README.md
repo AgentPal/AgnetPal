@@ -12,7 +12,7 @@ PalSmith is the AI team builder and Pal asset governance Pal for AgentPal. It he
 
 Learn more about PalSmith: [What is PalSmith, and how can I operate it?](docs/01-concepts/09-What-is-PalSmith-how-can-I-operate-it.md)
 
-v0.2 development now focuses on productizing this path. Start from the [v0.2 development plan](docs/09-roadmap/v0.2-development-plan.md), the [v0.2 task pool](docs/09-roadmap/v0.2-task-pool.md), and the [PalSmith end-to-end productization plan](docs/06-palsmith/palsmith-end-to-end-productization.md).
+v0.2 development now focuses on productizing this path. Start from the [v0.2 development plan](docs/09-roadmap/v0.2-development-plan.md), the [v0.2 task pool](docs/09-roadmap/v0.2-task-pool.md), and the [PalSmith end-to-end productization plan](docs/06-palsmith/palsmith-end-to-end-productization.md). The first implementation slice adds copyable creation packages for a first professional Pal and an AI team goal.
 
 ## Why AgentPal?
 
@@ -156,7 +156,7 @@ PalSmith is registered as `palsmith-pal-governor` at `pals/PalSmith-pal-governor
 
 Use PalSmith directly with `/pal PalSmith ...`. PalSmith works through Runtime Task Packages and does not require Python, Node.js, Rust, a UI, or an installer.
 
-Start from [`docs/PalSmith.md`](docs/PalSmith.md), then use the [Runtime Task Package standard](docs/03-pal-pack-standard/14-runtime-task-package.md), [PalSmith end-to-end workflows](docs/07-authoring-pals/13-palsmith-end-to-end-workflows.md), [PalSmith Pal lifecycle](docs/07-authoring-pals/14-palsmith-pal-lifecycle.md), [PalSmith quickstart AI team](docs/07-authoring-pals/15-palsmith-quickstart-ai-team.md), [PalSmith demo script](docs/07-authoring-pals/16-palsmith-demo-script.md), and [PalSmith E2E test summary](docs/08-release-candidate/11-palsmith-e2e-test-summary.md) when preparing release-safe Pal work.
+Start from [`docs/PalSmith.md`](docs/PalSmith.md), then use the [Runtime Task Package standard](docs/03-pal-pack-standard/14-runtime-task-package.md), [PalSmith v0.2 productization](docs/06-palsmith/README.md), [PalSmith end-to-end workflows](docs/07-authoring-pals/13-palsmith-end-to-end-workflows.md), [PalSmith Pal lifecycle](docs/07-authoring-pals/14-palsmith-pal-lifecycle.md), [PalSmith quickstart AI team](docs/07-authoring-pals/15-palsmith-quickstart-ai-team.md), [PalSmith demo script](docs/07-authoring-pals/16-palsmith-demo-script.md), and [PalSmith E2E test summary](docs/08-release-candidate/11-palsmith-e2e-test-summary.md) when preparing release-safe Pal work.
 
 ## How AgentPal Works
 

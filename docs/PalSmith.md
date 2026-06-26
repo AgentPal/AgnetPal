@@ -12,6 +12,8 @@ PalSmith E2E testing passed the core functional loop in an independent test copy
 
 PalSmith is now entering v0.2 product enhancement. v0.2 focuses on making PalSmith the fastest way for users to build their own AI team: Pal quality inspection, responsibility conflict detection, capability maps, team design, version governance, Eval Lab, and Pal lifecycle workflow.
 
+R40 adds the first v0.2 implementation slice for end-to-end creation productization: copyable first-Pal and AI-team task packages, material ingestion mapping, health-check runbooks, repair packages, realistic demos, and a 14-case E2E self-test. This is a started / first implementation state, not a claim that all v0.2 work is complete.
+
 This is not a final release state. v0.1 publication is paused while v0.2 Pal quality governance and AI team-building experience are strengthened.
 
 v0.3 adds AI Team Builder, team governance, cross-Pal review, publish quality gate, runtime call verification, GitHub import verification, and a quickstart for users who want to build an AI team in minutes.
@@ -47,6 +49,8 @@ PalSmith then prepares a Runtime Task Package. The current Agent Runtime, such a
 
 For the task package field standard, see [Runtime Task Package](03-pal-pack-standard/14-runtime-task-package.md). For complete usage flows, see [PalSmith end-to-end workflows](07-authoring-pals/13-palsmith-end-to-end-workflows.md).
 
+For the v0.2 creation loop, see [PalSmith end-to-end productization](06-palsmith/palsmith-end-to-end-productization.md), [create first professional Pal](../pals/PalSmith-pal-governor/templates/task-packages/create-first-professional-pal.md), and [create AI team from goal](../pals/PalSmith-pal-governor/templates/task-packages/create-ai-team-from-goal.md).
+
 ## No-Code Workflows
 
 - Pal Health Inspection Task Package
@@ -71,6 +75,12 @@ For the task package field standard, see [Runtime Task Package](03-pal-pack-stan
 - Pal Install Task Package
 - Pal Creation Task Package
 - Pal Team Creation Task Package
+- Create First Professional Pal Task Package
+- Create AI Team From Goal Task Package
+- User Material Ingestion To Pal Assets Workflow
+- Pal Health Check Runbook
+- AI Team Health Check Runbook
+- Repair Package Template
 - registry update task package
 - contacts update task package
 - snapshot task package
@@ -113,6 +123,8 @@ If future maintainers build a PalSmith CLI, Pal Hub manager, UI, or installer, i
 ## Next Reading
 
 - [Use PalSmith](07-authoring-pals/12-use-palsmith.md)
+- [PalSmith v0.2 productization](06-palsmith/README.md)
+- [PalSmith end-to-end productization](06-palsmith/palsmith-end-to-end-productization.md)
 - [PalSmith end-to-end workflows](07-authoring-pals/13-palsmith-end-to-end-workflows.md)
 - [Pal import/export standard](03-pal-pack-standard/13-pal-import-export.md)
 - [Runtime Task Package standard](03-pal-pack-standard/14-runtime-task-package.md)

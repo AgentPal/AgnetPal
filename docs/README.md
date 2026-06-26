@@ -34,7 +34,10 @@ AgentPal is a Pal layer and Pal Pack Standard practice for Markdown/JSON-capable
 - [PalSmith quickstart AI team](07-authoring-pals/15-palsmith-quickstart-ai-team.md)
 - [PalSmith demo script](07-authoring-pals/16-palsmith-demo-script.md)
 - [PalSmith v0.4 regression test plan](08-release-candidate/12-palsmith-v0.4-regression-test-plan.md)
+- [PalSmith v0.2 productization](06-palsmith/README.md)
 - [PalSmith end-to-end productization](06-palsmith/palsmith-end-to-end-productization.md)
+- [Create first professional Pal task package](../pals/PalSmith-pal-governor/templates/task-packages/create-first-professional-pal.md)
+- [Create AI team from goal task package](../pals/PalSmith-pal-governor/templates/task-packages/create-ai-team-from-goal.md)
 - [Pal import/export standard](03-pal-pack-standard/13-pal-import-export.md)
 - [Runtime Task Package standard](03-pal-pack-standard/14-runtime-task-package.md)
 - [No-code release checklist](08-release-candidate/05-no-code-release-checklist.md)
@@ -148,7 +151,7 @@ AgentPal is a Pal layer and Pal Pack Standard practice for Markdown/JSON-capable
 | [03-pal-pack-standard](03-pal-pack-standard/README.md) | Pal Pack structure, root files, import/export, public/private boundary, and checklist |
 | [04-runtime-guides](04-runtime-guides/00-runtime-compatibility.md) | Runtime compatibility, Codex, Claude Code, and future adapters |
 | [05-orchestration-methodology](05-orchestration-methodology/README.md) | Fast Route, Task Package, Context Slicing, Asset Loading Budget, Pal Teams, evidence records, and future orchestration boundaries |
-| [06-palsmith](06-palsmith/palsmith-end-to-end-productization.md) | PalSmith v0.2 end-to-end productization path |
+| [06-palsmith](06-palsmith/README.md) | PalSmith v0.2 end-to-end productization path |
 | [06-collaboration](06-collaboration/00-collaboration-overview.md) | Contacts, mention protocol, Context Packets, handoff, and project workgroups |
 | [06-validation-and-evidence](06-validation-and-evidence/README.md) | PalBench meaning, limits, observed benefits, and future validation design |
 | [07-authoring-pals](07-authoring-pals/README.md) | Designing, writing, testing, publishing, and governing Pal Packs with PalSmith |

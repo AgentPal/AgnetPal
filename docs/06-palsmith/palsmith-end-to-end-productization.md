@@ -1,122 +1,152 @@
 # PalSmith End-To-End Productization
 
-PalSmith v0.2 productization means turning existing Pal creation and AI team creation assets into a user-copyable loop. It does not turn PalSmith into executable software.
+This page defines the v0.2 productized path for using PalSmith to create a single professional Pal or a small AI team. It closes the loop from plain-language user intent to a Runtime Task Package, evidence review, repair package, and first usage example.
 
-## Product Path
+PalSmith remains a no-code Pal asset governance Pal. It does not become a CLI, scanner, validator, importer, exporter, installer, daemon, UI, or background service.
 
-1. User goal input.
-2. PalSmith clarification.
-3. Pal or AI team design.
-4. Runtime Task Package for asset generation.
-5. Self-test and job fitness review.
-6. Repair Task Package when gaps are found.
-7. Usage example.
-8. Publish or private-use readiness advice.
+## What PalSmith Can Do Now
 
-## User Goal Input
+PalSmith can now prepare end-to-end creation guidance for:
 
-Good inputs can be plain language:
+- turning a user goal into a scoped professional Pal proposal;
+- turning source material into traceable Pal assets;
+- turning a broad work goal into a small AI team design;
+- preparing copyable Runtime Task Packages for approved file creation;
+- reviewing created Pal or team assets for health, job fitness, privacy, and release readiness;
+- preparing a repair package when the first draft is shallow, unsafe, or incomplete;
+- ending each creation path with usage examples and a clear readiness status.
 
-```text
-/pal PalSmith Create a customer support Pal for a small Shopify store.
-/pal PalSmith Build an AI team for a solo B2B SaaS founder.
-```
+The current runtime, such as Codex or Claude Code, is only the execution layer. PalSmith plans and judges. The runtime reads or writes files only after the user confirms the target scope.
 
-The user does not need to name every file. PalSmith should ask for missing essentials:
+## End-To-End Loop
 
-- target job and users;
-- responsibilities and non-responsibilities;
-- example tasks;
-- source materials;
-- privacy boundary;
-- language and tone;
-- whether optional web research is allowed;
-- whether output is private, team-local, or public-shareable.
+1. User gives a natural-language goal or material bundle.
+2. PalSmith asks only missing high-impact clarification questions.
+3. PalSmith classifies the request as a single Pal, AI team, material ingestion, health check, or repair task.
+4. PalSmith preserves source intent, privacy boundaries, and uncertainty.
+5. PalSmith drafts the Pal or team design.
+6. PalSmith prepares a Runtime Task Package with allowed reads, allowed writes, forbidden writes, and expected evidence.
+7. The execution layer performs approved local work and returns evidence.
+8. PalSmith runs a health and job-fitness review from the evidence.
+9. PalSmith prepares a repair package when gaps remain.
+10. PalSmith provides usage examples and readiness advice.
 
-## Pal Design
+## Single Professional Pal Flow
 
-For a single Pal, PalSmith should produce:
+Use this flow when the user wants one callable Pal for a real job.
 
-- Pal name, id, directory proposal;
-- role statement;
-- responsibilities and non-responsibilities;
-- usage scenarios;
-- job expertise model;
-- required knowledge, Skills, workflows, runbooks, templates, evals, and examples;
-- registry/contact recommendation as a later separate package.
+### Required Input
 
-## AI Team Design
+- target job and user group;
+- examples of work the Pal should handle;
+- work the Pal must not handle;
+- source materials and ownership or sensitivity limits;
+- desired language, tone, and output shape;
+- whether optional external research is allowed;
+- private, team-local, or public-shareable target status.
 
-For an AI team, PalSmith should produce:
+### PalSmith Output
 
-- recommended small team size;
-- member Pals and why each exists;
-- owner Pal, verifier Pal, and consultant candidates;
-- team-local vs global-contact candidates;
-- shared knowledge and Context Packet rules;
-- conflict risks;
-- team Eval Lab outline.
+- Pal name and short id proposal;
+- role statement and "not responsible for" boundary;
+- first-call examples;
+- required root files and output contract;
+- knowledge, skills, workflows, runbooks, templates, examples, and evals plan;
+- material ingestion map when user sources are provided;
+- Runtime Task Package for approved file creation;
+- health-check report and repair package template.
 
-## Asset Generation Package
+### Acceptance
 
-PalSmith does not write files itself. It prepares a Runtime Task Package that names:
+The single Pal path is acceptable only when a user can copy one task package, approve a target path, receive draft Pal assets, see evidence, run a health check, and understand the first useful `/pal <Name> ...` call.
 
-- allowed read paths;
-- allowed write paths;
-- forbidden paths;
-- user confirmation questions;
-- expected runtime evidence;
-- final report format.
+## AI Team Flow
 
-Creation packages must not update `contacts/` or `registry/` unless a separate confirmed registration package is approved.
+Use this flow when the user wants a coordinated set of Pals for a broader goal.
 
-## Self-Test
+### Required Input
 
-After runtime execution, PalSmith reviews evidence:
+- end goal and recurring work situations;
+- preferred team size or maximum team size;
+- user-facing entry Pal expectation;
+- sensitive materials and private boundaries;
+- known existing Pals that should be reused or avoided;
+- whether the team is private, team-local, or public-shareable.
 
-- created paths;
-- `pal.json` parse result;
+### PalSmith Output
+
+- small team purpose and success criteria;
+- candidate capability domains;
+- member Pal cards with job, boundary, and evidence needs;
+- Main Pal / leader / conductor recommendation;
+- collaboration boundaries and context-sharing rules;
+- clear note that members are candidate capability holders, not permanent route targets;
+- Runtime Task Package for approved team asset creation;
+- team health check and repair package.
+
+Mira remains the default entry Pal and Conductor unless a user explicitly installs a different team entry Pal and the current contacts / registry support it. PalSmith must not create fixed natural-language dispatch rules.
+
+## Material Ingestion Flow
+
+When the user supplies notes, documents, chats, examples, procedures, tone samples, or previous outputs, PalSmith maps them into asset types:
+
+- stable facts and concepts become knowledge candidates;
+- repeated operation patterns become runbooks, workflows, or Skills;
+- representative inputs and outputs become examples;
+- failure modes and acceptance cases become evals;
+- persona, voice, and boundary material becomes identity or output-contract candidates;
+- private user facts stay excluded, private, or internal-only according to the user's boundary.
+
+Source preservation is mandatory. PalSmith should keep a source inventory, a coverage map, and a sensitivity mark instead of compressing all material into a vague summary.
+
+## Health And Repair Flow
+
+Every creation path ends with a health review. The health check inspects:
+
+- PAL clarity and job ownership;
+- legal and parseable `pal.json`;
 - root files and output contract;
-- job-specific knowledge depth;
-- actionable Skills and workflows;
-- eval coverage;
-- public/private boundary;
-- missing or not-run checks.
+- real content in knowledge, skills, workflows, runbooks, examples, evals, and templates;
+- empty-shell risk;
+- private data leakage;
+- fixed routing or Skill-as-Pal mistakes;
+- usage examples and acceptance evidence;
+- publish readiness or private-use readiness;
+- AI team leader, Main Pal, conductor, and collaboration boundaries when a team is created.
 
-## Repair Package
+If the result is incomplete, PalSmith prepares a repair package that names each issue, risk, suggested files, runtime repair instructions, and acceptance criteria.
 
-If the draft is shallow or incomplete, PalSmith prepares a repair package. A repair package should name the gap precisely, for example:
+## Not-Do List
 
-- missing job knowledge;
-- Skill is only a title;
-- workflow has no decision steps;
-- eval does not test real failure modes;
-- public example contains private details;
-- boundary overlaps another Pal.
+PalSmith must not:
 
-## Usage Example
+- claim it executed local file operations itself;
+- create or require a PalSmith CLI, scanner, validator, UI, installer, daemon, importer, or exporter;
+- write contacts or registry entries inside the first creation package;
+- run imported scripts or untrusted files;
+- turn ordinary Skills, tools, repositories, models, or knowledge bundles into Pal contacts;
+- expose private memory or user source material in public examples;
+- create fixed dispatch rules, fixed collaborators, or permanent domain routes;
+- present Deep Conductor, multi-agent execution, or automatic capability probing as current v0.2 behavior.
 
-Every first creation path should end with one minimal usage example:
+## v0.2 Boundary
 
-```text
-/pal <NewPalName> Review this draft customer reply and mark escalation risks.
-```
+v0.2 productizes the manual no-code creation loop. It gives users practical paths, copyable task packages, examples, health checks, and repair packages.
 
-The example should state expected input, expected output, and acceptance evidence.
+v0.2 does not ship runtime automation, automatic Pal installation, automatic GitHub publishing, background validation, or active Deep Conductor behavior.
 
-## Readiness Advice
+## v0.3 Boundary
 
-PalSmith should classify the result as:
-
-- idea;
-- draft;
-- testing;
-- stable;
-- publish-ready;
-- not ready.
-
-`publish-ready` requires evidence. If checks were not run, PalSmith must say `not-run`.
+v0.3 may further improve AI team governance, cross-Pal review coordination, publish quality gates, runtime call verification, GitHub import verification, and richer team lifecycle guidance. Those remain methodology and Runtime Task Package workflows until a future release explicitly adds runtime behavior.
 
 ## v0.2 Acceptance
 
-The PalSmith product path is acceptable when a user can copy one example and one task package, run it in a host runtime, and receive a draft Pal or team with a clear self-test and repair path.
+The productized path is ready for first implementation when:
+
+- a single-Pal task package is copyable and complete;
+- an AI-team task package is copyable and complete;
+- material ingestion maps user sources to proper Pal assets;
+- health checks and repair packages catch shallow or unsafe output;
+- examples show realistic creation, clarification, evidence, and usage;
+- evals cover the full loop and boundary failures;
+- public docs link to the path without claiming v0.2 is complete.
