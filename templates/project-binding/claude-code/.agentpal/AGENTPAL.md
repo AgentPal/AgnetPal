@@ -7,4 +7,4 @@ This project uses a thin AgentPal binding for Claude Code.
 - Pal contacts and official Pals stay in the AgentPal workspace.
 - Claude-local permission settings may live in `.claude/settings.local.json`; that file should stay uncommitted.
 
-Do not create project-local AgentPal memory, state, reports, context indexes, Pal copies, workflows, or evals by default.
+Do not create project-local AgentPal memory, state, reports, context indexes, Pal copies, workflows, evals, capability inventory, business-system records, review records, evidence records, replay records, rollback records, verification records, audit trail indexes, or governance decision records by default.

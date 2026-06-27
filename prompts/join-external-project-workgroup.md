@@ -30,7 +30,7 @@ Use the AgentPal workspace templates:
 - `templates/project-binding/claude-code/CLAUDE.agentpal-block.md`
 - `templates/project-binding/root-agents-agentpal-block-template.md`
 
-Do not copy `.agentpal/state`, `.agentpal/memory`, `.agentpal/reports`, `.agentpal/context`, `.agentpal/index`, `.agentpal/pals`, `.agentpal/workflows`, or `.agentpal/evals` folders by default.
+Do not copy `.agentpal/state`, `.agentpal/memory`, `.agentpal/reports`, `.agentpal/context`, `.agentpal/index`, `.agentpal/pals`, `.agentpal/workflows`, `.agentpal/evals`, `.agentpal/capability-inventory`, `.agentpal/business-systems`, `.agentpal/reviews`, `.agentpal/evidence`, `.agentpal/replay`, `.agentpal/rollback`, `.agentpal/verification`, `.agentpal/audit-trail`, or `.agentpal/governance-decisions` folders by default.
 
 Do not copy:
 - full Pal list

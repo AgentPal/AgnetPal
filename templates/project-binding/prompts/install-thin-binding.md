@@ -19,6 +19,15 @@ Forbidden default writes:
 - `.agentpal/pals/`
 - `.agentpal/workflows/`
 - `.agentpal/evals/`
+- `.agentpal/capability-inventory/`
+- `.agentpal/business-systems/`
+- `.agentpal/reviews/`
+- `.agentpal/evidence/`
+- `.agentpal/replay/`
+- `.agentpal/rollback/`
+- `.agentpal/verification/`
+- `.agentpal/audit-trail/`
+- `.agentpal/governance-decisions/`
 
 Keep `active_project_root` and `agentpal_workspace_root` separate.
 

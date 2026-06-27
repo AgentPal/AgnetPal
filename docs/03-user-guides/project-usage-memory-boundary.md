@@ -86,6 +86,15 @@ templates/capability-inventory/business-system-profile-audit-trail-index.md
 
 The audit trail index records related paths, statuses, current profile status summary, open unknowns, not-run checks, missing evidence, risks, and next manual action suggestions. It still must not execute actions, auto-call external APIs, auto-close missing evidence, modify central contacts, create a connector, store credentials, route by keywords, or write into external project `.agentpal/audit-trail/`.
 
+After review, evidence, replay, and audit trail review, create a Governance Decision Record to capture the human governance decision:
+
+```text
+standards/capability-inventory/business-system-profile-governance-decision-record.md
+templates/capability-inventory/business-system-profile-governance-decision-record.md
+```
+
+The governance decision record can approve a bounded manual profile update, reject it, block it for missing evidence, require user confirmation, require host Runtime evidence, require second verification, or supersede an earlier decision. It still must not execute writeback, automatically approve or reject reviews, auto-close missing evidence, convert not-run to pass, modify central contacts, create a connector, store credentials, route by keywords, or write into external project `.agentpal/governance-decisions/`.
+
 ## Boundary Checklist
 
 - Keep project usage memory under the central project record.
@@ -97,3 +106,4 @@ The audit trail index records related paths, statuses, current profile status su
 - Do not convert `second_verification_not_run` into `second_verification_passed`.
 - Do not treat a replay record as an execution engine or automatic rollback program.
 - Do not treat an audit trail index as an execution engine, external API caller, or automatic missing-evidence closer.
+- Do not treat a governance decision record as an approval engine, execution engine, central roster update, or automatic organization profile writeback.

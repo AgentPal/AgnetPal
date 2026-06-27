@@ -21,6 +21,7 @@ When creating a real profile, copy a template and follow `docs/03-user-guides/ma
 | Business System profile manual update evidence pack | `business-system-profile-manual-update-evidence-pack.md` |
 | Business System profile manual writeback replay record | `business-system-profile-manual-writeback-replay-record.md` |
 | Business System profile audit trail index | `business-system-profile-audit-trail-index.md` |
+| Business System profile governance decision record | `business-system-profile-governance-decision-record.md` |
 | Pal capability profile | `pal-capability-profile-template.json` |
 
 ## Related Sources
@@ -51,3 +52,5 @@ Manual update evidence packs are the next no-code artifact after an approved rev
 Manual writeback replay records are no-code audit artifacts after a manual writeback has happened. They record changed fields, previous and updated snapshot summaries, rollback record, second verification status, not-run checks, and missing evidence. They must not execute writeback, auto-rollback, modify central Pal contacts, create connectors, store credentials, or write into external project `.agentpal/replay/`, `.agentpal/rollback/`, or `.agentpal/verification/`.
 
 Audit trail indexes are no-code index artifacts across review packets, evidence packs, replay records, rollback records, and second verification records. They record paths, statuses, open unknowns, not-run checks, missing evidence, risks, and next manual action suggestions. They must not execute actions, auto-update organization profiles, auto-call external APIs, auto-close missing evidence, modify central Pal contacts, create connectors, store credentials, keyword-route, or write into external project `.agentpal/audit-trail/`.
+
+Governance decision records are no-code human decision artifacts after review, evidence, replay, and audit trail review. They record the decision, evidence considered, retained unknowns, retained not-run checks, retained missing evidence, second verification requirement, and any bounded manual update scope. They must not execute actions, auto-update organization profiles, auto-close missing evidence, modify central Pal contacts, create connectors, store credentials, keyword-route, or write into external project `.agentpal/governance-decisions/`.

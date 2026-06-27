@@ -60,6 +60,7 @@
     ".agentpal/replay",
     ".agentpal/rollback",
     ".agentpal/verification",
-    ".agentpal/audit-trail"
+    ".agentpal/audit-trail",
+    ".agentpal/governance-decisions"
   ]
 }

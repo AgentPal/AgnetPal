@@ -40,7 +40,7 @@ Project record source of truth:
 - `workspace/projects/<project-id>/`
 - read current user project materials from `active_project_root`
 - write source maps, derived knowledge, project memory, tasks, reports, governance records, and capability inventory to `agentpal_project_record`
-- do not create `.agentpal/memory`, `.agentpal/state`, `.agentpal/reports`, `.agentpal/context`, `.agentpal/index`, `.agentpal/pals`, `.agentpal/workflows`, or `.agentpal/evals` by default
+- do not create `.agentpal/memory`, `.agentpal/state`, `.agentpal/reports`, `.agentpal/context`, `.agentpal/index`, `.agentpal/pals`, `.agentpal/workflows`, `.agentpal/evals`, `.agentpal/capability-inventory`, `.agentpal/business-systems`, `.agentpal/reviews`, `.agentpal/evidence`, `.agentpal/replay`, `.agentpal/rollback`, `.agentpal/verification`, `.agentpal/audit-trail`, or `.agentpal/governance-decisions` by default
 
 Default Main Pal:
 - `official/pals/Mira-main/PAL.md`

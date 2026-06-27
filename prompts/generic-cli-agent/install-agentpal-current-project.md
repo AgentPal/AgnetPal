@@ -121,7 +121,7 @@ For `.agentpal/project.json`, include at least:
 - central_pal_contacts
 
 Set `active_project_root` to the current external project. Do not set it to the AgentPal workspace root.
-Set `agentpal_project_record` to `workspace/projects/<project-id>` inside the AgentPal workspace. Do not create thick `.agentpal/` memory, state, reports, context, index, pals, workflows, or evals directories in the external project.
+Set `agentpal_project_record` to `workspace/projects/<project-id>` inside the AgentPal workspace. Do not create thick `.agentpal/` memory, state, reports, context, index, pals, workflows, evals, capability-inventory, business-systems, reviews, evidence, replay, rollback, verification, audit-trail, or governance-decisions directories in the external project.
 
 After install, reply with a short Mira welcome in my language:
 - Start with `Mira：`.
