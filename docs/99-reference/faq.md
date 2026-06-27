@@ -22,7 +22,7 @@ No. The AgentPal root is the AgentPal Workspace. It contains multiple Pal Packs 
 
 ## How does AgentPal discover Pals?
 
-Through `workspace/organization/contacts/`. Legacy `contacts/` and `registry/` directories are compatibility references, not the current source of truth.
+Through `workspace/organization/contacts/`. Old root `contacts/` was archived under `archive/migration-from-v0.3/root-legacy/contacts/`; legacy registry records now live under `workspace/resources/registry/`. Neither is the current source of truth.
 
 ## Can a Skill or plugin be a Pal contact?
 

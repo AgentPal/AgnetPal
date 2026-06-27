@@ -318,7 +318,7 @@ AgentPal is a Pal layer and Pal Pack Standard practice for Markdown/JSON-capable
 - Simple Pal Mode is the only active task-handling path.
 - Mira is the default Main Pal, Leader Pal, and Conductor.
 - `/pal Name` is a plain-text AgentPal direct-call protocol for a registered Pal by display name or alias; it does not require a native Runtime command.
-- `workspace/organization/contacts/` is the source of truth for Pal discovery; legacy `contacts/` and `registry/` remain compatibility references.
+- `workspace/organization/contacts/` is the source of truth for Pal discovery; old root `contacts/` is archived under `archive/migration-from-v0.3/root-legacy/contacts/`, and legacy registry records live under `workspace/resources/registry/`.
 - AgentPal does not execute actions by itself; the host runtime performs file reads, writes, commands, tool calls, publishing, and deletion.
 - Deep Conductor is available as no-code protocols, templates, task packages, examples, evals, and replay reports; it is not automatic execution.
 - Subagent / external Agent execution remains unavailable, unknown, blocked, or host-dependent unless the host Runtime proves support and permission.

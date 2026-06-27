@@ -19,7 +19,7 @@ Codex Subagent Mode uses Codex subagent threads, not OS-level background process
 | Morgan | document | owner / consultant | yes | no file moves or deletes unless approved |
 | Harper | writing | consultant | yes | no external sending unless approved |
 
-Use `registry/pal-subagent-map.json` as the structured source.
+Use `workspace/resources/registry/pal-subagent-map.json` as the structured source.
 
 Official specialist subagents read slim embedded Pal assets such as `PAL.md`, `AGENTS.md`, `SKILL.md`, `pal.json`, `core/output-contract.md`, `core/capability-reference.md`, `knowledge/`, `skills/`, `workflows/`, `runbooks/`, and `learning/`. They do not rely on per-Pal standalone contacts, registry, runtime, models, plugins, or orchestration directories.
 

@@ -6,11 +6,11 @@ This document explains how AgentPal discovers registered Pals.
 
 ## Current Status
 
-Short placeholder for v0.1.0-rc.1.
+Short placeholder for v0.3.0-rc.1 and the v0.4 local structure foundation.
 
 ## Source Of Truth
 
-`workspace/organization/contacts/` is the source of truth for Pal discovery. Legacy `contacts/` and `registry/` records are compatibility references only.
+`workspace/organization/contacts/` is the source of truth for Pal discovery. Old root `contacts/` records were archived under `archive/migration-from-v0.3/root-legacy/contacts/`; legacy registry records now live under `workspace/resources/registry/` and are compatibility references only.
 
 Only valid Pal Packs should become contacts. Skills, tools, models, plugins, MCP servers, raw repositories, runtime adapters, knowledge packs, and persona packs are not Pal contacts.
 

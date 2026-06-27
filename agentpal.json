@@ -416,8 +416,8 @@
       "docs": [
         "docs/99-reference/future-codex-subagent-mode.md",
         "orchestration/codex-subagent-mode-protocol.md",
-        "registry/pal-subagent-map.json",
-        "registry/pal-subagent-map.md"
+        "workspace/resources/registry/pal-subagent-map.json",
+        "workspace/resources/registry/pal-subagent-map.md"
       ]
     }
   },

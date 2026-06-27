@@ -14,6 +14,7 @@ Preferred:
 - `official/pals/<Pal-Directory>/`
 - `workspace/organization/contacts/pals.json`
 - `workspace/organization/contacts/PAL_CONTACTS.md`
+- `workspace/resources/registry/` for legacy registry records when needed
 - `templates/project-binding/generic-codex/`
 - `templates/project-binding/claude-code/`
 

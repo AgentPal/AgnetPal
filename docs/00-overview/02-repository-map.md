@@ -21,7 +21,6 @@ This map explains the public AgentPal Workspace layout. It is a navigation aid, 
 | Directory | Purpose |
 | --- | --- |
 | `capabilities/` | Capability profile notes and boundaries. |
-| `contacts/` | Legacy compatibility contact files. Current source of truth is `workspace/organization/contacts/`. |
 | `docs/` | Public documentation and reference material. |
 | `evals/` | Self-tests and release checks. |
 | `examples/` | Public-safe examples and failure examples. |
@@ -33,16 +32,17 @@ This map explains the public AgentPal Workspace layout. It is a navigation aid, 
 | `plugins/` | Plugin-discovery notes and boundaries. |
 | `projects/` | External project workgroup binding templates. |
 | `prompts/` | Copyable maintenance and setup prompts. |
-| `registry/` | Legacy Pal and resource indexes retained for compatibility and selected historical navigation. |
 | `reports/` | Public-safe report placeholders; real reports should remain private or ignored. |
 | `response-fingerprints/` | Response fingerprint references for Pal-mode validation. |
 | `runtime/` | Runtime-awareness notes and boundaries. |
 | `state/` | Public-safe state placeholders; private state must not be committed. |
 | `templates/` | Reusable templates for bindings, Context Packets, task packages, and reports. |
+| `workspace/resources/registry/` | Legacy registry records moved from root during R76; not a central Pal roster source. |
+| `archive/migration-from-v0.3/root-legacy/` | Old root compatibility pointers moved during R76. |
 
 ## Pal Discovery Boundary
 
-`workspace/organization/contacts/` is the source of truth for Pal discovery. Legacy `contacts/`, `registry/`, and old root `pals/` references are compatibility references only.
+`workspace/organization/contacts/` is the source of truth for Pal discovery. Old root `contacts/` and `pals/` are archived under `archive/migration-from-v0.3/root-legacy/`; legacy registry records now live under `workspace/resources/registry/`.
 
 Skills, tools, plugins, models, MCP servers, raw repositories, runtime adapters, and knowledge packs do not become Pals because they are indexed. Only valid Pal Packs should enter contacts.
 

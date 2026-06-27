@@ -90,13 +90,13 @@ Use:
 | `workspace/projects/` | central project records and `_template/` | external project binding, project memory, source-map, derived-knowledge, governance |
 | `templates/project-binding/` | thin external project binding templates | install/update/remove AgentPal workgroups in external projects |
 | `docs/00-overview/repository-structure.md` | visible v0.4/v0.5 directory structure guide | explaining root directories and compatibility pointers |
-| `contacts/` | legacy compatibility contact files | compatibility checks only |
-| `registry/` | legacy Pal and resource indexes | compatibility and selected navigation |
 | `core/` | shared AgentPal core gates | runtime adapter and project binding bootstrap |
 | `orchestration/` | current protocols and future-design notes | selected current protocols only |
 | `templates/` | reusable Context Packet, output, binding, and task templates | selected template only |
 | `prompts/` | copyable maintenance and setup prompts | when running that prompt flow |
 | `projects/` | external project workgroup binding templates | project binding only |
+| `workspace/resources/registry/` | legacy registry records moved from root during R76 | compatibility and selected navigation |
+| `archive/migration-from-v0.3/root-legacy/` | old root compatibility paths moved during R76 | migration audits and old-path questions |
 | `runtime/` | runtime-awareness notes | diagnostics or runtime documentation |
 | `models/` | model-routing notes | model-routing documentation |
 | `plugins/` | plugin-discovery notes | plugin documentation |

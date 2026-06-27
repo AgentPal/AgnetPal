@@ -18,11 +18,11 @@ The only active task-handling path in AgentPal v0.1.0-rc.1. Mira routes or a use
 
 ## Contacts
 
-Legacy files under `contacts/` that used to define registered Pal contactability and aliases. Current roster records live under `workspace/organization/contacts/`.
+Current roster records under `workspace/organization/contacts/` define registered Pal contactability and aliases. Old root `contacts/` records were archived under `archive/migration-from-v0.3/root-legacy/contacts/`.
 
 ## Registry
 
-Legacy files under `registry/` that index Pals and resources for compatibility and historical navigation.
+Legacy registry records moved from old root `registry/` to `workspace/resources/registry/`. They are compatibility and historical navigation records, not the current Pal discovery source of truth.
 
 ## Output Contract
 

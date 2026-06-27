@@ -2,9 +2,17 @@
 
 ## Status
 
-Current for AgentPal `v0.1.0-rc.1`.
+Current for AgentPal `v0.3.0-rc.1` and the v0.4 local structure foundation.
 
-`workspace/organization/contacts/` is the source of truth for Pal discovery. Legacy `contacts/` and `registry/` records are compatibility references only.
+`workspace/organization/contacts/` is the source of truth for Pal discovery.
+
+R76 moved old root compatibility paths:
+
+- old root `contacts/` -> `archive/migration-from-v0.3/root-legacy/contacts/`
+- old root `pals/` -> `archive/migration-from-v0.3/root-legacy/pals/`
+- old root `registry/` -> `workspace/resources/registry/`
+
+Legacy registry records are compatibility references only, not central Pal roster sources.
 
 ## Source Files
 

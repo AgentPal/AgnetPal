@@ -92,22 +92,30 @@ Forbidden default external-project directories include:
 .agentpal/evals/
 ```
 
-## Compatibility Directories
+## Compatibility And Current-Reference Directories
 
 Some root directories remain visible as compatibility pointers or current-reference surfaces while the v0.4/v0.5 structure settles:
 
 | Directory | Current status |
 | --- | --- |
-| `pals/` | Compatibility pointer. Official Pal Packs are under `official/pals/`. |
-| `contacts/` | Legacy compatibility contacts. Current source of truth is `workspace/organization/contacts/`. |
-| `registry/` | Legacy and selected compatibility indexes. Current Pal discovery uses central contacts. |
 | `projects/` | Compatibility project-binding protocols and older workgroup pointers. Current templates are under `templates/project-binding/`. |
 | `prompts/` | Copyable runtime and maintenance prompts retained at root for compatibility. |
 | `capabilities/` | Current capability profile notes. Capability standards are under `standards/capability-inventory/`; project-specific capability records belong under central project records. |
 | `orchestration/` | Current no-code protocol surface. Standards pointers live under `standards/deep-conductor/`. |
 | `memory/`, `state/`, `reports/` | Public-safe placeholders only. Private runtime content must not be committed. |
+| `runtime/`, `models/`, `plugins/`, `response-fingerprints/`, `imports/` | Current reference surfaces retained until a dedicated migration moves them safely. |
 
 These compatibility directories should not be copied wholesale into external user projects.
+
+R76 moved these old root paths out of the root:
+
+| Old root path | Current location |
+| --- | --- |
+| `pals/` | `archive/migration-from-v0.3/root-legacy/pals/` |
+| `contacts/` | `archive/migration-from-v0.3/root-legacy/contacts/` |
+| `registry/` | `workspace/resources/registry/` |
+
+The current Pal facts remain `official/pals/` and `workspace/organization/contacts/`.
 
 ## Routing Boundary
 
