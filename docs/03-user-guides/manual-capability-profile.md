@@ -55,6 +55,14 @@ examples/capability-inventory/
 
 Examples are synthetic or illustrative. Do not treat them as current organization capability records.
 
+Business System profile examples live in:
+
+```text
+examples/capability-inventory/business-system-profiles/
+```
+
+Start with `manual-github-profile-walkthrough.md` for an end-to-end manual flow, `github-project-record-reference.example.md` for a project reference example, and `unknown-not-run-missing-examples.md` for the difference between `unknown`, `not-run`, and `missing`.
+
 ## Where Organization Records Live
 
 Organization-level capability records live in:
@@ -168,6 +176,14 @@ If availability, permissions, write access, API access, or output destinations a
 Do not store credentials, private tokens, passwords, API keys, session cookies, or private secrets in Business System profiles.
 
 External writes to business systems require explicit user authorization and current host Runtime evidence. The profile may inform AI judgement, but it must not trigger writes or routing by itself. A system name or `system_type` must not become a keyword route to a Pal, Runtime, Skill, plugin, MCP server, or external tool.
+
+Manual Business System examples should keep three evidence states separate:
+
+- `unknown`: a fact has not been confirmed and must not be invented.
+- `not-run`: a check or operation did not execute and must not be reported as pass or fail.
+- `missing`: required evidence is absent and must be reported or requested.
+
+Do not convert `unknown` into available. Do not convert `not-run` into pass. Do not hide missing evidence.
 
 ## Step 6: Save To The Right Place
 

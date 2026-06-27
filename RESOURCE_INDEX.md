@@ -105,9 +105,13 @@ Use:
 | `standards/capability-inventory/business-system-profile-standard.md` | Business System profile standard and boundaries | business-system profile governance, project record relationship checks |
 | `templates/capability-inventory/business-system-profile-template.json` | Business System capability profile template for external system governance boundaries | business-system profile template work or release checks |
 | `examples/capability-inventory/business-system-profiles/` | public-safe Business System profile examples | example shape and no-connector boundary checks |
+| `examples/capability-inventory/business-system-profiles/manual-github-profile-walkthrough.md` | manual GitHub Business System walkthrough | end-to-end user-confirmed facts to organization and project records |
+| `examples/capability-inventory/business-system-profiles/unknown-not-run-missing-examples.md` | `unknown`, `not-run`, and `missing` examples | evidence-state clarification |
+| `examples/failures/business-system-profile-as-connector.md` | forbidden failure example for treating a profile as a connector | boundary regression and anti-pattern review |
 | `docs/03-user-guides/manual-capability-profile.md` | manual Capability Inventory profile guide | adding no-code manual or semi-manual capability profiles |
 | `evals/palbench/capability-inventory/r82-manual-profile-guide-compliance.md` | Manual Profile Guide compliance regression | Capability Inventory boundary checks |
 | `evals/palbench/capability-inventory/r83-project-record-relationship-boundary.md` | Business System project relationship regression | organization/project record and thin binding boundary checks |
+| `evals/palbench/capability-inventory/r84-business-system-manual-walkthrough-boundary.md` | Business System manual walkthrough regression | walkthrough, failure example, and evidence-state boundary checks |
 | `archive/migration-from-v0.3/root-legacy/capability-inventory/root-pointers/` | archived R78 root compatibility pointers | legacy path questions and migration audits |
 | `workspace/resources/imports/` | public-safe import staging placeholders | import/resource boundary work |
 | `workspace/organization/memory/` | public-safe organization memory placeholders and examples | memory protocol or placeholder work |
@@ -229,6 +233,10 @@ Capability Inventory is a no-code profile layer. It is not an automatic scanner,
 | `examples/capability-inventory/` | illustrative examples only, not proof of current availability |
 | `examples/capability-inventory/business-system-profiles/` | public-safe Business System profile examples, not connectors or credentials |
 | `examples/capability-inventory/business-system-profiles/github-public-governance-profile.example.json` | GitHub governance example using placeholder `example-org/example-repo` |
+| `examples/capability-inventory/business-system-profiles/manual-github-profile-walkthrough.md` | manual walkthrough from confirmed facts to organization profile and project record |
+| `examples/capability-inventory/business-system-profiles/github-project-record-reference.example.md` | central project record reference example |
+| `examples/capability-inventory/business-system-profiles/unknown-not-run-missing-examples.md` | evidence-state examples for `unknown`, `not-run`, and `missing` |
+| `examples/failures/business-system-profile-as-connector.md` | forbidden failure example for connector, credential, auto scan, and keyword route misuse |
 
 ### Organization Capability Records
 
@@ -244,6 +252,7 @@ Capability Inventory is a no-code profile layer. It is not an automatic scanner,
 | `docs/03-user-guides/manual-capability-profile.md` | manual flow for choosing a profile type, copying a template, marking source/confidence, and saving to the right central record |
 | `evals/palbench/capability-inventory/r82-manual-profile-guide-compliance.md` | compliance regression for manual profiles, Business System profile boundary, project record relationship, and no auto scan / no keyword routing rules |
 | `evals/palbench/capability-inventory/r83-project-record-relationship-boundary.md` | regression for organization/project record relationship, thin binding, no connector, no credentials, and no keyword routing |
+| `evals/palbench/capability-inventory/r84-business-system-manual-walkthrough-boundary.md` | regression for walkthrough, evidence-state examples, forbidden failure example, and thin-binding boundary |
 
 ### Historical Migration Notes
 
@@ -322,6 +331,10 @@ Use the current docs directories as the public entry points. Archived research n
 | `standards/capability-inventory/business-system-profile-standard.md` | Business System profile standard for no-code external system governance |
 | `examples/capability-inventory/business-system-profiles/github-public-governance-profile.example.json` | public-safe GitHub Business System profile example using `example-org/example-repo` |
 | `evals/palbench/capability-inventory/r83-project-record-relationship-boundary.md` | Business System profile relationship and thin-binding regression |
+| `examples/capability-inventory/business-system-profiles/manual-github-profile-walkthrough.md` | manual Business System walkthrough from user facts to central records |
+| `examples/capability-inventory/business-system-profiles/unknown-not-run-missing-examples.md` | examples for preserving unknown, not-run, and missing evidence states |
+| `examples/failures/business-system-profile-as-connector.md` | forbidden connector misuse failure example |
+| `evals/palbench/capability-inventory/r84-business-system-manual-walkthrough-boundary.md` | R84 walkthrough and boundary regression |
 | `docs/05-orchestration-methodology/deep-conductor-master-goal.md` | Deep Conductor master goal and no-code 12-step loop |
 | `docs/05-orchestration-methodology/deep-conductor-master-loop-usage-guide.md` | Deep Conductor usage guide for project-level no-code coordination |
 | `docs/05-orchestration-methodology/deep-conductor-e2e-usage-guide.md` | Deep Conductor E2E usage guide for integrated no-code project-level closure |

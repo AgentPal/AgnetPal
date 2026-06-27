@@ -37,6 +37,14 @@ Use `standards/capability-inventory/business-system-profile-standard.md` for the
 
 Business System records can describe GitHub, Feishu, Notion, CRM, Jira, Linear, OA, ERP, databases, and customer-specific tools, but only as governance notes and AI judgement inputs. They are not connectors, API clients, credential stores, permission grants, automatic scanners, background sync jobs, release tools, write access, or keyword routes.
 
+Current Business System examples:
+
+- `examples/capability-inventory/business-system-profiles/manual-github-profile-walkthrough.md`
+- `examples/capability-inventory/business-system-profiles/github-project-record-reference.example.md`
+- `examples/capability-inventory/business-system-profiles/unknown-not-run-missing-examples.md`
+- `examples/capability-inventory/business-system-profiles/github-public-governance-profile.example.json`
+- `examples/failures/business-system-profile-as-connector.md`
+
 ## External Project Boundary
 
 External user projects remain thin-bound. Do not copy standards, examples, templates, Pal Packs, central contacts, memory, reports, workflows, capability inventory directories, or business-system directories into the external project by default.
@@ -86,6 +94,14 @@ evals/palbench/capability-inventory/r83-project-record-relationship-boundary.md
 ```
 
 It checks the Business System standard, public-safe GitHub example, organization/project record relationship, thin binding boundary, no connector, no credentials, and no keyword routing.
+
+The Business System manual walkthrough regression lives at:
+
+```text
+evals/palbench/capability-inventory/r84-business-system-manual-walkthrough-boundary.md
+```
+
+It checks the manual walkthrough, project record reference, unknown / not-run / missing examples, forbidden failure example, no credentials, no connector, no automatic scanner, no keyword routing, and no external project pollution.
 
 ## Legacy Path Notes
 
