@@ -33,6 +33,12 @@ AgentPal is a Pal layer and Pal Pack Standard practice for Markdown/JSON-capable
 - [v0.2 integration test matrix](../evals/v0.2-integration/v0.2-integration-test-matrix.md)
 - [v0.3 development plan](09-roadmap/v0.3-development-plan.md)
 - [v0.3 task pool](09-roadmap/v0.3-task-pool.md)
+- [No-code future boundary](09-roadmap/no-code-future-boundary.md)
+- [Deep Conductor master goal](05-orchestration-methodology/deep-conductor-master-goal.md)
+- [Pal Skill vs Runtime Skill protocol](../orchestration/pal-skill-vs-runtime-skill-protocol.md)
+- [Runtime Skill-aware Task Package](../templates/orchestration/runtime-skill-aware-task-package.md)
+- [Cross-runtime Pal memory protocol](../memory/runtime/cross-runtime-pal-memory-protocol.md)
+- [Token / Cost-aware Conductor policy](../orchestration/token-cost-aware-conductor-policy.md)
 - [Context Packet usage guide](05-orchestration-methodology/context-packet-usage-guide.md)
 - [Owner + Verifier usage guide](05-orchestration-methodology/owner-verifier-usage-guide.md)
 - [Parallel Independent Review usage guide](05-orchestration-methodology/parallel-independent-review-usage-guide.md)
@@ -111,6 +117,13 @@ AgentPal is a Pal layer and Pal Pack Standard practice for Markdown/JSON-capable
 
 - [v0.3 development plan](09-roadmap/v0.3-development-plan.md)
 - [v0.3 task pool](09-roadmap/v0.3-task-pool.md)
+- [No-code future boundary](09-roadmap/no-code-future-boundary.md)
+- [Deep Conductor master goal](05-orchestration-methodology/deep-conductor-master-goal.md)
+- [Pal Skill vs Runtime Skill protocol](../orchestration/pal-skill-vs-runtime-skill-protocol.md)
+- [Runtime Skill-aware Task Package](../templates/orchestration/runtime-skill-aware-task-package.md)
+- [Cross-runtime Pal memory protocol](../memory/runtime/cross-runtime-pal-memory-protocol.md)
+- [Token / Cost-aware Conductor policy](../orchestration/token-cost-aware-conductor-policy.md)
+- [Context Budget Plan template](../templates/orchestration/context-budget-plan.md)
 - [Context Packet usage guide](05-orchestration-methodology/context-packet-usage-guide.md)
 - [Owner + Verifier usage guide](05-orchestration-methodology/owner-verifier-usage-guide.md)
 - [Parallel Independent Review usage guide](05-orchestration-methodology/parallel-independent-review-usage-guide.md)
@@ -241,7 +254,7 @@ AgentPal is a Pal layer and Pal Pack Standard practice for Markdown/JSON-capable
 
 - Simple Pal Mode is the only active task-handling path.
 - Mira is the default Main Pal, Leader Pal, and Conductor.
-- `/pal Name` calls a registered Pal by display name or alias.
+- `/pal Name` is a plain-text AgentPal direct-call protocol for a registered Pal by display name or alias; it does not require a native Runtime command.
 - `contacts/` and `registry/` are the source of truth for Pal discovery.
 - AgentPal does not execute actions by itself; the host runtime performs file reads, writes, commands, tool calls, publishing, and deletion.
 - Future child workflow or subagent design material is not active in v0.2.0-rc.1.

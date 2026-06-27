@@ -1,6 +1,6 @@
 # Orchestration
 
-Orchestration files describe Pal routing, Simple Pal Mode handoff, context control, task packaging, future workflow topology, execution roles, and cost-quality tradeoffs.
+Orchestration files describe Pal routing, Simple Pal Mode handoff, context control, task packaging, future workflow topology, execution roles, Runtime Skill-aware packaging, cross-runtime memory, and cost-quality tradeoffs.
 
 No non-Pal runtime is assumed available until explicitly provided by the current execution environment.
 
@@ -12,7 +12,8 @@ AgentPal shared gates live under `core/`. Orchestration-specific protocols live 
 | --- | --- | --- |
 | Runtime response gate | `runtime-response-gate.md` | active v0.1 |
 | Fast Route | `fast-route-protocol.md` | active as Simple Pal Mode pattern |
-| Deep Conductor | `deep-conductor-protocol.md` | future design only |
+| Deep Conductor | `deep-conductor-protocol.md` | no-code future pattern, not execution |
+| Pal Skill vs Runtime Skill | `pal-skill-vs-runtime-skill-protocol.md` | active separation rule |
 | AI routing judgement | `ai-routing-judgement-protocol.md` | active v0.1 |
 | Pal context slicing | `pal-context-slicing-protocol.md` | active v0.1 |
 | Asset loading budget | `pal-asset-loading-budget.md` | active v0.1 |
@@ -26,7 +27,8 @@ AgentPal shared gates live under `core/`. Orchestration-specific protocols live 
 | Pal isolation and shared memory | `pal-isolation-and-shared-memory-protocol.md` | future design only |
 | Routing Reward Memory | `routing-reward-memory-protocol.md` | design foundation/template only |
 | Routing Memory Writeback | `routing-memory-writeback-protocol.md` | v0.3 no-code manual writeback prototype |
+| Token / Cost-aware Conductor | `token-cost-aware-conductor-policy.md` | no-code context and verification policy |
 
-Current task handling uses Simple Pal Mode. Research and future-design files do not activate Subagent Mode, external Agent calls, or Deep Conductor execution.
+Current task handling uses Simple Pal Mode. Research, templates, and future-design files do not activate Subagent Mode, external Agent calls, Runtime Skill execution, or Deep Conductor execution.
 
 

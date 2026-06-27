@@ -9,7 +9,7 @@ AgentPal v0.1.0-rc.1 is not a multi-agent runtime and not an execution layer. Th
 ## Status
 
 - Current: Simple Pal Mode, Fast Route, Task Package, Context Slicing, Asset Loading Budget, Context Packet, Owner + Verifier no-code workflow, Parallel Independent Review no-code workflow, Verification Result Record templates, and Routing Decision Record templates.
-- Future: Deep Conductor, richer Capability Inventory, Context Access Lists as enforceable workflow contracts, Pal Isolation and Shared Memory, Routing Reward Memory, and external runtime orchestration.
+- Future: Deep Conductor no-code patterns, richer Capability Inventory, Runtime Skill-aware Task Packages, cross-runtime Pal memory continuity, Context Access Lists as enforceable workflow contracts, Pal Isolation and Shared Memory, and Routing Reward Memory.
 - Research: PalBench evaluates AgentPal usage methods, not model capability or model superiority.
 
 ## Why it exists
@@ -34,7 +34,7 @@ Start with the active v0.1 path:
 4. The owner Pal reads a bounded slice of assets and answers through its Output Contract.
 5. When work must be executed or checked, the result is compressed into a Task Package with acceptance criteria and evidence requirements.
 
-Future methodology extends this with workflow topology, Context Access Lists, isolated review, verification records, and routing memory.
+Future methodology extends this with workflow topology, Context Access Lists, isolated review, Runtime Skill-aware Task Packages, verification records, cross-runtime Pal memory, token/cost-aware context control, and routing memory.
 
 ## What it is not
 
@@ -55,6 +55,7 @@ Future methodology extends this with workflow topology, Context Access Lists, is
 - [Capability Inventory Minimal Usable Design](capability-inventory-minimal-usable-design.md)
 - [06 Runtime / Model / Skill Awareness](06-runtime-model-skill-awareness.md)
 - [07 Verification Result Record](07-verification-result-record.md)
+- [Deep Conductor Master Goal](deep-conductor-master-goal.md)
 - [Owner + Verifier Usage Guide](owner-verifier-usage-guide.md)
 - [Parallel Independent Review Usage Guide](parallel-independent-review-usage-guide.md)
 - [08 Routing Decision Record](08-routing-decision-record.md)
