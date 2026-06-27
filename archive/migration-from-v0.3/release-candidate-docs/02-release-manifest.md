@@ -1,6 +1,6 @@
 # Release Manifest
 
-This page gives a public-readable manifest for v0.1.0-rc.1. The root [Release Manifest](../../RELEASE_MANIFEST.md) remains the release-file source.
+This page gives a public-readable manifest for v0.1.0-rc.1. The root [Release Manifest](../../../RELEASE_MANIFEST.md) remains the release-file source.
 
 ## Identity
 

@@ -13,7 +13,7 @@ AgentPal v0.1.0-rc.1 is a Markdown / JSON / protocol workspace for Pal Packs. It
 - [No-runtime-code boundary](04-no-runtime-code-boundary.md)
 - [No-code release checklist](05-no-code-release-checklist.md)
 - [PalSmith release-scope review](06-palsmith-release-scope-review.md)
-- [PalSmith release notes](../../RELEASE_NOTES.md#palsmith-release-notes)
+- [PalSmith release notes](../../../RELEASE_NOTES.md#palsmith-release-notes)
 - [PalSmith final release checklist](05-no-code-release-checklist.md#palsmith-final-release-checklist)
 - [PalSmith final verification report](09-palsmith-final-verification-report.md)
 - [AgentPal final release verification report](10-agentpal-final-release-verification-report.md)

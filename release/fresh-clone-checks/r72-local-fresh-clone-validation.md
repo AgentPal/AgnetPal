@@ -4,9 +4,7 @@ Date: 2026-06-27
 
 Scope: local-only validation after grouped R72 commits. No push, tag, or GitHub Release was performed.
 
-Fresh clone path:
-
-`C:\Users\Administrator\AppData\Local\Temp\AgentPal_R72_fresh_clone_2d6eb4d0754a`
+Fresh clone location: local temporary directory, not recorded in public release evidence.
 
 ## Result
 

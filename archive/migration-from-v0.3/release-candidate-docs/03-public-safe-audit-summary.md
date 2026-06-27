@@ -2,7 +2,7 @@
 
 The v0.1.0-rc.1 public-safe audit is a release-readiness summary, not an absolute safety guarantee.
 
-The detailed audit record is maintained at [release/v0.1.0-rc.1/public-safe-audit.md](../../release/v0.1.0-rc.1/public-safe-audit.md).
+The detailed audit record is maintained at [release/v0.1.0-rc.1/public-safe-audit.md](../../../release/v0.1.0-rc.1/public-safe-audit.md).
 
 ## What Was Checked
 

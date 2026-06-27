@@ -44,7 +44,7 @@ This is not a release, tag, commit, scanner, validator, installer, or automated 
 
 Checked on 2026-06-27.
 
-- Clean copy path: `C:\Users\ADMINI~1\AppData\Local\Temp\AgentPal_clean_check_R71_109dc0fb3746`
+- Clean copy location: local temporary directory, not recorded in public release evidence.
 - File copy source: `git ls-files --cached --modified --others --exclude-standard`, filtered to files that exist in the current worktree.
 - Copied file count: 2745
 - Clean copy file count: 2745
