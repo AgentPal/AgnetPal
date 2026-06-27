@@ -11,7 +11,7 @@ It is not an automatic scanner, validator, installer, sync service, or keyword r
 | Standards | `standards/capability-inventory/` | Reusable rules, matrices, protocols, and profile standards. |
 | Current organization records | `workspace/organization/capability-inventory/` | Public-safe current organization placeholders and maintained capability notes. |
 | Examples | `examples/capability-inventory/` | Synthetic example profiles and task judgement examples. |
-| Templates | `templates/capability-inventory/` | Copyable JSON profile templates. |
+| Templates | `templates/capability-inventory/` | Copyable JSON profile templates, including `business-system-profile-template.json`. |
 | Project record template | `workspace/projects/_template/capability-inventory/` | Template for per-project capability records under central project records. |
 | Historical archive | `archive/migration-from-v0.3/root-legacy/capability-inventory/` | R78/R79/R80 migration evidence and archived legacy pointers. |
 
@@ -29,6 +29,7 @@ Manual profile rules:
 - include limitations and not-run notes
 - do not store credentials, private tokens, API keys, or secrets
 - do not copy profile records into external user projects by default
+- use Business System profiles only as external system governance inputs, not connectors or automatic write access
 
 ## External Project Boundary
 
@@ -61,6 +62,16 @@ Forbidden active behavior:
 - automatic runtime selection without current evidence
 
 Explicit `/pal Name` and `@Name` mentions are user intent signals, not keyword routes.
+
+## Compliance Eval
+
+The Manual Profile Guide compliance regression lives at:
+
+```text
+evals/palbench/capability-inventory/r82-manual-profile-guide-compliance.md
+```
+
+It checks the manual guide, Business System template, project record template, and metadata for no auto scan, no keyword routing, no credentials, unknown-stays-unknown, organization/project separation, and thin external project boundaries.
 
 ## Legacy Path Notes
 

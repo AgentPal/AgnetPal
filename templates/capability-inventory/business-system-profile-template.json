@@ -1,0 +1,66 @@
+{
+  "schema": "agentpal.capability-inventory.business-system-profile.v0.4",
+  "profile_type": "business-system",
+  "id": "example-business-system",
+  "name": "Example Business System",
+  "system_type": "unknown",
+  "description": "Replace with a confirmed system description.",
+  "status": "unknown",
+  "source": {
+    "method": "unknown",
+    "confirmed_by": "unknown",
+    "last_checked": "unknown",
+    "confidence": "unknown"
+  },
+  "access": {
+    "access_method": "unknown",
+    "requires_user_approval": true,
+    "requires_credentials": "unknown",
+    "credential_policy": "Do not store credentials, tokens, passwords, API keys, cookies, or private secrets in this profile."
+  },
+  "required_permissions": [],
+  "allowed_operations": [],
+  "forbidden_operations": [
+    "Do not store credentials in this profile.",
+    "Do not claim availability unless confirmed.",
+    "Do not claim write access unless confirmed.",
+    "Do not perform external writes without explicit user approval.",
+    "Do not treat this profile as a connector or API implementation."
+  ],
+  "data_boundaries": {
+    "allowed_context": [],
+    "forbidden_context": [
+      "credentials",
+      "private tokens",
+      "passwords",
+      "API keys",
+      "session cookies",
+      "unrelated private memory"
+    ],
+    "privacy_notes": "Record only public-safe or user-approved operational facts."
+  },
+  "output_destinations": [],
+  "verification": {
+    "verification_method": "unknown",
+    "required_evidence": [],
+    "last_verified": "unknown"
+  },
+  "known_limitations": [],
+  "not_confirmed": [
+    "availability",
+    "permissions",
+    "write access",
+    "API access"
+  ],
+  "usage_memory": {
+    "last_used": "unknown",
+    "known_successes": [],
+    "known_failures": [],
+    "recommendations": []
+  },
+  "routing_boundary": {
+    "use_as_ai_judgement_input_only": true,
+    "keyword_routing_allowed": false,
+    "deterministic_routing_allowed": false
+  }
+}

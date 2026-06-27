@@ -16,6 +16,7 @@ When creating a real profile, copy a template and follow `docs/03-user-guides/ma
 | Skill profile | `skill-profile-template.json` |
 | Plugin profile | `plugin-profile-template.json` |
 | MCP profile | `mcp-profile-template.json` |
+| Business System profile | `business-system-profile-template.json` |
 | Pal capability profile | `pal-capability-profile-template.json` |
 
 ## Related Sources
@@ -32,4 +33,6 @@ When creating a real profile, copy a template and follow `docs/03-user-guides/ma
 
 External project bindings should not copy this directory. Bound projects keep a thin `.agentpal/` pointer and store project-specific capability inventory under the central `workspace/projects/<project-id>/capability-inventory/` record when approved.
 
-Capability Inventory profiles are AI judgement inputs. They must not become `keyword_map`, `domain_map`, `role_map`, or any deterministic semantic route. Do not store credentials, private tokens, API keys, or secrets in copied profiles.
+Business System profiles describe external system capability and governance boundaries only. They are not connectors, API clients, permission grants, or automatic write access.
+
+Capability Inventory profiles are AI judgement inputs. They must not become `keyword_map`, `domain_map`, `role_map`, or any deterministic semantic route. Do not store credentials, private tokens, API keys, cookies, passwords, or secrets in copied profiles.

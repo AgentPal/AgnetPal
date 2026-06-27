@@ -137,6 +137,32 @@ Examples:
 
 Do not claim availability unless confirmed.
 
+## Business System Profile Notes
+
+Use Business System profiles for external systems such as GitHub, Feishu, Notion, CRM, Jira, Linear, WordPress, ERP, OA, databases, or customer-specific tools.
+
+A Business System profile records capability notes and governance boundaries only. It is not a connector, API client, permission grant, credential store, or automatic execution path.
+
+Business System profiles should record only confirmed or user-approved facts, such as:
+
+- system name and system type
+- access method
+- required permissions
+- allowed operations
+- forbidden operations
+- output destinations
+- verification method
+- privacy boundary
+- credential policy
+- source and confidence
+- limitations
+
+If availability, permissions, write access, API access, or output destinations are not confirmed, keep them as `unknown` or empty arrays. Do not infer access from the system name.
+
+Do not store credentials, private tokens, passwords, API keys, session cookies, or private secrets in Business System profiles.
+
+External writes to business systems require explicit user authorization and current host Runtime evidence. The profile may inform AI judgement, but it must not trigger writes or routing by itself.
+
 ## Step 6: Save To The Right Place
 
 Use organization records for public-safe, organization-level capability notes:

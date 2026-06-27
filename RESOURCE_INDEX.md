@@ -102,7 +102,9 @@ Use:
 | `workspace/projects/_template/capability-inventory/` | project-level capability inventory record template | central project record template work |
 | `examples/capability-inventory/` | illustrative capability profile examples | examples and regression checks |
 | `templates/capability-inventory/` | copyable Capability Inventory JSON profile templates | selected template work |
+| `templates/capability-inventory/business-system-profile-template.json` | Business System capability profile template for external system governance boundaries | business-system profile template work or release checks |
 | `docs/03-user-guides/manual-capability-profile.md` | manual Capability Inventory profile guide | adding no-code manual or semi-manual capability profiles |
+| `evals/palbench/capability-inventory/r82-manual-profile-guide-compliance.md` | Manual Profile Guide compliance regression | Capability Inventory boundary checks |
 | `archive/migration-from-v0.3/root-legacy/capability-inventory/root-pointers/` | archived R78 root compatibility pointers | legacy path questions and migration audits |
 | `workspace/resources/imports/` | public-safe import staging placeholders | import/resource boundary work |
 | `workspace/organization/memory/` | public-safe organization memory placeholders and examples | memory protocol or placeholder work |
@@ -214,6 +216,7 @@ Capability Inventory is a no-code profile layer. It is not an automatic scanner,
 | Path | Purpose |
 | --- | --- |
 | `templates/capability-inventory/` | copyable JSON templates only, not current facts |
+| `templates/capability-inventory/business-system-profile-template.json` | copyable Business System profile template for external system governance notes, not a connector |
 
 ### Capability Inventory Examples
 
@@ -233,6 +236,7 @@ Capability Inventory is a no-code profile layer. It is not an automatic scanner,
 | --- | --- |
 | `workspace/projects/_template/capability-inventory/` | project-level record template; real records live under `workspace/projects/<project-id>/capability-inventory/` and are private by default |
 | `docs/03-user-guides/manual-capability-profile.md` | manual flow for choosing a profile type, copying a template, marking source/confidence, and saving to the right central record |
+| `evals/palbench/capability-inventory/r82-manual-profile-guide-compliance.md` | compliance regression for manual profiles, Business System profile boundary, project record relationship, and no auto scan / no keyword routing rules |
 
 ### Historical Migration Notes
 
@@ -355,7 +359,9 @@ Use the current docs directories as the public entry points. Archived research n
 | `workspace/projects/_template/capability-inventory/` | project capability record template, not real project data |
 | `examples/capability-inventory/` | capability profile examples |
 | `templates/capability-inventory/` | capability profile JSON templates |
+| `templates/capability-inventory/business-system-profile-template.json` | Business System profile template |
 | `docs/03-user-guides/manual-capability-profile.md` | manual no-code profile creation guide |
+| `evals/palbench/capability-inventory/r82-manual-profile-guide-compliance.md` | Manual Profile Guide compliance regression |
 | `archive/migration-from-v0.3/root-legacy/capability-inventory/root-pointers/` | archived R78 capability inventory root pointers |
 | `templates/orchestration/` | task judgement, workflow, access list, project conductor task map, Deep Conductor plan, next-round runtime package, cross-runtime continuation package, conductor decision record, Runtime Skill-aware task package, context budget plan, context usage report, verifier context packet, reviewer context packet, final report, synthesis, result record, routing, and verification templates |
 | `templates/orchestration/deep-conductor-e2e-package.md` | complete Deep Conductor E2E package template |
