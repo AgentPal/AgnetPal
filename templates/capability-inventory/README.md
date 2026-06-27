@@ -17,6 +17,7 @@ When creating a real profile, copy a template and follow `docs/03-user-guides/ma
 | Plugin profile | `plugin-profile-template.json` |
 | MCP profile | `mcp-profile-template.json` |
 | Business System profile | `business-system-profile-template.json` |
+| Business System profile review packet | `business-system-profile-review-packet.md` |
 | Pal capability profile | `pal-capability-profile-template.json` |
 
 ## Related Sources
@@ -25,6 +26,7 @@ When creating a real profile, copy a template and follow `docs/03-user-guides/ma
 | --- | --- |
 | Standards and rules | `standards/capability-inventory/` |
 | Business System standard | `standards/capability-inventory/business-system-profile-standard.md` |
+| Business System review flow standard | `standards/capability-inventory/business-system-profile-review-flow.md` |
 | Current organization records | `workspace/organization/capability-inventory/` |
 | Project record template | `workspace/projects/_template/capability-inventory/` |
 | Public-safe examples | `examples/capability-inventory/` |
@@ -38,3 +40,5 @@ External project bindings should not copy this directory. Bound projects keep a 
 Business System profiles describe external system capability and governance boundaries only. They are not connectors, API clients, permission grants, credential stores, automatic scanners, background sync jobs, release tools, or automatic write access.
 
 Capability Inventory profiles are AI judgement inputs. They must not become `keyword_map`, `domain_map`, `role_map`, or any deterministic semantic route. Do not store credentials, private tokens, API keys, cookies, passwords, or secrets in copied profiles.
+
+Business System profile review packets are no-code review artifacts. They may recommend manual organization profile updates after user confirmation and reviewable evidence, but they must not auto-update organization truth or write into external project `.agentpal/` directories by default.

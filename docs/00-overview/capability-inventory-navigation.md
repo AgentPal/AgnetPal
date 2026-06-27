@@ -8,10 +8,10 @@ It is not an automatic scanner, validator, installer, sync service, or keyword r
 
 | Source type | Path | Role |
 | --- | --- | --- |
-| Standards | `standards/capability-inventory/` | Reusable rules, matrices, protocols, and profile standards. |
+| Standards | `standards/capability-inventory/` | Reusable rules, matrices, protocols, profile standards, and Business System review flow. |
 | Current organization records | `workspace/organization/capability-inventory/` | Public-safe current organization placeholders and maintained capability notes. |
-| Examples | `examples/capability-inventory/` | Synthetic example profiles and task judgement examples, including public-safe Business System examples. |
-| Templates | `templates/capability-inventory/` | Copyable JSON profile templates, including `business-system-profile-template.json`. |
+| Examples | `examples/capability-inventory/` | Synthetic example profiles and task judgement examples, including public-safe Business System examples and review examples. |
+| Templates | `templates/capability-inventory/` | Copyable profile templates, including `business-system-profile-template.json` and `business-system-profile-review-packet.md`. |
 | Project record template | `workspace/projects/_template/capability-inventory/` | Template for per-project capability records under central project records. |
 | Historical archive | `archive/migration-from-v0.3/root-legacy/capability-inventory/` | R78/R79/R80 migration evidence and archived legacy pointers. |
 
@@ -37,6 +37,8 @@ Use `standards/capability-inventory/business-system-profile-standard.md` for the
 
 Business System records can describe GitHub, Feishu, Notion, CRM, Jira, Linear, OA, ERP, databases, and customer-specific tools, but only as governance notes and AI judgement inputs. They are not connectors, API clients, credential stores, permission grants, automatic scanners, background sync jobs, release tools, write access, or keyword routes.
 
+Use `standards/capability-inventory/business-system-profile-review-flow.md` and `templates/capability-inventory/business-system-profile-review-packet.md` when project usage memory suggests an organization-level profile review. Review packets can recommend manual updates, but they must not auto-update organization truth, modify central Pal contacts, write into external project `.agentpal/reviews/`, create connectors, store credentials, or keyword route.
+
 Current Business System examples:
 
 - `examples/capability-inventory/business-system-profiles/manual-github-profile-walkthrough.md`
@@ -56,6 +58,14 @@ examples/project-records/business-system-profile-references/
 ```
 
 These examples show how `content-ops-demo` and `sales-ops-demo` reference organization Business System profile examples without becoming real private `workspace/projects/<project-id>` records.
+
+Public-safe review flow examples live under:
+
+```text
+examples/capability-inventory/business-system-profile-reviews/
+```
+
+They show review packets that preserve `unknown`, `not-run`, and `missing` until user confirmation and reviewable host Runtime evidence are available.
 
 ## External Project Boundary
 
@@ -130,6 +140,14 @@ evals/palbench/capability-inventory/r86-project-record-business-system-reference
 ```
 
 It checks the content-ops and sales-ops project record examples, project usage memory boundary, central roster boundary, no connector, no credentials, no automatic scanner, no keyword routing, and no external project pollution.
+
+The Business System profile review flow regression lives at:
+
+```text
+evals/palbench/capability-inventory/r87-business-system-profile-review-flow-boundary.md
+```
+
+It checks the review flow standard, review packet template, public-safe review example, project usage memory upgrade boundary, central roster boundary, no connector, no credentials, no automatic scanner, no keyword routing, and no external project `.agentpal/reviews/` writes.
 
 ## Legacy Path Notes
 

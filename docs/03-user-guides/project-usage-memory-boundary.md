@@ -46,6 +46,19 @@ Correct:
 Record project-level not-run. If user later confirms access, propose an organization profile review.
 ```
 
+## Organization Profile Review
+
+When project usage memory suggests a Business System capability may be available, create a review packet instead of updating organization truth directly.
+
+Use:
+
+```text
+standards/capability-inventory/business-system-profile-review-flow.md
+templates/capability-inventory/business-system-profile-review-packet.md
+```
+
+The review packet can recommend a manual organization profile update. It must not auto-update `workspace/organization/capability-inventory/`, modify `workspace/organization/contacts/pals.json`, write into an external project `.agentpal/reviews/`, create a connector, store credentials, or route by keywords.
+
 ## Boundary Checklist
 
 - Keep project usage memory under the central project record.
@@ -54,4 +67,3 @@ Record project-level not-run. If user later confirms access, propose an organiza
 - Do not update `workspace/organization/capability-inventory/` without explicit review.
 - Do not convert `unknown`, `not-run`, or `missing` into a pass.
 - Do not use project usage memory as `keyword_map`, `domain_map`, `role_map`, or deterministic routing.
-

@@ -35,6 +35,12 @@ For Business System profiles, use:
 standards/capability-inventory/business-system-profile-standard.md
 ```
 
+For Business System profile review flow, use:
+
+```text
+standards/capability-inventory/business-system-profile-review-flow.md
+```
+
 ## Where Templates Live
 
 Copyable templates live in:
@@ -44,6 +50,12 @@ templates/capability-inventory/
 ```
 
 Templates are reusable shapes. They are not facts and do not prove any capability is installed.
+
+Business System profile review packets use:
+
+```text
+templates/capability-inventory/business-system-profile-review-packet.md
+```
 
 ## Where Examples Live
 
@@ -70,6 +82,14 @@ examples/project-records/business-system-profile-references/
 ```
 
 These examples are not real private project records. They show project-level scope, limitations, not-run checks, missing evidence, and project usage memory without updating organization truth.
+
+Business System profile review examples live in:
+
+```text
+examples/capability-inventory/business-system-profile-reviews/
+```
+
+These examples show project usage memory proposing review without automatically updating organization capability profiles.
 
 ## Where Organization Records Live
 
@@ -234,3 +254,5 @@ After a real task, update usage memory only from evidence. Record what worked, w
 Do not turn usage memory into an automatic score, benchmark, or certification claim. If verification did not run, write `not-run` or `unknown`.
 
 Project usage memory records what happened in one project. It is not organization truth, must not silently update organization capability profiles, must not update the central Pal roster, and must not be copied into external project `.agentpal/` by default. See `docs/03-user-guides/project-usage-memory-boundary.md`.
+
+If project usage memory suggests an organization-level Business System profile change, create a review packet and keep the decision blocked until explicit user confirmation and reviewable host Runtime evidence are present.
