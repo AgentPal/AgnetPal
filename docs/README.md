@@ -30,6 +30,9 @@ AgentPal is a Pal layer and Pal Pack Standard practice for Markdown/JSON-capable
 - [v0.2 release readiness](09-roadmap/v0.2-release-readiness.md)
 - [v0.2 public capability summary](09-roadmap/v0.2-public-capability-summary.md)
 - [v0.2 integration test matrix](../evals/v0.2-integration/v0.2-integration-test-matrix.md)
+- [v0.3 development plan](09-roadmap/v0.3-development-plan.md)
+- [v0.3 task pool](09-roadmap/v0.3-task-pool.md)
+- [PalBench Collaboration Suite](../evals/palbench-collaboration/README.md)
 - [Validation and evidence](06-validation-and-evidence/README.md)
 - [v0.1.0-rc.1 release candidate](08-release-candidate/README.md)
 - [v0.2 development plan](09-roadmap/v0.2-development-plan.md)
@@ -99,6 +102,19 @@ AgentPal is a Pal layer and Pal Pack Standard practice for Markdown/JSON-capable
 - [PalBench Light scoring rubric](../evals/palbench-light/scoring-rubric.md)
 - [PalBench Light case template](../evals/palbench-light/case-template.md)
 - [PalBench Light suite self-test](../evals/palbench-light/palbench-light-suite-self-test.md)
+
+## v0.3 Orchestration Prototype Quick Links
+
+- [v0.3 development plan](09-roadmap/v0.3-development-plan.md)
+- [v0.3 task pool](09-roadmap/v0.3-task-pool.md)
+- [Context Packet protocol](../orchestration/context-packet-protocol.md)
+- [Mention and Direct Pal protocol](../orchestration/mention-and-direct-pal-protocol.md)
+- [Owner + Verifier workflow](../orchestration/owner-verifier-workflow-protocol.md)
+- [Parallel Independent Review workflow](../orchestration/parallel-independent-review-protocol.md)
+- [Plan -> Execute -> Verify workflow](../orchestration/plan-execute-verify-protocol.md)
+- [Routing Memory writeback protocol](../orchestration/routing-memory-writeback-protocol.md)
+- [PalBench Collaboration suite plan](research/palbench-collaboration-suite-plan.md)
+- [PalBench Collaboration eval index](../evals/palbench-collaboration/task-index.md)
 
 ## Atlas Developer Quick Links
 
@@ -204,7 +220,7 @@ AgentPal is a Pal layer and Pal Pack Standard practice for Markdown/JSON-capable
 | [07-memory-and-learning](07-memory-and-learning/00-memory-overview.md) | User memory, project memory, skill memory, and repeated-task learning |
 | [08-release-and-maintenance](08-release-and-maintenance/00-release-process.md) | Release process, public-safety checks, versioning, and maintenance |
 | [08-release-candidate](08-release-candidate/README.md) | v0.1.0-rc.1 scope, manifest, public-safe audit summary, tag process, and known limitations |
-| [09-roadmap](09-roadmap/v0.2-development-plan.md) | v0.2 development plan and task pool |
+| [09-roadmap](09-roadmap/README.md) | v0.2 and v0.3 development plans, task pools, and release-readiness planning |
 | [research](research/README.md) | Archived research notes only; not a primary docs entry point |
 | [99-reference](99-reference/glossary.md) | Glossary, file index, official Pals, FAQ, and known limitations |
 

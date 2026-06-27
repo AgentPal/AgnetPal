@@ -89,6 +89,8 @@ Use:
 | `docs/09-roadmap/` | v0.2 roadmap and task pool | v0.2 planning and development sequencing |
 | `docs/09-roadmap/v0.2-release-readiness.md` | v0.2 release readiness assessment | R46 first-phase integrated readiness and rc preparation recommendation |
 | `docs/09-roadmap/v0.2-public-capability-summary.md` | v0.2 public capability summary | restrained public claims for v0.2 first phase |
+| `docs/09-roadmap/v0.3-development-plan.md` | v0.3 no-code orchestration prototype plan | Multi-Pal Collaboration, Deep Conductor prototype, Context Packet, Owner + Verifier, Plan -> Execute -> Verify, Parallel Review, and Routing Memory planning |
+| `docs/09-roadmap/v0.3-task-pool.md` | v0.3 execution task pool | P0/P1/P2 task packages for collaboration protocol work |
 | `evals/v0.2-integration/v0.2-integration-test-matrix.md` | v0.2 integration matrix | R46 integrated readiness test matrix |
 | `docs/06-palsmith/README.md` | PalSmith v0.2 productization index | PalSmith creation and AI team productization work |
 | `docs/06-palsmith/palsmith-end-to-end-productization.md` | PalSmith v0.2 end-to-end user path | PalSmith creation and AI team productization work |
@@ -120,10 +122,13 @@ Use:
 | `examples/orchestration/capability-inventory-task-judgement-example.md` | Capability Inventory successful use example | profile-as-judgement-input example |
 | `examples/failures/capability-profile-used-as-fixed-route.md` | Capability Inventory failure example | profile-as-route regression example |
 | `docs/research/palbench-light-suite-plan.md` | PalBench Light suite plan | v0.2 R44 release regression suite design |
+| `docs/research/palbench-collaboration-suite-plan.md` | PalBench Collaboration suite plan | v0.3 qualitative regression suite for no-code multi-Pal collaboration |
 | `evals/palbench-light/README.md` | PalBench Light eval entry | v0.2 release regression suite navigation |
 | `evals/palbench-light/task-index.md` | PalBench Light task index | R44 first 24 case index |
 | `evals/palbench-light/scoring-rubric.md` | PalBench Light scoring rubric | 0 / 1 / 2 release regression scoring |
 | `evals/palbench-light/palbench-light-suite-self-test.md` | PalBench Light suite self-test | R44 suite structure and boundary check |
+| `evals/palbench-collaboration/README.md` | PalBench Collaboration eval entry | v0.3 collaboration regression suite navigation |
+| `evals/palbench-collaboration/task-index.md` | PalBench Collaboration task index | first 10 collaboration cases |
 | `docs/04-runtime-guides/runtime-adapter-stability-guide.md` | Runtime Adapter stability guide | R45 thin binding stability and cross-project troubleshooting |
 | `docs/04-runtime-guides/runtime-adapter-troubleshooting-prompt-cards.md` | Runtime Adapter troubleshooting cards | R45 copyable bounded troubleshooting prompts |
 | `docs/04-runtime-guides/upgrade-existing-binding-to-thin-binding.md` | existing binding upgrade runbook | R45 upgrade path for old copied bindings |
@@ -212,6 +217,12 @@ Use the current docs directories as the public entry points. Archived research n
 | `orchestration/task-judgement-protocol.md` | structured task judgement design |
 | `orchestration/workflow-topology-protocol.md` | workflow topology design and v0.1/future boundary |
 | `orchestration/context-access-list-protocol.md` | context access list design |
+| `orchestration/context-packet-protocol.md` | v0.3 Context Packet handoff protocol |
+| `orchestration/mention-and-direct-pal-protocol.md` | v0.3 `/pal Name` and `@Pal` collaboration protocol |
+| `orchestration/owner-verifier-workflow-protocol.md` | v0.3 Owner + Verifier staged workflow |
+| `orchestration/parallel-independent-review-protocol.md` | v0.3 isolated independent review workflow |
+| `orchestration/plan-execute-verify-protocol.md` | v0.3 Plan -> Execute -> Verify staged workflow |
+| `orchestration/routing-memory-writeback-protocol.md` | v0.3 manual routing memory writeback protocol |
 | `orchestration/pal-isolation-and-shared-memory-protocol.md` | isolation and shared memory design |
 | `orchestration/routing-reward-memory-protocol.md` | routing outcome memory design |
 | `capabilities/` | capability profile notes and illustrative examples |

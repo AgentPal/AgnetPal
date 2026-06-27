@@ -20,6 +20,8 @@ For v0.2 release regression work, see the [PalBench Light Suite](evals/palbench-
 
 For Runtime Adapter troubleshooting and thin binding stability, see the [stability guide](docs/04-runtime-guides/runtime-adapter-stability-guide.md) and [troubleshooting prompt cards](docs/04-runtime-guides/runtime-adapter-troubleshooting-prompt-cards.md).
 
+For the next no-code orchestration prototype line, see the [v0.3 development plan](docs/09-roadmap/v0.3-development-plan.md), [v0.3 task pool](docs/09-roadmap/v0.3-task-pool.md), and [PalBench Collaboration Suite](evals/palbench-collaboration/README.md). v0.3 planning does not make Deep Conductor an automatic runtime.
+
 ## Why AgentPal?
 
 When users want agents to work better, they usually try one of two paths:
@@ -227,6 +229,7 @@ AgentPal is a Pal layer for existing runtimes. It does not require Python, Node.
 - [Runtime Guides](docs/04-runtime-guides/)
 - [Orchestration Methodology](docs/05-orchestration-methodology/)
 - [v0.2 Roadmap](docs/09-roadmap/v0.2-development-plan.md)
+- [v0.3 Roadmap](docs/09-roadmap/v0.3-development-plan.md)
 - [Validation and Evidence](docs/06-validation-and-evidence/)
 - [Authoring Pals](docs/07-authoring-pals/)
 - [Prompts](prompts/)

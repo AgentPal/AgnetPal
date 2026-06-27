@@ -6,7 +6,7 @@ No non-Pal runtime is assumed available until explicitly provided by the current
 
 ## Core Protocol Map
 
-AgentPal has no root `core/` directory. The protocol map lives here:
+AgentPal shared gates live under `core/`. Orchestration-specific protocols live here:
 
 | Area | File | Status |
 | --- | --- | --- |
@@ -18,8 +18,14 @@ AgentPal has no root `core/` directory. The protocol map lives here:
 | Asset loading budget | `pal-asset-loading-budget.md` | active v0.1 |
 | Task package output | `task-package-output-contract.md` | active v0.1 |
 | Context Access List | `context-access-list-protocol.md` | design foundation; usable as documentation/template |
+| Context Packet | `context-packet-protocol.md` | v0.3 no-code handoff prototype |
+| Mention / Direct Pal | `mention-and-direct-pal-protocol.md` | v0.3 no-code collaboration prototype |
+| Owner + Verifier | `owner-verifier-workflow-protocol.md` | v0.3 no-code staged workflow |
+| Parallel Independent Review | `parallel-independent-review-protocol.md` | v0.3 no-code staged workflow |
+| Plan -> Execute -> Verify | `plan-execute-verify-protocol.md` | v0.3 no-code staged workflow |
 | Pal isolation and shared memory | `pal-isolation-and-shared-memory-protocol.md` | future design only |
 | Routing Reward Memory | `routing-reward-memory-protocol.md` | design foundation/template only |
+| Routing Memory Writeback | `routing-memory-writeback-protocol.md` | v0.3 no-code manual writeback prototype |
 
 Current task handling uses Simple Pal Mode. Research and future-design files do not activate Subagent Mode, external Agent calls, or Deep Conductor execution.
 
