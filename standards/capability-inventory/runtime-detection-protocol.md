@@ -10,7 +10,6 @@ Before routing important work, Mira should determine:
 6. context limits and privacy boundaries
 7. cost or latency constraints
 
-Write confirmed results to `runtime/current-runtime.md` and related capability files.
+Write confirmed results to `workspace/organization/capability-inventory/runtimes/current-runtime.md` and related capability files.
 
 If inspection is unavailable, ask the user or write `unknown until scanned`.
-

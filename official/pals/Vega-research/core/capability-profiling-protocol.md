@@ -18,11 +18,11 @@ Pal 应为 Agent、模型、Skill、插件建立可刷新能力画像。
 
 ## Matrices
 
-- `capabilities/agent-capability-matrix.md`
-- `capabilities/model-capability-matrix.md`
-- `capabilities/skill-capability-matrix.md`
-- `capabilities/plugin-capability-matrix.md`
-- `capabilities/task-routing-matrix.md` as a legacy-named capability consideration matrix, not a route map
+- `standards/capability-inventory/agent-capability-matrix.md`
+- `standards/capability-inventory/model-capability-matrix.md`
+- `standards/capability-inventory/skill-capability-matrix.md`
+- `standards/capability-inventory/plugin-capability-matrix.md`
+- `standards/capability-inventory/task-routing-matrix-standard.md` as a legacy-named capability consideration matrix, not a route map
 
 ## Expiry
 
@@ -31,4 +31,3 @@ Pal 应为 Agent、模型、Skill、插件建立可刷新能力画像。
 ## Use
 
 能力选择时先查能力画像，再由当前 AI 根据上下文逐案决定模型、强度、Skill、插件、工具、外部 Runtime 或 Pal 协作候选。
-

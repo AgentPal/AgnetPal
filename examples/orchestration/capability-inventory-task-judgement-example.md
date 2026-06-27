@@ -24,9 +24,9 @@ This example shows Capability Inventory used as a minimal AI Judgement input. It
 
 For this task, Mira reads only:
 
-- `capabilities/runtime-profiles/codex.example.json` if the current runtime is Codex-like.
-- `capabilities/pal-profiles/mira-main.example.json` because Mira is conducting intake.
-- `capabilities/reasoning-profiles/reasoning-strengths.example.json` only if the task risk requires reasoning-level guidance.
+- `examples/capability-inventory/runtime-profiles/codex.example.json` if the current runtime is Codex-like.
+- `examples/capability-inventory/pal-profiles/mira-main.example.json` because Mira is conducting intake.
+- `examples/capability-inventory/reasoning-profiles/reasoning-strengths.example.json` only if the task risk requires reasoning-level guidance.
 
 Mira does not read all Runtime, Model, Skill, Plugin, MCP, or Pal profiles.
 

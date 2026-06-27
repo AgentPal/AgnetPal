@@ -420,9 +420,9 @@ This is a non-binding example.
 | `adapters/` | 删除 | 主体层 / Runtime 层职责。 | AgentPal 主体未来统一管理。 |
 | `contacts/` | 删除 | Pal 联系册由 AgentPal 主体维护。 | `AgentPal/workspace/organization/contacts/`。 |
 | `registry/` | 删除 | 旧 registry 只保留兼容/历史导航，不属于 Pal Pack。 | AgentPal 主体兼容目录。 |
-| `runtime/` | 删除 | Runtime 信息由 AgentPal 主体维护。 | `AgentPal/runtime/`。 |
-| `models/` | 删除 | 模型信息由 AgentPal 主体维护。 | `AgentPal/models/`。 |
-| `plugins/` | 删除 | 插件信息由 AgentPal 主体维护。 | `AgentPal/plugins/`。 |
+| `runtime/` | 删除 | Runtime 信息由 AgentPal 中央能力画像维护。 | `AgentPal/workspace/organization/capability-inventory/runtimes/`。 |
+| `models/` | 删除 | 模型信息由 AgentPal 中央能力画像维护。 | `AgentPal/workspace/organization/capability-inventory/models/`。 |
+| `plugins/` | 删除 | 插件信息由 AgentPal 中央能力画像维护。 | `AgentPal/workspace/organization/capability-inventory/plugins/`。 |
 | `orchestration/` | 多数删除 | 全局调度属于 AgentPal 主体。 | Pal 专属流程迁到 `workflows/` 或 `core/`。 |
 | `coordination/` | 多数删除 | 全局协作协议由主体维护。 | Pal 专属协作边界迁到 `core/collaboration-protocol.md`。 |
 | `imports/` | 删除或迁移 | 外部资源导入由主体统一管理。 | 专属知识迁到 `knowledge/references/`。 |

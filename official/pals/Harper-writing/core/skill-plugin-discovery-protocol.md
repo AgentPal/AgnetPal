@@ -12,7 +12,7 @@ Harper 应识别当前 Runtime 可用的 Skill、插件、MCP、hooks、commands
 
 ## 使用边界
 
-发现结果进入 `plugins/`、`capabilities/`、`runtime/` 和 `memory/runtime/`。普通 Skill、工具、模型、MCP、插件和外部 Runtime 不进入 `contacts/`。
+公开安全的发现结果进入 `workspace/organization/capability-inventory/`；私有运行时经验进入私有 runtime memory。普通 Skill、工具、模型、MCP、插件和外部 Runtime 不进入 `contacts/`。
 
 ## 写作任务用途
 

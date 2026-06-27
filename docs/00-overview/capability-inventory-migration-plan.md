@@ -1,20 +1,17 @@
 # Capability Inventory Migration Plan
 
-R77 does not bulk-move `capabilities/`, `runtime/`, `models/`, or `plugins/`. These directories still serve active documentation, examples, and evals. This plan defines the staged split for a later round.
+R78 completed the first staged split of `capabilities/`, `runtime/`, `models/`, and `plugins/`. Low-risk standard-like files moved to `standards/capability-inventory/`, example profiles moved to `examples/capability-inventory/`, and current organization placeholders moved to `workspace/organization/capability-inventory/`.
+
+The root directories now remain as temporary compatibility pointers only.
 
 ## Current Surfaces
 
 | current path | current role | future home |
 | --- | --- | --- |
-| `capabilities/README.md` | profile index and boundary note | `standards/capability-inventory/README.md` after compatibility links are ready |
-| `capabilities/runtime-profiles/` | illustrative runtime profiles | `standards/capability-inventory/runtime-profiles/` or `examples/capability-inventory/runtime-profiles/` |
-| `capabilities/model-profiles/` | illustrative model profiles | `standards/capability-inventory/model-profiles/` or examples |
-| `capabilities/reasoning-profiles/` | reasoning-strength profile examples | `standards/capability-inventory/reasoning-profiles/` |
-| `capabilities/skill-profiles/` | Skill profile examples | `standards/capability-inventory/skill-profiles/` |
-| `capabilities/plugin-profiles/` | plugin capability notes | `standards/capability-inventory/plugin-profiles/` |
-| `capabilities/mcp-profiles/` | MCP capability notes | `standards/capability-inventory/mcp-profiles/` |
-| `capabilities/pal-profiles/` | Pal profile examples | `workspace/organization/capability-inventory/pal-profiles/` or examples |
-| `runtime/`, `models/`, `plugins/` | current root reference notes | merged into the capability inventory split where appropriate |
+| `standards/capability-inventory/` | profile standards, policies, protocols, and matrices | active standard source |
+| `examples/capability-inventory/` | illustrative runtime/model/reasoning/Skill/plugin/MCP/Pal profiles | active example source |
+| `workspace/organization/capability-inventory/` | current central organization records and usage memory placeholders | active central organization record source |
+| `capabilities/`, `runtime/`, `models/`, `plugins/` | temporary compatibility pointers | remove or archive when R79 proves all active references are updated |
 
 ## Target Split
 
@@ -27,10 +24,11 @@ R77 does not bulk-move `capabilities/`, `runtime/`, `models/`, or `plugins/`. Th
 
 ## Migration Rounds
 
-1. R78: inventory all references to `capabilities/`, `runtime/`, `models/`, and `plugins/`; add compatibility pointers.
-2. R78: move schema-like and standard-like content into `standards/capability-inventory/`.
-3. R79: move illustrative examples into `examples/capability-inventory/` and update eval references.
-4. R79: decide whether root `runtime/`, `models/`, and `plugins/` can become pointer-only or be archived.
+1. R78: inventory all references to `capabilities/`, `runtime/`, `models/`, and `plugins/`; add compatibility pointers. Done.
+2. R78: move schema-like and standard-like content into `standards/capability-inventory/`. Done for low-risk files.
+3. R78: move illustrative examples into `examples/capability-inventory/` and update active references. Done for low-risk files.
+4. R78: move current organization placeholders into `workspace/organization/capability-inventory/`. Done for low-risk files.
+5. R79: decide whether root `capabilities/`, `runtime/`, `models/`, and `plugins/` can be archived or deleted after compatibility references are no longer needed.
 
 ## Boundaries
 

@@ -22,7 +22,7 @@ For each Pal:
 - `PAL.md`
 - `AGENTS.md`
 - `SKILL.md`
-- `capabilities/task-routing-matrix.md` or equivalent capability reference
+- `standards/capability-inventory/task-routing-matrix-standard.md` or equivalent capability reference
 - `core/dispatch-protocol.md`
 - `skills/follow-up-planner/`
 
@@ -45,5 +45,3 @@ For each Pal:
 ## Expected Result
 
 A 类硬编码语义路由 should be `0`.
-
-

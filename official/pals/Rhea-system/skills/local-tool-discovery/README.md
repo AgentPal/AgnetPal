@@ -32,7 +32,7 @@
 1. 生成只读发现任务。
 2. 区分工具、Runtime、Skill、插件、MCP 和 Pal。
 3. 建立能力摘要。
-4. 写入 runtime/capabilities 相关记忆候选。
+4. 写入 `workspace/organization/capability-inventory/` 相关公开安全候选，或写入私有 runtime memory 候选。
 5. 不把外部 Runtime 加入 contacts。
 
 ## 输出格式

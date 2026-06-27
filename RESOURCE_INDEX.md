@@ -97,10 +97,10 @@ Use:
 | `standards/project-binding/` | external project binding standards and removal protocol | project binding governance |
 | `workspace/resources/registry/` | legacy registry records moved from root during R76 | compatibility and selected navigation |
 | `archive/migration-from-v0.3/root-legacy/` | old root compatibility paths moved during R76 | migration audits and old-path questions |
-| `runtime/` | runtime-awareness notes | diagnostics or runtime documentation |
-| `models/` | model-routing notes | model-routing documentation |
-| `plugins/` | plugin-discovery notes | plugin documentation |
-| `capabilities/` | capability-profile notes | diagnostics or capability documentation |
+| `standards/capability-inventory/` | capability profile standards, policies, protocols, and matrices | capability inventory governance and release checks |
+| `workspace/organization/capability-inventory/` | central organization capability inventory records and usage-memory placeholders | current public-safe organization capability records |
+| `examples/capability-inventory/` | illustrative capability profile examples | examples and regression checks |
+| `runtime/`, `models/`, `plugins/`, `capabilities/` | temporary compatibility pointers after R78 | legacy path questions and migration audits |
 | `workspace/resources/imports/` | public-safe import staging placeholders | import/resource boundary work |
 | `workspace/organization/memory/` | public-safe organization memory placeholders and examples | memory protocol or placeholder work |
 | `workspace/resources/response-fingerprints/` | Pal response fingerprint references | selected Pal validation |
@@ -152,14 +152,14 @@ Use:
 | `docs/07-official-pals/official-pal-example-library-plan.md` | Official Pal example library plan | official Pal examples planning and R42 first implementation status |
 | `evals/official-pals/official-pal-example-library-self-test.md` | Official Pal example library self-test | R42 example structure and boundary checks |
 | `docs/05-orchestration-methodology/capability-inventory-minimal-usable-design.md` | Capability Inventory minimal usable design | v0.2 R43 manual profile design |
-| `capabilities/README.md` | Capability Inventory profile index | runtime/model/reasoning/skill/plugin/MCP/Pal profile navigation |
-| `capabilities/runtime-profiles/` | Runtime profile examples | runtime capability judgement inputs |
-| `capabilities/model-profiles/` | Model profile examples | model tendency judgement inputs |
-| `capabilities/reasoning-profiles/` | Reasoning strength profile examples | prompt-shaping judgement inputs |
-| `capabilities/skill-profiles/` | Skill profile examples | Skill capability judgement inputs |
-| `capabilities/plugin-profiles/` | Plugin profile notes | plugin capability judgement inputs |
-| `capabilities/mcp-profiles/` | MCP profile notes | MCP capability judgement inputs |
-| `capabilities/pal-profiles/` | Pal capability profile examples | Pal capability judgement inputs |
+| `standards/capability-inventory/README.md` | Capability Inventory profile index | runtime/model/reasoning/skill/plugin/MCP/Pal profile navigation |
+| `examples/capability-inventory/runtime-profiles/` | Runtime profile examples | runtime capability judgement inputs |
+| `examples/capability-inventory/model-profiles/` | Model profile examples | model tendency judgement inputs |
+| `examples/capability-inventory/reasoning-profiles/` | Reasoning strength profile examples | prompt-shaping judgement inputs |
+| `examples/capability-inventory/skill-profiles/` | Skill profile examples | Skill capability judgement inputs |
+| `examples/capability-inventory/plugin-profiles/` | Plugin profile notes | plugin capability judgement inputs |
+| `examples/capability-inventory/mcp-profiles/` | MCP profile notes | MCP capability judgement inputs |
+| `examples/capability-inventory/pal-profiles/` | Pal capability profile examples | Pal capability judgement inputs |
 | `evals/capability-inventory/` | Capability Inventory self-tests | R43 profile structure, loading budget, and no fixed route checks |
 | `examples/orchestration/capability-inventory-task-judgement-example.md` | Capability Inventory successful use example | profile-as-judgement-input example |
 | `examples/failures/capability-profile-used-as-fixed-route.md` | Capability Inventory failure example | profile-as-route regression example |
@@ -301,7 +301,10 @@ Use the current docs directories as the public entry points. Archived research n
 | `orchestration/routing-memory-writeback-protocol.md` | v0.3 manual routing memory writeback protocol |
 | `orchestration/pal-isolation-and-shared-memory-protocol.md` | isolation and shared memory design |
 | `orchestration/routing-reward-memory-protocol.md` | routing outcome memory design |
-| `capabilities/` | capability profile notes and illustrative examples |
+| `standards/capability-inventory/` | capability profile standards and matrices |
+| `workspace/organization/capability-inventory/` | current organization capability records |
+| `examples/capability-inventory/` | capability profile examples |
+| `capabilities/` | temporary compatibility pointer after R78 |
 | `templates/orchestration/` | task judgement, workflow, access list, project conductor task map, Deep Conductor plan, next-round runtime package, cross-runtime continuation package, conductor decision record, Runtime Skill-aware task package, context budget plan, context usage report, verifier context packet, reviewer context packet, final report, synthesis, result record, routing, and verification templates |
 | `templates/orchestration/deep-conductor-e2e-package.md` | complete Deep Conductor E2E package template |
 | `templates/orchestration/deep-conductor-e2e-synthesis-report.md` | complete Deep Conductor E2E synthesis report template |

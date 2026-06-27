@@ -15,6 +15,13 @@ workspace/organization/memory/runtime/*
 !workspace/organization/memory/projects/README.md
 !workspace/organization/memory/runtime/README.md
 
+# Central organization private capability inventory
+workspace/organization/capability-inventory/**/private/*
+workspace/organization/capability-inventory/**/local/*
+workspace/organization/capability-inventory/**/*.local.md
+workspace/organization/capability-inventory/**/scan-results/*
+!workspace/organization/capability-inventory/**/README.md
+
 # Pal-local runtime-private data
 pals/*/memory/user/*
 pals/*/memory/project/*

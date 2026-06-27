@@ -4,7 +4,7 @@ This failure example shows what R43 must prevent.
 
 ## Bad Pattern
 
-The runtime reads `capabilities/runtime-profiles/codex.example.json` and responds:
+The runtime reads `examples/capability-inventory/runtime-profiles/codex.example.json` and responds:
 
 ```text
 Codex has a runtime profile, so all development tasks should go to Codex and Atlas.

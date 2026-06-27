@@ -20,9 +20,8 @@ Atlas 在调度前应查询当前 Runtime 已安装的 Skill、插件、MCP、ho
 
 ## Memory Writeback
 
-- `plugins/installed-skills.md`
-- `plugins/installed-plugins.md`
-- `plugins/installed-mcp.md`
-- `capabilities/skill-capability-matrix.md`
+- `workspace/organization/capability-inventory/skills/installed-skills.md`
+- `workspace/organization/capability-inventory/plugins/installed-plugins.md`
+- `workspace/organization/capability-inventory/mcp/installed-mcp.md`
+- `standards/capability-inventory/skill-capability-matrix.md`
 - `memory/runtime/skill-plugin-usage-memory.md`
-

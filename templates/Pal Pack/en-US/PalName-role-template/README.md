@@ -301,9 +301,9 @@ Evals should check:
 | `.claude/` | Remove or migrate | Claude Code local configuration is not portable Pal content. |
 | `contacts/` | Remove | Owned by AgentPal root. |
 | `registry/` | Remove | Owned by AgentPal root. |
-| `runtime/` | Remove | Owned by AgentPal root. |
-| `models/` | Remove | Owned by AgentPal root. |
-| `plugins/` | Remove | Owned by AgentPal root. |
+| `runtime/` | Remove | Owned by AgentPal central capability inventory under `workspace/organization/capability-inventory/runtimes/`. |
+| `models/` | Remove | Owned by AgentPal central capability inventory under `workspace/organization/capability-inventory/models/`. |
+| `plugins/` | Remove | Owned by AgentPal central capability inventory under `workspace/organization/capability-inventory/plugins/`. |
 | `orchestration/` | Usually remove | Global orchestration belongs to AgentPal root. Pal-specific patterns belong in `core/` or `workflows/`. |
 | `imports/` | Remove or migrate | Imported resources should be staged by AgentPal root; Pal-specific knowledge can move to `knowledge/references/`. |
 | `tools/` | Keep only with care | Tooling can introduce runtime dependencies. Keep only optional, public-safe assets. |

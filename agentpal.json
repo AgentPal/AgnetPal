@@ -632,6 +632,10 @@
     "official_pals": "official/pals",
     "project_binding_templates": "templates/project-binding",
     "central_project_record_template": "workspace/projects/_template",
+    "capability_inventory_standards": "standards/capability-inventory",
+    "organization_capability_inventory": "workspace/organization/capability-inventory",
+    "capability_inventory_examples": "examples/capability-inventory",
+    "capability_inventory_legacy_archive": "archive/migration-from-v0.3/root-legacy/capability-inventory",
     "github_release_work_deferred_until_v0_5_completion": true
   },
   "license": "MIT"

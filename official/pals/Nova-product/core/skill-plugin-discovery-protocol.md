@@ -7,7 +7,7 @@ Discovery steps:
 1. List available runtime Skills/plugins/MCP/hooks/commands when execution or research depends on them.
 2. Classify each capability: product analysis, research, file execution, browser verification, GitHub, document handling, or unknown.
 3. Check whether the capability changes product scope or only execution method.
-4. Add useful capability notes to `capabilities/` or `memory/runtime/skill-plugin-usage-memory.md`.
+4. Add public-safe capability notes to `workspace/organization/capability-inventory/` or private usage notes to private runtime memory.
 
 Boundary:
 

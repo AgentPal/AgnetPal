@@ -20,16 +20,19 @@ This map explains the public AgentPal Workspace layout. It is a navigation aid, 
 
 | Directory | Purpose |
 | --- | --- |
-| `capabilities/` | Capability profile notes and boundaries. |
+| `standards/capability-inventory/` | Capability profile standards, protocols, policies, and matrices. |
+| `workspace/organization/capability-inventory/` | Current central organization capability inventory records and usage-memory placeholders. |
+| `examples/capability-inventory/` | Public-safe capability profile examples. |
+| `capabilities/` | Temporary compatibility pointer for legacy capability inventory paths. |
 | `docs/` | Public documentation and reference material. |
 | `evals/` | Self-tests and release checks. |
 | `examples/` | Public-safe examples and failure examples. |
-| `models/` | Model-routing notes and boundaries. |
+| `models/` | Temporary compatibility pointer for legacy model capability inventory paths. |
 | `orchestration/` | Current protocols and clearly marked future-design material. |
 | `official/pals/` | Official bundled Pal Pack pool. Each `official/pals/<Pal>/` directory is one Pal Pack. |
-| `plugins/` | Plugin-discovery notes and boundaries. |
+| `plugins/` | Temporary compatibility pointer for legacy plugin capability inventory paths. |
 | `prompts/` | Copyable maintenance and setup prompts. |
-| `runtime/` | Runtime-awareness notes and boundaries. |
+| `runtime/` | Temporary compatibility pointer for legacy runtime capability inventory paths. |
 | `templates/` | Reusable templates for bindings, Context Packets, task packages, and reports. |
 | `workspace/organization/memory/` | Public-safe organization memory placeholders and examples; private memory must not be committed. |
 | `workspace/resources/imports/` | Import staging placeholders; not ordinary task context. |

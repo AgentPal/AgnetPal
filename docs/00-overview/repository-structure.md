@@ -92,16 +92,28 @@ Forbidden default external-project directories include:
 .agentpal/evals/
 ```
 
+## Capability Inventory
+
+R78 split the legacy root capability inventory surfaces into three active locations:
+
+| Directory | Role |
+| --- | --- |
+| `standards/capability-inventory/` | Profile standards, capability matrices, runtime detection protocol, model routing policy, and plugin discovery protocol. |
+| `workspace/organization/capability-inventory/` | Current central organization runtime, model, Skill, plugin, MCP, business-system, and usage-memory records. |
+| `examples/capability-inventory/` | Public-safe illustrative profiles and task judgement examples. |
+
+Capability Inventory is a no-code profile layer. It does not scan machines, install tools, enable plugins, or route by keywords.
+
 ## Compatibility And Current-Reference Directories
 
-Some root directories remain visible as current-reference surfaces while the v0.4/v0.5 structure settles. R77 moved low-risk root reference directories into central workspace, standards, or archive locations.
+Some root directories remain visible as current-reference surfaces while the v0.4/v0.5 structure settles. R77 moved low-risk root reference directories into central workspace, standards, or archive locations. R78 converted the root `capabilities/`, `runtime/`, `models/`, and `plugins/` directories into compatibility pointers after moving low-risk files.
 
 | Directory | Current status |
 | --- | --- |
 | `prompts/` | Copyable runtime and maintenance prompts retained at root for compatibility. |
-| `capabilities/` | Current capability profile notes. Capability standards are under `standards/capability-inventory/`; project-specific capability records belong under central project records. |
+| `capabilities/` | Temporary compatibility pointer. Standards are under `standards/capability-inventory/`; examples are under `examples/capability-inventory/`; current records are under `workspace/organization/capability-inventory/`. |
 | `orchestration/` | Current no-code protocol surface. Standards pointers live under `standards/deep-conductor/`. |
-| `runtime/`, `models/`, `plugins/` | Current reference surfaces retained until a dedicated migration moves them safely. |
+| `runtime/`, `models/`, `plugins/` | Temporary compatibility pointers retained after R78. Active low-risk content moved to standards, examples, and central organization records. |
 
 These current-reference directories should not be copied wholesale into external user projects.
 
