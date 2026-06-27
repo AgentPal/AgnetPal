@@ -31,10 +31,24 @@ Mira prepares:
 
 ```yaml
 schema: agentpal.context-packet.v0.3
+packet_id: cp-owner-verifier-release-001
+created_at: YYYY-MM-DD
 from_pal: Mira
 to_pal_candidate: Quinn
-mode: verification
+mode: review
+explicit_user_call:
+  type: "none"
+  raw_text: ""
+owner_status: verifier_candidate
+user_goal: "Check whether this release candidate is ready to publish."
 task_summary: "Review release evidence and decide pass/fail/partial/not-run/blocked."
+current_state:
+  status: "release evidence is being reviewed"
+constraints:
+  - "No push, tag, or release."
+relevant_files:
+  - path: "docs/09-roadmap/v0.3-task-pool.md"
+    purpose: "synthetic release planning context"
 can_read:
   - "release readiness file"
   - "release draft"
@@ -43,7 +57,18 @@ cannot_read:
   - "private memory"
   - "secrets"
   - "unrelated Pal drafts"
+can_receive_outputs_from:
+  - "Mira release scope summary"
 needed_output: "quality decision with evidence map and gaps"
+output_contract: "decision, evidence reviewed, claims proven, claims not proven, risks, required rework"
+verification_requirements:
+  - "release claims map to evidence"
+privacy_policy: "public-safe; sensitive context excluded"
+sensitive_context: "none"
+expiration: "single workflow"
+handoff_notes: "Quinn is a verifier candidate for this case, not a fixed release route."
+return_to: Mira
+final_report_required: true
 ```
 
 ## Expected Quinn Output

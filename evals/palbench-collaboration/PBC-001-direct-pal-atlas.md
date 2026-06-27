@@ -8,8 +8,12 @@
 
 ## Expected Context Packet
 
-- mode: direct
 - to_pal_candidate: Atlas
+- mode: direct_owner
+- explicit_user_call.type: "/pal"
+- owner_status: current_owner_candidate
+- return_to: user
+- final_report_required: true
 - can_read: checklist summary and selected files
 - cannot_read: private memory, unrelated Pal assets, secrets
 

@@ -54,6 +54,10 @@ The first suite includes at least 10 cases:
 8. Mira Conductor conflict summary.
 9. Direct owner Pal suggests another Pal candidate.
 10. Bad group chat collapse.
+11. Mention consult does not transfer owner.
+12. Explicit handoff transfers owner candidate.
+13. Context Packet missing required fields.
+14. Full chat history copied as failure.
 
 ## Boundary
 

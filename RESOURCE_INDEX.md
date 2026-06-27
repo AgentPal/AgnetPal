@@ -40,6 +40,7 @@ Use:
 | `README.md` | English public introduction | onboarding, release checks, user questions |
 | `README.zh-CN.md` | Chinese public introduction | Chinese onboarding or localization checks |
 | `AGENTS.md` | project-level runtime instructions | initialization and context switches |
+| `INIT_PROMPT.md` | short AgentPal Workspace initialization prompt | direct workspace initialization by Markdown/JSON-capable runtimes |
 | `PAL.md` | AgentPal Workspace identity | workspace identity questions and initialization |
 | `SKILL.md` | Workspace-level Skill entry | Skill-aware runtime entry |
 | `prompts/codex/initialize-agentpal-workspace.md` | copyable initialization prompt | first run or re-initialization |
@@ -91,6 +92,8 @@ Use:
 | `docs/09-roadmap/v0.2-public-capability-summary.md` | v0.2 public capability summary | restrained public claims for v0.2 first phase |
 | `docs/09-roadmap/v0.3-development-plan.md` | v0.3 no-code orchestration prototype plan | Multi-Pal Collaboration, Deep Conductor prototype, Context Packet, Owner + Verifier, Plan -> Execute -> Verify, Parallel Review, and Routing Memory planning |
 | `docs/09-roadmap/v0.3-task-pool.md` | v0.3 execution task pool | P0/P1/P2 task packages for collaboration protocol work |
+| `docs/05-orchestration-methodology/context-packet-usage-guide.md` | Context Packet usage guide | user and maintainer guide for `/pal`, `@Pal`, consult, handoff, review, owner transfer, privacy, and runtime adapter usage |
+| `docs/02-getting-started/multi-pal-collaboration-prompt-cards.md` | Multi-Pal prompt cards | copyable user prompts for Mira, `/pal`, `@Pal`, Context Packet, review, handoff, and summary paths |
 | `evals/v0.2-integration/v0.2-integration-test-matrix.md` | v0.2 integration matrix | R46 integrated readiness test matrix |
 | `docs/06-palsmith/README.md` | PalSmith v0.2 productization index | PalSmith creation and AI team productization work |
 | `docs/06-palsmith/palsmith-end-to-end-productization.md` | PalSmith v0.2 end-to-end user path | PalSmith creation and AI team productization work |
@@ -128,7 +131,7 @@ Use:
 | `evals/palbench-light/scoring-rubric.md` | PalBench Light scoring rubric | 0 / 1 / 2 release regression scoring |
 | `evals/palbench-light/palbench-light-suite-self-test.md` | PalBench Light suite self-test | R44 suite structure and boundary check |
 | `evals/palbench-collaboration/README.md` | PalBench Collaboration eval entry | v0.3 collaboration regression suite navigation |
-| `evals/palbench-collaboration/task-index.md` | PalBench Collaboration task index | first 10 collaboration cases |
+| `evals/palbench-collaboration/task-index.md` | PalBench Collaboration task index | collaboration cases for direct Pal, mention consult, handoff, Context Packet privacy, missing fields, and group-chat failure |
 | `docs/04-runtime-guides/runtime-adapter-stability-guide.md` | Runtime Adapter stability guide | R45 thin binding stability and cross-project troubleshooting |
 | `docs/04-runtime-guides/runtime-adapter-troubleshooting-prompt-cards.md` | Runtime Adapter troubleshooting cards | R45 copyable bounded troubleshooting prompts |
 | `docs/04-runtime-guides/upgrade-existing-binding-to-thin-binding.md` | existing binding upgrade runbook | R45 upgrade path for old copied bindings |

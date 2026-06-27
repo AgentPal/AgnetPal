@@ -10,9 +10,13 @@ I have a completion report. @Quinn check whether the evidence is enough.
 
 - mode: consult
 - to_pal_candidate: Quinn
+- explicit_user_call.type: "@Pal"
+- owner_status: consultant_candidate or reviewer_candidate
+- return_to: current owner or Mira
+- final_report_required: true
 - needed_output: evidence sufficiency review
 - can_read: completion report, acceptance criteria, evidence attachments
-- cannot_read: owner draft reasoning, private memory, secrets
+- cannot_read: full chat history, owner draft reasoning, private memory, secrets
 
 ## Expected Workflow
 

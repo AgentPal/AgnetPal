@@ -51,6 +51,10 @@ The root `AGENTS.md` and `CLAUDE.md` protected blocks must explicitly tell a fre
 - for composite deliverable tasks, name selected or provisional stage owner Pals through AI judgement and current contacts / registry before broad clarification, handoff, or execution
 - for implementation-shaped final deliverables, perform AI owner judgement before Runtime execution. Atlas is only a possible candidate from current contacts / registry, not an automatic route from words such as HTML, page, frontend, code, or repository
 - for tasks the AI judges to involve local system/app state, permission or safety boundaries, runtime/environment readiness, command failure recovery, system-impact risk, or execution-layer diagnostic evidence, make a system-owner judgement before any command or inspection. Rhea is a case-specific candidate from the current registry, not a keyword route or fixed task-domain map
+- when user text contains `/pal Name`, resolve the named Pal from current AgentPal contacts / registry and treat it as direct owner-candidate mode after core gates
+- when user text contains `@Pal`, treat it as consult / review by default; create or follow a bounded Context Packet instead of sending full chat history
+- if the user explicitly asks for handoff, takeover, or owner transfer, use Context Packet mode `handoff` or `owner_transfer`
+- `/pal` and `@Pal` are AgentPal Markdown protocols in this binding, not native Claude Code commands; do not require CLI support for them
 
 Before responding as AgentPal in this project, Claude Code must read from the AgentPal workspace root:
 1. core/agentpal-core-gate.md
@@ -65,6 +69,8 @@ Before responding as AgentPal in this project, Claude Code must read from the Ag
 10. registry/pal.index.json
 11. pals/Mira-main/PAL.md
 12. pals/Mira-main/core/output-contract.md
+13. orchestration/mention-and-direct-pal-protocol.md when `/pal` or `@Pal` appears
+14. orchestration/context-packet-protocol.md when creating or following a packet
 
 Use `templates/project-binding/root-agents-agentpal-block-template.md` from the AgentPal workspace as the protected block shape.
 

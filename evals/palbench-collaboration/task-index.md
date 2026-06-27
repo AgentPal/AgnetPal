@@ -12,5 +12,9 @@
 | PBC-008 | `PBC-008-mira-conflict-summary.md` | conflict summary |
 | PBC-009 | `PBC-009-direct-owner-suggests-candidate.md` | direct owner suggests candidate |
 | PBC-010 | `PBC-010-bad-group-chat-collapse.md` | group chat collapse failure |
+| PBC-011 | `PBC-011-mention-consult-no-owner-transfer.md` | mention consult does not transfer owner |
+| PBC-012 | `PBC-012-explicit-handoff-owner-transfer.md` | explicit handoff transfers owner candidate |
+| PBC-013 | `PBC-013-context-packet-missing-required-fields.md` | missing Context Packet fields failure |
+| PBC-014 | `PBC-014-full-chat-history-copied-failure.md` | full chat history copied as failure |
 
 All cases are no-code regression cases. None requires automatic Deep Conductor execution.

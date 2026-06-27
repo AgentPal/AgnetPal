@@ -23,6 +23,8 @@ created_at:
 from_pal:
 to_pal_candidate:
 mode:
+explicit_user_call:
+owner_status:
 user_goal:
 task_summary:
 current_state:
@@ -38,6 +40,8 @@ privacy_policy:
 sensitive_context:
 expiration:
 handoff_notes:
+return_to:
+final_report_required:
 ```
 
 ## Field Rules
@@ -46,7 +50,9 @@ handoff_notes:
 - `packet_id` is unique within the workflow.
 - `from_pal` names the Pal preparing the packet.
 - `to_pal_candidate` is a candidate recipient, not a fixed route.
-- `mode` is one of `direct`, `consult`, `delegate`, `handoff`, `review`, `owner_transfer`, `runtime_execution`, or `verification`.
+- `mode` is one of `consult`, `delegate`, `handoff`, `review`, `owner_transfer`, or `direct_owner`.
+- `explicit_user_call` records whether the user explicitly used `/pal Name`, `@Pal`, a handoff phrase, or no explicit call.
+- `owner_status` records whether the recipient is a current owner candidate, reviewer candidate, consultant candidate, delegated sub-output candidate, or accepted owner after transfer.
 - `relevant_files` are path references or source summaries, not proof that content was read.
 - `can_read` lists allowed files, summaries, or evidence.
 - `cannot_read` lists excluded context such as private memory, secrets, unrelated Pal assets, all project files, and other independent reviewer drafts.
@@ -57,6 +63,21 @@ handoff_notes:
 - `privacy_policy` states whether sensitive context is excluded, summarized, or requires approval.
 - `sensitive_context` should usually be `none` or `excluded` in public examples.
 - `expiration` says when the packet should no longer be reused.
+- `return_to` states where the response returns: Mira, the current owner Pal, or the user.
+- `final_report_required` defaults to `true` unless the packet is only a narrow clarification.
+
+## Mode Rules
+
+Use the smallest mode that matches the user intent:
+
+- `direct_owner`: user explicitly called `/pal Name`; the named Pal is the current owner candidate and still runs core gates.
+- `consult`: user or owner mentioned `@Pal` for perspective; ownership stays with the current owner.
+- `delegate`: current owner asks another Pal for a bounded sub-output; ownership returns to the current owner unless accepted transfer happens.
+- `handoff`: current owner transfers active stage ownership to another Pal candidate with a packet boundary.
+- `review`: reviewer or verifier evaluates evidence, risk, or acceptance criteria without taking over by default.
+- `owner_transfer`: user or current owner explicitly moves ownership; target Pal accepts only after core gates.
+
+Do not use `mode` values such as `runtime_execution` to make a runtime look like a Pal. Runtime execution belongs in a Task Package or Context Access List under a Pal-layer owner.
 
 ## What Context Packet Must Not Contain
 
@@ -93,3 +114,5 @@ A Context Packet must not encode:
 In v0.3, Context Packet is a no-code protocol and template. It does not create automatic multi-Pal execution, a queue, a message bus, a sandbox, or a runtime permission system.
 
 Codex, Claude Code, or a generic CLI agent may read the packet and execute the staged instructions only within the host runtime's normal permissions and evidence rules.
+
+`/pal` and `@Pal` are plain-text AgentPal protocols in v0.3. They are not native CLI commands unless a host runtime separately implements them. If the host runtime does not have native slash-command support, it should still parse them as user text and follow this protocol.

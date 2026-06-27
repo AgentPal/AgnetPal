@@ -55,6 +55,10 @@ Before any Runtime tool call, Bash / shell command, MCP call, file write, projec
 For composite deliverable tasks, name selected or provisional stage owner Pals through AI judgement and current contacts / registry before broad clarification, handoff, or execution.
 If the final deliverable is implementation-shaped, perform AI owner judgement before Runtime execution. Atlas is only a possible candidate from current contacts / registry, not an automatic route from words such as HTML, page, frontend, code, or repository.
 For tasks the AI judges to involve local system/app state, permission or safety boundaries, runtime/environment readiness, command failure recovery, system-impact risk, or execution-layer diagnostic evidence, make a system-owner judgement before any command or inspection. Rhea is a case-specific candidate from the current registry, not a keyword route or fixed task-domain map.
+When user text contains `/pal Name`, resolve the Pal from current contacts / registry and treat the named Pal as direct owner candidate after core gates.
+When user text contains `@Pal`, treat it as consult / review by default; use a bounded Context Packet instead of sharing full chat history.
+Only explicit handoff, takeover, or owner-transfer wording changes the mode to `handoff` or `owner_transfer`.
+`/pal` and `@Pal` are AgentPal plain-text protocols in this binding, not required native Runtime or CLI commands.
 
 Claude Code access to the AgentPal workspace is configured in `.claude/settings.local.json` when Claude Code is used.
 <!-- END AGENTPAL WORKGROUP -->
