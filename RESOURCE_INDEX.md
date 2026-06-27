@@ -100,7 +100,7 @@ Use:
 | `standards/capability-inventory/` | capability profile standards, policies, protocols, and matrices | capability inventory governance and release checks |
 | `workspace/organization/capability-inventory/` | central organization capability inventory records and usage-memory placeholders | current public-safe organization capability records |
 | `examples/capability-inventory/` | illustrative capability profile examples | examples and regression checks |
-| `runtime/`, `models/`, `plugins/`, `capabilities/` | temporary compatibility pointers after R78 | legacy path questions and migration audits |
+| `archive/migration-from-v0.3/root-legacy/capability-inventory/root-pointers/` | archived R78 root compatibility pointers | legacy path questions and migration audits |
 | `workspace/resources/imports/` | public-safe import staging placeholders | import/resource boundary work |
 | `workspace/organization/memory/` | public-safe organization memory placeholders and examples | memory protocol or placeholder work |
 | `workspace/resources/response-fingerprints/` | Pal response fingerprint references | selected Pal validation |
@@ -304,7 +304,7 @@ Use the current docs directories as the public entry points. Archived research n
 | `standards/capability-inventory/` | capability profile standards and matrices |
 | `workspace/organization/capability-inventory/` | current organization capability records |
 | `examples/capability-inventory/` | capability profile examples |
-| `capabilities/` | temporary compatibility pointer after R78 |
+| `archive/migration-from-v0.3/root-legacy/capability-inventory/root-pointers/` | archived R78 capability inventory root pointers |
 | `templates/orchestration/` | task judgement, workflow, access list, project conductor task map, Deep Conductor plan, next-round runtime package, cross-runtime continuation package, conductor decision record, Runtime Skill-aware task package, context budget plan, context usage report, verifier context packet, reviewer context packet, final report, synthesis, result record, routing, and verification templates |
 | `templates/orchestration/deep-conductor-e2e-package.md` | complete Deep Conductor E2E package template |
 | `templates/orchestration/deep-conductor-e2e-synthesis-report.md` | complete Deep Conductor E2E synthesis report template |
@@ -312,7 +312,7 @@ Use the current docs directories as the public entry points. Archived research n
 | `templates/orchestration/external-agent-handoff-package.md` | manual external Agent handoff package template |
 | `templates/orchestration/subagent-task-package.md` | host Runtime subagent task package template |
 | `templates/memory/` | Pal Project Memory Snapshot, Routing Memory Record, and Runtime Skill Usage Memory Record templates |
-| `templates/capabilities/` | profile templates |
+| `templates/capabilities/` | capability profile JSON templates under the templates tree, not a root capability facts source |
 | `templates/research/` | PalBench result template |
 | `evals/palbench/` | PalBench evaluation drafts |
 | `evals/palbench-light/` | v0.2 PalBench Light regression suite |

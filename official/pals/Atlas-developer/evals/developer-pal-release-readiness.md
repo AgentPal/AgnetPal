@@ -30,7 +30,7 @@
 
 ## Runtime / Model / Skill / Plugin 路由能力是否存在
 
-通过。`runtime/`、`models/`、`plugins/`、`capabilities/`、`orchestration/` 和 `memory/runtime/` 已存在，对应规则在 README、PAL.md 和 core 协议中有说明。
+通过。R79 后 root `runtime/`、`models/`、`plugins/`、`capabilities/` 兼容指针已归档；当前 Runtime / Model / Skill / Plugin 画像规则以 `standards/capability-inventory/`、`workspace/organization/capability-inventory/`、`examples/capability-inventory/`、`orchestration/` 和私有 `memory/runtime/` 为准。
 
 ## 示例是否证明 Atlas 可用
 

@@ -106,16 +106,23 @@ Capability Inventory is a no-code profile layer. It does not scan machines, inst
 
 ## Compatibility And Current-Reference Directories
 
-Some root directories remain visible as current-reference surfaces while the v0.4/v0.5 structure settles. R77 moved low-risk root reference directories into central workspace, standards, or archive locations. R78 converted the root `capabilities/`, `runtime/`, `models/`, and `plugins/` directories into compatibility pointers after moving low-risk files.
+Some root directories remain visible as current-reference surfaces while the v0.4/v0.5 structure settles. R77 moved low-risk root reference directories into central workspace, standards, or archive locations. R79 archived the R78 `capabilities/`, `runtime/`, `models/`, and `plugins/` compatibility pointers after active references moved to the new capability inventory structure.
 
 | Directory | Current status |
 | --- | --- |
 | `prompts/` | Copyable runtime and maintenance prompts retained at root for compatibility. |
-| `capabilities/` | Temporary compatibility pointer. Standards are under `standards/capability-inventory/`; examples are under `examples/capability-inventory/`; current records are under `workspace/organization/capability-inventory/`. |
 | `orchestration/` | Current no-code protocol surface. Standards pointers live under `standards/deep-conductor/`. |
-| `runtime/`, `models/`, `plugins/` | Temporary compatibility pointers retained after R78. Active low-risk content moved to standards, examples, and central organization records. |
 
 These current-reference directories should not be copied wholesale into external user projects.
+
+R79 archived these R78 capability inventory root pointers:
+
+| Old root path | Current location |
+| --- | --- |
+| `capabilities/` | `archive/migration-from-v0.3/root-legacy/capability-inventory/root-pointers/capabilities/` |
+| `runtime/` | `archive/migration-from-v0.3/root-legacy/capability-inventory/root-pointers/runtime/` |
+| `models/` | `archive/migration-from-v0.3/root-legacy/capability-inventory/root-pointers/models/` |
+| `plugins/` | `archive/migration-from-v0.3/root-legacy/capability-inventory/root-pointers/plugins/` |
 
 R76 and R77 moved these old root paths out of the root:
 

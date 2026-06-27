@@ -23,21 +23,18 @@ This map explains the public AgentPal Workspace layout. It is a navigation aid, 
 | `standards/capability-inventory/` | Capability profile standards, protocols, policies, and matrices. |
 | `workspace/organization/capability-inventory/` | Current central organization capability inventory records and usage-memory placeholders. |
 | `examples/capability-inventory/` | Public-safe capability profile examples. |
-| `capabilities/` | Temporary compatibility pointer for legacy capability inventory paths. |
 | `docs/` | Public documentation and reference material. |
 | `evals/` | Self-tests and release checks. |
 | `examples/` | Public-safe examples and failure examples. |
-| `models/` | Temporary compatibility pointer for legacy model capability inventory paths. |
 | `orchestration/` | Current protocols and clearly marked future-design material. |
 | `official/pals/` | Official bundled Pal Pack pool. Each `official/pals/<Pal>/` directory is one Pal Pack. |
-| `plugins/` | Temporary compatibility pointer for legacy plugin capability inventory paths. |
 | `prompts/` | Copyable maintenance and setup prompts. |
-| `runtime/` | Temporary compatibility pointer for legacy runtime capability inventory paths. |
 | `templates/` | Reusable templates for bindings, Context Packets, task packages, and reports. |
 | `workspace/organization/memory/` | Public-safe organization memory placeholders and examples; private memory must not be committed. |
 | `workspace/resources/imports/` | Import staging placeholders; not ordinary task context. |
 | `workspace/resources/response-fingerprints/` | Response fingerprint references for Pal-mode validation. |
 | `workspace/resources/registry/` | Legacy registry records moved from root during R76; not a central Pal roster source. |
+| `archive/migration-from-v0.3/root-legacy/capability-inventory/root-pointers/` | Archived R78 root compatibility pointers for capability inventory legacy paths. |
 | `archive/migration-from-v0.3/root-legacy/` | Old root compatibility pointers moved during R76 and R77. |
 
 ## Pal Discovery Boundary

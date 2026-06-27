@@ -2,7 +2,7 @@
 
 R78 completed the first staged split of `capabilities/`, `runtime/`, `models/`, and `plugins/`. Low-risk standard-like files moved to `standards/capability-inventory/`, example profiles moved to `examples/capability-inventory/`, and current organization placeholders moved to `workspace/organization/capability-inventory/`.
 
-The root directories now remain as temporary compatibility pointers only.
+R79 archived the temporary root compatibility pointers under `archive/migration-from-v0.3/root-legacy/capability-inventory/root-pointers/`. The old root directories are no longer active facts sources.
 
 ## Current Surfaces
 
@@ -11,7 +11,7 @@ The root directories now remain as temporary compatibility pointers only.
 | `standards/capability-inventory/` | profile standards, policies, protocols, and matrices | active standard source |
 | `examples/capability-inventory/` | illustrative runtime/model/reasoning/Skill/plugin/MCP/Pal profiles | active example source |
 | `workspace/organization/capability-inventory/` | current central organization records and usage memory placeholders | active central organization record source |
-| `capabilities/`, `runtime/`, `models/`, `plugins/` | temporary compatibility pointers | remove or archive when R79 proves all active references are updated |
+| `archive/migration-from-v0.3/root-legacy/capability-inventory/root-pointers/` | archived R78 compatibility pointers | historical traceability only |
 
 ## Target Split
 
@@ -28,7 +28,7 @@ The root directories now remain as temporary compatibility pointers only.
 2. R78: move schema-like and standard-like content into `standards/capability-inventory/`. Done for low-risk files.
 3. R78: move illustrative examples into `examples/capability-inventory/` and update active references. Done for low-risk files.
 4. R78: move current organization placeholders into `workspace/organization/capability-inventory/`. Done for low-risk files.
-5. R79: decide whether root `capabilities/`, `runtime/`, `models/`, and `plugins/` can be archived or deleted after compatibility references are no longer needed.
+5. R79: archive root `capabilities/`, `runtime/`, `models/`, and `plugins/` compatibility pointers after active references are updated. Done.
 
 ## Boundaries
 

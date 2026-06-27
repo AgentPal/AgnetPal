@@ -17,7 +17,7 @@ Start here for the three current user paths:
 | Area | Purpose |
 | --- | --- |
 | `quickstart/` | Copyable examples for Codex, Claude Code, and Generic CLI Agent paths. |
-| `runtime/` | Runtime guide examples and project-first notes. |
+| `capability-inventory/` | Capability Inventory examples for runtime, model, skill, plugin, MCP, and Pal profiles. |
 | `usage/` | Simple Pal Mode, direct Pal calls, handoff, Task Package, and project binding examples. |
 | `pal-collaboration/` | Navigation for `/pal Mira`, `/pal Atlas`, and owner handoff examples. |
 | `project-workgroup/` | External project binding examples. |

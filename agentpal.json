@@ -636,6 +636,8 @@
     "organization_capability_inventory": "workspace/organization/capability-inventory",
     "capability_inventory_examples": "examples/capability-inventory",
     "capability_inventory_legacy_archive": "archive/migration-from-v0.3/root-legacy/capability-inventory",
+    "capability_inventory_root_pointers_archive": "archive/migration-from-v0.3/root-legacy/capability-inventory/root-pointers",
+    "legacy_root_capability_dirs_active": false,
     "github_release_work_deferred_until_v0_5_completion": true
   },
   "license": "MIT"
