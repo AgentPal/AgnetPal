@@ -1,17 +1,19 @@
-# Registry
+# Legacy Registry Compatibility Pointer
 
-`registry/` contains indexes for Pals and other resources.
+`registry/` is a legacy compatibility directory from the pre-v0.4 layout.
 
-Only `pal.index.*` is allowed to feed Pal contacts. Skills, tools, knowledge, plugins, models, MCP servers, and non-Pal runtimes are indexed separately and do not become Pals.
+The active central Pal roster source of truth is now:
 
-`registry/` and `contacts/` are the AgentPal source of truth for Pal discovery. Individual Pal Packs must not maintain local copies of the Pal list or hard-code other Pals as required collaborators.
+- `workspace/organization/contacts/pals.json`
+- `workspace/organization/contacts/PAL_CONTACTS.md`
+- `workspace/organization/contacts/aliases.json`
 
-When adding a Pal, register it in contacts / registry. When removing a Pal, remove it from contacts / registry and public official lists. Existing Pal professional assets should not need broad edits for another Pal's lifecycle change.
+Official Pal Packs now live under:
 
-Normal initialization reads the current contacts / registry files. Copying a Pal Pack into `pals/` does not update the Pal index by itself; use `prompts/add-pal-to-agentpal.md` or `prompts/refresh-pal-index.md` from the AgentPal Workspace when the index needs to be updated. The current public seed indexes Mira plus the official bundled specialist Pals.
+- `official/pals/`
 
-When refreshing Pals, scan only `pals/`. Do not scan the whole disk or unrelated external projects.
+Legacy registry files may remain useful for migration audits and older release notes, but new docs, templates, project bindings, and initialization paths must not treat `registry/pal.index.json` as the active central roster source.
 
-Do not put refresh/index maintenance language in Mira's first welcome message.
+Resource indexes that remain in this directory are compatibility references. Future R70/R71 cleanup may move or archive them behind the central workspace structure.
 
 

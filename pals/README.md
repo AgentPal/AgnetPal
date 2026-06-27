@@ -1,41 +1,9 @@
-# Pal Pool
+# Legacy Pal Path
 
-`pals/` is the AgentPal Pal pool.
+Official bundled Pal Packs have moved to `official/pals/`.
 
-The default workspace includes:
+This directory remains only as a compatibility pointer for older documents and older local sessions. New AgentPal files should reference:
 
-```text
-Mira-main
-Atlas-developer
-Vega-research
-Rhea-system
-Quinn-quality
-Morgan-document
-Harper-writing
-Nova-product
-```
-
-Directory names use:
-
-```text
-Name-role
-```
-
-Users call Pals by display name only:
-
-```text
-/pal Mira
-/pal Atlas
-
-@Nova
-```
-
-Do not expose old internal package names such as `developer-pal` or `pal-developer` as the preferred user command.
-
-Only valid Pal Packs can enter contacts. A valid Pal Pack should include `PAL.md`, `SKILL.md`, `AGENTS.md`, `pal.json`, a display name, aliases, and collaboration permissions.
-
-Ordinary Skills, tools, models, MCP servers, plugins, non-Pal runtimes, raw repositories, knowledge packs, and persona packs do not enter contacts.
-
-After copying a new Pal into this directory, ask Mira to refresh the Pal index and contacts.
-
-
+- `official/pals/<Pal-Directory>`
+- `workspace/organization/contacts/pals.json`
+- `workspace/organization/contacts/PAL_CONTACTS.md`

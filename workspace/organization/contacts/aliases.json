@@ -1,0 +1,24 @@
+{
+  "schema": "agentpal.contact_aliases.v0.4",
+  "aliases_are_for_explicit_direct_calls_only": true,
+  "keyword_routing_allowed": false,
+  "aliases": {
+    "Mira": "mira-main",
+    "米拉": "mira-main",
+    "Atlas": "atlas-developer",
+    "阿特拉斯": "atlas-developer",
+    "Nova": "nova-product",
+    "诺瓦": "nova-product",
+    "Vega": "vega-research",
+    "维加": "vega-research",
+    "Quinn": "quinn-quality",
+    "昆恩": "quinn-quality",
+    "Morgan": "morgan-document",
+    "摩根": "morgan-document",
+    "Harper": "harper-writing",
+    "哈珀": "harper-writing",
+    "Rhea": "rhea-system",
+    "瑞亚": "rhea-system",
+    "PalSmith": "palsmith-pal-governor"
+  }
+}

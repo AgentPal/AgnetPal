@@ -1,21 +1,21 @@
-# Contacts
+# Legacy Contacts Compatibility Pointer
 
-`contacts/` contains the AgentPal Pal contacts.
+`contacts/` is a legacy compatibility directory from the pre-v0.4 layout.
 
-Only valid Pal Packs can enter contacts. Ordinary Skills, tools, models, MCP servers, plugins, non-Pal runtimes, raw repositories, knowledge packs, and persona packs must not be added here.
+The active central Pal roster source of truth is now:
 
-Contacts are the source of truth for Pal discovery together with `registry/`. Individual Pal Packs must not maintain their own hard-coded lists of other Pals.
+- `workspace/organization/contacts/pals.json`
+- `workspace/organization/contacts/PAL_CONTACTS.md`
+- `workspace/organization/contacts/aliases.json`
 
-When adding a Pal, register it here and in the Pal registry. When removing a Pal, remove it here and from the Pal registry. Existing Pal professional knowledge, skills, workflows, and runbooks should not need broad edits just because another Pal was added, removed, or renamed.
+Official Pal Packs now live under:
 
-Normal initialization reads the current contacts / registry files. Copying a Pal Pack into `pals/` does not register it by itself; use `prompts/add-pal-to-agentpal.md` or `prompts/refresh-pal-index.md` from the AgentPal Workspace when contacts need to be updated. The current public seed includes Mira plus the official bundled specialist Pals.
+- `official/pals/`
 
-Do not expose contact/index maintenance in Mira's first welcome message. Users only need to hear about add/refresh steps when they ask how to add a new Pal or when a Pal cannot be found.
+Do not use this directory as the active central roster for new docs, templates, project bindings, or initialization paths. Existing files are retained only so older release notes, older local sessions, and migration audits can explain what changed.
 
-## Unknown or invalid directories
+When adding, replacing, deprecating, or removing a Pal, update the central roster under `workspace/organization/contacts/`. External project bindings should not copy this directory.
 
-Directories that look like Pals but fail validation belong in `contacts/discovered-candidates.md`, not in `contacts/pals.json`.
-
-Do not promote a candidate until it has valid Pal Pack files and collaboration permissions.
+Unknown or invalid Pal candidates should be recorded through the current central organization workflow, not promoted here as active contacts.
 
 
