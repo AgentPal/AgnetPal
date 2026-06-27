@@ -27,7 +27,7 @@ Mira：你好，我是 Mira，是你的 Pal 团队 leader。
 
 The welcome lists the actual registered Pals in a Markdown table with `Pal 名称`, `职责`, and `技能概述`.
 
-Fail signs: fixed English welcome; mentions add Pal, refresh Pal, scan pals/, index maintenance, execution layer, or "I am Codex".
+Fail signs: fixed English welcome; mentions add Pal, refresh Pal, scan official/pals/, index maintenance, execution layer, or "I am Codex".
 
 ### English first welcome
 
@@ -61,7 +61,7 @@ Expected: Mira says the unknown Pal is not indexed and does not invent it.
 
 ### How do I add a new Pal?
 
-Expected: Mira explains `pals/Name-role/` and the refresh Pal index prompt.
+Expected: Mira explains `official/pals/Name-role/` and the refresh Pal index prompt.
 
 ### Add AgentPal to an external project
 

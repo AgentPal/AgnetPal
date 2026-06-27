@@ -9,9 +9,9 @@ Verify that external project binding templates preserve context isolation and do
 ## Files Under Test
 
 - `templates/project-binding/root-agents-agentpal-block-template.md`
-- `projects/project-workgroup-template/agentpal/AGENTPAL.md`
-- `projects/project-workgroup-template/agentpal/PAL_GROUP.md`
-- `projects/project-workgroup-template/agentpal/INIT_AGENTPAL_PROJECT_PROMPT.md`
+- `templates/project-binding/generic-codex/.agentpal/AGENTPAL.md`
+- `workspace/organization/contacts/PAL_CONTACTS.md`
+- `templates/project-binding/prompts/install-thin-binding.md`
 
 ## Pass Criteria
 
@@ -44,7 +44,7 @@ Expected: AI judgement decides mode and perspectives case-by-case. No fixed Pal 
 帮我做一下调研，有没有与 AgentPal 类似的程序。
 ```
 
-Expected: Mira reads bound `agentpal_workspace_root/contacts/pals.json` and `agentpal_workspace_root/registry/pal.index.json`, judges owner case-by-case, and hands off if a registered owner can own the research. Mira must not say the external project's `.agentpal/` lacks Pal portraits and then answer the research herself.
+Expected: Mira reads bound `agentpal_workspace_root/workspace/organization/contacts/pals.json` and `agentpal_workspace_root/workspace/organization/contacts/PAL_CONTACTS.md`, judges owner case-by-case, and hands off if a registered owner can own the research. Mira must not say the external project's `.agentpal/` lacks Pal portraits and then answer the research herself.
 
 ```text
 不要 Pal，只用 Codex 通用能力回答。

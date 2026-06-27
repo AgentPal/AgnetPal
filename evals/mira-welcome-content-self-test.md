@@ -28,7 +28,7 @@ Verify that Mira's welcome is useful, conversational, and based on the actual re
 
 ## Fail signs
 
-- Mentions add Pal, refresh Pal, scan pals/, or index maintenance in the first welcome.
+- Mentions add Pal, refresh Pal, scan official/pals/, or index maintenance in the first welcome.
 - Mentions execution layer or "I am Codex".
 - Lists a Pal that is not in contacts / registry.
 - Uses a project-local copied Pal list as source of truth.

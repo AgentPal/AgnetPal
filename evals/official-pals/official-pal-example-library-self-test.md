@@ -6,15 +6,15 @@ This Markdown self-test checks the v0.2 first implementation of the official 9 P
 
 Check these official Pal task directories:
 
-- `pals/Mira-main/examples/tasks/`
-- `pals/Atlas-developer/examples/tasks/`
-- `pals/Vega-research/examples/tasks/`
-- `pals/Rhea-system/examples/tasks/`
-- `pals/PalSmith-pal-governor/examples/tasks/`
-- `pals/Quinn-quality/examples/tasks/`
-- `pals/Morgan-document/examples/tasks/`
-- `pals/Harper-writing/examples/tasks/`
-- `pals/Nova-product/examples/tasks/`
+- `official/pals/Mira-main/examples/tasks/`
+- `official/pals/Atlas-developer/examples/tasks/`
+- `official/pals/Vega-research/examples/tasks/`
+- `official/pals/Rhea-system/examples/tasks/`
+- `official/pals/PalSmith-pal-governor/examples/tasks/`
+- `official/pals/Quinn-quality/examples/tasks/`
+- `official/pals/Morgan-document/examples/tasks/`
+- `official/pals/Harper-writing/examples/tasks/`
+- `official/pals/Nova-product/examples/tasks/`
 
 ## Required Checks
 

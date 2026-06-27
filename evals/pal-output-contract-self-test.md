@@ -6,14 +6,14 @@ Verify specialist Pal responses use their `core/output-contract.md`.
 
 ## Expected
 
-- Atlas uses `pals/Atlas-developer/core/output-contract.md`.
-- Nova uses `pals/Nova-product/core/output-contract.md`.
-- Quinn uses `pals/Quinn-quality/core/output-contract.md`.
-- Rhea uses `pals/Rhea-system/core/output-contract.md`.
-- Vega uses `pals/Vega-research/core/output-contract.md`.
-- Morgan uses `pals/Morgan-document/core/output-contract.md`.
-- Harper uses `pals/Harper-writing/core/output-contract.md`.
- uses `pals//core/output-contract.md`.
+- Atlas uses `official/pals/Atlas-developer/core/output-contract.md`.
+- Nova uses `official/pals/Nova-product/core/output-contract.md`.
+- Quinn uses `official/pals/Quinn-quality/core/output-contract.md`.
+- Rhea uses `official/pals/Rhea-system/core/output-contract.md`.
+- Vega uses `official/pals/Vega-research/core/output-contract.md`.
+- Morgan uses `official/pals/Morgan-document/core/output-contract.md`.
+- Harper uses `official/pals/Harper-writing/core/output-contract.md`.
+- PalSmith uses `official/pals/PalSmith-pal-governor/core/output-contract.md`.
 
 For Atlas / Nova / Quinn / Rhea, Pal answers must include a work-method statement and at least 4 mandatory contract items from their contract.
 

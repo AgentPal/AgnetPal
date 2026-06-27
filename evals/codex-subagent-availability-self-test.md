@@ -11,7 +11,7 @@ Future diagnostic for checking whether a Codex environment supports Codex Subage
 1. Spawn Subagent A.
 2. Prompt Subagent A to read `README.md` only and return three bullets.
 3. Spawn Subagent B.
-4. Prompt Subagent B to read `pals/Mira-main/PAL.md` only and return three bullets.
+4. Prompt Subagent B to read `official/pals/Mira-main/PAL.md` only and return three bullets.
 5. `wait_agent` for both.
 6. `close_agent` for both completed agents.
 7. Record `supported`, `unsupported`, or `unclear`.

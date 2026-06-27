@@ -55,7 +55,7 @@ Cover real-use regression inputs for Pal validity, Mira route-only behavior, Cod
     - expected: starts with `Codex generic answer:`, no Pal prefix.
 
 12. `/pal Rhea 以后这种启动项检查能不能形成固定流程？`
-    - expected: Rhea says task_family is `startup-item-audit`; if the user asks to save a Skill, Rhea creates it under `pals/Rhea-system/skills/<skill-id>/SKILL.md`; if the user asks for a Runbook, Rhea can create `windows-startup-item-audit-runbook` under Rhea's runbooks.
+    - expected: Rhea says task_family is `startup-item-audit`; if the user asks to save a Skill, Rhea creates it under `official/pals/Rhea-system/skills/<skill-id>/SKILL.md`; if the user asks for a Runbook, Rhea can create `windows-startup-item-audit-runbook` under Rhea's runbooks.
 
 ## Fail Signs
 

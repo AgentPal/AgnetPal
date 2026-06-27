@@ -75,4 +75,4 @@ Expected:
 
 - [Runtime Response Gate](../../orchestration/runtime-response-gate.md)
 - [Pal Mode Validity Protocol](../../orchestration/pal-mode-validity-protocol.md)
-- [Quinn Output Contract](../../pals/Quinn-quality/core/output-contract.md)
+- [Quinn Output Contract](../../official/pals/Quinn-quality/core/output-contract.md)

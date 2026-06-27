@@ -6,14 +6,14 @@ Purpose: verify that the seven official specialist Pals are slim embedded AgentP
 
 Check:
 
-- `pals/Atlas-developer`
-- `pals/Nova-product`
-- `pals/Quinn-quality`
-- `pals/Rhea-system`
-- `pals/Vega-research`
-- `pals/Morgan-document`
-- `pals/Harper-writing`
-- `pals/`
+- `official/pals/Atlas-developer`
+- `official/pals/Nova-product`
+- `official/pals/Quinn-quality`
+- `official/pals/Rhea-system`
+- `official/pals/Vega-research`
+- `official/pals/Morgan-document`
+- `official/pals/Harper-writing`
+- `official/pals/`
 
 ## Expected
 

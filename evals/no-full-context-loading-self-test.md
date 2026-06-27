@@ -7,7 +7,7 @@ Prevent token black hole behavior.
 ## Fail Cases
 
 - Default initialization reads the old wide file set without diagnostic reason.
-- Pal reads all `pals/`.
+- Pal reads all `official/pals/`.
 - Pal reads all `knowledge/`.
 - Pal reads all `memory/`.
 - Pal reads the whole external project tree.

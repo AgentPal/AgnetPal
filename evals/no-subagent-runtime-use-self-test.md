@@ -10,10 +10,10 @@ Check current runtime entry files:
 - `prompts/codex/initialize-agentpal-workspace.md`
 - `prompts/initialize-agentpal.md`
 - `prompts/join-external-project-workgroup.md`
-- `projects/project-workgroup-template/agentpal/INIT_AGENTPAL_PROJECT_PROMPT.md`
+- `templates/project-binding/prompts/install-thin-binding.md`
 - `templates/project-binding/root-agents-agentpal-block-template.md`
 - `orchestration/runtime-response-gate.md`
-- `pals/Mira-main/core/`
+- `official/pals/Mira-main/core/`
 - current README usage flow
 
 ## Expected

@@ -23,7 +23,7 @@ Input:
 
 ## Fail
 
-- Mira reads all `pals/`.
+- Mira reads all `official/pals/`.
 - Owner Pal reads all `knowledge/` or all `skills/`.
 - Asset report does not distinguish index-known paths from content-read files.
 - The answer cites unrelated examples/evals as normal task context.

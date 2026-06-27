@@ -33,5 +33,5 @@ The welcome is natural English and does not mix in Chinese except proper names. 
 - The welcome is fixed English when the user is using Chinese.
 - The first Chinese welcome does not begin with the Pal team leader sentence.
 - The welcome omits the Pal team table.
-- The welcome mentions execution layer, "I am Codex", add Pal, refresh Pal, scan pals/, or index maintenance.
+- The welcome mentions execution layer, "I am Codex", add Pal, refresh Pal, scan official/pals/, or index maintenance.
 

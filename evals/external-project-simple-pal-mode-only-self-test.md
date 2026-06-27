@@ -4,7 +4,7 @@ Verify external project templates inherit the current AgentPal v0.1 runtime poli
 
 ## Files
 
-- `projects/project-workgroup-template/agentpal/INIT_AGENTPAL_PROJECT_PROMPT.md`
+- `templates/project-binding/prompts/install-thin-binding.md`
 - `templates/project-binding/root-agents-agentpal-block-template.md`
 - `prompts/join-external-project-workgroup.md`
 

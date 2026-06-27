@@ -13,30 +13,30 @@
 
 ## Mira
 
-- [ ] `pals/Mira-main/PAL.md`
-- [ ] `pals/Mira-main/pal.json`
+- [ ] `official/pals/Mira-main/PAL.md`
+- [ ] `official/pals/Mira-main/pal.json`
 - [ ] Mira is default Main Pal, Leader Pal, and Conductor.
 - [ ] Ordinary messages go to Mira.
 - [ ] Specialist Pals do not listen by default.
 
 ## Official Pals
 
-- [ ] `pals/Atlas-developer`
-- [ ] `pals/Vega-research`
-- [ ] `pals/Rhea-system`
-- [ ] `pals/Quinn-quality`
-- [ ] `pals/Morgan-document`
-- [ ] `pals/Harper-writing`
-- [ ] `pals/Nova-product`
-- [ ] `pals/`
-- [ ] `/pal Atlas`, `/pal Vega`, `/pal Rhea`, `/pal Quinn`, `/pal Morgan`, `/pal Harper`, `/pal Nova`, and `` are documented.
+- [ ] `official/pals/Atlas-developer`
+- [ ] `official/pals/Vega-research`
+- [ ] `official/pals/Rhea-system`
+- [ ] `official/pals/Quinn-quality`
+- [ ] `official/pals/Morgan-document`
+- [ ] `official/pals/Harper-writing`
+- [ ] `official/pals/Nova-product`
+- [ ] `official/pals/`
+- [ ] `/pal Atlas`, `/pal Vega`, `/pal Rhea`, `/pal Quinn`, `/pal Morgan`, `/pal Harper`, `/pal Nova`, and `/pal PalSmith` are documented.
 
 ## JSON
 
 - [ ] `agentpal.json` parses.
-- [ ] `pals/Mira-main/pal.json` parses.
-- [ ] `contacts/pals.json` parses.
-- [ ] `registry/pal.index.json` parses.
+- [ ] `official/pals/Mira-main/pal.json` parses.
+- [ ] `workspace/organization/contacts/pals.json` parses.
+- [ ] `workspace/organization/contacts/PAL_CONTACTS.md` parses.
 
 ## Boundaries
 

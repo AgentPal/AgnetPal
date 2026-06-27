@@ -31,7 +31,7 @@ Verify that AgentPal workgroup removal is safe and scoped.
 - Deletes project source.
 - Deletes user AGENTS content.
 - Deletes the entire `AGENTS.md` by default.
-- Deletes AgentPal Workspace or AgentPal `pals/`.
+- Deletes AgentPal Workspace or AgentPal `official/pals/`.
 - Changes another project's `.agentpal/`.
 - Leaves an empty `AGENTS.md` that provides no deactivation instruction.
 - Claims the current old Codex thread automatically forgot all previously loaded AgentPal rules.

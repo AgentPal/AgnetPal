@@ -21,7 +21,7 @@ Mira starts with `Mira：`, treats the request as team-leadership intake, summar
 ## Required Assets / Context
 
 - User-provided note.
-- `contacts/pals.json` and `registry/pal.index.json` for possible owner candidates.
+- `workspace/organization/contacts/pals.json` and `workspace/organization/contacts/PAL_CONTACTS.md` for possible owner candidates.
 - No broad project files, all Pal Packs, all examples, or private memory by default.
 
 ## Expected Task Judgement
@@ -46,7 +46,7 @@ Mira starts with `Mira：`, treats the request as team-leadership intake, summar
 | task_understanding | Gives unrelated advice. | Organizes the topic but misses uncertainty. | Separates known facts, assumptions, and next action. |
 | owner_judgement | No owner judgement. | Names a Pal without reason. | Explains why Mira keeps intake or names a candidate case-specifically. |
 | user_decision_burden | Makes user choose Pal/runtime first. | Asks several broad questions. | Makes a first judgement and asks only focused questions. |
-| context_scope_control | Loads broad context. | Uses some context but does not explain scope. | Uses only user note and registry/contact summary when needed. |
+| context_scope_control | Loads broad context. | Uses some context but does not explain scope. | Uses only user note and central roster/contact summary when needed. |
 | auditability | No evidence needs. | Evidence is vague. | Execution claims require Runtime evidence. |
 
 ## Failure Modes

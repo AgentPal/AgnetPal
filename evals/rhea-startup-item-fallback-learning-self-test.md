@@ -19,7 +19,7 @@ This eval does not define `startup item` as a keyword route. Rhea must be select
 - Rhea reports Specialist assets used.
 - If no dedicated startup-item Skill / Knowledge Card / Runbook exists, Rhea says fallback method is allowed.
 - Knowledge gap is recorded as belonging to Rhea.
-- repeated task record points to `pals/Rhea-system/learning/repeated-tasks.md`.
+- repeated task record points to `official/pals/Rhea-system/learning/repeated-tasks.md`.
 - Formal Skill trigger is explicit user request to save a Skill or similar operation count > 3; Runbook creation is used when the user asks for a Runbook or the procedure is better represented as a Runbook.
 - Execution layer is read-only.
 - Rhea reviews evidence.

@@ -2,33 +2,33 @@
 
 ## Purpose
 
-Verify that AgentPal uses contacts / registry as the single source of truth for Pal discovery and that individual Pal Packs do not hard-code other Pal identities as fixed collaborators.
+Verify that AgentPal uses the central contact records as the single source of truth for Pal discovery and that individual Pal Packs do not hard-code other Pal identities as fixed collaborators.
 
 ## Scope
 
-- `pals/*/PAL.md`
-- `pals/*/AGENTS.md`
-- `pals/*/SKILL.md`
-- `pals/*/identity/`
-- `pals/*/core/`
-- `pals/*/knowledge/`
-- `pals/*/skills/`
-- `pals/*/workflows/`
-- `pals/*/runbooks/`
-- `pals/*/learning/`
-- `pals/*/examples/`
-- `pals/*/evals/`
-- `contacts/`
-- `registry/`
+- `official/pals/*/PAL.md`
+- `official/pals/*/AGENTS.md`
+- `official/pals/*/SKILL.md`
+- `official/pals/*/identity/`
+- `official/pals/*/core/`
+- `official/pals/*/knowledge/`
+- `official/pals/*/skills/`
+- `official/pals/*/workflows/`
+- `official/pals/*/runbooks/`
+- `official/pals/*/learning/`
+- `official/pals/*/examples/`
+- `official/pals/*/evals/`
+- `workspace/organization/contacts/`
+- legacy `contacts/` and `registry/` compatibility pointers
 - `examples/`
 - `evals/`
 - `templates/subagent-prompts/`
 
 ## Pass Criteria
 
-- `contacts/` and `registry/` are documented as the source of truth for Pal discovery.
+- `workspace/organization/contacts/` is documented as the source of truth for Pal discovery.
 - Individual Pal Packs do not keep local lists of other Pal identities.
-- Pal internal collaboration text says to resolve collaborators from current contacts / registry.
+- Pal internal collaboration text says to resolve collaborators from current central contacts.
 - Pal internal files do not say a task type must consult, delegate to, hand off to, or spawn a named Pal.
 - Examples that mention specific Pals are marked non-binding examples.
 - Evals that mention specific Pals are marked test fixtures.
@@ -37,7 +37,8 @@ Verify that AgentPal uses contacts / registry as the single source of truth for 
 
 ## Allowed References
 
-- Official Pal lists in `contacts/`, `registry/`, README, docs, and initialization examples.
+- Official Pal lists in `workspace/organization/contacts/`, README, docs, and initialization examples.
+- Legacy `contacts/` and `registry/` references only when explicitly marked compatibility or historical.
 - Self-reference inside a Pal's own directory.
 - Explicit `/pal Name` command documentation.
 - Non-binding examples.

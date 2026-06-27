@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Verify that contacts, registry, mention aliases, and Mira's default Pal map agree.
+Verify that central contacts, mention aliases, and Mira's default Pal map agree.
 
 ## Preconditions
 
@@ -11,12 +11,12 @@ Verify that contacts, registry, mention aliases, and Mira's default Pal map agre
 
 ## Manual Steps
 
-1. Compare `contacts/pals.json` with `registry/pal.index.json`.
+1. Compare `workspace/organization/contacts/pals.json` with `workspace/organization/contacts/PAL_CONTACTS.md`.
 2. Confirm both contain Mira plus seven official specialist Pals.
 3. Confirm each id, display name, directory name, path, and direct call match.
-4. Confirm each path exists under `pals/`.
-5. Confirm `contacts/mention-aliases.md` lists `/pal Name` calls.
-6. Confirm `pals/Mira-main/knowledge/default-pals/default-pal-map.md` matches the same Pal set.
+4. Confirm each path exists under `official/pals/`.
+5. Confirm `workspace/organization/contacts/aliases.json` and `workspace/organization/contacts/PAL_CONTACTS.md` list supported `/pal Name` calls.
+6. Confirm `official/pals/Mira-main/knowledge/default-official/pals/default-pal-map.md` matches the same Pal set.
 
 ## Expected Result
 
@@ -24,7 +24,7 @@ All Pal records are consistent and point to existing Pal Pack directories.
 
 ## Failure Signs
 
-- A Pal appears in contacts but not registry.
+- A Pal appears in one central contact file but not the other.
 - A path is missing.
 - Tools, models, plugins, MCP servers, or non-Pal runtimes appear as Pal contacts.
 - A direct call uses a directory name instead of display name.

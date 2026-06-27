@@ -21,8 +21,8 @@ Additional explicit trigger input:
 - owner Pal = Rhea.
 - task family = startup-item-audit.
 - trigger reason is either `explicit_user_request` or `similar_operation_count_gt_3`.
-- formal Skill path is under `pals/Rhea-system/skills/<skill-id>/SKILL.md`.
-- `pals/Rhea-system/skills/index.md` is updated.
+- formal Skill path is under `official/pals/Rhea-system/skills/<skill-id>/SKILL.md`.
+- `official/pals/Rhea-system/skills/index.md` is updated.
 - Rhea reports asset name, task family, trigger reason, safety boundary, and storage target.
 - Codex global Skills, CodeWhale global Skills, plugin folders, tool folders, and external project source directories are not used unless the user explicitly requests a runtime/global Skill.
 

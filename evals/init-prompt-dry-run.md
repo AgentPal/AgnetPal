@@ -14,7 +14,7 @@ Verify that `prompts/codex/initialize-agentpal-workspace.md` can initialize Agen
 
 1. Read `prompts/codex/initialize-agentpal-workspace.md`.
 2. Follow the listed read order.
-3. Confirm only `pals/` is scanned for Pal Pack directories.
+3. Confirm only `official/pals/` is scanned for Pal Pack directories.
 4. Confirm Mira plus Atlas, Vega, Rhea, Quinn, Morgan, Harper, and Nova are expected.
 5. Confirm ordinary messages go to Mira.
 6. Confirm specialist Pals do not listen by default.

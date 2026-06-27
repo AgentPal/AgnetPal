@@ -17,11 +17,11 @@
 
 ## Required Atlas assets
 
-- `pals/Atlas-developer/PAL.md`
-- `pals/Atlas-developer/SKILL.md`
-- `pals/Atlas-developer/pal.json`
+- `official/pals/Atlas-developer/PAL.md`
+- `official/pals/Atlas-developer/SKILL.md`
+- `official/pals/Atlas-developer/pal.json`
 - `response-fingerprints/Atlas.md`
-- `pals/Atlas-developer/core/output-contract.md`
+- `official/pals/Atlas-developer/core/output-contract.md`
 
 ## Expected output
 

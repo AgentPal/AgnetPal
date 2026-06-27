@@ -17,11 +17,11 @@ Verify that external project binding stores only pointers and minimal metadata, 
 - The project binding does not copy full orchestration protocols.
 - The project binding does not copy full Mira assets.
 - The project binding does not copy release docs, examples, evals, or PalBench reports.
-- The Pal source of truth remains `contacts/pals.json` and `registry/pal.index.json` in the AgentPal workspace.
+- The Pal source of truth remains `workspace/organization/contacts/pals.json` and `workspace/organization/contacts/PAL_CONTACTS.md` in the AgentPal workspace.
 
 ## Fail Conditions
 
 - `.agentpal/` contains copied `orchestration/` protocols.
-- `.agentpal/` contains copied `pals/Mira-main/` assets.
+- `.agentpal/` contains copied `official/pals/Mira-main/` assets.
 - The root project instruction block embeds the full First Pal Gate rule body instead of pointing to core gates.
 - The project binding maintains an authoritative copied Pal roster.
