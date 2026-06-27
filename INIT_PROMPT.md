@@ -31,6 +31,7 @@ Load selected Pal assets only after current owner judgement. Do not preload all 
 - `@Pal` is consult / review by default. Use a bounded Context Packet and do not copy full chat history.
 - Explicit handoff, takeover, or owner-transfer wording may use `handoff` or `owner_transfer`.
 - `/pal` and `@Pal` are AgentPal plain-text protocols. They do not require native runtime slash-command or mention support.
+- Owner + Verifier is a no-code staged workflow. If used, follow `orchestration/owner-verifier-workflow-protocol.md`, prepare independent verifier evidence context, and require a `pass`, `fail`, or `blocked` result record.
 
 ## Context Packet
 
@@ -39,6 +40,9 @@ When a direct call, mention, review, delegate, handoff, or owner transfer needs 
 - `orchestration/mention-and-direct-pal-protocol.md`
 - `orchestration/context-packet-protocol.md`
 - `templates/orchestration/context-packet-template.md`
+- `orchestration/owner-verifier-workflow-protocol.md` when owner and verifier candidates are separated
+- `templates/orchestration/verifier-context-packet.md`
+- `templates/orchestration/verification-result-record.md`
 
 Packets must include `can_read`, `cannot_read`, `needed_output`, `verification_requirements`, `return_to`, and `final_report_required`.
 

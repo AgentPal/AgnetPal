@@ -5,7 +5,7 @@
 | PBC-001 | `PBC-001-direct-pal-atlas.md` | `/pal Atlas` direct call |
 | PBC-002 | `PBC-002-mention-quinn-consult.md` | `@Quinn` consult default |
 | PBC-003 | `PBC-003-owner-verifier-release-check.md` | Owner + Verifier release check |
-| PBC-004 | `PBC-004-parallel-product-dev-qa-review.md` | Parallel independent review |
+| PBC-004 | `PBC-004-parallel-product-dev-qa-review.md` | Parallel independent review as future-methodology simulation |
 | PBC-005 | `PBC-005-plan-execute-verify-docs-task.md` | Plan -> Execute -> Verify |
 | PBC-006 | `PBC-006-context-packet-privacy-boundary.md` | privacy boundary |
 | PBC-007 | `PBC-007-routing-memory-reuse.md` | routing memory reuse |
@@ -16,5 +16,12 @@
 | PBC-012 | `PBC-012-explicit-handoff-owner-transfer.md` | explicit handoff transfers owner candidate |
 | PBC-013 | `PBC-013-context-packet-missing-required-fields.md` | missing Context Packet fields failure |
 | PBC-014 | `PBC-014-full-chat-history-copied-failure.md` | full chat history copied as failure |
+| PBC-015 | `PBC-015-owner-verifier-dev-task.md` | Owner + Verifier dev task |
+| PBC-016 | `PBC-016-owner-verifier-palsmith-health-check.md` | PalSmith generated Pal health check |
+| PBC-017 | `PBC-017-completion-report-missing-evidence.md` | completion report missing evidence |
+| PBC-018 | `PBC-018-verifier-only-reads-owner-claim-failure.md` | verifier only reads owner claim as failure |
+| PBC-019 | `PBC-019-quinn-hardcoded-as-verifier-failure.md` | hardcoded verifier failure |
+| PBC-020 | `PBC-020-blocked-verification-missing-evidence.md` | blocked verification due to missing evidence |
+| PBC-021 | `PBC-021-repair-package-after-failed-verification.md` | repair package after failed or blocked verification |
 
-All cases are no-code regression cases. None requires automatic Deep Conductor execution.
+All cases are no-code regression cases. None requires automatic Deep Conductor execution, Subagents, external Agents, or multiple runtimes.

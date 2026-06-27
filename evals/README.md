@@ -13,6 +13,8 @@ They are Markdown checklists, not automated tests, scripts, scanners, validators
 | Pal Pack validity | `pal-pack-validity/README.md` |
 | Public safety | `public-safety/README.md` |
 | Release readiness | `release/README.md` |
+| Orchestration workflows | `orchestration/` |
+| PalBench Collaboration | `palbench-collaboration/README.md` |
 
 ## Existing Root Checks
 
@@ -33,4 +35,6 @@ Release readiness checks:
 ## Boundary
 
 Current v0.1.0-rc.1 evals should keep `Simple Pal Mode only` as the active task path. Subagent Mode, Deep Conductor, parallel child workflows, and external Agent orchestration may appear only as future-design or negative-boundary checks.
+
+Owner + Verifier evals are no-code staged workflow checks. They verify evidence handling, `pass` / `fail` / `blocked` records, and candidate-based verifier selection without creating runtime automation.
 

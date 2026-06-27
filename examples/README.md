@@ -22,7 +22,7 @@ Start here for the three current user paths:
 | `pal-collaboration/` | Navigation for `/pal Mira`, `/pal Atlas`, and owner handoff examples. |
 | `project-workgroup/` | External project binding examples. |
 | `failures/` | Failure cases and corrected behavior. |
-| `orchestration/` | Current/future orchestration methodology examples. Future examples do not activate runtime behavior. |
+| `orchestration/` | Current/future orchestration methodology examples, including Owner + Verifier no-code workflow examples. Future examples do not activate runtime behavior. |
 
 ## Public-Safe Rules
 

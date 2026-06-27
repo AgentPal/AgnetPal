@@ -28,6 +28,7 @@ An adapter must:
 - parse `/pal Name` and `@Pal` as AgentPal plain-text protocols when they appear in user input
 - resolve named Pals through current contacts / registry instead of copied Pal lists
 - follow `orchestration/mention-and-direct-pal-protocol.md` and `orchestration/context-packet-protocol.md` for direct calls, consults, reviews, handoffs, and owner transfers
+- follow `orchestration/owner-verifier-workflow-protocol.md` when a task package separates an owner Pal from a verifier Pal candidate
 
 ## Adapter Must Not
 
@@ -41,6 +42,8 @@ An adapter must:
 - treat `/pal` or `@Pal` as required native CLI features
 - copy full chat history into Context Packets
 - present Context Packet as an automatic message bus
+- present Owner + Verifier as automatic background multi-agent execution
+- let verifier work rely only on an owner completion claim when evidence context is missing
 
 If a core rule changes, adapter behavior should inherit the change by reading the AgentPal workspace core gates, without rewriting every adapter prompt.
 
@@ -55,3 +58,15 @@ If the host runtime has no native slash-command or mention support, it should st
 - Context Packets must use `can_read`, `cannot_read`, `needed_output`, and `verification_requirements`; they must not copy full chat history.
 
 This remains no-code protocol behavior. It does not start background Pals, Subagent Mode, external Agent calls, Deep Conductor automation, or runtime parallelism.
+
+## Owner + Verifier Handling
+
+If a task package includes Owner + Verifier stages, the adapter should help the host runtime follow the stages sequentially:
+
+1. owner task judgement and owner task package;
+2. evidence collection by the execution layer when requested and allowed;
+3. bounded Verifier Context Packet;
+4. Verification Result Record with verdict `pass`, `fail`, or `blocked`;
+5. Mira or owner synthesis.
+
+The verifier context must contain evidence to check, expected criteria, allowed files, missing or not-run checks, and known risks. The runtime must not infer a pass from a completion report alone.

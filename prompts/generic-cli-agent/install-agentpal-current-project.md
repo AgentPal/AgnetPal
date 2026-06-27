@@ -30,6 +30,7 @@ Hard boundaries:
 - Do not copy AgentPal Pal Packs, docs, protocols, examples, evals, or release notes into this project.
 - Do not create runtime code, scripts, services, daemons, installers, or UI.
 - Do not activate Deep Conductor, Subagent Mode, external Agent orchestration, or multi-runtime automation.
+- Do not present Owner + Verifier as automatic background multi-agent execution.
 
 Create or update only the thin binding:
 1. `.agentpal/project.json`
@@ -53,6 +54,7 @@ The root `AGENTS.md` protected block must explicitly tell a fresh session:
 - when user text contains `@Pal`, treat it as consult / review by default; create or follow a bounded Context Packet instead of sending full chat history
 - if the user explicitly asks for handoff, takeover, or owner transfer, use Context Packet mode `handoff` or `owner_transfer`
 - `/pal` and `@Pal` are AgentPal Markdown protocols in this binding, not native CLI commands; do not require CLI support for them
+- Owner + Verifier is a no-code staged workflow. Runtime may follow the task package sequentially, but verifier work needs independent evidence context and a `pass` / `fail` / `blocked` result record.
 
 Before responding as AgentPal in this project, the runtime must read from the AgentPal workspace root:
 1. core/agentpal-core-gate.md
@@ -69,6 +71,7 @@ Before responding as AgentPal in this project, the runtime must read from the Ag
 12. pals/Mira-main/core/output-contract.md
 13. orchestration/mention-and-direct-pal-protocol.md when `/pal` or `@Pal` appears
 14. orchestration/context-packet-protocol.md when creating or following a packet
+15. orchestration/owner-verifier-workflow-protocol.md when a task package separates owner and verifier candidates
 
 Use `templates/project-binding/root-agents-agentpal-block-template.md` from the AgentPal workspace as the protected block shape.
 

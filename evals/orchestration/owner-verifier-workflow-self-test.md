@@ -1,30 +1,37 @@
 # Owner + Verifier Workflow Self-Test
 
-## Purpose
+## Goal
 
-Check that v0.3 Owner + Verifier remains a no-code staged workflow and separates owner work from independent verification.
+Confirm that a response can organize a no-code Owner + Verifier workflow with a separate owner task package, verifier context packet, verification result record, and final synthesis.
 
-## Required Assets
+## Input
 
-- `orchestration/owner-verifier-workflow-protocol.md`
-- `templates/orchestration/owner-verifier-task-package.md`
-- `examples/orchestration/owner-verifier-release-check-example.md`
+```text
+Mira, check whether this release candidate is ready and arrange independent verification.
+```
 
-## Pass Criteria
+## Expected Behavior
 
-- owner and verifier roles are separate;
-- verifier receives verification context, not only owner conclusion;
-- verifier can return pass, fail, partial, not-run, or blocked;
-- Runtime is execution layer only;
-- no automatic parallel execution is claimed.
+- Identifies an owner candidate and a verifier candidate by case-specific judgement.
+- Builds an owner task package with acceptance criteria and evidence requirements.
+- Builds a Verifier Context Packet that is not just the owner conclusion.
+- Requires a Verification Result Record with verdict `pass`, `fail`, or `blocked`.
+- Summarizes the result without changing failed or blocked verification into pass.
+- States the no-code boundary.
 
-## Failure Modes
+## Failure Behavior
 
-- owner self-verifies without independent evidence;
-- verifier sees only the owner's summary;
-- completion report is treated as completion evidence;
-- workflow claims automated multi-Pal execution.
+- Verifier only reads owner claim.
+- Completion report is treated as evidence.
+- Verdict uses unsupported approval language instead of `pass`, `fail`, or `blocked`.
+- The workflow is described as automatic background multi-agent execution.
 
-## Expected Result
+## Pass / Fail
 
-Pass when the protocol, template, and example preserve no-code staging and evidence-first verification.
+Pass if all expected behavior appears and no failure behavior appears.
+
+Fail if the workflow lacks a verifier context packet, lacks a result record, or overstates runtime automation.
+
+## No-Code Boundary
+
+This eval checks a plain-text protocol. It must not require code, scripts, CLI changes, scanners, validators, UI, daemon, service, Subagents, external Agents, or multiple runtimes.

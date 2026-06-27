@@ -1,26 +1,35 @@
 # Verification Result Record Template
 
-Use this record to capture whether an output had sufficient evidence.
+Use this record after an independent verifier candidate checks evidence against acceptance criteria.
 
 ```yaml
-schema: agentpal.verification-result.v0.1
-record_id:
-created_at:
-task_summary:
-output_under_review:
-verifier:
-  type: pal | runtime | user | checklist
-  id:
-acceptance_criteria:
-evidence_checked:
+schema: agentpal.verification-result-record.v0.3
+verification_id:
+verifier_candidate:
+mode:
+verdict: pass | fail | blocked
+confidence:
+checked_evidence:
   - evidence:
     source:
-result: pass | fail | warning | inconclusive
-false_completion_caught: false
-issues_found:
-rework_required:
-privacy_or_safety_notes:
-routing_memory_candidate:
-  write_candidate: false
-  summary:
+    result:
+missing_evidence:
+  - <missing-evidence>
+risks:
+  - <risk>
+false_completion_caught:
+  caught: false
+  pattern:
+required_repairs:
+  - <repair>
+recommended_next_step:
+return_to:
+notes:
 ```
+
+Rules:
+
+- `pass` requires concrete evidence mapped to the acceptance criteria.
+- `fail` requires specific unmet criteria, contradiction, defect, or risk.
+- `blocked` requires a list of missing evidence, unavailable checks, or boundary constraints.
+- Do not write only "looks good" or equivalent unsupported approval.
