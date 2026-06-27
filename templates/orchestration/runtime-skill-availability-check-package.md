@@ -8,6 +8,13 @@ check_id: ""
 host_runtime_candidate:
   name: ""
   known_from_current_context: false
+host_runtime_requirements:
+  can_list_named_capabilities: unknown
+  can_use_named_capabilities: unknown
+  permission_boundary: ""
+availability_first:
+  required: true
+  do_not_execute_before_check: true
 skill_or_plugin_or_mcp_candidates:
   - name: ""
     type: "" # Runtime Skill | plugin | MCP tool | browser tool | office document tool | repo analysis tool | other
@@ -28,6 +35,11 @@ if_available:
 if_unavailable:
   - "Do not substitute silently."
   - "Follow the fallback package or ask for user confirmation."
+  - "Report unavailable, unknown, or blocked explicitly; do not convert it to pass."
+execution_mode:
+  host_runtime_manual_execution: true
+  agentpal_auto_execution: false
+  broad_capability_scan_allowed: false
 not_a_fixed_route: true
 privacy_notes:
   - "Do not reveal private local Runtime configuration in public reports."

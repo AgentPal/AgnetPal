@@ -23,6 +23,27 @@ host_runtime_candidate:
   name: ""
   reason: ""
   availability_evidence_required: true
+host_runtime_requirements:
+  can_read_files: unknown
+  can_write_files: unknown
+  can_run_commands: unknown
+  supports_skills: unknown
+  supports_subagents: unknown
+  supports_external_dirs: unknown
+  evidence_required:
+    - current_runtime_capability_report
+availability_first:
+  required: true
+  check_steps:
+    - "Check only named current-session Skill/plugin/MCP candidates."
+    - "Report available, unavailable, unknown, or blocked before execution."
+  if_unavailable:
+    - "Use if_unavailable_fallback."
+    - "Do not report unavailable capability as pass."
+execution_mode:
+  host_runtime_manual_execution: true
+  agentpal_auto_execution: false
+  agentpal_installs_or_invokes_runtime_skills: false
 context_budget_plan: ""
 read_tier:
   initial: 1
@@ -75,10 +96,12 @@ final_report_required:
     - commands_or_tools_used
     - runtime_skills_used_or_not_run
     - availability_check_result
+    - unavailable_or_unknown_capabilities
     - fallback_used
     - verification_results
     - context_usage_report
     - blockers
+    - execution_mode_confirmed
 runtime_skill_usage_memory_writeback:
   required: true
   fields:

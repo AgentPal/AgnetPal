@@ -96,6 +96,7 @@ Use:
 | `docs/05-orchestration-methodology/deep-conductor-master-goal.md` | Deep Conductor master goal | no-code 12-step conductor loop and executor boundary |
 | `docs/05-orchestration-methodology/deep-conductor-master-loop-usage-guide.md` | Deep Conductor master loop usage guide | project goal to task map, Runtime packages, verification, synthesis, and memory writeback |
 | `docs/05-orchestration-methodology/deep-conductor-e2e-usage-guide.md` | Deep Conductor E2E usage guide | full no-code loop from goal through memory, capability, context budget, topology, Runtime Skill-aware packages, verification, synthesis, routing memory, and next-round recommendation |
+| `docs/research/deep-conductor-real-runtime-replay-gap-analysis.md` | Deep Conductor real replay gap analysis | R61 real host replay pass / partial / unavailable / fail classification and R62 repair targets |
 | `docs/05-orchestration-methodology/cross-runtime-pal-memory.md` | Cross-Runtime Pal Memory usage guide | no-code continuity across Codex, Claude Code, generic CLI, and other host Runtimes |
 | `docs/05-orchestration-methodology/runtime-installed-skill-orchestration-guide.md` | Runtime-installed Skill Orchestration guide | no-code Runtime Skill candidate selection, availability checks, fallback, verification, and usage memory |
 | `docs/05-orchestration-methodology/token-cost-aware-deep-conductor.md` | Token / Cost-aware Deep Conductor guide | no-code Context Budget, read tier, prompt shaping, verification cost, and usage report guidance |
@@ -244,6 +245,7 @@ Use the current docs directories as the public entry points. Archived research n
 | `orchestration/fast-route-protocol.md` | current Simple Pal Mode clear-task handoff pattern |
 | `orchestration/deep-conductor-protocol.md` | no-code Deep Conductor complex-workflow pattern |
 | `orchestration/project-conductor-workflow.md` | project-level no-code conductor workflow |
+| `orchestration/subagent-external-agent-handoff-boundary.md` | no-code boundary for host Runtime subagent / external Agent handoff packages |
 | `orchestration/memory-boundary-protocol.md` | memory sharing, privacy, Git, Context Packet, and runtime-switch boundary |
 | `orchestration/pal-skill-vs-runtime-skill-protocol.md` | Pal-owned Skill and Runtime-installed Skill separation |
 | `orchestration/runtime-skill-candidate-decision-protocol.md` | Runtime Skill candidate decision, availability, fallback, verification, and usage memory protocol |
@@ -267,6 +269,9 @@ Use the current docs directories as the public entry points. Archived research n
 | `templates/orchestration/` | task judgement, workflow, access list, project conductor task map, Deep Conductor plan, next-round runtime package, cross-runtime continuation package, conductor decision record, Runtime Skill-aware task package, context budget plan, context usage report, verifier context packet, reviewer context packet, final report, synthesis, result record, routing, and verification templates |
 | `templates/orchestration/deep-conductor-e2e-package.md` | complete Deep Conductor E2E package template |
 | `templates/orchestration/deep-conductor-e2e-synthesis-report.md` | complete Deep Conductor E2E synthesis report template |
+| `templates/orchestration/e2e-user-facing-short-summary.md` | short user-facing summary for E2E synthesis |
+| `templates/orchestration/external-agent-handoff-package.md` | manual external Agent handoff package template |
+| `templates/orchestration/subagent-task-package.md` | host Runtime subagent task package template |
 | `templates/memory/` | Pal Project Memory Snapshot, Routing Memory Record, and Runtime Skill Usage Memory Record templates |
 | `templates/capabilities/` | profile templates |
 | `templates/research/` | PalBench result template |

@@ -5,6 +5,23 @@ schema: agentpal.deep-conductor-e2e-synthesis-report.v0.3
 report_id: e2e-report-<short-id>
 goal: <original user goal>
 
+short_summary:
+  result: <pass | partial | unavailable | fail | blocked | mixed | unknown>
+  what_happened: <one short user-facing summary>
+  what_needs_execution: []
+  what_needs_verification: []
+  next_user_action: <none | choose | approve | provide_evidence | rerun | other>
+
+capability_status:
+  planning: <pass | partial | unavailable | fail | blocked | unknown>
+  decomposition: <pass | partial | unavailable | fail | blocked | unknown>
+  runtime_package: <pass | partial | unavailable | fail | blocked | unknown>
+  runtime_skill: <pass | partial | unavailable | fail | blocked | unknown>
+  verification: <pass | partial | unavailable | fail | blocked | unknown>
+  memory_writeback: <pass | partial | unavailable | fail | blocked | unknown>
+  subagent_external_agent: <pass | partial | unavailable | fail | blocked | unknown>
+  notes: []
+
 what_was_planned:
   package_id: <Deep Conductor E2E Package id>
   topology: <selected topology>
@@ -65,4 +82,10 @@ next_round_recommendation:
 requires_user_decision:
   needed: <true | false>
   decisions: []
+
+boundary_notes:
+  unavailable_is_not_pass: true
+  partial_is_not_fully_supported: true
+  agentpal_auto_execution_claimed: false
+  exact_token_or_cost_claimed_without_host_meter: false
 ```

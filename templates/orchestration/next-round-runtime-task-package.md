@@ -11,6 +11,25 @@ target_runtime_candidate:
   name: ""
   reason: ""
   evidence_required: []
+host_runtime_requirements:
+  can_read_files: unknown
+  can_write_files: unknown
+  can_run_commands: unknown
+  supports_skills: unknown
+  supports_subagents: unknown
+  supports_external_dirs: unknown
+  evidence_required:
+    - current_runtime_capability_or_permission_evidence
+availability_first:
+  required: true
+  check_steps:
+    - "Confirm named Runtime, Skill, plugin, MCP, file, and permission assumptions before execution."
+  if_unavailable:
+    - "Stop or use the specified fallback."
+    - "Report unavailable, unknown, blocked, and not-run states explicitly."
+execution_mode:
+  host_runtime_manual_execution: true
+  agentpal_auto_execution: false
 previous_runtime_context:
   previous_runtime: ""
   memory_snapshot_used: ""
@@ -59,6 +78,9 @@ final_report_format:
   must_include:
     - files_read_or_changed
     - runtime_skills_used_or_not_run
+    - runtime_availability_evidence
+    - unavailable_or_unknown_capabilities
+    - fallback_used
     - memory_snapshot_used_or_not_run
     - memory_writeback_candidate
     - evidence

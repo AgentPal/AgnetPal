@@ -29,6 +29,15 @@ runtime_skill_candidates:
     type: ""
     reason: ""
     current_evidence: ""
+unavailable_capabilities:
+  - capability: ""
+    type: "" # Runtime Skill | plugin | MCP | subagent | external agent | other
+    status: "" # unavailable | unknown | blocked | not-run
+    reason: ""
+fallback_path:
+  required: false
+  selected: ""
+  reason: ""
 pal_owned_skills_used:
   - pal: ""
     skill_or_method: ""
@@ -80,6 +89,9 @@ verification_plan:
   verifier_candidates: []
 next_time_suggestion:
   summary: ""
+  why_worked_or_failed: ""
+  unavailable_capabilities_to_recheck: []
+  fallback_to_consider: ""
   not_a_fixed_route: true
 privacy_review:
   public_safe: true

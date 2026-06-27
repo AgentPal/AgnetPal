@@ -123,6 +123,14 @@ The first suite includes at least 10 cases:
 77. Cross-runtime continuation replay.
 78. Subagent / external Agent availability replay.
 79. Synthesis readability audit.
+80. E2E package feasibility status.
+81. Runtime availability evidence required.
+82. Partial capability not overstated.
+83. Subagent unavailable is not failure.
+84. External Agent unavailable fallback.
+85. E2E synthesis short summary required.
+86. Routing Memory records unavailable capability.
+87. Runtime task package availability-first.
 
 ## Boundary
 

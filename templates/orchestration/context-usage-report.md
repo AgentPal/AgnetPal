@@ -8,6 +8,11 @@ This report gives auditable context usage. It is not an exact token count. `not_
 schema: agentpal.context_usage_report.v0.1
 report_id: ""
 task_id: ""
+short_summary:
+  read_strategy_used: ""
+  what_was_saved: []
+  what_was_not_read: []
+  verification_context_preserved: true
 read_tiers_used:
   - tier: 0
     reason: ""
@@ -30,6 +35,11 @@ verification_context_used:
   - ""
 context_saved_by_reuse:
   - ""
+context_saved_by_avoiding:
+  full_workspace_read: false
+  duplicate_research: false
+  unnecessary_pal_assets: false
+  unnecessary_profiles: false
 quality_tradeoffs:
   - ""
 missing_context:

@@ -10,6 +10,12 @@ missing_or_failed_candidate:
   name: ""
   type: ""
   status: "" # unavailable | failed | unsafe | untrusted-output | not-run | unknown
+host_runtime_assumptions:
+  current_runtime: ""
+  missing_capability_evidence: ""
+execution_mode:
+  host_runtime_manual_execution: true
+  agentpal_auto_execution: false
 what_to_do_if_skill_missing:
   - "Report unavailable or unknown explicitly."
   - "Use ordinary Runtime Task Package if the task can still be completed safely."
@@ -35,6 +41,16 @@ record_failed_usage:
     - fallback_used
     - verification_result
     - next_time_candidate_guidance
+stop_conditions:
+  - "The missing capability is essential and no safe fallback exists."
+  - "The host Runtime cannot provide evidence for availability or output."
+final_report_required:
+  must_include:
+    - unavailable_or_failed_candidate
+    - fallback_path
+    - not_run_items
+    - verification_status
+    - next_runtime_or_user_decision
 not_a_fixed_route: true
 ```
 

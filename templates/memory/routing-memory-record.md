@@ -39,6 +39,15 @@ runtime_skills_used:
   - name: ""
     used: false
     evidence: ""
+unavailable_capabilities:
+  - capability: ""
+    type: "" # Runtime | Runtime Skill | plugin | MCP | subagent | external agent | other
+    status: "" # unavailable | unknown | blocked | not-run
+    evidence_or_reason: ""
+fallback_path:
+  used: false
+  description: ""
+  result: "" # pass | partial | fail | blocked | not-run | unknown
 pal_owned_skills_used:
   - pal: ""
     skill_or_method: ""
@@ -61,7 +70,12 @@ what_worked:
   - ""
 what_failed:
   - ""
+why_worked:
+  - ""
+why_failed:
+  - ""
 next_time_recommendation: ""
+next_time_recommendation_is_candidate: true
 not_a_fixed_route: true
 privacy_notes:
   public_safe: false

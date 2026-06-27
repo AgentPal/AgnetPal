@@ -26,6 +26,28 @@ context_budget_plan:
   stop_conditions: []
   context_usage_report_required: true
 
+execution_feasibility:
+  status: <pass | partial | unavailable | blocked>
+  reason: <why this package can or cannot be followed by the named host Runtime>
+  host_runtime_assumptions: []
+  unavailable_capabilities: []
+  manual_replay_required: true
+  fallback_required: <true | false>
+
+runtime_availability_evidence:
+  current_runtime: <host Runtime or unknown>
+  checked_capabilities: []
+  available: []
+  unavailable: []
+  unknown: []
+  evidence_source: <tool output | user statement | package assumption | not_checked>
+
+package_readiness:
+  ready_for_host_runtime: <true | false>
+  missing_fields: []
+  needs_user_confirmation: []
+  safe_to_execute_as_no_code_package: <true | false>
+
 workflow_topology:
   selected: <single_owner | owner_verifier | plan_execute_verify | parallel_independent_review | project_conductor | mixed>
   reason: <case-specific fit>
@@ -74,6 +96,20 @@ plan_execute_verify_plan:
 runtime_task_packages:
   - package_id: runtime-task-<id>
     goal: <bounded runtime goal>
+    host_runtime_requirements:
+      can_read_files: <true | false | unknown>
+      can_write_files: <true | false | unknown>
+      can_run_commands: <true | false | unknown>
+      supports_skills: <true | false | unknown>
+      supports_subagents: <true | false | unknown>
+      supports_external_dirs: <true | false | unknown>
+    availability_first:
+      required: true
+      check_steps: []
+      if_unavailable: <fallback or stop condition>
+    execution_mode:
+      host_runtime_manual_execution: true
+      agentpal_auto_execution: false
     allowed_actions: []
     forbidden_actions: []
     evidence_required: []
@@ -103,6 +139,9 @@ no_code_boundary:
   agentpal_executes: false
   host_runtime_executes_only_with_evidence: true
   forbidden: [runtime program, background workflow, automatic routing, automatic skill scan, exact token meter without host evidence]
+  unavailable_must_not_be_reported_as_pass: true
+  partial_must_not_be_reported_as_fully_supported: true
+  subagent_external_agent_requires_host_runtime_availability: true
 
 not_a_fixed_route: true
 ```

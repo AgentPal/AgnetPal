@@ -81,5 +81,13 @@
 | PBC-077 | `PBC-077-cross-runtime-continuation-replay.md` | Cross-runtime continuation replay |
 | PBC-078 | `PBC-078-subagent-external-agent-availability-replay.md` | Subagent / external Agent availability replay |
 | PBC-079 | `PBC-079-synthesis-readability-audit.md` | Synthesis readability audit |
+| PBC-080 | `PBC-080-e2e-package-feasibility-status.md` | E2E package feasibility status |
+| PBC-081 | `PBC-081-runtime-availability-evidence-required.md` | Runtime availability evidence required |
+| PBC-082 | `PBC-082-partial-capability-not-overstated.md` | Partial capability not overstated |
+| PBC-083 | `PBC-083-subagent-unavailable-is-not-failure.md` | Subagent unavailable is not failure |
+| PBC-084 | `PBC-084-external-agent-unavailable-fallback.md` | External Agent unavailable fallback |
+| PBC-085 | `PBC-085-e2e-synthesis-short-summary-required.md` | E2E synthesis short summary required |
+| PBC-086 | `PBC-086-routing-memory-records-unavailable-capability.md` | Routing Memory records unavailable capability |
+| PBC-087 | `PBC-087-runtime-task-package-availability-first.md` | Runtime task package availability-first |
 
 All cases are no-code regression cases. None requires automatic Deep Conductor execution, Subagents, external Agents, or multiple runtimes.

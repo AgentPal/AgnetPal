@@ -13,6 +13,11 @@ risk_level: "" # low | medium | high | critical | blocked
 quality_target: "" # draft | usable | release_candidate | release_gate | high_confidence
 latency_preference: "" # fast | balanced | thorough
 cost_sensitivity: "" # low | medium | high
+actual_read_strategy:
+  planned_strategy: "" # index_first | summary_first | targeted_full_read | mixed
+  why_this_strategy: ""
+  what_to_avoid_reading: []
+  verification_context_protected: true
 initial_read_tier: 1
 max_read_tier: 4
 index_known_paths:
@@ -67,6 +72,13 @@ ask_user_conditions:
 expected_context_usage_report:
   required: true
   template: templates/orchestration/context-usage-report.md
+  should_be_short: true
+  must_explain_saved_context:
+    - reused_memory
+    - index_only_reads
+    - avoided_full_workspace_read
+    - runtime_skill_reuse
+    - avoided_duplicate_research
 not_a_token_meter: true
 ```
 
