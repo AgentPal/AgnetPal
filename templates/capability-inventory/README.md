@@ -24,15 +24,17 @@ When creating a real profile, copy a template and follow `docs/03-user-guides/ma
 | Source type | Path |
 | --- | --- |
 | Standards and rules | `standards/capability-inventory/` |
+| Business System standard | `standards/capability-inventory/business-system-profile-standard.md` |
 | Current organization records | `workspace/organization/capability-inventory/` |
 | Project record template | `workspace/projects/_template/capability-inventory/` |
 | Public-safe examples | `examples/capability-inventory/` |
+| Business System examples | `examples/capability-inventory/business-system-profiles/` |
 | Reusable templates | `templates/capability-inventory/` |
 | Manual profile guide | `docs/03-user-guides/manual-capability-profile.md` |
 | Historical migration evidence | `archive/migration-from-v0.3/root-legacy/capability-inventory/` |
 
 External project bindings should not copy this directory. Bound projects keep a thin `.agentpal/` pointer and store project-specific capability inventory under the central `workspace/projects/<project-id>/capability-inventory/` record when approved.
 
-Business System profiles describe external system capability and governance boundaries only. They are not connectors, API clients, permission grants, or automatic write access.
+Business System profiles describe external system capability and governance boundaries only. They are not connectors, API clients, permission grants, credential stores, automatic scanners, background sync jobs, release tools, or automatic write access.
 
 Capability Inventory profiles are AI judgement inputs. They must not become `keyword_map`, `domain_map`, `role_map`, or any deterministic semantic route. Do not store credentials, private tokens, API keys, cookies, passwords, or secrets in copied profiles.

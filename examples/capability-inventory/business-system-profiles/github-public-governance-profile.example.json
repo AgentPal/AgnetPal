@@ -1,0 +1,85 @@
+{
+  "schema": "agentpal.capability-inventory.business-system-profile.example.v0.4",
+  "profile_type": "business-system",
+  "id": "github-public-governance-example",
+  "name": "GitHub Public Governance Example",
+  "system_type": "source-control-and-collaboration",
+  "description": "Public-safe example for recording GitHub governance boundaries. This is not a connector, API client, credential store, permission grant, release tool, scan result, or automatic execution path.",
+  "status": "example",
+  "source": {
+    "method": "example",
+    "confirmed_by": "example",
+    "last_checked": "unknown",
+    "confidence": "example_only"
+  },
+  "example_scope": {
+    "organization": "example-org",
+    "repository": "example-org/example-repo",
+    "private_repository": false,
+    "real_account": false
+  },
+  "access": {
+    "access_method": "host-runtime-or-user-provided-context",
+    "requires_user_approval": true,
+    "requires_credentials": "depends_on_host_runtime",
+    "credential_policy": "Do not store GitHub tokens, passwords, API keys, cookies, private keys, session values, or secrets in this profile."
+  },
+  "required_permissions": [
+    "unknown until user approval and host Runtime evidence confirm the task scope"
+  ],
+  "allowed_operations": [
+    "Read public repository metadata when user-approved and current host Runtime evidence confirms access.",
+    "Read public issue or pull request metadata when user-approved and current host Runtime evidence confirms access.",
+    "Use public-safe repository facts as AI judgement input for approval and verification planning."
+  ],
+  "forbidden_operations": [
+    "Do not write issues, comments, labels, branches, commits, tags, releases, secrets, settings, or permissions without explicit user approval and current host Runtime evidence.",
+    "Do not delete or modify repository data from this profile.",
+    "Do not read private repositories, private organization data, or secrets from this example.",
+    "Do not treat this profile as a GitHub connector, API client, background sync job, scanner, validator, or release automation."
+  ],
+  "external_writes": {
+    "allowed_without_explicit_user_approval": false,
+    "requires_current_runtime_evidence": true,
+    "requires_task_specific_scope": true,
+    "notes": "A release, tag, issue edit, repository setting change, or any other external write requires explicit user approval and execution evidence outside this profile."
+  },
+  "routing_boundary": {
+    "use_as_ai_judgement_input_only": true,
+    "keyword_routing_allowed": false,
+    "deterministic_routing_allowed": false,
+    "business_system_type_is_not_a_route": true,
+    "do_not_route_to_pal_runtime_skill_plugin_or_mcp_by_system_type": true
+  },
+  "project_relationship": {
+    "organization_record_location": "workspace/organization/capability-inventory/",
+    "project_record_location_pattern": "workspace/projects/<project-id>/capability-inventory/",
+    "external_project_binding_records_created_by_default": false,
+    "external_agentpal_capability_inventory_created_by_default": false,
+    "external_agentpal_business_systems_created_by_default": false
+  },
+  "verification": {
+    "verified": [
+      "This file is a public-safe example with placeholder repository example-org/example-repo."
+    ],
+    "not_run": [
+      "No GitHub API call was made.",
+      "No connector, token, Release, tag, issue, pull request, repository setting, or secret was accessed."
+    ],
+    "missing": [
+      "Real repository access, permissions, and write capability require task-specific user approval and host Runtime evidence."
+    ],
+    "last_checked": "unknown"
+  },
+  "unknown_fields": [
+    "real_user_account",
+    "real_organization_membership",
+    "private_repository_access",
+    "write_permissions",
+    "release_permissions",
+    "secret_access",
+    "rate_limits",
+    "installed_github_app_or_cli_auth"
+  ]
+}
+

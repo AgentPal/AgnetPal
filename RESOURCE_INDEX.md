@@ -102,9 +102,12 @@ Use:
 | `workspace/projects/_template/capability-inventory/` | project-level capability inventory record template | central project record template work |
 | `examples/capability-inventory/` | illustrative capability profile examples | examples and regression checks |
 | `templates/capability-inventory/` | copyable Capability Inventory JSON profile templates | selected template work |
+| `standards/capability-inventory/business-system-profile-standard.md` | Business System profile standard and boundaries | business-system profile governance, project record relationship checks |
 | `templates/capability-inventory/business-system-profile-template.json` | Business System capability profile template for external system governance boundaries | business-system profile template work or release checks |
+| `examples/capability-inventory/business-system-profiles/` | public-safe Business System profile examples | example shape and no-connector boundary checks |
 | `docs/03-user-guides/manual-capability-profile.md` | manual Capability Inventory profile guide | adding no-code manual or semi-manual capability profiles |
 | `evals/palbench/capability-inventory/r82-manual-profile-guide-compliance.md` | Manual Profile Guide compliance regression | Capability Inventory boundary checks |
+| `evals/palbench/capability-inventory/r83-project-record-relationship-boundary.md` | Business System project relationship regression | organization/project record and thin binding boundary checks |
 | `archive/migration-from-v0.3/root-legacy/capability-inventory/root-pointers/` | archived R78 root compatibility pointers | legacy path questions and migration audits |
 | `workspace/resources/imports/` | public-safe import staging placeholders | import/resource boundary work |
 | `workspace/organization/memory/` | public-safe organization memory placeholders and examples | memory protocol or placeholder work |
@@ -209,6 +212,7 @@ Capability Inventory is a no-code profile layer. It is not an automatic scanner,
 | Path | Purpose |
 | --- | --- |
 | `standards/capability-inventory/` | standards, matrices, protocols, and profile rules |
+| `standards/capability-inventory/business-system-profile-standard.md` | Business System profile standard for external system governance boundaries |
 | `docs/05-orchestration-methodology/capability-inventory-minimal-usable-design.md` | minimal usable design for manual profile records |
 
 ### Capability Inventory Templates
@@ -223,6 +227,8 @@ Capability Inventory is a no-code profile layer. It is not an automatic scanner,
 | Path | Purpose |
 | --- | --- |
 | `examples/capability-inventory/` | illustrative examples only, not proof of current availability |
+| `examples/capability-inventory/business-system-profiles/` | public-safe Business System profile examples, not connectors or credentials |
+| `examples/capability-inventory/business-system-profiles/github-public-governance-profile.example.json` | GitHub governance example using placeholder `example-org/example-repo` |
 
 ### Organization Capability Records
 
@@ -237,6 +243,7 @@ Capability Inventory is a no-code profile layer. It is not an automatic scanner,
 | `workspace/projects/_template/capability-inventory/` | project-level record template; real records live under `workspace/projects/<project-id>/capability-inventory/` and are private by default |
 | `docs/03-user-guides/manual-capability-profile.md` | manual flow for choosing a profile type, copying a template, marking source/confidence, and saving to the right central record |
 | `evals/palbench/capability-inventory/r82-manual-profile-guide-compliance.md` | compliance regression for manual profiles, Business System profile boundary, project record relationship, and no auto scan / no keyword routing rules |
+| `evals/palbench/capability-inventory/r83-project-record-relationship-boundary.md` | regression for organization/project record relationship, thin binding, no connector, no credentials, and no keyword routing |
 
 ### Historical Migration Notes
 
@@ -312,6 +319,9 @@ Use the current docs directories as the public entry points. Archived research n
 | --- | --- |
 | `docs/05-orchestration-methodology/README.md` | current Pal Orchestration Methodology entry |
 | `docs/05-orchestration-methodology/capability-inventory-minimal-usable-design.md` | v0.2 minimal manual Capability Inventory profile design |
+| `standards/capability-inventory/business-system-profile-standard.md` | Business System profile standard for no-code external system governance |
+| `examples/capability-inventory/business-system-profiles/github-public-governance-profile.example.json` | public-safe GitHub Business System profile example using `example-org/example-repo` |
+| `evals/palbench/capability-inventory/r83-project-record-relationship-boundary.md` | Business System profile relationship and thin-binding regression |
 | `docs/05-orchestration-methodology/deep-conductor-master-goal.md` | Deep Conductor master goal and no-code 12-step loop |
 | `docs/05-orchestration-methodology/deep-conductor-master-loop-usage-guide.md` | Deep Conductor usage guide for project-level no-code coordination |
 | `docs/05-orchestration-methodology/deep-conductor-e2e-usage-guide.md` | Deep Conductor E2E usage guide for integrated no-code project-level closure |

@@ -29,6 +29,12 @@ standards/capability-inventory/
 
 Use standards to understand which fields and boundaries a profile should follow.
 
+For Business System profiles, use:
+
+```text
+standards/capability-inventory/business-system-profile-standard.md
+```
+
 ## Where Templates Live
 
 Copyable templates live in:
@@ -141,7 +147,7 @@ Do not claim availability unless confirmed.
 
 Use Business System profiles for external systems such as GitHub, Feishu, Notion, CRM, Jira, Linear, WordPress, ERP, OA, databases, or customer-specific tools.
 
-A Business System profile records capability notes and governance boundaries only. It is not a connector, API client, permission grant, credential store, or automatic execution path.
+A Business System profile records capability notes and governance boundaries only. It is not a connector, API client, permission grant, credential store, automatic scanner, automatic validator, background sync job, release tool, or automatic execution path.
 
 Business System profiles should record only confirmed or user-approved facts, such as:
 
@@ -161,7 +167,7 @@ If availability, permissions, write access, API access, or output destinations a
 
 Do not store credentials, private tokens, passwords, API keys, session cookies, or private secrets in Business System profiles.
 
-External writes to business systems require explicit user authorization and current host Runtime evidence. The profile may inform AI judgement, but it must not trigger writes or routing by itself.
+External writes to business systems require explicit user authorization and current host Runtime evidence. The profile may inform AI judgement, but it must not trigger writes or routing by itself. A system name or `system_type` must not become a keyword route to a Pal, Runtime, Skill, plugin, MCP server, or external tool.
 
 ## Step 6: Save To The Right Place
 
@@ -177,7 +183,7 @@ Use project records for capability notes specific to a bound external project:
 workspace/projects/<project-id>/capability-inventory/
 ```
 
-Do not copy profile records into the external user project's `.agentpal/` directory by default.
+Do not copy profile records into the external user project's `.agentpal/` directory by default. Do not create `.agentpal/capability-inventory/` or `.agentpal/business-systems/` during thin binding unless a future user-approved workflow explicitly changes that boundary.
 
 Do not store credentials, private tokens, API keys, session cookies, private customer data, or secret machine paths in Capability Inventory records.
 

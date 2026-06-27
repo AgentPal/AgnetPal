@@ -4,7 +4,7 @@ This directory is the central AgentPal organization location for current capabil
 
 It may hold public-safe runtime, model, reasoning, Skill, plugin, MCP, business-system, and usage-memory placeholders or maintained records. It is not an automatic scan result and does not prove any capability is available in a host runtime.
 
-Business-system records describe external system governance boundaries only. They do not implement connectors, store credentials, grant permissions, or authorize external writes.
+Business-system records describe external system governance boundaries only. They do not implement connectors, API clients, background sync jobs, scanners, release tools, store credentials, grant permissions, route by keywords, or authorize external writes.
 
 Records here may be maintained manually by a user, organized by a Pal from user-confirmed facts, or updated from current host Runtime evidence. Unconfirmed fields should be marked `unknown`; do not invent model access, installed plugins, Skill availability, business-system permissions, or runtime controls.
 
@@ -17,7 +17,9 @@ Capability Inventory records are AI judgement inputs only. They must not become 
 Related sources:
 
 - Standards: `standards/capability-inventory/`
+- Business System standard: `standards/capability-inventory/business-system-profile-standard.md`
 - Examples: `examples/capability-inventory/`
+- Business System examples: `examples/capability-inventory/business-system-profiles/`
 - Templates: `templates/capability-inventory/`
 - Business System template: `templates/capability-inventory/business-system-profile-template.json`
 - Project record template: `workspace/projects/_template/capability-inventory/`

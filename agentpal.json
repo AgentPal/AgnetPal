@@ -462,7 +462,9 @@
         "index",
         "pals",
         "workflows",
-        "evals"
+        "evals",
+        "capability-inventory",
+        "business-systems"
       ]
     },
     "read_core_from_agentpal_workspace": true,
@@ -576,8 +578,11 @@
     "project_record_template": "workspace/projects/_template/capability-inventory/",
     "project_record_path_pattern": "workspace/projects/<project-id>/capability-inventory/",
     "manual_profile_guide": "docs/03-user-guides/manual-capability-profile.md",
+    "business_system_profile_standard": "standards/capability-inventory/business-system-profile-standard.md",
     "business_system_profile_template": "templates/capability-inventory/business-system-profile-template.json",
+    "business_system_profile_examples": "examples/capability-inventory/business-system-profiles/",
     "manual_profile_compliance_eval": "evals/palbench/capability-inventory/r82-manual-profile-guide-compliance.md",
+    "project_record_relationship_eval": "evals/palbench/capability-inventory/r83-project-record-relationship-boundary.md",
     "navigation": "docs/00-overview/capability-inventory-navigation.md",
     "auto_scan": false,
     "auto_discovery": false,
@@ -585,7 +590,9 @@
     "keyword_routing_allowed": false,
     "unknown_fields_must_remain_unknown": true,
     "credentials_allowed": false,
-    "external_projects_copy_records_by_default": false
+    "external_projects_copy_records_by_default": false,
+    "external_projects_create_capability_inventory_by_default": false,
+    "external_projects_create_business_systems_by_default": false
   },
   "capabilities": [
     "pal-discovery",
@@ -657,8 +664,11 @@
     "project_capability_inventory_template": "workspace/projects/_template/capability-inventory",
     "capability_inventory_examples": "examples/capability-inventory",
     "capability_inventory_templates": "templates/capability-inventory",
+    "business_system_profile_standard": "standards/capability-inventory/business-system-profile-standard.md",
     "business_system_profile_template": "templates/capability-inventory/business-system-profile-template.json",
+    "business_system_profile_examples": "examples/capability-inventory/business-system-profiles",
     "manual_profile_compliance_eval": "evals/palbench/capability-inventory/r82-manual-profile-guide-compliance.md",
+    "project_record_relationship_eval": "evals/palbench/capability-inventory/r83-project-record-relationship-boundary.md",
     "manual_capability_profile_guide": "docs/03-user-guides/manual-capability-profile.md",
     "capability_inventory_legacy_archive": "archive/migration-from-v0.3/root-legacy/capability-inventory",
     "capability_inventory_root_pointers_archive": "archive/migration-from-v0.3/root-legacy/capability-inventory/root-pointers",

@@ -10,7 +10,7 @@ It is not an automatic scanner, validator, installer, sync service, or keyword r
 | --- | --- | --- |
 | Standards | `standards/capability-inventory/` | Reusable rules, matrices, protocols, and profile standards. |
 | Current organization records | `workspace/organization/capability-inventory/` | Public-safe current organization placeholders and maintained capability notes. |
-| Examples | `examples/capability-inventory/` | Synthetic example profiles and task judgement examples. |
+| Examples | `examples/capability-inventory/` | Synthetic example profiles and task judgement examples, including public-safe Business System examples. |
 | Templates | `templates/capability-inventory/` | Copyable JSON profile templates, including `business-system-profile-template.json`. |
 | Project record template | `workspace/projects/_template/capability-inventory/` | Template for per-project capability records under central project records. |
 | Historical archive | `archive/migration-from-v0.3/root-legacy/capability-inventory/` | R78/R79/R80 migration evidence and archived legacy pointers. |
@@ -31,9 +31,15 @@ Manual profile rules:
 - do not copy profile records into external user projects by default
 - use Business System profiles only as external system governance inputs, not connectors or automatic write access
 
+## Business System Profiles
+
+Use `standards/capability-inventory/business-system-profile-standard.md` for the Business System profile rules. Use `templates/capability-inventory/business-system-profile-template.json` as the reusable JSON shape and `examples/capability-inventory/business-system-profiles/` for public-safe examples.
+
+Business System records can describe GitHub, Feishu, Notion, CRM, Jira, Linear, OA, ERP, databases, and customer-specific tools, but only as governance notes and AI judgement inputs. They are not connectors, API clients, credential stores, permission grants, automatic scanners, background sync jobs, release tools, write access, or keyword routes.
+
 ## External Project Boundary
 
-External user projects remain thin-bound. Do not copy standards, examples, templates, Pal Packs, central contacts, memory, reports, workflows, or capability inventory directories into the external project by default.
+External user projects remain thin-bound. Do not copy standards, examples, templates, Pal Packs, central contacts, memory, reports, workflows, capability inventory directories, or business-system directories into the external project by default.
 
 Project-specific capability findings belong under:
 
@@ -47,7 +53,7 @@ The template for that central project record area is:
 workspace/projects/_template/capability-inventory/
 ```
 
-The external project should keep only binding entrypoints such as `.agentpal/project.json`, `.agentpal/AGENTPAL.md`, and protected root instruction blocks.
+The external project should keep only binding entrypoints such as `.agentpal/project.json`, `.agentpal/AGENTPAL.md`, and protected root instruction blocks. It should not receive `.agentpal/capability-inventory/` or `.agentpal/business-systems/` by default.
 
 ## Routing Boundary
 
@@ -72,6 +78,14 @@ evals/palbench/capability-inventory/r82-manual-profile-guide-compliance.md
 ```
 
 It checks the manual guide, Business System template, project record template, and metadata for no auto scan, no keyword routing, no credentials, unknown-stays-unknown, organization/project separation, and thin external project boundaries.
+
+The Business System project relationship regression lives at:
+
+```text
+evals/palbench/capability-inventory/r83-project-record-relationship-boundary.md
+```
+
+It checks the Business System standard, public-safe GitHub example, organization/project record relationship, thin binding boundary, no connector, no credentials, and no keyword routing.
 
 ## Legacy Path Notes
 

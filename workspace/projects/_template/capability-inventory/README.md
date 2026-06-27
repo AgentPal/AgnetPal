@@ -42,11 +42,11 @@ workspace/organization/contacts/
 
 ## Boundary
 
-The external user project should not receive a default `.agentpal/capability-inventory/` directory.
+The external user project should not receive a default `.agentpal/capability-inventory/` or `.agentpal/business-systems/` directory.
 
 Real project records under `workspace/projects/<project-id>/` are private by default and ignored unless explicitly promoted as public-safe examples.
 
-This is a no-code record. It does not imply automatic scanning, automatic discovery, automatic execution, automatic scoring, or keyword routing.
+This is a no-code record. It does not imply automatic scanning, automatic discovery, automatic execution, automatic scoring, connector setup, API client setup, background sync, release automation, or keyword routing.
 
 Do not store credentials, private tokens, API keys, session cookies, or project secrets here.
 

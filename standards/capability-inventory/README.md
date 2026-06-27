@@ -8,9 +8,11 @@ R78 moved low-risk standard-like content here from the legacy root `capabilities
 
 Current examples live in `examples/capability-inventory/`. Current organization records live in `workspace/organization/capability-inventory/`. Copyable JSON profile templates live in `templates/capability-inventory/`, including `templates/capability-inventory/business-system-profile-template.json`. Project-level record templates live in `workspace/projects/_template/capability-inventory/`.
 
+Business System profile rules live in `standards/capability-inventory/business-system-profile-standard.md`. Public-safe Business System examples live in `examples/capability-inventory/business-system-profiles/`.
+
 For manual profile creation, use `docs/03-user-guides/manual-capability-profile.md`. Fill only confirmed information, mark unknown fields as `unknown`, and keep credentials or private tokens out of profile records.
 
-Business System profiles are external system governance inputs only. They do not implement API calls, store credentials, grant permissions, or authorize external writes.
+Business System profiles are external system governance inputs only. They do not implement API calls, store credentials, grant permissions, authorize external writes, create connectors, run scanners, execute background sync, or route by keywords.
 
 For the full source map, see `docs/00-overview/capability-inventory-navigation.md`.
 
