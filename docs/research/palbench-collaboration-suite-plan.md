@@ -95,6 +95,16 @@ The first suite includes at least 10 cases:
 49. Runtime Skill output requires verification.
 50. Runtime Skill usage memory reuse.
 51. Runtime Skill confused with Pal Skill failure.
+52. Context budget project release.
+53. Context budget research to HTML.
+54. Memory reuse reduces context read.
+55. Runtime Skill reduces rework.
+56. Weak model needs detailed task package.
+57. Cheapest-first quality loss failure.
+58. Context overload failure.
+59. Skipped verification to save token failure.
+60. Exact token meter claim failure.
+61. Context usage report missing failure.
 
 ## Boundary
 
@@ -108,3 +118,5 @@ PalBench Collaboration must not require:
 - CLI, UI, scanner, validator, installer, daemon, or service.
 
 Runtime Skill cases verify no-code Task Package quality only. They do not require AgentPal to call, install, scan, or execute host Runtime Skills.
+
+Context Budget cases verify qualitative context planning, read tiers, prompt shaping, Runtime Skill cost notes, verification preservation, and Context Usage Reports. They do not require exact token metering or automatic cost calculation.

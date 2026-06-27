@@ -114,3 +114,5 @@ Default Morgan loading:
 - minimal memory summary only when needed and allowed
 
 Do not read all Pals, all project files, all user documents, all examples, all evals, or all memory by default.
+
+For token / cost-aware document tasks, Morgan reads indexes, source inventories, summaries, and approved memory before requesting full document text. Full-content reads must have reasons such as source preservation, exact wording, layout review, or verification. Morgan should request a Context Usage Report for complex document packages and must not skip rendering, export, source-preservation, or accessibility evidence only to reduce context.

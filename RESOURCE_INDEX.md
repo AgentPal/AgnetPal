@@ -97,6 +97,7 @@ Use:
 | `docs/05-orchestration-methodology/deep-conductor-master-loop-usage-guide.md` | Deep Conductor master loop usage guide | project goal to task map, Runtime packages, verification, synthesis, and memory writeback |
 | `docs/05-orchestration-methodology/cross-runtime-pal-memory.md` | Cross-Runtime Pal Memory usage guide | no-code continuity across Codex, Claude Code, generic CLI, and other host Runtimes |
 | `docs/05-orchestration-methodology/runtime-installed-skill-orchestration-guide.md` | Runtime-installed Skill Orchestration guide | no-code Runtime Skill candidate selection, availability checks, fallback, verification, and usage memory |
+| `docs/05-orchestration-methodology/token-cost-aware-deep-conductor.md` | Token / Cost-aware Deep Conductor guide | no-code Context Budget, read tier, prompt shaping, verification cost, and usage report guidance |
 | `docs/05-orchestration-methodology/context-packet-usage-guide.md` | Context Packet usage guide | user and maintainer guide for `/pal`, `@Pal`, consult, handoff, review, owner transfer, privacy, and runtime adapter usage |
 | `docs/05-orchestration-methodology/owner-verifier-usage-guide.md` | Owner + Verifier usage guide | no-code owner/verifier workflow, independent evidence context, result records, and repair package guidance |
 | `docs/05-orchestration-methodology/parallel-independent-review-usage-guide.md` | Parallel Independent Review usage guide | no-code isolated reviewer workflow, reviewer packets, final reports, synthesis, and group-chat collapse prevention |
@@ -211,6 +212,8 @@ Do not load all Pal directories by default. Load Mira for ordinary entry and the
 - `orchestration/pal-skill-vs-runtime-skill-protocol.md`
 - `orchestration/runtime-skill-candidate-decision-protocol.md`
 - `orchestration/token-cost-aware-conductor-policy.md`
+- `orchestration/context-budget-protocol.md`
+- `orchestration/prompt-shaping-by-model-and-reasoning.md`
 - `memory/runtime/cross-runtime-pal-memory-protocol.md`
 - `orchestration/pal-owned-skill-storage-protocol.md`
 - `orchestration/specialist-pal-asset-loading-protocol.md`
@@ -226,6 +229,7 @@ Use the current docs directories as the public entry points. Archived research n
 | `docs/05-orchestration-methodology/deep-conductor-master-goal.md` | Deep Conductor master goal and no-code 12-step loop |
 | `docs/05-orchestration-methodology/deep-conductor-master-loop-usage-guide.md` | Deep Conductor usage guide for project-level no-code coordination |
 | `docs/05-orchestration-methodology/cross-runtime-pal-memory.md` | Cross-Runtime Pal Memory guide for preserving Pal/project/routing continuity across host Runtimes |
+| `docs/05-orchestration-methodology/token-cost-aware-deep-conductor.md` | Token / Cost-aware Deep Conductor guide for qualitative Context Budget planning |
 | `docs/05-orchestration-methodology/00-methodology-overview.md` | current methodology overview |
 | `docs/05-orchestration-methodology/11-pal-teams-and-deep-conductor.md` | Pal Team and future Deep Conductor relationship |
 | `docs/06-validation-and-evidence/README.md` | current validation and PalBench entry |
@@ -242,6 +246,8 @@ Use the current docs directories as the public entry points. Archived research n
 | `orchestration/pal-skill-vs-runtime-skill-protocol.md` | Pal-owned Skill and Runtime-installed Skill separation |
 | `orchestration/runtime-skill-candidate-decision-protocol.md` | Runtime Skill candidate decision, availability, fallback, verification, and usage memory protocol |
 | `orchestration/token-cost-aware-conductor-policy.md` | token, cost, context, profile, memory, model, and verification policy |
+| `orchestration/context-budget-protocol.md` | qualitative Context Budget Plan, read tiers, escalation, stop / ask-user conditions, and usage reporting |
+| `orchestration/prompt-shaping-by-model-and-reasoning.md` | no-code prompt shaping guidance for strong, medium, and economy / weak model or reasoning candidates |
 | `memory/runtime/cross-runtime-pal-memory-protocol.md` | cross-runtime Pal memory continuity protocol |
 | `orchestration/capability-inventory-protocol.md` | runtime/model/skill/plugin/MCP/Pal profile design |
 | `orchestration/task-judgement-protocol.md` | structured task judgement design |
@@ -256,7 +262,7 @@ Use the current docs directories as the public entry points. Archived research n
 | `orchestration/pal-isolation-and-shared-memory-protocol.md` | isolation and shared memory design |
 | `orchestration/routing-reward-memory-protocol.md` | routing outcome memory design |
 | `capabilities/` | capability profile notes and illustrative examples |
-| `templates/orchestration/` | task judgement, workflow, access list, project conductor task map, Deep Conductor plan, next-round runtime package, cross-runtime continuation package, conductor decision record, Runtime Skill-aware task package, context budget plan, verifier context packet, reviewer context packet, final report, synthesis, result record, routing, and verification templates |
+| `templates/orchestration/` | task judgement, workflow, access list, project conductor task map, Deep Conductor plan, next-round runtime package, cross-runtime continuation package, conductor decision record, Runtime Skill-aware task package, context budget plan, context usage report, verifier context packet, reviewer context packet, final report, synthesis, result record, routing, and verification templates |
 | `templates/memory/` | Pal Project Memory Snapshot, Routing Memory Record, and Runtime Skill Usage Memory Record templates |
 | `templates/capabilities/` | profile templates |
 | `templates/research/` | PalBench result template |

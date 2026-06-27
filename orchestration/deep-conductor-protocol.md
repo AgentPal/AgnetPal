@@ -15,7 +15,7 @@ Deep Conductor uses 12 operational steps:
 5. Runtime Skill / Plugin / MCP Awareness.
 6. Workflow Topology Selection.
 7. Context Access Planning.
-8. Prompt Shaping and Token Budgeting.
+8. Prompt Shaping and Context Budgeting.
 9. Runtime Task Package Generation.
 10. Verification Planning.
 11. Synthesis and User-facing Explanation.
@@ -272,37 +272,48 @@ Eval:
 
 - `evals/orchestration/token-budget-in-conductor-self-test.md`
 
-## Step 8: Prompt Shaping and Token Budgeting
+## Step 8: Prompt Shaping and Context Budgeting
 
 Purpose: adapt the package to the candidate Runtime / model / reasoning / Skill profile while protecting verification quality.
 
 Read:
 
 - `orchestration/token-cost-aware-conductor-policy.md`;
+- `orchestration/context-budget-protocol.md`;
+- `orchestration/prompt-shaping-by-model-and-reasoning.md`;
 - `templates/orchestration/context-budget-plan.md`;
+- `templates/orchestration/context-usage-report.md`;
 - relevant model and reasoning profiles if needed.
 
 Output:
 
 - context budget plan;
+- read tier and escalation reason;
 - profile read count;
-- reasoning candidate;
+- model / reasoning candidate;
 - prompt shaping notes.
+- expected Context Usage Report.
 
 Do not:
 
 - skip required evidence to save tokens;
+- claim exact token or cost counts without host-provided metering;
+- treat model / reasoning candidates as automatic selectors;
 - use memory as proof of current state;
 - forward unnecessary files.
 
 Templates:
 
 - `templates/orchestration/context-budget-plan.md`
+- `templates/orchestration/context-usage-report.md`
 - `templates/orchestration/deep-conductor-plan.md`
 
 Eval:
 
-- `evals/orchestration/token-budget-in-conductor-self-test.md`
+- `evals/orchestration/context-budget-plan-self-test.md`
+- `evals/orchestration/context-read-tier-self-test.md`
+- `evals/orchestration/prompt-shaping-by-model-self-test.md`
+- `evals/orchestration/context-usage-report-self-test.md`
 
 ## Step 9: Runtime Task Package Generation
 

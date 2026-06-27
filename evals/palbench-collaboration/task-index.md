@@ -53,5 +53,15 @@
 | PBC-049 | `PBC-049-runtime-skill-output-requires-verification.md` | Runtime Skill output requires verification |
 | PBC-050 | `PBC-050-runtime-skill-usage-memory-reuse.md` | Runtime Skill usage memory reuse |
 | PBC-051 | `PBC-051-runtime-skill-confused-with-pal-skill-failure.md` | Runtime Skill confused with Pal Skill failure |
+| PBC-052 | `PBC-052-context-budget-project-release.md` | Context budget project release |
+| PBC-053 | `PBC-053-context-budget-research-to-html.md` | Context budget research to HTML |
+| PBC-054 | `PBC-054-memory-reuse-reduces-context-read.md` | Memory reuse reduces context read |
+| PBC-055 | `PBC-055-runtime-skill-reduces-rework.md` | Runtime Skill reduces rework |
+| PBC-056 | `PBC-056-weak-model-needs-detailed-task-package.md` | Weak model needs detailed task package |
+| PBC-057 | `PBC-057-cheapest-first-quality-loss-failure.md` | Cheapest-first quality loss failure |
+| PBC-058 | `PBC-058-context-overload-failure.md` | Context overload failure |
+| PBC-059 | `PBC-059-skipped-verification-to-save-token-failure.md` | Skipped verification to save token failure |
+| PBC-060 | `PBC-060-exact-token-meter-claim-failure.md` | Exact token meter claim failure |
+| PBC-061 | `PBC-061-context-usage-report-missing-failure.md` | Context usage report missing failure |
 
 All cases are no-code regression cases. None requires automatic Deep Conductor execution, Subagents, external Agents, or multiple runtimes.

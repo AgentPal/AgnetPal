@@ -32,10 +32,24 @@ alternatives_rejected:
   - alternative: ""
     reason: ""
 token_cost_considerations:
+  context_budget_plan: ""
+  read_tier:
+    initial: 1
+    max: 4
+    used: []
+  prompt_shaping_notes: []
+  model_or_reasoning_candidate:
+    model: ""
+    reasoning: ""
+    reason: ""
+  cost_sensitivity: ""
+  quality_target: ""
   context_read_count: 0
   profile_read_count: 0
   memory_used: false
   budget_reason: ""
+  verification_cost_reason: ""
+  context_usage_report_required: true
 memory_basis:
   - source: ""
     lesson: ""
@@ -73,4 +87,7 @@ privacy_review:
 - Current Runtime evidence must be separated from memory.
 - Cross-runtime memory preserves continuity but does not prove the current Runtime has the same tools, Skills, or permissions.
 - Runtime Skill Usage Memory records host Runtime experience. It must not be recorded as a Pal-owned Skill.
+- Token / cost notes are qualitative unless the host Runtime provides exact metering.
+- Model and reasoning candidates are not automatic selectors.
+- Verification cost is necessary quality cost; missing evidence must remain visible.
 - Private project facts, secrets, local absolute paths, and raw chat history must not be written into public records.

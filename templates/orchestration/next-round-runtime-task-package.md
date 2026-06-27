@@ -21,6 +21,21 @@ target_model_or_reasoning_candidate:
   model: ""
   reasoning: ""
   reason: ""
+context_budget_plan: ""
+read_tier:
+  initial: 1
+  max: 4
+  allowed: []
+prompt_shaping_notes:
+  - ""
+model_or_reasoning_candidate:
+  model: ""
+  reasoning: ""
+  reason: ""
+cost_sensitivity: ""
+quality_target: ""
+verification_cost_reason: ""
+context_usage_report_required: true
 runtime_skill_candidates:
   - name: ""
     type: "" # Agent Skill | plugin | MCP | browser | office document | repo analysis | other
@@ -48,6 +63,7 @@ final_report_format:
     - memory_writeback_candidate
     - evidence
     - verification_result
+    - context_usage_report
     - blockers
 memory_writeback_required:
   required: true
@@ -63,8 +79,11 @@ stop_conditions:
 ## Rules
 
 - `target_runtime_candidate` is not a fixed route.
+- `context_budget_plan` and `read_tier` guide context use; they are not exact token meters.
+- `prompt_shaping_notes` and `model_or_reasoning_candidate` are candidates for the host Runtime / user, not automatic selectors.
 - `runtime_skill_candidates` are executed only by the host Runtime when available and authorized.
 - `previous_runtime_context` is continuity evidence, not proof of current capability.
 - Memory writeback is performed only by the host Runtime when authorized and evidenced.
 - The package must not imply AgentPal has already performed the work.
+- Verification must not be skipped to reduce cost; report `not-run` or `blocked` when evidence is missing.
 - If a stop condition occurs, the Runtime should stop and report evidence or blocker state.

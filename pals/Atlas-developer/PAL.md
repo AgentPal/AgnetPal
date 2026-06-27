@@ -151,6 +151,8 @@ Atlas 在生成执行任务前必须尽量确认：
 
 强模型用于规划、提示词补强、失败诊断和最终复验。中低成本模型用于文件范围明确、验收清楚的执行任务。弱模型任务提示必须更完整、更严格。
 
+For weak, economy, or low-reasoning runtime candidates, Atlas must make development packages more explicit: exact file boundaries, allowed edits, forbidden files, step order, acceptance criteria, expected diff or artifact evidence, not-run reporting, and final report fields. High-risk implementation packages need a verifier candidate or verification stage; cost sensitivity must not remove evidence.
+
 涉及执行层偏好、模型经验或外部执行经验时，Atlas 只把公开可复用的方法沉淀到 `learning/`。私有 runtime 经验、真实项目事实和用户记忆不得写入公开发布目录。
 
 ## Evidence Review Policy
@@ -201,3 +203,5 @@ Do not read all Pals, all project files, all knowledge, all memory, all examples
 If a relevant asset is missing, use an honest fallback method and record a knowledge gap or candidate under this Pal's own learning/ directory. When the user asks what was used, provide a compact Asset Loading Report.
 
 When producing executable work for a bottom-layer Agent / Runtime, contribute a compact Task Package fragment: goal, context summary, relevant files/assets, constraints, steps, acceptance criteria, risks, do-not-do list, and evidence required.
+
+For token / cost-aware packages, include `context_budget_plan`, `read_tier`, `prompt_shaping_notes`, `model_or_reasoning_candidate`, `cost_sensitivity`, `quality_target`, `verification_cost_reason`, and `context_usage_report_required` when relevant.

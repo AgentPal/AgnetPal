@@ -23,6 +23,17 @@ host_runtime_candidate:
   name: ""
   reason: ""
   availability_evidence_required: true
+context_budget_plan: ""
+read_tier:
+  initial: 1
+  max: 4
+  allowed: []
+model_or_reasoning_candidate:
+  model: ""
+  reasoning: ""
+  reason: ""
+cost_sensitivity: ""
+quality_target: ""
 runtime_skill_candidates:
   - name: ""
     type: "" # Agent Skill | plugin | MCP | browser | office document | repo analysis | other
@@ -51,8 +62,10 @@ prompt_shaping_notes:
   model_notes: ""
   reasoning_notes: ""
   skill_notes: ""
+verification_cost_reason: ""
 verification_requirements:
   - ""
+context_usage_report_required: true
 expected_outputs:
   - ""
 final_report_required:
@@ -64,6 +77,7 @@ final_report_required:
     - availability_check_result
     - fallback_used
     - verification_results
+    - context_usage_report
     - blockers
 runtime_skill_usage_memory_writeback:
   required: true
@@ -92,3 +106,7 @@ Use this template when a task may benefit from a host Runtime Skill, plugin, MCP
 The package must not imply that AgentPal owns, installs, invokes, or verifies the Skill by itself.
 
 The host Runtime performs availability checks and execution. The Pal layer prepares the package, separates capability types, and verifies returned evidence.
+
+`context_budget_plan`, `read_tier`, `prompt_shaping_notes`, and `model_or_reasoning_candidate` are no-code planning fields. They guide bounded execution and must not be treated as exact token metering or automatic model routing.
+
+Verification must not be skipped to reduce Runtime Skill or context cost. If a Skill is unavailable or evidence is missing, use the fallback and report `not-run`, `unknown`, `blocked`, or `fail` as appropriate.

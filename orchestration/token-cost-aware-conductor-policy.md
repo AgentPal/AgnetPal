@@ -1,81 +1,94 @@
 # Token / Cost-aware Conductor Policy
 
-AgentPal should conserve context and cost without weakening verification.
+This policy makes Deep Conductor context use auditable without turning AgentPal into a token meter, cost calculator, model router, scanner, validator, installer, service, or runtime program.
 
-This policy guides Mira, owner Pals, and Deep Conductor-style planning when deciding how much to read, which profiles to open, what model or reasoning strength to suggest, and when to reuse memory.
+Token / Cost-aware means the Conductor plans context, memory, profile reads, Runtime Skill candidates, prompt shape, and verification cost deliberately. It optimizes for useful evidence per context unit, not for the lowest immediate prompt size.
 
-## Reading Policy
+It is not `cheapest-first`. A cheaper model, lower reasoning strength, or shallower context tier is acceptable only when the task remains clear, bounded, and verifiable. If quality, safety, privacy, release readiness, or user trust would be harmed, Deep Conductor must spend more context or reasoning and explain why.
 
-Use index-only reading when:
+## Relationship To Deep Conductor Master Loop
 
-- the user asks for navigation, scope, or a file list;
-- the task only needs candidate discovery;
-- the current index already identifies the right file.
+This policy is applied mainly in Deep Conductor Step 2, Step 4, Step 5, Step 7, Step 8, Step 9, Step 10, and Step 12:
 
-Read full text when:
+- Step 2 reuses approved Pal memory and Routing Memory summaries before rereading old material.
+- Step 4 reads only relevant Capability Inventory profiles.
+- Step 5 treats Runtime-installed Skills as cost and rework reducers only after availability evidence.
+- Step 7 plans allowed and forbidden context.
+- Step 8 records the Context Budget Plan and prompt shaping notes.
+- Step 9 passes bounded context to the host Runtime.
+- Step 10 protects verification from cost-cutting.
+- Step 12 records Context Usage Report and Routing Memory candidates.
 
-- the file is an instruction, protocol, contract, or acceptance source for the current task;
-- a claim must be verified from exact wording;
-- the Runtime will edit or review that file.
+Deep Conductor remains no-code. The policy creates Markdown / JSON-readable plans and reports; it does not count exact tokens, calculate cost, choose models automatically, or run tools.
 
-Summarize first when:
+## Context Budget Concept
 
-- a large source may contain relevant sections but full reading would exceed the budget;
-- the task needs topic discovery before exact verification;
-- multiple long sources compete for attention.
+A Context Budget is a planned boundary for what may be read, summarized, reused, fully opened, verified, and excluded. It is qualitative and auditable.
 
-Reuse memory when:
+The default reading order is:
 
-- prior routing, user preference, or verification history is relevant;
-- the memory is fresh enough for the task risk;
-- the response states when memory is unverified or may be stale.
+1. Resource index.
+2. Pal memory snapshot.
+3. Routing Memory summary.
+4. Capability profiles.
+5. Selected source files or selected snippets.
+6. Full content only when necessary.
 
-## Model And Reasoning Policy
+This order prevents two common failures: reading everything before judgement, and under-reading evidence because token cost feels uncomfortable.
 
-Prefer a stronger model or higher reasoning when:
+## Model And Reasoning Strength Principles
 
-- ownership, safety, release, legal, security, or architecture risk is high;
-- multiple candidate routes conflict;
-- verification quality matters more than speed or cost;
-- a task has many dependencies or ambiguous acceptance criteria.
+Model and reasoning notes are candidates for the host Runtime or user. They are not automatic selectors.
 
-Prefer a lower-cost model or lower reasoning when:
+- Strong / high reasoning candidates fit ambiguous, high-risk, multi-stage, release, repair, or synthesis work.
+- Medium / medium reasoning candidates fit bounded planning, normal documentation, and known workflow packaging.
+- Economy / weak / low reasoning candidates fit narrow edits, extraction, checklist filling, or highly specified execution packages.
 
-- the task is mechanical, low-risk, and well-scoped;
-- acceptance criteria are explicit;
-- a verifier will review the output;
-- the work can be safely retried.
+Weak or economy candidates require more explicit prompts: file boundaries, steps, acceptance criteria, do-not-do items, and exact final report fields.
 
-Use a Runtime-installed Skill candidate when:
+## Runtime-installed Skill Cost Role
 
-- the host Runtime has current evidence that the Skill is available;
-- the Skill materially reduces manual context or tool work;
-- the Skill has clear inputs, outputs, and evidence requirements.
+Runtime-installed Skills, plugins, MCP tools, browser tools, repository-analysis tools, and document tools may reduce rework and context load when the host Runtime already has them and the package names them within scope.
 
-Do not use a Runtime-installed Skill merely because a profile exists.
+They must be treated as candidates. AgentPal does not scan, install, invoke, or own them. Availability evidence is separate from execution evidence, and execution evidence is separate from verification evidence.
 
-## Required Counts
+## Verification Is Not Optional
 
-Reports for conductor-shaped tasks should record:
+Verification must not be skipped to save tokens or cost. If verification is expensive, the plan records `verification_cost_reason` and chooses the smallest sufficient evidence path. If a check cannot run, report `not-run` or `blocked`; do not convert missing evidence into a pass.
 
-- `context_read_count`: number of files or artifacts actually opened for content;
-- `profile_read_count`: number of Capability Inventory or Runtime / Model / Skill / Plugin / MCP profiles actually opened;
-- `memory_used`: yes/no, with a short source description.
+## Required Artifacts
 
-Known-through-index paths are not content reads.
+Use these no-code artifacts when token / cost awareness matters:
 
-## Verification Boundary
+- `orchestration/context-budget-protocol.md`
+- `templates/orchestration/context-budget-plan.md`
+- `templates/orchestration/context-usage-report.md`
+- `orchestration/prompt-shaping-by-model-and-reasoning.md`
+- `templates/memory/routing-memory-record.md`
 
-Token savings cannot sacrifice verification quality.
+## Context Usage Report
 
-If a task needs exact evidence, read the exact evidence. If a check was skipped to save context or cost, report it as `not-run` with the reason.
+After a task or package returns evidence, record what context was actually used:
+
+- read tiers used;
+- index-known path count;
+- memory used;
+- profiles read;
+- summary sources and full-content files;
+- Runtime Skills used or not-run;
+- verification context used;
+- context saved by reuse;
+- quality tradeoffs;
+- missing context;
+- next-time recommendation.
+
+The report is not an exact token count. It is used by Routing Memory and PalBench to improve future judgement without becoming a fixed route.
 
 ## Anti-patterns
 
-Do not:
-
-- read all Pal Packs by default;
-- forward full chat history into every packet;
-- use memory as proof of current Runtime capability;
-- skip verification because the plan sounds plausible;
-- claim a Skill, plugin, or MCP was available without current evidence.
+- Cheapest-first selection that lowers quality or verification.
+- Reading the whole workspace before task judgement.
+- Treating memory as proof of current files, tools, or Runtime state.
+- Claiming exact token or cost numbers without host-provided metering.
+- Treating a model, Pal, Runtime, Skill, plugin, or MCP candidate as an automatic route.
+- Skipping verification, source checks, release checks, screenshots, tests, or evidence review to reduce context.

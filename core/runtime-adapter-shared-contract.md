@@ -33,6 +33,9 @@ An adapter must:
 - follow `orchestration/deep-conductor-protocol.md` and `orchestration/project-conductor-workflow.md` when a task package contains a Deep Conductor plan, project task map, or next-round Runtime task package
 - follow `docs/05-orchestration-methodology/cross-runtime-pal-memory.md` and `orchestration/memory-boundary-protocol.md` when a task continues across host Runtimes or uses memory snapshots
 - read Pal Project Memory Snapshot, Routing Memory summary, Runtime Skill Usage Memory, and Verification Memory when a task package names them and access is available
+- follow `orchestration/context-budget-protocol.md` when a task package includes a Context Budget Plan
+- respect read tier, allowed context, forbidden context, and tier escalation reasons instead of reading the whole AgentPal workspace
+- return a Context Usage Report when the package requests it
 - treat Runtime Skill-aware packages as host Runtime instructions that still require current availability and permission evidence
 - when a Runtime Skill-aware package names Skill, plugin, or MCP candidates, check the current host Runtime's available capabilities only within the package scope and report available / unavailable / unknown / blocked
 - if a named Runtime Skill, plugin, or MCP tool is unavailable, follow the package fallback instead of silently substituting or claiming success
@@ -58,6 +61,8 @@ An adapter must:
 - treat the host Runtime as the owner of Pal memory
 - claim Runtime Skill candidates were used before the host Runtime verifies and reports evidence
 - auto-scan local Runtime Skills outside a bounded package
+- read the whole AgentPal workspace because a Context Budget Plan exists
+- claim exact token or cost statistics unless the host Runtime provides exact metering evidence
 - auto-install or auto-enable Runtime Skills, plugins, or MCP tools
 - treat Runtime Skill candidates as fixed routes
 - let verifier work rely only on an owner completion claim when evidence context is missing
@@ -82,13 +87,15 @@ This remains no-code protocol behavior. It does not start background Pals, Subag
 If a task package includes a Deep Conductor plan, Project Conductor task map, or next-round Runtime task package, the adapter should help the host Runtime follow the package as a no-code plan:
 
 1. confirm the target Runtime and any Runtime Skill candidates are currently available before using them;
-2. respect `required_context` and `forbidden_context`;
+2. respect `required_context`, `forbidden_context`, Context Budget Plan, and read tier;
 3. execute only the approved next-round scope;
 4. preserve Pal-owned Skill and Runtime-installed Skill separation;
-5. return evidence, not-run items, blockers, and changed or read files;
+5. return evidence, not-run items, blockers, changed or read files, and Context Usage Report when requested;
 6. leave verification and Routing Memory writeback to the Pal-layer package unless explicitly asked to prepare evidence.
 
 Deep Conductor and Project Conductor are not a background project manager, queue, service, database, scanner, validator, or automatic execution loop.
+
+Context Budget handling is qualitative. It is not a token meter, cost calculator, or automatic model selector. Verification must not be skipped to reduce context.
 
 ## Cross-Runtime Pal Memory Handling
 

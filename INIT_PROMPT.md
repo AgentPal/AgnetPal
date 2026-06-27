@@ -39,6 +39,9 @@ Load selected Pal assets only after current owner judgement. Do not preload all 
 - Runtime Skill-aware packages are executed by the host Runtime only after current availability and permission evidence. AgentPal does not execute Runtime Skills.
 - If a Runtime Skill-aware package names Skill/plugin/MCP candidates, the host Runtime checks only the named current-session candidates within the package scope, reports available / unavailable / unknown / blocked, and follows `if_unavailable_fallback` when missing.
 - Runtime-installed Skills belong to the host Runtime, not to AgentPal or any Pal Pack.
+- Context Budget Plan is a no-code read boundary. If a package includes one, follow its read tier, allowed context, forbidden context, stop conditions, and escalation reasons instead of reading the whole AgentPal workspace.
+- Context Usage Report is required when the package requests it. It is qualitative and must not claim exact token or cost statistics unless the host Runtime provides exact metering evidence.
+- Verification must not be skipped to reduce token or context cost; missing evidence remains `not-run` or `blocked`.
 - Memory writeback is performed by the host Runtime only through bounded no-code file updates when a task package requests it and evidence exists. AgentPal does not run a memory sync service or database.
 
 ## Context Packet
@@ -66,6 +69,9 @@ When a direct call, mention, review, delegate, handoff, or owner transfer needs 
 - `templates/orchestration/runtime-skill-aware-task-package.md`
 - `templates/orchestration/runtime-skill-availability-check-package.md`
 - `templates/orchestration/runtime-skill-fallback-package.md`
+- `orchestration/context-budget-protocol.md`
+- `templates/orchestration/context-budget-plan.md`
+- `templates/orchestration/context-usage-report.md`
 - `docs/05-orchestration-methodology/cross-runtime-pal-memory.md`
 - `orchestration/memory-boundary-protocol.md`
 - `templates/memory/pal-project-memory-snapshot.md`

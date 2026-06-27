@@ -29,11 +29,24 @@ alternatives_rejected:
   - topology: ""
     reason: ""
 context_budget:
-  context_read_count: 0
+  context_budget_plan: ""
+  read_tier:
+    initial: 1
+    max: 4
+    current: 1
+  cost_sensitivity: ""
+  quality_target: ""
+  prompt_shaping_notes: []
+  model_or_reasoning_candidate:
+    model: ""
+    reasoning: ""
+    reason: ""
   index_only_sources: []
+  summary_sources: []
   full_text_sources: []
-  summarize_first_sources: []
   cannot_read: []
+  verification_cost_reason: ""
+  context_usage_report_required: true
 task_packages:
   - package_id: ""
     owner_pal_candidate: ""
@@ -65,5 +78,9 @@ user_explanation: ""
 - `memory_used` must not expose private content.
 - `cross_runtime_continuation` does not make the current Runtime a fixed route.
 - Memory summaries are judgement inputs, not proof of current Runtime capability.
+- `context_budget` must reference a Context Budget Plan when token / cost awareness matters.
+- `read_tier` is qualitative and is not an exact token count.
 - `context_budget` must not reduce verification quality.
+- `verification_cost_reason` explains necessary evidence cost; it must not be used to skip verification.
+- `context_usage_report_required` should stay true for complex or cross-runtime work.
 - `user_explanation` must say when no execution has happened.

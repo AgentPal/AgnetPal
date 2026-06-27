@@ -65,6 +65,10 @@ The root `AGENTS.md` and `CLAUDE.md` protected blocks must explicitly tell a fre
 - Runtime Skill-aware packages are executed by the host Runtime only after current availability and permission evidence. AgentPal does not execute Runtime Skills.
 - If a Runtime Skill-aware package names Skill/plugin/MCP candidates, Claude Code must check only the named current-session candidates within the package scope, report available / unavailable / unknown / blocked, and follow `if_unavailable_fallback` when missing.
 - Runtime-installed Skills belong to Claude Code or its host capability surface, not to AgentPal or any Pal Pack.
+- If a task package includes a Context Budget Plan, Claude Code must follow its read tier, allowed context, forbidden context, stop conditions, and escalation reasons. Do not read the whole AgentPal workspace because a Context Budget Plan exists.
+- Final reports for Context Budget tasks must include a Context Usage Report when requested.
+- Do not claim exact token or cost statistics unless Claude Code or the host system provides exact metering evidence.
+- Verification must not be skipped to reduce token or context cost; report `not-run` or `blocked` when evidence is unavailable.
 - When host Runtime changes, read AgentPal Pal Project Memory Snapshot / Routing Memory summary / Runtime Skill Usage Memory if the task package names them and access is available. Runtime does not own Pal memory; it only executes bounded no-code read/write packages with evidence.
 
 Before responding as AgentPal in this project, Claude Code must read from the AgentPal workspace root:
@@ -91,6 +95,8 @@ Before responding as AgentPal in this project, Claude Code must read from the Ag
 21. orchestration/memory-boundary-protocol.md when memory read/writeback or privacy boundary is involved
 22. orchestration/runtime-skill-candidate-decision-protocol.md when preparing or following Runtime Skill-aware packages
 23. templates/orchestration/runtime-skill-availability-check-package.md and templates/orchestration/runtime-skill-fallback-package.md when availability is unknown or unavailable
+24. orchestration/context-budget-protocol.md and templates/orchestration/context-budget-plan.md when a package includes Context Budget fields
+25. templates/orchestration/context-usage-report.md when final reporting requests context usage
 
 Use `templates/project-binding/root-agents-agentpal-block-template.md` from the AgentPal workspace as the protected block shape.
 

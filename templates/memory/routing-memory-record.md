@@ -44,6 +44,13 @@ pal_owned_skills_used:
     skill_or_method: ""
     purpose: ""
 context_budget:
+  context_budget_used: false
+  read_tiers_used: []
+  context_saved_by_memory_reuse: ""
+  runtime_skill_saved_effort: ""
+  verification_cost: ""
+  rework_cost: ""
+  next_time_context_budget_recommendation: ""
   context_read_count: 0
   profile_read_count: 0
   memory_used: false
@@ -65,5 +72,8 @@ privacy_notes:
 ## Rules
 
 - `next_time_recommendation` is a suggestion, not a rule.
+- `next_time_context_budget_recommendation` is a candidate for future judgement, not a fixed context route.
+- `read_tiers_used` records qualitative tiers, not exact token counts.
+- Memory reuse and Runtime Skill usage may reduce effort, but current task judgement and verification still decide the next package.
 - `not_a_fixed_route: true` must remain present.
 - Do not record sensitive content, credentials, raw logs, full files, or local absolute paths.
