@@ -31,7 +31,10 @@ An adapter must:
 - follow `orchestration/owner-verifier-workflow-protocol.md` when a task package separates an owner Pal from a verifier Pal candidate
 - follow `orchestration/parallel-independent-review-protocol.md` when a task package requests isolated reviewer candidates and synthesis
 - follow `orchestration/deep-conductor-protocol.md` and `orchestration/project-conductor-workflow.md` when a task package contains a Deep Conductor plan, project task map, or next-round Runtime task package
+- follow `docs/05-orchestration-methodology/cross-runtime-pal-memory.md` and `orchestration/memory-boundary-protocol.md` when a task continues across host Runtimes or uses memory snapshots
+- read Pal Project Memory Snapshot, Routing Memory summary, Runtime Skill Usage Memory, and Verification Memory when a task package names them and access is available
 - treat Runtime Skill-aware packages as host Runtime instructions that still require current availability and permission evidence
+- treat memory writeback as a no-code file update task that requires explicit package scope and execution evidence
 
 ## Adapter Must Not
 
@@ -48,6 +51,8 @@ An adapter must:
 - present Owner + Verifier as automatic background multi-agent execution
 - present Parallel Independent Review as automatic background parallel execution
 - present Deep Conductor or Project Conductor as an automatic background task system
+- present Cross-Runtime Pal Memory as an automatic memory sync service, database, daemon, or background Runtime feature
+- treat the host Runtime as the owner of Pal memory
 - claim Runtime Skill candidates were used before the host Runtime verifies and reports evidence
 - let verifier work rely only on an owner completion claim when evidence context is missing
 - feed one reviewer candidate another reviewer draft during independent review
@@ -78,6 +83,19 @@ If a task package includes a Deep Conductor plan, Project Conductor task map, or
 6. leave verification and Routing Memory writeback to the Pal-layer package unless explicitly asked to prepare evidence.
 
 Deep Conductor and Project Conductor are not a background project manager, queue, service, database, scanner, validator, or automatic execution loop.
+
+## Cross-Runtime Pal Memory Handling
+
+If a project continues from a previous host Runtime, the adapter should help the host Runtime follow the memory package:
+
+1. read the Pal Project Memory Snapshot or report it missing;
+2. read Routing Memory, Runtime Skill Usage Memory, and Verification Memory summaries only when the package allows them;
+3. separate previous Runtime history from current Runtime capability evidence;
+4. confirm current file, command, Skill, plugin, MCP, and permission availability before use;
+5. follow `templates/orchestration/cross-runtime-continuation-task-package.md` when present;
+6. write back no-code memory candidates only when the task package asks for it and current Runtime evidence supports the update.
+
+The host Runtime changes, but Pal memory continuity belongs to the Pal layer. The Runtime is an execution carrier, not the owner of Pal memory.
 
 ## Owner + Verifier Handling
 

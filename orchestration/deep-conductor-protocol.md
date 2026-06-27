@@ -66,12 +66,16 @@ Read:
 - Pal-owned memory summaries when relevant;
 - project memory or project state summaries when available and approved;
 - `memory/runtime/cross-runtime-pal-memory-protocol.md`;
+- `orchestration/memory-boundary-protocol.md`;
+- `templates/memory/pal-project-memory-snapshot.md`;
 - `orchestration/routing-memory-writeback-protocol.md`.
 
 Output:
 
 - `memory_used`;
 - memory sources;
+- Pal Project Memory Snapshot references when available;
+- cross-runtime continuation signals;
 - freshness and privacy notes;
 - candidate lessons, not rules.
 
@@ -79,12 +83,14 @@ Do not:
 
 - copy private memory into public packages;
 - treat memory as proof of current Runtime capability;
+- treat previous Runtime success as current Runtime availability;
 - make Routing Memory a database or route map.
 
 Templates:
 
 - `templates/orchestration/conductor-decision-record.md`
 - `templates/orchestration/context-budget-plan.md`
+- `templates/memory/pal-project-memory-snapshot.md`
 
 Eval:
 
@@ -170,16 +176,19 @@ Output:
 - `runtime_skill_candidates`;
 - `pal_owned_skills_used`;
 - evidence required before Runtime Skill use.
+- Runtime Skill Usage Memory sources and limits when relevant.
 
 Do not:
 
 - claim a Pal executes a host Skill;
 - claim a Runtime Skill is available without current evidence;
 - mix Pal methods and Runtime tools.
+- treat Runtime Skill Usage Memory as a Pal-owned Skill.
 
 Templates:
 
 - `templates/orchestration/runtime-skill-aware-task-package.md`
+- `templates/memory/runtime-skill-usage-memory-record.md`
 
 Eval:
 
@@ -292,12 +301,14 @@ Read:
 
 - `orchestration/task-package-output-contract.md`;
 - `templates/orchestration/runtime-skill-aware-task-package.md`;
-- `templates/orchestration/next-round-runtime-task-package.md`.
+- `templates/orchestration/next-round-runtime-task-package.md`;
+- `templates/orchestration/cross-runtime-continuation-task-package.md` when previous and current Runtime differ.
 
 Output:
 
 - Runtime Skill-aware task package;
 - next-round runtime task package;
+- cross-runtime continuation task package when needed;
 - required context;
 - forbidden context;
 - acceptance criteria.
@@ -391,6 +402,8 @@ Read:
 
 - returned evidence;
 - verification result;
+- Pal Project Memory Snapshot update needs;
+- Runtime Skill Usage Memory update needs;
 - `orchestration/routing-memory-writeback-protocol.md`;
 - `templates/orchestration/routing-decision-record.md`;
 - `templates/orchestration/routing-result-record.md`.
@@ -398,6 +411,7 @@ Read:
 Output:
 
 - routing memory writeback candidate;
+- Pal Project Memory Snapshot writeback candidate;
 - Runtime Skill usage result candidate;
 - next-time recommendation as evidence, not a rule.
 
@@ -405,12 +419,15 @@ Do not:
 
 - write private facts into public memory;
 - auto-write a database;
+- auto-sync memory across Runtimes;
 - say future tasks must use the same Pal, Runtime, Skill, model, or topology.
 
 Templates:
 
 - `templates/orchestration/routing-decision-record.md`
 - `templates/orchestration/routing-result-record.md`
+- `templates/memory/routing-memory-record.md`
+- `templates/memory/runtime-skill-usage-memory-record.md`
 - `templates/orchestration/conductor-decision-record.md`
 
 Eval:

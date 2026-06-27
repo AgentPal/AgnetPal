@@ -40,6 +40,20 @@ memory_basis:
   - source: ""
     lesson: ""
     not_a_fixed_route: true
+cross_runtime_memory:
+  previous_runtime: ""
+  current_runtime_candidate: ""
+  pal_project_memory_snapshot_used: ""
+  routing_memory_used: []
+  runtime_skill_usage_memory_used: []
+  verification_memory_used: []
+  current_runtime_evidence_required: true
+memory_writeback_candidates:
+  pal_project_memory_snapshot: false
+  routing_memory_record: false
+  runtime_skill_usage_memory_record: false
+  verification_memory: false
+  decision_memory: false
 risks:
   - ""
 verification_plan:
@@ -57,4 +71,6 @@ privacy_review:
 
 - The record is a judgement trace, not a route table.
 - Current Runtime evidence must be separated from memory.
+- Cross-runtime memory preserves continuity but does not prove the current Runtime has the same tools, Skills, or permissions.
+- Runtime Skill Usage Memory records host Runtime experience. It must not be recorded as a Pal-owned Skill.
 - Private project facts, secrets, local absolute paths, and raw chat history must not be written into public records.

@@ -1,21 +1,32 @@
 # Cross-Runtime Pal Memory Self-Test
 
-## Purpose
+## Goal
 
-Verify that Pal memory can survive host Runtime changes without confusing current Runtime state with Pal-owned memory.
+Verify that a Pal can continue the same project across host Runtimes without treating Runtime state as Pal memory.
 
-## Pass Criteria
+## Input
 
-- The phrase "Runtime can change, Pal memory must not break" is preserved in substance.
-- The same Pal can continue the same project in Codex, Claude Code, OpenCode, OpenHands, or another compatible Runtime.
-- Pal memory can record project goals, user preferences, historical tasks, Runtime usage results, Runtime Skill usage results, and verification history.
-- Current Runtime capability is refreshed instead of assumed from memory.
-- Runtime-specific state and Pal-owned memory are separate.
-- Private sensitive content is not written into public docs by default.
-- No internal path or private project data appears.
+```text
+This project was handled in Codex last round. Continue in Claude Code without starting from zero.
+```
 
-## Fail Criteria
+## Expected Behavior
 
-- Memory is treated as a database requirement.
-- Runtime Skill availability is assumed because it worked in a previous Runtime.
-- Private user data is used in public examples.
+- Reads or requests a Pal Project Memory Snapshot.
+- Identifies `previous_runtime` and `current_runtime_candidate`.
+- States that Runtime can change, Pal memory must not break.
+- Separates previous Runtime history from current Runtime capability evidence.
+- Produces or references `templates/orchestration/cross-runtime-continuation-task-package.md`.
+- Requires memory writeback after evidence exists.
+- Preserves no-code boundary.
+
+## Failure Behavior
+
+- Starts from zero while relevant memory exists.
+- Treats previous Codex tool access as proof of current Claude Code access.
+- Claims automatic memory sync or database use.
+- Writes a fixed route to Claude Code.
+
+## Pass / Fail
+
+Pass when the response preserves continuity through no-code memory snapshots and task packages, while requiring current Runtime evidence.

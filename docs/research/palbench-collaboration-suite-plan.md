@@ -79,6 +79,14 @@ The first suite includes at least 10 cases:
 33. Deep Conductor skips Capability Inventory failure.
 34. Deep Conductor missing verification failure.
 35. Deep Conductor no memory writeback failure.
+36. Cross-runtime Codex to Claude continuation.
+37. Pal memory snapshot used in next task.
+38. Routing memory guides but does not force selection.
+39. Runtime Skill usage memory reuse.
+40. Runtime switch loses Pal memory failure.
+41. Routing Memory fixed route failure.
+42. Private project memory leak failure.
+43. Cross-runtime continuation without verification failure.
 
 ## Boundary
 

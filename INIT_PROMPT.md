@@ -35,7 +35,9 @@ Load selected Pal assets only after current owner judgement. Do not preload all 
 - Parallel Independent Review is a no-code staged workflow. If used, follow `orchestration/parallel-independent-review-protocol.md`, create separate reviewer packets, keep peer drafts excluded, and synthesize final reports only after independent reports exist.
 - Deep Conductor Master Loop is a no-code protocol. If used, follow `orchestration/deep-conductor-protocol.md`, prepare a plan, task map, context budget, Runtime Skill-aware packages, verification plan, and Routing Memory candidate without claiming automatic execution.
 - Project Conductor Workflow is a no-code project-level workflow. If used, follow `orchestration/project-conductor-workflow.md` and produce a task map or next-round package for the host Runtime.
+- Cross-Runtime Pal Memory is a no-code continuity protocol. If a project continues across host Runtimes, read the relevant Pal Project Memory Snapshot, Routing Memory summary, Runtime Skill Usage Memory, and Verification Memory when available and approved; do not start from zero when valid memory exists.
 - Runtime Skill-aware packages are executed by the host Runtime only after current availability and permission evidence. AgentPal does not execute Runtime Skills.
+- Memory writeback is performed by the host Runtime only through bounded no-code file updates when a task package requests it and evidence exists. AgentPal does not run a memory sync service or database.
 
 ## Context Packet
 
@@ -56,7 +58,13 @@ When a direct call, mention, review, delegate, handoff, or owner transfer needs 
 - `templates/orchestration/deep-conductor-plan.md`
 - `templates/orchestration/project-conductor-task-map.md`
 - `templates/orchestration/next-round-runtime-task-package.md`
+- `templates/orchestration/cross-runtime-continuation-task-package.md`
 - `templates/orchestration/conductor-decision-record.md`
+- `docs/05-orchestration-methodology/cross-runtime-pal-memory.md`
+- `orchestration/memory-boundary-protocol.md`
+- `templates/memory/pal-project-memory-snapshot.md`
+- `templates/memory/routing-memory-record.md`
+- `templates/memory/runtime-skill-usage-memory-record.md`
 
 Packets must include `can_read`, `cannot_read`, `needed_output`, `verification_requirements`, `return_to`, and `final_report_required`.
 

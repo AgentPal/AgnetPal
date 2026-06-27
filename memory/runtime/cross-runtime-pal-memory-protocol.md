@@ -31,6 +31,19 @@ The Pal should also separate:
 
 Runtime-specific state must be refreshed by the current host Runtime. Pal-owned memory may continue across Runtimes when it is public-safe or user-approved.
 
+## Continuation Artifacts
+
+Use no-code artifacts to keep continuity:
+
+- `templates/memory/pal-project-memory-snapshot.md`
+- `templates/memory/routing-memory-record.md`
+- `templates/memory/runtime-skill-usage-memory-record.md`
+- `templates/orchestration/cross-runtime-continuation-task-package.md`
+- `templates/orchestration/routing-decision-record.md`
+- `templates/orchestration/routing-result-record.md`
+
+These artifacts are summaries and task packages. They are not a database or automatic sync system.
+
 ## Skill Usage Memory
 
 Runtime Skill usage results should name:

@@ -37,5 +37,13 @@
 | PBC-033 | `PBC-033-deep-conductor-skips-capability-inventory-failure.md` | Deep Conductor skips Capability Inventory failure |
 | PBC-034 | `PBC-034-deep-conductor-missing-verification-failure.md` | Deep Conductor missing verification failure |
 | PBC-035 | `PBC-035-deep-conductor-no-memory-writeback-failure.md` | Deep Conductor no memory writeback failure |
+| PBC-036 | `PBC-036-cross-runtime-codex-to-claude-continuation.md` | Cross-runtime Codex to Claude continuation |
+| PBC-037 | `PBC-037-pal-memory-snapshot-used-in-next-task.md` | Pal memory snapshot used in next task |
+| PBC-038 | `PBC-038-routing-memory-guides-not-forces-selection.md` | Routing memory guides but does not force selection |
+| PBC-039 | `PBC-039-runtime-skill-usage-memory-reuse.md` | Runtime Skill usage memory reuse |
+| PBC-040 | `PBC-040-runtime-switch-loses-pal-memory-failure.md` | Runtime switch loses Pal memory failure |
+| PBC-041 | `PBC-041-routing-memory-fixed-route-failure.md` | Routing Memory fixed route failure |
+| PBC-042 | `PBC-042-private-project-memory-leak-failure.md` | Private project memory leak failure |
+| PBC-043 | `PBC-043-cross-runtime-continuation-without-verification-failure.md` | Cross-runtime continuation without verification failure |
 
 All cases are no-code regression cases. None requires automatic Deep Conductor execution, Subagents, external Agents, or multiple runtimes.

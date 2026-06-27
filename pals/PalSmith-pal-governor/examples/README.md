@@ -12,6 +12,7 @@
 - `create-first-professional-pal.md`: end-to-end first professional Pal example.
 - `create-ai-team-from-user-goal.md`: end-to-end AI team example.
 - `palsmith-project-conductor-ai-team-task-map.md`: Project Conductor task map example for AI team creation.
+- `palsmith-ai-team-memory-health-check.md`: AI team health check memory snapshot continuation example.
 
 ## Notes
 

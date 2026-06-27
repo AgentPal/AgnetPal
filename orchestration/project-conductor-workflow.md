@@ -18,8 +18,9 @@ Do not use it for a simple one-shot question that one owner Pal can answer direc
    - Capture the project goal, target outcome, constraints, and completion target.
    - Decide whether this is project-level work or a single task.
 2. Current Project State Summary
-   - Read bounded project state, previous reports, Pal memory, and Routing Memory candidates when available.
+   - Read bounded project state, previous reports, Pal memory, Pal Project Memory Snapshot, Routing Memory candidates, Runtime Skill Usage Memory, and Verification Memory when available.
    - Separate known state from assumptions.
+   - If the previous and current host Runtimes differ, mark this as cross-runtime continuation.
 3. Phase Roadmap
    - Split the goal into phases with deliverables and acceptance checks.
    - Keep phases as planning structure, not automatic execution.
@@ -43,11 +44,13 @@ Do not use it for a simple one-shot question that one owner Pal can answer direc
    - Record `context_read_count`, `profile_read_count`, and `memory_used`.
 11. Next-Round Package
    - Convert the next actionable slice into `templates/orchestration/next-round-runtime-task-package.md`.
+   - If the next slice continues work from a different Runtime, use `templates/orchestration/cross-runtime-continuation-task-package.md`.
    - Keep forbidden context explicit.
 12. Progress Report
    - Report completed, in-progress, blocked, not-run, risks, and decisions needed.
 13. Routing Memory Update
    - Prepare Routing Memory writeback candidates after outcome or verification evidence exists.
+   - Prepare Pal Project Memory Snapshot, Runtime Skill Usage Memory, Verification Memory, and Decision Memory update candidates when relevant.
    - Do not auto-write private memory into public files.
 
 ## Typical Artifacts
@@ -57,7 +60,11 @@ Do not use it for a simple one-shot question that one owner Pal can answer direc
 - `templates/orchestration/context-budget-plan.md`
 - `templates/orchestration/runtime-skill-aware-task-package.md`
 - `templates/orchestration/next-round-runtime-task-package.md`
+- `templates/orchestration/cross-runtime-continuation-task-package.md`
 - `templates/orchestration/conductor-decision-record.md`
+- `templates/memory/pal-project-memory-snapshot.md`
+- `templates/memory/routing-memory-record.md`
+- `templates/memory/runtime-skill-usage-memory-record.md`
 
 ## Cross-Runtime Continuity
 

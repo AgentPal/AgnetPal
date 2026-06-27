@@ -10,6 +10,17 @@ project_goal: ""
 project_state_summary: ""
 known_constraints: []
 release_or_completion_target: ""
+memory_context:
+  pal_project_memory_snapshot: ""
+  routing_memory_summary: []
+  runtime_skill_usage_memory_summary: []
+  verification_memory_summary: []
+  privacy_notes: []
+cross_runtime_continuation:
+  applies: false
+  previous_runtime: ""
+  current_runtime_candidate: ""
+  current_runtime_evidence_required: true
 phases:
   - phase_id: ""
     goal: ""
@@ -32,6 +43,7 @@ phases:
             type: "" # Agent Skill | plugin | MCP | browser | office document | repo analysis | other
             reason: ""
             evidence_required: []
+            usage_memory_considered: ""
         pal_owned_skills_used:
           - pal: ""
             skill_or_method: ""
@@ -52,6 +64,12 @@ user_decisions_needed: []
 routing_memory_candidates:
   - summary: ""
     not_a_fixed_route: true
+memory_writeback_candidates:
+  pal_project_memory_snapshot: false
+  routing_memory_record: false
+  runtime_skill_usage_memory_record: false
+  verification_memory: false
+  decision_memory: false
 ```
 
 ## Field Rules
@@ -61,3 +79,5 @@ routing_memory_candidates:
 - `pal_owned_skills_used` are Pal methods, workflows, runbooks, or output contracts.
 - `runtime_candidates` are execution-layer candidates, not Pal-layer owners.
 - `routing_memory_candidates` are possible future evidence, not route rules.
+- `memory_context` is bounded summary context, not raw private history.
+- `cross_runtime_continuation` preserves continuity but does not prove the current Runtime has the previous Runtime's capabilities.

@@ -14,6 +14,7 @@ AgentPal shared gates live under `core/`. Orchestration-specific protocols live 
 | Fast Route | `fast-route-protocol.md` | active as Simple Pal Mode pattern |
 | Deep Conductor | `deep-conductor-protocol.md` | no-code future pattern, not execution |
 | Project Conductor | `project-conductor-workflow.md` | no-code project-level task map and next-round package workflow |
+| Memory Boundary | `memory-boundary-protocol.md` | no-code memory privacy, sharing, Git, and Context Packet boundary |
 | Pal Skill vs Runtime Skill | `pal-skill-vs-runtime-skill-protocol.md` | active separation rule |
 | AI routing judgement | `ai-routing-judgement-protocol.md` | active v0.1 |
 | Pal context slicing | `pal-context-slicing-protocol.md` | active v0.1 |
@@ -31,5 +32,4 @@ AgentPal shared gates live under `core/`. Orchestration-specific protocols live 
 | Token / Cost-aware Conductor | `token-cost-aware-conductor-policy.md` | no-code context and verification policy |
 
 Current task handling uses Simple Pal Mode. Research, templates, and future-design files do not activate Subagent Mode, external Agent calls, Runtime Skill execution, or Deep Conductor execution.
-
 

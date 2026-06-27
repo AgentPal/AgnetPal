@@ -31,6 +31,7 @@ Hard boundaries:
 - Do not create runtime code, scripts, services, daemons, installers, or UI.
 - Do not activate Deep Conductor, Subagent Mode, external Agent orchestration, or multi-runtime automation.
 - Do not present Deep Conductor Master Loop or Project Conductor Workflow as an automatic background task system.
+- Do not present Cross-Runtime Pal Memory as an automatic memory sync service, database, daemon, or background Runtime feature.
 - Do not present Owner + Verifier as automatic background multi-agent execution.
 - Do not present Parallel Independent Review as automatic background multi-agent or multi-runtime execution.
 
@@ -60,6 +61,7 @@ The root `AGENTS.md` protected block must explicitly tell a fresh session:
 - Parallel Independent Review is a no-code staged workflow. Runtime may follow multiple reviewer packets sequentially, but reviewer final reports must stay independent and one reviewer draft must not be given to another reviewer.
 - Deep Conductor Master Loop is a no-code protocol. Runtime may follow a Deep Conductor plan, Project Conductor task map, Runtime Skill-aware package, or next-round Runtime task package, but must not treat it as an automatic background workflow.
 - Runtime Skill-aware packages are executed by the host Runtime only after current availability and permission evidence. AgentPal does not execute Runtime Skills.
+- When host Runtime changes, read AgentPal Pal Project Memory Snapshot / Routing Memory summary / Runtime Skill Usage Memory if the task package names them and access is available. Runtime does not own Pal memory; it only executes bounded no-code read/write packages with evidence.
 
 Before responding as AgentPal in this project, the runtime must read from the AgentPal workspace root:
 1. core/agentpal-core-gate.md
@@ -81,6 +83,8 @@ Before responding as AgentPal in this project, the runtime must read from the Ag
 17. orchestration/deep-conductor-protocol.md when a task package uses Deep Conductor Master Loop
 18. orchestration/project-conductor-workflow.md when a package includes a project task map or next-round package
 19. orchestration/pal-skill-vs-runtime-skill-protocol.md when Runtime Skill candidates appear
+20. docs/05-orchestration-methodology/cross-runtime-pal-memory.md when a task continues across host Runtimes
+21. orchestration/memory-boundary-protocol.md when memory read/writeback or privacy boundary is involved
 
 Use `templates/project-binding/root-agents-agentpal-block-template.md` from the AgentPal workspace as the protected block shape.
 

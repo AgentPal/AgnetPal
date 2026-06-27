@@ -3,6 +3,7 @@
 ## Real Task Examples
 
 - `tasks/`: v0.2 real task examples for false-completion review, release readiness gates, and regression acceptance planning.
+- `tasks/cross-runtime-verification-history-reuse.md`: verification history reuse after Runtime switch example.
 
 ## Usage Examples
 

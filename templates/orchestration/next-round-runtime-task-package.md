@@ -11,6 +11,12 @@ target_runtime_candidate:
   name: ""
   reason: ""
   evidence_required: []
+previous_runtime_context:
+  previous_runtime: ""
+  memory_snapshot_used: ""
+  routing_memory_summary: []
+  runtime_skill_usage_memory_summary: []
+  not_a_fixed_route: true
 target_model_or_reasoning_candidate:
   model: ""
   reasoning: ""
@@ -20,6 +26,7 @@ runtime_skill_candidates:
     type: "" # Agent Skill | plugin | MCP | browser | office document | repo analysis | other
     reason: ""
     evidence_required: []
+    usage_memory_considered: ""
 required_context: []
 forbidden_context: []
 task_scope:
@@ -37,9 +44,18 @@ final_report_format:
   must_include:
     - files_read_or_changed
     - runtime_skills_used_or_not_run
+    - memory_snapshot_used_or_not_run
+    - memory_writeback_candidate
     - evidence
     - verification_result
     - blockers
+memory_writeback_required:
+  required: true
+  candidates:
+    - pal_project_memory_snapshot
+    - routing_memory_record
+    - runtime_skill_usage_memory_record
+    - verification_memory
 stop_conditions:
   - ""
 ```
@@ -48,5 +64,7 @@ stop_conditions:
 
 - `target_runtime_candidate` is not a fixed route.
 - `runtime_skill_candidates` are executed only by the host Runtime when available and authorized.
+- `previous_runtime_context` is continuity evidence, not proof of current capability.
+- Memory writeback is performed only by the host Runtime when authorized and evidenced.
 - The package must not imply AgentPal has already performed the work.
 - If a stop condition occurs, the Runtime should stop and report evidence or blocker state.
