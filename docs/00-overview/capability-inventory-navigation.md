@@ -49,6 +49,14 @@ Current Business System examples:
 - `examples/capability-inventory/business-system-profiles/generic-crm-public-governance-profile.example.json`
 - `examples/failures/business-system-profile-as-connector.md`
 
+Public-safe central project record reference examples live under:
+
+```text
+examples/project-records/business-system-profile-references/
+```
+
+These examples show how `content-ops-demo` and `sales-ops-demo` reference organization Business System profile examples without becoming real private `workspace/projects/<project-id>` records.
+
 ## External Project Boundary
 
 External user projects remain thin-bound. Do not copy standards, examples, templates, Pal Packs, central contacts, memory, reports, workflows, capability inventory directories, or business-system directories into the external project by default.
@@ -114,6 +122,14 @@ evals/palbench/capability-inventory/r85-non-github-business-system-boundary.md
 ```
 
 It checks the Notion example, CRM example, non-code walkthrough, non-verifiable fields note, no credentials, no connector, no automatic scanner, no keyword routing, unknown / not-run / missing preservation, and no external project pollution.
+
+The project record Business System reference regression lives at:
+
+```text
+evals/palbench/capability-inventory/r86-project-record-business-system-reference-boundary.md
+```
+
+It checks the content-ops and sales-ops project record examples, project usage memory boundary, central roster boundary, no connector, no credentials, no automatic scanner, no keyword routing, and no external project pollution.
 
 ## Legacy Path Notes
 

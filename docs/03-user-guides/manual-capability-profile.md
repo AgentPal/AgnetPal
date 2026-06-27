@@ -63,6 +63,14 @@ examples/capability-inventory/business-system-profiles/
 
 Start with `manual-github-profile-walkthrough.md` for a GitHub manual flow, `manual-notion-profile-walkthrough.md` for a non-code system flow, `github-project-record-reference.example.md` for a project reference example, `unknown-not-run-missing-examples.md` for the difference between `unknown`, `not-run`, and `missing`, and `non-verifiable-business-system-fields.md` for fields AgentPal cannot verify by itself.
 
+Public-safe central project record examples that reference Business System profiles live in:
+
+```text
+examples/project-records/business-system-profile-references/
+```
+
+These examples are not real private project records. They show project-level scope, limitations, not-run checks, missing evidence, and project usage memory without updating organization truth.
+
 ## Where Organization Records Live
 
 Organization-level capability records live in:
@@ -224,3 +232,5 @@ Explicit `/pal Name` or `@Name` calls are user intent signals, not keyword route
 After a real task, update usage memory only from evidence. Record what worked, what failed, what was not run, and what should be rechecked next time.
 
 Do not turn usage memory into an automatic score, benchmark, or certification claim. If verification did not run, write `not-run` or `unknown`.
+
+Project usage memory records what happened in one project. It is not organization truth, must not silently update organization capability profiles, must not update the central Pal roster, and must not be copied into external project `.agentpal/` by default. See `docs/03-user-guides/project-usage-memory-boundary.md`.

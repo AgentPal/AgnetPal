@@ -105,16 +105,19 @@ Use:
 | `standards/capability-inventory/business-system-profile-standard.md` | Business System profile standard and boundaries | business-system profile governance, project record relationship checks |
 | `templates/capability-inventory/business-system-profile-template.json` | Business System capability profile template for external system governance boundaries | business-system profile template work or release checks |
 | `examples/capability-inventory/business-system-profiles/` | public-safe Business System profile examples | example shape and no-connector boundary checks |
+| `examples/project-records/business-system-profile-references/` | public-safe project record examples that reference Business System profiles | central project record relationship examples, not real private project records |
 | `examples/capability-inventory/business-system-profiles/manual-github-profile-walkthrough.md` | manual GitHub Business System walkthrough | end-to-end user-confirmed facts to organization and project records |
 | `examples/capability-inventory/business-system-profiles/manual-notion-profile-walkthrough.md` | manual Notion Business System walkthrough | non-code user-confirmed facts, unknown fields, not-run checks, and missing evidence |
 | `examples/capability-inventory/business-system-profiles/unknown-not-run-missing-examples.md` | `unknown`, `not-run`, and `missing` examples | evidence-state clarification |
 | `examples/capability-inventory/business-system-profiles/non-verifiable-business-system-fields.md` | non-verifiable Business System field notes | access, permission, API, export, role, and evidence boundary checks |
 | `examples/failures/business-system-profile-as-connector.md` | forbidden failure example for treating a profile as a connector | boundary regression and anti-pattern review |
 | `docs/03-user-guides/manual-capability-profile.md` | manual Capability Inventory profile guide | adding no-code manual or semi-manual capability profiles |
+| `docs/03-user-guides/project-usage-memory-boundary.md` | project usage memory boundary guide | project memory is not organization truth |
 | `evals/palbench/capability-inventory/r82-manual-profile-guide-compliance.md` | Manual Profile Guide compliance regression | Capability Inventory boundary checks |
 | `evals/palbench/capability-inventory/r83-project-record-relationship-boundary.md` | Business System project relationship regression | organization/project record and thin binding boundary checks |
 | `evals/palbench/capability-inventory/r84-business-system-manual-walkthrough-boundary.md` | Business System manual walkthrough regression | walkthrough, failure example, and evidence-state boundary checks |
 | `evals/palbench/capability-inventory/r85-non-github-business-system-boundary.md` | Non-GitHub Business System regression | Notion, CRM, non-code walkthrough, non-verifiable fields, and no-connector boundary checks |
+| `evals/palbench/capability-inventory/r86-project-record-business-system-reference-boundary.md` | project record Business System reference regression | content-ops and sales-ops examples, project usage memory, central roster, thin binding, and no-connector boundary checks |
 | `archive/migration-from-v0.3/root-legacy/capability-inventory/root-pointers/` | archived R78 root compatibility pointers | legacy path questions and migration audits |
 | `workspace/resources/imports/` | public-safe import staging placeholders | import/resource boundary work |
 | `workspace/organization/memory/` | public-safe organization memory placeholders and examples | memory protocol or placeholder work |
@@ -241,6 +244,8 @@ Capability Inventory is a no-code profile layer. It is not an automatic scanner,
 | `examples/capability-inventory/business-system-profiles/manual-github-profile-walkthrough.md` | manual walkthrough from confirmed facts to organization profile and project record |
 | `examples/capability-inventory/business-system-profiles/manual-notion-profile-walkthrough.md` | non-code Notion walkthrough from possible use to central records without external `.agentpal/` copies |
 | `examples/capability-inventory/business-system-profiles/github-project-record-reference.example.md` | central project record reference example |
+| `examples/project-records/business-system-profile-references/content-ops-demo/` | public-safe central project record example referencing the Notion profile; not a real `workspace/projects/<project-id>` record |
+| `examples/project-records/business-system-profile-references/sales-ops-demo/` | public-safe central project record example referencing the Generic CRM profile; not a real `workspace/projects/<project-id>` record |
 | `examples/capability-inventory/business-system-profiles/unknown-not-run-missing-examples.md` | evidence-state examples for `unknown`, `not-run`, and `missing` |
 | `examples/capability-inventory/business-system-profiles/non-verifiable-business-system-fields.md` | fields that require user confirmation, host Runtime evidence, UI/export evidence, or admin confirmation |
 | `examples/failures/business-system-profile-as-connector.md` | forbidden failure example for connector, credential, auto scan, and keyword route misuse |
@@ -257,10 +262,12 @@ Capability Inventory is a no-code profile layer. It is not an automatic scanner,
 | --- | --- |
 | `workspace/projects/_template/capability-inventory/` | project-level record template; real records live under `workspace/projects/<project-id>/capability-inventory/` and are private by default |
 | `docs/03-user-guides/manual-capability-profile.md` | manual flow for choosing a profile type, copying a template, marking source/confidence, and saving to the right central record |
+| `docs/03-user-guides/project-usage-memory-boundary.md` | project usage memory boundary guide; project memory is not organization truth and does not update central roster |
 | `evals/palbench/capability-inventory/r82-manual-profile-guide-compliance.md` | compliance regression for manual profiles, Business System profile boundary, project record relationship, and no auto scan / no keyword routing rules |
 | `evals/palbench/capability-inventory/r83-project-record-relationship-boundary.md` | regression for organization/project record relationship, thin binding, no connector, no credentials, and no keyword routing |
 | `evals/palbench/capability-inventory/r84-business-system-manual-walkthrough-boundary.md` | regression for walkthrough, evidence-state examples, forbidden failure example, and thin-binding boundary |
 | `evals/palbench/capability-inventory/r85-non-github-business-system-boundary.md` | regression for Notion / CRM examples, non-code walkthrough, non-verifiable fields, and no connector / no keyword route |
+| `evals/palbench/capability-inventory/r86-project-record-business-system-reference-boundary.md` | regression for project record Business System profile references and project usage memory boundary |
 
 ### Historical Migration Notes
 
@@ -340,6 +347,8 @@ Use the current docs directories as the public entry points. Archived research n
 | `examples/capability-inventory/business-system-profiles/github-public-governance-profile.example.json` | public-safe GitHub Business System profile example using `example-org/example-repo` |
 | `examples/capability-inventory/business-system-profiles/notion-public-governance-profile.example.json` | public-safe Notion Business System profile example with unknown access and no connector |
 | `examples/capability-inventory/business-system-profiles/generic-crm-public-governance-profile.example.json` | public-safe generic CRM Business System profile example with unknown customer-data and write access |
+| `examples/project-records/business-system-profile-references/content-ops-demo/` | public-safe content operations project record example referencing the Notion Business System profile |
+| `examples/project-records/business-system-profile-references/sales-ops-demo/` | public-safe sales operations project record example referencing the Generic CRM Business System profile |
 | `evals/palbench/capability-inventory/r83-project-record-relationship-boundary.md` | Business System profile relationship and thin-binding regression |
 | `examples/capability-inventory/business-system-profiles/manual-github-profile-walkthrough.md` | manual Business System walkthrough from user facts to central records |
 | `examples/capability-inventory/business-system-profiles/manual-notion-profile-walkthrough.md` | manual Notion Business System walkthrough from user facts to central records |
@@ -348,6 +357,8 @@ Use the current docs directories as the public entry points. Archived research n
 | `examples/failures/business-system-profile-as-connector.md` | forbidden connector misuse failure example |
 | `evals/palbench/capability-inventory/r84-business-system-manual-walkthrough-boundary.md` | R84 walkthrough and boundary regression |
 | `evals/palbench/capability-inventory/r85-non-github-business-system-boundary.md` | R85 non-GitHub Business System boundary regression |
+| `evals/palbench/capability-inventory/r86-project-record-business-system-reference-boundary.md` | R86 project record Business System reference boundary regression |
+| `release/fresh-clone-checks/r86-local-project-record-business-system-reference-validation.md` | R86 local clean-copy validation record |
 | `docs/05-orchestration-methodology/deep-conductor-master-goal.md` | Deep Conductor master goal and no-code 12-step loop |
 | `docs/05-orchestration-methodology/deep-conductor-master-loop-usage-guide.md` | Deep Conductor usage guide for project-level no-code coordination |
 | `docs/05-orchestration-methodology/deep-conductor-e2e-usage-guide.md` | Deep Conductor E2E usage guide for integrated no-code project-level closure |
@@ -445,8 +456,10 @@ Use the current docs directories as the public entry points. Archived research n
 | `docs/02-concepts/source-map-and-derived-knowledge.md` | source-map and derived-knowledge boundary |
 | `docs/01-getting-started/bind-external-project.md` | external project binding quick start |
 | `docs/03-user-guides/project-memory.md` | project memory user guide |
+| `docs/03-user-guides/project-usage-memory-boundary.md` | project usage memory boundary guide |
 | `docs/03-user-guides/using-user-project-docs.md` | user project docs to central records guide |
 | `workspace/projects/_template/` | central project record template |
+| `examples/project-records/business-system-profile-references/` | public-safe central project record examples; not real project records |
 | `evals/runtime-adapters/runtime-adapter-regression-suite.md` | 12-scenario Runtime Adapter regression suite |
 | `examples/failures/runtime-opened-in-wrong-directory.md` | failure example for wrong working directory |
 | `examples/failures/stale-pal-list-after-agentpal-update.md` | failure example for stale Pal list |

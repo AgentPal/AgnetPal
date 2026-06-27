@@ -52,6 +52,8 @@ Do not store credentials, private tokens, API keys, session cookies, or project 
 
 Unknown or unconfirmed fields must stay `unknown`, `not-run`, `not-confirmed`, or empty until the user or current host Runtime provides evidence.
 
+Project usage memory records what happened in one project. It is not organization truth, and it must not silently update organization capability profiles, central Pal contacts, or no-keyword-routing policy. Public-safe examples of this relationship live under `examples/project-records/business-system-profile-references/`.
+
 ## Recommended Fields
 
 Use these fields when adding or updating project-level capability records:

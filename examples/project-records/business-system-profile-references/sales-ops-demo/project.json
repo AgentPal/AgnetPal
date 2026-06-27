@@ -1,0 +1,54 @@
+{
+  "schema": "agentpal.project_record_business_system_reference.example.v0.4",
+  "project_id": "sales-ops-demo",
+  "project_type": "example",
+  "public_safe_example": true,
+  "real_project_record": false,
+  "record_location": "examples/project-records/business-system-profile-references/sales-ops-demo",
+  "not_real_workspace_project_record": true,
+  "must_not_be_stored_under": "workspace/projects/<project-id>",
+  "referenced_business_systems": [
+    {
+      "id": "generic-crm-public-governance-example",
+      "name": "Generic CRM Public Governance Example",
+      "organization_profile_ref": "examples/capability-inventory/business-system-profiles/generic-crm-public-governance-profile.example.json",
+      "real_organization_record_location": "workspace/organization/capability-inventory/business-systems/",
+      "project_reference_path": "capability-inventory/business-systems.md",
+      "project_scope": [
+        "contact follow-up planning",
+        "deal review notes",
+        "customer service handoff notes"
+      ],
+      "unknown": [
+        "account access",
+        "contact read access",
+        "deal write access",
+        "export permission",
+        "API access"
+      ],
+      "not_run": [
+        "CRM login check",
+        "contact visibility check",
+        "write permission check",
+        "export permission check"
+      ],
+      "missing": [
+        "user confirmation",
+        "host Runtime evidence",
+        "admin permission evidence"
+      ]
+    }
+  ],
+  "project_usage_memory": "memory/project-usage-memory.md",
+  "project_usage_memory_updates_organization_truth_by_default": false,
+  "project_usage_memory_updates_central_roster_by_default": false,
+  "forbidden": {
+    "crm_connector": false,
+    "customer_data_export": false,
+    "crm_auth_value_present": false,
+    "external_project_agentpal_business_systems": false,
+    "external_project_agentpal_capability_inventory": false,
+    "central_roster_modification": false,
+    "keyword_routing": false
+  }
+}
