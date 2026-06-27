@@ -15,9 +15,9 @@ Moved in this pass:
 | `pals/PalSmith-pal-governor/` | `official/pals/PalSmith-pal-governor/` |
 | `projects/project-workgroup-template/agentpal/INIT_AGENTPAL_PROJECT_PROMPT.md` | `archive/migration-from-v0.3/legacy-project-workgroup-template/agentpal/INIT_AGENTPAL_PROJECT_PROMPT.md` |
 | `projects/project-workgroup-template/agentpal/PAL_GROUP.md` | `archive/migration-from-v0.3/legacy-project-workgroup-template/agentpal/PAL_GROUP.md` |
-| `official/pals/*/reports/*.md` historical reports | `archive/migration-from-v0.3/official-pal-history/official/pals/*/reports/*.md` |
-| `official/pals/*/state/*.md` runtime state | `archive/migration-from-v0.3/official-pal-history/official/pals/*/state/*.md` |
-| `official/pals/Mira-main/memory/*.md` historical memory notes | `archive/migration-from-v0.3/official-pal-history/official/pals/Mira-main/memory/*.md` |
+| `official/pals/*/reports/*.md` historical reports | Removed from the public package; see `archive/migration-from-v0.3/official-pal-history/README.md` |
+| `official/pals/*/state/*.md` runtime state | Removed from the public package; see `archive/migration-from-v0.3/official-pal-history/README.md` |
+| `official/pals/Mira-main/memory/*.md` historical memory notes | Removed from the public package; see `archive/migration-from-v0.3/official-pal-history/README.md` |
 
 New central files:
 

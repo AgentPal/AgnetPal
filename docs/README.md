@@ -113,8 +113,7 @@ AgentPal is a Pal layer and Pal Pack Standard practice for Markdown/JSON-capable
 - [Mira workflows](../official/pals/Mira-main/workflows/index.md)
 - [Mira runbooks](../official/pals/Mira-main/runbooks/INDEX.md)
 - [Mira evals](../official/pals/Mira-main/evals/README.md)
-- [Mira self-health report archive](../archive/migration-from-v0.3/official-pal-history/official/pals/Mira-main/reports/mira-self-health-report.md)
-- [PalSmith Mira Leader review archive](../archive/migration-from-v0.3/official-pal-history/official/pals/Mira-main/reports/palsmith-mira-leader-review.md)
+- [Official Pal history archive note](../archive/migration-from-v0.3/official-pal-history/README.md)
 
 ## Official Pal Example Links
 
@@ -288,7 +287,7 @@ AgentPal is a Pal layer and Pal Pack Standard practice for Markdown/JSON-capable
 - [Nova source inventory](../official/pals/Nova-product/research/source-inventory.md)
 - [Nova Product / Strategy gap report](../archive/migration-from-v0.3/release-candidate-docs/nova-product-strategy-gap-report.md)
 - [Nova self-health report](../archive/migration-from-v0.3/release-candidate-docs/nova-self-health-report.md)
-- [PalSmith Nova review archive](../archive/migration-from-v0.3/official-pal-history/official/pals/Nova-product/reports/palsmith-nova-product-strategy-review.md)
+- [Official Pal history archive note](../archive/migration-from-v0.3/official-pal-history/README.md)
 
 ## Documentation Map
 
