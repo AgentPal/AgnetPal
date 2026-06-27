@@ -19,6 +19,7 @@ When creating a real profile, copy a template and follow `docs/03-user-guides/ma
 | Business System profile | `business-system-profile-template.json` |
 | Business System profile review packet | `business-system-profile-review-packet.md` |
 | Business System profile manual update evidence pack | `business-system-profile-manual-update-evidence-pack.md` |
+| Business System profile manual writeback replay record | `business-system-profile-manual-writeback-replay-record.md` |
 | Pal capability profile | `pal-capability-profile-template.json` |
 
 ## Related Sources
@@ -45,3 +46,5 @@ Capability Inventory profiles are AI judgement inputs. They must not become `key
 Business System profile review packets are no-code review artifacts. They may recommend manual organization profile updates after user confirmation and reviewable evidence, but they must not auto-update organization truth or write into external project `.agentpal/` directories by default.
 
 Manual update evidence packs are the next no-code artifact after an approved review packet. They record the approved change, user confirmation, host Runtime evidence, rollback note, manual writeback target, and second verification status. They still must not auto-update organization profiles, modify central Pal contacts, create connectors, store credentials, or write into external project `.agentpal/evidence/`.
+
+Manual writeback replay records are no-code audit artifacts after a manual writeback has happened. They record changed fields, previous and updated snapshot summaries, rollback record, second verification status, not-run checks, and missing evidence. They must not execute writeback, auto-rollback, modify central Pal contacts, create connectors, store credentials, or write into external project `.agentpal/replay/`, `.agentpal/rollback/`, or `.agentpal/verification/`.

@@ -68,6 +68,15 @@ templates/capability-inventory/business-system-profile-manual-update-evidence-pa
 
 The evidence pack records the approved change, evidence summary, user confirmation, host Runtime evidence, rollback note, manual writeback target, and second verification status. It still must not auto-update the organization profile, modify central contacts, create a connector, store credentials, route by keywords, or write into an external project `.agentpal/evidence/`.
 
+If a manual writeback has already happened, create a Manual Writeback Replay Record to audit the completed action:
+
+```text
+standards/capability-inventory/business-system-profile-manual-writeback-replay-record.md
+templates/capability-inventory/business-system-profile-manual-writeback-replay-record.md
+```
+
+The replay record logs changed fields, previous and updated profile snapshot summaries, rollback record, second verification status, not-run checks, and missing evidence. It still must not execute writeback, auto-rollback, modify central contacts, create a connector, store credentials, route by keywords, or write into external project `.agentpal/replay/`, `.agentpal/rollback/`, or `.agentpal/verification/`.
+
 ## Boundary Checklist
 
 - Keep project usage memory under the central project record.
@@ -77,3 +86,4 @@ The evidence pack records the approved change, evidence summary, user confirmati
 - Do not convert `unknown`, `not-run`, or `missing` into a pass.
 - Do not use project usage memory as `keyword_map`, `domain_map`, `role_map`, or deterministic routing.
 - Do not convert `second_verification_not_run` into `second_verification_passed`.
+- Do not treat a replay record as an execution engine or automatic rollback program.
