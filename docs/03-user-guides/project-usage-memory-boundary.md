@@ -59,6 +59,15 @@ templates/capability-inventory/business-system-profile-review-packet.md
 
 The review packet can recommend a manual organization profile update. It must not auto-update `workspace/organization/capability-inventory/`, modify `workspace/organization/contacts/pals.json`, write into an external project `.agentpal/reviews/`, create a connector, store credentials, or route by keywords.
 
+If a review packet is approved as `approved_for_manual_update`, create a Manual Update Evidence Pack before any profile edit:
+
+```text
+standards/capability-inventory/business-system-profile-manual-update-evidence-pack.md
+templates/capability-inventory/business-system-profile-manual-update-evidence-pack.md
+```
+
+The evidence pack records the approved change, evidence summary, user confirmation, host Runtime evidence, rollback note, manual writeback target, and second verification status. It still must not auto-update the organization profile, modify central contacts, create a connector, store credentials, route by keywords, or write into an external project `.agentpal/evidence/`.
+
 ## Boundary Checklist
 
 - Keep project usage memory under the central project record.
@@ -67,3 +76,4 @@ The review packet can recommend a manual organization profile update. It must no
 - Do not update `workspace/organization/capability-inventory/` without explicit review.
 - Do not convert `unknown`, `not-run`, or `missing` into a pass.
 - Do not use project usage memory as `keyword_map`, `domain_map`, `role_map`, or deterministic routing.
+- Do not convert `second_verification_not_run` into `second_verification_passed`.

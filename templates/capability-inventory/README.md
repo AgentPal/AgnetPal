@@ -18,6 +18,7 @@ When creating a real profile, copy a template and follow `docs/03-user-guides/ma
 | MCP profile | `mcp-profile-template.json` |
 | Business System profile | `business-system-profile-template.json` |
 | Business System profile review packet | `business-system-profile-review-packet.md` |
+| Business System profile manual update evidence pack | `business-system-profile-manual-update-evidence-pack.md` |
 | Pal capability profile | `pal-capability-profile-template.json` |
 
 ## Related Sources
@@ -42,3 +43,5 @@ Business System profiles describe external system capability and governance boun
 Capability Inventory profiles are AI judgement inputs. They must not become `keyword_map`, `domain_map`, `role_map`, or any deterministic semantic route. Do not store credentials, private tokens, API keys, cookies, passwords, or secrets in copied profiles.
 
 Business System profile review packets are no-code review artifacts. They may recommend manual organization profile updates after user confirmation and reviewable evidence, but they must not auto-update organization truth or write into external project `.agentpal/` directories by default.
+
+Manual update evidence packs are the next no-code artifact after an approved review packet. They record the approved change, user confirmation, host Runtime evidence, rollback note, manual writeback target, and second verification status. They still must not auto-update organization profiles, modify central Pal contacts, create connectors, store credentials, or write into external project `.agentpal/evidence/`.

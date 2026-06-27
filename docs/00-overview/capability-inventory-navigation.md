@@ -8,10 +8,10 @@ It is not an automatic scanner, validator, installer, sync service, or keyword r
 
 | Source type | Path | Role |
 | --- | --- | --- |
-| Standards | `standards/capability-inventory/` | Reusable rules, matrices, protocols, profile standards, and Business System review flow. |
+| Standards | `standards/capability-inventory/` | Reusable rules, matrices, protocols, profile standards, Business System review flow, and manual update evidence pack rules. |
 | Current organization records | `workspace/organization/capability-inventory/` | Public-safe current organization placeholders and maintained capability notes. |
 | Examples | `examples/capability-inventory/` | Synthetic example profiles and task judgement examples, including public-safe Business System examples and review examples. |
-| Templates | `templates/capability-inventory/` | Copyable profile templates, including `business-system-profile-template.json` and `business-system-profile-review-packet.md`. |
+| Templates | `templates/capability-inventory/` | Copyable profile templates, including `business-system-profile-template.json`, `business-system-profile-review-packet.md`, and `business-system-profile-manual-update-evidence-pack.md`. |
 | Project record template | `workspace/projects/_template/capability-inventory/` | Template for per-project capability records under central project records. |
 | Historical archive | `archive/migration-from-v0.3/root-legacy/capability-inventory/` | R78/R79/R80 migration evidence and archived legacy pointers. |
 
@@ -38,6 +38,8 @@ Use `standards/capability-inventory/business-system-profile-standard.md` for the
 Business System records can describe GitHub, Feishu, Notion, CRM, Jira, Linear, OA, ERP, databases, and customer-specific tools, but only as governance notes and AI judgement inputs. They are not connectors, API clients, credential stores, permission grants, automatic scanners, background sync jobs, release tools, write access, or keyword routes.
 
 Use `standards/capability-inventory/business-system-profile-review-flow.md` and `templates/capability-inventory/business-system-profile-review-packet.md` when project usage memory suggests an organization-level profile review. Review packets can recommend manual updates, but they must not auto-update organization truth, modify central Pal contacts, write into external project `.agentpal/reviews/`, create connectors, store credentials, or keyword route.
+
+Use `standards/capability-inventory/business-system-profile-manual-update-evidence-pack.md` and `templates/capability-inventory/business-system-profile-manual-update-evidence-pack.md` after a review packet is approved for manual update. Evidence packs record the proposed manual change, user confirmation, host Runtime evidence, rollback note, writeback target, and second verification status. They still must not perform automatic writeback, modify central contacts, write into external project `.agentpal/evidence/`, create connectors, store credentials, or keyword route.
 
 Current Business System examples:
 
@@ -66,6 +68,14 @@ examples/capability-inventory/business-system-profile-reviews/
 ```
 
 They show review packets that preserve `unknown`, `not-run`, and `missing` until user confirmation and reviewable host Runtime evidence are available.
+
+The manual update evidence example lives at:
+
+```text
+examples/capability-inventory/business-system-profile-reviews/notion-read-access-manual-update-evidence.example.md
+```
+
+It shows an approved-review premise and keeps second verification as `second_verification_not_run` until manual writeback and verification actually run.
 
 ## External Project Boundary
 
@@ -148,6 +158,14 @@ evals/palbench/capability-inventory/r87-business-system-profile-review-flow-boun
 ```
 
 It checks the review flow standard, review packet template, public-safe review example, project usage memory upgrade boundary, central roster boundary, no connector, no credentials, no automatic scanner, no keyword routing, and no external project `.agentpal/reviews/` writes.
+
+The Business System profile manual update evidence regression lives at:
+
+```text
+evals/palbench/capability-inventory/r88-business-system-profile-manual-update-evidence-boundary.md
+```
+
+It checks the manual update evidence standard, evidence pack template, public-safe evidence example, approved-review relationship, rollback note, second verification, central roster boundary, no connector, no credentials, no automatic scanner, no keyword routing, and no external project `.agentpal/evidence/` writes.
 
 ## Legacy Path Notes
 

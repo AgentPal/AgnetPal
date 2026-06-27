@@ -41,6 +41,12 @@ For Business System profile review flow, use:
 standards/capability-inventory/business-system-profile-review-flow.md
 ```
 
+For Business System profile manual update evidence packs after an approved review, use:
+
+```text
+standards/capability-inventory/business-system-profile-manual-update-evidence-pack.md
+```
+
 ## Where Templates Live
 
 Copyable templates live in:
@@ -55,6 +61,12 @@ Business System profile review packets use:
 
 ```text
 templates/capability-inventory/business-system-profile-review-packet.md
+```
+
+Business System profile manual update evidence packs use:
+
+```text
+templates/capability-inventory/business-system-profile-manual-update-evidence-pack.md
 ```
 
 ## Where Examples Live
@@ -89,7 +101,7 @@ Business System profile review examples live in:
 examples/capability-inventory/business-system-profile-reviews/
 ```
 
-These examples show project usage memory proposing review without automatically updating organization capability profiles.
+These examples show project usage memory proposing review without automatically updating organization capability profiles. They also include a manual update evidence pack example for the approved-review stage, still without performing the organization profile update.
 
 ## Where Organization Records Live
 
@@ -255,4 +267,4 @@ Do not turn usage memory into an automatic score, benchmark, or certification cl
 
 Project usage memory records what happened in one project. It is not organization truth, must not silently update organization capability profiles, must not update the central Pal roster, and must not be copied into external project `.agentpal/` by default. See `docs/03-user-guides/project-usage-memory-boundary.md`.
 
-If project usage memory suggests an organization-level Business System profile change, create a review packet and keep the decision blocked until explicit user confirmation and reviewable host Runtime evidence are present.
+If project usage memory suggests an organization-level Business System profile change, create a review packet and keep the decision blocked until explicit user confirmation and reviewable host Runtime evidence are present. If the review is later approved for manual update, create a Manual Update Evidence Pack with a rollback note and second verification checklist before any organization profile writeback. If second verification did not run, keep the status as `second_verification_not_run`; do not report it as pass.
