@@ -61,7 +61,7 @@ Business System profile examples live in:
 examples/capability-inventory/business-system-profiles/
 ```
 
-Start with `manual-github-profile-walkthrough.md` for an end-to-end manual flow, `github-project-record-reference.example.md` for a project reference example, and `unknown-not-run-missing-examples.md` for the difference between `unknown`, `not-run`, and `missing`.
+Start with `manual-github-profile-walkthrough.md` for a GitHub manual flow, `manual-notion-profile-walkthrough.md` for a non-code system flow, `github-project-record-reference.example.md` for a project reference example, `unknown-not-run-missing-examples.md` for the difference between `unknown`, `not-run`, and `missing`, and `non-verifiable-business-system-fields.md` for fields AgentPal cannot verify by itself.
 
 ## Where Organization Records Live
 
@@ -184,6 +184,8 @@ Manual Business System examples should keep three evidence states separate:
 - `missing`: required evidence is absent and must be reported or requested.
 
 Do not convert `unknown` into available. Do not convert `not-run` into pass. Do not hide missing evidence.
+
+For non-code systems such as Notion, CRM, Feishu, OA, ERP, WordPress, or customer-specific tools, access, write permission, admin permission, API availability, export permission, billing or plan capability, user role, and business workflow ownership usually cannot be verified by AgentPal itself. They need user confirmation, host Runtime evidence, an exported report, a screenshot or UI confirmation provided by the user, or a documented admin setting. If that evidence is absent, keep the fields as `unknown`, checks as `not-run`, and evidence as `missing`.
 
 ## Step 6: Save To The Right Place
 

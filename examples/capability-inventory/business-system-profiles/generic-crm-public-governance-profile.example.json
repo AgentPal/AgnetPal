@@ -1,0 +1,87 @@
+{
+  "schema": "agentpal.capability-inventory.business-system-profile.example.v0.4",
+  "profile_type": "business-system",
+  "id": "generic-crm-public-governance-example",
+  "name": "Generic CRM Public Governance Example",
+  "system_type": "crm",
+  "description": "Public-safe example for recording generic CRM governance boundaries. This is not a connector, API client, credential store, customer-data access grant, background sync job, automatic scanner, or automatic execution path.",
+  "status": "example",
+  "source": {
+    "method": "example",
+    "confirmed_by": "example",
+    "last_checked": "unknown",
+    "confidence": "example_only"
+  },
+  "example_scope": {
+    "crm_vendor": "generic-placeholder",
+    "workspace_name": "example-crm-workspace",
+    "real_customer_data": false,
+    "real_account": false,
+    "private_pipeline": false
+  },
+  "access": {
+    "access_method": "unknown",
+    "requires_user_approval": true,
+    "requires_credentials": "unknown",
+    "credential_policy": "Do not store CRM credentials, passwords, API keys, tokens, cookies, session values, customer exports, or private secrets in this profile."
+  },
+  "required_permissions": [
+    "unknown until user confirmation and host Runtime evidence confirm the task scope"
+  ],
+  "allowed_operations": [],
+  "forbidden_operations": [
+    "Do not store CRM credentials or customer data in this profile.",
+    "Do not infer customer, contact, deal, account, pipeline, export, or write access from the CRM system type.",
+    "Do not create, update, delete, export, sync, enrich, or notify customer records from this profile.",
+    "Do not claim API access, admin permission, export permission, or automation access unless confirmed by the user and current host Runtime evidence.",
+    "Do not treat this profile as a CRM connector, API client, scanner, validator, background sync job, or automatic execution path."
+  ],
+  "external_writes": {
+    "allowed_without_explicit_user_approval": false,
+    "requires_current_runtime_evidence": true,
+    "requires_task_specific_scope": true,
+    "notes": "Any contact, company, deal, ticket, workflow, export, notification, or automation change requires explicit user approval and current host Runtime evidence outside this profile."
+  },
+  "routing_boundary": {
+    "use_as_ai_judgement_input_only": true,
+    "keyword_routing_allowed": false,
+    "deterministic_routing_allowed": false,
+    "business_system_type_is_not_a_route": true,
+    "do_not_route_to_pal_runtime_skill_plugin_or_mcp_by_system_type": true
+  },
+  "project_relationship": {
+    "organization_record_location": "workspace/organization/capability-inventory/",
+    "project_record_location_pattern": "workspace/projects/<project-id>/capability-inventory/",
+    "external_project_binding_records_created_by_default": false,
+    "external_agentpal_capability_inventory_created_by_default": false,
+    "external_agentpal_business_systems_created_by_default": false
+  },
+  "verification": {
+    "verified": [
+      "This file is a public-safe example with placeholder CRM names and no customer data."
+    ],
+    "not_run": [
+      "No CRM API call was made.",
+      "No CRM connector, credential, account, contact, deal, ticket, pipeline, export, workflow, notification, or admin setting was accessed.",
+      "No permission, billing, role, write-access, export, or API availability check was executed."
+    ],
+    "missing": [
+      "Real CRM account access, contact read access, deal write access, export permission, admin role, workflow ownership, and API availability require user confirmation and host Runtime evidence."
+    ],
+    "last_checked": "unknown"
+  },
+  "unknown_fields": [
+    "availability",
+    "account_access",
+    "contact_read_access",
+    "deal_write_access",
+    "ticket_write_access",
+    "pipeline_access",
+    "export_permission",
+    "api_access",
+    "admin_permission",
+    "billing_plan_capability",
+    "user_role",
+    "business_workflow_ownership"
+  ]
+}

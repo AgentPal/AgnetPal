@@ -106,12 +106,15 @@ Use:
 | `templates/capability-inventory/business-system-profile-template.json` | Business System capability profile template for external system governance boundaries | business-system profile template work or release checks |
 | `examples/capability-inventory/business-system-profiles/` | public-safe Business System profile examples | example shape and no-connector boundary checks |
 | `examples/capability-inventory/business-system-profiles/manual-github-profile-walkthrough.md` | manual GitHub Business System walkthrough | end-to-end user-confirmed facts to organization and project records |
+| `examples/capability-inventory/business-system-profiles/manual-notion-profile-walkthrough.md` | manual Notion Business System walkthrough | non-code user-confirmed facts, unknown fields, not-run checks, and missing evidence |
 | `examples/capability-inventory/business-system-profiles/unknown-not-run-missing-examples.md` | `unknown`, `not-run`, and `missing` examples | evidence-state clarification |
+| `examples/capability-inventory/business-system-profiles/non-verifiable-business-system-fields.md` | non-verifiable Business System field notes | access, permission, API, export, role, and evidence boundary checks |
 | `examples/failures/business-system-profile-as-connector.md` | forbidden failure example for treating a profile as a connector | boundary regression and anti-pattern review |
 | `docs/03-user-guides/manual-capability-profile.md` | manual Capability Inventory profile guide | adding no-code manual or semi-manual capability profiles |
 | `evals/palbench/capability-inventory/r82-manual-profile-guide-compliance.md` | Manual Profile Guide compliance regression | Capability Inventory boundary checks |
 | `evals/palbench/capability-inventory/r83-project-record-relationship-boundary.md` | Business System project relationship regression | organization/project record and thin binding boundary checks |
 | `evals/palbench/capability-inventory/r84-business-system-manual-walkthrough-boundary.md` | Business System manual walkthrough regression | walkthrough, failure example, and evidence-state boundary checks |
+| `evals/palbench/capability-inventory/r85-non-github-business-system-boundary.md` | Non-GitHub Business System regression | Notion, CRM, non-code walkthrough, non-verifiable fields, and no-connector boundary checks |
 | `archive/migration-from-v0.3/root-legacy/capability-inventory/root-pointers/` | archived R78 root compatibility pointers | legacy path questions and migration audits |
 | `workspace/resources/imports/` | public-safe import staging placeholders | import/resource boundary work |
 | `workspace/organization/memory/` | public-safe organization memory placeholders and examples | memory protocol or placeholder work |
@@ -233,9 +236,13 @@ Capability Inventory is a no-code profile layer. It is not an automatic scanner,
 | `examples/capability-inventory/` | illustrative examples only, not proof of current availability |
 | `examples/capability-inventory/business-system-profiles/` | public-safe Business System profile examples, not connectors or credentials |
 | `examples/capability-inventory/business-system-profiles/github-public-governance-profile.example.json` | GitHub governance example using placeholder `example-org/example-repo` |
+| `examples/capability-inventory/business-system-profiles/notion-public-governance-profile.example.json` | Notion governance example with unknown workspace, database, write, and API access |
+| `examples/capability-inventory/business-system-profiles/generic-crm-public-governance-profile.example.json` | Generic CRM governance example with unknown account, customer-data, export, write, and API access |
 | `examples/capability-inventory/business-system-profiles/manual-github-profile-walkthrough.md` | manual walkthrough from confirmed facts to organization profile and project record |
+| `examples/capability-inventory/business-system-profiles/manual-notion-profile-walkthrough.md` | non-code Notion walkthrough from possible use to central records without external `.agentpal/` copies |
 | `examples/capability-inventory/business-system-profiles/github-project-record-reference.example.md` | central project record reference example |
 | `examples/capability-inventory/business-system-profiles/unknown-not-run-missing-examples.md` | evidence-state examples for `unknown`, `not-run`, and `missing` |
+| `examples/capability-inventory/business-system-profiles/non-verifiable-business-system-fields.md` | fields that require user confirmation, host Runtime evidence, UI/export evidence, or admin confirmation |
 | `examples/failures/business-system-profile-as-connector.md` | forbidden failure example for connector, credential, auto scan, and keyword route misuse |
 
 ### Organization Capability Records
@@ -253,6 +260,7 @@ Capability Inventory is a no-code profile layer. It is not an automatic scanner,
 | `evals/palbench/capability-inventory/r82-manual-profile-guide-compliance.md` | compliance regression for manual profiles, Business System profile boundary, project record relationship, and no auto scan / no keyword routing rules |
 | `evals/palbench/capability-inventory/r83-project-record-relationship-boundary.md` | regression for organization/project record relationship, thin binding, no connector, no credentials, and no keyword routing |
 | `evals/palbench/capability-inventory/r84-business-system-manual-walkthrough-boundary.md` | regression for walkthrough, evidence-state examples, forbidden failure example, and thin-binding boundary |
+| `evals/palbench/capability-inventory/r85-non-github-business-system-boundary.md` | regression for Notion / CRM examples, non-code walkthrough, non-verifiable fields, and no connector / no keyword route |
 
 ### Historical Migration Notes
 
@@ -330,11 +338,16 @@ Use the current docs directories as the public entry points. Archived research n
 | `docs/05-orchestration-methodology/capability-inventory-minimal-usable-design.md` | v0.2 minimal manual Capability Inventory profile design |
 | `standards/capability-inventory/business-system-profile-standard.md` | Business System profile standard for no-code external system governance |
 | `examples/capability-inventory/business-system-profiles/github-public-governance-profile.example.json` | public-safe GitHub Business System profile example using `example-org/example-repo` |
+| `examples/capability-inventory/business-system-profiles/notion-public-governance-profile.example.json` | public-safe Notion Business System profile example with unknown access and no connector |
+| `examples/capability-inventory/business-system-profiles/generic-crm-public-governance-profile.example.json` | public-safe generic CRM Business System profile example with unknown customer-data and write access |
 | `evals/palbench/capability-inventory/r83-project-record-relationship-boundary.md` | Business System profile relationship and thin-binding regression |
 | `examples/capability-inventory/business-system-profiles/manual-github-profile-walkthrough.md` | manual Business System walkthrough from user facts to central records |
+| `examples/capability-inventory/business-system-profiles/manual-notion-profile-walkthrough.md` | manual Notion Business System walkthrough from user facts to central records |
 | `examples/capability-inventory/business-system-profiles/unknown-not-run-missing-examples.md` | examples for preserving unknown, not-run, and missing evidence states |
+| `examples/capability-inventory/business-system-profiles/non-verifiable-business-system-fields.md` | notes for non-verifiable access, permission, API, export, role, and evidence fields |
 | `examples/failures/business-system-profile-as-connector.md` | forbidden connector misuse failure example |
 | `evals/palbench/capability-inventory/r84-business-system-manual-walkthrough-boundary.md` | R84 walkthrough and boundary regression |
+| `evals/palbench/capability-inventory/r85-non-github-business-system-boundary.md` | R85 non-GitHub Business System boundary regression |
 | `docs/05-orchestration-methodology/deep-conductor-master-goal.md` | Deep Conductor master goal and no-code 12-step loop |
 | `docs/05-orchestration-methodology/deep-conductor-master-loop-usage-guide.md` | Deep Conductor usage guide for project-level no-code coordination |
 | `docs/05-orchestration-methodology/deep-conductor-e2e-usage-guide.md` | Deep Conductor E2E usage guide for integrated no-code project-level closure |

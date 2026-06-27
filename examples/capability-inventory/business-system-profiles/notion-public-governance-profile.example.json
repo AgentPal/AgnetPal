@@ -1,0 +1,87 @@
+{
+  "schema": "agentpal.capability-inventory.business-system-profile.example.v0.4",
+  "profile_type": "business-system",
+  "id": "notion-public-governance-example",
+  "name": "Notion Public Governance Example",
+  "system_type": "workspace-docs",
+  "description": "Public-safe example for recording Notion governance boundaries. This is not a connector, API client, credential store, permission grant, workspace scan, background sync job, or automatic execution path.",
+  "status": "example",
+  "source": {
+    "method": "example",
+    "confirmed_by": "example",
+    "last_checked": "unknown",
+    "confidence": "example_only"
+  },
+  "example_scope": {
+    "workspace_name": "example-workspace",
+    "database_name": "example-content-database",
+    "real_workspace": false,
+    "real_account": false,
+    "private_content": false
+  },
+  "access": {
+    "access_method": "unknown",
+    "requires_user_approval": true,
+    "requires_credentials": "unknown",
+    "credential_policy": "Do not store Notion tokens, integration secrets, passwords, API keys, cookies, session values, private workspace URLs, or private secrets in this profile."
+  },
+  "required_permissions": [
+    "unknown until user confirmation and host Runtime evidence confirm the task scope"
+  ],
+  "allowed_operations": [],
+  "forbidden_operations": [
+    "Do not store Notion tokens or integration secrets.",
+    "Do not claim workspace, page, database, or write access unless confirmed by the user and current host Runtime evidence.",
+    "Do not publish, modify, delete, export, sync, or share Notion pages or databases from this profile.",
+    "Do not infer private content, team membership, billing plan, admin role, or integration permissions from this example.",
+    "Do not treat this profile as a Notion connector, API client, scanner, validator, background sync job, or automatic execution path."
+  ],
+  "external_writes": {
+    "allowed_without_explicit_user_approval": false,
+    "requires_current_runtime_evidence": true,
+    "requires_task_specific_scope": true,
+    "notes": "Any page edit, database update, publish action, export, share, or integration change requires explicit user approval and current host Runtime evidence outside this profile."
+  },
+  "routing_boundary": {
+    "use_as_ai_judgement_input_only": true,
+    "keyword_routing_allowed": false,
+    "deterministic_routing_allowed": false,
+    "business_system_type_is_not_a_route": true,
+    "do_not_route_to_pal_runtime_skill_plugin_or_mcp_by_system_type": true
+  },
+  "project_relationship": {
+    "organization_record_location": "workspace/organization/capability-inventory/",
+    "project_record_location_pattern": "workspace/projects/<project-id>/capability-inventory/",
+    "external_project_binding_records_created_by_default": false,
+    "external_agentpal_capability_inventory_created_by_default": false,
+    "external_agentpal_business_systems_created_by_default": false
+  },
+  "verification": {
+    "verified": [
+      "This file is a public-safe example with placeholder Notion workspace and database names."
+    ],
+    "not_run": [
+      "No Notion API call was made.",
+      "No Notion connector, token, integration secret, workspace, page, database, export, share, or admin setting was accessed.",
+      "No permission, billing, role, write-access, or API availability check was executed."
+    ],
+    "missing": [
+      "Real Notion workspace access, database access, page write capability, export permission, admin role, and API availability require user confirmation and host Runtime evidence."
+    ],
+    "last_checked": "unknown"
+  },
+  "unknown_fields": [
+    "availability",
+    "workspace_access",
+    "database_access",
+    "page_read_access",
+    "page_write_access",
+    "api_access",
+    "integration_status",
+    "export_permission",
+    "admin_permission",
+    "billing_plan_capability",
+    "user_role",
+    "workspace_id"
+  ]
+}

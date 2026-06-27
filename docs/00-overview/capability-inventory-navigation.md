@@ -40,9 +40,13 @@ Business System records can describe GitHub, Feishu, Notion, CRM, Jira, Linear, 
 Current Business System examples:
 
 - `examples/capability-inventory/business-system-profiles/manual-github-profile-walkthrough.md`
+- `examples/capability-inventory/business-system-profiles/manual-notion-profile-walkthrough.md`
 - `examples/capability-inventory/business-system-profiles/github-project-record-reference.example.md`
 - `examples/capability-inventory/business-system-profiles/unknown-not-run-missing-examples.md`
+- `examples/capability-inventory/business-system-profiles/non-verifiable-business-system-fields.md`
 - `examples/capability-inventory/business-system-profiles/github-public-governance-profile.example.json`
+- `examples/capability-inventory/business-system-profiles/notion-public-governance-profile.example.json`
+- `examples/capability-inventory/business-system-profiles/generic-crm-public-governance-profile.example.json`
 - `examples/failures/business-system-profile-as-connector.md`
 
 ## External Project Boundary
@@ -102,6 +106,14 @@ evals/palbench/capability-inventory/r84-business-system-manual-walkthrough-bound
 ```
 
 It checks the manual walkthrough, project record reference, unknown / not-run / missing examples, forbidden failure example, no credentials, no connector, no automatic scanner, no keyword routing, and no external project pollution.
+
+The non-GitHub Business System boundary regression lives at:
+
+```text
+evals/palbench/capability-inventory/r85-non-github-business-system-boundary.md
+```
+
+It checks the Notion example, CRM example, non-code walkthrough, non-verifiable fields note, no credentials, no connector, no automatic scanner, no keyword routing, unknown / not-run / missing preservation, and no external project pollution.
 
 ## Legacy Path Notes
 
