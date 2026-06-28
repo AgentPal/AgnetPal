@@ -784,6 +784,16 @@ Use the current docs directories as the public entry points. Archived research n
 | `release/current/v0.5-release-readiness-interpretation.md` | R141 release readiness interpretation |
 | `release/fresh-clone-checks/r141-local-core-capability-pal-readiness-audit-validation.md` | R141 local core capability / Pal readiness audit validation |
 | `release/integration-notes/r141-r142-readiness-decision.md` | R141 readiness decision for R142 full usable-core test |
+| `evals/palbench/v0.5/r142-pal-behavior-deep-conductor-full-test-plan.md` | R142 behavior / Deep Conductor full test design plan |
+| `evals/palbench/v0.5/r142-pal-conversation-asset-use-test-matrix.md` | R142 Pal conversation and asset-use test matrix |
+| `evals/palbench/v0.5/r142-capability-inventory-agent-model-skill-test-matrix.md` | R142 capability inventory / Agent / model / Skill / plugin matrix |
+| `evals/palbench/v0.5/r142-memory-knowledge-skill-workflow-writeback-test-matrix.md` | R142 memory / knowledge / Skill / workflow writeback matrix |
+| `evals/palbench/v0.5/r142-deep-conductor-decision-test-matrix.md` | R142 Deep Conductor decision test matrix |
+| `evals/palbench/v0.5/r142-end-to-end-human-use-scenarios.md` | R142 end-to-end human-use scenario design |
+| `evals/palbench/v0.5/r142-behavior-test-scoring-rubric.md` | R142 behavior test scoring rubric |
+| `release/integration-notes/r142-r143-to-r146-behavior-test-execution-plan.md` | R142 staged behavior test execution plan for R143-R146 |
+| `release/fresh-clone-checks/r142-local-pal-behavior-deep-conductor-test-design-validation.md` | R142 local behavior test design validation |
+| `release/integration-notes/r142-r143-readiness-decision.md` | R142 readiness decision for R143 Mira / PalSmith / Faye behavior tests |
 
 ## R101 Integration
 
