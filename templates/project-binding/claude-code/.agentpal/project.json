@@ -3,6 +3,7 @@
   "binding_style": "thin-binding",
   "active_project_root": "<absolute external project root>",
   "agentpal_workspace_root": "<absolute AgentPal workspace root>",
+  "agentpal_project_record": "workspace/projects/<project-id>",
   "runtime_hint": "claude-code",
   "ordinary_messages_go_to": "Mira",
   "project_context_policy": "active_project_root_only",
@@ -33,7 +34,8 @@
     ".agentpal/verification",
     ".agentpal/audit-trail",
     ".agentpal/governance-decisions",
-    ".agentpal/change-ledger"
+    ".agentpal/change-ledger",
+    ".agentpal/change-review"
   ],
   "routing_policy": "ai_judgement_only",
   "keyword_routing_allowed": false

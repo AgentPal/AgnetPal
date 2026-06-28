@@ -29,6 +29,7 @@ Forbidden default writes:
 - `.agentpal/audit-trail/`
 - `.agentpal/governance-decisions/`
 - `.agentpal/change-ledger/`
+- `.agentpal/change-review/`
 
 Keep `active_project_root` and `agentpal_workspace_root` separate.
 

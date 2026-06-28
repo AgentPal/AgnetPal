@@ -8,10 +8,10 @@ It is not an automatic scanner, validator, installer, sync service, or keyword r
 
 | Source type | Path | Role |
 | --- | --- | --- |
-| Standards | `standards/capability-inventory/` | Reusable rules, matrices, protocols, profile standards, Business System review flow, manual update evidence pack rules, manual writeback replay record rules, audit trail index rules, governance decision record rules, and change ledger rules. |
+| Standards | `standards/capability-inventory/` | Reusable rules, matrices, protocols, profile standards, Business System review flow, manual update evidence pack rules, manual writeback replay record rules, audit trail index rules, governance decision record rules, change ledger rules, and change review note rules. |
 | Current organization records | `workspace/organization/capability-inventory/` | Public-safe current organization placeholders and maintained capability notes. |
 | Examples | `examples/capability-inventory/` | Synthetic example profiles and task judgement examples, including public-safe Business System examples and review examples. |
-| Templates | `templates/capability-inventory/` | Copyable profile templates, including `business-system-profile-template.json`, `business-system-profile-review-packet.md`, `business-system-profile-manual-update-evidence-pack.md`, `business-system-profile-manual-writeback-replay-record.md`, `business-system-profile-audit-trail-index.md`, `business-system-profile-governance-decision-record.md`, and `business-system-profile-change-ledger.md`. |
+| Templates | `templates/capability-inventory/` | Copyable profile templates, including `business-system-profile-template.json`, `business-system-profile-review-packet.md`, `business-system-profile-manual-update-evidence-pack.md`, `business-system-profile-manual-writeback-replay-record.md`, `business-system-profile-audit-trail-index.md`, `business-system-profile-governance-decision-record.md`, `business-system-profile-change-ledger.md`, and `business-system-profile-change-review-note.md`. |
 | Project record template | `workspace/projects/_template/capability-inventory/` | Template for per-project capability records under central project records. |
 | Historical archive | `archive/migration-from-v0.3/root-legacy/capability-inventory/` | R78/R79/R80 migration evidence and archived legacy pointers. |
 
@@ -48,6 +48,8 @@ Use `standards/capability-inventory/business-system-profile-audit-trail-index.md
 Use `standards/capability-inventory/business-system-profile-governance-decision-record.md` and `templates/capability-inventory/business-system-profile-governance-decision-record.md` after review, evidence, replay, and audit trail review when a human governance decision must be recorded. Governance decision records can approve a bounded manual profile update, reject it, block it for missing evidence, require user confirmation, require host Runtime evidence, require second verification, or supersede an earlier decision. They still must not execute writeback, auto-close missing evidence, convert not-run to pass, modify central contacts, write into external project `.agentpal/governance-decisions/`, create connectors, store credentials, or keyword route.
 
 Use `standards/capability-inventory/business-system-profile-change-ledger.md` and `templates/capability-inventory/business-system-profile-change-ledger.md` after governance decision and manual change review when field-level Business System Profile changes need a human-governed ledger. Change ledgers record old/new public-safe summaries, source decision, evidence, replay, audit trail, rollback reference, second verification status, superseded entries, retained unknowns, retained not-run checks, retained missing evidence, and next manual review date. They still must not execute writeback, auto-update organization truth, auto-call external APIs, auto-close missing evidence, convert not-run to pass, modify central contacts, write into external project `.agentpal/change-ledger/`, create connectors, store credentials, schedule automatic tasks, or keyword route.
+
+Use `standards/capability-inventory/business-system-profile-change-review-note.md` and `templates/capability-inventory/business-system-profile-change-review-note.md` for periodic manual reconciliation of completed Business System Profile governance chains. Change review notes compare review, evidence, replay, audit trail, decision, ledger, and current profile status, while preserving unknown, not-run, and missing evidence. They still must not execute writeback, auto-update organization truth, auto-call external APIs, auto-close missing evidence, modify central contacts, schedule automatic tasks, or write into external project `.agentpal/change-review/`.
 
 Current Business System examples:
 
@@ -117,6 +119,14 @@ examples/capability-inventory/business-system-profile-reviews/notion-read-access
 
 It shows a public-safe field-level `read_access` change summary from `unknown` to `user_confirmed` as an example premise while keeping `second_verification_not_run`, retained unknowns, retained missing evidence, and no automatic action.
 
+The change review note example lives at:
+
+```text
+examples/capability-inventory/business-system-profile-reviews/notion-read-access-change-review-note.example.md
+```
+
+It shows a manual reconciliation note for the Notion read access governance chain and keeps unresolved evidence states explicit instead of treating the next review date as automation.
+
 ## External Project Boundary
 
 External user projects remain thin-bound. Do not copy standards, examples, templates, Pal Packs, central contacts, memory, reports, workflows, capability inventory directories, or business-system directories into the external project by default.
@@ -133,7 +143,7 @@ The template for that central project record area is:
 workspace/projects/_template/capability-inventory/
 ```
 
-The external project should keep only binding entrypoints such as `.agentpal/project.json`, `.agentpal/AGENTPAL.md`, and protected root instruction blocks. It should not receive `.agentpal/capability-inventory/`, `.agentpal/business-systems/`, `.agentpal/governance-decisions/`, or `.agentpal/change-ledger/` by default.
+The external project should keep only binding entrypoints such as `.agentpal/project.json`, `.agentpal/AGENTPAL.md`, and protected root instruction blocks. It should not receive `.agentpal/capability-inventory/`, `.agentpal/business-systems/`, `.agentpal/governance-decisions/`, `.agentpal/change-ledger/`, or `.agentpal/change-review/` by default.
 
 ## Routing Boundary
 
@@ -238,6 +248,14 @@ evals/palbench/capability-inventory/r92-business-system-profile-change-ledger-bo
 ```
 
 It checks the change ledger standard, template, public-safe example, governance decision / evidence / replay / audit trail references, old/new summary honesty, second verification not-run preservation, missing evidence preservation, next review date as a manual note, central roster boundary, no connector, no credentials, no automatic scanner, no external API call, no keyword routing, and no external project `.agentpal/change-ledger/` writes.
+
+The Business System profile change review note regression lives at:
+
+```text
+evals/palbench/capability-inventory/r93a-business-system-profile-change-review-note-boundary.md
+```
+
+It checks the change review note standard, template, public-safe example, governance chain reconciliation, retained unknown / not-run / missing evidence states, next review date as manual review context, central roster boundary, no connector, no credentials, no automatic scanner, no external API call, no scheduled automation, no keyword routing, and no external project `.agentpal/change-review/` writes.
 
 ## Legacy Path Notes
 

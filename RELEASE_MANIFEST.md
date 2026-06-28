@@ -129,10 +129,10 @@ Included:
 - public release docs: `README.md`, `README.zh-CN.md`, `RELEASE_NOTES.md`, `CHANGELOG.md`, `GITHUB_RELEASE_DRAFT.md`, `RELEASE_CHECKLIST.md`, `CONTRIBUTING.md`, `THIRD_PARTY_NOTICES.md`, and this manifest
 - navigation index: `RESOURCE_INDEX.md`
 - shared core gates under `core/` for Codex, Claude Code, generic CLI, and project-bound sessions
-- official bundled Pal Packs under `pals/`
+- official bundled Pal Packs under `official/pals/`
 - PalSmith no-code Pal asset governance docs, Runtime Task Package standard links, task package templates, example task packages, Markdown evals, and release-scope review
 - PalSmith source lineage, source inventory, source coverage matrix, and no-code governance review assets
-- contacts and registry files under `contacts/` and `registry/`
+- contacts and registry files under `workspace/organization/contacts/` and `workspace/resources/registry/`
 - orchestration protocols, templates, examples, evals, prompts, runtime compatibility notes, capability profiles, and research docs
 - deliverable-aware task judgement protocol, staged Task Package example, failure regression example, and orchestration self-test
 - thin external project binding templates and Claude Code / generic CLI Agent one-prompt setup prompts
@@ -152,22 +152,22 @@ Not included:
 
 | Pal | Directory | Role |
 | --- | --- | --- |
-| Mira | `pals/Mira-main` | Main Pal, Leader Pal, Conductor, and Pal team leader and coordinator |
-| Atlas | `pals/Atlas-developer` | Development perspective |
-| Vega | `pals/Vega-research` | Research and evidence perspective |
-| Rhea | `pals/Rhea-system` | Local system and environment perspective |
-| PalSmith | `pals/PalSmith-pal-governor` | Pal asset governance, creation, health, import/export, versioning, and Runtime Task Package perspective |
-| Quinn | `pals/Quinn-quality` | Quality, risk, evidence, and acceptance perspective |
-| Morgan | `pals/Morgan-document` | Document and file workflow perspective |
-| Harper | `pals/Harper-writing` | Writing and communication perspective |
-| Nova | `pals/Nova-product` | Product and decision perspective |
+| Mira | `official/pals/Mira-main` | Main Pal, Leader Pal, Conductor, and Pal team leader and coordinator |
+| Atlas | `official/pals/Atlas-developer` | Development perspective |
+| Vega | `official/pals/Vega-research` | Research and evidence perspective |
+| Rhea | `official/pals/Rhea-system` | Local system and environment perspective |
+| PalSmith | `official/pals/PalSmith-pal-governor` | Pal asset governance, creation, health, import/export, versioning, and Runtime Task Package perspective |
+| Quinn | `official/pals/Quinn-quality` | Quality, risk, evidence, and acceptance perspective |
+| Morgan | `official/pals/Morgan-document` | Document and file workflow perspective |
+| Harper | `official/pals/Harper-writing` | Writing and communication perspective |
+| Nova | `official/pals/Nova-product` | Product and decision perspective |
 
 Contacts / registry source of truth:
 
-- `contacts/pals.json`
-- `contacts/PAL_CONTACTS.md`
-- `registry/pal.index.json`
-- `registry/pal.index.md`
+- `workspace/organization/contacts/pals.json`
+- `workspace/organization/contacts/PAL_CONTACTS.md`
+- `workspace/resources/registry/pal.index.json`
+- `workspace/resources/registry/pal.index.md`
 
 ## Verification Summary
 
@@ -196,8 +196,8 @@ R38 / R09 / R10 local checks:
 - R14 maintainer release handoff: `docs/08-release-candidate/24-maintainer-release-handoff.md`.
 - R14 final maintainer stage readiness report: `docs/08-release-candidate/25-final-maintainer-stage-readiness-report.md`.
 - R14 handoff result: maintainer stage review yes, commit review yes, tag review yes after human decision, GitHub Release draft review yes, publish-ready no until maintainer performs Git and GitHub Release operations manually.
-- R10 official Pal consistency: `agentpal.json`, `contacts/pals.json`, and `registry/pal.index.json` each list 9 official bundled Pal Packs and include PalSmith as `palsmith-pal-governor`.
-- R10 JSON parse check passed for `agentpal.json`, `contacts/pals.json`, `registry/pal.index.json`, and all Pal `pal.json` files under `pals/`.
+- R10 official Pal consistency: `agentpal.json`, `workspace/organization/contacts/pals.json`, and `workspace/resources/registry/pal.index.json` each list 9 official bundled Pal Packs and include PalSmith as `palsmith-pal-governor`.
+- R10 JSON parse check passed for `agentpal.json`, `workspace/organization/contacts/pals.json`, `workspace/resources/registry/pal.index.json`, and all Pal `pal.json` files under `official/pals/`.
 - Codex, Claude Code, and Generic CLI thin binding checks passed.
 - Core gate propagation checks passed for `core/` shared gates.
 - No local absolute maintainer paths, attachment traces, temporary pasted text traces, or private maintenance-directory references were found in public release files.

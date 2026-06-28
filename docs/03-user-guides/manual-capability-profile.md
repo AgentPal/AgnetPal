@@ -71,6 +71,12 @@ For Business System profile change ledgers after governance decision and manual 
 standards/capability-inventory/business-system-profile-change-ledger.md
 ```
 
+For Business System profile change review notes during periodic manual reconciliation, use:
+
+```text
+standards/capability-inventory/business-system-profile-change-review-note.md
+```
+
 ## Where Templates Live
 
 Copyable templates live in:
@@ -115,6 +121,12 @@ Business System profile change ledgers use:
 
 ```text
 templates/capability-inventory/business-system-profile-change-ledger.md
+```
+
+Business System profile change review notes use:
+
+```text
+templates/capability-inventory/business-system-profile-change-review-note.md
 ```
 
 ## Where Examples Live

@@ -104,6 +104,15 @@ templates/capability-inventory/business-system-profile-change-ledger.md
 
 The change ledger records manual, human-governed changes, old/new public-safe summaries, source decision, evidence, replay, audit trail, rollback reference, second verification status, superseded entries, retained unknowns, retained not-run checks, retained missing evidence, and next manual review date. It still must not execute writeback, auto-update organization truth, auto-call external APIs, auto-close missing evidence, convert not-run to pass, modify central contacts, create a connector, store credentials, route by keywords, schedule automatic tasks, or write into external project `.agentpal/change-ledger/`.
 
+During periodic manual reconciliation, create a Change Review Note to compare the review packet, evidence pack, replay record, audit trail index, governance decision, change ledger, and current profile status:
+
+```text
+standards/capability-inventory/business-system-profile-change-review-note.md
+templates/capability-inventory/business-system-profile-change-review-note.md
+```
+
+The change review note records manual review status, retained unknowns, retained not-run checks, missing evidence, and follow-up recommendations. It still must not execute writeback, auto-update organization truth, auto-call external APIs, auto-close missing evidence, modify central contacts, create a connector, store credentials, route by keywords, schedule automatic tasks, or write into external project `.agentpal/change-review/`.
+
 ## Boundary Checklist
 
 - Keep project usage memory under the central project record.
@@ -117,3 +126,4 @@ The change ledger records manual, human-governed changes, old/new public-safe su
 - Do not treat an audit trail index as an execution engine, external API caller, or automatic missing-evidence closer.
 - Do not treat a governance decision record as an approval engine, execution engine, central roster update, or automatic organization profile writeback.
 - Do not treat a change ledger as a writeback engine, central roster update, automatic organization profile writeback, automatic missing-evidence closer, external API caller, or scheduled automation from `next_review_date`.
+- Do not treat a change review note as a writeback engine, central roster update, automatic organization profile writeback, automatic missing-evidence closer, external API caller, scheduled automation, reminder, scanner, connector, or keyword route.

@@ -23,6 +23,7 @@ When creating a real profile, copy a template and follow `docs/03-user-guides/ma
 | Business System profile audit trail index | `business-system-profile-audit-trail-index.md` |
 | Business System profile governance decision record | `business-system-profile-governance-decision-record.md` |
 | Business System profile change ledger | `business-system-profile-change-ledger.md` |
+| Business System profile change review note | `business-system-profile-change-review-note.md` |
 | Pal capability profile | `pal-capability-profile-template.json` |
 
 ## Related Sources
@@ -57,3 +58,5 @@ Audit trail indexes are no-code index artifacts across review packets, evidence 
 Governance decision records are no-code human decision artifacts after review, evidence, replay, and audit trail review. They record the decision, evidence considered, retained unknowns, retained not-run checks, retained missing evidence, second verification requirement, and any bounded manual update scope. They must not execute actions, auto-update organization profiles, auto-close missing evidence, modify central Pal contacts, create connectors, store credentials, keyword-route, or write into external project `.agentpal/governance-decisions/`.
 
 Change ledgers are no-code human governance artifacts after governance decision and manual change review. They record field-level old/new summaries, source decision, evidence, replay, audit trail, rollback reference, second verification status, superseded entries, retained unknowns, retained not-run checks, retained missing evidence, and next manual review date. They must not execute writeback, auto-update organization profiles, auto-call external APIs, auto-close missing evidence, modify central Pal contacts, create connectors, store credentials, keyword-route, schedule automatic tasks, or write into external project `.agentpal/change-ledger/`.
+
+Change review notes are no-code manual reconciliation artifacts after one or more change ledger entries. They compare the governance chain and current profile status, preserve unknown / not-run / missing evidence states, and record manual follow-up recommendations. They must not execute writeback, auto-update organization profiles, auto-call external APIs, auto-close missing evidence, modify central Pal contacts, create connectors, store credentials, keyword-route, schedule automatic tasks, or write into external project `.agentpal/change-review/`.

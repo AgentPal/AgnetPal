@@ -57,7 +57,7 @@ Use this section before entering `v0.3.0-rc.1` tag / push / GitHub Release work.
 
 - [ ] `README.md` exists and presents AgentPal as a Pal layer and Pal Pack Standard practice.
 - [ ] `README.zh-CN.md` exists and matches the English README's current-version boundary.
-- [ ] `AGENTS.md` exists and states the Runtime Response Gate, Simple Pal Mode only, Mira default routing, contacts/registry source of truth, and public-safe boundaries.
+- [ ] `AGENTS.md` exists and states the Runtime Response Gate, Simple Pal Mode only, Mira default routing, workspace contacts / registry source of truth, and public-safe boundaries.
 - [ ] `PAL.md` exists and describes the AgentPal Workspace identity, not a single Pal.
 - [ ] `SKILL.md` exists and identifies AgentPal as a Workspace-level Skill entry, not a single-purpose Skill.
 - [ ] `prompts/codex/initialize-agentpal-workspace.md` can be copied into Codex for AgentPal Workspace initialization.
@@ -87,12 +87,12 @@ Use this section before entering `v0.3.0-rc.1` tag / push / GitHub Release work.
 
 ## Pals
 
-- [ ] Official bundled Pal directories exist: `pals/Mira-main`, `pals/Atlas-developer`, `pals/Vega-research`, `pals/Rhea-system`, `pals/PalSmith-pal-governor`, `pals/Quinn-quality`, `pals/Morgan-document`, `pals/Harper-writing`, and `pals/Nova-product`.
+- [ ] Official bundled Pal directories exist: `official/pals/Mira-main`, `official/pals/Atlas-developer`, `official/pals/Vega-research`, `official/pals/Rhea-system`, `official/pals/PalSmith-pal-governor`, `official/pals/Quinn-quality`, `official/pals/Morgan-document`, `official/pals/Harper-writing`, and `official/pals/Nova-product`.
 - [ ] Each official Pal has `PAL.md`, `pal.json`, `SKILL.md`, `AGENTS.md`, `README.md`, and `core/output-contract.md`.
 - [ ] Specialist Pals are described as Pal Packs, not independent agent processes.
 - [ ] Pal-owned Skills are stored under the owner Pal's own `skills/` directory.
 - [ ] Pal memory, state, and report directories contain only public-safe placeholders unless they are ignored runtime-private files.
-- [ ] PalSmith is registered as `palsmith-pal-governor` in `agentpal.json`, `registry/pal.index.json`, and `contacts/pals.json`.
+- [ ] PalSmith is registered as `palsmith-pal-governor` in `agentpal.json`, `workspace/resources/registry/pal.index.json`, and `workspace/organization/contacts/pals.json`.
 - [ ] PalSmith release docs link to `docs/PalSmith.md`, Runtime Task Package standard, import/export standard, end-to-end workflows, task package templates, examples, Markdown evals, no-code release checklist, and release-scope review.
 - [ ] PalSmith is documented as no-code Pal governance content, not a CLI, scanner, validator, installer, importer program, exporter program, UI, daemon, service, or runtime dependency.
 - [ ] PalSmith final verification report exists at `docs/08-release-candidate/09-palsmith-final-verification-report.md`.
@@ -111,9 +111,9 @@ Use this section before entering `v0.3.0-rc.1` tag / push / GitHub Release work.
 
 ## Contacts And Registry
 
-- [ ] `contacts/pals.json` contains only valid Pal Packs.
-- [ ] `registry/pal.index.json` matches the current official bundled Pal set.
-- [ ] `agentpal.json`, `registry/pal.index.json`, and `contacts/pals.json` agree on the 9 official bundled Pal Packs.
+- [ ] `workspace/organization/contacts/pals.json` contains only valid Pal Packs.
+- [ ] `workspace/resources/registry/pal.index.json` matches the current official bundled Pal set.
+- [ ] `agentpal.json`, `workspace/resources/registry/pal.index.json`, and `workspace/organization/contacts/pals.json` agree on the 9 official bundled Pal Packs.
 - [ ] Mention aliases resolve `/pal Name` by display name or alias.
 - [ ] Contacts and registry are documented as the source of truth for Pal discovery.
 - [ ] Individual Pal Packs do not maintain hard-coded route maps for other Pals.
@@ -200,7 +200,7 @@ Use this section before entering `v0.3.0-rc.1` tag / push / GitHub Release work.
 ## Validation
 
 - [ ] JSON parse checks passed.
-- [ ] Official Pal count checks passed for `agentpal.json`, `contacts/pals.json`, and `registry/pal.index.json`.
+- [ ] Official Pal count checks passed for `agentpal.json`, `workspace/organization/contacts/pals.json`, and `workspace/resources/registry/pal.index.json`.
 - [ ] Official Pal root-file checks passed for `README.md`, `PAL.md`, `SKILL.md`, `AGENTS.md`, `pal.json`, and `core/output-contract.md`.
 - [ ] Formal Skill count / listed Skill asset consistency checks passed or gaps are documented.
 - [ ] Formal Skill asset maps show missing asset count 0 under the current release standard.
