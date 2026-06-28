@@ -32,6 +32,8 @@ v0.5 本地完成度证据见 [local completion report](release/current/v0.5-loc
 
 v0.5 本地 release preflight 见 [local release preflight](release/current/v0.5-local-release-preflight.md)、[public package checklist](release/current/v0.5-public-package-checklist.md)、[release notes draft](release/current/v0.5-release-notes-draft.md)、[public artifact inventory](release/current/v0.5-public-artifact-inventory.md) 和 [remote-publication decision note](release/current/v0.5-remote-publication-decision-required.md)。R131 只准备发布决策，不代表 v0.5 已经远端发布。
 
+v0.5 Faye / Delivery Pack 集成入口见 [Faye / Delivery Pack / Deep Conductor overview](docs/00-overview/faye-delivery-pack-deep-conductor-overview.md)、[Faye standards](standards/faye-delivery-pal/)、[base Delivery Pack template](templates/delivery-pack/base-delivery-pack/)、[video growth Delivery Pack](examples/delivery-packs/video-growth-delivery-pack/)、[sales CRM Delivery Pack](examples/delivery-packs/sales-crm-delivery-pack/) 和 [Faye Deep Conductor protocols](standards/deep-conductor/)。这些是 no-code 组织与落地资产，不是 connector、marketplace、runtime engine、外部项目写入器或关键词路由器。
+
 ## 为什么需要 AgentPal？
 
 用户想让 Agent 更好用时，通常会走两条路：

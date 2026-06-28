@@ -696,6 +696,31 @@ Use the current docs directories as the public entry points. Archived research n
 | `release/fresh-clone-checks/r131-local-v0.5-release-preflight-validation.md` | R131 local v0.5 release preflight validation |
 | `evals/palbench/v0.5/r131-v0.5-release-preflight-evidence-review.md` | R131 release preflight evidence review eval |
 | `release/integration-notes/r131-r132-readiness-decision.md` | R131 readiness decision for explicit R132 publication choice |
+| `docs/00-overview/faye-delivery-pack-deep-conductor-overview.md` | R133 overview for Faye, Delivery Packs, examples, and Deep Conductor governance |
+| `standards/faye-delivery-pal/faye-ai-delivery-pal-standard.md` | R132-A Faye / AI Delivery Pal standard |
+| `standards/faye-delivery-pal/delivery-pack-standard.md` | R132-A Delivery Pack standard |
+| `standards/faye-delivery-pal/faye-palsmith-handoff-standard.md` | R132-A Faye to PalSmith handoff standard |
+| `templates/delivery-pack/base-delivery-pack/` | R132-A base Delivery Pack template |
+| `examples/delivery-packs/base-faye-delivery-pack-example/` | R132-A public-safe Faye Delivery Pack example shell |
+| `examples/delivery-packs/video-growth-delivery-pack/` | R132-B near-runnable video growth Delivery Pack example |
+| `examples/delivery-packs/sales-crm-delivery-pack/` | R132-C near-runnable sales CRM Delivery Pack example |
+| `standards/deep-conductor/faye-deep-conductor-protocol.md` | R132-D Faye Deep Conductor no-code protocol |
+| `standards/deep-conductor/delivery-pack-governance-loop.md` | R132-D Delivery Pack governance loop protocol |
+| `standards/deep-conductor/context-access-list-for-delivery-pack.md` | R132-D Context Access List standard for Delivery Packs |
+| `templates/deep-conductor/` | R132-D Deep Conductor templates |
+| `examples/deep-conductor/` | R132-D public-safe Deep Conductor examples |
+| `evals/palbench/faye-delivery/r132a-faye-delivery-pal-standard-boundary.md` | R132-A boundary eval |
+| `evals/palbench/faye-delivery/r132b-video-growth-delivery-pack-boundary.md` | R132-B boundary eval |
+| `evals/palbench/faye-delivery/r132c-sales-crm-delivery-pack-boundary.md` | R132-C boundary eval |
+| `evals/palbench/deep-conductor/r132d-faye-deep-conductor-boundary.md` | R132-D boundary eval |
+| `release/fresh-clone-checks/r132a-local-faye-delivery-pal-standard-validation.md` | R132-A local validation |
+| `release/fresh-clone-checks/r132b-local-video-growth-delivery-pack-validation.md` | R132-B local validation |
+| `release/fresh-clone-checks/r132c-local-sales-crm-delivery-pack-validation.md` | R132-C local validation |
+| `release/fresh-clone-checks/r132d-local-faye-deep-conductor-validation.md` | R132-D local validation |
+| `release/integration-notes/r133-r132-faye-delivery-integration-summary.md` | R133 R132 parallel-result integration summary |
+| `evals/palbench/faye-delivery/r133-faye-delivery-integration-boundary.md` | R133 Faye Delivery integration boundary eval |
+| `release/fresh-clone-checks/r133-local-faye-delivery-integration-validation.md` | R133 local integration validation |
+| `release/integration-notes/r133-r134-readiness-decision.md` | R133 readiness decision for R134 review gate |
 
 ## R101 Integration
 

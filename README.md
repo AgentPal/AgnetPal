@@ -32,6 +32,8 @@ For v0.5 local completion evidence, see the [local completion report](release/cu
 
 For v0.5 local release preflight, see the [local release preflight](release/current/v0.5-local-release-preflight.md), [public package checklist](release/current/v0.5-public-package-checklist.md), [release notes draft](release/current/v0.5-release-notes-draft.md), [public artifact inventory](release/current/v0.5-public-artifact-inventory.md), and [remote-publication decision note](release/current/v0.5-remote-publication-decision-required.md). R131 prepares a publication decision only; it does not publish v0.5 remotely.
 
+For v0.5 Faye / Delivery Pack integration, see the [Faye / Delivery Pack / Deep Conductor overview](docs/00-overview/faye-delivery-pack-deep-conductor-overview.md), [Faye standards](standards/faye-delivery-pal/), [base Delivery Pack template](templates/delivery-pack/base-delivery-pack/), [video growth Delivery Pack](examples/delivery-packs/video-growth-delivery-pack/), [sales CRM Delivery Pack](examples/delivery-packs/sales-crm-delivery-pack/), and [Faye Deep Conductor protocols](standards/deep-conductor/). These are no-code organization and delivery assets; they are not connectors, marketplaces, runtime engines, external project writers, or keyword routers.
+
 ## Why AgentPal?
 
 When users want agents to work better, they usually try one of two paths:
