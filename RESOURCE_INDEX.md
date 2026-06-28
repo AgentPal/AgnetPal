@@ -744,6 +744,13 @@ Use the current docs directories as the public entry points. Archived research n
 | `release/fresh-clone-checks/r137-local-v0.5-completion-refresh-after-faye-extension-validation.md` | R137 local validation for refreshed completion after Faye extension |
 | `evals/palbench/v0.5/r137-v0.5-completion-refresh-evidence-review.md` | R137 completion-refresh evidence review eval |
 | `release/integration-notes/r137-r138-readiness-decision.md` | R137 readiness decision for final local release preflight after Faye extension |
+| `release/current/v0.5-final-local-release-preflight-after-faye-extension.md` | R138 final local release preflight after Faye extension |
+| `release/current/v0.5-final-public-package-readiness-review.md` | R138 final public package readiness review |
+| `release/fresh-clone-checks/r138-final-local-release-blocker-scan.md` | R138 final local release blocker scan |
+| `evals/palbench/v0.5/r138-final-local-release-preflight-evidence-review.md` | R138 final local release preflight evidence review |
+| `release/fresh-clone-checks/r138-local-final-release-preflight-after-faye-extension-validation.md` | R138 local final release preflight validation after Faye extension |
+| `release/current/v0.5-final-local-release-status.md` | R138 final local release status note |
+| `release/integration-notes/r138-r139-readiness-decision.md` | R138 readiness decision for user choice in R139 |
 
 ## R101 Integration
 

@@ -38,6 +38,8 @@ R132-R134 extend the v0.5 package after the R130 local completion and R131 local
 
 R137 refreshes v0.5 local completion after the Faye extension and R136 targeted regression. See the [refreshed local completion report](release/current/v0.5-local-completion-report-after-faye-extension.md), [refreshed evidence index](release/current/v0.5-local-completion-evidence-index-after-faye-extension.md), [refreshed local release preflight](release/current/v0.5-local-release-preflight-after-faye-extension.md), and [refreshed release notes draft](release/current/v0.5-release-notes-draft-after-faye-extension.md). This remains local-only evidence; no GitHub Release, tag, push, pull, fetch, or remote publication was performed.
 
+For the final v0.5 local release preflight after the Faye extension, see the [final local preflight](release/current/v0.5-final-local-release-preflight-after-faye-extension.md), [public package readiness review](release/current/v0.5-final-public-package-readiness-review.md), [final blocker scan](release/fresh-clone-checks/r138-final-local-release-blocker-scan.md), and [final local release status](release/current/v0.5-final-local-release-status.md). R138 prepares a user decision only; no GitHub Release, tag, push, pull, fetch, or remote publication was performed.
+
 ## Why AgentPal?
 
 When users want agents to work better, they usually try one of two paths:

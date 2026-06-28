@@ -38,6 +38,8 @@ R132-R134 在 R130 本地完成记录与 R131 本地 preflight 之后扩展了 v
 
 R137 在 Faye extension 与 R136 targeted regression 之后刷新了 v0.5 本地完成度证据。见 [refreshed local completion report](release/current/v0.5-local-completion-report-after-faye-extension.md)、[refreshed evidence index](release/current/v0.5-local-completion-evidence-index-after-faye-extension.md)、[refreshed local release preflight](release/current/v0.5-local-release-preflight-after-faye-extension.md) 和 [refreshed release notes draft](release/current/v0.5-release-notes-draft-after-faye-extension.md)。这仍然只是本地证据；本轮没有 GitHub Release、tag、push、pull、fetch 或远端发布。
 
+Faye extension 后的 v0.5 final local release preflight 见 [final local preflight](release/current/v0.5-final-local-release-preflight-after-faye-extension.md)、[public package readiness review](release/current/v0.5-final-public-package-readiness-review.md)、[final blocker scan](release/fresh-clone-checks/r138-final-local-release-blocker-scan.md) 和 [final local release status](release/current/v0.5-final-local-release-status.md)。R138 只准备用户决策；本轮没有 GitHub Release、tag、push、pull、fetch 或远端发布。
+
 ## 为什么需要 AgentPal？
 
 用户想让 Agent 更好用时，通常会走两条路：
