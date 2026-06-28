@@ -195,6 +195,16 @@ Verification should keep these states explicit:
 
 Do not convert missing evidence or unreviewed customer facts into `pass`.
 
+For a concrete workflow and governance usage example, see:
+
+```text
+examples/combined-packs/content-ops-with-accounting-advisor/workflow-usage-example.md
+examples/combined-packs/content-ops-with-accounting-advisor/context-packet.example.md
+examples/combined-packs/content-ops-with-accounting-advisor/task-package.example.md
+examples/combined-packs/content-ops-with-accounting-advisor/governance-record.example.md
+examples/combined-packs/content-ops-with-accounting-advisor/verification-result.example.md
+```
+
 ## What Remains Reusable
 
 Reusable content includes:

@@ -857,15 +857,24 @@
       "example_walkthrough": "examples/combined-packs/content-ops-with-accounting-advisor/usage-walkthrough.md",
       "project_binding_walkthrough": "examples/combined-packs/content-ops-with-accounting-advisor/project-binding-walkthrough.md",
       "central_project_record_walkthrough": "examples/combined-packs/content-ops-with-accounting-advisor/central-project-record-walkthrough.md",
+      "workflow_usage_example": "examples/combined-packs/content-ops-with-accounting-advisor/workflow-usage-example.md",
+      "context_packet_example": "examples/combined-packs/content-ops-with-accounting-advisor/context-packet.example.md",
+      "task_package_example": "examples/combined-packs/content-ops-with-accounting-advisor/task-package.example.md",
+      "governance_record_example": "examples/combined-packs/content-ops-with-accounting-advisor/governance-record.example.md",
+      "verification_result_example": "examples/combined-packs/content-ops-with-accounting-advisor/verification-result.example.md",
       "eval": "evals/palbench/org-pack/r124-org-fde-combined-pack-usage-scenario-boundary.md",
       "validation": "release/fresh-clone-checks/r124-local-org-fde-combined-pack-usage-scenario-validation.md",
       "readiness_decision": "release/integration-notes/r124-r125-readiness-decision.md",
+      "r125_eval": "evals/palbench/org-pack/r125-org-fde-workflow-governance-example-boundary.md",
+      "r125_validation": "release/fresh-clone-checks/r125-local-org-fde-workflow-governance-example-validation.md",
+      "r126_readiness_decision": "release/integration-notes/r125-r126-readiness-decision.md",
       "marketplace_program_included": false,
       "connector_included": false,
       "keyword_routing_allowed": false,
       "credentials_allowed": false,
       "external_projects_copy_assets_by_default": false,
-      "customer_private_assets_allowed_in_reusable_pack": false
+      "customer_private_assets_allowed_in_reusable_pack": false,
+      "human_review_required": true
     }
   },
   "palsmith": {

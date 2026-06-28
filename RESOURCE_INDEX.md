@@ -651,9 +651,17 @@ Use the current docs directories as the public entry points. Archived research n
 | `examples/combined-packs/content-ops-with-accounting-advisor/usage-walkthrough.md` | R124 combined example usage walkthrough |
 | `examples/combined-packs/content-ops-with-accounting-advisor/project-binding-walkthrough.md` | R124 thin project binding walkthrough |
 | `examples/combined-packs/content-ops-with-accounting-advisor/central-project-record-walkthrough.md` | R124 central project record walkthrough |
+| `examples/combined-packs/content-ops-with-accounting-advisor/workflow-usage-example.md` | R125 workflow usage example |
+| `examples/combined-packs/content-ops-with-accounting-advisor/context-packet.example.md` | R125 context packet example |
+| `examples/combined-packs/content-ops-with-accounting-advisor/task-package.example.md` | R125 task package example |
+| `examples/combined-packs/content-ops-with-accounting-advisor/governance-record.example.md` | R125 governance record example |
+| `examples/combined-packs/content-ops-with-accounting-advisor/verification-result.example.md` | R125 verification result example |
 | `evals/palbench/org-pack/r124-org-fde-combined-pack-usage-scenario-boundary.md` | R124 usage scenario boundary eval |
 | `release/fresh-clone-checks/r124-local-org-fde-combined-pack-usage-scenario-validation.md` | R124 local usage scenario validation |
 | `release/integration-notes/r124-r125-readiness-decision.md` | R124 R125 readiness decision |
+| `evals/palbench/org-pack/r125-org-fde-workflow-governance-example-boundary.md` | R125 workflow/governance example boundary eval |
+| `release/fresh-clone-checks/r125-local-org-fde-workflow-governance-example-validation.md` | R125 local workflow/governance validation |
+| `release/integration-notes/r125-r126-readiness-decision.md` | R125 R126 readiness decision |
 
 ## R101 Integration
 

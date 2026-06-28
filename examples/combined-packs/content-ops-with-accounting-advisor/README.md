@@ -28,6 +28,11 @@ scanner logic, validator programs, or keyword routing into the combined pack.
 - `usage-walkthrough.md`
 - `project-binding-walkthrough.md`
 - `central-project-record-walkthrough.md`
+- `workflow-usage-example.md`
+- `context-packet.example.md`
+- `task-package.example.md`
+- `governance-record.example.md`
+- `verification-result.example.md`
 
 ## How To Read This Example
 
@@ -35,6 +40,18 @@ scanner logic, validator programs, or keyword routing into the combined pack.
 - Use `project-binding-walkthrough.md` to keep external project bindings thin.
 - Use `central-project-record-walkthrough.md` to understand where private
   project records belong.
+
+## Workflow And Governance Examples
+
+- Use `workflow-usage-example.md` for a public-safe monthly content operations
+  workflow with accounting-adjacent human review.
+- Use `context-packet.example.md` for the no-code context packet shape.
+- Use `task-package.example.md` for owner judgement, steps, blockers, outputs,
+  and writeback targets.
+- Use `governance-record.example.md` for reusable/private classification,
+  human review, and approval status.
+- Use `verification-result.example.md` for `pass`, `missing`, `not-run`,
+  `blocked`, and `requires-human-review` result semantics.
 
 ## Boundary
 
