@@ -13,6 +13,11 @@ Primary references:
 - `evals/palbench/pal-asset/r98b-official-pal-upgrade-gap-table.md`
 - `release/integration-notes/r98b-official-pal-upgrade-plan.md`
 - `release/fresh-clone-checks/r98b-local-official-pal-asset-audit-validation.md`
+- `release/integration-notes/r100b-official-pal-metadata-upgrade-batch-plan.md`
+- `release/integration-notes/r100b-official-pal-safe-index-file-plan.md`
+- `release/integration-notes/r100b-official-pal-asset-manifest-preview-plan.md`
+- `evals/palbench/pal-asset/r100d-pal-metadata-upgrade-compatibility-gate.md`
+- `release/integration-notes/r101-official-pal-upgrade-gate-freeze.md`
 
 ## Audit Result
 
@@ -43,10 +48,28 @@ Current evidence:
 
 | Phase | Goal |
 | --- | --- |
-| R99 or later | Minimal safe index / README additions when explicitly allowed. |
-| R100 | `pal.json` v0.5 metadata update after schema fields are approved. |
-| R101 | `asset-manifest.json` generation after manifest schema approval. |
-| R102 | PalSmith-driven bounded audit integration without creating a scanner. |
+| Completed preparation | R98 audit, R100 metadata/schema/template/gate preparation, and R101 navigation freeze. |
+| Next candidate | Minimal safe index / README additions for a small approved Pal batch. |
+| Later metadata batch | `pal.json` v0.5 metadata update after gate baseline passes. |
+| Later manifest batch | `asset-manifest.json` generation after metadata, index coverage, and schema checks pass. |
+| Later review batch | PalSmith-driven bounded audit integration without creating a scanner. |
+
+## R101 Preflight Gate
+
+Before future edits under `official/pals/**`, run the frozen R101 preflight:
+
+1. capture `git status --short --branch`;
+2. parse the central roster and verify 9 active official Pals;
+3. parse all official Pal `pal.json` files;
+4. verify official Pal directory count is 9;
+5. verify no central roster diff;
+6. verify no route maps, scanner / connector behavior, or credential-like
+   values are introduced;
+7. run the R100-D compatibility gate before and after the small batch;
+8. record missing and not-run evidence honestly.
+
+The next public-safe candidate is an index/README backfill batch, not
+`pal.json` metadata and not real `asset-manifest.json` generation.
 
 ## Compatibility Rule
 

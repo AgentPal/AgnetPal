@@ -57,6 +57,7 @@ Use:
 | `examples/org-packs/base-agentpal-org-pack/` | public-safe base Org Pack example | examples and Org Pack boundary checks |
 | `docs/00-overview/pal-asset-and-org-pack-relationship.md` | Pal Asset and Org Pack relationship guide | v0.5 Pal Asset / Org Pack integration |
 | `standards/pal-asset/` | Pal Asset standards | Pal Asset, Pal Skill, loading order, and resolver standard work |
+| `docs/00-overview/pal-metadata-v0.5-upgrade-path.md` | Pal Metadata v0.5 upgrade path | pal.json v0.5, asset-manifest, official Pal preflight, and R101 navigation |
 | `standards/palsmith/` | PalSmith v0.5 standards | no-code Pal creation, classification, and upgrade standards |
 | `docs/03-user-guides/palsmith-v0.5-pal-creation-and-upgrade.md` | PalSmith v0.5 user guide | Pal creation and upgrade orientation |
 | `docs/03-user-guides/official-pal-asset-upgrade-plan.md` | official Pal asset upgrade plan guide | official Pal upgrade planning |
@@ -492,6 +493,54 @@ Use the current docs directories as the public entry points. Archived research n
 | `evals/palbench/pal-asset/r98a-pal-asset-standard-boundary.md` | R98-A Pal Asset boundary eval |
 | `release/fresh-clone-checks/r98a-local-pal-asset-standard-validation.md` | R98-A local validation |
 
+## Pal Metadata v0.5
+
+| Path | Purpose |
+| --- | --- |
+| `standards/pal-asset/pal-json-v0.5-standard.md` | R100-A pal.json v0.5 metadata standard |
+| `standards/pal-asset/asset-manifest-standard.md` | R100-A optional asset-manifest standard |
+| `standards/schemas/pal.schema.json` | R100-A pal.json schema |
+| `standards/schemas/pal-asset-manifest.schema.json` | R100-A asset-manifest schema |
+| `templates/pal-asset/pal-json-template.json` | R100-A pal.json template |
+| `templates/pal-asset/asset-manifest-template.json` | R100-A asset-manifest template |
+| `docs/00-overview/pal-metadata-v0.5-upgrade-path.md` | R101 public upgrade path and navigation |
+| `evals/palbench/pal-asset/r100a-pal-metadata-schema-boundary.md` | R100-A metadata schema boundary eval |
+| `release/fresh-clone-checks/r100a-local-pal-metadata-schema-validation.md` | R100-A metadata schema validation |
+| `release/integration-notes/r100a-index-update-notes.md` | R100-A index update notes |
+
+## Official Pal Metadata Upgrade Preparation
+
+| Path | Purpose |
+| --- | --- |
+| `release/integration-notes/r100b-official-pal-metadata-upgrade-batch-plan.md` | R100-B official Pal metadata batch plan |
+| `release/integration-notes/r100b-official-pal-safe-index-file-plan.md` | R100-B safe index file plan |
+| `release/integration-notes/r100b-official-pal-asset-manifest-preview-plan.md` | R100-B asset-manifest preview plan |
+| `evals/palbench/pal-asset/r100b-official-pal-metadata-preflight.md` | R100-B official Pal metadata preflight eval |
+| `release/fresh-clone-checks/r100b-local-official-pal-metadata-preflight-validation.md` | R100-B preflight validation |
+| `evals/palbench/pal-asset/r100d-pal-metadata-upgrade-compatibility-gate.md` | R100-D compatibility gate |
+| `evals/palbench/pal-asset/r100d-pal-manifest-backward-compatibility-cases.md` | R100-D backward compatibility cases |
+| `release/fresh-clone-checks/r100d-local-pal-metadata-upgrade-gate-validation.md` | R100-D gate validation |
+| `release/integration-notes/r100d-official-pal-upgrade-gate-notes.md` | R100-D official upgrade gate notes |
+
+## Pal Asset Index Templates
+
+| Path | Purpose |
+| --- | --- |
+| `templates/pal-asset/index-templates/README.md` | R100-C index template package README |
+| `templates/pal-asset/index-templates/skills-index-template.md` | Pal skills index template |
+| `templates/pal-asset/index-templates/workflows-index-template.md` | Pal workflows index template |
+| `templates/pal-asset/index-templates/runbooks-index-template.md` | Pal runbooks index template |
+| `templates/pal-asset/index-templates/knowledge-index-template.md` | Pal knowledge index template |
+| `templates/pal-asset/index-templates/memory-index-template.md` | Pal memory index template |
+| `templates/pal-asset/index-templates/learning-index-template.md` | Pal learning index template |
+| `templates/pal-asset/index-templates/evals-index-template.md` | Pal evals index template |
+| `templates/pal-asset/index-templates/examples-index-template.md` | Pal examples index template |
+| `templates/pal-asset/index-templates/research-index-template.md` | Pal research index template |
+| `templates/pal-asset/safe-index-backfill-guide.md` | R100-C safe index backfill guide |
+| `evals/palbench/pal-asset/r100c-pal-index-template-boundary.md` | R100-C index template boundary eval |
+| `release/fresh-clone-checks/r100c-local-pal-index-template-validation.md` | R100-C template validation |
+| `release/integration-notes/r100c-index-update-notes.md` | R100-C index update notes |
+
 ## PalSmith v0.5
 
 | Path | Purpose |
@@ -526,6 +575,15 @@ Use the current docs directories as the public entry points. Archived research n
 | `release/fresh-clone-checks/r98d-local-pal-asset-resolver-validation.md` | R98-D local validation |
 | `evals/palbench/pal-asset/r99-pal-asset-v0.5-integration-boundary.md` | R99 Pal Asset v0.5 integration boundary eval |
 | `release/fresh-clone-checks/r99-r98-parallel-integration-validation.md` | R99 R98 parallel integration validation |
+
+## R101 Integration
+
+| Path | Purpose |
+| --- | --- |
+| `release/integration-notes/r101-official-pal-upgrade-gate-freeze.md` | R101 frozen preflight gate for official Pal metadata upgrades |
+| `release/integration-notes/r101-next-official-pal-index-backfill-candidate.md` | R101 next safe official Pal index backfill candidate |
+| `evals/palbench/pal-asset/r101-pal-metadata-v0.5-integration-boundary.md` | R101 Pal Metadata v0.5 integration boundary eval |
+| `release/fresh-clone-checks/r101-r100-parallel-integration-validation.md` | R101 R100 parallel integration validation |
 
 | `docs/05-orchestration-methodology/deep-conductor-master-goal.md` | Deep Conductor master goal and no-code 12-step loop |
 | `docs/05-orchestration-methodology/deep-conductor-master-loop-usage-guide.md` | Deep Conductor usage guide for project-level no-code coordination |

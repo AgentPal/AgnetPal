@@ -11,10 +11,16 @@ Primary references:
 
 - `standards/palsmith/palsmith-v0.5-creation-standard.md`
 - `standards/palsmith/palsmith-asset-classification-standard.md`
+- `standards/pal-asset/pal-json-v0.5-standard.md`
+- `standards/pal-asset/asset-manifest-standard.md`
 - `templates/palsmith/minimal-pal-generation-checklist.md`
 - `templates/palsmith/standard-pal-generation-checklist.md`
 - `templates/palsmith/pal-asset-classification-result-template.json`
 - `templates/palsmith/existing-pal-upgrade-report-template.md`
+- `templates/pal-asset/pal-json-template.json`
+- `templates/pal-asset/asset-manifest-template.json`
+- `templates/pal-asset/index-templates/`
+- `templates/pal-asset/safe-index-backfill-guide.md`
 
 ## Minimal Pal
 
@@ -98,6 +104,34 @@ report should cover:
 - public safety
 - recommended fixes
 - allowed write paths for a later task package
+
+## Metadata And Manifest Preparation
+
+For v0.5 metadata work, PalSmith should treat `pal.json` as compact metadata and
+`asset-manifest.json` as an optional index.
+
+Allowed preparation outputs:
+
+- an upgrade report;
+- a proposed `pal.json` field mapping based on current files and policy;
+- a proposed `asset-manifest.json` preview based on current root entries,
+  directory indexes, and explicit missing / not-run evidence;
+- safe index/README backfill task packages.
+
+Not allowed by default:
+
+- storing credentials, private memory, task logs, or large report bodies in
+  `pal.json` or `asset-manifest.json`;
+- creating `keyword_map`, `domain_map`, `role_map`, or deterministic route
+  structures;
+- copying Pal metadata or Pal assets into external project `.agentpal/`
+  directories;
+- generating real official `asset-manifest.json` files without the R101 gate
+  and small-batch approval.
+
+Use `templates/pal-asset/index-templates/` when drafting public-safe directory
+indexes. Use `unknown`, `missing`, `partial`, and `not-run` instead of inventing
+readiness.
 
 ## Write Boundary
 
