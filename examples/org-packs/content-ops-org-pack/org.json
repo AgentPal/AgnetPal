@@ -1,0 +1,57 @@
+{
+  "schema": "agentpal.org-pack.v0.5",
+  "id": "content-ops-org-pack-example",
+  "name": "Content Ops Org Pack Example",
+  "version": "0.5.0-local-example",
+  "type": "org-pack-example",
+  "description": "A public-safe example Org Pack for reusable content operations workflows and governance.",
+  "public_safe_example": true,
+  "recommended_pals": [
+    {
+      "pal_id": "mira-main",
+      "display_name": "Mira",
+      "reason": "Candidate for intake, coordination, context packaging, and progress summaries.",
+      "recommendation_type": "ai_judgement_input_only"
+    },
+    {
+      "pal_id": "morgan-document",
+      "display_name": "Morgan",
+      "reason": "Candidate for document and file workflow judgement.",
+      "recommendation_type": "ai_judgement_input_only"
+    },
+    {
+      "pal_id": "vega-research",
+      "display_name": "Vega",
+      "reason": "Candidate for research planning and source-quality judgement.",
+      "recommendation_type": "ai_judgement_input_only"
+    },
+    {
+      "pal_id": "harper-writing",
+      "display_name": "Harper",
+      "reason": "Candidate for writing, editing, and content craft judgement.",
+      "recommendation_type": "ai_judgement_input_only"
+    },
+    {
+      "pal_id": "quinn-quality",
+      "display_name": "Quinn",
+      "reason": "Candidate for verification, acceptance criteria, and publishing readiness review.",
+      "recommendation_type": "ai_judgement_input_only"
+    }
+  ],
+  "recommended_pals_are_ai_judgement_input_only": true,
+  "central_roster_ref": "workspace/organization/contacts/pals.json",
+  "thin_binding_required": true,
+  "external_projects_copy_assets_by_default": false,
+  "can_modify_central_roster": false,
+  "customer_private_assets_allowed_in_pack": false,
+  "credentials_allowed": false,
+  "keyword_routing_allowed": false,
+  "connector_included": false,
+  "marketplace_program_included": false,
+  "scanner_included": false,
+  "validator_included": false,
+  "runtime_included": false,
+  "auto_scan": false,
+  "auto_sync": false,
+  "auto_execution": false
+}
