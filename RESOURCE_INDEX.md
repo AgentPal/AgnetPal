@@ -41,6 +41,7 @@ Use:
 | --- | --- | --- |
 | `README.md` | English public introduction | onboarding, release checks, user questions |
 | `README.zh-CN.md` | Chinese public introduction | Chinese onboarding or localization checks |
+| `START_HERE.md` | first fresh-clone onboarding entry | new users and v0.5 first-use walkthrough |
 | `AGENTS.md` | project-level runtime instructions | initialization and context switches |
 | `INIT_PROMPT.md` | short AgentPal Workspace initialization prompt | direct workspace initialization by Markdown/JSON-capable runtimes |
 | `PAL.md` | AgentPal Workspace identity | workspace identity questions and initialization |
@@ -48,6 +49,12 @@ Use:
 | `prompts/codex/initialize-agentpal-workspace.md` | copyable initialization prompt | first run or re-initialization |
 | `agentpal.json` | machine-readable workspace metadata | initialization, validation, release checks |
 | `docs/00-overview/repository-structure.md` | visual repository structure and thin-binding map | repository orientation, local structure checks |
+| `docs/00-overview/what-is-agentpal.md` | concise new-user AgentPal explanation | first-time orientation |
+| `docs/01-getting-started/first-30-minutes.md` | first 30 minutes walkthrough guide | fresh-clone onboarding |
+| `examples/walkthroughs/first-agentpal-team/` | public-safe first AI team walkthrough | new-user walkthrough |
+| `docs/01-getting-started/faq.md` | new-user FAQ | onboarding questions |
+| `docs/00-overview/glossary.md` | new-user glossary | terms and concepts |
+| `release/current/v0.5-fresh-clone-usability-checklist.md` | v0.5 fresh-clone usability checklist | onboarding validation |
 | `release/current/v0.4-local-completion-report.md` | v0.4 local completion report | local completion review; not remote release proof |
 | `release/current/v0.4-local-completion-evidence-index.md` | v0.4 local completion evidence index | evidence lookup for local completion |
 | `docs/08-release-and-maintenance/v0.4-local-completion-summary.md` | user-facing v0.4 local completion summary | contributor and user orientation |
@@ -751,6 +758,16 @@ Use the current docs directories as the public entry points. Archived research n
 | `release/fresh-clone-checks/r138-local-final-release-preflight-after-faye-extension-validation.md` | R138 local final release preflight validation after Faye extension |
 | `release/current/v0.5-final-local-release-status.md` | R138 final local release status note |
 | `release/integration-notes/r138-r139-readiness-decision.md` | R138 readiness decision for user choice in R139 |
+| `START_HERE.md` | R139 fresh-clone onboarding entry |
+| `docs/00-overview/what-is-agentpal.md` | R139 concise what-is overview |
+| `docs/01-getting-started/first-30-minutes.md` | R139 first 30 minutes guide |
+| `examples/walkthroughs/first-agentpal-team/` | R139 public-safe first AgentPal team walkthrough |
+| `release/current/v0.5-fresh-clone-usability-checklist.md` | R139 fresh-clone usability checklist |
+| `docs/00-overview/glossary.md` | R139 glossary |
+| `docs/01-getting-started/faq.md` | R139 FAQ |
+| `release/fresh-clone-checks/r139-local-new-user-onboarding-validation.md` | R139 local onboarding validation |
+| `evals/palbench/v0.5/r139-new-user-onboarding-evidence-review.md` | R139 onboarding evidence review |
+| `release/integration-notes/r139-r140-readiness-decision.md` | R139 readiness decision for fresh-clone usability simulation |
 
 ## R101 Integration
 

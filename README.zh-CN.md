@@ -8,6 +8,8 @@ AgentPal，让每个 Agent 都有自己的 Pal。
 
 AgentPal v0.3.0-rc.1 是一个 Markdown / JSON / protocol workspace，可用于能读取结构化工作区文件的 Runtime。它不是 Agent Runtime，不是多 Agent Runtime，不是执行层，不是桌面 App，不是 Web App，也不是安装器。
 
+第一次打开仓库建议先看 [START_HERE.md](START_HERE.md)，再看 [What is AgentPal?](docs/00-overview/what-is-agentpal.md)、[First 30 Minutes with AgentPal](docs/01-getting-started/first-30-minutes.md) 和 [first AgentPal team walkthrough](examples/walkthroughs/first-agentpal-team/)。这些 onboarding 文档是本地 public-safe 入口；远端发布仍需要用户明确授权。
+
 ## PalSmith
 
 PalSmith 是 AgentPal 的 AI 团队创建师，也是 Pal 资产治理 Pal。它帮助用户通过自然语言创建、完善、体检、导入、导出、升级和维护 Pal 与 Pal 团队，不需要用户先理解完整的 Pal Pack 目录结构。

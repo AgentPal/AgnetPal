@@ -6,6 +6,8 @@ Create role-based Pals with knowledge, skills, memory, workflows, output contrac
 
 AgentPal gives every agent a Pal. AgentPal v0.3.0-rc.1 is a Markdown / JSON / protocol workspace for runtimes that can read structured workspace files. It is not an Agent runtime, not a multi-agent runtime, not an execution layer, not a desktop app, not a web app, and not an installer.
 
+First time here? Start with [START_HERE.md](START_HERE.md), then use [What is AgentPal?](docs/00-overview/what-is-agentpal.md), [First 30 Minutes with AgentPal](docs/01-getting-started/first-30-minutes.md), and the [first AgentPal team walkthrough](examples/walkthroughs/first-agentpal-team/). These onboarding docs are local-only and public-safe; remote publication still requires explicit user authorization.
+
 ## PalSmith
 
 PalSmith is the AI team builder and Pal asset governance Pal for AgentPal. It helps users create, improve, inspect, import, export, version, and maintain Pals and Pal teams through natural language, without needing to understand the full Pal Pack directory structure.
