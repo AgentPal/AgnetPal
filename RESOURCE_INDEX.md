@@ -721,6 +721,17 @@ Use the current docs directories as the public entry points. Archived research n
 | `evals/palbench/faye-delivery/r133-faye-delivery-integration-boundary.md` | R133 Faye Delivery integration boundary eval |
 | `release/fresh-clone-checks/r133-local-faye-delivery-integration-validation.md` | R133 local integration validation |
 | `release/integration-notes/r133-r134-readiness-decision.md` | R133 readiness decision for R134 review gate |
+| `release/integration-notes/r134-faye-delivery-pack-review-issues.md` | R134 Faye Delivery Pack review issue table and safe fix record |
+| `release/fresh-clone-checks/r134-local-faye-delivery-pack-review-gate-validation.md` | R134 local review-gate validation |
+| `release/integration-notes/r134-r135-readiness-decision.md` | R134 readiness decision for R135 scope integration |
+| `release/current/v0.5-faye-extension-scope-update.md` | R135 v0.5 Faye extension scope update |
+| `release/current/v0.5-completion-status-after-faye-extension.md` | R135 v0.5 completion status after Faye extension |
+| `release/current/v0.5-faye-extension-evidence-index.md` | R135 Faye extension evidence index |
+| `evals/palbench/v0.5/r135-r136-faye-extension-targeted-regression-plan.md` | R135 R136 targeted regression plan for Faye extension |
+| `evals/palbench/v0.5/r135-r136-faye-extension-targeted-regression-matrix.md` | R135 R136 eight-group targeted regression matrix |
+| `release/integration-notes/r135-r136-faye-extension-regression-execution-checklist.md` | R135 R136 execution checklist |
+| `release/fresh-clone-checks/r135-local-faye-extension-scope-update-validation.md` | R135 local scope-update validation |
+| `release/integration-notes/r135-r136-readiness-decision.md` | R135 readiness decision for R136 targeted regression |
 
 ## R101 Integration
 

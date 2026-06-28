@@ -34,6 +34,8 @@ For v0.5 local release preflight, see the [local release preflight](release/curr
 
 For v0.5 Faye / Delivery Pack integration, see the [Faye / Delivery Pack / Deep Conductor overview](docs/00-overview/faye-delivery-pack-deep-conductor-overview.md), [Faye standards](standards/faye-delivery-pal/), [base Delivery Pack template](templates/delivery-pack/base-delivery-pack/), [video growth Delivery Pack](examples/delivery-packs/video-growth-delivery-pack/), [sales CRM Delivery Pack](examples/delivery-packs/sales-crm-delivery-pack/), and [Faye Deep Conductor protocols](standards/deep-conductor/). These are no-code organization and delivery assets; they are not connectors, marketplaces, runtime engines, external project writers, or keyword routers.
 
+R132-R134 extend the v0.5 package after the R130 local completion and R131 local preflight records. For the current extended-scope status, see the [Faye extension scope update](release/current/v0.5-faye-extension-scope-update.md), [completion status after Faye extension](release/current/v0.5-completion-status-after-faye-extension.md), [Faye extension evidence index](release/current/v0.5-faye-extension-evidence-index.md), and [R136 targeted regression plan](evals/palbench/v0.5/r135-r136-faye-extension-targeted-regression-plan.md). A refreshed final v0.5 release-ready claim requires R136 targeted regression; remote publication remains paused.
+
 ## Why AgentPal?
 
 When users want agents to work better, they usually try one of two paths:
