@@ -1,0 +1,77 @@
+{
+  "schema": "agentpal.combined-pack.v0.5",
+  "id": "content-ops-with-accounting-advisor",
+  "name": "Content Ops with Accounting Advisor Combined Pack",
+  "type": "org-fde-combined-example",
+  "version": "0.5.0-local-example",
+  "status": "public-safe-example",
+  "description": "A no-code public-safe example showing how a content operations Org Pack can reference an accounting advisor FDE Pack under PalSmith audit and customer-private boundary rules.",
+  "org_pack_ref": "examples/org-packs/content-ops-org-pack/",
+  "fde_pack_refs": [
+    "examples/fde-packs/accounting-advisor-fde-pack/"
+  ],
+  "asset_boundary_refs": [
+    "standards/asset-boundary/reusable-vs-customer-private-assets.md",
+    "standards/asset-boundary/asset-classification-matrix.md",
+    "standards/asset-boundary/deidentification-standard.md"
+  ],
+  "palsmith_review_ref": "examples/combined-packs/content-ops-with-accounting-advisor/palsmith-audit-note.md",
+  "recommended_pals": [
+    {
+      "pal_id": "mira-main",
+      "display_name": "Mira",
+      "reason": "Candidate for intake, coordination, project-context framing, and progress summaries.",
+      "recommendation_type": "ai_judgement_input_only"
+    },
+    {
+      "pal_id": "palsmith-pal-governor",
+      "display_name": "PalSmith",
+      "reason": "Candidate for pack governance, asset classification, and composition audit.",
+      "recommendation_type": "ai_judgement_input_only"
+    },
+    {
+      "pal_id": "morgan-document",
+      "display_name": "Morgan",
+      "reason": "Candidate for document, report, and evidence-structure judgement.",
+      "recommendation_type": "ai_judgement_input_only"
+    },
+    {
+      "pal_id": "quinn-quality",
+      "display_name": "Quinn",
+      "reason": "Candidate for verification, acceptance criteria, and readiness review.",
+      "recommendation_type": "ai_judgement_input_only"
+    },
+    {
+      "pal_id": "vega-research",
+      "display_name": "Vega",
+      "reason": "Candidate for source review and uncertainty tracking when public research is needed.",
+      "recommendation_type": "ai_judgement_input_only"
+    },
+    {
+      "pal_id": "harper-writing",
+      "display_name": "Harper",
+      "reason": "Candidate for writing, editing, and content craft judgement.",
+      "recommendation_type": "ai_judgement_input_only"
+    }
+  ],
+  "recommended_pals_are_ai_judgement_input_only": true,
+  "recommended_pals_are_route_map": false,
+  "central_roster_ref": "workspace/organization/contacts/pals.json",
+  "thin_binding_required": true,
+  "external_projects_copy_assets_by_default": false,
+  "customer_private_assets_allowed_in_reusable_pack": false,
+  "customer_private_assets_allowed_in_pack": false,
+  "credentials_allowed": false,
+  "connector_included": false,
+  "marketplace_program_included": false,
+  "keyword_routing_allowed": false,
+  "scanner_included": false,
+  "validator_included": false,
+  "installer_included": false,
+  "runtime_included": false,
+  "auto_sync": false,
+  "auto_execution": false,
+  "auto_discovery": false,
+  "external_business_system_api_client_included": false,
+  "requires_human_review": true
+}
