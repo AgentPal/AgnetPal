@@ -1,0 +1,43 @@
+{
+  "schema": "agentpal.fde-pack.v0.5",
+  "id": "base-fde-pack",
+  "name": "Base FDE Pack",
+  "pack_type": "fde-pack",
+  "version": "0.1.0",
+  "status": "template",
+  "domain": "expert-delivery",
+  "risk_level": "requires-review",
+  "intended_users": [
+    "experts",
+    "consultants",
+    "practitioners",
+    "AgentPal organization maintainers"
+  ],
+  "required_files": [
+    "FDE.md",
+    "fde.json",
+    "expert-profile.md",
+    "delivery-scope.md",
+    "reusable-assets.md",
+    "customer-private-boundary.md",
+    "update-policy.md",
+    "verification-checklist.md"
+  ],
+  "recommended_pals": [],
+  "recommended_workflows": [],
+  "reusable_asset_paths": [
+    "reusable-assets.md",
+    "verification-checklist.md"
+  ],
+  "customer_private_boundary": "customer-private-boundary.md",
+  "update_policy": "update-policy.md",
+  "verification_checklist": "verification-checklist.md",
+  "credentials_allowed": false,
+  "customer_private_assets_allowed_in_pack": false,
+  "external_projects_copy_assets_by_default": false,
+  "keyword_routing_allowed": false,
+  "connector_included": false,
+  "marketplace_program_included": false,
+  "requires_human_review": true,
+  "notes": "Template only. Fill with public-safe expert delivery assets."
+}
