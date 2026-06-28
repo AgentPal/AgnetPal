@@ -85,6 +85,10 @@ For R109, update only the Mira `PAL.md` memory destination bullet:
 
 R108-C is audit-only. It does not modify Mira root entries, official Pal metadata, central contacts, shared root entries, templates, runtime dependencies, scanners, validators, connectors, keyword routers, tags, releases, or remotes.
 
+## Commit scope note
+
+The R108-C commit scope is limited to the three public R108-C artifacts. Internal reporting stays under `J:\开发\AgentPal_dcos\开发记录\` and parallel R108-A/B/D artifacts are treated as other-thread files.
+
 ## Conclusion
 
 Pass. R108-C identified and documented one safe-fix candidate for R109 while preserving the audit-only boundary.
