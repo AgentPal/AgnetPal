@@ -48,6 +48,9 @@ Use:
 | `prompts/codex/initialize-agentpal-workspace.md` | copyable initialization prompt | first run or re-initialization |
 | `agentpal.json` | machine-readable workspace metadata | initialization, validation, release checks |
 | `docs/00-overview/repository-structure.md` | visual repository structure and thin-binding map | repository orientation, local structure checks |
+| `release/current/v0.4-local-completion-report.md` | v0.4 local completion report | local completion review; not remote release proof |
+| `release/current/v0.4-local-completion-evidence-index.md` | v0.4 local completion evidence index | evidence lookup for local completion |
+| `docs/08-release-and-maintenance/v0.4-local-completion-summary.md` | user-facing v0.4 local completion summary | contributor and user orientation |
 | `CHANGELOG.md` | public version history | release review |
 | `RELEASE_NOTES.md` | user-facing release notes | release review or user onboarding |
 | `GITHUB_RELEASE_DRAFT.md` | manual GitHub Release draft | release publishing |
@@ -450,6 +453,14 @@ Use the current docs directories as the public entry points. Archived research n
 | `release/integration-notes/r93d-path-fix-suggestions.md` | R93-D stale release path fix suggestion record |
 | `release/integration-notes/r94-r93-parallel-integration-summary.md` | R94 summary for integrated R93 parallel outputs |
 | `release/fresh-clone-checks/r94-r93-parallel-integration-validation.md` | R94 R93 parallel-result integration validation record |
+| `evals/palbench/v0.4/r95-v0.4-real-usage-regression-results.md` | R95 v0.4 real-usage regression results |
+| `evals/palbench/v0.4/r95-v0.4-regression-issues.md` | R95 v0.4 regression issue log |
+| `release/fresh-clone-checks/r95-v0.4-full-regression-validation.md` | R95 full regression validation record |
+| `release/current/v0.4-local-completion-report.md` | R96 v0.4 local completion report |
+| `release/current/v0.4-local-completion-evidence-index.md` | R96 v0.4 local completion evidence index |
+| `docs/08-release-and-maintenance/v0.4-local-completion-summary.md` | R96 user-facing v0.4 local completion summary |
+| `evals/palbench/v0.4/r96-v0.4-completion-evidence-review.md` | R96 evidence review for v0.4 local completion |
+| `release/fresh-clone-checks/r96-v0.4-local-completion-validation.md` | R96 local completion validation record |
 | `docs/05-orchestration-methodology/deep-conductor-master-goal.md` | Deep Conductor master goal and no-code 12-step loop |
 | `docs/05-orchestration-methodology/deep-conductor-master-loop-usage-guide.md` | Deep Conductor usage guide for project-level no-code coordination |
 | `docs/05-orchestration-methodology/deep-conductor-e2e-usage-guide.md` | Deep Conductor E2E usage guide for integrated no-code project-level closure |

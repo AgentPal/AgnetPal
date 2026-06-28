@@ -24,6 +24,8 @@ Runtime Adapter 排障与 thin binding 稳定性见 [stability guide](docs/04-ru
 
 no-code orchestration prototype 主线见 [v0.3 development plan](docs/09-roadmap/v0.3-development-plan.md)、[v0.3 task pool](docs/09-roadmap/v0.3-task-pool.md)、[v0.3 Deep Conductor readiness](docs/09-roadmap/v0.3-deep-conductor-readiness.md)、[v0.3 public capability summary](docs/09-roadmap/v0.3-public-capability-summary.md)、[Deep Conductor E2E guide](docs/05-orchestration-methodology/deep-conductor-e2e-usage-guide.md)、[Deep Conductor real runtime replay report](docs/research/deep-conductor-real-runtime-replay-report.md)、[Context Packet usage guide](docs/05-orchestration-methodology/context-packet-usage-guide.md)、[multi-Pal prompt cards](docs/02-getting-started/multi-pal-collaboration-prompt-cards.md) 和 [PalBench Collaboration Suite](evals/palbench-collaboration/README.md)。v0.3 Deep Conductor 是 no-code orchestration，不是自动运行时。
 
+v0.4 本地完成度证据见 [local completion report](release/current/v0.4-local-completion-report.md)、[evidence index](release/current/v0.4-local-completion-evidence-index.md) 和 [user-facing summary](docs/08-release-and-maintenance/v0.4-local-completion-summary.md)。这是本地完成证据，不是 GitHub Release，也不是远端发布。
+
 ## 为什么需要 AgentPal？
 
 用户想让 Agent 更好用时，通常会走两条路：

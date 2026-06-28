@@ -24,6 +24,8 @@ For the no-code orchestration prototype line, see the [v0.3 development plan](do
 
 For the local v0.4/v0.5 workspace layout, see the [Repository Structure](docs/00-overview/repository-structure.md) guide. The visible root directories are `standards/`, `official/`, `workspace/`, `templates/`, `examples/`, `evals/`, `release/`, `archive/`, and `docs/`.
 
+For v0.4 local completion evidence, see the [local completion report](release/current/v0.4-local-completion-report.md), [evidence index](release/current/v0.4-local-completion-evidence-index.md), and [user-facing summary](docs/08-release-and-maintenance/v0.4-local-completion-summary.md). This is local completion evidence, not a GitHub Release or remote publication.
+
 ## Why AgentPal?
 
 When users want agents to work better, they usually try one of two paths:
