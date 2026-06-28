@@ -1,0 +1,62 @@
+{
+  "schema": "agentpal.asset-classification-result.v0.5",
+  "classification_id": "replace-with-local-id",
+  "created_at": "YYYY-MM-DD",
+  "created_by": "PalSmith or reviewer name",
+  "source": {
+    "source_id": "replace-with-source-id",
+    "source_kind": "unknown",
+    "source_anchor": "filename, section, heading, timestamp, or page",
+    "source_sensitivity": "unknown",
+    "source_storage_class": "review/unclassified"
+  },
+  "classification": {
+    "asset_type": "review/unclassified",
+    "reusable_allowed": false,
+    "customer_private": null,
+    "customer_private_false_requires_confirmation": true,
+    "project_private": null,
+    "organization_internal": null,
+    "can_be_deidentified": null,
+    "deidentified": false,
+    "publish_allowed": false,
+    "requires_human_review": true,
+    "contains_credentials": false,
+    "contains_real_customer_data": null,
+    "contains_personal_sensitive_information": null,
+    "contains_unapproved_meeting_content": null,
+    "contains_private_project_context": null,
+    "external_project_write_allowed": false
+  },
+  "recommended_storage": {
+    "default_storage": "review/unclassified",
+    "target_path": "review/unclassified",
+    "central_workspace_target": true,
+    "external_project_target": false,
+    "forbidden_targets": [
+      "public reusable pack when sensitivity is unknown",
+      "external project .agentpal/ by default",
+      "central contacts",
+      "official Pal directories without explicit governed approval"
+    ]
+  },
+  "review": {
+    "human_review_status": "required",
+    "reviewer": null,
+    "review_date": null,
+    "publish_decision": "not-approved",
+    "deidentification_required": null,
+    "deidentification_review_status": "not-run",
+    "notes": [
+      "Defaults are conservative: do not publish until sensitivity and customer-private status are reviewed.",
+      "Set customer_private to false only after review confirms no customer-private content."
+    ]
+  },
+  "evidence": {
+    "credential_check": "not-run",
+    "customer_data_check": "not-run",
+    "reversible_clue_check": "not-run",
+    "keyword_routing_check": "not-run",
+    "connector_scanner_check": "not-run"
+  }
+}
