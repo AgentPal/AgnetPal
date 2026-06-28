@@ -28,6 +28,8 @@ v0.4 本地完成度证据见 [local completion report](release/current/v0.4-loc
 
 v0.5 本地开发入口见 [v0.5 local development scope](docs/09-roadmap/v0.5-local-development-scope.md)、[Org Pack standard](standards/org-pack/org-pack-standard.md)、[Org Pack / FDE / Asset Boundary overview](docs/00-overview/org-pack-fde-asset-boundary-overview.md)、[Org/FDE combined pack usage scenario](docs/04-usage-scenarios/org-fde-combined-pack-usage-scenario.md)、[Pal Asset standards](standards/pal-asset/)、[Pal Metadata v0.5 upgrade path](docs/00-overview/pal-metadata-v0.5-upgrade-path.md)、[PalSmith v0.5 standards](standards/palsmith/)、[Pal Asset / Org Pack relationship guide](docs/00-overview/pal-asset-and-org-pack-relationship.md)、[practical Org Pack template](templates/org-pack/practical-org-pack/)、[base FDE Pack template](templates/fde-pack/base-fde-pack/)、[asset-boundary standards](standards/asset-boundary/)、[Org/FDE combined example](examples/combined-packs/content-ops-with-accounting-advisor/) 和 [public-safe examples](examples/)。Combined example 展示 Org Pack 如何引用 FDE Pack，并保留 PalSmith review gate 证据；它是 public-safe no-code example，不是 marketplace、connector、installer、scanner、validator、runtime resolver 或关键词路由器。Org Pack、FDE Pack、Combined Pack 示例、Asset Boundary 标准、Pal Asset 标准与 Pal Metadata v0.5 计划都是 no-code 组织资产。
 
+v0.5 本地完成度证据见 [local completion report](release/current/v0.5-local-completion-report.md)、[evidence index](release/current/v0.5-local-completion-evidence-index.md) 和 [release-not-published statement](release/current/v0.5-release-not-published.md)。这是本地完成证据；本轮没有 GitHub Release、tag、push 或远端发布。
+
 ## 为什么需要 AgentPal？
 
 用户想让 Agent 更好用时，通常会走两条路：

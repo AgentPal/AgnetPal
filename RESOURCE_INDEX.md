@@ -682,6 +682,12 @@ Use the current docs directories as the public entry points. Archived research n
 | `evals/palbench/v0.5/r129-v0.5-targeted-fix-rerun-results.md` | R129 targeted rerun results |
 | `release/fresh-clone-checks/r129-local-v0.5-medium-issue-fix-validation.md` | R129 local validation record |
 | `release/integration-notes/r129-r130-readiness-decision.md` | R129 readiness decision for v0.5 local completion report |
+| `release/current/v0.5-local-completion-report.md` | R130 v0.5 local completion report; not remote publication proof |
+| `release/current/v0.5-local-completion-evidence-index.md` | R130 v0.5 local completion evidence index |
+| `release/current/v0.5-release-not-published.md` | R130 statement that no push, tag, or GitHub Release was performed |
+| `evals/palbench/v0.5/r130-v0.5-completion-evidence-review.md` | R130 completion evidence review eval |
+| `release/fresh-clone-checks/r130-local-v0.5-completion-validation.md` | R130 local v0.5 completion validation |
+| `release/integration-notes/r130-r131-readiness-decision.md` | R130 readiness decision for local-only v0.5 release preflight |
 
 ## R101 Integration
 
