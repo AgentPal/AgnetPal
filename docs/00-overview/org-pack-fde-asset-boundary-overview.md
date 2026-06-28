@@ -72,6 +72,9 @@ marketplace program, scanner, validator, or deterministic router.
 The public-safe combined example lives at
 `examples/combined-packs/content-ops-with-accounting-advisor/`.
 
+For a user-facing usage flow, see
+`docs/04-usage-scenarios/org-fde-combined-pack-usage-scenario.md`.
+
 It demonstrates how `examples/org-packs/content-ops-org-pack/` references
 `examples/fde-packs/accounting-advisor-fde-pack/` while keeping customer-private
 records outside the reusable example.

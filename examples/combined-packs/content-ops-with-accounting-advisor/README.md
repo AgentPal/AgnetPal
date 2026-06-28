@@ -25,6 +25,16 @@ scanner logic, validator programs, or keyword routing into the combined pack.
 - `thin-binding-relationship.md`
 - `verification-checklist.md`
 - `palsmith-audit-note.md`
+- `usage-walkthrough.md`
+- `project-binding-walkthrough.md`
+- `central-project-record-walkthrough.md`
+
+## How To Read This Example
+
+- Start with `usage-walkthrough.md` for the combined Org Pack + FDE Pack flow.
+- Use `project-binding-walkthrough.md` to keep external project bindings thin.
+- Use `central-project-record-walkthrough.md` to understand where private
+  project records belong.
 
 ## Boundary
 

@@ -643,6 +643,18 @@ Use the current docs directories as the public entry points. Archived research n
 | `evals/palbench/org-pack/r123-combined-pack-shared-entry-integration-boundary.md` | R123 shared-entry integration boundary eval |
 | `release/fresh-clone-checks/r123-local-combined-pack-shared-entry-integration-validation.md` | R123 local shared-entry integration validation |
 
+## Usage Scenarios
+
+| Path | Purpose |
+| --- | --- |
+| `docs/04-usage-scenarios/org-fde-combined-pack-usage-scenario.md` | R124 Org Pack + FDE Pack combined usage scenario |
+| `examples/combined-packs/content-ops-with-accounting-advisor/usage-walkthrough.md` | R124 combined example usage walkthrough |
+| `examples/combined-packs/content-ops-with-accounting-advisor/project-binding-walkthrough.md` | R124 thin project binding walkthrough |
+| `examples/combined-packs/content-ops-with-accounting-advisor/central-project-record-walkthrough.md` | R124 central project record walkthrough |
+| `evals/palbench/org-pack/r124-org-fde-combined-pack-usage-scenario-boundary.md` | R124 usage scenario boundary eval |
+| `release/fresh-clone-checks/r124-local-org-fde-combined-pack-usage-scenario-validation.md` | R124 local usage scenario validation |
+| `release/integration-notes/r124-r125-readiness-decision.md` | R124 R125 readiness decision |
+
 ## R101 Integration
 
 | Path | Purpose |

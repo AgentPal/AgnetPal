@@ -851,6 +851,23 @@
       "requires_human_review": true
     }
   },
+  "usage_scenarios": {
+    "org_fde_combined_pack": {
+      "guide": "docs/04-usage-scenarios/org-fde-combined-pack-usage-scenario.md",
+      "example_walkthrough": "examples/combined-packs/content-ops-with-accounting-advisor/usage-walkthrough.md",
+      "project_binding_walkthrough": "examples/combined-packs/content-ops-with-accounting-advisor/project-binding-walkthrough.md",
+      "central_project_record_walkthrough": "examples/combined-packs/content-ops-with-accounting-advisor/central-project-record-walkthrough.md",
+      "eval": "evals/palbench/org-pack/r124-org-fde-combined-pack-usage-scenario-boundary.md",
+      "validation": "release/fresh-clone-checks/r124-local-org-fde-combined-pack-usage-scenario-validation.md",
+      "readiness_decision": "release/integration-notes/r124-r125-readiness-decision.md",
+      "marketplace_program_included": false,
+      "connector_included": false,
+      "keyword_routing_allowed": false,
+      "credentials_allowed": false,
+      "external_projects_copy_assets_by_default": false,
+      "customer_private_assets_allowed_in_reusable_pack": false
+    }
+  },
   "palsmith": {
     "creation_standard": "standards/palsmith/palsmith-v0.5-creation-standard.md",
     "classification_standard": "standards/palsmith/palsmith-asset-classification-standard.md",
