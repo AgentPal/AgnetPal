@@ -1,5 +1,5 @@
 {
-  "schema": "agentpal.pal-pack.v0.1",
+  "schema": "agentpal.pal.v0.5",
   "id": "palsmith-pal-governor",
   "name": "PalSmith",
   "display_name": "PalSmith / Pal Asset Governor",
@@ -17,6 +17,7 @@
   "version": "0.1.0",
   "type": "pal-pack",
   "description": "PalSmith governs Pal Pack creation, AI team blueprints, job fitness inspection, content-preserving material ingestion, web research to knowledge, readiness review, import/export review, version governance, registry, and contacts work through no-code Runtime Task Packages.",
+  "asset_standard": "agentpal-pal-asset-standard.v0.5",
   "formal_skill_count": 15,
   "formal_skills": [
     "pal-creation-skill",
@@ -39,7 +40,26 @@
   "entry": {
     "skill": "SKILL.md",
     "pal": "PAL.md",
-    "agent": "AGENTS.md"
+    "agent": "AGENTS.md",
+    "readme": "README.md",
+    "asset_manifest": "asset-manifest.json"
+  },
+  "asset_dirs": {
+    "checklists": "checklists/",
+    "core": "core/",
+    "evals": "evals/",
+    "examples": "examples/",
+    "governance": "governance/",
+    "identity": "identity/",
+    "knowledge": "knowledge/",
+    "memory": "memory/",
+    "reports": "reports/",
+    "research": "research/",
+    "runbooks": "runbooks/",
+    "skills": "skills/",
+    "state": "state/",
+    "templates": "templates/",
+    "workflows": "workflows/"
   },
   "core_capabilities": [
     "pal-pack-classification",
@@ -93,8 +113,84 @@
       "handoff",
       "joint_work"
     ],
-    "requires_user_approval_for_sensitive_context": true
+    "requires_user_approval_for_sensitive_context": true,
+    "central_roster_required": true
   },
+  "discovery": {
+    "direct_call": "/pal PalSmith",
+    "aliases": [
+      "PalSmith",
+      "palsmith",
+      "Pal Smith"
+    ],
+    "central_roster_ref": "workspace/organization/contacts/pals.json",
+    "source_of_truth": "central_roster"
+  },
+  "runtime_awareness": {
+    "requires_runtime_evidence": true,
+    "pal_executes_runtime_actions": false,
+    "auto_probe_runtime": false
+  },
+  "capability_inventory_refs": [
+    {
+      "ref": "workspace/organization/capability-inventory/",
+      "purpose": "AI judgement input only when task-relevant",
+      "judgement_input_only": true
+    }
+  ],
+  "pal_skill_boundary": {
+    "pal_skills_are_role_level": true,
+    "agent_skills_are_runtime_level": true,
+    "pal_skills_dir_default": "skills/",
+    "agent_skill_refs_are_references_only": true
+  },
+  "agent_skill_refs_policy": {
+    "agent_skill_refs_are_references_only": true,
+    "store_agent_skills_in_pal_skills_by_default": false,
+    "requires_runtime_evidence": true
+  },
+  "memory_policy": {
+    "private_memory_allowed_in_public_pack": false,
+    "task_logs_allowed_in_pal_json": false,
+    "large_report_bodies_allowed_in_pal_json": false,
+    "memory_write_requires_approval": true
+  },
+  "external_project_write_policy": {
+    "external_project_write_allowed_by_default": false,
+    "copy_pal_assets_to_external_project_by_default": false,
+    "thin_binding_required": true
+  },
+  "no_keyword_routing_policy": {
+    "keyword_routing_allowed": false,
+    "domain_routing_allowed": false,
+    "role_routing_allowed": false,
+    "route_maps_allowed": false
+  },
+  "credentials_allowed": false,
+  "palsmith_governance_boundary": {
+    "can_classify_create_and_upgrade_pal_assets_as_no_code_governance": true,
+    "can_propose_central_roster_changes": true,
+    "can_automatically_modify_central_roster": false,
+    "can_default_write_central_pal_assets_into_external_projects": false,
+    "can_create_connector_scanner_or_auto_execution": false
+  },
+  "compatibility": {
+    "legacy_v0_1_readable": true,
+    "asset_manifest_required": false,
+    "directory_convention_fallback": true,
+    "missing_asset_manifest_is_upgrade_gap": true,
+    "missing_optional_asset_dirs": [
+      "learning"
+    ],
+    "human_review_required_before_real_write": true
+  },
+  "migration_notes": [
+    "R113 applies a conservative real metadata overlay to PalSmith only.",
+    "PalSmith keeps existing identity, version, formal skills, collaboration, resource policy, and compatible runtime fields.",
+    "The asset_manifest entry is a future reference only; no real official asset-manifest.json is generated in R113.",
+    "PalSmith can classify, create, and upgrade Pal assets as no-code governance work through proposals and Runtime Task Packages.",
+    "PalSmith cannot automatically modify the central roster, cannot default-write central Pal assets into external projects, and cannot create connector, scanner, or auto-execution behavior."
+  ],
   "resource_policy": {
     "allow_unstructured_imports": true,
     "do_not_modify_imported_packages_by_default": true,
