@@ -736,6 +736,14 @@ Use the current docs directories as the public entry points. Archived research n
 | `evals/palbench/v0.5/r136-faye-extension-targeted-regression-issues.md` | R136 Faye extension targeted regression issue table |
 | `release/fresh-clone-checks/r136-local-faye-extension-targeted-regression-validation.md` | R136 local targeted regression validation |
 | `release/integration-notes/r136-r137-readiness-decision.md` | R136 readiness decision for R137 completion refresh |
+| `release/current/v0.5-local-completion-report-after-faye-extension.md` | R137 refreshed v0.5 local completion report after Faye extension |
+| `release/current/v0.5-local-completion-evidence-index-after-faye-extension.md` | R137 refreshed v0.5 completion evidence index after Faye extension |
+| `release/current/v0.5-local-release-preflight-after-faye-extension.md` | R137 refreshed local-only release preflight after Faye extension |
+| `release/current/v0.5-public-package-checklist-after-faye-extension.md` | R137 refreshed public package checklist after Faye extension |
+| `release/current/v0.5-release-notes-draft-after-faye-extension.md` | R137 refreshed draft release notes after Faye extension; not published release notes |
+| `release/fresh-clone-checks/r137-local-v0.5-completion-refresh-after-faye-extension-validation.md` | R137 local validation for refreshed completion after Faye extension |
+| `evals/palbench/v0.5/r137-v0.5-completion-refresh-evidence-review.md` | R137 completion-refresh evidence review eval |
+| `release/integration-notes/r137-r138-readiness-decision.md` | R137 readiness decision for final local release preflight after Faye extension |
 
 ## R101 Integration
 

@@ -36,6 +36,8 @@ For v0.5 Faye / Delivery Pack integration, see the [Faye / Delivery Pack / Deep 
 
 R132-R134 extend the v0.5 package after the R130 local completion and R131 local preflight records. For the current extended-scope status, see the [Faye extension scope update](release/current/v0.5-faye-extension-scope-update.md), [completion status after Faye extension](release/current/v0.5-completion-status-after-faye-extension.md), [Faye extension evidence index](release/current/v0.5-faye-extension-evidence-index.md), and [R136 targeted regression plan](evals/palbench/v0.5/r135-r136-faye-extension-targeted-regression-plan.md). A refreshed final v0.5 release-ready claim requires R136 targeted regression; remote publication remains paused.
 
+R137 refreshes v0.5 local completion after the Faye extension and R136 targeted regression. See the [refreshed local completion report](release/current/v0.5-local-completion-report-after-faye-extension.md), [refreshed evidence index](release/current/v0.5-local-completion-evidence-index-after-faye-extension.md), [refreshed local release preflight](release/current/v0.5-local-release-preflight-after-faye-extension.md), and [refreshed release notes draft](release/current/v0.5-release-notes-draft-after-faye-extension.md). This remains local-only evidence; no GitHub Release, tag, push, pull, fetch, or remote publication was performed.
+
 ## Why AgentPal?
 
 When users want agents to work better, they usually try one of two paths:
