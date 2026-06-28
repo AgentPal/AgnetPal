@@ -18,6 +18,46 @@ Faye can work beyond content operations. A sales CRM Delivery Pack can express:
 - human review and compliance boundaries;
 - customer-private storage rules.
 
+## Faye Review Chain
+
+### Raw User Request
+
+A fictional B2B sales team asks Faye to help organize lead summaries, classify customer priority, draft follow-up messages, plan reminder cadence, and review deal progress without connecting to the team's real CRM.
+
+### Missing Information
+
+- real CRM field list: `missing`;
+- approved sales voice examples: `missing`;
+- compliance review owner: `missing`;
+- current sales-stage definitions: `missing`;
+- real lead evidence: blocked from reusable pack;
+- CRM access and credentials: blocked from reusable pack;
+- automatic reminder execution: `not-run`.
+
+### Assumptions
+
+- use fictional lead placeholders only;
+- keep all CRM data de-identified and public-safe;
+- treat integrations as manual handoff profiles;
+- require human review for customer-facing copy;
+- keep candidate Pals as AI judgement inputs, not route rules.
+
+### Delivery Chain
+
+```text
+raw user request
+-> missing information
+-> assumptions
+-> Delivery Pack
+-> Pal Team Blueprint
+-> Faye Build Request
+-> PalSmith Build Request
+-> first task package
+-> acceptance and report placeholders
+```
+
+This chain is no-code. It does not authorize connector execution, external project writes, central roster mutation, official Pal edits, or customer-private storage in reusable examples.
+
 ## Operating Model
 
 The pack uses the simple structure:
