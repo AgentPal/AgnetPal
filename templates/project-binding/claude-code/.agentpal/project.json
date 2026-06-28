@@ -32,7 +32,8 @@
     ".agentpal/rollback",
     ".agentpal/verification",
     ".agentpal/audit-trail",
-    ".agentpal/governance-decisions"
+    ".agentpal/governance-decisions",
+    ".agentpal/change-ledger"
   ],
   "routing_policy": "ai_judgement_only",
   "keyword_routing_allowed": false

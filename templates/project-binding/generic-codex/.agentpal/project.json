@@ -61,6 +61,7 @@
     ".agentpal/rollback",
     ".agentpal/verification",
     ".agentpal/audit-trail",
-    ".agentpal/governance-decisions"
+    ".agentpal/governance-decisions",
+    ".agentpal/change-ledger"
   ]
 }

@@ -13,6 +13,7 @@ They are examples only. They do not update organization profiles, modify the cen
 | `notion-read-access-manual-writeback-replay.example.md` | Shows a public-safe replay record premise after a manual writeback, without executing writeback, rollback, or second verification. |
 | `notion-read-access-audit-trail-index.example.md` | Shows a public-safe audit trail index across review, evidence, replay, rollback, and second verification records without executing actions. |
 | `notion-read-access-governance-decision.example.md` | Shows a public-safe governance decision record that keeps manual update blocked while second verification evidence is missing. |
+| `notion-read-access-change-ledger.example.md` | Shows a public-safe change ledger entry for a manual read-access field summary, while preserving second verification not-run and missing evidence. |
 
 ## Boundary
 
@@ -25,3 +26,5 @@ After a manual writeback has happened, a replay record can audit changed fields,
 When multiple related records exist, an audit trail index can summarize paths, statuses, risks, open unknowns, not-run checks, missing evidence, and next manual action suggestions. Audit trail indexes still do not execute actions, auto-call external APIs, auto-close missing evidence, modify central contacts, create connectors, store credentials, keyword-route, or write into external project `.agentpal/audit-trail/`.
 
 After review, evidence, replay, and audit trail review, a governance decision record can capture the human decision. Governance decision records can allow a bounded manual profile update, reject it, block it for missing evidence, or require second verification, but they still do not execute writeback, auto-close missing evidence, modify central contacts, create connectors, store credentials, keyword-route, or write into external project `.agentpal/governance-decisions/`.
+
+After a governance decision and manual change review, a change ledger can record field-level old/new summaries, source decision, evidence, replay, audit trail, rollback reference, second verification status, superseded entries, retained unknowns, retained not-run checks, retained missing evidence, and next manual review date. Change ledgers still do not execute writeback, auto-update organization truth, auto-call external APIs, auto-close missing evidence, modify central contacts, create connectors, store credentials, keyword-route, schedule automatic tasks, or write into external project `.agentpal/change-ledger/`.

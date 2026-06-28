@@ -76,7 +76,8 @@
     ".agentpal/rollback",
     ".agentpal/verification",
     ".agentpal/audit-trail",
-    ".agentpal/governance-decisions"
+    ".agentpal/governance-decisions",
+    ".agentpal/change-ledger"
   ],
   "root_instruction_blocks": {
     "begin_marker": "<!-- BEGIN AGENTPAL WORKGROUP -->",

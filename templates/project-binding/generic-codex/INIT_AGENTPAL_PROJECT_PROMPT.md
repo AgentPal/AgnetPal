@@ -8,7 +8,7 @@ Create or update only:
 - `.agentpal/AGENTPAL.md`
 - the protected AgentPal block in `AGENTS.md`
 
-Do not create `.agentpal/memory`, `.agentpal/state`, `.agentpal/reports`, `.agentpal/context`, `.agentpal/index`, `.agentpal/pals`, `.agentpal/workflows`, `.agentpal/evals`, `.agentpal/capability-inventory`, `.agentpal/business-systems`, `.agentpal/reviews`, `.agentpal/evidence`, `.agentpal/replay`, `.agentpal/rollback`, `.agentpal/verification`, `.agentpal/audit-trail`, or `.agentpal/governance-decisions` by default.
+Do not create `.agentpal/memory`, `.agentpal/state`, `.agentpal/reports`, `.agentpal/context`, `.agentpal/index`, `.agentpal/pals`, `.agentpal/workflows`, `.agentpal/evals`, `.agentpal/capability-inventory`, `.agentpal/business-systems`, `.agentpal/reviews`, `.agentpal/evidence`, `.agentpal/replay`, `.agentpal/rollback`, `.agentpal/verification`, `.agentpal/audit-trail`, `.agentpal/governance-decisions`, or `.agentpal/change-ledger` by default.
 
 The generated `.agentpal/project.json` should include `binding_mode: thin`, `central_pal_contacts`, and `agentpal_project_record`.
 

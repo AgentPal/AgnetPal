@@ -118,7 +118,7 @@ Do not copy these into the user project as binding material:
 - full Mira assets;
 - full core gates or orchestration protocols;
 - AgentPal docs, examples, evals, release notes, or PalBench reports;
-- `.agentpal/state`, `.agentpal/memory`, `.agentpal/reports`, `.agentpal/context`, `.agentpal/index`, `.agentpal/pals`, `.agentpal/workflows`, `.agentpal/evals`, `.agentpal/capability-inventory`, `.agentpal/business-systems`, `.agentpal/reviews`, `.agentpal/evidence`, `.agentpal/replay`, `.agentpal/rollback`, `.agentpal/verification`, `.agentpal/audit-trail`, or `.agentpal/governance-decisions` folders by default;
+- `.agentpal/state`, `.agentpal/memory`, `.agentpal/reports`, `.agentpal/context`, `.agentpal/index`, `.agentpal/pals`, `.agentpal/workflows`, `.agentpal/evals`, `.agentpal/capability-inventory`, `.agentpal/business-systems`, `.agentpal/reviews`, `.agentpal/evidence`, `.agentpal/replay`, `.agentpal/rollback`, `.agentpal/verification`, `.agentpal/audit-trail`, `.agentpal/governance-decisions`, or `.agentpal/change-ledger` folders by default;
 - generated runtime helpers, background services, installers, or UI.
 
 The binding may copy only the small project template files needed to point back to the AgentPal Workspace.

@@ -95,6 +95,15 @@ templates/capability-inventory/business-system-profile-governance-decision-recor
 
 The governance decision record can approve a bounded manual profile update, reject it, block it for missing evidence, require user confirmation, require host Runtime evidence, require second verification, or supersede an earlier decision. It still must not execute writeback, automatically approve or reject reviews, auto-close missing evidence, convert not-run to pass, modify central contacts, create a connector, store credentials, route by keywords, or write into external project `.agentpal/governance-decisions/`.
 
+After a governance decision and manual change review, create a Change Ledger to record field-level Business System Profile changes:
+
+```text
+standards/capability-inventory/business-system-profile-change-ledger.md
+templates/capability-inventory/business-system-profile-change-ledger.md
+```
+
+The change ledger records manual, human-governed changes, old/new public-safe summaries, source decision, evidence, replay, audit trail, rollback reference, second verification status, superseded entries, retained unknowns, retained not-run checks, retained missing evidence, and next manual review date. It still must not execute writeback, auto-update organization truth, auto-call external APIs, auto-close missing evidence, convert not-run to pass, modify central contacts, create a connector, store credentials, route by keywords, schedule automatic tasks, or write into external project `.agentpal/change-ledger/`.
+
 ## Boundary Checklist
 
 - Keep project usage memory under the central project record.
@@ -107,3 +116,4 @@ The governance decision record can approve a bounded manual profile update, reje
 - Do not treat a replay record as an execution engine or automatic rollback program.
 - Do not treat an audit trail index as an execution engine, external API caller, or automatic missing-evidence closer.
 - Do not treat a governance decision record as an approval engine, execution engine, central roster update, or automatic organization profile writeback.
+- Do not treat a change ledger as a writeback engine, central roster update, automatic organization profile writeback, automatic missing-evidence closer, external API caller, or scheduled automation from `next_review_date`.
