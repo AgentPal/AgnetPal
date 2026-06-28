@@ -45,7 +45,7 @@ Pre-gate result: pass.
 
 | Check | Result |
 | --- | --- |
-| `git status --short --branch` | `master...origin/master [ahead 38]` plus R103-A additions and other-thread R103-D untracked files |
+| `git status --short --branch` | `master...origin/master [ahead 40]` |
 | visible JSON parse | 89 files / 0 failures |
 | central registered / active Pals | 9 / 9 |
 | central `routing_policy` | `ai_judgement_only` |
@@ -62,12 +62,12 @@ Pre-gate result: pass.
 | hard-coded Pal route hits in R103-A allowed files | 0 |
 | secret assignment-like values in R103-A allowed files | 0 |
 | changed executable / dependency files in R103-A scope | 0 |
-| out-of-scope untracked files | 4 other-thread R103-D files present; not inspected, staged, or modified by R103-A |
+| out-of-scope untracked files | 0 |
 
-Changed-file broad boundary-term hits in R103-A allowed files are negative
-boundary statements such as credential exclusions and external project
-`.agentpal/memory/` non-target warnings. They are not active configuration,
-credentials, or thick-binding writes.
+Boundary-term hits in R103-A files are negative boundary statements such as
+credential exclusions and external project `.agentpal/memory/` non-target
+warnings. They are not active configuration, credentials, or thick-binding
+writes.
 
 Post-gate result for R103-A scope: pass.
 
@@ -77,8 +77,6 @@ Method:
 
 - created a local temporary copy with `robocopy`;
 - excluded `.git`, local private `.agentpal`, `node_modules`, and `.venv`;
-- removed other-thread R103-D untracked files from the temporary copy before
-  checking R103-A;
 - ran checks inside the copied tree only;
 - removed the temporary copy after checks.
 
@@ -100,13 +98,6 @@ Method:
 | external `.agentpal/` thick-binding directories | 0 |
 
 Clean-copy result: pass.
-
-Other-thread files excluded from the R103-A clean-copy:
-
-- `evals/palbench/pal-asset/r103d-official-pal-index-backfill-integration-gate.md`
-- `release/fresh-clone-checks/r103d-local-official-pal-index-backfill-gate-validation.md`
-- `release/integration-notes/r103d-official-pal-index-backfill-batch2-3-integration-checklist.md`
-- `release/integration-notes/r103d-official-pal-index-backfill-issue-template.md`
 
 ## Decision
 
