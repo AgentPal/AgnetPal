@@ -1129,6 +1129,12 @@ Use the current docs directories as the public entry points. Archived research n
 | `evals/palbench/v0.5/documentation/r165-user-path-walkthrough.md` | R165 user documentation path walkthrough |
 | `release/fresh-clone-checks/r165-local-release-docs-validation.md` | R165 local release docs validation |
 | `release/integration-notes/r165-r166-release-candidate-readiness-decision.md` | R165 to R166 release candidate readiness decision |
+| `release/fresh-clone-checks/r166-local-release-candidate-preflight.md` | R166 local release candidate preflight |
+| `release/integration-notes/r166-v0.5-release-candidate-scope.md` | R166 v0.5 release candidate scope |
+| `release/integration-notes/r166-v0.5-release-candidate-claim-guard.md` | R166 v0.5 release candidate claim guard |
+| `release/integration-notes/r166-v0.5-release-candidate-evidence-summary.md` | R166 v0.5 release candidate evidence summary |
+| `release/integration-notes/r166-r167-release-preparation-readiness-decision.md` | R166 to R167 release preparation readiness decision |
+| `evals/palbench/v0.5/documentation/r166-release-candidate-docs-final-check.md` | R166 release candidate docs final check |
 
 ## Do Not Load By Default
 
