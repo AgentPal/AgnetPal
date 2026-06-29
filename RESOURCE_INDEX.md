@@ -1031,6 +1031,21 @@ Use the current docs directories as the public entry points. Archived research n
 | `release/fresh-clone-checks/r157-local-agent-use-decision-protocol-validation.md` | R157 local validation |
 | `release/integration-notes/r157-r158-real-invocation-readiness-decision.md` | R157 to R158 readiness decision |
 
+## R158 Real Skill / Plugin / Mode Invocation Evidence
+
+| Path | Purpose |
+| --- | --- |
+| `evals/palbench/v0.5/agent-use/r158-real-skill-plugin-mode-invocation-plan.md` | R158 bounded real invocation test plan and scoring policy |
+| `evals/palbench/v0.5/agent-use/r158-real-skill-plugin-mode-invocation-results.md` | R158 16-case real/dry-run/handoff invocation results |
+| `evals/palbench/v0.5/agent-use/r158-skill-plugin-invocation-records.md` | R158 per Skill/plugin invocation records |
+| `evals/palbench/v0.5/agent-use/r158-codex-mode-invocation-results.md` | R158 Codex mode and background-thread evidence |
+| `evals/palbench/v0.5/agent-use/r158-claude-code-handoff-acceptance-results.md` | R158 Claude Code minimal-call result and full-host boundary |
+| `evals/palbench/v0.5/agent-use/r158-real-invocation-issues.md` | R158 issue list, including child-thread enum gap |
+| `evals/palbench/v0.5/agent-use/r158-agent-use-next-optimization-backlog.md` | R158 next optimization backlog for R159 |
+| `evals/palbench/v0.5/agent-use/fixtures/r158/` | R158 public-safe local fixtures and evidence outputs |
+| `release/fresh-clone-checks/r158-local-real-invocation-validation.md` | R158 local validation record |
+| `release/integration-notes/r158-r159-real-invocation-decision.md` | R158 to R159 decision record |
+
 ## Do Not Load By Default
 
 - all Pal Packs
