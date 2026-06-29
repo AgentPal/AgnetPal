@@ -43,7 +43,6 @@ Use:
 | `README.zh-CN.md` | Chinese public introduction | Chinese onboarding or localization checks |
 | `START_HERE.md` | first fresh-clone onboarding entry | new users and v0.5 first-use walkthrough |
 | `AGENTS.md` | project-level runtime instructions | initialization and context switches |
-| `INIT_PROMPT.md` | short AgentPal Workspace initialization prompt | direct workspace initialization by Markdown/JSON-capable runtimes |
 | `PAL.md` | AgentPal Workspace identity | workspace identity questions and initialization |
 | `SKILL.md` | Workspace-level Skill entry | Skill-aware runtime entry |
 | `prompts/codex/initialize-agentpal-workspace.md` | copyable initialization prompt | first run or re-initialization |
@@ -1081,6 +1080,19 @@ Use the current docs directories as the public entry points. Archived research n
 | `evals/palbench/v0.5/agent-use/fixtures/r160/` | R160 public-safe local fixture and evidence outputs |
 | `release/fresh-clone-checks/r160-local-final-real-host-gap-validation.md` | R160 local validation record |
 | `release/integration-notes/r160-r161-release-evidence-readiness-decision.md` | R160 to R161 readiness decision |
+
+## R161 Documentation Governance Evidence
+
+| Path | Purpose |
+| --- | --- |
+| `evals/palbench/v0.5/documentation/r161-documentation-governance-audit.md` | R161 documentation governance audit summary |
+| `evals/palbench/v0.5/documentation/r161-root-docs-keep-rewrite-delete-matrix.md` | R161 root keep / rewrite / archive / delete matrix |
+| `evals/palbench/v0.5/documentation/r161-docs-directory-keep-rewrite-delete-matrix.md` | R161 docs-directory keep / rewrite / archive / delete matrix |
+| `evals/palbench/v0.5/documentation/r161-obsolete-file-deletion-candidates.md` | R161 obsolete deletion and archive candidates |
+| `evals/palbench/v0.5/documentation/r161-readme-v0.5-rewrite-requirements.md` | R161 README rewrite requirements for v0.5 |
+| `evals/palbench/v0.5/documentation/r161-docs-restructure-plan.md` | R161 docs restructure plan for R162 |
+| `release/fresh-clone-checks/r161-local-documentation-governance-validation.md` | R161 local documentation governance validation |
+| `release/integration-notes/r161-r162-documentation-rewrite-readiness-decision.md` | R161 to R162 rewrite readiness decision |
 
 ## Do Not Load By Default
 
