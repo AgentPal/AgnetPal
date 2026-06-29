@@ -806,6 +806,13 @@ Use the current docs directories as the public entry points. Archived research n
 | `evals/palbench/v0.5/behavior/r144-official-pal-asset-behavior-issues.md` | R144 official Pal asset behavior issue table |
 | `release/fresh-clone-checks/r144-local-official-pal-asset-behavior-validation.md` | R144 local validation for official Pal asset behavior tests |
 | `release/integration-notes/r144-r145-readiness-decision.md` | R144 readiness decision for R145 capability writeback behavior tests |
+| `evals/palbench/v0.5/behavior/r145-capability-agent-model-skill-results.md` | R145 capability / Agent / model / Skill / plugin behavior test results |
+| `evals/palbench/v0.5/behavior/r145-writeback-classification-results.md` | R145 writeback classification behavior test results |
+| `evals/palbench/v0.5/behavior/r145-capability-writeback-regression-results.md` | R145 capability / writeback regression behavior test results |
+| `evals/palbench/v0.5/behavior/r145-capability-writeback-behavior-summary.md` | R145 capability / writeback behavior test summary |
+| `evals/palbench/v0.5/behavior/r145-capability-writeback-behavior-issues.md` | R145 capability / writeback behavior issue table |
+| `release/fresh-clone-checks/r145-local-capability-writeback-behavior-validation.md` | R145 local validation for capability / writeback behavior tests |
+| `release/integration-notes/r145-r146-readiness-decision.md` | R145 readiness decision for R146 Deep Conductor E2E behavior tests |
 
 ## R101 Integration
 
