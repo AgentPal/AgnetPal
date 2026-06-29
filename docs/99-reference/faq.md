@@ -1,36 +1,40 @@
 # FAQ
 
-## Is AgentPal an agent runtime?
+## Is AgentPal An Agent Runtime?
 
-No. AgentPal is a Pal layer and Pal Pack Standard practice. The host runtime still performs model execution, file operations, commands, tool calls, publishing, deletion, and other actions.
+No. AgentPal is a Pal layer and Pal Pack standard practice. The host runtime still performs model execution, file operations, commands, tool calls, publishing, deletion, and other actions.
 
-## Is a Pal an agent?
+## Is A Pal An Agent?
 
-No. A Pal is a portable working companion loaded by an agent runtime. It is not an independent process.
+No. A Pal is a working partner loaded by a host runtime. It is not an independent process.
 
-## Is AgentPal a multi-agent system?
+## Is AgentPal A Multi-Agent System?
 
-No. AgentPal v0.1.0-rc.1 uses Simple Pal Mode only. Future runtime orchestration material is not active current behavior.
+AgentPal can coordinate multiple Pals as no-code collaboration, but it is not a multi-Agent runtime. It does not start multiple Agent processes by itself.
 
-## Where do Pals live?
+## What Is Active In v0.5?
 
-Single Pal Packs live under `official/pals/<Pal-Directory>/`.
+Mira-first entry, 10 official Pals, `/pal Name` direct calls, AI owner judgement, Fast Route, Task Packages, Context Slicing, Asset Loading Budget, Runtime Response Gate, Deep Conductor as no-code collaboration and mode-decision protocol, and Codex-first real host evidence.
 
-## Is the AgentPal root one Pal Pack?
+## Which Hosts Are Supported?
 
-No. The AgentPal root is the AgentPal Workspace. It contains multiple Pal Packs and shared workspace assets.
+Codex is the verified first host. Claude Code has limited/minimal handoff evidence. Generic CLI Agent is a compatibility path. OpenCode and Gemini are unavailable in current evidence.
 
-## How does AgentPal discover Pals?
+## Where Do Pals Live?
 
-Through `workspace/organization/contacts/`. Old root `contacts/` was archived under `archive/migration-from-v0.3/root-legacy/contacts/`; legacy registry records now live under `workspace/resources/registry/`. Neither is the current source of truth.
+Single Pal Packs live under `official/pals/<Pal-Directory>/` or another approved Pal asset area.
 
-## Can a Skill or plugin be a Pal contact?
+## Is The AgentPal Root One Pal Pack?
 
-No. Skills, tools, plugins, models, MCP servers, raw repositories, and runtime adapters do not become Pal contacts unless they are packaged as valid Pal Packs.
+No. The AgentPal root is the AgentPal workspace. It contains multiple Pal Packs and shared workspace assets.
 
-## What is active in v0.1.0-rc.1?
+## How Does AgentPal Discover Pals?
 
-Simple Pal Mode, Mira as default Main Pal, official bundled Pal Packs, runtime-readable Markdown/JSON assets, direct `/pal Name` calls, and public Pal Pack Standard documentation.
+Through `workspace/organization/contacts/`. That central contact area is the current source of truth.
+
+## Can A Skill Or Plugin Be A Pal Contact?
+
+No. Skills, tools, plugins, models, MCP servers, raw repositories, runtime adapters, and knowledge packs do not become Pal contacts unless they are packaged as valid Pal Packs and approved.
 
 ## Related
 

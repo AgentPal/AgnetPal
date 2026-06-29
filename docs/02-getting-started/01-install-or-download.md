@@ -1,28 +1,55 @@
 # Install Or Download
 
-## Purpose
+AgentPal v0.5 does not have a package-manager install, app installer, CLI installer, daemon, scanner, connector setup, or marketplace account.
 
-This document explains how to get the AgentPal Workspace onto your machine.
+You use it by placing the AgentPal workspace on your machine and opening it in a host runtime that can read Markdown and JSON files.
 
-## Current Status
+## Option A: Clone
 
-Short placeholder for v0.1.0-rc.1.
+```text
+git clone <AgentPal-repository-url>
+cd AgentPal
+```
 
-## Basic Path
+Use this when you want Git history and local commits.
 
-Download or clone the repository, then open the AgentPal directory in a runtime that can read Markdown and JSON files.
+## Option B: Download A Release Or Zip
 
-AgentPal v0.1.0-rc.1 does not require an installer or background service.
+Download the archive, extract it, and keep the extracted folder as your AgentPal workspace.
 
-## To Add Later
+Before sharing or re-publishing a copy, check that it does not contain private project files, credentials, local settings, customer data, or machine-specific paths.
 
-- Git clone example.
-- Zip download example.
-- Release archive notes.
-- Checks for hidden private files before sharing a fork.
+## What Should Be In The Workspace
 
-## Related
+A normal AgentPal workspace contains Markdown and JSON assets such as:
+
+- `README.md` and `README.zh-CN.md`
+- `prompts/`
+- `core/`
+- `docs/`
+- `official/pals/`
+- `workspace/organization/contacts/`
+- `templates/`
+
+You do not need Python, Node.js, Rust, Go, a web server, or a background service for ordinary initialization.
+
+## What Not To Install
+
+Do not install AgentPal as if it were:
+
+- an Agent runtime
+- a tool connector
+- a file scanner
+- an app runtime
+- a model router
+- a marketplace package
+- a background sync service
+
+If a host runtime has its own tools or plugins, those belong to that host runtime. AgentPal may record or reason about visible capability evidence, but it does not provide those tools itself.
+
+## Next Links
 
 - [Quick start](00-quick-start.md)
 - [Use with Codex](02-open-in-codex.md)
 - [Use with Claude Code](03-open-in-claude-code.md)
+- [Runtime compatibility](../04-runtime-guides/00-runtime-compatibility.md)

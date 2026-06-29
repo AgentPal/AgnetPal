@@ -1,16 +1,16 @@
-# Deep Conductor Future
+# Deep Conductor And Runtime Futures
 
-Deep Conductor is AgentPal's future orchestration design for complex work that needs workflow topology, separated context, independent review, verification, and routing memory.
+Deep Conductor is AgentPal's no-code collaboration and mode-decision protocol for complex work.
 
-It is not active task handling in v0.1.0-rc.1.
+It helps the current AI reason about workflow topology, separated context, independent review, verification, capability evidence, and routing memory. It does not make AgentPal an automatic execution runtime.
 
-## Status
+## Current v0.5 Status
 
-- Current: Not active. v0.1 uses Simple Pal Mode, Fast Route, Single Owner, and Task Package.
-- Future: Planned methodology for complex multi-step orchestration when runtime support, user authorization, evidence handling, privacy boundaries, and fallback rules are defined.
-- Research: PalBench may simulate Deep Conductor patterns and compare them with ad hoc multi-step prompting.
+- Current: no-code staged judgement, owner candidates, capability candidates, context boundaries, Task Packages, and verification decisions.
+- Host-dependent: subagents, parallel execution, external Agent calls, tool execution, and runtime-specific automation.
+- Future: stronger runtime adapters may implement deeper execution paths if the host provides capability evidence and the user authorizes them.
 
-## Why it exists
+## Why It Exists
 
 Some tasks are too complex for a single fast answer:
 
@@ -20,42 +20,31 @@ Some tasks are too complex for a single fast answer:
 - execution evidence must be checked before acceptance
 - the result should teach future routing decisions
 
-Deep Conductor defines how AgentPal might organize those cases without turning the Pal layer into a hidden black box.
+Deep Conductor defines how AgentPal organizes those cases without turning the Pal layer into a hidden black box.
 
-## How it works
+## What It Uses
 
-Future Deep Conductor may combine:
+Deep Conductor may combine:
 
 - Task Judgement Packet
 - Capability Inventory
 - Workflow Topology
 - Context Access List
 - Task Package
-- Pal Isolation
 - Verification Result Record
 - Routing Decision Record
-- Routing Reward Memory
+- memory candidate review
 
-Possible future topologies include:
+Possible topologies include owner plus verifier, plan-execute-verify, parallel independent review, sequential chain, and best-of-N comparison. The host runtime still provides execution if execution happens.
 
-- owner plus verifier
-- plan, execute, verify
-- parallel independent review
-- sequential chain
-- best-of-N runtime comparison
+## What It Is Not
 
-Each topology must define context boundaries, output contracts, evidence requirements, cost controls, timeout behavior, user approval points, and fallback behavior.
-
-## What it is not
-
-- Not active in v0.1.0-rc.1.
-- Not a current multi-agent runtime.
-- Not automatic external agent orchestration.
+- Not a current multi-Agent runtime.
+- Not automatic external Agent orchestration.
 - Not permission to spawn child workflows.
 - Not a reason to show runtime-mode metadata in normal answers.
 - Not a claim that complex workflows always improve results.
 
-## Boundary rule
+## Boundary Rule
 
-If a document describes Deep Conductor behavior, it must clearly mark it as future unless the behavior is also documented as active for the current release.
-
+When describing Deep Conductor, separate no-code decision behavior from host-dependent execution behavior.

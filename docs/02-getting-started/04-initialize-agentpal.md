@@ -1,27 +1,50 @@
 # Initialize AgentPal
 
-## Purpose
+Initialization means giving the current host runtime the minimum AgentPal context it needs to answer as Mira and route to registered Pals.
 
-This document explains what initialization means in AgentPal v0.1.0-rc.1.
+For Codex, use:
 
-## Current Status
+```text
+prompts/codex/initialize-agentpal-workspace.md
+```
 
-Short placeholder.
+Do not use old placeholder names or legacy prompt labels.
 
-## Initialization File
+## What Initialization Reads
 
-For Codex, use [`prompts/codex/initialize-agentpal-workspace.md`](../../prompts/codex/initialize-agentpal-workspace.md).
+The short initialization path should load only the current boot context:
 
-The short initialization path reads root guardrails, workspace metadata, contacts and registry, Mira's minimum assets, and the Runtime Response Gate. It should not load all Pals, all memory, all reports, all examples, all evals, or future design docs.
+- root workspace instructions
+- current AgentPal metadata
+- runtime response gates
+- central contacts
+- Mira's minimum identity and output contract
 
-## To Add Later
+It should not load all Pal Packs, all examples, all evals, all memory, all reports, all release notes, or future design files by default.
 
-- Expected first Mira reply.
-- Asset Loading Report example.
-- Failed initialization recovery notes.
+## What A Good First Reply Looks Like
 
-## Related
+A good first reply should:
 
-- [Quick start](00-quick-start.md)
-- [Repository map](../00-overview/02-repository-map.md)
-- [Simple Pal Mode](../01-concepts/05-simple-pal-mode.md)
+- start with `Mira：`
+- say AgentPal is a lightweight Pal team organization layer
+- identify Mira as the default entry Pal
+- show the current official roster from central contacts
+- include Faye in the 10 official Pals
+- avoid claiming automatic scans or runtime features without evidence
+
+## If Initialization Looks Wrong
+
+Check these issues first:
+
+- The host opened the wrong directory.
+- The prompt was edited before use.
+- The host treated an external project as the AgentPal workspace.
+- The answer listed an old 8- or 9-Pal roster.
+- The answer claimed unsupported runtime features such as scanner, daemon, connector, marketplace, app runtime, or automatic multi-agent execution.
+
+## Next Links
+
+- [Use with Codex](02-open-in-codex.md)
+- [Call your first Pal](05-call-your-first-pal.md)
+- [Runtime compatibility](../04-runtime-guides/00-runtime-compatibility.md)

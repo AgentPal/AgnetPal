@@ -1,27 +1,44 @@
 # Official Pal Examples Index
 
-This index points to the v0.2 first implementation of the official 9 Pal real task example library.
+This page points to official Pal task examples and explains how to use them safely.
 
-## How To Use
+The current v0.5 roster has 10 official Pals:
 
-- Start with Mira when you are unsure which Pal should own the work.
-- Use `/pal Name` when the intended specialist is clear.
-- For composite deliverables, expect a staged judgement with Pal, Runtime, Skill, and verification candidates.
+- Mira
+- Atlas
+- Vega
+- Rhea
+- PalSmith
+- Quinn
+- Morgan
+- Harper
+- Nova
+- Faye
+
+## How To Use Examples
+
+- Start with Mira when you are unsure who should own the work.
+- Use `/pal Name` when the intended Pal is clear.
 - Treat examples as learning references, not fixed routes.
+- For composite deliverables, expect staged judgement with Pal, runtime, Skill, and verification candidates.
+- Keep customer-private data out of public examples.
 
 ## Pal Task Libraries
 
 | Pal | Role | Task examples |
 | --- | --- | --- |
 | Mira | Main Pal / Leader / Conductor | `official/pals/Mira-main/examples/tasks/` |
-| Atlas | Developer / Implementation Lead | `official/pals/Atlas-developer/examples/tasks/` |
-| Vega | Research / Intelligence Lead | `official/pals/Vega-research/examples/tasks/` |
-| Rhea | System / Runtime Safety Lead | `official/pals/Rhea-system/examples/tasks/` |
-| PalSmith | Pal Asset Governor | `official/pals/PalSmith-pal-governor/examples/tasks/` |
-| Quinn | Quality / Verification Lead | `official/pals/Quinn-quality/examples/tasks/` |
-| Morgan | Document / File Workflow Lead | `official/pals/Morgan-document/examples/tasks/` |
-| Harper | Writing / Content Craft Lead | `official/pals/Harper-writing/examples/tasks/` |
-| Nova | Product / Strategy Lead | `official/pals/Nova-product/examples/tasks/` |
+| Atlas | Developer / implementation perspective | `official/pals/Atlas-developer/examples/tasks/` |
+| Vega | Research / evidence perspective | `official/pals/Vega-research/examples/tasks/` |
+| Rhea | System / runtime safety perspective | `official/pals/Rhea-system/examples/tasks/` |
+| PalSmith | Pal asset governor and Pal team designer | `official/pals/PalSmith-pal-governor/examples/tasks/` |
+| Quinn | Quality / verification perspective | `official/pals/Quinn-quality/examples/tasks/` |
+| Morgan | Document / file workflow perspective | `official/pals/Morgan-document/examples/tasks/` |
+| Harper | Writing / communication perspective | `official/pals/Harper-writing/examples/tasks/` |
+| Nova | Product / strategy perspective | `official/pals/Nova-product/examples/tasks/` |
+| Faye | Business delivery packaging perspective | `official/pals/Faye-delivery/examples/tasks/` |
+
+If an example directory is missing or incomplete, say so honestly. Do not substitute a different Pal's example as proof.
 
 ## Cross-Pal Examples
 
@@ -29,17 +46,17 @@ This index points to the v0.2 first implementation of the official 9 Pal real ta
 - `examples/orchestration/cross-pal-palsmith-create-ai-team.md`
 - `examples/orchestration/cross-pal-release-readiness-review.md`
 
-Cross-Pal examples show staged written Task Packages and Context Access Lists. They do not start automatic multi-Pal execution.
-
-## Status
-
-Status: started / first implementation / R42.
-
-R42 provides at least three task examples for each official Pal. Mira and PalSmith each have four. The library remains open for later expansion with more domain-specific examples and PalBench cases.
+Cross-Pal examples show written Task Packages and Context Access Lists. They do not start automatic multi-Pal execution.
 
 ## Review Rules
 
-- Every task example should include User Request, Task Judgement, Context Needs, Good Response Example, Bad Response Example, and Verification / Acceptance Criteria.
-- Every example should state that candidates are not fixed routes.
-- Public examples must not contain private user data, credentials, or local absolute paths.
-- Current v0.2 examples are written guidance and do not activate Deep Conductor.
+- Every task example should include the user request, task judgement, context needs, good response shape, bad response shape, and verification / acceptance criteria.
+- Candidates are not fixed routes.
+- Public examples must not contain private user data, credentials, customer records, or local absolute paths.
+- Runtime execution claims require current host evidence.
+
+## Next Links
+
+- [Official Pals reference](../99-reference/official-pals.md)
+- [Pal vs Agent vs Skill](../01-concepts/03-pal-vs-agent-vs-skill.md)
+- [PalSmith](../06-palsmith/README.md)

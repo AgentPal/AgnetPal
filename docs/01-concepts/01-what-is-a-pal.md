@@ -1,13 +1,13 @@
 # What Is A Pal?
 
-A Pal is a portable working companion for agent runtimes.
+A Pal is a working partner for an existing host runtime.
 
-It packages persona, role boundaries, domain knowledge, skills, memory rules, workflows, context rules, output contracts, verification standards, and collaboration protocols into a maintained working asset.
+It packages identity, role boundaries, knowledge, Skills, memory rules, workflows, context rules, output contracts, verification standards, and collaboration protocols into a maintained working asset.
 
 ## A Pal Is Not
 
 - an independent runtime process
-- an agent executable
+- an Agent executable
 - a single prompt
 - a single Skill
 - a tool, plugin, model, MCP server, or raw repository
@@ -20,20 +20,20 @@ A mature Pal can include:
 - responsibility boundaries
 - tone and collaboration style
 - domain knowledge
-- Skills and reusable methods
+- Pal-owned Skills and reusable methods
 - runbooks and workflows
 - memory and state boundaries
 - output contract
 - verification expectations
 - learning rules for repeated tasks
 
-## How A Pal Works In v0.1.0-rc.1
+## How A Pal Works In v0.5
 
-In Simple Pal Mode, the host runtime reads the selected Pal's assets and answers through that Pal's working mode. The Pal does not execute actions by itself.
+The host runtime reads the selected Pal's assets and answers through that Pal's working mode. The Pal does not execute actions by itself.
 
-For example, `/pal Harper` means the current runtime should use Harper's identity, assets, and output contract. It does not start a separate Harper process.
+For example, `/pal Faye` means the current runtime should use Faye's identity, assets, and output contract. It does not start a separate Faye process.
 
-## Related
+## Next Links
 
 - [What is a Pal Pack?](02-what-is-a-pal-pack.md)
 - [Pal vs Agent vs Skill](03-pal-vs-agent-vs-skill.md)

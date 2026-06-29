@@ -2,15 +2,19 @@
 
 Capability Inventory is AgentPal's method for describing what the current environment may be able to use.
 
-It covers runtime, model, reasoning, Skill, plugin, MCP, and Pal capability profiles. Profiles are judgement inputs, not route rules.
+It covers host runtime, model, reasoning, Skill, plugin, MCP, tool, and Pal capability profiles. Profiles are judgement inputs, not route rules.
 
-## Status
+## Current v0.5 Status
 
-- Current: Available as public-safe profile templates, illustrative examples, and capability matrices. No automatic scan is active in v0.1.0-rc.1.
-- Future: May support manual refresh, validation, richer profiles, and routing-memory feedback.
-- Research: PalBench can evaluate whether capability awareness improves Skill activation accuracy, runtime fit, verification quality, and cost per accepted result.
+Capability facts may come from:
 
-## Why it exists
+- visible current runtime evidence
+- a user-maintained manual profile
+- a runtime-reported profile or explicit tool list
+
+No automatic scan is active by default. If capability is unknown, say it is unknown.
+
+## Why It Exists
 
 AgentPal scheduling depends on facts that may change:
 
@@ -22,7 +26,7 @@ AgentPal scheduling depends on facts that may change:
 
 Capability Inventory makes these facts explicit instead of forcing users to remember them.
 
-## How it works
+## Profile Contents
 
 A capability profile should describe:
 
@@ -34,29 +38,18 @@ A capability profile should describe:
 - evidence required
 - whether the profile is non-binding
 
-Profile types include:
+Profile types include runtime, model, reasoning, Skill, plugin, MCP, tool, and Pal capability profiles.
 
-- Runtime Profile
-- Model Profile
-- Reasoning Profile
-- Skill Profile
-- Plugin Profile
-- MCP Profile
-- Pal Capability Profile
+## What It Is Not
 
-Mira or an owner Pal may use profiles during judgement, but final routing remains case-by-case.
-
-## What it is not
-
-- Not an automatic environment probe in v0.1.
-- Not proof that a capability exists in the user's current session.
+- Not an automatic environment probe.
+- Not proof that a capability exists in the current session.
 - Not a task-to-Pal routing table.
 - Not a model leaderboard.
-- Not a place to store secrets, private paths, credentials, or private project data.
+- Not a place to store secrets, private paths, credentials, or customer data.
 
-## Use safely
+## Safe Use
 
-If capability facts are unknown, say they are unknown until scanned or confirmed.
+Mira or an owner Pal may use profiles during judgement, but final routing remains case-specific.
 
-Do not infer availability from an example profile.
-
+Do not infer availability from an example profile. Ask the host runtime to confirm when the capability matters.

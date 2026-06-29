@@ -1,29 +1,56 @@
-# Use With Codex
+# Open In Codex
 
-## Purpose
+Codex is the verified first host for AgentPal v0.5.
 
-This document explains the basic Codex path for AgentPal v0.1.0-rc.1.
+Use this path when you want to initialize AgentPal itself, inspect the official Pal roster, or ask Mira to help with AgentPal workspace tasks.
 
 ## Steps
 
-1. Add the AgentPal directory as a Codex workspace or project.
-2. Open the AgentPal Workspace.
-3. Paste or run `prompts/codex/initialize-agentpal-workspace.md`.
+1. Open the AgentPal workspace directory as a Codex project.
+2. Open [`prompts/codex/initialize-agentpal-workspace.md`](../../prompts/codex/initialize-agentpal-workspace.md).
+3. Paste the whole initialization prompt into a fresh Codex thread.
 4. Let Codex read the short initialization path.
-5. Start with Mira.
+5. Start ordinary messages with Mira.
 
-Do not add each official Pal as a separate Codex project for normal use. Add the AgentPal Workspace once; Mira can route to currently registered Pals from contacts and registry.
+## Expected First Result
 
-## Expected Behavior
+The first AgentPal reply should:
 
-- Ordinary messages go to Mira.
-- Specialist Pals do not listen by default.
-- Direct specialist replies start with the resolved Pal name from contacts and registry.
-- No Python, Node.js, Rust, or Go dependency is required for initialization.
-- Simple Pal Mode is the only active v0.1.0-rc.1 task-handling path.
+- start with `Mira：`
+- explain that AgentPal is a no-code Pal organization layer
+- list the current official Pal roster from central contacts
+- include 10 official Pals, including Faye
+- avoid claiming a runtime scan, connector, installer, app runtime, or automatic multi-agent execution
 
-## Related
+## First Prompts To Try
 
-- [Quick start](00-quick-start.md)
+```text
+Mira, what can AgentPal v0.5 help me do today?
+```
+
+```text
+/pal Quinn Review whether this plan has enough evidence to call it tested.
+```
+
+```text
+/pal Faye Turn this business goal into a delivery package outline.
+```
+
+## External Projects
+
+If you want to use AgentPal inside another project, do not treat the AgentPal workspace as that project. Use thin binding:
+
+- [Bind an external project](../01-getting-started/bind-external-project.md)
+- [Project-first connection](../04-runtime-guides/04-project-first-connection.md)
+
+## Current Limits
+
+- Codex real host evidence exists for v0.5.
+- Host tools, models, plugins, and Skills must still be reported from visible current evidence.
+- AgentPal does not create Codex subagents, background workers, or a runtime scanner.
+
+## Next Links
+
 - [Initialize AgentPal](04-initialize-agentpal.md)
 - [Call your first Pal](05-call-your-first-pal.md)
+- [Use with Codex runtime guide](../04-runtime-guides/01-use-with-codex.md)

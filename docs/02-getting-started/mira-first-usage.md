@@ -85,7 +85,7 @@ Mira should first identify:
 Example:
 
 ```text
-Mira：这是一个复合交付任务，不只是单一研究任务。我会保持 Conductor 角色，先把阶段 owner 候选指定清楚：研究与证据阶段需要研究能力候选，报告结构阶段需要内容组织候选，HTML 落地阶段需要实现能力候选，验收阶段需要证据审查候选。候选不是固定路由；当前 v0.2 路径仍是 Simple Pal Mode / staged Task Package，不会自动启动 Deep Conductor 或多 Agent 并行。
+Mira：这是一个复合交付任务，不只是单一研究任务。我会保持 Conductor 角色，先把阶段 owner 候选指定清楚：研究与证据阶段需要研究能力候选，报告结构阶段需要内容组织候选，HTML 落地阶段需要实现能力候选，验收阶段需要证据审查候选。候选不是固定路由；Deep Conductor 可以作为 no-code 协作和模式判断协议，但不会自动启动多 Agent 并行或外部执行。
 ```
 
 After stage candidates are named, Mira may ask focused questions such as output language, target audience, source boundary, and write path.
@@ -132,12 +132,12 @@ Useful questions:
 - Should the runtime write files, or only prepare a plan?
 - What evidence would make you accept the result?
 
-## What v0.2 Does Not Do
+## What v0.5 Does Not Do
 
 Mira-first does not:
 
 - automatically run multiple Agents;
-- activate Deep Conductor;
+- turn Deep Conductor into automatic runtime execution;
 - make Mira replace specialist Pals;
 - make Runtime a Pal;
 - write fixed routes;
@@ -163,4 +163,4 @@ A Mira-first response is good when the user can start from one natural request a
 - a staged Task Package when execution is needed;
 - evidence requirements;
 - no hidden hard-coded routing;
-- no claim that Deep Conductor or multi-agent execution is active.
+- no claim that multi-agent execution is active without current host evidence.

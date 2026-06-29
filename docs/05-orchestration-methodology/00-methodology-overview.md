@@ -1,16 +1,20 @@
 # Methodology Overview
 
-AgentPal Pal Orchestration Methodology explains how the Pal layer organizes work for an existing agent runtime.
+AgentPal Pal Orchestration Methodology explains how the Pal layer organizes work for an existing host runtime.
 
 The method does not add model intelligence by itself. It improves how available intelligence is used: tighter task judgement, smaller context slices, clearer handoffs, explicit evidence, and reusable decision records.
 
-## Status
+## Current v0.5 Status
 
-- Current: Simple Pal Mode, AI-judged owner selection, Fast Route, Task Package, Context Slicing, and Asset Loading Budget.
-- Future: Deep Conductor, Context Access List enforcement, Pal Isolation, Shared Memory, Routing Reward Memory, and external runtime orchestration.
-- Research: PalBench measures whether AgentPal-style organization improves practical task handling, not whether one model is better than another.
+- Mira-first owner judgement.
+- Fast Route for clear single-owner work.
+- Task Package, Context Slicing, Asset Loading Budget, Verification Result Record, and Routing Decision Record.
+- Capability Inventory from visible evidence, manual profiles, or runtime-reported profiles.
+- Runtime / model / Skill awareness.
+- Deep Conductor as no-code collaboration and mode-decision protocol.
+- Host-dependent subagents, tools, plugins, MCP, model calls, and external Agents require current host evidence and user authorization.
 
-## Why it exists
+## Why It Exists
 
 Direct agent use often leaves users with coordination work:
 
@@ -22,40 +26,40 @@ Direct agent use often leaves users with coordination work:
 
 AgentPal moves those decisions into a transparent Pal layer. Users can start with Mira, and AgentPal can organize the rest without hiding the reasoning.
 
-## How it works
+## How It Works
 
 AgentPal separates the scheduling problem into small decisions:
 
 - Task judgement: what is the goal, risk, ambiguity, and evidence need?
 - Owner selection: which registered Pal should own the answer, if any?
 - Context control: what is the smallest useful file, asset, and memory slice?
-- Capability awareness: what runtime, model profile, reasoning strength, Skill, plugin, or MCP candidate may help?
+- Capability awareness: what host, model profile, reasoning strength, Skill, plugin, or MCP candidate may help?
 - Handoff: should this be a direct Pal answer or a Task Package for execution?
 - Verification: what evidence would prove completion?
-- Learning: should the routing result become a future non-binding recommendation?
+- Learning: should the result become a memory candidate or future Skill?
 
-In v0.1.0-rc.1, these decisions stay inside Simple Pal Mode. They do not start separate agents.
+These decisions do not start separate Agents by themselves.
 
-## What it is not
+## What It Is Not
 
 - Not a task-domain route table.
 - Not keyword routing.
 - Not automatic runtime probing.
-- Not a current multi-agent workflow engine.
+- Not a multi-Agent workflow engine.
 - Not a comparison with outside systems.
-- Not a claim that future designs are active now.
+- Not permission to run tools without host evidence and user authorization.
 
-## Current and future map
+## Current Map
 
-| Concept | v0.1.0-rc.1 status | Notes |
+| Concept | v0.5 status | Notes |
 | --- | --- | --- |
-| Fast Route | Current | Clear owner handoff in Simple Pal Mode. |
+| Fast Route | Current | Clear owner handoff. |
 | Task Package | Current | Compact execution or review handoff shape. |
 | Context Slicing | Current | Read the smallest useful slice. |
 | Asset Loading Budget | Current | Bounded file and asset loading rules. |
-| Capability Inventory | Current as profiles and templates; future as richer inventory | Not an automatic scan. |
-| Runtime / Model / Skill Awareness | Current as documented awareness; future as richer refresh | Unknown facts remain unknown until scanned. |
+| Capability Inventory | Current as evidence/profile method | Not an automatic scan. |
+| Runtime / Model / Skill Awareness | Current as documented awareness | Unknown facts remain unknown until confirmed. |
 | Verification Result Record | Current as template and audit artifact | Does not prove completion without evidence. |
 | Routing Decision Record | Current as template and audit artifact | Not a route rule. |
-| Deep Conductor | Future | Not active in v0.1. |
-| Pal Isolation and Shared Memory | Future | Design for independent judgement and safe reusable memory. |
+| Deep Conductor | Current as no-code decision protocol | Not automatic runtime execution. |
+| Pal Isolation and Shared Memory | Host/future dependent | Requires evidence and governance before active execution. |

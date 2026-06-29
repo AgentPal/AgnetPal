@@ -1,56 +1,54 @@
 # Use With Generic CLI Agent
 
-This guide covers the generic compatibility path for AgentPal v0.5.
+Generic CLI Agent support is a compatibility path, not a full host acceptance claim.
 
-## When This Path Fits
+Use this path only when the CLI agent can read local files, follow Markdown / JSON instructions, keep project context stable, and report real execution evidence.
 
-Use this path when your CLI agent can:
-
-- read directories and local files
-- follow Markdown / JSON instructions
-- keep project context stable across the task
-- report what it really executed
-
-AgentPal does not promise that every CLI agent has been validated. This is a generic compatibility guide.
-
-## Quick Start
+## Start From The User Project
 
 ```text
 cd <your-project>
 <your-cli-agent>
 ```
 
-Then paste the one-prompt project connection prompt from `prompts/generic-cli-agent/install-agentpal-current-project.md`.
-
-The install prompt is copy-paste ready. Do not edit the prompt before pasting.
-
-When the CLI agent runs the prompt, it asks for your local AgentPal Workspace path unless you already provided a clear path in the current conversation. Enter the path to your AgentPal directory, for example:
+Then paste:
 
 ```text
-<path-to-AgentPal>
+prompts/generic-cli-agent/install-agentpal-current-project.md
 ```
 
-Do not ask the CLI Agent to scan the whole disk for AgentPal.
+The prompt asks for the local AgentPal workspace path if the path was not already provided.
 
-## What This Path Creates
+## Expected Binding Surface
 
-- `.agentpal/` project binding files
-- `AGENTS.md` workgroup block for the current project
+The generic path should create or update:
 
-It does not require Claude Code local settings, and it should not create runtime-specific files unless the current project already uses them or the user asks.
+- `.agentpal/project.json`
+- `.agentpal/AGENTPAL.md`
+- protected AgentPal block in `AGENTS.md`
 
-## Important Boundary
+It should not create Claude-specific files unless the user explicitly asks or the project already requires them.
 
-- The current project stays the active task context.
-- The AgentPal Workspace is a reference workspace, not the user project.
-- AgentPal is a Pal layer, not an Agent runtime or execution layer.
-- The simple Mira-to-owner path is available for clear tasks.
-- Deep Conductor is available as a no-code collaboration and mode-decision protocol, not automatic runtime execution.
-- Subagent execution, external Agent execution, MCP/plugin calls, and Runtime Skill execution require current host evidence or explicit user authorization.
-- Use Host Capability Snapshots and Skill / Plugin Invocation Records to
-  distinguish current evidence from assumptions.
+## Required Host Behavior
 
-## Related
+The CLI agent must be able to:
 
-- [Runtime Compatibility](00-runtime-compatibility.md)
-- [Project-First Connection](04-project-first-connection.md)
+- keep the current project as `active_project_root`
+- treat AgentPal as `agentpal_workspace_root`
+- read central contacts when Pal discovery is needed
+- avoid copying Pal Packs, docs, evals, memory, reports, or release files into the project
+- separate known, unknown, and unavailable capability
+- provide evidence for any file write, command, tool call, or external action
+
+## Current Limits
+
+- Broad Generic CLI host acceptance is not claimed.
+- Runtime-specific slash commands may not exist.
+- Tool, plugin, model, MCP, or Skill capability must come from the current host, not from AgentPal assumption.
+- Deep Conductor remains a no-code decision protocol unless the host separately provides execution capability.
+
+## Next Links
+
+- [Runtime compatibility](00-runtime-compatibility.md)
+- [Project-first connection](04-project-first-connection.md)
+- [Thin project binding](../02-concepts/thin-project-binding.md)

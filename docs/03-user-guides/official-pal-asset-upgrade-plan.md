@@ -4,8 +4,9 @@ Date: 2026-06-28
 
 ## Purpose
 
-This guide summarizes the R98-B audit and upgrade plan for the 9 official Pal
-Packs.
+This guide summarizes the official Pal asset upgrade plan. Older R98-B evidence
+covered the pre-Faye roster; the current v0.5 roster has 10 official Pals,
+including Faye.
 
 Primary references:
 
@@ -21,13 +22,13 @@ Primary references:
 
 ## Audit Result
 
-The 9 official Pal Packs were audited against the v0.5 Pal Asset Standard
-direction.
+The pre-Faye official Pal Packs were audited against the v0.5 Pal Asset
+Standard direction before the current 10-Pal roster was established.
 
 R98-B did not modify `official/pals/**`, did not modify the central roster, and
 did not upgrade any specific Pal.
 
-Current evidence:
+Historical R98-B evidence:
 
 - official Pal directories: 9
 - central registered / active Pals: 9 / 9
@@ -37,8 +38,8 @@ Current evidence:
 
 ## Main Upgrade Gaps
 
-- all 9 Pals need future v0.5 `pal.json` asset metadata after fields are settled
-- all 9 Pals need future `asset-manifest.json` after manifest schema approval
+- all 10 current official Pals need future v0.5 `pal.json` asset metadata after fields are settled
+- all 10 current official Pals need future `asset-manifest.json` after manifest schema approval
 - several Pals need public-safe memory index files
 - PalSmith needs a decision on `memory/` and `learning/` applicability
 - Mira and PalSmith contain older `.agentpal/` wording that should be reviewed

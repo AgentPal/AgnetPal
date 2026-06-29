@@ -1,27 +1,46 @@
 # Pal Pack As Working Asset
 
-## Purpose
+A Pal Pack is more than a prompt and less than a runtime.
 
-This document explains why a Pal Pack is more than a prompt and less than a runtime.
+It is a maintainable working asset that a host runtime can read, follow, review, and improve over time.
 
-## Current Status
+## What Makes It Useful
 
-Short placeholder for v0.1.0-rc.1.
+A Pal Pack can contain:
 
-## Core Idea
+- identity and role boundaries
+- output contract
+- knowledge
+- Pal-owned Skills
+- workflows and runbooks
+- examples and evals
+- memory and learning boundaries
+- reports or readiness notes
 
-A Pal Pack is a maintainable working asset. It can be versioned, reviewed, shared, updated, and tested.
+This structure helps the host runtime work consistently without pretending the Pal itself executed actions.
 
-It should contain enough structure for a runtime to work consistently without pretending that the Pal itself executed actions.
+## How It Changes Over Time
 
-## To Add Later
+A Pal Pack may improve when:
 
-- Example of a small custom Pal Pack.
-- Example of a Pal Pack changing over time.
-- Guidance for public-safe sharing.
+- repeated tasks become formal Skills
+- missing knowledge is added from public-safe sources
+- examples are sanitized and added
+- evals catch common failure modes
+- output contracts become clearer
+- privacy boundaries are tightened
 
-## Related
+## What Not To Put In A Pal Pack
+
+- customer-private data
+- credentials
+- local runtime secrets
+- fixed keyword route maps
+- host runtime tools copied as Pal-owned Skills
+- claims that the Pal can execute actions without runtime evidence
+
+## Next Links
 
 - [What is a Pal Pack?](02-what-is-a-pal-pack.md)
 - [Pal Pack structure](../03-pal-pack-standard/01-pal-pack-structure.md)
-- [Publish your Pal Pack](../07-authoring-pals/11-publish-your-pal-pack.md)
+- [Create your first Pal](../02-getting-started/06-create-your-first-pal-in-5-minutes.md)

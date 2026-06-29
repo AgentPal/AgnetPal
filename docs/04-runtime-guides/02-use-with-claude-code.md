@@ -1,65 +1,54 @@
 # Use With Claude Code
 
-This is the recommended Claude Code path for AgentPal v0.5.
+Claude Code is a limited project-first path for AgentPal v0.5. Full AgentPal host acceptance is not claimed.
 
-## Project-First Path
-
-Start from the real user project:
+## Start From The User Project
 
 ```text
 cd <your-project>
 claude
 ```
 
-Then paste the one-prompt AgentPal connection prompt from `prompts/claude-code/install-agentpal-current-project.md`.
-
-The install prompt is copy-paste ready. Do not edit the prompt before pasting.
-
-When Claude Code runs the prompt, it asks for your local AgentPal Workspace path unless you already provided a clear path in the current conversation. Enter the path to your AgentPal directory, for example:
+Then paste:
 
 ```text
-<path-to-AgentPal>
+prompts/claude-code/install-agentpal-current-project.md
 ```
 
-Do not ask Claude Code to scan the whole disk for AgentPal. Provide the path yourself when prompted.
+The prompt asks for the local AgentPal workspace path if the path was not already provided.
 
-## What This Path Does
+## Expected Binding Surface
 
-- keeps the current user project as the active task context
-- connects the project to the AgentPal Workspace through `.agentpal/`
-- updates `CLAUDE.md` and `AGENTS.md` with a lightweight AgentPal workgroup block
-- updates `.claude/settings.local.json` so Claude Code can read the AgentPal Workspace path
+The prompt should create or update lightweight project files:
 
-## Important Boundary
+- `.agentpal/project.json`
+- `.agentpal/AGENTPAL.md`
+- protected AgentPal block in `AGENTS.md`
+- protected AgentPal block in `CLAUDE.md`
+- local `.claude/settings.local.json` when additional directory access is needed
 
-- `.claude/settings.local.json` is local machine configuration and should not be committed.
-- This is not a deep Claude Code plugin.
-- This is not an automatic installer outside the current project.
-- AgentPal must not mistake its own workspace directory for the user's project.
-- Project questions should resolve to the current user project directory first.
+`.claude/settings.local.json` is local machine configuration and should not be committed.
 
-## If Access Does Not Apply Immediately
+## What It Preserves
 
-If the current Claude Code session still cannot read the AgentPal path after the local settings update:
+- The current user project remains the active task context.
+- The AgentPal workspace is a reference workspace.
+- Pal discovery comes from AgentPal central contacts.
+- Project memory and derived records belong in the central project record, not in the external project's `.agentpal/` folder by default.
 
-- restart Claude Code in the project
-- or temporarily use `/add-dir <path-to-AgentPal>`
-- or restart with `claude --add-dir <path-to-AgentPal>`
+## Evidence Boundary
 
-These are fallback options, not the default setup path.
+- Minimal Claude Code handoff evidence exists.
+- `claude --bare -p` success is minimal call evidence only.
+- Full host acceptance is not claimed.
+- Subagent execution, external Agent execution, tool calls, and writeback require current Claude Code evidence or explicit authorization.
 
-## Current Runtime Boundary
+## Fallback Access
 
-- AgentPal is a Pal layer, not an Agent runtime.
-- The simple Mira-to-owner path is available for clear tasks.
-- Deep Conductor is available as a no-code collaboration and mode-decision protocol, not automatic runtime execution.
-- Subagent execution and external Agent execution require current Claude Code evidence or explicit user authorization.
-- `claude --bare -p` success is minimal call evidence only. It is not full
-  AgentPal Claude Code host acceptance.
-- Use a Claude Code Handoff Acceptance Card when moving a real AgentPal task to
-  Claude Code and returning evidence to Mira or Quinn.
+If Claude Code cannot read the AgentPal path after local settings are written, restart Claude Code in the project or temporarily use the host's documented additional-directory option.
 
-## Related
+## Next Links
 
-- [Project-First Connection](04-project-first-connection.md)
-- [Runtime Compatibility](00-runtime-compatibility.md)
+- [Open in Claude Code](../02-getting-started/03-open-in-claude-code.md)
+- [Project-first connection](04-project-first-connection.md)
+- [Thin project binding](../02-concepts/thin-project-binding.md)

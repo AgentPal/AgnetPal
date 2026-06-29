@@ -198,12 +198,12 @@ Use:
 | `docs/05-orchestration-methodology/parallel-independent-review-usage-guide.md` | Parallel Independent Review usage guide | no-code isolated reviewer workflow, reviewer packets, final reports, synthesis, and group-chat collapse prevention |
 | `docs/02-getting-started/multi-pal-collaboration-prompt-cards.md` | Multi-Pal prompt cards | copyable user prompts for Mira, `/pal`, `@Pal`, Context Packet, review, handoff, and summary paths |
 | `evals/v0.2-integration/v0.2-integration-test-matrix.md` | v0.2 integration matrix | R46 integrated readiness test matrix |
-| `docs/06-palsmith/README.md` | PalSmith v0.2 productization index | PalSmith creation and AI team productization work |
-| `docs/06-palsmith/palsmith-end-to-end-productization.md` | PalSmith v0.2 end-to-end user path | PalSmith creation and AI team productization work |
-| `official/pals/PalSmith-pal-governor/templates/task-packages/create-first-professional-pal.md` | Copyable first professional Pal creation task package | PalSmith v0.2 single-Pal creation work |
-| `official/pals/PalSmith-pal-governor/templates/task-packages/create-ai-team-from-goal.md` | Copyable AI team creation task package | PalSmith v0.2 AI team creation work |
-| `official/pals/PalSmith-pal-governor/runbooks/pal-health-check.md` | Pal health check runbook | PalSmith v0.2 creation and repair checks |
-| `official/pals/PalSmith-pal-governor/runbooks/ai-team-health-check.md` | AI team health check runbook | PalSmith v0.2 team readiness checks |
+| `docs/06-palsmith/README.md` | PalSmith v0.5 user index | PalSmith creation, Pal Team design, Task Package, and governance work |
+| `docs/06-palsmith/palsmith-end-to-end-productization.md` | PalSmith v0.5 end-to-end user path | PalSmith creation and Pal Team productization work |
+| `official/pals/PalSmith-pal-governor/templates/task-packages/create-first-professional-pal.md` | Copyable first professional Pal creation task package | PalSmith single-Pal creation work |
+| `official/pals/PalSmith-pal-governor/templates/task-packages/create-ai-team-from-goal.md` | Copyable AI team creation task package | PalSmith Pal Team creation work |
+| `official/pals/PalSmith-pal-governor/runbooks/pal-health-check.md` | Pal health check runbook | PalSmith creation and repair checks |
+| `official/pals/PalSmith-pal-governor/runbooks/ai-team-health-check.md` | AI team health check runbook | PalSmith team readiness checks |
 | `docs/02-getting-started/mira-first-usage.md` | Mira-first user path | onboarding and daily-use examples |
 | `docs/02-getting-started/mira-first-prompt-cards.md` | Copyable Mira-first prompts | daily user prompts and direct `/pal Name` guidance |
 | `official/pals/Mira-main/templates/task-packages/mira-first-task-intake.md` | Mira ordinary task intake template | Mira-first task organization |
@@ -212,8 +212,8 @@ Use:
 | `official/pals/Mira-main/templates/task-packages/mira-runtime-brief.md` | Mira runtime brief template | Codex / Claude Code / generic CLI execution handoff |
 | `official/pals/Mira-main/examples/mira-runtime-brief-example.md` | Mira runtime brief example | execution-layer evidence and project boundary example |
 | `official/pals/Mira-main/evals/mira-first-usage-self-test.md` | Mira-first self-test | ordinary, composite, direct Pal, and release-check regression |
-| `docs/07-official-pals/official-pal-examples-index.md` | Official 9 Pal real task examples index | official Pal examples and v0.2 R42 navigation |
-| `docs/07-official-pals/official-pal-example-library-plan.md` | Official Pal example library plan | official Pal examples planning and R42 first implementation status |
+| `docs/07-official-pals/official-pal-examples-index.md` | Official 10 Pal real task examples index | official Pal examples and v0.5 navigation |
+| `docs/07-official-pals/official-pal-example-library-plan.md` | Official Pal example library plan | official 10 Pal examples planning and boundary rules |
 | `evals/official-pals/official-pal-example-library-self-test.md` | Official Pal example library self-test | R42 example structure and boundary checks |
 | `docs/05-orchestration-methodology/capability-inventory-minimal-usable-design.md` | Capability Inventory minimal usable design | v0.2 R43 manual profile design |
 | `docs/03-user-guides/manual-capability-profile.md` | Manual Capability Profile Guide | no-code manual or semi-manual capability profile creation |
@@ -568,7 +568,7 @@ Use the current docs directories as the public entry points. Archived research n
 
 | Path | Purpose |
 | --- | --- |
-| `evals/palbench/pal-asset/r98b-official-pal-asset-audit.md` | R98-B official 9 Pal asset audit |
+| `evals/palbench/pal-asset/r98b-official-pal-asset-audit.md` | R98-B historical pre-Faye asset audit; current roster is 10 |
 | `evals/palbench/pal-asset/r98b-official-pal-upgrade-gap-table.md` | R98-B official Pal upgrade gap table |
 | `release/integration-notes/r98b-official-pal-upgrade-plan.md` | R98-B official Pal upgrade plan |
 | `release/fresh-clone-checks/r98b-local-official-pal-asset-audit-validation.md` | R98-B local validation |
@@ -1112,6 +1112,17 @@ Use the current docs directories as the public entry points. Archived research n
 | `evals/palbench/v0.5/documentation/r163-docs-link-and-claim-check.md` | R163 link and claim check |
 | `release/fresh-clone-checks/r163-local-docs-restructure-validation.md` | R163 local docs restructure validation |
 | `release/integration-notes/r163-r164-docs-content-rewrite-readiness-decision.md` | R163 to R164 docs content rewrite readiness decision |
+
+## R164 User Docs Content Rewrite Evidence
+
+| Path | Purpose |
+| --- | --- |
+| `evals/palbench/v0.5/documentation/r164-docs-content-rewrite-summary.md` | R164 user docs content rewrite summary |
+| `evals/palbench/v0.5/documentation/r164-docs-claim-consistency-check.md` | R164 docs claim consistency check |
+| `evals/palbench/v0.5/documentation/r164-docs-link-check.md` | R164 docs link check |
+| `evals/palbench/v0.5/documentation/r164-docs-remaining-work.md` | R164 docs remaining work |
+| `release/fresh-clone-checks/r164-local-docs-content-validation.md` | R164 local docs content validation |
+| `release/integration-notes/r164-r165-release-docs-readiness-decision.md` | R164 to R165 release docs readiness decision |
 
 ## Do Not Load By Default
 

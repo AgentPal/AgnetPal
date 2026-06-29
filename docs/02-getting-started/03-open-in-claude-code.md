@@ -1,39 +1,53 @@
-# Use With Claude Code
+# Open In Claude Code
 
-## Purpose
+Claude Code is documented as a limited project-first path for AgentPal v0.5. Full AgentPal host acceptance is not claimed.
 
-This document points to the current Claude Code compatibility path for AgentPal v0.5.
+Use this when you want Claude Code to work in an external project while reading AgentPal as a Pal workspace reference.
 
-## Recommended Project Path
+## Project-First Path
 
-For real project work, open Claude Code in the user project, not in the AgentPal directory:
+Start in the real user project:
 
 ```text
 cd <your-project>
 claude
 ```
 
-Then paste `prompts/claude-code/install-agentpal-current-project.md`.
-
-The install prompt is copy-paste ready. Do not edit it before pasting. Claude Code asks for the local AgentPal Workspace path during installation unless you already provided a clear path in the conversation. Enter the path to your AgentPal directory, for example:
+Then paste the prompt from:
 
 ```text
-<path-to-AgentPal>
+prompts/claude-code/install-agentpal-current-project.md
 ```
 
-The prompt creates or updates `.agentpal/`, `CLAUDE.md`, `AGENTS.md`, and `.claude/settings.local.json`.
+The prompt is intended to be copy-paste ready. It asks for your local AgentPal workspace path unless you already provided one clearly.
 
-`settings.local.json` is local machine configuration. It can store `permissions.additionalDirectories` for the AgentPal workspace path and should not be committed.
+## What The Prompt Should Do
 
-`--add-dir` and `/add-dir` are fallback options if the current Claude Code session does not immediately pick up the new local settings.
+The project connection should create or update only lightweight binding surfaces:
 
-## AgentPal Workspace Path
+- `.agentpal/project.json`
+- `.agentpal/AGENTPAL.md`
+- protected AgentPal block in `AGENTS.md`
+- protected AgentPal block in `CLAUDE.md`
+- local `.claude/settings.local.json` when Claude Code needs an additional readable directory
 
-Opening the AgentPal directory directly is still useful for maintaining AgentPal itself or initializing Mira in the AgentPal Workspace. It is not the recommended way to work on an external user project.
+The external project remains the active project. AgentPal remains a reference workspace.
 
-## Related
+## What It Must Not Do
 
-- [Quick start](00-quick-start.md)
-- [Initialize AgentPal](04-initialize-agentpal.md)
-- [Runtime compatibility](../04-runtime-guides/00-runtime-compatibility.md)
-- [Claude Code project install](../04-runtime-guides/02-use-with-claude-code.md)
+It must not copy AgentPal Pal Packs, docs, evals, release files, memory, reports, internal task records, or central roster files into the external project.
+
+It must not claim Claude Code can run every AgentPal behavior unless that behavior has current evidence from the actual Claude Code session.
+
+## Current Evidence Boundary
+
+- Minimal Claude Code handoff evidence exists.
+- Full host acceptance is not claimed.
+- `claude --bare -p` style success is only minimal call evidence.
+- Subagent execution, external Agent execution, MCP/plugin calls, and tool actions require current Claude Code evidence or explicit user authorization.
+
+## Next Links
+
+- [Claude Code runtime guide](../04-runtime-guides/02-use-with-claude-code.md)
+- [Project-first connection](../04-runtime-guides/04-project-first-connection.md)
+- [Thin project binding](../02-concepts/thin-project-binding.md)

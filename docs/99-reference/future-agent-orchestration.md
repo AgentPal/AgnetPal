@@ -1,18 +1,27 @@
 # Future Agent Orchestration
 
-Future design only. Not active in AgentPal v0.1.0-rc.1.
+This page is about host-dependent execution futures. It is not a current feature claim.
 
 ## Current Boundary
 
-AgentPal v0.1.0-rc.1 is a Pal layer. It is not an Agent layer, not a multi-agent runtime, and not an execution layer.
+AgentPal v0.5 is a Pal layer. It is not an Agent runtime, not a multi-Agent runtime, and not an execution layer.
 
-Current task handling uses Simple Pal Mode only.
+Deep Conductor is current as no-code collaboration and mode-decision protocol. It does not start external Agents or background workflows by itself.
 
-## Future Scope
+## Possible Future Scope
 
-A later design may explore runtime orchestration for child workflows, non-Pal runtimes, MCP-hosted agents, or remote agent services. That future layer must be designed as a runtime adapter above the Pal layer.
+A later runtime adapter may explore:
+
+- child workflows
+- subagents
+- non-Pal execution runtimes
+- MCP-hosted agents
+- remote agent services
+- runtime-specific execution packages
+
+Any such layer would need its own permission model, evidence model, timeout/cancellation model, privacy boundary, and user-facing status before activation.
 
 ## Related
 
-- [Future runtime adapters](../04-runtime-guides/99-future-runtime-adapters.md)
+- [Runtime compatibility](../04-runtime-guides/00-runtime-compatibility.md)
 - [Known limitations](known-limitations.md)

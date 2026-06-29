@@ -1,24 +1,52 @@
 # Pal Vs Agent Vs Skill
 
-## Summary
+AgentPal v0.5 keeps three ideas separate: Skill, Pal, and Agent.
 
-| Concept | What it is | In AgentPal v0.1.0-rc.1 |
+## Short Definitions
+
+| Concept | What it means | AgentPal boundary |
 | --- | --- | --- |
-| Agent runtime | The system that runs models, reads files, calls tools, and performs actions | External to AgentPal |
-| Pal | A portable working companion used by the runtime | Stored as a Pal Pack |
-| Pal Pack | Directory package for one Pal | Lives under `official/pals/<Pal>/` |
-| Skill | A focused capability or reusable method | Can belong to a Pal, but is not a Pal |
-| Workflow | A repeatable process | Can be used by a Pal |
-| Tool/plugin/model/MCP | Runtime capability or external integration | Not a Pal contact by itself |
+| Skill | A capability package or reusable method | Can be owned by a Pal or provided by a host runtime |
+| Pal | A working partner with identity, judgement, knowledge, Skills, memory rules, and output contracts | Stored as a Pal Pack and used by the current runtime |
+| Agent | The execution runtime or process that can read files, call tools, run commands, or perform actions | External to AgentPal |
+| Pal Team | Several Pals coordinating responsibility and review for one goal | No-code collaboration layer, not multiple running processes |
+| Multi-Agent system | Several Agent processes or workers executing work | Runtime-layer capability, not provided by AgentPal itself |
 
-## Why This Boundary Matters
+## Why The Boundary Matters
 
-AgentPal should not claim runtime actions that it did not perform. A Pal can guide, review, summarize, and structure work; the host runtime executes actions and provides evidence.
+AgentPal can help a host runtime decide who should own a task, what context is safe to load, what evidence is needed, and how to structure the output.
 
-The boundary also keeps contacts clean. A Skill, plugin, model, or raw repository can be useful, but it does not become a Pal unless it is packaged as a valid Pal Pack.
+AgentPal does not itself execute commands, call APIs, connect to systems, scan the machine, or start worker processes. Those actions require a host runtime and current evidence.
 
-## Related
+## Practical Example
+
+If a user asks for a sales follow-up workflow:
+
+- Faye can shape the business scenario, process, data list, interface list, risks, missing information, and Task Package.
+- PalSmith can design or review a Pal Team if a new Pal or workflow asset is needed.
+- Quinn can review whether evidence and acceptance criteria are strong enough.
+- Codex, Claude Code, or another runtime may read files or edit documents only when authorized and able to provide evidence.
+
+The Pal layer organizes the work. The Agent runtime executes actions.
+
+## Clean Contact Rule
+
+Only valid Pal Packs should enter central contacts.
+
+Do not register these as Pals by themselves:
+
+- Skills
+- tools
+- models
+- plugins
+- MCP servers
+- raw repositories
+- knowledge packs
+- personas without Pal Pack structure
+
+## Next Links
 
 - [What is a Pal?](01-what-is-a-pal.md)
 - [What is a Pal Pack?](02-what-is-a-pal-pack.md)
-- [AgentPal vs agent runtime](../00-overview/03-agentpal-vs-agent-runtime.md)
+- [Pal Team vs Agent Team](04-pal-team-vs-agent-team.md)
+- [AgentPal vs Agent Runtime](../00-overview/03-agentpal-vs-agent-runtime.md)

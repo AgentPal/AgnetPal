@@ -1,54 +1,53 @@
 # Runtime Compatibility
 
-AgentPal v0.5 is a Pal layer, not an execution layer. Compatibility depends on whether a runtime can read structured workspace files, follow Markdown / JSON instructions, preserve context, and report execution evidence honestly.
+AgentPal v0.5 is a Pal layer, not an execution layer.
 
-## Current Quick-Start Paths
+Compatibility means a host runtime can read the AgentPal workspace, follow Markdown / JSON instructions, preserve project context, and report execution evidence honestly. It does not mean AgentPal provides a native plugin, connector, daemon, scanner, marketplace, app runtime, or automatic multi-Agent engine.
 
-- Codex
-- Claude Code
-- generic CLI agents
+## Current Host Status
 
-These are the three user-facing paths documented for the current release candidate.
+| Host / mode | v0.5 status | What to claim |
+| --- | --- | --- |
+| Codex | Codex-first verified | Current primary path for AgentPal initialization and real host confirmation |
+| Claude Code | limited/minimal handoff | Usable project-first guidance exists; full host acceptance is not claimed |
+| Generic CLI Agent | compatibility path | Prompt-based path exists for capable CLI agents; broad host acceptance is not claimed |
+| OpenCode / Gemini | unavailable in current evidence | Do not claim current support |
+| DeepSeek | experimental/version-help only | Do not claim stable host support |
+| Plan Mode UI | unavailable in current UI evidence | Do not claim UI-verified support |
+| Goal Mode | limited | Use only where current evidence supports it |
 
-## Codex
+## What A Compatible Runtime Must Do
 
-Codex can open the AgentPal Workspace directly and initialize from `prompts/codex/initialize-agentpal-workspace.md`. Mira becomes the default entry Pal, and `/pal Name` can call a specialist.
+A compatible host should be able to:
 
-See [Use With Codex](01-use-with-codex.md).
+- read local Markdown and JSON files
+- keep `active_project_root` separate from `agentpal_workspace_root`
+- follow Mira-first and `/pal Name` instructions
+- load bounded Pal context instead of the whole repository
+- distinguish known, unknown, and unavailable capability
+- report real execution evidence before claiming actions
+- preserve privacy and writeback boundaries
 
-## Claude Code
+## Capability Evidence
 
-Claude Code should usually use the project-first path:
+Host capability may come from:
 
-```text
-cd <your-project>
-claude
-```
+- visible current runtime evidence
+- a user-maintained manual capability profile
+- a runtime-reported profile or explicit tool list
 
-Then paste the one-prompt AgentPal connection prompt. The current project remains the task context. AgentPal must not become the user project by mistake.
-
-See [Use With Claude Code](02-use-with-claude-code.md).
-
-## Generic CLI Agent
-
-A generic CLI agent can use AgentPal if it can:
-
-- read directories and local files
-- follow Markdown / JSON instructions
-- maintain working context
-- report execution evidence
-
-This is a compatibility guide, not a promise that every CLI agent has been validated.
-
-See [Use With Generic CLI Agent](03-use-with-generic-cli-agent.md).
+AgentPal must not invent a runtime scan. If capability is unknown, say it is unknown.
 
 ## Common Boundary
 
-- AgentPal is not a runtime adapter that guarantees identical behavior everywhere.
-- AgentPal is not a deep plugin for Codex or Claude Code.
-- Deep Conductor, Subagent Mode, parallel child workflows, and external Agent orchestration are not active runtime paths in this release.
+- AgentPal is not a deep plugin for every host.
+- AgentPal does not guarantee identical behavior across runtimes.
+- Deep Conductor is a no-code collaboration and mode-decision protocol, not automatic runtime execution.
+- Subagent execution, external Agent execution, tool calls, model calls, and file writes require host capability and current evidence.
 
-## Related
+## Next Links
 
-- [Project-First Connection](04-project-first-connection.md)
-- [Current Status](../00-overview/01-current-status.md)
+- [Use with Codex](01-use-with-codex.md)
+- [Use with Claude Code](02-use-with-claude-code.md)
+- [Use with Generic CLI Agent](03-use-with-generic-cli-agent.md)
+- [Project-first connection](04-project-first-connection.md)

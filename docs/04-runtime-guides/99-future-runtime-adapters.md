@@ -1,23 +1,35 @@
 # Future Runtime Adapters
 
-## Purpose
-
-This document points to future runtime-adapter material while keeping it out of the active v0.5 Pal collaboration path.
+This document points to future runtime-adapter material while keeping it out of the active v0.5 execution claim surface.
 
 ## Current Status
 
-Future design only. Not evidence of current automatic runtime execution in AgentPal v0.5.
+Future adapter ideas are not evidence of automatic runtime execution in AgentPal v0.5.
+
+AgentPal's current runtime posture is:
+
+- Codex-first verified path
+- Claude Code limited/minimal handoff evidence
+- Generic CLI compatibility path
+- OpenCode / Gemini unavailable in current evidence
 
 ## Boundary
 
 Future child workflow, subagent, MCP-hosted agent, remote agent, OpenClaw, Hermes, or other adapter ideas must not be described as active current behavior.
 
-## To Add Later
+Deep Conductor may describe no-code decisions about capability and mode. It does not activate host execution without evidence.
 
-- Adapter requirements.
-- Evidence model.
-- Permission model.
-- Runtime capability detection rules.
+## Future Requirements
+
+Any future adapter needs:
+
+- explicit permission model
+- evidence model
+- context access boundaries
+- privacy rules
+- cancellation and timeout behavior
+- unavailable/not-run reporting
+- clear user-facing status
 
 ## Related
 

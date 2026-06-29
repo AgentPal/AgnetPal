@@ -1,18 +1,27 @@
 # Future Codex Subagent Mode
 
-Future design only. Not active in AgentPal v0.1.0-rc.1.
+This page is a future design placeholder. It is not a current AgentPal feature claim.
 
 ## Current Boundary
 
-AgentPal v0.1.0-rc.1 uses Simple Pal Mode only. Direct `/pal Name` calls do not start separate runtime processes.
+AgentPal v0.5 can help Codex reason about Pal ownership, context, Task Packages, runtime capability candidates, and verification needs.
 
-No tool discovery or child workflow call is part of normal AgentPal v0.1.0-rc.1 task handling.
+AgentPal does not automatically start Codex subagents. Direct `/pal Name` calls enter Pal working mode inside the current host runtime; they do not start separate Agent processes.
 
 ## Future Direction
 
-A later runtime adapter may explore Codex child workflows, but it would need a separate permission model, evidence model, timeout/cancellation model, privacy boundary, and user-facing explanation before activation.
+A future Codex adapter may explore child workflows or subagents if the host runtime exposes reliable capability and evidence.
+
+Before activation, it would need:
+
+- explicit user authorization
+- context access boundaries
+- evidence reporting
+- timeout and cancellation behavior
+- privacy controls
+- clear UI or textual status
 
 ## Related
 
-- [Future runtime adapters](../04-runtime-guides/99-future-runtime-adapters.md)
+- [Runtime compatibility](../04-runtime-guides/00-runtime-compatibility.md)
 - [Future agent orchestration](future-agent-orchestration.md)

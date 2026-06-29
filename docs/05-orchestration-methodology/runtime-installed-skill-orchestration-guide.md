@@ -1,97 +1,79 @@
 # Runtime-installed Skill Orchestration Guide
 
-Runtime-installed Skill Orchestration is a no-code AgentPal method for naming host Runtime capability candidates inside a Task Package.
+Runtime-installed Skill Orchestration is a no-code AgentPal method for naming host capability candidates inside a Task Package.
 
-It helps a Pal say: "This task may benefit from a host Runtime Skill, plugin, MCP tool, browser tool, office-document tool, repository-analysis tool, or other installed capability. The current Runtime must confirm availability and execute it if allowed."
+It helps a Pal say: "This task may benefit from a host Skill, plugin, MCP tool, browser tool, office-document tool, repository-analysis tool, or other installed capability. The current host must confirm availability and execute it if allowed."
 
-It does not make AgentPal a Runtime, tool caller, scanner, installer, validator, or automation layer.
+It does not make AgentPal a runtime, tool caller, scanner, installer, validator, connector, or automation layer.
 
-## What A Runtime-installed Skill Is
+## Runtime-installed Skill
 
-A Runtime-installed Skill is a capability supplied by the host Runtime or its plugin/MCP/tool surface. Examples include:
+A runtime-installed Skill is supplied by the host runtime or its plugin/MCP/tool surface.
 
-- an office document Skill in a host agent;
-- a browser inspection Skill;
-- a repository analysis Skill;
-- a plugin exposed by the host Runtime;
-- an MCP tool made available by the host Runtime.
+Examples:
 
-The Skill is installed, invoked, permissioned, and evidenced by the host Runtime. AgentPal may describe it as a candidate in a Task Package, but AgentPal does not own it.
+- browser inspection capability
+- document rendering capability
+- repository analysis capability
+- GitHub or issue-tracker tool exposed by the host
+- MCP tool made available by the host
 
-## Runtime-installed Skill vs Pal-owned Skill
+The host installs, invokes, permissions, and evidences the capability. AgentPal may describe it as a candidate, but AgentPal does not own it.
 
-Pal-owned Skills are public no-code methods stored under a Pal Pack. They describe judgement, intake, context slicing, task packaging, verification, and learning behavior.
+## Pal-owned Skill
 
-Runtime-installed Skills are host capabilities. They may perform file conversion, browsing, repository analysis, external data lookup, document rendering, or other execution-layer work when the Runtime supports them.
+A Pal-owned Skill is a no-code method stored under a Pal Pack. It describes judgement, intake, context slicing, task packaging, verification, and learning behavior.
 
-Keep them separate:
+Keep the labels separate:
 
-- `pal_owned_skills_used`: Pal methods used to prepare the package.
-- `runtime_skill_candidates`: host Runtime capabilities that might execute or inspect something.
-- `plugin_candidates`: host plugins that might be available.
-- `mcp_tool_candidates`: host MCP tools that might be available.
+- `pal_owned_skills_used`: Pal methods used to prepare the package
+- `runtime_skill_candidates`: host capabilities that might inspect or execute something
+- `plugin_candidates`: host plugins that might be available
+- `mcp_tool_candidates`: host MCP tools that might be available
 
-Do not copy Runtime Skills into Pal Packs. Do not put Pal-owned Skills into runtime availability checks.
+Do not copy runtime Skills into Pal Packs. Do not put Pal-owned Skills into runtime availability checks.
 
-## How Deep Conductor Uses Capability Profiles
+## Capability Evidence
 
-When a complex no-code plan needs capability awareness, Deep Conductor may read the smallest relevant profile slice:
+Availability can come from:
 
-- Runtime profiles;
-- Skill profiles;
-- plugin profiles;
-- MCP profiles;
-- Pal profiles when owner judgement needs them.
+- visible current runtime evidence
+- runtime-reported capability
+- a user-maintained manual profile
 
-Profiles are judgement inputs. They do not prove that a Skill is installed in the current Runtime, and they do not create a fixed route.
-
-## Pal Suggestion Pattern
-
-A Pal may actively suggest Runtime Skill candidates when the task would benefit from a specialized host capability.
-
-Example:
-
-```text
-Morgan: This document-output stage may benefit from an office-document Runtime Skill if the host Runtime has one. I will keep Morgan's Pal-owned document planning separate from the host Runtime Skill candidate, and the package will ask the Runtime to confirm availability before use.
-```
-
-The suggestion remains conditional until the host Runtime confirms availability and returns evidence.
+If a capability is not visible, mark it `unknown`, `unavailable`, or `not-run`. Do not invent a scan.
 
 ## Standard Flow
 
-1. Identify task need.
-2. Check minimal capability profiles.
-3. Ask Runtime to confirm availability if needed.
-4. Generate a Runtime Skill-aware Task Package.
-5. Host Runtime executes or reports unavailable.
-6. Pal verifies returned evidence.
-7. Write Runtime Skill Usage Memory when the result is useful and public/private boundaries allow it.
+1. Identify the task need.
+2. Select the Pal-layer owner.
+3. Name host capability candidates only if they are relevant.
+4. Ask the host runtime to confirm availability when needed.
+5. Prepare a Task Package with fallback behavior.
+6. Host runtime executes or reports unavailable.
+7. The owner Pal or verifier reviews returned evidence.
+8. Write a memory candidate only when privacy and scope allow it.
 
-## Fallback When Unavailable
+## Fallback
 
-If the Runtime cannot confirm the Skill, the package must fall back to one of:
+If the capability is unavailable, use one of:
 
-- an ordinary Runtime Task Package without the specialized Skill;
-- a different host capability candidate;
-- a user confirmation request to install, enable, or choose another Runtime;
-- a blocked/not-run report when execution would be unsafe or impossible without the Skill.
-
-Fallback is part of the package. It is not an afterthought.
+- ordinary Task Package without the specialized capability
+- different capability candidate
+- user confirmation to install, enable, or choose another host
+- `blocked` / `not-run` report when execution would be unsafe or impossible
 
 ## Risks
 
-- Treating a profile as proof of installation.
-- Treating a successful previous use as a hard rule.
-- Mixing Pal-owned Skill learning with Runtime Skill availability.
-- Letting a Runtime Skill output bypass Pal verification.
-- Leaking private local paths, source material, or credentials into public examples or memory.
-- Creating a keyword-to-Skill rule that bypasses AI judgement.
+- treating a profile as proof of installation
+- treating a previous success as a hard route
+- mixing Pal-owned Skill learning with runtime Skill availability
+- letting a runtime Skill output bypass Pal verification
+- leaking private local paths, source material, or credentials into public examples
+- creating keyword-to-Skill rules that bypass AI judgement
 
-## Do Not Do
+## Next Links
 
-- AgentPal does not directly call Runtime Skills.
-- AgentPal does not automatically scan local Runtime Skills.
-- AgentPal does not install host Runtime Skills.
-- AgentPal does not turn Skill candidates into fixed routes.
-- AgentPal does not treat a success experience as a hard rule for next time.
-- AgentPal does not claim execution without current Runtime evidence.
+- [Runtime compatibility](../04-runtime-guides/00-runtime-compatibility.md)
+- [Capability Inventory](05-capability-inventory.md)
+- [Verification Result Record](07-verification-result-record.md)

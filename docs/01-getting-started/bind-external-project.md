@@ -2,22 +2,63 @@
 
 Use thin binding when you want an external project to use AgentPal.
 
-Create or update only the default binding surface:
+The external project stays the current project. The AgentPal workspace is only a Pal source and routing reference.
+
+## What To Add
+
+The normal project-side binding surface is small:
 
 - `.agentpal/project.json`
 - `.agentpal/AGENTPAL.md`
 - protected AgentPal block in `AGENTS.md`
 - for Claude Code, protected AgentPal block in `CLAUDE.md`
-- for Claude Code, local `.claude/settings.local.json` plus `.gitignore` entry
+- for Claude Code, local `.claude/settings.local.json` plus a `.gitignore` entry when needed
 
-Do not copy AgentPal's official Pals, contacts, memory, reports, state, workflows, evals, or release files into the external project.
+Use the current templates:
 
-The binding must keep two roots separate:
+- `templates/project-binding/generic-codex/`
+- `templates/project-binding/claude-code/`
+
+## Roots To Keep Separate
 
 - `active_project_root`: the external user project
 - `agentpal_workspace_root`: the central AgentPal workspace
 - `agentpal_project_record`: the central record under `workspace/projects/<project-id>/`
 
-The external project can keep its own docs, design notes, requirements, assets, data, and source files. AgentPal may read those materials when a task requires them. AgentPal stores structured source maps, derived knowledge, project memory, task records, reports, governance records, and capability inventory in the central project record, not in the external project's `.agentpal/` directory.
+When the user says "this project" in a bound project, answer about `active_project_root`, not about the AgentPal workspace.
 
-Use `templates/project-binding/generic-codex/` or `templates/project-binding/claude-code/` as the current template source.
+## What Not To Copy
+
+Do not copy these into the external project's `.agentpal/` folder by default:
+
+- Pal Packs
+- central contacts
+- docs
+- evals
+- release files
+- memory
+- reports
+- source maps
+- derived knowledge
+- governance records
+- capability inventory
+- Org Packs, FDE Packs, or Delivery Packs
+
+Those records belong in the AgentPal workspace, usually under `workspace/projects/<project-id>/`, after an explicit task and privacy check.
+
+## Why Thin Binding Exists
+
+Thin binding prevents the user project from becoming a clone of AgentPal. It keeps the project easy to remove, keeps private project facts out of public Pal assets, and lets Mira and specialist Pals read central contacts without polluting the user's repository.
+
+## Current Limits
+
+- External project writeback is not generally validated.
+- Host capability must be reported from visible evidence, a manual profile, or runtime-reported capability.
+- AgentPal does not scan the machine for projects or tools by itself.
+
+## Next Links
+
+- [Project-first connection](../04-runtime-guides/04-project-first-connection.md)
+- [Thin project binding](../02-concepts/thin-project-binding.md)
+- [Use with Claude Code](../04-runtime-guides/02-use-with-claude-code.md)
+- [Use with Generic CLI Agent](../04-runtime-guides/03-use-with-generic-cli-agent.md)

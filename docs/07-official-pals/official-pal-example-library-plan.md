@@ -1,8 +1,10 @@
 # Official Pal Example Library Plan
 
-The official Pal example library makes each bundled Pal understandable through realistic task examples. Examples are learning artifacts and review aids. They are not route maps, dispatch tables, or execution automation.
+The official Pal example library makes each bundled Pal understandable through realistic task examples.
 
-## Official 9 Pal List
+Examples are learning artifacts and review aids. They are not route maps, dispatch tables, or execution automation.
+
+## Official 10 Pal List
 
 | Pal | Typical task examples | Not-suitable whole-task examples |
 | --- | --- | --- |
@@ -10,20 +12,21 @@ The official Pal example library makes each bundled Pal understandable through r
 | Atlas | implementation packages, file boundaries, development acceptance repair | product strategy, primary research, final quality gate without evidence |
 | Vega | source-grounded research, comparison, uncertainty, claim-safe handoff | final implementation, product commitment, unsupported current facts |
 | Rhea | runtime boundary review, no-code review, safe binding diagnosis | implementation edits, high-risk operations without approval |
-| PalSmith | Pal creation, AI team design, material ingestion, Pal health repair | direct filesystem execution, automatic registration, ordinary Skill contact creation |
+| PalSmith | Pal creation, Pal Team design, material ingestion, Pal health repair | direct filesystem execution, automatic registration, ordinary Skill contact creation |
 | Quinn | evidence review, release readiness, regression acceptance | original implementation, source research, publication |
 | Morgan | structured docs, document artifact packages, release-note structure | invented facts, marketing copy, final release readiness judgement |
 | Harper | release copy, style rewrite, source-grounded promo draft | primary research, unsupported claims, page implementation |
 | Nova | requirement clarification, MVP scope, product-to-dev handoff | implementation, final QA, primary research without evidence |
+| Faye | business delivery scenario, workflow, data/interface/risk list, Faye Build Request, Task Package readiness | connector execution, CRM operation, app runtime, automatic customer-system sync |
 
-These descriptions are examples of where a Pal may be a good candidate. Actual owner and stage selection still uses case-specific AI judgement from the current contacts and registry.
+These descriptions are examples of where a Pal may be a good candidate. Actual owner and stage selection still uses case-specific AI judgement from current central contacts.
 
 ## How Users Choose
 
-- If unsure, ask Mira first. Mira can judge the owner candidate, ask focused clarification, or prepare a staged Task Package.
+- If unsure, ask Mira first.
 - If the desired specialist is clear, call `/pal Name` directly.
-- If the request has multiple deliverables, the first Pal must use deliverable-aware staged judgement before broad clarification or execution.
-- Runtime candidates execute file reads, writes, commands, screenshots, or rendering only when permitted and evidenced. Runtime is not a Pal owner.
+- If the request has multiple deliverables, the first Pal should use deliverable-aware staged judgement before broad clarification or execution.
+- Runtime candidates execute file reads, writes, commands, screenshots, or rendering only when permitted and evidenced.
 
 ## Example Library Paths
 
@@ -38,16 +41,9 @@ These descriptions are examples of where a Pal may be a good candidate. Actual o
 | Morgan | `official/pals/Morgan-document/examples/tasks/` |
 | Harper | `official/pals/Harper-writing/examples/tasks/` |
 | Nova | `official/pals/Nova-product/examples/tasks/` |
+| Faye | `official/pals/Faye-delivery/examples/tasks/` |
 
-See also `docs/07-official-pals/official-pal-examples-index.md`.
-
-## Current v0.2 Completion Status
-
-Status: started / first implementation / R42.
-
-R40 created the first PalSmith productization examples. R41 created the first Mira-first examples. R42 extends the example library so all 9 official Pals have task-level example directories, per-Pal task indexes, and at least three real task examples. Mira and PalSmith each have four task examples because their R40/R41 foundations were already deeper.
-
-This does not mark the full v0.2 roadmap complete.
+If an example directory is missing, mark it missing. Do not borrow another Pal's examples as proof.
 
 ## Example Format
 
@@ -64,38 +60,25 @@ Each task example should include:
 - Verification / Acceptance Criteria
 - Notes
 
-Every example should state that candidates are not fixed routes and that current v0.2 does not auto-run Deep Conductor.
+Every example should state that candidates are not fixed routes and that Deep Conductor does not auto-run external execution.
 
 ## Not-Do List
 
 - Do not turn examples into fixed owner rules.
-- Do not create automatic multi-agent execution.
-- Do not treat Deep Conductor as current runtime behavior.
+- Do not create automatic multi-Agent execution.
+- Do not treat Deep Conductor as automatic runtime behavior.
 - Do not hard-code artifact types to Pal names.
-- Do not claim Runtime actions happened without evidence.
+- Do not claim runtime actions happened without evidence.
 - Do not include private user data, credentials, or local absolute paths in public examples.
-- Do not create empty placeholder examples.
-
-## R42 First Implementation Coverage
-
-| Pal | Count | Coverage |
-| --- | ---: | --- |
-| Mira | 4 | intake, composite staged judgement, direct Pal choice, completion summary |
-| Atlas | 3 | docs change package, composite implementation stage, development acceptance repair |
-| Vega | 3 | research brief, competitor/technical comparison, research-stage handoff |
-| Rhea | 3 | runtime boundary, no-code review, project binding troubleshooting |
-| PalSmith | 4 | first Pal creation, AI team design, material ingestion, health repair |
-| Quinn | 3 | false completion review, release gate, regression acceptance |
-| Morgan | 3 | structured docs, Office/PDF package, release-note structure |
-| Harper | 3 | release copy, style rewrite, source-grounded promo draft |
-| Nova | 3 | requirements clarification, MVP scope, product-to-development handoff |
+- Do not create empty placeholder examples and call them complete.
 
 ## Cross-Pal Examples
 
-R42 adds public-safe staged examples under `examples/orchestration/`:
+Public-safe staged examples may live under `examples/orchestration/`.
 
-- `cross-pal-product-research-dev-qa-docs.md`
-- `cross-pal-palsmith-create-ai-team.md`
-- `cross-pal-release-readiness-review.md`
+They show conductor judgement, Context Access Lists, staged Task Packages, and acceptance checks. They remain written examples, not automatic Deep Conductor execution.
 
-These examples show conductor judgement, Context Access Lists, staged Task Packages, and acceptance checks. They remain written examples in Simple Pal Mode, not automatic Deep Conductor execution.
+## Next Links
+
+- [Official Pal examples index](official-pal-examples-index.md)
+- [Official Pals reference](../99-reference/official-pals.md)

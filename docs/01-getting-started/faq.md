@@ -1,60 +1,58 @@
 # AgentPal FAQ
 
-## Is AgentPal an app?
+## Is AgentPal An App?
 
-No. AgentPal is a no-code Markdown / JSON / protocol workspace for existing
-agent runtimes.
+No. AgentPal is a Markdown / JSON workspace and no-code Pal organization layer for existing host runtimes.
 
-## Do I need to install anything?
+## Is AgentPal An Agent Runtime?
 
-No app install is required for ordinary use. Open the AgentPal repository in a
-runtime that can read Markdown and JSON.
+No. AgentPal organizes Pal identity, knowledge, skills, workflow judgement, memory boundaries, context slicing, task packages, and verification habits. Real execution belongs to the host runtime, such as Codex.
 
-## Can I use AgentPal directly in Codex?
+## Do I Need To Install Anything?
 
-Yes. Open the AgentPal directory as a Codex project and start from
-`START_HERE.md` or `prompts/codex/initialize-agentpal-workspace.md`.
+No app install is required for ordinary use. Clone or download the workspace, then open it in a runtime that can read Markdown and JSON.
 
-## What is a Pal?
+## Which Host Is Verified First?
 
-A Pal is a working companion with identity, knowledge, skills, memory rules,
-workflows, context rules, output contracts, and verification habits.
+Codex is the v0.5 Codex-first verified path.
 
-## What do Mira, PalSmith, and Faye do?
+Claude Code has limited/minimal handoff evidence only. Generic CLI Agent is a compatibility path. OpenCode and Gemini are unavailable in the current evidence.
 
-Mira is the default entry Pal and leader. PalSmith governs Pal assets and Pal
-team blueprints. Faye is the delivery-owner pattern for shaping Delivery Packs.
+## What Is A Pal?
 
-## What is the difference between Org Pack, FDE Pack, and Delivery Pack?
+A Pal is a working partner with identity, responsibility, knowledge, Skills, memory rules, workflow habits, context rules, output contracts, and verification expectations.
 
-An Org Pack describes reusable organization structure. An FDE Pack describes
-expert delivery method. A Delivery Pack describes how one business goal should
-be delivered.
+## What Is The Difference Between A Pal, Skill, And Agent?
 
-## Will AgentPal modify my project directory?
+- A Skill is a capability package or reusable method.
+- A Pal is a working partner that can use Skills.
+- An Agent is the execution runtime or process that can read files, call tools, run commands, or perform actions.
 
-Only if you ask a runtime to bind a project. The default binding is thin:
-small pointer files and protected instruction blocks. AgentPal does not
-default-copy Pals, memory, reports, Org Packs, FDE Packs, or Delivery Packs into
-your external project.
+AgentPal's Pal team and a multi-Agent system may serve similar collaboration goals, but AgentPal is lighter: it works as no-code organization and protocol, not as a runtime process layer.
 
-## Will AgentPal read my private data?
+## How Many Official Pals Are There?
 
-Not by itself. The host runtime reads files only when instructed and should
-report evidence. Do not paste private data into reusable examples.
+AgentPal v0.5 bundles 10 official Pals: Mira, Atlas, Vega, Rhea, PalSmith, Quinn, Morgan, Harper, Nova, and Faye.
 
-## Can AgentPal automatically call CRM, Lark, GitHub, or other systems?
+## Will AgentPal Modify My Project Directory?
 
-No. AgentPal is not a connector or API client. A host runtime may have separate
-tools, but those require explicit user approval and runtime evidence.
+Only if you ask a host runtime to bind a project. The default binding is thin and should only add small pointer files and protected instruction blocks. It should not copy Pal Packs, memory, reports, docs, evals, or release files into the external project.
 
-## Has v0.5 been published to GitHub?
+## Can AgentPal Call CRM, Lark, GitHub, Or Other Systems?
 
-No. v0.5 final local release preflight passed. Remote publication requires
-explicit user authorization in a separate round.
+No. AgentPal is not a connector or API client. A host runtime may have separate tools, but those tools require explicit user authorization and current runtime evidence.
 
-## How do I contribute my own Pal or Pack?
+## Can AgentPal Remember User Preferences?
 
-Start with the templates and public-safe examples. Keep private data out of
-reusable assets, preserve no-code boundaries, and register Pals through the
-AgentPal Workspace rather than an external project.
+It can classify a preference as a memory candidate and route it to the appropriate private or project memory location. It must not write private preferences into public examples, Pal Packs, or global release documents.
+
+## Can I Put Real Customer Data Into Examples?
+
+No. Real customer data is customer-private. It must not enter public examples, Pal Packs, global knowledge, or reusable docs.
+
+## Next Links
+
+- [Quick start](../02-getting-started/00-quick-start.md)
+- [Pal vs Agent vs Skill](../01-concepts/03-pal-vs-agent-vs-skill.md)
+- [Runtime compatibility](../04-runtime-guides/00-runtime-compatibility.md)
+- [Official Pals](../99-reference/official-pals.md)

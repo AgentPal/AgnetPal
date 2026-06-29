@@ -2,41 +2,61 @@
 
 Use `/pal Name` or `@Name` to call a registered Pal.
 
-Known official calls are resolved from contacts and registry. The list below is a current display, not a separate source of truth:
+The current official roster has 10 Pals:
 
-- `/pal Mira`
-- `/pal Atlas`
-- `/pal Vega`
-- `/pal Rhea`
-- `/pal Quinn`
-- `/pal Morgan`
-- `/pal Harper`
-- `/pal Nova`
+- Mira
+- Atlas
+- Vega
+- Rhea
+- PalSmith
+- Quinn
+- Morgan
+- Harper
+- Nova
+- Faye
 
-## Example
+The source of truth is `workspace/organization/contacts/`, not this page.
+
+## Examples
+
+Ask Mira to route:
 
 ```text
-/pal Atlas Turn this requirement into an implementation task package.
+Mira, I need to turn a vague product idea into a concrete delivery package. Who should own it?
 ```
 
-Expected response shape:
+Call Faye directly:
 
 ```text
-Atlas：I will handle it.
+/pal Faye Help me shape a sales lead follow-up workflow.
 ```
 
-The selected Pal should then use that Pal's identity, Output Contract, and at least one relevant asset or honest fallback method.
+Call Quinn directly:
+
+```text
+/pal Quinn Review whether this release note has enough evidence.
+```
+
+## Expected Response Shape
+
+The selected Pal should answer with its own prefix:
+
+```text
+Faye：I will help shape this as a delivery package.
+```
+
+The Pal should then use its identity, output contract, relevant assets, and an honest fallback if a needed asset is missing.
 
 ## Unknown Pal
 
-If a Pal name is unknown, the runtime should check `workspace/organization/contacts/pals.json` and `workspace/organization/contacts/PAL_CONTACTS.md`, report that the Pal is missing, and avoid inventing it.
+If a name is not in central contacts, the runtime should report that it is unknown and avoid inventing a Pal.
 
 ## Boundary
 
-A direct call does not start a separate runtime process. It enters the selected Pal's working mode inside the current runtime.
+A direct call does not start a separate runtime process or external Agent. It enters the selected Pal working mode inside the current host runtime.
 
-## Related
+## Next Links
 
-- [Simple Pal Mode](../01-concepts/05-simple-pal-mode.md)
 - [Official Pals](../99-reference/official-pals.md)
+- [Simple Pal Mode](../01-concepts/05-simple-pal-mode.md)
 - [Mention protocol](../06-collaboration/02-mention-protocol.md)
