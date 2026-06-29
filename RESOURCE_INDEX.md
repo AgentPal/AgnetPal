@@ -1003,6 +1003,19 @@ Use the current docs directories as the public entry points. Archived research n
 - `docs/04-runtime-guides/runtime-adapter-troubleshooting-prompt-cards.md`
 - `docs/04-runtime-guides/upgrade-existing-binding-to-thin-binding.md`
 
+## R156 Agent Use Partner Evidence
+
+| Path | Purpose |
+| --- | --- |
+| `evals/palbench/v0.5/agent-use/r156-agent-use-partner-real-task-test-plan.md` | R156 real host Agent-use partner test plan and scoring policy |
+| `evals/palbench/v0.5/agent-use/r156-agent-use-partner-real-task-results.md` | R156 real Codex thread submission results; blocked because final 18-case answers were not returned |
+| `evals/palbench/v0.5/agent-use/r156-agent-use-partner-issues.md` | R156 blocker/issue list and non-Codex host status |
+| `evals/palbench/v0.5/agent-use/r156-codex-mode-skill-plugin-trigger-matrix.md` | R156 expected trigger matrix and blocked actual-observation status |
+| `evals/palbench/v0.5/agent-use/r156-claude-code-real-call-results.md` | R156 Claude Code minimal real-call evidence |
+| `evals/palbench/v0.5/agent-use/r156-agent-use-optimization-backlog.md` | R156 follow-up backlog for Agent-use partner behavior |
+| `release/fresh-clone-checks/r156-local-agent-use-partner-validation.md` | R156 local validation record |
+| `release/integration-notes/r156-r157-agent-use-decision.md` | R156 to R157 decision record |
+
 ## Do Not Load By Default
 
 - all Pal Packs

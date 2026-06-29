@@ -1635,6 +1635,33 @@
     "legacy_root_capability_dirs_active": false,
     "github_release_work_deferred_until_v0_5_completion": true
   },
+  "v0_5_agent_use_partner_test": {
+    "r156_agent_use_partner_plan": "evals/palbench/v0.5/agent-use/r156-agent-use-partner-real-task-test-plan.md",
+    "r156_agent_use_partner_results": "evals/palbench/v0.5/agent-use/r156-agent-use-partner-real-task-results.md",
+    "r156_agent_use_partner_issues": "evals/palbench/v0.5/agent-use/r156-agent-use-partner-issues.md",
+    "r156_trigger_matrix": "evals/palbench/v0.5/agent-use/r156-codex-mode-skill-plugin-trigger-matrix.md",
+    "r156_claude_code_real_call": "evals/palbench/v0.5/agent-use/r156-claude-code-real-call-results.md",
+    "r156_optimization_backlog": "evals/palbench/v0.5/agent-use/r156-agent-use-optimization-backlog.md",
+    "r156_validation": "release/fresh-clone-checks/r156-local-agent-use-partner-validation.md",
+    "r156_r157_decision": "release/integration-notes/r156-r157-agent-use-decision.md",
+    "real_codex_threads_created": 3,
+    "real_task_prompts_submitted": 18,
+    "per_case_final_answers_received": 18,
+    "pass_count": 16,
+    "partial_count": 2,
+    "fail_count": 0,
+    "blocked_count": 0,
+    "claude_code_status": "minimal_real_call_pass_not_full_agentpal_host_acceptance",
+    "generic_cli_agent_status": "not_run_not_blocking_codex_first_release",
+    "new1_thin_binding_confirmed": true,
+    "git_push_executed": false,
+    "git_pull_executed": false,
+    "git_fetch_executed": false,
+    "git_tag_created": false,
+    "github_release_created": false,
+    "external_service_write_executed": false,
+    "decision": "agent_use_partner_real_task_pass_with_minor_mode_label_gaps"
+  },
   "license": "MIT"
 }
 
