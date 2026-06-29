@@ -1,38 +1,63 @@
 # AgentPal
 
-AgentPal is a no-code AI team organization layer for agent runtimes.
+**AgentPal is a lightweight framework for building multi-AI teams.**
 
-It does not replace Codex, Claude Code, OpenCode, OpenHands, OpenClaw, Hermes, workbuddy, Gemini CLI, DeepSeek-TUI, or other execution environments. It gives those environments a readable Pal workspace: identities, responsibilities, knowledge, skills, workflows, memory boundaries, task packages, verification habits, and collaboration rules.
+AgentPal can be installed or mounted under Agent Runtimes such as Codex, Claude Code, and OpenCode, so an existing Agent can gain an AI team organization layer made of multiple professional Pals.
+
+AgentPal does not replace Agent systems such as Codex, Claude Code, OpenClaw, Hermes, or workbuddy.
+It focuses on a different question:
+
+> How can users organize a collaborative AI team in a lighter, easier-to-maintain, lower-cost way?
 
 In one sentence:
 
-> AgentPal adds a Pal team organization layer to existing agent runtimes.
+> **AgentPal = a Pal team organization layer for existing Agents.**
 
-## What AgentPal Is
+---
 
-AgentPal v0.5 is a Markdown / JSON / protocol workspace. It is designed for runtimes that can read local files and follow structured instructions.
+## Install
 
-AgentPal is:
+AgentPal is a local workspace. It is not an npm / pip package, not a CLI installer, and not a background service.
 
-- a no-code Pal organization layer
-- a Pal Pack and AI team workspace
-- a way to organize role-based AI working partners
-- a thin-binding system for connecting an external user project to the central AgentPal Workspace
-- a public-safe set of docs, templates, examples, standards, and evaluation records
+You can install it in either way:
 
-AgentPal is not:
+### Option A: Download the release package
 
-- an Agent runtime
-- a multi-agent runtime
-- an app runtime
-- a desktop app or web app
-- an installer, CLI, daemon, scanner, connector layer, or marketplace
-- an external-system executor
-- a replacement for the host runtime that actually reads files, edits files, runs commands, or publishes releases
+1. Download `agentpal-v0.5.0-rc.1.zip` from the GitHub Release.
+2. Unzip it to a local folder, for example `<path-to-AgentPal>`.
+3. Keep that folder as the AgentPal Workspace.
+4. Open it in an Agent Runtime that can read local Markdown / JSON files.
 
-## Pal / Skill / Agent
+### Option B: Clone the repository
 
-AgentPal keeps three layers separate:
+```bash
+git clone https://github.com/AgentPal/AgentPal.git
+cd AgentPal
+```
+
+Then open the cloned folder as the AgentPal Workspace.
+
+The current recommended path is Codex. After opening the AgentPal folder, copy [`prompts/codex/initialize-agentpal-workspace.md`](prompts/codex/initialize-agentpal-workspace.md) into a fresh Codex conversation and confirm that Mira welcomes you and lists the current Pals.
+
+---
+
+## What Is A Pal?
+
+AgentPal uses **Pals** as the basic organization unit of an AI team.
+
+In AgentPal:
+
+```text
+Skill is a capability package.
+Pal is a working partner that uses Skills.
+
+Agent is the execution runtime.
+Pal is a working partner that uses Agents.
+```
+
+In other words, a Pal is not a Skill and not a full Agent Runtime.
+
+A Pal sits between Skill and Agent:
 
 ```text
 Skill  -> capability package
@@ -40,167 +65,207 @@ Pal    -> working partner that uses Skills and Agents
 Agent  -> execution runtime
 ```
 
-The core positioning is:
+A Pal can have its own identity, responsibility, knowledge, memory, Skills, workflow, and collaboration boundary.
+It knows what it is responsible for, when it should use a Skill, and when it should hand the task to Codex, Claude Code, OpenCode, or another Agent Runtime for execution.
 
-- A Skill is a capability package; a Pal is a working partner that knows how to use Skills.
-- An Agent is the execution runtime; a Pal is a working partner that knows how to use Agents.
-- Multi-Pal and multi-Agent teams share the same goal, but AgentPal uses a lighter organization layer to reduce complexity and cost.
+---
 
-A Skill usually helps an AI do one kind of work. A Pal owns a role: identity, responsibility, knowledge, workflows, memory rules, output contracts, collaboration boundaries, and verification habits. An Agent runtime performs the actual execution.
+## Skill, Pal, And Agent
+
+### Skill Is A Capability Package
+
+A Skill is usually a reusable capability, prompt, process, or tool-use instruction.
+
+For example:
+
+- writing style Skill
+- code review Skill
+- Office document Skill
+- search and research Skill
+- Skill for a tool or plugin
+
+The value of a Skill is that it helps AI do a certain kind of work better.
+
+But a Skill is usually lightweight. It usually does not carry a long-term role, memory, collaboration, project understanding, or team division of work.
+
+> **A Skill gives AI a capability.**
+
+### Agent Is The Execution Runtime
+
+An Agent is the runtime layer that actually executes tasks.
+
+For example: Codex, Claude Code, OpenCode, OpenHands, or Agents created inside systems such as OpenClaw, Hermes, and workbuddy.
+
+An Agent can read and write files, call tools, run commands, plan steps, and complete tasks.
+
+> **An Agent executes.**
+
+### Pal Is A Working Partner
+
+A Pal is a working partner that uses Skills and Agents.
+
+A Pal can:
+
+- have a clear identity and responsibility
+- remember users, projects, and past work
+- use its own knowledge and workflow
+- reference and combine multiple Skills
+- judge which Agent Runtime should be used
+- collaborate with other Pals
+- split tasks to suitable Agents or sub-Agents
+- summarize execution results and report back to the user
+
+> **A Pal understands the role, organizes collaboration, uses Skills, and directs Agents to execute.**
+
+---
+
+## Pal Vs Skill
+
+| Item | Skill | Pal |
+| --- | --- | --- |
+| Core positioning | capability package | working partner that uses capability packages |
+| Identity | usually no | yes |
+| Long-term responsibility | usually no | yes |
+| Memory | usually no | yes |
+| Knowledge system | limited | yes |
+| Can combine multiple Skills | limited | yes |
+| Can collaborate with other roles | usually no | yes |
+| Can judge which Agent to use | usually no | yes |
+| More like | tool capability | team member |
+
+In short:
+
+> **Skill is a capability. Pal is the working partner that knows how to use capabilities.**
+
+---
+
+## Pal Vs Agent
+
+| Item | Agent | Pal |
+| --- | --- | --- |
+| Core positioning | execution runtime | working partner that uses Agents |
+| Real execution | yes | usually handed to an Agent |
+| Reads files / calls tools | yes | through an Agent or Skill |
+| Stable role identity | not always | yes |
+| Independent memory and knowledge | depends on the system | yes |
+| Lightweight creation of many roles | higher cost | lighter |
+| Suitable for organizing AI teams | possible, but usually heavier | naturally suitable |
+| More like | executor / runtime | team member / task owner |
+
+AgentPal does not want to rebuild an Agent Runtime.
+
+Its goal is:
+
+> **Give existing Agents team, role, memory, workflow, and collaboration ability.**
+
+---
 
 ## Multi-Pal Vs Multi-Agent
 
-Multi-agent systems often create several executing agents. That can be powerful, but it can also add configuration, context, cost, permission, and result-merging overhead.
+Multi-Pal and multi-Agent teams share the same goal:
 
-AgentPal starts lighter:
+> They both use multiple AI roles to finish tasks that are more complex than what one AI can handle alone.
 
-- Pals organize work, context, responsibility, and verification.
-- The host runtime performs execution when real file, command, tool, or publishing actions are needed.
-- A Pal team can still prepare work for subagents or external agents when the current runtime proves that capability and the user authorizes it.
+The difference is the implementation shape.
 
-Not every AI role needs to become an independent running Agent. Many roles work better as stable Pals that shape tasks, choose context, and verify results.
+This is not a comparison between AgentPal and systems such as OpenClaw, Hermes, or workbuddy themselves.
+It is a comparison between:
 
-## Verified Runtime Support
+```text
+Multi-Pal teams created by AgentPal
+vs
+Multi-Agent teams created inside systems such as OpenClaw / Hermes / workbuddy
+```
 
-Current v0.5 public claims are intentionally conservative.
-
-| Runtime / mode | Status | Public claim |
+| Item | Multi-Agent | Multi-Pal |
 | --- | --- | --- |
-| Codex | verified | Codex-first AgentPal workspace initialization and Pal collaboration evidence exists. |
-| Codex child/background thread and subagent usage | limited / evidence-backed | Supported only where current Codex host evidence and user authorization exist. |
-| Claude Code | limited | Minimal handoff evidence exists; full AgentPal host acceptance is not claimed. |
-| Generic CLI agents | compatibility path | Prompt-based path exists, but broad host acceptance is not claimed. |
-| DeepSeek / DeepSeek-TUI | experimental / version-help only | Do not treat as complete runtime support. |
-| Plan Mode | unavailable in current UI evidence | Do not claim real UI-verified support. |
-| Goal Mode | limited | Active-goal evidence exists with UI capture limitations. |
-| OpenCode / Gemini | unavailable in current evidence | Do not claim current support. |
-| External systems such as GitHub, Notion, Lark, Cloudflare | not generally validated | AgentPal can prepare task packages, but does not claim direct writeback integration. |
+| Goal | multi-role collaboration | multi-role collaboration |
+| Basic unit | Agent | Pal |
+| Execution shape | multiple Agents run separately | Pals organize tasks and call Agents when needed |
+| Usage complexity | usually higher | lighter |
+| Runtime cost | can be higher | controllable |
+| Context management | more complex across Agents | Pals share organization-layer context |
+| Must every role run as an Agent? | usually yes | no |
+| Friendly for ordinary users building a team | has a threshold | friendlier |
+| Suitable for complex tasks | yes | also yes, with Agents called when needed |
 
-Host capability must come from visible evidence, a manual profile, or a runtime-reported profile. AgentPal does not automatically scan the user's system.
+AgentPal's idea is:
+
+> **Not every AI role must become an independently running Agent.**
+
+In many cases, a Pal only needs clear identity, knowledge, memory, and workflow to take a team role well.
+Only when a task really needs independent context, parallel execution, isolation, or a professional toolchain does a Pal need to call a sub-Agent or external Agent.
+
+So:
+
+```text
+Multi-Agent = multiple executing agents
+Multi-Pal   = multiple collaborative working partners that use Agents
+```
+
+AgentPal can use multiple Agents, but it does not force every role to become an Agent.
+
+---
 
 ## Built-In Pals
 
-The current official Pal roster has 10 Pals. The source of truth is [`workspace/organization/contacts/pals.json`](workspace/organization/contacts/pals.json).
+AgentPal includes a set of common Pals to help users build an AI team out of the box.
 
-| Pal | Role | Use for | Direct call |
-| --- | --- | --- | --- |
-| Mira | Main Pal / Leader / Conductor | first contact, routing, project context, handoff, summaries | `/pal Mira` |
-| Atlas | Developer / Implementation Lead | engineering plans, code work packages, implementation review | `/pal Atlas` |
-| Nova | Product / Strategy Lead | product framing, PRD shape, user flows, priorities, roadmap | `/pal Nova` |
-| Faye | AI Delivery Pal | business scenarios, user flows, data/interface lists, risks, Delivery Packs, `FAYE_BUILD_REQUEST` | `/pal Faye` |
-| Vega | Research / Intelligence Lead | research plans, source synthesis, evidence matrices, uncertainty | `/pal Vega` |
-| Quinn | Quality / Verification Lead | acceptance criteria, regression checks, evidence review, release gates | `/pal Quinn` |
-| Morgan | Document / File Workflow Lead | documentation structure, file workflows, Office/PDF task packages | `/pal Morgan` |
-| Harper | Writing / Content Craft Lead | writing, copy, narrative, voice, editing, claim safety | `/pal Harper` |
-| Rhea | System / Runtime Safety Lead | runtime boundaries, permissions, no-code safety, release safety | `/pal Rhea` |
-| PalSmith | Pal Asset Governor | create, inspect, upgrade, and govern Pals and Pal teams | `/pal PalSmith` |
+The current v0.5 built-in Pal roster follows [`workspace/organization/contacts/pals.json`](workspace/organization/contacts/pals.json).
 
-Mira is the default entry Pal. Specialist Pals do not listen by default. Mira can route to them, or you can call them directly with `/pal Name`.
+| Pal | Role | Main use |
+| --- | --- | --- |
+| Mira | main secretary / coordinator | understands user needs and coordinates Pals, Agents, Skills, and project context |
+| PalSmith | Pal creation and governance expert | creates, optimizes, checks, upgrades, and designs Pals and Pal teams |
+| Faye | FDE / solution design expert | organizes business scenarios, user flows, data, interfaces, risks, and delivery paths |
+| Atlas | development expert | handles code implementation, architecture analysis, engineering task breakdown, and technical execution |
+| Nova | product and experience expert | handles product design, user flows, interaction experience, and feature tradeoffs |
+| Quinn | testing and quality expert | handles test design, acceptance criteria, regression checks, and quality review |
+| Vega | research expert | handles research, external information organization, and knowledge analysis |
+| Morgan | document and file workflow expert | handles documentation structure, file workflows, and Office/PDF task packages |
+| Harper | writing and content expert | handles writing, copy, narrative, voice, editing, and claim safety |
+| Rhea | system and runtime safety expert | handles runtime boundaries, permissions, no-code safety, and release safety |
 
-## Install And Initialize With Codex
+---
 
-AgentPal currently installs as a local workspace, not as a package manager dependency.
+## Use PalSmith And Faye To Build Your Own AI Team
 
-1. Clone or download this repository.
-2. Keep the AgentPal directory as its own local workspace.
-3. Open the AgentPal directory as a Codex project.
-4. Open [`prompts/codex/initialize-agentpal-workspace.md`](prompts/codex/initialize-agentpal-workspace.md).
-5. Copy the whole prompt into the fresh Codex conversation.
-6. Confirm that Mira welcomes you and lists the current 10 Pals.
-7. Use ordinary messages with Mira, or call a specialist with `/pal Name`.
+The built-in PalSmith and Faye help users move from "using built-in Pals" to "creating their own professional AI team."
 
-Quick start:
+### PalSmith
 
-- [`START_HERE.md`](START_HERE.md)
-- [`prompts/codex/README.md`](prompts/codex/README.md)
-- [`docs/04-runtime-guides/01-use-with-codex.md`](docs/04-runtime-guides/01-use-with-codex.md)
+PalSmith creates and governs Pals.
 
-## Bind AgentPal To An External Project
+It can help you:
 
-Daily work usually happens inside your own project, not inside the AgentPal Workspace.
+- create a new Pal
+- design a Pal's identity, responsibility, knowledge, memory, and Skills
+- check whether a Pal is too broad, too weak, or duplicated
+- upgrade an existing Pal
+- design a full Pal team
 
-AgentPal uses thin binding for external projects:
+### Faye
 
-- the external project stays the active project
-- the AgentPal Workspace remains the Pal source and organization layer
-- `.agentpal/` stores small binding files only
-- Pal Packs, docs, evals, release files, memory, reports, and internal AgentPal assets are not copied into the external project
+Faye handles FDE-style solution design.
 
-For current project binding, use the prompt path for your host runtime:
+She can help turn real business needs into:
 
-- Claude Code: [`prompts/claude-code/install-agentpal-current-project.md`](prompts/claude-code/install-agentpal-current-project.md)
-- Generic CLI Agent: [`prompts/generic-cli-agent/install-agentpal-current-project.md`](prompts/generic-cli-agent/install-agentpal-current-project.md)
-
-Codex-first support is the verified release path. Other host paths must remain honest about their current evidence limits.
-
-## Create Your Own Pal Team
-
-AgentPal includes PalSmith and Faye for moving from "use built-in Pals" to "design my own AI team."
-
-Use Faye when you need to turn a real business idea into a delivery-shaped package:
-
-- business scenario
+- business scenario definition
 - user flow
 - data list
-- interface list
-- risks and missing information
-- acceptance handoff
-- `FAYE_BUILD_REQUEST`
+- system interface list
+- risks
+- acceptance criteria
+- delivery steps
+- which Pals need to collaborate
+- which parts need development
+- which parts can be completed by existing Agents / Skills
 
-Use PalSmith when you need to design or improve the Pal team:
+PalSmith is better at building AI teams.
+Faye is better at turning real business into an executable solution.
 
-- new Pal or team blueprint
-- Pal responsibilities and boundaries
-- Pal Pack structure
-- knowledge / skill / workflow / runbook classification
-- health check and governance notes
-
-Useful entry points:
-
-- [`docs/PalSmith.md`](docs/PalSmith.md)
-- [`docs/03-user-guides/palsmith-v0.5-pal-creation-and-upgrade.md`](docs/03-user-guides/palsmith-v0.5-pal-creation-and-upgrade.md)
-- [`docs/07-authoring-pals/README.md`](docs/07-authoring-pals/README.md)
-- [`docs/03-pal-pack-standard/README.md`](docs/03-pal-pack-standard/README.md)
-
-## Project Structure
-
-| Path | Purpose |
-| --- | --- |
-| `AGENTS.md` | runtime instructions for AgentPal mode |
-| `PAL.md` | workspace identity |
-| `SKILL.md` | Skill-aware entry for the AgentPal Workspace |
-| `agentpal.json` | structured workspace metadata |
-| `prompts/` | copyable runtime prompts |
-| `official/pals/` | official Pal Packs |
-| `workspace/organization/contacts/` | central Pal roster and contact cards |
-| `workspace/projects/` | central records for bound external projects |
-| `docs/` | user docs, concepts, runtime guides, authoring guides |
-| `standards/` | no-code standards and protocols |
-| `templates/` | public-safe templates |
-| `examples/` | public-safe examples |
-| `evals/` and `release/` | validation and release evidence archive |
-
-## Documentation
-
-Start here:
-
-- [`docs/README.md`](docs/README.md)
-- [`docs/00-overview/00-what-is-agentpal.md`](docs/00-overview/00-what-is-agentpal.md)
-- [`docs/01-concepts/07-why-pal.md`](docs/01-concepts/07-why-pal.md)
-- [`docs/04-runtime-guides/00-runtime-compatibility.md`](docs/04-runtime-guides/00-runtime-compatibility.md)
-- [`RESOURCE_INDEX.md`](RESOURCE_INDEX.md)
-
-Evidence and validation records are available, but they are not the main onboarding path.
-
-## Current Limitations
-
-- AgentPal does not execute tasks by itself.
-- AgentPal does not include a scanner, daemon, connector system, marketplace, installer, or app runtime.
-- AgentPal does not claim full non-Codex host acceptance in v0.5.
-- AgentPal does not write to GitHub, Notion, Lark, Cloudflare, CRM, or customer systems unless the current host runtime performs an explicitly authorized action with evidence.
-- Customer data and private project facts must not be copied into public examples, Pal Packs, or global knowledge.
-- Deep Conductor is a no-code collaboration and mode-decision protocol. It is not an automatic background executor.
+---
 
 ## License
 
-MIT. See [`LICENSE`](LICENSE).
+AgentPal is open source under the MIT License.
