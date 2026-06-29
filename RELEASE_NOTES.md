@@ -1,80 +1,110 @@
-# AgentPal Release Notes
+# AgentPal v0.5.0-rc.1 Release Notes
 
-## v0.3.0-rc.1
+AgentPal v0.5.0-rc.1 is a local release-candidate package for AgentPal v0.5.
 
-AgentPal v0.3.0-rc.1 is a release candidate for the no-code orchestration prototype line.
+This package is GitHub-ready for maintainer review, but it is not a published GitHub Release until an authorized maintainer performs the tag, push, and GitHub Release steps.
 
-It strengthens Deep Conductor, Multi-Pal Collaboration, Context Packet handoff, evidence-based verification, Runtime Skill-aware task packaging, cross-runtime memory continuity, and qualitative release regression coverage.
+## What AgentPal Is
 
-This is not a stable release. The GitHub Release should be marked as a pre-release.
+AgentPal is a no-code Pal organization layer for existing agent runtimes.
 
-## What This Release Is
+It provides a readable Markdown / JSON / protocol workspace for:
 
-AgentPal remains a Markdown / JSON / protocol workspace for host Agent Runtimes. It is a Pal layer and Pal Pack Standard practice, not an Agent runtime, multi-agent runtime, app, CLI, service, or execution layer.
+- Pal identities and responsibilities
+- central Pal contacts
+- Pal Pack assets
+- task packages and output contracts
+- no-code collaboration and verification rules
+- project thin binding guidance
+- public-safe templates, examples, standards, and evidence records
 
-Deep Conductor in v0.3.0-rc.1 is a no-code orchestration protocol and task-package system. Host Runtimes perform real file reads, writes, commands, tool calls, rendering, browsing, publishing, and Skill/plugin/MCP use, and must return evidence.
+AgentPal does not replace Codex, Claude Code, OpenCode, OpenHands, Gemini CLI, DeepSeek-TUI, or other host runtimes. The host runtime still performs real file edits, commands, tool calls, publishing, and external-system actions.
 
-## What Is New In v0.3.0-rc.1
+## Built-In Pals
 
-- Deep Conductor E2E package and synthesis report.
-- Deep Conductor Master Loop and Project Conductor workflow.
-- Context Packet and Context Access boundaries for controlled Pal handoff.
-- `/pal Name` and `@Pal` collaboration protocols as plain-text AgentPal behavior.
-- Owner + Verifier workflow with independent evidence checks.
-- Parallel Independent Review workflow with isolated reviewer packets.
-- Cross-Runtime Pal Memory, Routing Memory, Runtime Skill Usage Memory, and continuation packages.
-- Runtime-installed Skill Orchestration packages with availability checks, fallback, verification, and usage-memory records.
-- Token / Cost-aware Context Budget, Context Usage Report, and prompt-shaping guidance.
-- Deep Conductor real host Runtime replay report and replay gap repair.
-- PalBench Collaboration expanded to 87 qualitative no-code regression cases.
-- v0.3 readiness, public capability summary, release checklist, integration matrix, and coverage audit.
+The v0.5 official Pal roster contains 10 active Pals:
 
-## What Remains No-Code / Host-Runtime-Dependent
+- Mira
+- Atlas
+- Nova
+- Faye
+- Vega
+- Quinn
+- Morgan
+- Harper
+- Rhea
+- PalSmith
 
-- Deep Conductor produces plans, Context Packets, Runtime Skill-aware packages, verification plans, synthesis reports, and next-round recommendations.
-- AgentPal does not execute those packages by itself.
-- Runtime-installed Skills are host Runtime capabilities. AgentPal may name them as candidates, but the current host Runtime must prove availability and execute them if authorized.
-- Subagent and external Agent handoff remains unavailable, unknown, blocked, or host-dependent unless a host Runtime explicitly supports and permits it.
-- Context Budget is qualitative unless the host Runtime provides exact token or cost metering evidence.
-- Routing Memory is a writeback candidate and judgement input, not an automatic database or fixed route table.
+The source of truth is `workspace/organization/contacts/pals.json`.
 
-## What This Release Does Not Include
+## Main v0.5 Changes
 
-- No stable `v0.3.0` release.
-- No desktop app, web app, CLI runtime, daemon, service, scanner, validator, installer, database, token meter, or cost calculator.
-- No automatic Deep Conductor background executor.
-- No automatic Subagent launch or external Agent calls by AgentPal.
-- No automatic scan of all Runtime Skills, plugins, or MCP tools.
-- No claim that Runtime Skills are installed or available in a user's current Runtime.
-- No statistical benchmark proof or foundation-model performance comparison from PalBench.
-- No replacement for Codex, Claude Code, OpenCode, OpenHands, Gemini CLI, or another host Runtime.
+- Reframed the public README and docs around AgentPal as a no-code Pal team organization layer, not an Agent runtime.
+- Clarified the Skill / Pal / Agent relationship.
+- Added Faye as the official AI Delivery Pal.
+- Updated Codex-first initialization using `prompts/codex/initialize-agentpal-workspace.md`.
+- Preserved thin binding for external projects.
+- Added and validated v0.5 documentation governance, claim guard, release-candidate scope, and fresh-clone evidence records.
+- Kept non-Codex host claims conservative and evidence-bound.
 
-## How To Try It
+## Current Runtime Support Claims
 
-1. Open the AgentPal Workspace in a Markdown/JSON-capable host Runtime.
-2. Start from `docs/README.md` or `RESOURCE_INDEX.md`.
-3. For v0.3 concepts, read `evals/palbench/v0.5/documentation/archive/docs/09-roadmap/v0.3-public-capability-summary.md`.
-4. For Deep Conductor, read `docs/05-orchestration-methodology/deep-conductor-e2e-usage-guide.md`.
-5. For release evidence, read `evals/palbench/v0.5/documentation/archive/docs/09-roadmap/v0.3-deep-conductor-readiness.md` and `evals/v0.3-integration/v0.3-deep-conductor-integration-test-matrix.md`.
-6. Use the host Runtime to perform any real execution and report evidence.
+- Codex: verified first path.
+- Claude Code: limited / minimal handoff evidence only.
+- Generic CLI Agent: compatibility prompt path.
+- DeepSeek / DeepSeek-TUI: experimental or version-help level only.
+- OpenCode / Gemini: unavailable in current evidence.
+- Plan Mode UI: unavailable in current UI evidence.
+- Goal Mode: limited evidence.
 
-## Known Limitations
+## What This Package Does Not Include
 
-- Runtime Skill execution quality is not proven unless the current host Runtime runs the named Skill and returns evidence.
-- Browser/render verification, publishing, and external calls remain host Runtime tasks.
-- Subagent / external Agent execution is not an AgentPal capability.
-- PalBench Collaboration is qualitative regression coverage, not a statistical benchmark.
-- Cross-runtime memory freshness still needs future replay after time passes.
-- Release publication requires a separate tag / push / GitHub Release operation after maintainer approval.
+- No Agent runtime.
+- No multi-Agent runtime.
+- No desktop app or web app.
+- No CLI installer, daemon, scanner, connector layer, marketplace, hosted runtime, or automatic executor.
+- No automatic subagent launch or external Agent calls by AgentPal.
+- No automatic capability scan of the user's machine.
+- No general direct writeback integration for GitHub, Notion, Lark, Cloudflare, CRM, or customer systems.
+- No real customer data, credentials, tokens, private memory, or internal development records.
 
 ## Validation Summary
 
-- R63 recommended entering `v0.3.0-rc.1` release preparation.
-- v0.3 integration matrix records pass / partial / unavailable boundaries.
-- PalBench Collaboration task index contains 87 cases.
-- R61 real host Runtime replay and R62 gap repair preserve partial, unavailable, blocked, and not-run outcomes.
-- R64 release preparation should verify JSON, no-runtime, no-program-future, no-hardcoded-routing, no-future-as-current, public safety, PalBench count, public entry links, and Git state before tag / push work.
+R166 release-candidate preflight passed before R167 package preparation:
 
-## Next Steps
+- official Pal directories: 10
+- central active contacts: 10
+- Faye included: yes
+- README and README.zh-CN Pal tables: 10 rows each
+- core JSON parse: pass
+- visible JSON parse: pass
+- Markdown link check: 158 files, 0 missing
+- clean-copy validation: pass
+- claim guard: pass
+- internal path leak scan: pass
+- credential scan: pass
+- added executable artifact check: pass
 
-Create the GitHub release from tag `v0.3.0-rc.1`, use `GITHUB_RELEASE_DRAFT.md` as the release body, and mark it as a pre-release rather than a stable release.
+R167 prepares the local zip package and re-checks the package contents before any remote publication action.
+
+## Getting Started
+
+1. Clone, download, or unzip the AgentPal package.
+2. Open the AgentPal directory as a Codex project.
+3. Open `prompts/codex/initialize-agentpal-workspace.md`.
+4. Paste the prompt into a fresh Codex conversation.
+5. Confirm Mira appears and lists the 10 official Pals.
+
+Start from:
+
+- `README.md`
+- `README.zh-CN.md`
+- `START_HERE.md`
+- `docs/README.md`
+- `RESOURCE_INDEX.md`
+
+## Publication Boundary
+
+This local package does not mean a GitHub Release exists.
+
+Tag creation, `git push`, and GitHub Release publication require explicit maintainer authorization in a separate release operation.

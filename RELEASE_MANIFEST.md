@@ -1,222 +1,104 @@
-# AgentPal Release Manifest
-
-## v0.3.0-rc.1 Release Snapshot
-
-Generated: 2026-06-27
-
-| Field | Value |
-| --- | --- |
-| Release name | AgentPal v0.3.0-rc.1 |
-| Version | `v0.3.0-rc.1` |
-| Git tag | `v0.3.0-rc.1` |
-| Release type | Public release candidate / pre-release |
-| Runtime policy | Simple Pal Mode with no-code Deep Conductor protocols |
-| Publication status | Release candidate package; verify the pushed tag and GitHub pre-release page during publication |
-
-Scope:
-
-- Deep Conductor E2E guide, package template, synthesis report template, and user-facing short summary template.
-- Deep Conductor Master Loop, Project Conductor workflow, project task map, next-round Runtime Task Package, and conductor decision record.
-- Context Packet, Context Access, `/pal Name`, and `@Pal` no-code collaboration protocols.
-- Owner + Verifier, Parallel Independent Review, and Plan -> Execute -> Verify workflows.
-- Cross-Runtime Pal Memory, memory boundary protocol, Pal Project Memory Snapshot, Routing Memory Record, Runtime Skill Usage Memory Record, and continuation package.
-- Runtime-installed Skill Orchestration guide, candidate decision protocol, availability check package, fallback package, and Runtime Skill-aware Task Package.
-- Token / Cost-aware Deep Conductor, Context Budget protocol, Context Budget Plan, Context Usage Report, and prompt shaping guide.
-- Deep Conductor real host Runtime replay report and replay gap analysis.
-- PalBench Collaboration qualitative regression suite with 87 no-code cases.
-- v0.3 readiness document, public capability summary, release checklist, integration matrix, coverage audit, and release preparation audit.
-- Runtime adapter notes that keep actual execution in host Agent Runtimes.
-
-Core v0.3 assets:
-
-- `docs/05-orchestration-methodology/deep-conductor-e2e-usage-guide.md`
-- `templates/orchestration/deep-conductor-e2e-package.md`
-- `templates/orchestration/deep-conductor-e2e-synthesis-report.md`
-- `docs/05-orchestration-methodology/deep-conductor-master-loop-usage-guide.md`
-- `orchestration/deep-conductor-protocol.md`
-- `orchestration/project-conductor-workflow.md`
-- `docs/05-orchestration-methodology/runtime-installed-skill-orchestration-guide.md`
-- `templates/orchestration/runtime-skill-aware-task-package.md`
-- `docs/05-orchestration-methodology/token-cost-aware-deep-conductor.md`
-- `orchestration/context-budget-protocol.md`
-- `docs/05-orchestration-methodology/cross-runtime-pal-memory.md`
-- `evals/palbench/v0.5/documentation/archive/docs/research/deep-conductor-real-runtime-replay-report.md`
-- `evals/palbench/v0.5/documentation/archive/docs/research/deep-conductor-real-runtime-replay-gap-analysis.md`
-- `evals/palbench-collaboration/task-index.md`
-- `evals/v0.3-integration/v0.3-deep-conductor-integration-test-matrix.md`
-- `evals/palbench/v0.5/documentation/archive/docs/09-roadmap/v0.3-deep-conductor-readiness.md`
-- `evals/palbench/v0.5/documentation/archive/docs/09-roadmap/v0.3-public-capability-summary.md`
-- `evals/palbench/v0.5/documentation/archive/docs/09-roadmap/v0.3-release-checklist.md`
-- `evals/palbench/v0.5/documentation/archive/docs/09-roadmap/v0.3-release-preparation-audit.md`
-
-Not included:
-
-- runtime code, generated binaries, generated archives, dependency files, package manifests, or build artifacts
-- desktop app, web app, CLI runtime, daemon, scanner, validator, installer, service, database, token meter, or cost calculator
-- automatic Deep Conductor execution, automatic Subagent launch, automatic external Agent calls, or automatic Runtime Skill scanning
-- private memory, private project state, internal reports, local absolute paths, credentials, tokens, secrets, or raw user data
-- statistical benchmark proof or foundation-model comparison
-
-Publication boundary:
-
-- Create the release from tag `v0.3.0-rc.1` only in the authorized release operation.
-- Mark the GitHub Release as a pre-release.
-- Do not mark this release as stable `v0.3.0`.
-- Use `GITHUB_RELEASE_DRAFT.md` as the GitHub Release body.
-- Verify the intended commit, tag, remote, and GitHub Release page during the release operation.
-
-## v0.2.0-rc.1 Release Snapshot
-
-Generated: 2026-06-27
-
-| Field | Value |
-| --- | --- |
-| Release name | AgentPal v0.2.0-rc.1 |
-| Version | `v0.2.0-rc.1` |
-| Git tag | `v0.2.0-rc.1` |
-| Release type | Public release candidate / pre-release |
-| Runtime policy | Simple Pal Mode only |
-
-Scope:
-
-- PalSmith end-to-end creation flows for a first professional Pal and a small AI team.
-- Mira-first usage flows.
-- Official Pal task examples for all 9 bundled Pals.
-- Minimal Capability Inventory profiles as manual AI judgement inputs.
-- PalBench Light qualitative release regression suite with 24 cases and scoring rubric.
-- Runtime Adapter thin binding stability guidance and troubleshooting cards.
-
-Not included:
-
-- desktop app, web UI, CLI runtime, daemon, scanner, validator, installer, or service
-- active Deep Conductor execution, autonomous multi-agent runtime behavior, remote-agent orchestration, or active Subagent Mode
-- automatic capability probing or automatic Routing Reward Memory writeback
-- statistical benchmark evidence or underlying-model comparison
-
-Publication boundary:
-
-- Create the release from tag `v0.2.0-rc.1`.
-- Mark the GitHub Release as a pre-release.
-- Do not mark this release as stable `v0.2.0`.
-- Use `GITHUB_RELEASE_DRAFT.md` as the GitHub Release body.
-
-## v0.1.0-rc.1 Release Archive
-
-Generated: 2026-06-25
+# AgentPal v0.5.0-rc.1 Release Manifest
 
 ## Release Identity
 
 | Field | Value |
 | --- | --- |
-| Release name | AgentPal v0.1.0-rc.1 |
-| Version | `v0.1.0-rc.1` |
-| Git tag | `v0.1.0-rc.1` |
-| Git commit hash observed for local tag | `b2db978ad816a74cb63ab05d48b19f12da4dcc1e` |
-| Git remote status observed | `origin https://github.com/AgentPal/AgentPal.git` is configured for fetch and push; no push was performed during the local gate. |
-| GitHub Release status observed | No online GitHub Release was created or verified during the local gate. |
+| Release name | AgentPal v0.5.0-rc.1 |
+| Workspace version line | `v0.5` |
+| Package type | local release-candidate package |
+| Runtime policy | Codex-first no-code Pal collaboration |
+| Publication status | local package prepared; no tag, push, or GitHub Release performed by this manifest |
 | License | MIT |
-| Release type | Public release candidate |
-| Runtime policy | Simple Pal Mode only |
 
-## Scope
+## Included Public Package Scope
 
-AgentPal v0.1.0-rc.1 is a Markdown / JSON / protocol workspace for Pal Packs. It is a Pal layer for existing agent runtimes, not an Agent layer, not a multi-agent runtime, and not an execution layer.
+- `README.md`
+- `README.zh-CN.md`
+- `START_HERE.md`
+- `LICENSE`
+- `THIRD_PARTY_NOTICES.md`
+- `CHANGELOG.md`
+- `RELEASE_NOTES.md`
+- `RELEASE_CHECKLIST.md`
+- `GITHUB_RELEASE_DRAFT.md`
+- `CONTRIBUTING.md`
+- `AGENTS.md`
+- `PAL.md`
+- `SKILL.md`
+- `agentpal.json`
+- `RESOURCE_INDEX.md`
+- `docs/`
+- `prompts/`
+- `official/`
+- `workspace/organization/contacts/`
+- `standards/`
+- `templates/`
+- `examples/`
+- root release files: `RELEASE_NOTES.md`, `RELEASE_CHECKLIST.md`, `RELEASE_MANIFEST.md`, and `GITHUB_RELEASE_DRAFT.md`
 
-Included:
+The source repository may retain `evals/` and `release/` evidence records for maintainers. The curated public zip artifact can exclude those evidence archives when they contain local validation paths or maintainer-only records.
 
-- root initialization files: `AGENTS.md`, `PAL.md`, `SKILL.md`, and `agentpal.json`
-- Codex initialization prompt: `prompts/codex/initialize-agentpal-workspace.md`
-- public release docs: `README.md`, `README.zh-CN.md`, `RELEASE_NOTES.md`, `CHANGELOG.md`, `GITHUB_RELEASE_DRAFT.md`, `RELEASE_CHECKLIST.md`, `CONTRIBUTING.md`, `THIRD_PARTY_NOTICES.md`, and this manifest
-- navigation index: `RESOURCE_INDEX.md`
-- shared core gates under `core/` for Codex, Claude Code, generic CLI, and project-bound sessions
-- official bundled Pal Packs under `official/pals/`
-- PalSmith no-code Pal asset governance docs, Runtime Task Package standard links, task package templates, example task packages, Markdown evals, and release-scope review
-- PalSmith source lineage, source inventory, source coverage matrix, and no-code governance review assets
-- contacts and registry files under `workspace/organization/contacts/` and `workspace/resources/registry/`
-- orchestration protocols, templates, examples, evals, prompts, runtime compatibility notes, capability profiles, and research docs
-- deliverable-aware task judgement protocol, staged Task Package example, failure regression example, and orchestration self-test
-- thin external project binding templates and Claude Code / generic CLI Agent one-prompt setup prompts
-- runtime-adapter thin binding examples and self-tests
-- Claude Code post-install Mira welcome output requirements
-- release evidence drafts under `release/v0.1.0-rc.1/`
-
-Not included:
-
-- desktop app, web UI, daemon, service, scanner, validator, installer, or required runtime dependency
-- active Subagent Mode, active Deep Conductor execution, remote Agent orchestration, MCP-hosted Agent execution, or marketplace runtime
-- private user memory, private project state, real customer data, real secrets, local machine paths, copied internal development reports, temporary screenshots, or temporary pasted text attachments
-- ignored local runtime outputs such as `.agentpal/` and `exports/`
-- copied full AgentPal rule bodies, full Pal rosters, full protocols, release docs, examples, or evals inside external project bindings
-
-## Official Pal Pack Set
+## Official Pal Set
 
 | Pal | Directory | Role |
 | --- | --- | --- |
-| Mira | `official/pals/Mira-main` | Main Pal, Leader Pal, Conductor, and Pal team leader and coordinator |
-| Atlas | `official/pals/Atlas-developer` | Development perspective |
-| Vega | `official/pals/Vega-research` | Research and evidence perspective |
-| Rhea | `official/pals/Rhea-system` | Local system and environment perspective |
-| PalSmith | `official/pals/PalSmith-pal-governor` | Pal asset governance, creation, health, import/export, versioning, and Runtime Task Package perspective |
-| Quinn | `official/pals/Quinn-quality` | Quality, risk, evidence, and acceptance perspective |
-| Morgan | `official/pals/Morgan-document` | Document and file workflow perspective |
-| Harper | `official/pals/Harper-writing` | Writing and communication perspective |
-| Nova | `official/pals/Nova-product` | Product and decision perspective |
+| Mira | `official/pals/Mira-main` | Main Pal, Leader, and Conductor |
+| Atlas | `official/pals/Atlas-developer` | Developer / Implementation Lead |
+| Nova | `official/pals/Nova-product` | Product / Strategy Lead |
+| Faye | `official/pals/Faye-delivery` | AI Delivery Pal |
+| Vega | `official/pals/Vega-research` | Research / Intelligence Lead |
+| Quinn | `official/pals/Quinn-quality` | Quality / Verification Lead |
+| Morgan | `official/pals/Morgan-document` | Document / File Workflow Lead |
+| Harper | `official/pals/Harper-writing` | Writing / Content Craft Lead |
+| Rhea | `official/pals/Rhea-system` | System / Runtime Safety Lead |
+| PalSmith | `official/pals/PalSmith-pal-governor` | Pal Asset Governor |
 
-Contacts / registry source of truth:
+Contacts source of truth:
 
 - `workspace/organization/contacts/pals.json`
 - `workspace/organization/contacts/PAL_CONTACTS.md`
-- `workspace/resources/registry/pal.index.json`
-- `workspace/resources/registry/pal.index.md`
 
-## Verification Summary
+## Not Included
 
-R38 / R09 / R10 local checks:
+- `.git/`
+- internal development directories and local reports outside the repository
+- local clean-copy directories
+- temporary files, caches, and system artifacts
+- private memory, private project facts, real customer data, credentials, secrets, tokens, or API keys
+- generated external-project `.agentpal/` test folders
+- runtime code, CLI installers, app runtimes, daemons, scanners, connector layers, marketplace programs, or hosted services
 
-- JSON parse check passed for root JSON, contacts / registry JSON, project template JSON, Pal `pal.json`, capability profile JSON, and JSON templates.
-- Official Pal directory count: 9.
-- Contacts count: 9.
-- Registry count: 9.
-- PalSmith final verification report: `evals/palbench/v0.5/documentation/archive/docs/08-release-candidate/09-palsmith-final-verification-report.md`.
-- AgentPal final release verification report: `evals/palbench/v0.5/documentation/archive/docs/08-release-candidate/10-agentpal-final-release-verification-report.md`.
-- R11 default Pal P2 sync plan: `evals/palbench/v0.5/documentation/archive/docs/08-release-candidate/13-default-pals-p2-sync-plan.md`.
-- R11 default Pal P2 sync verification report: `evals/palbench/v0.5/documentation/archive/docs/08-release-candidate/14-default-pals-p2-sync-verification-report.md`.
-- R12 release review baseline: `evals/palbench/v0.5/documentation/archive/docs/08-release-candidate/15-agentpal-release-review-baseline.md`.
-- R12 commit review report: `evals/palbench/v0.5/documentation/archive/docs/08-release-candidate/16-agentpal-commit-review-report.md`.
-- R12 default Pal official consistency report: `evals/palbench/v0.5/documentation/archive/docs/08-release-candidate/17-default-pals-official-consistency-report.md`.
-- R12 no-code boundary release review: `evals/palbench/v0.5/documentation/archive/docs/08-release-candidate/18-no-code-boundary-release-review.md`.
-- R12 final release review report: `evals/palbench/v0.5/documentation/archive/docs/08-release-candidate/19-agentpal-release-review-final-report.md`.
-- R13 formal Skill asset standard: `docs/03-pal-pack-standard/15-formal-skill-assets.md`.
-- R13 formal Skill assets audit: `evals/palbench/v0.5/documentation/archive/docs/08-release-candidate/20-formal-skill-assets-audit.md`.
-- R13 formal Skill assets fix report: `evals/palbench/v0.5/documentation/archive/docs/08-release-candidate/21-formal-skill-assets-fix-report.md`.
-- R13 official Pal field strategy decision: `evals/palbench/v0.5/documentation/archive/docs/08-release-candidate/official-pal-field-strategy-decision.md`.
-- R13 official Pal formal Skill result: 219 listed formal Skills map to 219 actual assets under the Flat Skill Card / Directory Skill Package standard.
-- R14 dirty worktree stage review: `evals/palbench/v0.5/documentation/archive/docs/08-release-candidate/22-dirty-worktree-stage-review.md`.
-- R14 commit grouping plan: `evals/palbench/v0.5/documentation/archive/docs/08-release-candidate/23-commit-grouping-plan.md`.
-- R14 maintainer release handoff: `evals/palbench/v0.5/documentation/archive/docs/08-release-candidate/24-maintainer-release-handoff.md`.
-- R14 final maintainer stage readiness report: `evals/palbench/v0.5/documentation/archive/docs/08-release-candidate/25-final-maintainer-stage-readiness-report.md`.
-- R14 handoff result: maintainer stage review yes, commit review yes, tag review yes after human decision, GitHub Release draft review yes, publish-ready no until maintainer performs Git and GitHub Release operations manually.
-- R10 official Pal consistency: `agentpal.json`, `workspace/organization/contacts/pals.json`, and `workspace/resources/registry/pal.index.json` each list 9 official bundled Pal Packs and include PalSmith as `palsmith-pal-governor`.
-- R10 JSON parse check passed for `agentpal.json`, `workspace/organization/contacts/pals.json`, `workspace/resources/registry/pal.index.json`, and all Pal `pal.json` files under `official/pals/`.
-- Codex, Claude Code, and Generic CLI thin binding checks passed.
-- Core gate propagation checks passed for `core/` shared gates.
-- No local absolute maintainer paths, attachment traces, temporary pasted text traces, or private maintenance-directory references were found in public release files.
-- No binary screenshot / archive / document artifacts were found in the release workspace.
-- No required runtime code, package manifest, installer, scanner, validator, daemon, or service entrypoint was found.
-- Ignored local outputs `.agentpal/` and `exports/` were observed as local/runtime artifacts, not release content.
-- Secret-key keyword hits were reviewed as public safety-boundary language, not real credentials.
-- Hard-coded semantic routing hits were reviewed as prohibitions, negative examples, or non-binding examples.
-- Subagent / Deep Conductor hits were reviewed as future-design or negative-boundary references, not active v0.1.0-rc.1 behavior.
+## Validation Summary
 
-## Local Git Boundary
+R166 release-candidate preflight:
 
-The final release gate should observe local Git state only until maintainers explicitly publish:
+- core JSON parse: pass
+- all visible JSON parse: pass
+- official Pal dirs: 10
+- official Pal `pal.json`: 10
+- central active contacts: 10
+- Faye included: yes
+- README Pal rows: 10
+- README.zh-CN Pal rows: 10
+- Markdown links: 158 files, 0 missing
+- stale entry / forbidden full support wording scan: pass
+- claim boundary scan: pass with expected negative boundary hits
+- internal/local path leak scan: pass
+- credential assignment scan: pass
+- added executable artifacts: 0
+- clean-copy validation: pass
 
-- local tag `v0.1.0-rc.1` must point at the final intended release commit
-- remote `origin` is configured as `https://github.com/AgentPal/AgentPal.git`
-- no push was performed during the local gate
-- no GitHub Release was created or verified
-- R12 did not stage, commit, tag, push, publish, or create a GitHub Release
-- R14 did not stage, commit, tag, push, publish, or create a GitHub Release
+R167 package preparation must re-check the final zip before any remote publication.
 
-If maintainers accept additional documentation changes after a local tag is created, they should create the final intended release commit, retag `v0.1.0-rc.1` if needed, then push the commit and tag before creating the GitHub Release.
+## Publication Boundary
+
+This manifest does not authorize or record remote publication.
+
+The following remain not performed unless a later authorized release operation does them:
+
+- `git push`
+- `git pull`
+- `git fetch`
+- tag creation
+- GitHub Release creation
