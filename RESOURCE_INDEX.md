@@ -813,6 +813,13 @@ Use the current docs directories as the public entry points. Archived research n
 | `evals/palbench/v0.5/behavior/r145-capability-writeback-behavior-issues.md` | R145 capability / writeback behavior issue table |
 | `release/fresh-clone-checks/r145-local-capability-writeback-behavior-validation.md` | R145 local validation for capability / writeback behavior tests |
 | `release/integration-notes/r145-r146-readiness-decision.md` | R145 readiness decision for R146 Deep Conductor E2E behavior tests |
+| `evals/palbench/v0.5/behavior/r146-deep-conductor-mode-decision-results.md` | R146 Deep Conductor mode decision behavior test results |
+| `evals/palbench/v0.5/behavior/r146-context-task-governance-verification-results.md` | R146 Context Packet / Task Package / Governance / Verification behavior test results |
+| `evals/palbench/v0.5/behavior/r146-end-to-end-human-use-results.md` | R146 end-to-end human-use behavior test results |
+| `evals/palbench/v0.5/behavior/r146-deep-conductor-e2e-behavior-summary.md` | R146 Deep Conductor / E2E behavior test summary |
+| `evals/palbench/v0.5/behavior/r146-deep-conductor-e2e-behavior-issues.md` | R146 Deep Conductor / E2E behavior issue table |
+| `release/fresh-clone-checks/r146-local-deep-conductor-e2e-behavior-validation.md` | R146 local validation for Deep Conductor / E2E behavior tests |
+| `release/integration-notes/r146-r147-readiness-decision.md` | R146 readiness decision for R147 automatic test summary and fix decision |
 
 ## R101 Integration
 
