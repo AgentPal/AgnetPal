@@ -801,6 +801,11 @@ Use the current docs directories as the public entry points. Archived research n
 | `evals/palbench/v0.5/behavior/r143-mira-palsmith-faye-auto-behavior-issues.md` | R143 Mira / PalSmith / Faye behavior issue table |
 | `release/fresh-clone-checks/r143-local-mira-palsmith-faye-auto-behavior-validation.md` | R143 local validation for Mira / PalSmith / Faye auto behavior tests |
 | `release/integration-notes/r143-r144-readiness-decision.md` | R143 readiness decision for R144 official Pal asset behavior tests |
+| `evals/palbench/v0.5/behavior/r144-official-pal-asset-results/` | R144 executed official Pal asset behavior result files |
+| `evals/palbench/v0.5/behavior/r144-official-pal-asset-behavior-summary.md` | R144 official Pal asset behavior test summary |
+| `evals/palbench/v0.5/behavior/r144-official-pal-asset-behavior-issues.md` | R144 official Pal asset behavior issue table |
+| `release/fresh-clone-checks/r144-local-official-pal-asset-behavior-validation.md` | R144 local validation for official Pal asset behavior tests |
+| `release/integration-notes/r144-r145-readiness-decision.md` | R144 readiness decision for R145 capability writeback behavior tests |
 
 ## R101 Integration
 
