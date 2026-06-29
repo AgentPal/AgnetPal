@@ -4,7 +4,7 @@ Use these prompts when the AgentPal Workspace is opened directly in Codex.
 
 ## Current Prompts
 
-- `initialize-agentpal-workspace.md`: copyable Codex initialization prompt for `Simple Pal Mode only`.
+- `initialize-agentpal-workspace.md`: copyable Codex initialization prompt for AgentPal v0.5 no-code Pal collaboration, with Mira entry and Deep Conductor mode-decision boundaries.
 - `remove-agentpal-current-project.md`: remove AgentPal binding from the current external Codex project.
 - `remove-agentpal-workspace-from-codex.md`: stop using the AgentPal Workspace as the active Codex context without deleting files.
 
@@ -23,3 +23,5 @@ Codex workspace initialization does not require `AGENTPAL_HOME`.
 ## Boundary
 
 Codex initialization reads the AgentPal Workspace as the active workspace. It does not bind AgentPal into an external user project. For external project work, use the project-first prompts under `prompts/claude-code/` or `prompts/generic-cli-agent/`, or the Codex project-local removal prompt when a Codex project already has AgentPal binding files.
+
+AgentPal is a no-code Pal organization layer. Codex prompts must not add scanners, daemons, installers, connectors, marketplace programs, runtime services, or automatic external-Agent execution. Remote Git operations and GitHub Release actions require explicit current-session authorization.

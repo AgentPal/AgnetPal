@@ -24,3 +24,7 @@ The path is used only to connect the current project to the AgentPal Workspace. 
 This path is for CLI agents that can read directories, follow Markdown / JSON instructions, maintain task context, and report execution evidence. AgentPal does not claim every CLI agent has been validated.
 
 Do not create Claude Code-specific files unless the runtime is Claude Code or the user explicitly asks.
+
+The Generic CLI Agent prompt uses thin binding only. It must not copy Pal Packs or Pal assets into the external project, add scanners, daemons, installers, connectors, runtime services, marketplace programs, or publish remotely.
+
+AgentPal v0.5 Deep Conductor is a no-code collaboration and mode-decision protocol. Runtime capability, subagent execution, external Agent execution, MCP/plugin calls, and Runtime Skill execution remain unknown unless the current host reports evidence or the user supplies a manual capability profile.

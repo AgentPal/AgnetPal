@@ -21,13 +21,17 @@ Verify:
    - agentpal_project_record
    - binding_mode: thin
    - runtime_hint
-   - active_mode: simple-pal-mode-only
+   - active_mode: agentpal-v0.5-pal-collaboration, or an older binding value with an explicit warning that it should be refreshed
+   - simple_pal_path_available: true, if the binding has been refreshed for v0.5
+   - deep_conductor_no_code_protocol_enabled: true, if the binding has been refreshed for v0.5
    - read_core_from_agentpal_workspace: true
    - core_gate_paths
    - pal_source_of_truth
    - central_pal_contacts
 4. AgentPal workspace path is readable.
 5. These AgentPal workspace files exist:
+   - agentpal.json
+   - RESOURCE_INDEX.md
    - core/agentpal-core-gate.md
    - core/first-pal-gate.md
    - core/simple-pal-mode-runtime-contract.md
@@ -42,6 +46,10 @@ Verify:
    - workspace/projects/_template/project.json
    - official/pals/Mira-main/PAL.md
    - official/pals/Mira-main/core/output-contract.md
+   - standards/deep-conductor/
+   - standards/capability-inventory/
+   - standards/asset-boundary/
+   - templates/project-binding/
 6. The AgentPal workspace central contacts are readable and are the Pal source of truth. If project files contain a copied roster, report it as stale or non-authoritative.
 6a. `agentpal_project_record` points to `workspace/projects/<project-id>` and project memory, source maps, derived knowledge, tasks, reports, governance records, and capability inventory are not stored in project-local `.agentpal/`.
 7. `CLAUDE.md` contains exactly one AgentPal block between:
@@ -55,8 +63,10 @@ Verify:
 13. `.agentpal/` does not contain copied full protocols, full Mira assets, release docs, examples, evals, or PalBench reports.
 14. A Generic CLI binding, if present, has at least root `AGENTS.md` plus `.agentpal/project.json` and does not rely on Claude Code settings.
 15. No internal local paths, private user data, or credential-like values are exposed in public project instructions.
-16. The active mode is Simple Pal Mode only.
-17. Deep Conductor, Subagent Mode, and external Agent orchestration are not activated by the binding.
+16. The binding does not claim deterministic keyword routing or fixed task-domain routes.
+17. AgentPal v0.5 treats Deep Conductor as a no-code collaboration and mode-decision protocol. It may judge Fast Route, Owner + Verifier, Plan-Execute-Verify, Parallel Review, Sequential Chain, External Agent handoff, and Fallback shapes, but the binding must not claim automatic subagent execution or external Agent execution.
+18. Capability unknown is handled honestly: no automatic runtime / model / plugin / Skill / MCP scan is claimed, and any manual capability profile is marked as manual or unverified.
+19. No prompt or binding instruction authorizes `git push`, `git pull`, `git fetch`, tag creation, GitHub Release creation, or GitHub API publication without explicit current-session user authorization.
 
 Output a concise checklist:
 - pass / fail / warning

@@ -353,8 +353,10 @@ Capability Inventory is a no-code profile layer. It is not an automatic scanner,
 | `prompts/claude-code/install-agentpal-current-project.md` | one-prompt Claude Code project install from inside `<your-project>` |
 | `prompts/claude-code/remove-agentpal-current-project.md` | remove AgentPal binding from a Claude Code project |
 | `prompts/claude-code/verify-agentpal-current-project.md` | verify Claude Code project binding and `settings.local.json` |
+| `prompts/cli-agent/README.md` | compatibility entry for CLI Agent prompts, pointing to generic CLI Agent prompts |
 | `prompts/generic-cli-agent/install-agentpal-current-project.md` | one-prompt generic CLI Agent project install |
 | `prompts/generic-cli-agent/remove-agentpal-current-project.md` | remove generic CLI Agent project binding |
+| `prompts/test-codex-subagent-mode.md` | diagnostic prompt for Codex child workflow availability; not evidence of automatic subagent execution |
 
 These prompts are Markdown instructions, not scripts or installers.
 
@@ -825,6 +827,9 @@ Use the current docs directories as the public entry points. Archived research n
 | `release/integration-notes/r147-auto-test-fix-decision.md` | R147 decision on whether an R148 targeted fix round is required |
 | `release/fresh-clone-checks/r147-local-auto-test-summary-validation.md` | R147 local validation for automatic test summary and fix decision |
 | `release/integration-notes/r147-r149-readiness-decision.md` | R147 readiness decision for R149 manual test plan preparation |
+| `evals/palbench/v0.5/behavior/r148-prompt-initialization-v0-5-alignment-results.md` | R148 AgentPal v0.5 prompt initialization alignment results |
+| `release/fresh-clone-checks/r148-local-prompt-initialization-v0-5-validation.md` | R148 local validation for prompt initialization v0.5 alignment |
+| `release/integration-notes/r148-r149-readiness-decision.md` | R148 readiness decision for R149 manual test plan preparation |
 
 ## R101 Integration
 

@@ -1,13 +1,13 @@
-<!-- Future design only. Not active in AgentPal v0.1 runtime. / 未来设计，仅作规划参考，不属于 AgentPal v0.1 当前运行行为。 -->
+<!-- Diagnostic only. Not evidence of automatic subagent execution. / 仅作诊断参考，不证明自动 subagent 执行能力。 -->
 
 # Test Codex Subagent Mode
 
 Copy this prompt into Codex while the AgentPal Workspace is open.
 
 ```text
-Historical / future-design regression prompt for Codex child workflows.
+Historical / diagnostic regression prompt for Codex child workflow availability.
 
-AgentPal v0.1 current runtime is Simple Pal Mode only. Do not run this prompt as part of v0.1 normal task handling.
+AgentPal v0.5 Deep Conductor is a no-code collaboration and mode-decision protocol. This diagnostic must not claim automatic subagent execution unless the current Codex host provides direct tool evidence.
 
 Do not modify project files.
 Do not access the network.
@@ -19,7 +19,7 @@ In a future orchestration test, record coordinator evidence from the tool layer:
 
 1. Availability test
 - spawn Subagent A to read README.md only and summarize AgentPal positioning.
-- spawn Subagent B to read pals/Mira-main/PAL.md only and summarize Mira responsibilities.
+- spawn Subagent B to read official/pals/Mira-main/PAL.md only and summarize Mira responsibilities.
 - wait both.
 - close both.
 - record supported / unsupported / unclear.
@@ -54,7 +54,7 @@ Input:
 Simulate subagent unavailable.
 Expected wording:
 Subagent Mode unavailable
-Using Simple Pal Mode
+Using no-code Pal collaboration fallback
 Limitations: specialist Pals are not independent Codex subagent threads in this response.
 
 Report format:

@@ -17,8 +17,10 @@ Do not rely on an external project session restart to register a newly copied Pa
 
 ## Future Diagnostic
 
-- `../test-codex-subagent-mode.md`: future-design diagnostic only. It is not part of current v0.1.0-rc.1 task handling.
+- `../test-codex-subagent-mode.md`: diagnostic only. It is not evidence that AgentPal can automatically execute subagents or external Agents in current task handling.
 
 ## Boundary
 
 Maintenance prompts must not modify `official/pals/` professional content unless the user explicitly requests a repair for that Pal Pack. They must not add Skills, tools, models, plugins, MCP servers, non-Pal runtimes, or raw repositories to Pal contacts.
+
+Maintenance prompts must not run `git push`, `git pull`, `git fetch`, create tags, create GitHub Releases, call GitHub publication APIs, add scanners, add daemons, add installers, add connectors, create runtime services, or claim host capability availability without explicit current-session evidence and authorization.

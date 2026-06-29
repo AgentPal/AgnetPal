@@ -29,11 +29,13 @@ Hard boundaries:
 - Do not scan the whole disk.
 - Do not copy AgentPal Pal Packs, docs, protocols, examples, evals, or release notes into this project.
 - Do not create runtime code, scripts, services, daemons, installers, or UI.
-- Do not activate Deep Conductor, Subagent Mode, external Agent orchestration, or multi-runtime automation.
+- Treat Deep Conductor as AgentPal v0.5 no-code collaboration and mode-decision protocol, not as automatic runtime execution.
 - Do not present Deep Conductor Master Loop or Project Conductor Workflow as an automatic background task system.
 - Do not present Cross-Runtime Pal Memory as an automatic memory sync service, database, daemon, or background Runtime feature.
 - Do not present Owner + Verifier as automatic background multi-agent execution.
 - Do not present Parallel Independent Review as automatic background multi-agent or multi-runtime execution.
+- Do not claim subagent execution, external Agent execution, MCP/plugin calls, Runtime Skill execution, or host capability availability without current Claude Code evidence or a user-provided manual capability profile.
+- Do not run `git push`, `git pull`, `git fetch`, create tags, create GitHub Releases, or call GitHub publication APIs unless the user explicitly authorizes that remote action in the current session.
 
 Create or update only the thin binding:
 1. `.agentpal/project.json`
@@ -65,6 +67,7 @@ The root `AGENTS.md` and `CLAUDE.md` protected blocks must explicitly tell a fre
 - Parallel Independent Review is a no-code staged workflow. Runtime may follow multiple reviewer packets sequentially, but reviewer final reports must stay independent and one reviewer draft must not be given to another reviewer.
 - Deep Conductor Master Loop is a no-code protocol. Runtime may follow a Deep Conductor plan, Project Conductor task map, Runtime Skill-aware package, or next-round Runtime task package, but must not treat it as an automatic background workflow.
 - Deep Conductor E2E Package is the complete no-code output shape for goal -> memory -> Capability Inventory -> Context Budget -> topology -> Context Packets -> Runtime Skill-aware packages -> verification -> synthesis -> Routing Memory -> next-round recommendation. Claude Code may follow approved stage packages and must return E2E synthesis fields; it must not treat E2E as an automatic background system.
+- AgentPal v0.5 Deep Conductor may judge Fast Route, Owner + Verifier, Plan-Execute-Verify, Parallel Review, Sequential Chain, External Agent handoff, and Fallback shapes by AI judgement. These are candidate collaboration shapes, not deterministic keyword routes.
 - Runtime Skill-aware packages are executed by the host Runtime only after current availability and permission evidence. AgentPal does not execute Runtime Skills.
 - If a Runtime Skill-aware package names Skill/plugin/MCP candidates, Claude Code must check only the named current-session candidates within the package scope, report available / unavailable / unknown / blocked, and follow `if_unavailable_fallback` when missing.
 - Runtime-installed Skills belong to Claude Code or its host capability surface, not to AgentPal or any Pal Pack.
@@ -75,34 +78,40 @@ The root `AGENTS.md` and `CLAUDE.md` protected blocks must explicitly tell a fre
 - When host Runtime changes, read AgentPal Pal Project Memory Snapshot / Routing Memory summary / Runtime Skill Usage Memory if the task package names them and access is available. Runtime does not own Pal memory; it only executes bounded no-code read/write packages with evidence.
 
 Before responding as AgentPal in this project, Claude Code must read from the AgentPal workspace root:
-1. core/agentpal-core-gate.md
-2. core/first-pal-gate.md
-3. core/simple-pal-mode-runtime-contract.md
-4. core/deliverable-aware-task-judgement-gate.md
-5. core/main-pal-conductor-gate.md
-6. core/runtime-adapter-shared-contract.md
-7. core/project-binding-thin-contract.md
-8. core/runtime-response-gate.md
-9. workspace/organization/contacts/pals.json
-10. workspace/organization/contacts/PAL_CONTACTS.md
-10a. workspace/projects/README.md and the selected `agentpal_project_record` when the task needs project memory or derived knowledge
-11. official/pals/Mira-main/PAL.md
-12. official/pals/Mira-main/core/output-contract.md
-13. orchestration/mention-and-direct-pal-protocol.md when `/pal` or `@Pal` appears
-14. orchestration/context-packet-protocol.md when creating or following a packet
-15. orchestration/owner-verifier-workflow-protocol.md when a task package separates owner and verifier candidates
-16. orchestration/parallel-independent-review-protocol.md when a task package separates independent reviewer candidates
-17. orchestration/deep-conductor-protocol.md when a task package uses Deep Conductor Master Loop
-18. orchestration/project-conductor-workflow.md when a package includes a project task map or next-round package
-19. orchestration/pal-skill-vs-runtime-skill-protocol.md when Runtime Skill candidates appear
-20. docs/05-orchestration-methodology/cross-runtime-pal-memory.md when a task continues across host Runtimes
-21. orchestration/memory-boundary-protocol.md when memory read/writeback or privacy boundary is involved
-22. orchestration/runtime-skill-candidate-decision-protocol.md when preparing or following Runtime Skill-aware packages
-23. templates/orchestration/runtime-skill-availability-check-package.md and templates/orchestration/runtime-skill-fallback-package.md when availability is unknown or unavailable
-24. orchestration/context-budget-protocol.md and templates/orchestration/context-budget-plan.md when a package includes Context Budget fields
-25. templates/orchestration/context-usage-report.md when final reporting requests context usage
-26. templates/orchestration/deep-conductor-e2e-package.md when a task package uses Deep Conductor E2E
-27. templates/orchestration/deep-conductor-e2e-synthesis-report.md when returning E2E final reporting fields
+1. agentpal.json
+2. RESOURCE_INDEX.md
+3. core/agentpal-core-gate.md
+4. core/first-pal-gate.md
+5. core/simple-pal-mode-runtime-contract.md
+6. core/deliverable-aware-task-judgement-gate.md
+7. core/main-pal-conductor-gate.md
+8. core/runtime-adapter-shared-contract.md
+9. core/project-binding-thin-contract.md
+10. core/runtime-response-gate.md
+11. workspace/organization/contacts/pals.json
+12. workspace/organization/contacts/PAL_CONTACTS.md
+12a. workspace/projects/README.md and the selected `agentpal_project_record` when the task needs project memory or derived knowledge
+13. official/pals/Mira-main/PAL.md
+14. official/pals/Mira-main/core/output-contract.md
+15. standards/deep-conductor/
+16. standards/capability-inventory/
+17. standards/asset-boundary/
+18. templates/project-binding/
+19. orchestration/mention-and-direct-pal-protocol.md when `/pal` or `@Pal` appears
+20. orchestration/context-packet-protocol.md when creating or following a packet
+21. orchestration/owner-verifier-workflow-protocol.md when a task package separates owner and verifier candidates
+22. orchestration/parallel-independent-review-protocol.md when a task package separates independent reviewer candidates
+23. orchestration/deep-conductor-protocol.md when a task package uses Deep Conductor Master Loop
+24. orchestration/project-conductor-workflow.md when a package includes a project task map or next-round package
+25. orchestration/pal-skill-vs-runtime-skill-protocol.md when Runtime Skill candidates appear
+26. docs/05-orchestration-methodology/cross-runtime-pal-memory.md when a task continues across host Runtimes
+27. orchestration/memory-boundary-protocol.md when memory read/writeback or privacy boundary is involved
+28. orchestration/runtime-skill-candidate-decision-protocol.md when preparing or following Runtime Skill-aware packages
+29. templates/orchestration/runtime-skill-availability-check-package.md and templates/orchestration/runtime-skill-fallback-package.md when availability is unknown or unavailable
+30. orchestration/context-budget-protocol.md and templates/orchestration/context-budget-plan.md when a package includes Context Budget fields
+31. templates/orchestration/context-usage-report.md when final reporting requests context usage
+32. templates/orchestration/deep-conductor-e2e-package.md when a task package uses Deep Conductor E2E
+33. templates/orchestration/deep-conductor-e2e-synthesis-report.md when returning E2E final reporting fields
 
 Use `templates/project-binding/root-agents-agentpal-block-template.md` from the AgentPal workspace as the protected block shape.
 
@@ -116,7 +125,9 @@ For `.agentpal/project.json`, include at least:
 - agentpal_project_record
 - binding_mode: thin
 - runtime_hint: claude-code
-- active_mode: simple-pal-mode-only
+- active_mode: agentpal-v0.5-pal-collaboration
+- simple_pal_path_available: true
+- deep_conductor_no_code_protocol_enabled: true
 - read_core_from_agentpal_workspace: true
 - core_gate_paths
 - pal_source_of_truth
@@ -131,7 +142,7 @@ After install, reply with a short Mira welcome in my language:
 - Start with `Mira：`.
 - Open naturally. In Chinese, use this meaning: `你好，我是 Mira，是你的 Pal 团队 leader。`
 - Say AgentPal is connected to this project.
-- Say the user can tell Mira anything directly, and Mira will judge the task and route it to the right professional Pal when needed.
+- Say the user can tell Mira anything directly, and Mira will judge the task, candidate owner Pal, and handoff shape by AI judgement when needed.
 - Say specialist Pals can be called directly with `/pal Name`.
 - Render the current Pal team as a Markdown table generated from the AgentPal workspace central contacts, not from a stale copied roster.
 - The table must have three columns:
