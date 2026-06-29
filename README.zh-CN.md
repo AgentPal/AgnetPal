@@ -1,268 +1,205 @@
 # AgentPal
 
-AgentPal 是一个搭建 AI 团队的轻量框架，可运行在 Codex、Claude Code、OpenCode、OpenHands 等 Agent Runtime 之上。
+AgentPal 是面向 Agent Runtime 的 no-code AI 团队组织层。
 
-它让用户创建不同职责的 Pal，并把这些 Pal 组织成一个有分工、有记忆、有知识、有技能、有工作流、有协作规则的 AI 团队。
+它不替代 Codex、Claude Code、OpenCode、OpenHands、OpenClaw、Hermes、workbuddy、Gemini CLI、DeepSeek-TUI 或其他执行环境。AgentPal 做的是另一件事：给这些 Runtime 增加一套可读、可维护、可协作的 Pal 工作区，包括身份、职责、知识、Skill、工作流、记忆边界、任务包、验收习惯和协作规则。
 
-AgentPal，让每个 Agent 都有自己的 Pal。
+一句话理解：
 
-AgentPal v0.5 是一个 Markdown / JSON / protocol workspace，可用于能读取结构化工作区文件的 Runtime。它不是 Agent Runtime，不是多 Agent Runtime，不是执行层，不是桌面 App，不是 Web App，也不是安装器。
+> AgentPal = 给现有 Agent 增加一个 Pal 团队组织层。
 
-第一次打开仓库建议先看 [START_HERE.md](START_HERE.md)，再看 [What is AgentPal?](docs/00-overview/what-is-agentpal.md)、[First 30 Minutes with AgentPal](docs/01-getting-started/first-30-minutes.md) 和 [first AgentPal team walkthrough](examples/walkthroughs/first-agentpal-team/)。这些 onboarding 文档是本地 public-safe 入口；远端发布仍需要用户明确授权。
+## AgentPal 是什么
 
-R140 已补充本地 fresh-clone usability simulation 证据：见 [setup](release/fresh-clone-checks/r140-fresh-clone-usability-simulation-setup.md)、[issues](evals/palbench/v0.5/r140-fresh-clone-usability-issues.md)、[validation](release/fresh-clone-checks/r140-local-fresh-clone-usability-validation.md) 和 [R141 readiness decision](release/integration-notes/r140-r141-readiness-decision.md)。这只是本地可用性证据，不代表远端发布。
+AgentPal v0.5 是一个 Markdown / JSON / protocol workspace，适合能读取本地文件并遵循结构化指令的 Agent Runtime。
 
-## PalSmith
+AgentPal 是：
 
-PalSmith 是 AgentPal 的 AI 团队创建师，也是 Pal 资产治理 Pal。它帮助用户通过自然语言创建、完善、体检、导入、导出、升级和维护 Pal 与 Pal 团队，不需要用户先理解完整的 Pal Pack 目录结构。
-
-详细了解 PalSmith：[PalSmith是什么，怎么使用？](docs/01-concepts/09-What-is-PalSmith-how-can-I-operate-it.md)
-
-v0.2 开发会重点产品化这条路径。可以从 [v0.2 development plan](docs/09-roadmap/v0.2-development-plan.md)、[v0.2 task pool](docs/09-roadmap/v0.2-task-pool.md) 和 [PalSmith end-to-end productization](docs/06-palsmith/palsmith-end-to-end-productization.md) 开始。首个实现切片补齐了创建首个专业 Pal 与从目标创建 AI team 的可复制任务包。
-
-v0.2 Capability Inventory 见 [minimal usable design](docs/05-orchestration-methodology/capability-inventory-minimal-usable-design.md)、[manual profile guide](docs/03-user-guides/manual-capability-profile.md)、[navigation guide](docs/00-overview/capability-inventory-navigation.md) 和 [capability profile index](standards/capability-inventory/README.md)。这些 profile 是示例性的判断输入，不是自动环境扫描结果。
-
-v0.2 release regression 见 [PalBench Light Suite](evals/palbench-light/README.md) 和 [suite plan](docs/research/palbench-light-suite-plan.md)。
-
-Runtime Adapter 排障与 thin binding 稳定性见 [stability guide](docs/04-runtime-guides/runtime-adapter-stability-guide.md) 和 [troubleshooting prompt cards](docs/04-runtime-guides/runtime-adapter-troubleshooting-prompt-cards.md)。
-
-no-code orchestration prototype 主线见 [v0.3 development plan](docs/09-roadmap/v0.3-development-plan.md)、[v0.3 task pool](docs/09-roadmap/v0.3-task-pool.md)、[v0.3 Deep Conductor readiness](docs/09-roadmap/v0.3-deep-conductor-readiness.md)、[v0.3 public capability summary](docs/09-roadmap/v0.3-public-capability-summary.md)、[Deep Conductor E2E guide](docs/05-orchestration-methodology/deep-conductor-e2e-usage-guide.md)、[Deep Conductor real runtime replay report](docs/research/deep-conductor-real-runtime-replay-report.md)、[Context Packet usage guide](docs/05-orchestration-methodology/context-packet-usage-guide.md)、[multi-Pal prompt cards](docs/02-getting-started/multi-pal-collaboration-prompt-cards.md) 和 [PalBench Collaboration Suite](evals/palbench-collaboration/README.md)。v0.3 Deep Conductor 是 no-code orchestration，不是自动运行时。
-
-v0.4 本地完成度证据见 [local completion report](release/current/v0.4-local-completion-report.md)、[evidence index](release/current/v0.4-local-completion-evidence-index.md) 和 [user-facing summary](docs/08-release-and-maintenance/v0.4-local-completion-summary.md)。这是本地完成证据，不是 GitHub Release，也不是远端发布。
-
-v0.5 本地开发入口见 [v0.5 local development scope](docs/09-roadmap/v0.5-local-development-scope.md)、[Org Pack standard](standards/org-pack/org-pack-standard.md)、[Org Pack / FDE / Asset Boundary overview](docs/00-overview/org-pack-fde-asset-boundary-overview.md)、[Org/FDE combined pack usage scenario](docs/04-usage-scenarios/org-fde-combined-pack-usage-scenario.md)、[Pal Asset standards](standards/pal-asset/)、[Pal Metadata v0.5 upgrade path](docs/00-overview/pal-metadata-v0.5-upgrade-path.md)、[PalSmith v0.5 standards](standards/palsmith/)、[Pal Asset / Org Pack relationship guide](docs/00-overview/pal-asset-and-org-pack-relationship.md)、[practical Org Pack template](templates/org-pack/practical-org-pack/)、[base FDE Pack template](templates/fde-pack/base-fde-pack/)、[asset-boundary standards](standards/asset-boundary/)、[Org/FDE combined example](examples/combined-packs/content-ops-with-accounting-advisor/) 和 [public-safe examples](examples/)。Combined example 展示 Org Pack 如何引用 FDE Pack，并保留 PalSmith review gate 证据；它是 public-safe no-code example，不是 marketplace、connector、installer、scanner、validator、runtime resolver 或关键词路由器。Org Pack、FDE Pack、Combined Pack 示例、Asset Boundary 标准、Pal Asset 标准与 Pal Metadata v0.5 计划都是 no-code 组织资产。
-
-v0.5 本地完成度证据见 [local completion report](release/current/v0.5-local-completion-report.md)、[evidence index](release/current/v0.5-local-completion-evidence-index.md) 和 [release-not-published statement](release/current/v0.5-release-not-published.md)。这是本地完成证据；本轮没有 GitHub Release、tag、push 或远端发布。
-
-v0.5 本地 release preflight 见 [local release preflight](release/current/v0.5-local-release-preflight.md)、[public package checklist](release/current/v0.5-public-package-checklist.md)、[release notes draft](release/current/v0.5-release-notes-draft.md)、[public artifact inventory](release/current/v0.5-public-artifact-inventory.md) 和 [remote-publication decision note](release/current/v0.5-remote-publication-decision-required.md)。R131 只准备发布决策，不代表 v0.5 已经远端发布。
-
-v0.5 Faye / Delivery Pack 集成入口见 [Faye / Delivery Pack / Deep Conductor overview](docs/00-overview/faye-delivery-pack-deep-conductor-overview.md)、[Faye standards](standards/faye-delivery-pal/)、[base Delivery Pack template](templates/delivery-pack/base-delivery-pack/)、[video growth Delivery Pack](examples/delivery-packs/video-growth-delivery-pack/)、[sales CRM Delivery Pack](examples/delivery-packs/sales-crm-delivery-pack/) 和 [Faye Deep Conductor protocols](standards/deep-conductor/)。这些是 no-code 组织与落地资产，不是 connector、marketplace、runtime engine、外部项目写入器或关键词路由器。
-
-R132-R134 在 R130 本地完成记录与 R131 本地 preflight 之后扩展了 v0.5 包范围。当前扩展范围状态见 [Faye extension scope update](release/current/v0.5-faye-extension-scope-update.md)、[completion status after Faye extension](release/current/v0.5-completion-status-after-faye-extension.md)、[Faye extension evidence index](release/current/v0.5-faye-extension-evidence-index.md) 和 [R136 targeted regression plan](evals/palbench/v0.5/r135-r136-faye-extension-targeted-regression-plan.md)。刷新后的 v0.5 final release-ready 结论需要先通过 R136 targeted regression；远端发布仍保持暂停。
-
-R137 在 Faye extension 与 R136 targeted regression 之后刷新了 v0.5 本地完成度证据。见 [refreshed local completion report](release/current/v0.5-local-completion-report-after-faye-extension.md)、[refreshed evidence index](release/current/v0.5-local-completion-evidence-index-after-faye-extension.md)、[refreshed local release preflight](release/current/v0.5-local-release-preflight-after-faye-extension.md) 和 [refreshed release notes draft](release/current/v0.5-release-notes-draft-after-faye-extension.md)。这仍然只是本地证据；本轮没有 GitHub Release、tag、push、pull、fetch 或远端发布。
-
-Faye extension 后的 v0.5 final local release preflight 见 [final local preflight](release/current/v0.5-final-local-release-preflight-after-faye-extension.md)、[public package readiness review](release/current/v0.5-final-public-package-readiness-review.md)、[final blocker scan](release/fresh-clone-checks/r138-final-local-release-blocker-scan.md) 和 [final local release status](release/current/v0.5-final-local-release-status.md)。R138 只准备用户决策；本轮没有 GitHub Release、tag、push、pull、fetch 或远端发布。
-
-## 为什么需要 AgentPal？
-
-用户想让 Agent 更好用时，通常会走两条路：
-
-- 给 Agent 加更多 Skill
-- 搭一个 Agent Team
-
-Skill 很轻，但容易碎片化。一个 Skill 往往只做一件事，用户很难记住什么时候用哪个 Skill，也很难让单个 Skill 长期拥有上下文、记忆、工作流、验收标准和复盘经验。
-
-Agent Team 很强，但也更重。它可能需要复杂配置、重复上下文、更高上下文成本、角色协调、结果合并和权限边界。
-
-AgentPal 补的是中间层：Pal。Pal 把许多 Skills、知识卡、工作流、记忆规则和验证习惯，组织成少数几个好记的工作伙伴。
-
-用户不应该记住几百个 Skill。用户只需要记住几个 Pal，以及每个 Pal 负责什么。
-
-## Pal 是什么？
-
-Pal 不是一个单独 Skill。
-
-Pal 也不是新的 Agent Runtime。
-
-Pal 是一个可移植的工作伙伴，由身份、知识、Skills、记忆规则、工作流、上下文规则、输出契约、验证习惯和协作协议组成。
-
-“Pal”这个名字强调的是可记住、可协作的工作伙伴，而不是工具名。你可以把 Pal 理解成当前 Runtime 里的专业工作方式：它帮助 Runtime 理解目标、选择上下文、整理 Task Package、调用相关 Skill 或 fallback 方法，并检查结果是否真的完成。
-
-详细了解 Pal：
-
-- [为什么是 Pal？](docs/01-concepts/07-why-pal.md)
-- [Pal 团队、多 Pal 协作与 Deep Conductor](docs/01-concepts/08-pal-teams-collaboration-and-deep-conductor.md)
-
-## 当前版本能做什么
-
-AgentPal v0.5 当前提供：
-
-- Markdown / JSON / protocol workspace，不需要额外 runtime 依赖
-- Simple Pal Mode 作为当前激活的 runtime policy
-- Mira 作为默认 Main Pal / Leader / Conductor，并补齐 leader knowledge、skills、workflows、runbooks、evals、research inventory、delegation、handoff、context packet、risk approval 和 progress reporting 资产
-- 10 个官方 Pal：Mira、Atlas、Vega、Rhea、PalSmith、Quinn、Morgan、Harper、Nova、Faye
-- 基于 `workspace/organization/contacts/` 中央通讯录的 `/pal Name` 显式调用
-- AI owner judgement、Fast Route owner-Pal handoff，以及禁止关键词硬路由的协作规则
-- Task Package rules、Runtime Task Package 标准、Context Slicing、Asset Loading Budget
-- PalSmith 作为官方 no-code Pal 资产治理 Pal，支持 Pal 创建、AI team 创建、job fitness 体检、用户材料摄取、可选 web research to knowledge、import、export、health check、versioning、publish readiness 和 Runtime Task Package planning
-- PalSmith quickstart path、AI team blueprints、demo script、readiness matrix、task package templates、example packages、governance protocols 和 Markdown evals
-- Formal Skill asset standard：219 个 formal skills 已映射到 Pal-owned skill assets，release standard 下 missing formal Skill assets 为 0
-- Atlas、Vega、Rhea、Quinn、Morgan、Harper、Nova 的官方 Pal 深化资产，包括 role knowledge、skills、workflows、runbooks、evals、collaboration boundaries 和 research inventories
-- `docs/08-release-candidate/` 下的 release candidate evidence，包括 PalSmith verification、default Pal sync、release review、no-code boundary review、formal Skill asset audit/fix、dirty worktree stage review、commit grouping plan 和 maintainer handoff reports
-- Codex / Claude Code / Generic CLI Agent 使用指南，以及 thin project binding prompts
-- PalBench small-sample validation
-
-## 快速开始
-
-日常使用可以先找 Mira。Mira 是默认 Main Pal / Leader Pal / Conductor：你把目标告诉她，她会判断是直接整理、补问关键问题、交给专业 Pal，还是生成 staged Runtime Task Package。可以先看 [Mira-first usage](docs/02-getting-started/mira-first-usage.md) 和 [Mira-first prompt cards](docs/02-getting-started/mira-first-prompt-cards.md)。
-
-### Codex
-
-适合直接在 Codex 中打开 AgentPal Workspace。
-
-1. 在Codex中把AgentPal目录当作新项目创建。
-2. 打开 [`prompts/codex/initialize-agentpal-workspace.md`](prompts/codex/initialize-agentpal-workspace.md)。
-3. 复制整篇 prompt。
-4. 粘贴到 Codex里 AgentPal项目对话中初始化 AgentPal。
-5. 普通任务先交给 Mira，或用 `/pal Name` 指定专业 Pal。
-
-Codex 的初始化 prompt 现在统一放在 [`prompts/codex/`](prompts/codex/) 下。Codex Workspace 初始化不需要设置 `AGENTPAL_HOME`。
-
-详见：[`docs/04-runtime-guides/01-use-with-codex.md`](docs/04-runtime-guides/01-use-with-codex.md)
-
-### Claude Code
-
-适合把 AgentPal 接入你已有的真实项目。
-
-1. 先进入你的项目目录：
-
-   ```text
-   cd <your-project>
-   claude
-   ```
-
-2. 打开 [`prompts/claude-code/install-agentpal-current-project.md`](prompts/claude-code/install-agentpal-current-project.md)。
-3. 不需要提前修改 prompt，直接复制整篇 prompt 文件。
-4. 粘贴到 Claude Code 中执行。
-5. Claude Code 提示你输入 AgentPal Workspace 路径时，输入你本机 AgentPal 目录路径，例如 `<path-to-AgentPal>`。
-6. 让 Claude Code 创建或更新当前项目里的本地绑定文件。
-
-Claude Code 路径会写入项目本地绑定文件，并可能更新 `.claude/settings.local.json`。这个文件是本机配置，不应该提交。
-
-详见：[`docs/04-runtime-guides/02-use-with-claude-code.md`](docs/04-runtime-guides/02-use-with-claude-code.md)
-
-### Generic CLI Agent
-
-适合能读取项目文件、遵循 Markdown / JSON 指令、维护上下文并报告执行证据的 CLI Agent。
-
-1. 先进入你的项目目录：
-
-   ```text
-   cd <your-project>
-   <your-cli-agent>
-   ```
-
-2. 打开 [`prompts/generic-cli-agent/install-agentpal-current-project.md`](prompts/generic-cli-agent/install-agentpal-current-project.md)。
-3. 不需要提前修改 prompt，直接复制整篇 prompt 文件。
-4. 粘贴到 CLI Agent 中执行。
-5. CLI Agent 提示你输入 AgentPal Workspace 路径时，输入你本机 AgentPal 目录路径，例如 `<path-to-AgentPal>`。
-
-这是通用兼容路径。AgentPal 不承诺所有 CLI Agent 都已经完整验证。
-
-详见：[`docs/04-runtime-guides/03-use-with-generic-cli-agent.md`](docs/04-runtime-guides/03-use-with-generic-cli-agent.md)
-
-## 创建你自己的 Pal
-
-AgentPal 在 [`templates/Pal Pack/`](<templates/Pal Pack/>) 下提供标准 Pal Pack 模板。你可以复制模板目录，改成自己的 Pal 名称，补充身份、输出契约、知识、Skills、示例和 public-safe 占位文件，然后把完成后的 Pal Pack 放入 [`official/pals/`](official/pals/) 或组织批准的 Pal 资产区。注册到 AgentPal 中央通讯录后，就可以像官方 Pal 一样使用。
-
-当前模板：
-
-- [`templates/Pal Pack/zh-CN/`](<templates/Pal Pack/zh-CN/>)
-- [`templates/Pal Pack/en-US/`](<templates/Pal Pack/en-US/>)
-
-注册复制好的 Pal Pack 时，在 AgentPal 工作区执行 [`prompts/add-pal-to-agentpal.md`](prompts/add-pal-to-agentpal.md)：
-
-- Codex：把 AgentPal 目录作为 Codex 项目打开，然后把注册提示词粘贴到 AgentPal 项目对话中执行。
-- Claude Code 或其它 CLI Agent：在终端进入 `<path-to-AgentPal>`，从这个目录启动 CLI Agent，然后粘贴注册提示词执行。
-
-日常使用 AgentPal 时，用户通常是在自己的外部项目目录中工作；这是正常的。但 Pal 注册会修改 AgentPal 自身的 `workspace/organization/contacts/` 与相关中央索引，所以注册步骤应回到 AgentPal 工作区执行。注册完成后，如果外部项目会话仍显示旧 Pal 列表，再重新初始化该项目会话。
-
-## 官方 Pal
-
-| Pal | 职责 | 直接调用 |
-| --- | --- | --- |
-| Mira | Main Pal / Leader / Conductor | `/pal Mira` |
-| Atlas | 开发与工程 | `/pal Atlas` |
-| Nova | 产品与需求 | `/pal Nova` |
-| Faye | AI 交付落地、业务场景、用户流程、数据与接口清单、Delivery Pack、Flow Pack、Pal Team Blueprint、FAYE_BUILD_REQUEST 与验收交接 | `/pal Faye` |
-| Vega | 调研与分析 | `/pal Vega` |
-| Rhea | 系统、环境与工具 | `/pal Rhea` |
-| PalSmith | Pal 创建、AI 团队创建、Pal 资产治理、体检、导入导出与发布准备 | `/pal PalSmith` |
-| Quinn | 质量、验证与发布检查 | `/pal Quinn` |
-| Morgan | 文档、Office、PDF 与文件工作 | `/pal Morgan` |
-| Harper | 写作、沟通与编辑 | `/pal Harper` |
-
-Mira 是默认入口 Pal。专业 Pal 默认不监听；Mira 会在适合时交给它们，用户也可以直接用 `/pal Name` 调用。
-
-真实任务示例见 [Official Pal examples index](docs/07-official-pals/official-pal-examples-index.md)。这些示例只是非绑定学习参考，不是静态指派规则。
-
-## AgentPal 如何工作
-
-1. 用户给出目标。
-2. Mira 接收普通任务。
-3. Mira 或 owner Pal 读取选定上下文。
-4. Pal 整理 Task Package。
-5. Host Runtime 执行文件读取、写入、命令、工具调用或发布动作。
-6. Pal 根据证据验证并汇报结果。
-7. 可复用经验可以沉淀成 Skill、Runbook、Workflow、知识记录或记忆候选。
-
-## Pal vs Skill
-
-| Skill | Pal |
-| --- | --- |
-| 单一能力 | 工作伙伴 |
-| 通常只覆盖一种方法或任务 | 组织能力、上下文、记忆、工作流和验证 |
-| 用户往往要记住何时调用 | 用户只要记住谁负责这类工作 |
-
-Skill 是能力。Pal 是组织能力的工作伙伴。
-
-## Pal Team vs Agent Team
-
-| Agent Team | Pal Team |
-| --- | --- |
-| 多个 Agent 执行任务 | 多个 Pal Pack 组织任务 |
-| 执行属于 Agent Runtime | 执行仍属于 Host Runtime |
-| 可能带来配置、上下文和协调成本 | 负责上下文、Task Package、协作和验证 |
-| 适合更重的多 Agent 执行 | 适合在不把 AgentPal 变成 Runtime 的情况下组织专业视角 |
-
-Subagent 和多 Agent 执行属于 Runtime 层。Pal Team 可以为 Runtime Agent 准备和审查任务，但 AgentPal v0.5 不是多 Agent Runtime。
-
-## Deep Conductor
-
-Deep Conductor 是 AgentPal 面向复杂任务的 no-code collaboration、mode-decision 和 task-package protocol。v0.5 可帮助判断 Fast Route、Owner + Verifier、Plan-Execute-Verify、Parallel Review、Sequential Chain、External Agent handoff 和 Fallback 等协作形态；它不是自动后台执行器。真实文件读写、命令、工具、发布等执行仍由宿主 Runtime 完成并返回证据。入口见：[`docs/05-orchestration-methodology/deep-conductor-e2e-usage-guide.md`](docs/05-orchestration-methodology/deep-conductor-e2e-usage-guide.md)。
-
-## AgentPal 不是什么
+- no-code Pal 组织层
+- Pal Pack 与 AI 团队工作区
+- 用角色化 Pal 组织 AI 工作伙伴的方法
+- 把外部用户项目薄绑定到中央 AgentPal 工作区的方式
+- public-safe 的文档、模板、示例、标准和验证记录集合
 
 AgentPal 不是：
 
 - Agent Runtime
 - 多 Agent Runtime
-- 桌面 App
-- Web App
-- 安装器
-- daemon 或 service
-- marketplace
-- Codex、Claude Code、OpenHands 或其他 Runtime 的替代品
+- App Runtime
+- 桌面 App 或 Web App
+- installer、CLI、daemon、scanner、connector layer 或 marketplace
+- 外部系统执行器
+- 替代真实读写文件、运行命令、调用工具或发布 Release 的宿主 Runtime
 
-AgentPal 是给现有 Runtime 使用的 Pal 层。实际文件操作、命令、工具调用和发布动作由 Host Runtime 执行，并且需要提供证据。
+## Pal / Skill / Agent
+
+AgentPal 明确区分三层：
+
+```text
+Skill  -> 能力包
+Pal    -> 会使用 Skill 和 Agent 的工作伙伴
+Agent  -> 执行运行层
+```
+
+这三句话是 AgentPal 的定位钉子：
+
+- Skill 是能力包，Pal 是会使用 Skill 的工作伙伴。
+- Agent 是执行运行层，Pal 是会使用 Agent 的工作伙伴。
+- 多 Pal 与多 Agent 目标一致，但 AgentPal 用更轻的组织层降低复杂度和成本。
+
+Skill 通常让 AI 更会做某一类事情。Pal 拥有稳定岗位：身份、职责、知识、工作流、记忆规则、输出契约、协作边界和验收习惯。Agent Runtime 负责真实执行。
+
+## 多 Pal 与多 Agent
+
+多 Agent 系统通常会创建多个真实执行的 Agent。它很强，但也容易带来配置、上下文、成本、权限和结果合并的复杂度。
+
+AgentPal 选择更轻的起点：
+
+- Pal 负责组织工作、上下文、职责和验收。
+- 宿主 Runtime 在需要真实文件、命令、工具或发布动作时执行任务。
+- 如果当前 Runtime 已证明支持子 Agent 或外部 Agent，并且用户明确授权，Pal Team 可以为它们准备任务包和验收规则。
+
+不是每个 AI 角色都必须变成一个独立运行的 Agent。很多角色更适合先成为稳定的 Pal：负责理解目标、塑形任务、选择上下文和验证结果。
+
+## 当前已验证能力边界
+
+v0.5 的公开声明必须保守。
+
+| Runtime / mode | 状态 | 公开口径 |
+| --- | --- | --- |
+| Codex | verified | 已有 Codex-first AgentPal 工作区初始化和 Pal 协作证据。 |
+| Codex child/background thread 与 subagent 使用 | limited / evidence-backed | 仅在当前 Codex 宿主有证据且用户授权时可写。 |
+| Claude Code | limited | 只有 minimal handoff evidence；不声明 full host acceptance。 |
+| Generic CLI Agent | compatibility path | 有 prompt-based 路径，但不声明广泛宿主验收。 |
+| DeepSeek / DeepSeek-TUI | experimental / version-help only | 不能写成完整支持。 |
+| Plan Mode | current UI evidence unavailable | 不能写成已真实 UI 验证。 |
+| Goal Mode | limited | 有 active-goal 证据，但有 UI capture limitation。 |
+| OpenCode / Gemini | unavailable in current evidence | 不能写成当前已支持。 |
+| GitHub、Notion、Lark、Cloudflare 等外部系统 | not generally validated | AgentPal 可准备任务包，但不声明直接写回集成。 |
+
+Host capability 必须来自 visible evidence、manual profile 或 runtime-reported profile。AgentPal 不会自动扫描用户系统。
+
+## 内置官方 Pal
+
+当前 official Pal 一共 10 个。事实来源是 [`workspace/organization/contacts/pals.json`](workspace/organization/contacts/pals.json)。
+
+| Pal | 角色 | 适合处理 | 直接调用 |
+| --- | --- | --- | --- |
+| Mira | Main Pal / Leader / Conductor | 初始接待、路由、项目上下文、交接、总结 | `/pal Mira` |
+| Atlas | Developer / Implementation Lead | 工程计划、代码任务包、实现评审 | `/pal Atlas` |
+| Nova | Product / Strategy Lead | 产品定义、PRD、用户流程、优先级、路线图 | `/pal Nova` |
+| Faye | AI Delivery Pal | 业务场景、用户流程、数据/接口清单、风险、Delivery Pack、`FAYE_BUILD_REQUEST` | `/pal Faye` |
+| Vega | Research / Intelligence Lead | 调研计划、资料综合、证据矩阵、不确定性分析 | `/pal Vega` |
+| Quinn | Quality / Verification Lead | 验收标准、回归检查、证据审查、发布门禁 | `/pal Quinn` |
+| Morgan | Document / File Workflow Lead | 文档结构、文件工作流、Office/PDF 任务包 | `/pal Morgan` |
+| Harper | Writing / Content Craft Lead | 写作、文案、叙事、语气、编辑、声明安全 | `/pal Harper` |
+| Rhea | System / Runtime Safety Lead | Runtime 边界、权限、no-code 安全、发布安全 | `/pal Rhea` |
+| PalSmith | Pal Asset Governor | 创建、体检、升级和治理 Pal 与 Pal Team | `/pal PalSmith` |
+
+Mira 是默认入口 Pal。专业 Pal 默认不监听；Mira 会在适合时交给它们，用户也可以直接用 `/pal Name` 调用。
+
+## 安装与 Codex 初始化
+
+AgentPal 当前不是 npm / pip / CLI 安装包，而是一个本地工作区。
+
+1. clone 或下载本仓库。
+2. 把 AgentPal 目录保留为独立本地工作区。
+3. 在 Codex 中把 AgentPal 目录作为项目打开。
+4. 打开 [`prompts/codex/initialize-agentpal-workspace.md`](prompts/codex/initialize-agentpal-workspace.md)。
+5. 把整篇 prompt 复制到 fresh Codex 对话中。
+6. 确认 Mira 欢迎你，并列出当前 10 个 Pal。
+7. 普通消息交给 Mira，或用 `/pal Name` 直接调用专业 Pal。
+
+快速入口：
+
+- [`START_HERE.md`](START_HERE.md)
+- [`prompts/codex/README.md`](prompts/codex/README.md)
+- [`docs/04-runtime-guides/01-use-with-codex.md`](docs/04-runtime-guides/01-use-with-codex.md)
+
+## 绑定到外部项目
+
+日常工作通常发生在你的真实项目里，而不是 AgentPal 工作区里。
+
+AgentPal 使用 thin binding：
+
+- 外部项目仍然是当前项目。
+- AgentPal 工作区只是 Pal 来源和组织层。
+- `.agentpal/` 只保存少量绑定文件。
+- 不把 Pal Packs、docs、evals、release files、memory、reports 或 AgentPal 内部资产复制进外部项目。
+
+当前项目绑定入口：
+
+- Claude Code：[`prompts/claude-code/install-agentpal-current-project.md`](prompts/claude-code/install-agentpal-current-project.md)
+- Generic CLI Agent：[`prompts/generic-cli-agent/install-agentpal-current-project.md`](prompts/generic-cli-agent/install-agentpal-current-project.md)
+
+Codex-first 是当前已验证的发布主路径。其他宿主路径必须保留当前证据限制。
+
+## 用 PalSmith 和 Faye 搭建自己的 AI 团队
+
+AgentPal 内置 PalSmith 和 Faye，帮助用户从“使用内置 Pal”走向“搭建自己的 AI 团队”。
+
+Faye 更适合把真实业务需求整理成落地方案：
+
+- 业务场景
+- 用户流程
+- 数据清单
+- 接口清单
+- 风险与缺失信息
+- 验收交接
+- `FAYE_BUILD_REQUEST`
+
+PalSmith 更适合设计和治理 Pal Team：
+
+- 新 Pal 或团队蓝图
+- Pal 职责与边界
+- Pal Pack 结构
+- knowledge / skill / workflow / runbook 分类
+- 体检与治理建议
+
+入口：
+
+- [`docs/PalSmith.md`](docs/PalSmith.md)
+- [`docs/03-user-guides/palsmith-v0.5-pal-creation-and-upgrade.md`](docs/03-user-guides/palsmith-v0.5-pal-creation-and-upgrade.md)
+- [`docs/07-authoring-pals/README.md`](docs/07-authoring-pals/README.md)
+- [`docs/03-pal-pack-standard/README.md`](docs/03-pal-pack-standard/README.md)
+
+## 项目结构
+
+| 路径 | 用途 |
+| --- | --- |
+| `AGENTS.md` | AgentPal mode 的 Runtime 指令 |
+| `PAL.md` | 工作区身份 |
+| `SKILL.md` | Skill-aware Runtime 入口 |
+| `agentpal.json` | 结构化工作区元数据 |
+| `prompts/` | 可复制的 Runtime prompts |
+| `official/pals/` | 官方 Pal Packs |
+| `workspace/organization/contacts/` | 中央 Pal 名册和 contact cards |
+| `workspace/projects/` | 外部项目的中央记录 |
+| `docs/` | 用户文档、概念、Runtime 指南、创建指南 |
+| `standards/` | no-code 标准与协议 |
+| `templates/` | public-safe 模板 |
+| `examples/` | public-safe 示例 |
+| `evals/` 和 `release/` | 验证与发布证据归档 |
 
 ## 文档入口
 
-- [为什么是 Pal？](docs/01-concepts/07-why-pal.md)
-- [核心概念](docs/01-concepts/)
-- [Pal Asset / Org Pack 关系](docs/00-overview/pal-asset-and-org-pack-relationship.md)
-- [Org Pack / FDE / Asset Boundary 总览](docs/00-overview/org-pack-fde-asset-boundary-overview.md)
-- [Pal Metadata v0.5 升级路径](docs/00-overview/pal-metadata-v0.5-upgrade-path.md)
-- [PalSmith v0.5 Pal 创建与升级](docs/03-user-guides/palsmith-v0.5-pal-creation-and-upgrade.md)
-- [官方 Pal 资产升级计划](docs/03-user-guides/official-pal-asset-upgrade-plan.md)
-- [Pal Pack 标准](docs/03-pal-pack-standard/)
-- [Runtime 指南](docs/04-runtime-guides/)
-- [调度方法论](docs/05-orchestration-methodology/)
-- [v0.2 路线图](docs/09-roadmap/v0.2-development-plan.md)
-- [v0.3 路线图](docs/09-roadmap/v0.3-development-plan.md)
-- [v0.3 Deep Conductor Readiness](docs/09-roadmap/v0.3-deep-conductor-readiness.md)
-- [v0.3 Release Preparation Audit](docs/09-roadmap/v0.3-release-preparation-audit.md)
-- [验证与证据](docs/06-validation-and-evidence/)
-- [创建 Pal](docs/07-authoring-pals/)
-- [Prompts](prompts/)
-- [文档首页](docs/README.md)
+建议从这里开始：
 
-## 贡献
+- [`docs/README.md`](docs/README.md)
+- [`docs/00-overview/00-what-is-agentpal.md`](docs/00-overview/00-what-is-agentpal.md)
+- [`docs/01-concepts/07-why-pal.md`](docs/01-concepts/07-why-pal.md)
+- [`docs/04-runtime-guides/00-runtime-compatibility.md`](docs/04-runtime-guides/00-runtime-compatibility.md)
+- [`RESOURCE_INDEX.md`](RESOURCE_INDEX.md)
 
-贡献时请保持 v0.5 的边界：AgentPal 是面向 Agent Runtime 的 Pal Workspace 和 Pal Pack 标准实践，包含 no-code Deep Conductor protocols，并要求宿主 Runtime 为真实执行返回证据。它不是自动运行时。
+验证与发布记录仍然可查，但不是用户第一入口。
 
-详见：[`CONTRIBUTING.md`](CONTRIBUTING.md)。
+## 当前限制
+
+- AgentPal 不自己执行任务。
+- AgentPal 不包含 scanner、daemon、connector system、marketplace、installer 或 app runtime。
+- AgentPal v0.5 不声明完整的非 Codex 宿主验收。
+- AgentPal 不声明可直接写入 GitHub、Notion、Lark、Cloudflare、CRM 或客户系统；除非当前宿主 Runtime 对具体动作有明确授权和执行证据。
+- 客户数据和私有项目事实不能进入 public examples、Pal Packs 或 global knowledge。
+- Deep Conductor 是 no-code collaboration 和 mode-decision protocol，不是自动后台执行器。
 
 ## License
 

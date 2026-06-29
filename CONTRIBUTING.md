@@ -2,72 +2,94 @@
 
 Thank you for helping improve AgentPal.
 
-AgentPal v0.1.0-rc.1 is a Pal layer and Pal Pack Standard practice for Markdown/JSON-capable agent runtimes. Contributions should keep the repository release-safe, runtime-readable, and honest about the current Simple Pal Mode boundary.
+AgentPal v0.5 is a no-code Pal organization layer and Pal Pack workspace for existing agent runtimes. Contributions should keep the repository public-safe, runtime-readable, and honest about current evidence.
 
-## Ways To Contribute
+## What Contributions Are Welcome
 
-- Improve public documentation.
-- Improve Pal Pack protocols, templates, or examples.
-- Add release-safe examples and evals.
-- Propose new Pal Pack templates.
-- Improve compatibility notes for Codex, Claude Code, or other Markdown/JSON-capable runtimes.
-- Report unclear wording, broken links, version mismatches, or public-safety gaps.
+- Public documentation improvements.
+- Pal Pack standards, templates, and examples.
+- Public-safe examples for Pal teams, Task Packages, Context Packets, and project binding.
+- Runtime guide wording that preserves current evidence limits.
+- PalBench and validation records that clearly say `pass`, `partial`, `blocked`, `not-run`, or `unavailable`.
+- Fixes for broken links, stale version wording, or public-safety issues.
 
-## Contributing Pal Packs
+## Current Boundary
 
-Pal Pack contributions should be valid directory packages under `pals/<Name-role>/`.
+AgentPal is not an Agent runtime, multi-agent runtime, app runtime, installer, daemon, scanner, connector layer, marketplace, or external-system executor.
 
-Minimum required files:
+Do not add required Python, Node.js, Rust, Go, service, daemon, scanner, validator, installer, desktop UI, or web UI dependencies unless a future release explicitly changes that boundary.
 
+Real execution belongs to the host runtime and must be backed by current evidence and user authorization.
+
+## Pal Pack Contributions
+
+Valid Pal Packs belong under an approved Pal Pack area, such as `official/pals/` for bundled official Pals or another organization-approved Pal area.
+
+Minimum public Pal Pack files:
+
+- `README.md`
 - `PAL.md`
 - `pal.json`
 - `SKILL.md`
-- `README.md`
 - `AGENTS.md`
 - `core/output-contract.md`
 
-A useful Pal Pack should also include clear responsibility boundaries, collaboration permissions, safety notes, verification expectations, and public-safe placeholders for memory, state, reports, examples, and evals when those directories are present.
+A useful Pal Pack should also include responsibility boundaries, collaboration permissions, safety notes, verification expectations, and public-safe placeholders for memory, state, reports, examples, and evals when those directories are present.
 
-Do not register ordinary Skills, tools, models, MCP servers, plugins, raw repositories, knowledge packs, or persona packs as Pal contacts. Only valid Pal Packs should enter `contacts/` and `registry/`.
+Do not register ordinary Skills, tools, models, MCP servers, plugins, raw repositories, knowledge packs, or persona packs as Pal contacts. Only valid Pal Packs should enter the central contacts under `workspace/organization/contacts/`.
 
-## Contributing Documentation
-
-Documentation should be clear, public-facing English unless a file is explicitly Chinese-localized, such as `README.zh-CN.md`.
+## Documentation Contributions
 
 Good documentation contributions:
 
-- explain current v0.1.0-rc.1 behavior
-- distinguish Pal layer responsibilities from execution-runtime responsibilities
+- explain current v0.5 behavior
+- distinguish Pal, Skill, Agent, and Runtime
+- keep Codex as the current verified first path
+- mark limited, experimental, unavailable, or not-run host support honestly
 - use relative links
 - avoid local absolute paths
-- mark planned or future work as future, not active
-- keep root files short and move deeper explanations into `docs/`
+- keep root files short and move deeper explanation into `docs/`
+- keep user onboarding separate from evidence archives
 
-## Contributing Templates And Examples
+The current Codex initialization path is:
 
-Templates and examples must use synthetic or placeholder data. They should help users create Pal Packs, Context Packets, output contracts, project bindings, or release-safe documentation without exposing real private information.
+```text
+prompts/codex/initialize-agentpal-workspace.md
+```
 
-## Do Not Submit Private Or Unauthorized Data
+## Runtime Support Claims
+
+Use conservative public wording:
+
+- Codex: verified first path.
+- Claude Code: minimal handoff evidence only unless future full host acceptance passes.
+- Generic CLI Agent: compatibility prompt path, not broad validation.
+- DeepSeek / DeepSeek-TUI: experimental or version-help level unless future tests pass.
+- Plan Mode: UI unavailable in current evidence.
+- Goal Mode: limited evidence.
+- OpenCode / Gemini: unavailable in current evidence.
+
+Do not claim connector, scanner, daemon, marketplace, app runtime, automatic environment scan, or external-system writeback support without current runtime evidence.
+
+## Public-Safe Data Rules
 
 Do not submit:
 
 - private user memory
 - real user conversation history
-- private project information
+- private project facts
 - internal development reports
 - API keys, tokens, passwords, secrets, credentials, or private keys
-- customer data
+- real customer data
 - proprietary documents without permission
 - copied internal reference documents
 - long third-party README, Skill, source, or documentation text
 - copyrighted material without permission and proper license handling
 
-## Runtime Boundary
-
-AgentPal v0.1.0-rc.1 must remain usable as a Markdown/JSON workspace. Do not add required Python, Node.js, Rust, Go, service, daemon, scanner, validator, installer, desktop UI, or web UI dependencies unless a future release explicitly changes that boundary.
+Templates and examples must use synthetic or placeholder data.
 
 ## Release Boundary
 
-Everything in the public AgentPal repository is treated as release content. Keep runtime-private memory, private state, real reports, internal notes, and secrets outside the repository or under ignored local-only paths.
+Everything committed to the public AgentPal repository is treated as release content. Keep runtime-private memory, private state, real reports, internal notes, and secrets outside the repository or under ignored local-only paths.
 
-Third-party resources keep their original licenses and notices. Prefer short references, summaries, and links over copied third-party text.
+Remote publication actions such as `git push`, tags, GitHub Releases, or package publication require explicit current-session authorization.

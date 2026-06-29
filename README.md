@@ -1,285 +1,205 @@
 # AgentPal
 
-AgentPal is a lightweight framework for building AI teams on top of agent runtimes such as Codex, Claude Code, OpenCode, OpenHands, and other CLI agents.
+AgentPal is a no-code AI team organization layer for agent runtimes.
 
-Create role-based Pals with knowledge, skills, memory, workflows, output contracts, and collaboration rules, then organize them into a working AI team.
+It does not replace Codex, Claude Code, OpenCode, OpenHands, OpenClaw, Hermes, workbuddy, Gemini CLI, DeepSeek-TUI, or other execution environments. It gives those environments a readable Pal workspace: identities, responsibilities, knowledge, skills, workflows, memory boundaries, task packages, verification habits, and collaboration rules.
 
-AgentPal gives every agent a Pal. AgentPal v0.5 is a Markdown / JSON / protocol workspace for runtimes that can read structured workspace files. It is not an Agent runtime, not a multi-agent runtime, not an execution layer, not a desktop app, not a web app, and not an installer.
+In one sentence:
 
-First time here? Start with [START_HERE.md](START_HERE.md), then use [What is AgentPal?](docs/00-overview/what-is-agentpal.md), [First 30 Minutes with AgentPal](docs/01-getting-started/first-30-minutes.md), and the [first AgentPal team walkthrough](examples/walkthroughs/first-agentpal-team/). These onboarding docs are local-only and public-safe; remote publication still requires explicit user authorization.
+> AgentPal adds a Pal team organization layer to existing agent runtimes.
 
-## PalSmith
+## What AgentPal Is
 
-PalSmith is the AI team builder and Pal asset governance Pal for AgentPal. It helps users create, improve, inspect, import, export, version, and maintain Pals and Pal teams through natural language, without needing to understand the full Pal Pack directory structure.
+AgentPal v0.5 is a Markdown / JSON / protocol workspace. It is designed for runtimes that can read local files and follow structured instructions.
 
-Learn more about PalSmith: [What is PalSmith, and how can I operate it?](docs/01-concepts/09-What-is-PalSmith-how-can-I-operate-it.md)
+AgentPal is:
 
-v0.2 development now focuses on productizing this path. Start from the [v0.2 development plan](docs/09-roadmap/v0.2-development-plan.md), the [v0.2 task pool](docs/09-roadmap/v0.2-task-pool.md), and the [PalSmith end-to-end productization plan](docs/06-palsmith/palsmith-end-to-end-productization.md). The first implementation slice adds copyable creation packages for a first professional Pal and an AI team goal.
-
-For v0.2 Capability Inventory work, see the [minimal usable design](docs/05-orchestration-methodology/capability-inventory-minimal-usable-design.md), [manual profile guide](docs/03-user-guides/manual-capability-profile.md), [navigation guide](docs/00-overview/capability-inventory-navigation.md), and [capability profile index](standards/capability-inventory/README.md). Capability Inventory assets are split across `standards/capability-inventory/`, `workspace/organization/capability-inventory/`, `examples/capability-inventory/`, `templates/capability-inventory/`, and the project record template at `workspace/projects/_template/capability-inventory/`; templates, the Business System standard, review flow, manual update evidence pack, manual writeback replay record, audit trail index, governance decision record, change ledger, change review note, and public-safe examples cover external system governance notes, while profiles are illustrative judgement inputs, not connectors, automatic environment scans, or keyword routes.
-
-For v0.2 release regression work, see the [PalBench Light Suite](evals/palbench-light/README.md) and [suite plan](docs/research/palbench-light-suite-plan.md).
-
-For Runtime Adapter troubleshooting and thin binding stability, see the [stability guide](docs/04-runtime-guides/runtime-adapter-stability-guide.md) and [troubleshooting prompt cards](docs/04-runtime-guides/runtime-adapter-troubleshooting-prompt-cards.md).
-
-For the no-code orchestration prototype line, see the [v0.3 development plan](docs/09-roadmap/v0.3-development-plan.md), [v0.3 task pool](docs/09-roadmap/v0.3-task-pool.md), [v0.3 Deep Conductor readiness](docs/09-roadmap/v0.3-deep-conductor-readiness.md), [v0.3 public capability summary](docs/09-roadmap/v0.3-public-capability-summary.md), [Deep Conductor E2E guide](docs/05-orchestration-methodology/deep-conductor-e2e-usage-guide.md), [Deep Conductor real runtime replay report](docs/research/deep-conductor-real-runtime-replay-report.md), [Context Packet usage guide](docs/05-orchestration-methodology/context-packet-usage-guide.md), [multi-Pal prompt cards](docs/02-getting-started/multi-pal-collaboration-prompt-cards.md), and [PalBench Collaboration Suite](evals/palbench-collaboration/README.md). v0.3 Deep Conductor is no-code orchestration, not an automatic runtime.
-
-For the local v0.4/v0.5 workspace layout, see the [Repository Structure](docs/00-overview/repository-structure.md) guide. The visible root directories are `standards/`, `official/`, `workspace/`, `templates/`, `examples/`, `evals/`, `release/`, `archive/`, and `docs/`.
-
-For v0.4 local completion evidence, see the [local completion report](release/current/v0.4-local-completion-report.md), [evidence index](release/current/v0.4-local-completion-evidence-index.md), and [user-facing summary](docs/08-release-and-maintenance/v0.4-local-completion-summary.md). This is local completion evidence, not a GitHub Release or remote publication.
-
-For v0.5 local development, see the [v0.5 local development scope](docs/09-roadmap/v0.5-local-development-scope.md), [Org Pack standard](standards/org-pack/org-pack-standard.md), [Org Pack / FDE / Asset Boundary overview](docs/00-overview/org-pack-fde-asset-boundary-overview.md), [Org/FDE combined pack usage scenario](docs/04-usage-scenarios/org-fde-combined-pack-usage-scenario.md), [Pal Asset standards](standards/pal-asset/), [Pal Metadata v0.5 upgrade path](docs/00-overview/pal-metadata-v0.5-upgrade-path.md), [PalSmith v0.5 standards](standards/palsmith/), [Pal Asset / Org Pack relationship guide](docs/00-overview/pal-asset-and-org-pack-relationship.md), [practical Org Pack template](templates/org-pack/practical-org-pack/), [base FDE Pack template](templates/fde-pack/base-fde-pack/), [asset-boundary standards](standards/asset-boundary/), [combined Org/FDE example](examples/combined-packs/content-ops-with-accounting-advisor/), and [public-safe examples](examples/). The combined example shows an Org Pack referencing an FDE Pack with PalSmith review-gate evidence; it is a public-safe no-code example, not a marketplace, connector, installer, scanner, validator, runtime resolver, or keyword router. Org Packs, FDE Packs, Combined Pack examples, Asset Boundary standards, Pal Asset standards, and Pal Metadata v0.5 plans are no-code organization assets.
-
-For v0.5 local completion evidence, see the [local completion report](release/current/v0.5-local-completion-report.md), [evidence index](release/current/v0.5-local-completion-evidence-index.md), and [release-not-published statement](release/current/v0.5-release-not-published.md). This is local completion evidence only; no GitHub Release, tag, push, or remote publication was performed in this round.
-
-For v0.5 local release preflight, see the [local release preflight](release/current/v0.5-local-release-preflight.md), [public package checklist](release/current/v0.5-public-package-checklist.md), [release notes draft](release/current/v0.5-release-notes-draft.md), [public artifact inventory](release/current/v0.5-public-artifact-inventory.md), and [remote-publication decision note](release/current/v0.5-remote-publication-decision-required.md). R131 prepares a publication decision only; it does not publish v0.5 remotely.
-
-For v0.5 Faye / Delivery Pack integration, see the [Faye / Delivery Pack / Deep Conductor overview](docs/00-overview/faye-delivery-pack-deep-conductor-overview.md), [Faye standards](standards/faye-delivery-pal/), [base Delivery Pack template](templates/delivery-pack/base-delivery-pack/), [video growth Delivery Pack](examples/delivery-packs/video-growth-delivery-pack/), [sales CRM Delivery Pack](examples/delivery-packs/sales-crm-delivery-pack/), and [Faye Deep Conductor protocols](standards/deep-conductor/). These are no-code organization and delivery assets; they are not connectors, marketplaces, runtime engines, external project writers, or keyword routers.
-
-R132-R134 extend the v0.5 package after the R130 local completion and R131 local preflight records. For the current extended-scope status, see the [Faye extension scope update](release/current/v0.5-faye-extension-scope-update.md), [completion status after Faye extension](release/current/v0.5-completion-status-after-faye-extension.md), [Faye extension evidence index](release/current/v0.5-faye-extension-evidence-index.md), and [R136 targeted regression plan](evals/palbench/v0.5/r135-r136-faye-extension-targeted-regression-plan.md). A refreshed final v0.5 release-ready claim requires R136 targeted regression; remote publication remains paused.
-
-R137 refreshes v0.5 local completion after the Faye extension and R136 targeted regression. See the [refreshed local completion report](release/current/v0.5-local-completion-report-after-faye-extension.md), [refreshed evidence index](release/current/v0.5-local-completion-evidence-index-after-faye-extension.md), [refreshed local release preflight](release/current/v0.5-local-release-preflight-after-faye-extension.md), and [refreshed release notes draft](release/current/v0.5-release-notes-draft-after-faye-extension.md). This remains local-only evidence; no GitHub Release, tag, push, pull, fetch, or remote publication was performed.
-
-For the final v0.5 local release preflight after the Faye extension, see the [final local preflight](release/current/v0.5-final-local-release-preflight-after-faye-extension.md), [public package readiness review](release/current/v0.5-final-public-package-readiness-review.md), [final blocker scan](release/fresh-clone-checks/r138-final-local-release-blocker-scan.md), and [final local release status](release/current/v0.5-final-local-release-status.md). R138 prepares a user decision only; no GitHub Release, tag, push, pull, fetch, or remote publication was performed.
-
-R140 adds a local fresh-clone usability simulation for the new-user path. See the [setup](release/fresh-clone-checks/r140-fresh-clone-usability-simulation-setup.md), [issues](evals/palbench/v0.5/r140-fresh-clone-usability-issues.md), [validation](release/fresh-clone-checks/r140-local-fresh-clone-usability-validation.md), and [R141 readiness decision](release/integration-notes/r140-r141-readiness-decision.md). This is local usability evidence only.
-
-## Why AgentPal?
-
-When users want agents to work better, they usually try one of two paths:
-
-- add more Skills
-- build Agent teams
-
-Skills are lightweight, but they can become fragmented. A Skill is often single-purpose, easy to forget, hard to combine, and usually does not own memory, workflow, verification, or long-term context.
-
-Agent teams can be powerful, but they are often heavy. They may require complex configuration, repeated context, higher context cost, role coordination, result merging, and stronger permission boundaries.
-
-AgentPal adds the missing middle layer: Pal. A Pal turns many skills, knowledge cards, workflows, memories, and verification rules into a few memorable working companions.
-
-Users should not need to remember hundreds of skills. They should be able to remember a few Pals and what each Pal is responsible for.
-
-## What Is A Pal?
-
-A Pal is not a single Skill.
-
-A Pal is not a new Agent runtime.
-
-A Pal is a portable working companion made of identity, knowledge, skills, memory rules, workflows, context rules, output contracts, verification habits, and collaboration protocols.
-
-The name Pal means a memorable working companion, not a tool name. In AgentPal, a Pal helps the current runtime understand the user's goal, load the right context, shape a Task Package, use relevant Skills or fallback methods, and check whether the result is actually complete.
-
-Learn more about Pal:
-
-- [Why Pal?](docs/01-concepts/07-why-pal.md)
-- [Pal Teams, Multi-Pal Collaboration, and Deep Conductor](docs/01-concepts/08-pal-teams-collaboration-and-deep-conductor.md)
-
-## What Works Today
-
-AgentPal v0.5 currently provides:
-
-- Markdown / JSON / protocol workspace assets with no required runtime dependency
-- Standards for no-code boundaries, thin project binding, central assets, host-runtime execution, and no keyword routing under `standards/`
-- Central organization workspace foundations under `workspace/`, including the central Pal roster at `workspace/organization/contacts/pals.json` and central project records under `workspace/projects/`
-- Official bundled Pal Packs under `official/pals/`
-- Simple Pal Mode as the active runtime policy
-- Mira as the default Main Pal / Leader / Conductor, with leader knowledge, skills, workflows, runbooks, evals, research inventory, delegation, handoff, context packet, risk approval, and progress reporting assets
-- 10 official bundled Pals: Mira, Atlas, Vega, Rhea, PalSmith, Quinn, Morgan, Harper, Nova, and Faye
-- `/pal Name` explicit Pal calls backed by the central contact roster
-- AI owner judgement, Fast Route owner-Pal handoff, and no hard-coded keyword routing
-- Task Package rules, Runtime Task Package standards, Context Slicing, and Asset Loading Budget
-- PalSmith as the official no-code Pal asset governance Pal for Pal creation, AI team creation, job fitness inspection, user material ingestion, optional web research to knowledge, import, export, health checks, versioning, publish readiness, and Runtime Task Package planning
-- PalSmith quickstart path, AI team blueprints, demo script, readiness matrix, task package templates, example packages, governance protocols, and Markdown evals
-- Formal Skill asset standard with 219 formal skills mapped to Pal-owned skill assets and 0 missing formal Skill assets under the release standard
-- Deepened official Pal assets for Atlas, Vega, Rhea, Quinn, Morgan, Harper, and Nova, including role knowledge, skills, workflows, runbooks, evals, collaboration boundaries, and research inventories
-- Historical release-candidate evidence archived under `archive/migration-from-v0.3/release-candidate-docs/`, with `docs/08-release-candidate/README.md` kept as a pointer
-- Codex, Claude Code, and Generic CLI Agent usage guides with thin project binding prompts
-- PalBench small-sample validation
-- R93/R94 release-prep validation assets for v0.4 real-usage regression planning, thin-binding simulation, central asset integrity audit, and shared-entry integration under `evals/palbench/` and `release/fresh-clone-checks/`
-
-## Quick Start
-
-Most day-to-day use can start with Mira. Mira is the default Main Pal / Leader Pal / Conductor: tell her the goal, and she will either answer as team leader, ask a focused question, hand off to a specialist Pal, or prepare a staged Runtime Task Package. Start with [Mira-first usage](docs/02-getting-started/mira-first-usage.md) and [Mira-first prompt cards](docs/02-getting-started/mira-first-prompt-cards.md).
-
-### Codex
-
-Use this when you open the AgentPal Workspace directly in Codex.
-
-1. Create a new Codex project with the AgentPal directory.
-2. Open [`prompts/codex/initialize-agentpal-workspace.md`](prompts/codex/initialize-agentpal-workspace.md).
-3. Copy the whole prompt.
-4. Paste it into the AgentPal project conversation in Codex to initialize AgentPal.
-5. Start ordinary messages with Mira, or call a specialist with `/pal Name`.
-
-Codex prompt files now live under [`prompts/codex/`](prompts/codex/). Codex workspace initialization does not require `AGENTPAL_HOME`.
-
-More: [`docs/04-runtime-guides/01-use-with-codex.md`](docs/04-runtime-guides/01-use-with-codex.md)
-
-### Claude Code
-
-Use this when you want to connect AgentPal to an existing user project in Claude Code.
-
-1. Start in your real project:
-
-   ```text
-   cd <your-project>
-   claude
-   ```
-
-2. Open [`prompts/claude-code/install-agentpal-current-project.md`](prompts/claude-code/install-agentpal-current-project.md).
-3. Copy the whole prompt file without editing it.
-4. Paste it into Claude Code.
-5. When Claude Code asks for your AgentPal Workspace path, enter the local path to the AgentPal directory, for example `<path-to-AgentPal>`.
-6. Let Claude Code create or update the project-local binding files.
-
-The Claude Code path updates project-local binding files and may update `.claude/settings.local.json`. That file is local machine configuration and should not be committed. Project memory, source maps, derived knowledge, task records, reports, governance notes, and capability inventory belong in the AgentPal Workspace under `workspace/projects/<project-id>/`, not in the external project's `.agentpal/` directory.
-
-More: [`docs/04-runtime-guides/02-use-with-claude-code.md`](docs/04-runtime-guides/02-use-with-claude-code.md)
-
-### Generic CLI Agent
-
-Use this with a CLI agent that can read project files, follow Markdown / JSON instructions, keep context, and report execution evidence.
-
-1. Start in your real project:
-
-   ```text
-   cd <your-project>
-   <your-cli-agent>
-   ```
-
-2. Open [`prompts/generic-cli-agent/install-agentpal-current-project.md`](prompts/generic-cli-agent/install-agentpal-current-project.md).
-3. Copy the whole prompt file without editing it.
-4. Paste it into the CLI Agent.
-5. When the CLI Agent asks for your AgentPal Workspace path, enter the local path to the AgentPal directory, for example `<path-to-AgentPal>`.
-
-This is a generic compatibility path. AgentPal does not claim every CLI Agent has been fully validated.
-
-External projects stay thin-bound: `.agentpal/project.json`, `.agentpal/AGENTPAL.md`, and protected root instruction blocks point back to the AgentPal Workspace and its `agentpal_project_record`.
-
-More: [`docs/04-runtime-guides/03-use-with-generic-cli-agent.md`](docs/04-runtime-guides/03-use-with-generic-cli-agent.md)
-
-## Create Your Own Pal
-
-AgentPal includes standard Pal Pack templates under [`templates/Pal Pack/`](<templates/Pal Pack/>). Copy a template, rename it for your Pal, fill in the identity, output contract, knowledge, Skills, examples, and public-safe placeholders, then place the finished Pal Pack under [`official/pals/`](official/pals/) or the selected organization Pal area. After the Pal is registered through AgentPal central contacts, you can use it like the bundled Pals.
-
-Available template sets:
-
-- [`templates/Pal Pack/zh-CN/`](<templates/Pal Pack/zh-CN/>)
-- [`templates/Pal Pack/en-US/`](<templates/Pal Pack/en-US/>)
-
-To register a copied Pal Pack, run [`prompts/add-pal-to-agentpal.md`](prompts/add-pal-to-agentpal.md) from the AgentPal Workspace:
-
-- Codex: open the AgentPal directory as its own Codex project, then paste the prompt into the AgentPal project conversation.
-- Claude Code or another CLI agent: open a terminal in `<path-to-AgentPal>`, start the CLI agent there, then paste the prompt.
-
-Most users run AgentPal from an external project during daily work. Pal registration edits AgentPal's central roster under `workspace/organization/contacts/`, so do the registration step in the AgentPal Workspace, then reinitialize the external project session if it still shows the old Pal list.
-
-## Official Pals
-
-| Pal | Responsibility | Direct call |
-| --- | --- | --- |
-| Mira | Main Pal / Leader / Conductor | `/pal Mira` |
-| Atlas | Developer / Implementation Lead, Runtime Task Packages, file boundaries, evidence review | `/pal Atlas` |
-| Nova | Product / Strategy Lead, product intake, problem framing, user segments, JTBD, value proposition, PRD, prioritization, roadmap, MVP/release scope, metrics, risk, GTM alignment, and product handoff | `/pal Nova` |
-| Faye | AI Delivery Pal, business scenario definition, user flows, data and interface lists, Delivery Packs, Flow Packs, Pal Team Blueprints, FAYE_BUILD_REQUEST packets, and acceptance handoff | `/pal Faye` |
-| Vega | Research / Intelligence Lead, source inventory, evidence matrix, research synthesis, comparative analysis, uncertainty, and knowledge distillation | `/pal Vega` |
-| Rhea | System / Runtime Safety Lead, permission boundaries, no-code boundary, evidence review, release safety, rollback readiness, and incident review | `/pal Rhea` |
-| PalSmith | Pal creation, job fitness governance, material ingestion, research-to-knowledge, import/export, health checks, versioning, and Runtime Task Packages | `/pal PalSmith` |
-| Quinn | Quality / Verification Lead, acceptance criteria, Definition of Done, evidence review, false completion detection, regression gates, release quality gates, not-run handling, and cross-Pal review | `/pal Quinn` |
-| Morgan | Document / File Workflow Lead, information architecture, content preservation, Markdown docs, Office/PDF task packages, release notes, document quality, and safe file workflows | `/pal Morgan` |
-| Harper | Writing / Content Craft Lead, audience framing, voice, structure, rewriting, copywriting, narrative, social content, preservation, claim safety, and content self-review | `/pal Harper` |
-
-Mira is the default entry Pal and Leader Pal. She handles first-contact intake, owner judgement, Context Packet shaping, risk approval framing, progress reporting, and final synthesis; specialist Pals still own their professional work and do not listen by default. Mira routes to them when appropriate, or users can call them directly with `/pal Name`.
-
-For realistic official Pal task examples, see the [Official Pal examples index](docs/07-official-pals/official-pal-examples-index.md). These examples are non-binding learning references, not dispatch rules.
-
-PalSmith is registered as `palsmith-pal-governor` at `official/pals/PalSmith-pal-governor` in `agentpal.json` and `workspace/organization/contacts/pals.json`.
-
-Use PalSmith directly with `/pal PalSmith ...`. PalSmith works through Runtime Task Packages and does not require Python, Node.js, Rust, a UI, or an installer.
-
-Start from [`docs/PalSmith.md`](docs/PalSmith.md), then use the [Runtime Task Package standard](docs/03-pal-pack-standard/14-runtime-task-package.md), [PalSmith v0.2 productization](docs/06-palsmith/README.md), [PalSmith end-to-end workflows](docs/07-authoring-pals/13-palsmith-end-to-end-workflows.md), [PalSmith Pal lifecycle](docs/07-authoring-pals/14-palsmith-pal-lifecycle.md), [PalSmith quickstart AI team](docs/07-authoring-pals/15-palsmith-quickstart-ai-team.md), [PalSmith demo script](docs/07-authoring-pals/16-palsmith-demo-script.md), and the historical [PalSmith E2E test summary archive](archive/migration-from-v0.3/release-candidate-docs/11-palsmith-e2e-test-summary.md) when preparing release-safe Pal work.
-
-## How AgentPal Works
-
-1. The user gives a goal.
-2. Mira receives ordinary tasks.
-3. Mira or the owner Pal loads selected context.
-4. The Pal shapes a Task Package.
-5. The host runtime executes file reads, writes, commands, tools, or publishing actions.
-6. The Pal verifies evidence and reports the result.
-7. Reusable experience can become a Skill, Runbook, Workflow, knowledge note, or memory candidate.
-
-## Pal Vs Skill
-
-| Skill | Pal |
-| --- | --- |
-| A single capability | A working companion |
-| Usually focused on one method or task type | Organizes capabilities, context, memory, workflow, and verification |
-| User often needs to remember when to use it | User remembers the Pal responsible for the work |
-
-Skill is capability. Pal is a working companion that organizes capabilities.
-
-## Pal Team Vs Agent Team
-
-| Agent Team | Pal Team |
-| --- | --- |
-| Multiple agents executing work | Multiple Pal Packs organizing work |
-| Execution belongs to agent runtimes | Execution still belongs to the host runtime |
-| Can add configuration, context, and coordination overhead | Shapes context, Task Packages, collaboration, and verification |
-| Useful for heavy multi-agent execution | Useful for professional perspectives without making AgentPal a runtime |
-
-Subagents and multi-agent execution belong to the runtime layer. A Pal Team can prepare and review tasks for runtime agents, but AgentPal v0.5 is not a multi-agent runtime.
-
-## Deep Conductor
-
-Deep Conductor is AgentPal's no-code collaboration, mode-decision, and task-package protocol for complex tasks. In v0.5, it can help judge Fast Route, Owner + Verifier, Plan-Execute-Verify, Parallel Review, Sequential Chain, External Agent handoff, and Fallback shapes. It is not an automatic background executor. Host runtimes perform real execution and must return evidence. Start with [`docs/05-orchestration-methodology/deep-conductor-e2e-usage-guide.md`](docs/05-orchestration-methodology/deep-conductor-e2e-usage-guide.md).
-
-## What AgentPal Is Not
+- a no-code Pal organization layer
+- a Pal Pack and AI team workspace
+- a way to organize role-based AI working partners
+- a thin-binding system for connecting an external user project to the central AgentPal Workspace
+- a public-safe set of docs, templates, examples, standards, and evaluation records
 
 AgentPal is not:
 
-- an Agent Runtime
+- an Agent runtime
 - a multi-agent runtime
-- a desktop app
-- a web app
-- an installer
-- a daemon or service
-- a marketplace
-- a built-in PalSmith CLI, scanner, validator, importer, or exporter
-- a replacement for Codex, Claude Code, OpenHands, or other runtimes
+- an app runtime
+- a desktop app or web app
+- an installer, CLI, daemon, scanner, connector layer, or marketplace
+- an external-system executor
+- a replacement for the host runtime that actually reads files, edits files, runs commands, or publishes releases
 
-AgentPal is a Pal layer for existing runtimes. It does not require Python, Node.js, or Rust for ordinary use. The host runtime performs actual execution from Runtime Task Packages and must provide evidence for real actions.
+## Pal / Skill / Agent
+
+AgentPal keeps three layers separate:
+
+```text
+Skill  -> capability package
+Pal    -> working partner that uses Skills and Agents
+Agent  -> execution runtime
+```
+
+The core positioning is:
+
+- A Skill is a capability package; a Pal is a working partner that knows how to use Skills.
+- An Agent is the execution runtime; a Pal is a working partner that knows how to use Agents.
+- Multi-Pal and multi-Agent teams share the same goal, but AgentPal uses a lighter organization layer to reduce complexity and cost.
+
+A Skill usually helps an AI do one kind of work. A Pal owns a role: identity, responsibility, knowledge, workflows, memory rules, output contracts, collaboration boundaries, and verification habits. An Agent runtime performs the actual execution.
+
+## Multi-Pal Vs Multi-Agent
+
+Multi-agent systems often create several executing agents. That can be powerful, but it can also add configuration, context, cost, permission, and result-merging overhead.
+
+AgentPal starts lighter:
+
+- Pals organize work, context, responsibility, and verification.
+- The host runtime performs execution when real file, command, tool, or publishing actions are needed.
+- A Pal team can still prepare work for subagents or external agents when the current runtime proves that capability and the user authorizes it.
+
+Not every AI role needs to become an independent running Agent. Many roles work better as stable Pals that shape tasks, choose context, and verify results.
+
+## Verified Runtime Support
+
+Current v0.5 public claims are intentionally conservative.
+
+| Runtime / mode | Status | Public claim |
+| --- | --- | --- |
+| Codex | verified | Codex-first AgentPal workspace initialization and Pal collaboration evidence exists. |
+| Codex child/background thread and subagent usage | limited / evidence-backed | Supported only where current Codex host evidence and user authorization exist. |
+| Claude Code | limited | Minimal handoff evidence exists; full AgentPal host acceptance is not claimed. |
+| Generic CLI agents | compatibility path | Prompt-based path exists, but broad host acceptance is not claimed. |
+| DeepSeek / DeepSeek-TUI | experimental / version-help only | Do not treat as complete runtime support. |
+| Plan Mode | unavailable in current UI evidence | Do not claim real UI-verified support. |
+| Goal Mode | limited | Active-goal evidence exists with UI capture limitations. |
+| OpenCode / Gemini | unavailable in current evidence | Do not claim current support. |
+| External systems such as GitHub, Notion, Lark, Cloudflare | not generally validated | AgentPal can prepare task packages, but does not claim direct writeback integration. |
+
+Host capability must come from visible evidence, a manual profile, or a runtime-reported profile. AgentPal does not automatically scan the user's system.
+
+## Built-In Pals
+
+The current official Pal roster has 10 Pals. The source of truth is [`workspace/organization/contacts/pals.json`](workspace/organization/contacts/pals.json).
+
+| Pal | Role | Use for | Direct call |
+| --- | --- | --- | --- |
+| Mira | Main Pal / Leader / Conductor | first contact, routing, project context, handoff, summaries | `/pal Mira` |
+| Atlas | Developer / Implementation Lead | engineering plans, code work packages, implementation review | `/pal Atlas` |
+| Nova | Product / Strategy Lead | product framing, PRD shape, user flows, priorities, roadmap | `/pal Nova` |
+| Faye | AI Delivery Pal | business scenarios, user flows, data/interface lists, risks, Delivery Packs, `FAYE_BUILD_REQUEST` | `/pal Faye` |
+| Vega | Research / Intelligence Lead | research plans, source synthesis, evidence matrices, uncertainty | `/pal Vega` |
+| Quinn | Quality / Verification Lead | acceptance criteria, regression checks, evidence review, release gates | `/pal Quinn` |
+| Morgan | Document / File Workflow Lead | documentation structure, file workflows, Office/PDF task packages | `/pal Morgan` |
+| Harper | Writing / Content Craft Lead | writing, copy, narrative, voice, editing, claim safety | `/pal Harper` |
+| Rhea | System / Runtime Safety Lead | runtime boundaries, permissions, no-code safety, release safety | `/pal Rhea` |
+| PalSmith | Pal Asset Governor | create, inspect, upgrade, and govern Pals and Pal teams | `/pal PalSmith` |
+
+Mira is the default entry Pal. Specialist Pals do not listen by default. Mira can route to them, or you can call them directly with `/pal Name`.
+
+## Install And Initialize With Codex
+
+AgentPal currently installs as a local workspace, not as a package manager dependency.
+
+1. Clone or download this repository.
+2. Keep the AgentPal directory as its own local workspace.
+3. Open the AgentPal directory as a Codex project.
+4. Open [`prompts/codex/initialize-agentpal-workspace.md`](prompts/codex/initialize-agentpal-workspace.md).
+5. Copy the whole prompt into the fresh Codex conversation.
+6. Confirm that Mira welcomes you and lists the current 10 Pals.
+7. Use ordinary messages with Mira, or call a specialist with `/pal Name`.
+
+Quick start:
+
+- [`START_HERE.md`](START_HERE.md)
+- [`prompts/codex/README.md`](prompts/codex/README.md)
+- [`docs/04-runtime-guides/01-use-with-codex.md`](docs/04-runtime-guides/01-use-with-codex.md)
+
+## Bind AgentPal To An External Project
+
+Daily work usually happens inside your own project, not inside the AgentPal Workspace.
+
+AgentPal uses thin binding for external projects:
+
+- the external project stays the active project
+- the AgentPal Workspace remains the Pal source and organization layer
+- `.agentpal/` stores small binding files only
+- Pal Packs, docs, evals, release files, memory, reports, and internal AgentPal assets are not copied into the external project
+
+For current project binding, use the prompt path for your host runtime:
+
+- Claude Code: [`prompts/claude-code/install-agentpal-current-project.md`](prompts/claude-code/install-agentpal-current-project.md)
+- Generic CLI Agent: [`prompts/generic-cli-agent/install-agentpal-current-project.md`](prompts/generic-cli-agent/install-agentpal-current-project.md)
+
+Codex-first support is the verified release path. Other host paths must remain honest about their current evidence limits.
+
+## Create Your Own Pal Team
+
+AgentPal includes PalSmith and Faye for moving from "use built-in Pals" to "design my own AI team."
+
+Use Faye when you need to turn a real business idea into a delivery-shaped package:
+
+- business scenario
+- user flow
+- data list
+- interface list
+- risks and missing information
+- acceptance handoff
+- `FAYE_BUILD_REQUEST`
+
+Use PalSmith when you need to design or improve the Pal team:
+
+- new Pal or team blueprint
+- Pal responsibilities and boundaries
+- Pal Pack structure
+- knowledge / skill / workflow / runbook classification
+- health check and governance notes
+
+Useful entry points:
+
+- [`docs/PalSmith.md`](docs/PalSmith.md)
+- [`docs/03-user-guides/palsmith-v0.5-pal-creation-and-upgrade.md`](docs/03-user-guides/palsmith-v0.5-pal-creation-and-upgrade.md)
+- [`docs/07-authoring-pals/README.md`](docs/07-authoring-pals/README.md)
+- [`docs/03-pal-pack-standard/README.md`](docs/03-pal-pack-standard/README.md)
+
+## Project Structure
+
+| Path | Purpose |
+| --- | --- |
+| `AGENTS.md` | runtime instructions for AgentPal mode |
+| `PAL.md` | workspace identity |
+| `SKILL.md` | Skill-aware entry for the AgentPal Workspace |
+| `agentpal.json` | structured workspace metadata |
+| `prompts/` | copyable runtime prompts |
+| `official/pals/` | official Pal Packs |
+| `workspace/organization/contacts/` | central Pal roster and contact cards |
+| `workspace/projects/` | central records for bound external projects |
+| `docs/` | user docs, concepts, runtime guides, authoring guides |
+| `standards/` | no-code standards and protocols |
+| `templates/` | public-safe templates |
+| `examples/` | public-safe examples |
+| `evals/` and `release/` | validation and release evidence archive |
 
 ## Documentation
 
-- [Why Pal?](docs/01-concepts/07-why-pal.md)
-- [Concepts](docs/01-concepts/)
-- [Central Project Record](docs/02-concepts/central-project-record.md)
-- [Project Memory in AgentPal](docs/02-concepts/project-memory-in-agentpal.md)
-- [Source Map and Derived Knowledge](docs/02-concepts/source-map-and-derived-knowledge.md)
-- [Repository Structure](docs/00-overview/repository-structure.md)
-- [Pal Asset / Org Pack Relationship](docs/00-overview/pal-asset-and-org-pack-relationship.md)
-- [Org Pack / FDE / Asset Boundary Overview](docs/00-overview/org-pack-fde-asset-boundary-overview.md)
-- [Pal Metadata v0.5 Upgrade Path](docs/00-overview/pal-metadata-v0.5-upgrade-path.md)
-- [PalSmith v0.5 Pal Creation and Upgrade](docs/03-user-guides/palsmith-v0.5-pal-creation-and-upgrade.md)
-- [Official Pal Asset Upgrade Plan](docs/03-user-guides/official-pal-asset-upgrade-plan.md)
-- [Pal Pack Standard](docs/03-pal-pack-standard/)
-- [Runtime Guides](docs/04-runtime-guides/)
-- [Orchestration Methodology](docs/05-orchestration-methodology/)
-- [v0.2 Roadmap](docs/09-roadmap/v0.2-development-plan.md)
-- [v0.3 Roadmap](docs/09-roadmap/v0.3-development-plan.md)
-- [v0.3 Deep Conductor Readiness](docs/09-roadmap/v0.3-deep-conductor-readiness.md)
-- [v0.3 Release Preparation Audit](docs/09-roadmap/v0.3-release-preparation-audit.md)
-- [Validation and Evidence](docs/06-validation-and-evidence/)
-- [Authoring Pals](docs/07-authoring-pals/)
-- [Prompts](prompts/)
-- [Documentation Home](docs/README.md)
+Start here:
 
-## Contributing
+- [`docs/README.md`](docs/README.md)
+- [`docs/00-overview/00-what-is-agentpal.md`](docs/00-overview/00-what-is-agentpal.md)
+- [`docs/01-concepts/07-why-pal.md`](docs/01-concepts/07-why-pal.md)
+- [`docs/04-runtime-guides/00-runtime-compatibility.md`](docs/04-runtime-guides/00-runtime-compatibility.md)
+- [`RESOURCE_INDEX.md`](RESOURCE_INDEX.md)
 
-Contributions should preserve the v0.5 boundary: AgentPal is a Pal Workspace and Pal Pack standard practice for agent runtimes, with no-code Deep Conductor protocols and host Runtime execution evidence. It is not an automatic runtime.
+Evidence and validation records are available, but they are not the main onboarding path.
 
-See [`CONTRIBUTING.md`](CONTRIBUTING.md).
+## Current Limitations
+
+- AgentPal does not execute tasks by itself.
+- AgentPal does not include a scanner, daemon, connector system, marketplace, installer, or app runtime.
+- AgentPal does not claim full non-Codex host acceptance in v0.5.
+- AgentPal does not write to GitHub, Notion, Lark, Cloudflare, CRM, or customer systems unless the current host runtime performs an explicitly authorized action with evidence.
+- Customer data and private project facts must not be copied into public examples, Pal Packs, or global knowledge.
+- Deep Conductor is a no-code collaboration and mode-decision protocol. It is not an automatic background executor.
 
 ## License
 

@@ -1,60 +1,95 @@
 ---
 name: agentpal-workspace
-description: Use this AgentPal Workspace when the user wants to initialize Mira Main Pal / Leader Pal / Conductor, manage official and user-added Pal Packs in a runtime-readable Pal Workspace, route with /pal Name, or bind AgentPal to external projects.
+description: Use this AgentPal Workspace when a runtime should initialize Mira, discover the official Pal roster, route `/pal Name`, or bind AgentPal to an external project through thin project files.
 version: v0.5
 type: agentpal-workspace
 ---
 
 # AgentPal Workspace Skill Entry
 
-This is not a single-purpose Skill. This is the AgentPal Workspace entry for the Pal Pack Standard practice in v0.5.
+This is the Skill-aware entry for the AgentPal Workspace.
 
-AgentPal is a Pal layer for an existing execution runtime. It is not an Agent layer, not a multi-agent runtime, not an execution layer, and not a single Pal Pack.
+AgentPal is not a single Skill and not a single Pal Pack. It is a no-code Pal organization layer for an existing execution runtime. It provides Pal identities, central contacts, Pal Pack assets, prompts, standards, task-package protocols, verification records, and external-project thin binding guidance.
 
-When invoked:
+AgentPal does not execute tasks by itself. Real file reads, edits, commands, tool calls, publishing, deletion, and external-system actions belong to the current host runtime and require current evidence.
 
-1. Read root `AGENTS.md`.
-2. Read `prompts/codex/initialize-agentpal-workspace.md`.
-3. Read `agentpal.json`.
-4. Read `workspace/organization/contacts/pals.json`.
-5. Read `workspace/organization/contacts/PAL_CONTACTS.md`.
-6. Read `official/pals/Mira-main/PAL.md`.
-7. Read `official/pals/Mira-main/AGENTS.md`.
-8. Read `official/pals/Mira-main/SKILL.md`.
-9. Read `orchestration/runtime-response-gate.md`.
-10. Enter Simple Pal Mode with Mira as the default Main Pal, Leader Pal, and Conductor.
-11. Scan `official/pals/` for valid official Pal Packs only when initialization, diagnostics, refresh, or release validation requires it.
-12. Treat Mira, Atlas, Vega, Rhea, PalSmith, Quinn, Morgan, Harper, Nova, and Faye as the official bundled Pal baseline from `workspace/organization/contacts/pals.json`.
-13. For external project-bound work, treat `workspace/projects/<project-id>/` as the central project record for source maps, derived knowledge, project memory, task records, reports, governance records, and capability inventory.
-14. Refresh contacts and registry files only when asked or when a maintenance flow explicitly requires it.
+## Load For Workspace Initialization
 
-Default behavior:
+When the runtime is asked to initialize AgentPal in the AgentPal Workspace, read the smallest useful set:
 
-- Ordinary messages go to Mira.
-- Mira is the single default entry point; users do not need to manually choose Pals, runtimes, models, Skills, plugins, or future topology for ordinary use.
+1. `AGENTS.md`
+2. `prompts/codex/initialize-agentpal-workspace.md`
+3. `agentpal.json`
+4. `workspace/organization/contacts/pals.json`
+5. `workspace/organization/contacts/PAL_CONTACTS.md`
+6. `official/pals/Mira-main/PAL.md`
+7. `official/pals/Mira-main/AGENTS.md`
+8. `official/pals/Mira-main/SKILL.md`
+9. `orchestration/runtime-response-gate.md`
+
+Then enter AgentPal mode with Mira as the default Main Pal, Leader Pal, and Conductor.
+
+## Current Official Pals
+
+The current official bundled Pal baseline is:
+
+- Mira
+- Atlas
+- Nova
+- Faye
+- Vega
+- Quinn
+- Morgan
+- Harper
+- Rhea
+- PalSmith
+
+The source of truth is `workspace/organization/contacts/pals.json`. Do not add tools, models, plugins, MCP servers, raw repositories, knowledge packs, or persona packs as contacts unless they are packaged and registered as valid Pal Packs.
+
+## Default Behavior
+
+- Ordinary user messages go to Mira.
 - Specialist Pals do not listen by default.
-- Replies must start with the speaking Pal name, such as `Mira：`, `Atlas：`, or `Rhea：`.
-- Natural-language replies and reports follow the user's latest instruction language unless the user explicitly requests another language; preserve commands, file paths, filenames, JSON keys, Git hashes, tags, branch names, model names, and code blocks as-is.
-- Use `/pal Name` and `@Name` for direct Pal calls.
-- Use Context Packet for Pal-to-Pal handoff, consultation, delegation, or review.
-- Use Fast Route for clear owner-Pal handoff. Treat Deep Conductor as no-code protocol foundation unless host-runtime execution evidence exists.
-- Delegate owned tasks to the proper Pal through the current Simple Pal Mode handoff pattern unless the user explicitly asks Mira for a simple explanation she can own.
-- Treat project as external user project by default.
-- When binding an external project, create or update the external project root `AGENTS.md` with the AgentPal workgroup block; `.agentpal/` alone is not enough.
-- Separate Pal layer and Execution layer in reports.
-- Do not require any local runtime environment for ordinary AgentPal initialization.
-- Treat tools, models, plugins, MCP servers, non-Pal runtimes, and raw repositories as non-contacts unless they are packaged as valid Pal Packs.
-- Do not create new UI, service, scanner, validator, unrelated CLI, or installer code during initialization.
+- Users can call a Pal with `/pal Name` or `@Name`.
+- Mira uses case-specific AI owner judgement, not keyword routing.
+- If a specialist owns the work, Mira hands off and the specialist answers under that Pal's prefix.
+- Natural-language replies follow the user's latest instruction language.
+- Reports must separate the Pal layer from the execution layer.
+- Project means an external user project unless the user explicitly says AgentPal itself.
 
-Supported workspace functions:
+## Runtime Boundary
 
-- Mira Main Pal / Leader Pal / Conductor initialization
-- Pal discovery and indexing
-- Pal contacts and mention aliases
-- official bundled Pal routing
-- Context Packet generation
-- external project `.agentpal/` workgroup binding
-- runtime-awareness, model-routing, skill-plugin-discovery, and capability-profiling documentation
-- Pal Pack Standard practice for public-safe Pal Pack authoring
+AgentPal v0.5 is Codex-first verified.
 
+Other host paths must keep their limits clear:
 
+- Claude Code has minimal handoff evidence, not full host acceptance.
+- Generic CLI agents have compatibility prompts, not broad validation.
+- OpenCode and Gemini are unavailable in current evidence.
+- DeepSeek / DeepSeek-TUI are experimental or version-help level only.
+- Plan Mode UI evidence is unavailable.
+- Goal Mode evidence is limited.
+
+AgentPal must not claim automatic capability scans, connector execution, app runtime behavior, marketplace behavior, daemon behavior, or external-system writeback without current runtime evidence and user authorization.
+
+## External Project Thin Binding
+
+When binding an external project:
+
+- keep `active_project_root` as the user project
+- keep `agentpal_workspace_root` as the Pal source
+- write only thin binding files into the external project
+- do not copy Pal Packs, docs, evals, release files, reports, or internal AgentPal memory into the external project
+- store AgentPal project records under `workspace/projects/<project-id>/` by default
+
+## Installation / Initialization Entry
+
+Current Codex initialization uses:
+
+```text
+prompts/codex/initialize-agentpal-workspace.md
+```
+
+## Do Not Add During Initialization
+
+Do not create a CLI, installer, UI, scanner, validator, daemon, service, connector layer, marketplace, database, or new runtime dependency as part of ordinary AgentPal initialization.

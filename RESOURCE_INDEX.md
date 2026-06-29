@@ -1094,6 +1094,15 @@ Use the current docs directories as the public entry points. Archived research n
 | `release/fresh-clone-checks/r161-local-documentation-governance-validation.md` | R161 local documentation governance validation |
 | `release/integration-notes/r161-r162-documentation-rewrite-readiness-decision.md` | R161 to R162 rewrite readiness decision |
 
+## R162 Public Docs Rewrite Evidence
+
+| Path | Purpose |
+| --- | --- |
+| `evals/palbench/v0.5/documentation/r162-public-docs-rewrite-summary.md` | R162 public README and docs navigation rewrite summary |
+| `evals/palbench/v0.5/documentation/r162-readme-claim-guard.md` | R162 public README claim guard |
+| `release/fresh-clone-checks/r162-local-public-docs-validation.md` | R162 local public docs validation |
+| `release/integration-notes/r162-r163-docs-restructure-readiness-decision.md` | R162 to R163 docs restructure readiness decision |
+
 ## Do Not Load By Default
 
 - all Pal Packs
