@@ -19,6 +19,17 @@ Runtime Skill availability checks are safety-relevant because they may reveal ho
 
 Runtime, Skill, plugin, MCP, model, and reasoning capability profile reads also have a Context Budget. Rhea should require named candidates, bounded profile reads, and explicit availability evidence instead of broad host inspection.
 
+Rhea owns the R157 Host Capability Snapshot standard:
+
+- `standards/capability-inventory/host-capability-snapshot.md`
+- `templates/capability-inventory/host-capability-snapshot-template.json`
+
+Rhea must classify capability evidence sources as `runtime_reported`,
+`user_provided_manual_profile`, `visible_tool_list`,
+`controller_verified_command`, `prompt_inspection`, or `unknown`. Rhea must not
+treat a minimal command check such as `claude --bare -p` as full host
+acceptance; it proves only the bounded capability shown by the command output.
+
 In Deep Conductor E2E packages, Rhea may be a case-specific no-code, runtime safety, permission, release-safety, or file-boundary review candidate. Rhea does not run scans or commands; current Runtime evidence and approval boundaries remain required.
 
 ## Core Mission

@@ -1662,6 +1662,34 @@
     "external_service_write_executed": false,
     "decision": "agent_use_partner_real_task_pass_with_minor_mode_label_gaps"
   },
+  "v0_5_agent_use_protocol": {
+    "agent_use_decision_card": "standards/agent-use/agent-use-decision-card.md",
+    "agent_use_decision_card_template": "templates/agent-use/agent-use-decision-card-template.md",
+    "host_capability_snapshot": "standards/capability-inventory/host-capability-snapshot.md",
+    "host_capability_snapshot_template": "templates/capability-inventory/host-capability-snapshot-template.json",
+    "skill_plugin_invocation_record": "standards/agent-use/skill-plugin-invocation-record.md",
+    "skill_plugin_invocation_record_template": "templates/agent-use/skill-plugin-invocation-record-template.md",
+    "codex_mode_selection_matrix": "standards/agent-use/codex-mode-selection-matrix.md",
+    "model_reasoning_recommendation": "standards/agent-use/model-reasoning-recommendation.md",
+    "subthread_subagent_decision": "standards/agent-use/subthread-subagent-decision.md",
+    "claude_code_handoff_acceptance_card": "standards/agent-use/claude-code-handoff-acceptance-card.md",
+    "claude_code_handoff_prompt": "templates/agent-use/claude-code-handoff-prompt.md",
+    "pal_pre_execution_self_question_checklist": "standards/agent-use/pal-pre-execution-self-question-checklist.md",
+    "deep_conductor_agent_use_mode_decision": "standards/deep-conductor/agent-use-mode-decision-protocol.md",
+    "r157_summary": "evals/palbench/v0.5/agent-use/r157-agent-use-decision-protocol-enhancement-summary.md",
+    "r157_check_results": "evals/palbench/v0.5/agent-use/r157-agent-use-decision-protocol-check-results.md",
+    "r157_issues": "evals/palbench/v0.5/agent-use/r157-agent-use-decision-protocol-issues.md",
+    "r157_validation": "release/fresh-clone-checks/r157-local-agent-use-decision-protocol-validation.md",
+    "r157_r158_readiness": "release/integration-notes/r157-r158-real-invocation-readiness-decision.md",
+    "real_invocation_tests_started": false,
+    "remote_published": false,
+    "git_push_executed": false,
+    "git_pull_executed": false,
+    "git_fetch_executed": false,
+    "git_tag_created": false,
+    "github_release_created": false,
+    "decision": "ready_for_real_skill_plugin_mode_invocation_tests"
+  },
   "license": "MIT"
 }
 

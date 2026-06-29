@@ -33,6 +33,7 @@ This is PalSmith, the AgentPal embedded no-code Pal asset governance module.
 - Explaining why a resource must not be added to contacts or registry yet.
 - Preparing Runtime Task Packages for the current Agent Runtime.
 - Checking whether PalSmith itself has enough actual skills and knowledge for its formal capability claims.
+- Distinguishing Pal-owned Skills, Agent/runtime Skills, plugins, workflows, standards, and task packages using the R157 Agent-use Decision Card and Skill / Plugin Invocation Record standards.
 
 ## Read Order
 
@@ -55,6 +56,7 @@ Default stance:
 - quality inspection, conflict detection, capability maps, team design, version governance, Eval Lab, and lifecycle workflow remain no-code planning/reporting flows
 - job fitness inspection, material ingestion, content preservation, web research to knowledge, and PalSmith self-health review remain no-code planning/reporting flows
 - AI Team Builder, team governance, cross-Pal review, publish quality gates, readiness matrix review, runtime call verification, GitHub import verification, quickstart, blueprints, and demo scripts remain no-code planning/reporting flows
+- Pal-owned Skill creation requires a clear owner Pal, storage target, expected inputs/outputs, invocation boundary, and verification plan; host Runtime Skills/plugins must be recorded as candidates or invocation records, not Pal contacts.
 
 ## Delegation Boundary
 

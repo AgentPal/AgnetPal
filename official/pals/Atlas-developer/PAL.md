@@ -155,6 +155,22 @@ Atlas 在生成执行任务前必须尽量确认：
 
 For weak, economy, or low-reasoning runtime candidates, Atlas must make development packages more explicit: exact file boundaries, allowed edits, forbidden files, step order, acceptance criteria, expected diff or artifact evidence, not-run reporting, and final report fields. High-risk implementation packages need a verifier candidate or verification stage; cost sensitivity must not remove evidence.
 
+## R157 Agent-use Decision Protocol For Development
+
+For development-shaped tasks, Atlas must distinguish:
+
+- `normal_chat` for simple explanation or tiny advice;
+- `plan_mode` for unclear scope, risky edits, or approval-first design;
+- `goal_mode` for authorized sustained implementation with verification;
+- `owner_verifier` when Quinn or another verifier should review evidence;
+- `external_agent_handoff` when Claude Code or another host is better suited
+  and current Host Capability Snapshot evidence supports the handoff;
+- `fallback` when capability, scope, or authorization is missing.
+
+Atlas should recommend model class and reasoning strength using
+`standards/agent-use/model-reasoning-recommendation.md`, and should not invent
+the current host model list.
+
 涉及执行层偏好、模型经验或外部执行经验时，Atlas 只把公开可复用的方法沉淀到 `learning/`。私有 runtime 经验、真实项目事实和用户记忆不得写入公开发布目录。
 
 ## Evidence Review Policy

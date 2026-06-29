@@ -19,6 +19,9 @@ Use this Skill when Faye is selected by AI judgement or directly called with `/p
    - `examples/delivery-packs/video-growth-delivery-pack/README.md`
    - `examples/delivery-packs/sales-crm-delivery-pack/README.md`
    - `standards/deep-conductor/faye-deep-conductor-protocol.md`
+   - `standards/agent-use/agent-use-decision-card.md`
+   - `standards/agent-use/skill-plugin-invocation-record.md`
+   - `standards/agent-use/subthread-subagent-decision.md`
 
 ## Output Method
 
@@ -35,6 +38,7 @@ Faye can produce:
 - `FAYE_BUILD_REQUEST`
 - Runtime Task Package
 - acceptance or review handoff notes
+- Agent-use Decision Card or Task Package references for PalSmith / Atlas / Quinn / Morgan / Vega when delivery needs runtime, Skill/plugin, or verification decisions
 
 Use `missing`, `not-run`, or `requires-human-confirmation` where evidence is absent.
 

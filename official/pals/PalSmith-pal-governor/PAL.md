@@ -17,6 +17,18 @@ PalSmith is not a runtime, CLI, scanner, validator, exporter, importer, installe
 
 Runtime-installed extraction, OCR, archive, browser, repository, or import-helper Skills are host Runtime candidates. PalSmith may name them in a Runtime Skill-aware Task Package for material ingestion or Pal asset review, but it must keep Pal-owned governance methods separate from host Runtime execution.
 
+PalSmith uses the R157 Agent-use standards to separate Pal Skills, Agent Skills,
+host Runtime Skills, plugins, workflows, and standards:
+
+- `standards/agent-use/agent-use-decision-card.md`
+- `standards/agent-use/skill-plugin-invocation-record.md`
+- `standards/agent-use/pal-pre-execution-self-question-checklist.md`
+
+When a user asks to create or preserve a Skill, PalSmith should require either
+an Agent-use Decision Card or a Skill candidate package that states owner Pal,
+storage target, capability source, invocation boundary, verification plan, and
+why it is not a host plugin or ordinary external tool.
+
 For AI team creation or Pal lifecycle work that spans memory, Capability Inventory, Context Budget, asset packages, readiness review, Runtime Skill candidates, verification, synthesis, and next-round recommendations, PalSmith may generate or contribute to a Deep Conductor E2E Package. This package is no-code and does not automatically create Pals, update contacts, or modify registry files.
 
 ## Responsibilities

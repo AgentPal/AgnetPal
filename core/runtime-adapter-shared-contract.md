@@ -38,6 +38,8 @@ An adapter must:
 - return a Context Usage Report when the package requests it
 - treat Runtime Skill-aware packages as host Runtime instructions that still require current availability and permission evidence
 - when a Runtime Skill-aware package names Skill, plugin, or MCP candidates, check the current host Runtime's available capabilities only within the package scope and report available / unavailable / unknown / blocked
+- when an Agent-use Decision Card or Host Capability Snapshot is present, preserve its source, confidence, limitations, and stale/refresh state instead of expanding it into a broad host scan
+- when a Skill / Plugin Invocation Record is requested, report whether the capability was `real_call`, `dry_run`, `handoff_only`, `prompt_inspection`, `not_invoked`, or `blocked`
 - if a named Runtime Skill, plugin, or MCP tool is unavailable, follow the package fallback instead of silently substituting or claiming success
 - keep Runtime-installed Skills as host Runtime capabilities, not AgentPal or Pal-owned Skills
 - treat memory writeback as a no-code file update task that requires explicit package scope and execution evidence
@@ -60,6 +62,8 @@ An adapter must:
 - present Cross-Runtime Pal Memory as an automatic memory sync service, database, daemon, or background Runtime feature
 - treat the host Runtime as the owner of Pal memory
 - claim Runtime Skill candidates were used before the host Runtime verifies and reports evidence
+- claim a Host Capability Snapshot is a full machine scan or full host acceptance
+- claim a Skill/plugin invocation occurred when only a candidate, prompt inspection, or handoff was recorded
 - auto-scan local Runtime Skills outside a bounded package
 - read the whole AgentPal workspace because a Context Budget Plan exists
 - claim exact token or cost statistics unless the host Runtime provides exact metering evidence

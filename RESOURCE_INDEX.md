@@ -1008,13 +1008,28 @@ Use the current docs directories as the public entry points. Archived research n
 | Path | Purpose |
 | --- | --- |
 | `evals/palbench/v0.5/agent-use/r156-agent-use-partner-real-task-test-plan.md` | R156 real host Agent-use partner test plan and scoring policy |
-| `evals/palbench/v0.5/agent-use/r156-agent-use-partner-real-task-results.md` | R156 real Codex thread submission results; blocked because final 18-case answers were not returned |
-| `evals/palbench/v0.5/agent-use/r156-agent-use-partner-issues.md` | R156 blocker/issue list and non-Codex host status |
-| `evals/palbench/v0.5/agent-use/r156-codex-mode-skill-plugin-trigger-matrix.md` | R156 expected trigger matrix and blocked actual-observation status |
+| `evals/palbench/v0.5/agent-use/r156-agent-use-partner-real-task-results.md` | R156 real Codex thread results with 18 final answers and 16 pass / 2 partial |
+| `evals/palbench/v0.5/agent-use/r156-agent-use-partner-issues.md` | R156 issue list: mode-label gap, Host Capability Snapshot gap, latency note, non-Codex host status |
+| `evals/palbench/v0.5/agent-use/r156-codex-mode-skill-plugin-trigger-matrix.md` | R156 trigger matrix with correct/partial actual trigger observations |
 | `evals/palbench/v0.5/agent-use/r156-claude-code-real-call-results.md` | R156 Claude Code minimal real-call evidence |
 | `evals/palbench/v0.5/agent-use/r156-agent-use-optimization-backlog.md` | R156 follow-up backlog for Agent-use partner behavior |
 | `release/fresh-clone-checks/r156-local-agent-use-partner-validation.md` | R156 local validation record |
 | `release/integration-notes/r156-r157-agent-use-decision.md` | R156 to R157 decision record |
+
+## R157 Agent-use Decision Protocol Evidence
+
+| Path | Purpose |
+| --- | --- |
+| `standards/agent-use/` | R157 Agent-use no-code standards for Decision Cards, invocation records, modes, model/reasoning, subthreads, Claude Code handoff, and pre-execution checklist |
+| `templates/agent-use/` | R157 Agent-use templates |
+| `standards/capability-inventory/host-capability-snapshot.md` | bounded Host Capability Snapshot protocol |
+| `templates/capability-inventory/host-capability-snapshot-template.json` | Host Capability Snapshot JSON template |
+| `standards/deep-conductor/agent-use-mode-decision-protocol.md` | Deep Conductor bridge to R157 Agent-use mode decisions |
+| `evals/palbench/v0.5/agent-use/r157-agent-use-decision-protocol-enhancement-summary.md` | R157 enhancement summary |
+| `evals/palbench/v0.5/agent-use/r157-agent-use-decision-protocol-check-results.md` | R157 protocol check results |
+| `evals/palbench/v0.5/agent-use/r157-agent-use-decision-protocol-issues.md` | R157 issue record |
+| `release/fresh-clone-checks/r157-local-agent-use-decision-protocol-validation.md` | R157 local validation |
+| `release/integration-notes/r157-r158-real-invocation-readiness-decision.md` | R157 to R158 readiness decision |
 
 ## Do Not Load By Default
 

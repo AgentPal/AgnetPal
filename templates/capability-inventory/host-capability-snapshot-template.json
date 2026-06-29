@@ -1,0 +1,23 @@
+{
+  "schema": "agentpal.host-capability-snapshot.v0.5",
+  "snapshot_id": "",
+  "host_name": "",
+  "host_type": "codex | claude-code | generic-cli-agent | codewhale | other | unknown",
+  "source": "runtime_reported | user_provided_manual_profile | visible_tool_list | controller_verified_command | prompt_inspection | unknown",
+  "source_detail": "",
+  "confidence": "low | medium | high",
+  "verified_at": "",
+  "verified_by": "",
+  "capabilities": [],
+  "available_skills": [],
+  "available_plugins": [],
+  "available_modes": [],
+  "subthread_support": "yes | no | unknown",
+  "subagent_support": "yes | no | unknown",
+  "external_write_capability": "yes | no | unknown",
+  "authorization_required": [],
+  "limitations": [],
+  "stale_after": "",
+  "refresh_needed": true
+}
+

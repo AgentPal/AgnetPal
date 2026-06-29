@@ -19,6 +19,9 @@ This is the current Codex path for AgentPal v0.5.
 - `/pal Name` enters the selected Pal working mode inside the current runtime.
 - The simple Mira-to-owner path is available for clear tasks.
 - Deep Conductor is available as a no-code collaboration and mode-decision protocol, not as automatic runtime execution.
+- Complex execution-shaped tasks may use an Agent-use Decision Card with explicit
+  `codex_mode`, model/reasoning recommendation, Skill/plugin candidates, and
+  subthread/subagent decision.
 
 ## Important Boundary
 
@@ -26,6 +29,8 @@ This is the current Codex path for AgentPal v0.5.
 - AgentPal is not a Codex subagent system.
 - Deep Conductor is a no-code collaboration and mode-decision protocol, not automatic runtime execution.
 - Do not describe parallel child workflows as the current AgentPal runtime path.
+- Do not treat visible Skills/plugins as invoked until a Skill / Plugin
+  Invocation Record or equivalent evidence says what actually happened.
 
 ## Good First Commands
 

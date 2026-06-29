@@ -28,3 +28,7 @@ Do not create Claude Code-specific files unless the runtime is Claude Code or th
 The Generic CLI Agent prompt uses thin binding only. It must not copy Pal Packs or Pal assets into the external project, add scanners, daemons, installers, connectors, runtime services, marketplace programs, or publish remotely.
 
 AgentPal v0.5 Deep Conductor is a no-code collaboration and mode-decision protocol. Runtime capability, subagent execution, external Agent execution, MCP/plugin calls, and Runtime Skill execution remain unknown unless the current host reports evidence or the user supplies a manual capability profile.
+
+R157 Agent-use protocol requires explicit mode, model/reasoning, host capability
+source, Skill/plugin invocation status, and subthread/subagent evidence before a
+generic CLI agent may claim execution or host support.

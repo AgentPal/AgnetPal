@@ -47,6 +47,8 @@ It does not require Claude Code local settings, and it should not create runtime
 - The simple Mira-to-owner path is available for clear tasks.
 - Deep Conductor is available as a no-code collaboration and mode-decision protocol, not automatic runtime execution.
 - Subagent execution, external Agent execution, MCP/plugin calls, and Runtime Skill execution require current host evidence or explicit user authorization.
+- Use Host Capability Snapshots and Skill / Plugin Invocation Records to
+  distinguish current evidence from assumptions.
 
 ## Related
 

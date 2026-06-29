@@ -54,6 +54,10 @@ These are fallback options, not the default setup path.
 - The simple Mira-to-owner path is available for clear tasks.
 - Deep Conductor is available as a no-code collaboration and mode-decision protocol, not automatic runtime execution.
 - Subagent execution and external Agent execution require current Claude Code evidence or explicit user authorization.
+- `claude --bare -p` success is minimal call evidence only. It is not full
+  AgentPal Claude Code host acceptance.
+- Use a Claude Code Handoff Acceptance Card when moving a real AgentPal task to
+  Claude Code and returning evidence to Mira or Quinn.
 
 ## Related
 
