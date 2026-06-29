@@ -1067,6 +1067,21 @@ Use the current docs directories as the public entry points. Archived research n
 | `release/fresh-clone-checks/r159-local-codex-subagent-external-agent-validation.md` | R159 local validation record |
 | `release/integration-notes/r159-r160-agent-use-decision.md` | R159 to R160 decision record |
 
+## R160 Final Real Host Gap Closure Evidence
+
+| Path | Purpose |
+| --- | --- |
+| `evals/palbench/v0.5/agent-use/r160-final-real-host-gap-closure-results.md` | R160 final real-host gap closure results and 6-case summary |
+| `evals/palbench/v0.5/agent-use/r160-plan-goal-mode-manual-evidence.md` | R160 Plan Mode / Goal Mode evidence, limitations, and copyable manual scripts |
+| `evals/palbench/v0.5/agent-use/r160-claude-code-host-acceptance-results.md` | R160 Claude Code minimal handoff and budget-blocked full-host attempt |
+| `evals/palbench/v0.5/agent-use/r160-subagent-child-thread-regression-results.md` | R160 Codex child-thread enum regression evidence |
+| `evals/palbench/v0.5/agent-use/r160-capability-status-classification.md` | R160 final capability status classification table |
+| `evals/palbench/v0.5/agent-use/r160-release-claim-guard.md` | R160 public claim guard with claimable and forbidden wording |
+| `evals/palbench/v0.5/agent-use/r160-final-gap-issues.md` | R160 remaining low/note limitations |
+| `evals/palbench/v0.5/agent-use/fixtures/r160/` | R160 public-safe local fixture and evidence outputs |
+| `release/fresh-clone-checks/r160-local-final-real-host-gap-validation.md` | R160 local validation record |
+| `release/integration-notes/r160-r161-release-evidence-readiness-decision.md` | R160 to R161 readiness decision |
+
 ## Do Not Load By Default
 
 - all Pal Packs
