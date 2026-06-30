@@ -581,6 +581,12 @@ Use the current docs directories as the public entry points. Archived research n
 | `evals/palbench/v0.5/palsmith/r177-quinn-draft-usage-review.md` | R177 Quinn read-only draft usage review |
 | `evals/palbench/v0.5/palsmith/r177-draft-pal-usage-regression-summary.md` | R177 draft Pal usage regression summary |
 | `evals/palbench/v0.5/palsmith/r179-draft-to-custom-pal-installation-flow.md` | R179 draft Pal Pack to user custom Pal no-code flow evidence |
+| `workspace/resources/user-pals/README.md` | R181 local user custom Pal index |
+| `workspace/resources/user-pals/FirstPrinciplesProductReviewer/` | R181 non-official user custom Pal test artifact |
+| `evals/palbench/v0.5/palsmith/r181-palsmith-draft-to-custom-plan.md` | R181 PalSmith draft-to-custom enablement plan evidence |
+| `evals/palbench/v0.5/palsmith/r181-draft-to-custom-install-result.md` | R181 draft-to-custom placement result evidence |
+| `evals/palbench/v0.5/palsmith/r181-quinn-draft-to-custom-review.md` | R181 Quinn draft-to-custom file-level QA review |
+| `evals/palbench/v0.5/palsmith/r181-draft-to-custom-real-host-summary.md` | R181 draft-to-custom real host rehearsal summary |
 | `templates/palsmith/minimal-pal-generation-checklist.md` | Minimal Pal generation checklist |
 | `templates/palsmith/standard-pal-generation-checklist.md` | Standard Pal generation checklist |
 | `templates/palsmith/pal-asset-classification-result-template.json` | Pal asset classification result JSON template |
