@@ -18,7 +18,7 @@
   "type": "pal-pack",
   "description": "PalSmith governs Pal Pack creation, AI team blueprints, job fitness inspection, content-preserving material ingestion, web research to knowledge, readiness review, import/export review, version governance, registry, and contacts work through no-code Runtime Task Packages.",
   "asset_standard": "agentpal-pal-asset-standard.v0.5",
-  "formal_skill_count": 15,
+  "formal_skill_count": 16,
   "formal_skills": [
     "pal-creation-skill",
     "pal-team-creation-skill",
@@ -34,7 +34,26 @@
     "pal-version-governance-skill",
     "pal-publish-readiness-skill",
     "user-material-ingestion-skill",
-    "web-research-to-knowledge-skill"
+    "web-research-to-knowledge-skill",
+    "composite-pal-distillation-skill"
+  ],
+  "skills": [
+    "pal-creation-skill",
+    "pal-team-creation-skill",
+    "pal-quality-inspection-skill",
+    "pal-conflict-detection-skill",
+    "pal-capability-map-skill",
+    "pal-knowledge-ingestion-skill",
+    "pal-skill-design-skill",
+    "pal-workflow-design-skill",
+    "pal-eval-design-skill",
+    "pal-import-review-skill",
+    "pal-export-review-skill",
+    "pal-version-governance-skill",
+    "pal-publish-readiness-skill",
+    "user-material-ingestion-skill",
+    "web-research-to-knowledge-skill",
+    "composite-pal-distillation-skill"
   ],
   "license": "MIT",
   "entry": {
@@ -95,7 +114,14 @@
     "job-fitness-inspection",
     "user-material-ingestion",
     "content-preservation",
-    "web-research-to-knowledge"
+    "web-research-to-knowledge",
+    "composite-pal-distillation",
+    "human-to-pal",
+    "voice-to-pal",
+    "role-to-pal",
+    "knowledge-to-pal",
+    "skill-agent-to-pal",
+    "pal-marketplace-metadata-planning"
   ],
   "collaboration": {
     "discoverable": true,

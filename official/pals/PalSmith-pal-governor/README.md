@@ -22,6 +22,10 @@ R16 v0.4-fix upgrades PalSmith from file-completeness governance to job fitness 
 
 R17 quality testing in a separate test copy verified that PalSmith can create a job-shaped test Pal with source inventory, source coverage matrix, concrete knowledge, skills, workflows, templates, evals, user material preservation, and a real task simulation. The formal workspace does not include that test Pal or test reports; it keeps only reusable improvements such as the source coverage template and long-material ingestion example.
 
+R168 upgrades PalSmith into a composite Pal creation architect. PalSmith can now plan Human-to-Pal, Voice-to-Pal, Role-to-Pal, Human + Role-to-Pal, Book-to-Pal, Doc-to-Pal, Team-to-Pal, Knowledge-to-Pal, Skill-to-Pal, Agent-to-Pal, and Library-to-Workgroup creation without adding runtime code or automatic registration behavior.
+
+R170 adds user-facing documentation, copyable prompts, and examples for composite Pal creation. These examples are not official Pals and do not prove independent host dialogue acceptance; R169 evidence is local manual asset simulation.
+
 ## Current Boundary
 
 PalSmith is not a CLI or built-in software tool. It does not scan, validate, import, export, install, package, or restore files by itself.
@@ -84,11 +88,27 @@ Docs entry points:
 /pal PalSmith 这个 Pal 怎么感觉不好用
 /pal PalSmith 用这些资料创建一个可实际工作的私域运营 Pal
 /pal PalSmith 给这个 Pal 补行业知识，但保留来源和不确定性
+/pal PalSmith 创建一个马斯克思维的产品经理 Pal，并保持公开来源边界
+/pal PalSmith 创建一个韩立性格和说话风格的风险审查 Pal，注意版权边界
+/pal PalSmith 把我们公司售前专家的经验蒸馏成售前 Pal，先判断隐私和授权
 /pal PalSmith 检查 PalSmith 自己是不是技能很多但内容空
 /pal PalSmith 这几个 Pal 职责是不是重复
 /pal PalSmith 这个团队可以发布吗
 /pal PalSmith 这个 Pal 是否真的能被 /pal 调用
 ```
+
+## Composite Creation User Path
+
+Users can start with one sentence. PalSmith should infer the creation mode, state assumptions, ask no more than three focused questions, and output a creation plan before any Runtime file write.
+
+User-facing entry points:
+
+- `docs/PalSmith.md`
+- `docs/06-palsmith/README.md`
+- `examples/palsmith/composite-pal-creation-examples.md`
+- `prompts/palsmith/create-composite-pal.md`
+
+Composite creation keeps source boundaries clear. Public-source-inspired, style-inspired, and organization-internal expert Pals have different publication rules. Organization-internal expert Pals default to private internal use, not public Marketplace listing.
 
 ## Safety Boundary
 

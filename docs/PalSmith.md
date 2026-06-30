@@ -11,12 +11,32 @@ PalSmith helps users and maintainers design, review, repair, and govern Pals and
 It can help with:
 
 - creating a draft Pal
+- creating a composite Pal from role, thinking style, voice/personality, knowledge, Skill, plugin, Agent capability, or source-library inputs
 - creating a draft Pal Team
 - classifying source material into identity, knowledge, Skill, workflow, runbook, example, eval, memory candidate, or report
 - preparing bounded Runtime Task Packages for approved file creation
 - checking Pal health, privacy, job fitness, and release readiness
 - detecting responsibility conflicts
 - reviewing imports, exports, snapshots, rollbacks, and version upgrades as no-code governance tasks
+- designing validation tasks and Marketplace metadata for draft Pals without building Marketplace runtime features
+
+## Composite Pal Creation
+
+Composite Pal creation means PalSmith can turn a mixed request into a Pal creation plan. You can describe the role you want, the thinking style you like, the voice or personality you want, the job knowledge it should use, and the Skills or Agents it may need.
+
+You do not need to fill a complete form. Start with one sentence. PalSmith should make reasonable assumptions, ask no more than three focused questions for the first gap check, and produce a creation plan before any Pal Pack files are created.
+
+PalSmith separates:
+
+- thinking style: how the Pal reasons and makes tradeoffs
+- voice and personality: how the Pal sounds and behaves in conversation
+- role responsibilities: what job the Pal actually does
+- job knowledge: what the Pal needs to know
+- Skill / Agent use: what the Pal may ask the host runtime to do, with evidence
+- memory and retrospective: what can be remembered only after approval
+- publication boundary: private, team-local, public-safe example, or Marketplace candidate
+
+Composite creation does not mean copying a person, character, company expert, book, or source file. PalSmith designs a bounded Pal plan with source, privacy, and publication rules.
 
 ## How To Call PalSmith
 
@@ -30,6 +50,27 @@ Keep it as a draft and do not modify central contacts.
 Separate candidate Pal roles, runtime capability candidates, privacy risks, and the first Task Package.
 ```
 
+```text
+/pal PalSmith Create a cautious risk-review Pal inspired by a fictional character's personality and speech style.
+Keep it style-inspired, do not copy protected text, and include voice consistency tests.
+```
+
+```text
+/pal PalSmith 帮我创建一个第一性原理产品评审 Pal，用来审查 AgentPal 功能是否过度设计。
+```
+
+```text
+/pal PalSmith 帮我创建一个谨慎克制型风险审查 Pal，用来审查项目、投资和合作风险。
+```
+
+```text
+/pal PalSmith 帮我把公司授权的售前经验整理成一个内部私有售前 Pal，先判断隐私和授权边界。
+```
+
+Copyable prompt: [`../prompts/palsmith/create-composite-pal.md`](../prompts/palsmith/create-composite-pal.md)
+
+Examples: [`../examples/palsmith/composite-pal-creation-examples.md`](../examples/palsmith/composite-pal-creation-examples.md)
+
 ## How PalSmith Works
 
 PalSmith prepares judgement and Task Packages. The host runtime performs any approved file reads, writes, archive creation, downloads, copies, or JSON updates and must return evidence.
@@ -39,6 +80,7 @@ PalSmith should:
 - preserve user source intent
 - mark missing information
 - classify privacy sensitivity
+- separate role architecture, cognitive distillation, voice distillation, knowledge curation, capability mapping, memory templates, collaboration boundary, evals, and Marketplace metadata
 - separate Pal-owned Skills from host runtime Skills
 - keep candidate Pals as judgement inputs, not fixed routes
 - ask for explicit approval before controlled writes

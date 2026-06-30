@@ -71,6 +71,8 @@ Use these docs when you want your own AI team:
 
 - [`PalSmith.md`](PalSmith.md)
 - [`03-user-guides/palsmith-v0.5-pal-creation-and-upgrade.md`](03-user-guides/palsmith-v0.5-pal-creation-and-upgrade.md)
+- [`../examples/palsmith/composite-pal-creation-examples.md`](../examples/palsmith/composite-pal-creation-examples.md)
+- [`../prompts/palsmith/create-composite-pal.md`](../prompts/palsmith/create-composite-pal.md)
 - [`07-authoring-pals/README.md`](07-authoring-pals/README.md)
 - [`03-pal-pack-standard/README.md`](03-pal-pack-standard/README.md)
 
@@ -92,6 +94,7 @@ Deep Conductor is a no-code collaboration and mode-decision protocol. It is not 
 ## Examples
 
 - [`../examples/walkthroughs/first-agentpal-team/`](../examples/walkthroughs/first-agentpal-team/)
+- [`../examples/palsmith/composite-pal-creation-examples.md`](../examples/palsmith/composite-pal-creation-examples.md)
 - [`07-official-pals/official-pal-examples-index.md`](07-official-pals/official-pal-examples-index.md)
 - [`../examples/orchestration/cross-pal-palsmith-create-ai-team.md`](../examples/orchestration/cross-pal-palsmith-create-ai-team.md)
 - [`../examples/delivery-packs/sales-crm-delivery-pack/`](../examples/delivery-packs/sales-crm-delivery-pack/)

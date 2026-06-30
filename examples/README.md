@@ -21,6 +21,7 @@ Start here for the three current user paths:
 | `project-records/` | Public-safe central project record examples; these are not real private `workspace/projects/<project-id>` records. |
 | `runtime-adapters/` | Runtime adapter and thin-binding examples for Codex, Claude Code, and generic CLI paths. |
 | `usage/` | Simple Pal Mode, direct Pal calls, handoff, Task Package, and project binding examples. |
+| `palsmith/` | PalSmith composite Pal creation examples and public-safe sample plans. |
 | `pal-collaboration/` | Navigation for `/pal Mira`, `/pal Atlas`, and owner handoff examples. |
 | `project-workgroup/` | External project binding examples. |
 | `failures/` | Failure cases and corrected behavior. |

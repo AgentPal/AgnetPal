@@ -11,6 +11,7 @@ These files are Markdown instructions, not programs. They do not install depende
 | Codex | `codex/initialize-agentpal-workspace.md` | You opened the AgentPal Workspace directly in Codex and want to initialize Mira. |
 | Claude Code | `claude-code/install-agentpal-current-project.md` | You are already inside `<your-project>` in Claude Code and want project-first AgentPal binding. |
 | Generic CLI Agent | `generic-cli-agent/install-agentpal-current-project.md` | Your CLI agent can read directories, follow Markdown / JSON instructions, and maintain context. |
+| PalSmith composite Pal | `palsmith/create-composite-pal.md` | You want PalSmith to draft a composite Pal creation plan from role, thinking style, voice, knowledge, Skill / Agent needs, and publication boundary. |
 
 ## Project Workgroup Prompts
 

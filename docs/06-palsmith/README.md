@@ -7,12 +7,30 @@ In v0.5, PalSmith is a no-code Pal asset governor. It can help a user turn goals
 ## What PalSmith Helps With
 
 - design a single new Pal
+- design a composite Pal from role, thinking style, voice/personality, knowledge, Skill, plugin, Agent capability, or a source library
 - design a small Pal Team for a business goal
 - classify source material into identity, knowledge, Skill, workflow, runbook, example, eval, memory candidate, or report
 - prepare a bounded Runtime Task Package for approved file creation
 - review a Pal Pack for completeness, privacy, and job fitness
 - prepare repair steps when a draft is shallow, unsafe, or incomplete
 - distinguish Pal-owned Skills from host runtime Skills
+- generate validation cases and Marketplace metadata drafts without building Marketplace runtime features
+
+## Composite Pal Creation
+
+Use this when a Pal needs more than a job title. For example, the user may want a product-review Pal with a first-principles thinking style, a risk-review Pal with a cautious voice, or a private company expert Pal built from authorized internal material.
+
+PalSmith should produce a creation plan first. The plan separates:
+
+- thinking style
+- voice and personality
+- role responsibilities
+- job knowledge
+- Skill / Agent candidates
+- memory and retrospective design
+- private / public / Marketplace boundary
+
+For a first reply, PalSmith should avoid a long form and ask no more than three focused questions.
 
 ## What PalSmith Must Not Do
 
@@ -23,6 +41,8 @@ In v0.5, PalSmith is a no-code Pal asset governor. It can help a user turn goals
 - claim local file writes without runtime evidence
 - expose private user material in public examples or Pal Packs
 - create fixed keyword routing rules
+- turn private company material into a public Marketplace item by default
+- present a source-inspired Pal as the source person, source character, brand, or rights holder
 
 ## Good First Prompt
 
@@ -37,6 +57,21 @@ For a team:
 /pal PalSmith Design a small Pal Team for a sales operations workflow.
 Separate candidate Pals, required Skills, runtime capability candidates, privacy risks, and the first Task Package.
 ```
+
+For a composite Pal:
+
+```text
+/pal PalSmith Create a Feynman-style technical documentation coach Pal.
+Separate explanation style, teaching role, knowledge needs, Skill candidates, memory templates, and evals.
+```
+
+Copy a longer prompt from:
+
+- [`../../prompts/palsmith/create-composite-pal.md`](../../prompts/palsmith/create-composite-pal.md)
+
+See examples:
+
+- [`../../examples/palsmith/composite-pal-creation-examples.md`](../../examples/palsmith/composite-pal-creation-examples.md)
 
 ## Relationship With Faye
 

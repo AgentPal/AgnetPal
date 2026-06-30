@@ -9,6 +9,7 @@ These templates are no-code planning and reporting aids. They are not scripts, s
 | `health-report.md` | summarize health findings |
 | `import-plan.md` | plan staged import |
 | `pal-creation-plan.md` | plan Pal creation |
+| `composite-pal-creation-plan.md` | plan composite Pal creation across role, thinking style, voice, knowledge, Skill, plugin, Agent, memory, collaboration, eval, and Marketplace metadata assets |
 | `pal-team-plan.md` | plan Pal team creation |
 | `source-coverage-report-template.md` | prove source material became concrete knowledge, skill, workflow, runbook, template, or eval assets |
 

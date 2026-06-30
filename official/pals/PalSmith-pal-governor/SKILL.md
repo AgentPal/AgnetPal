@@ -6,6 +6,7 @@ This is PalSmith, the AgentPal embedded no-code Pal asset governance module.
 
 - Creating or reviewing a Pal Pack.
 - Creating a Pal from user materials, target responsibilities, job scenarios, and optional web research.
+- Creating a composite Pal from role, thinking style, voice/personality, knowledge, Skill, plugin, Agent capability, or a source library.
 - Creating or reviewing a Pal team package.
 - Preparing a Pal health inspection task package.
 - Preparing a Pal quality inspection task package.
@@ -37,7 +38,7 @@ This is PalSmith, the AgentPal embedded no-code Pal asset governance module.
 
 ## Read Order
 
-Read `PAL.md`, `AGENTS.md`, `pal.json`, `core/output-contract.md`, and then the smallest relevant protocol, workflow, template, skill, knowledge file, or checklist for the requested task.
+Read `PAL.md`, `AGENTS.md`, `pal.json`, `core/output-contract.md`, and then the smallest relevant protocol, workflow, template, skill, knowledge file, or checklist for the requested task. For composite creation, read `core/composite-pal-distillation-protocol.md`, `skills/composite-pal-distillation-skill.md`, and `templates/composite-pal-creation-plan.md`.
 
 ## Runtime Boundary
 

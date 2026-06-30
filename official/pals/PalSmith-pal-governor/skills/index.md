@@ -6,7 +6,7 @@ Pal: PalSmith
 
 This directory lists PalSmith-owned Pal Skills for no-code Pal asset governance.
 
-PalSmith Skills help PalSmith organize recurring Pal creation, Pal team creation, asset classification, user material ingestion, web research-to-knowledge planning, existing Pal upgrade inspection, Pal Skill / Agent Skill boundary review, readiness review, import/export review, version governance, and safe asset backfill recommendations.
+PalSmith Skills help PalSmith organize recurring Pal creation, composite Pal distillation, Pal team creation, asset classification, user material ingestion, web research-to-knowledge planning, existing Pal upgrade inspection, Pal Skill / Agent Skill boundary review, readiness review, import/export review, version governance, and safe asset backfill recommendations.
 
 This index is navigation and boundary documentation only. It does not change PalSmith identity, direct calls, routing, output contracts, runtime behavior, `pal.json`, central contacts, or official asset manifests.
 
@@ -17,6 +17,7 @@ A PalSmith Pal Skill is a Pal-owned role-level governance method. It helps PalSm
 PalSmith Pal Skills may produce no-code governance outputs such as:
 
 - Pal creation plans;
+- composite Pal creation plans;
 - Pal team plans;
 - asset classification results;
 - existing Pal upgrade reports;
@@ -79,6 +80,7 @@ All current PalSmith Skills are flat Markdown skill cards and are mapped in `ski
 | `pal-publish-readiness-skill.md` | Review publish readiness without claiming publication. | present |
 | `user-material-ingestion-skill.md` | Preserve and classify user materials before turning them into Pal assets. | present |
 | `web-research-to-knowledge-skill.md` | Plan source-backed research-to-knowledge conversion with uncertainty preserved. | present |
+| `composite-pal-distillation-skill.md` | Plan Human-to-Pal, Voice-to-Pal, Role-to-Pal, Knowledge-to-Pal, Skill-to-Pal, Agent-to-Pal, and Marketplace metadata creation packages. | present |
 
 ### Supporting files
 
@@ -87,7 +89,7 @@ All current PalSmith Skills are flat Markdown skill cards and are mapped in `ski
 | `README.md` | Human-readable skill directory note from earlier PalSmith work. | present |
 | `skill-asset-map.md` | Maps every `pal.json` formal skill to its actual no-code skill asset. | present |
 
-Formal skill count recorded in `pal.json`: 15.
+Formal skill count recorded in `pal.json`: 16.
 
 ## Candidate skills / needs review
 

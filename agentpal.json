@@ -116,7 +116,7 @@
       {
         "pal_id": "palsmith-pal-governor",
         "display_name": "PalSmith",
-        "perspective": "no-code Pal asset governance, Pal creation, job fitness inspection, content-preserving user material ingestion, web research to knowledge, AI team blueprints, quickstart paths, team governance, readiness review, import/export planning, health inspection, quality gates, runtime call verification, GitHub import verification, registry/contacts proposal, versioning, and Runtime Task Package planning",
+        "perspective": "no-code Pal asset governance, Pal creation, composite Pal creation, job fitness inspection, content-preserving user material ingestion, web research to knowledge, AI team blueprints, quickstart paths, team governance, readiness review, import/export planning, health inspection, quality gates, runtime call verification, GitHub import verification, registry/contacts proposal, versioning, and Runtime Task Package planning",
         "non_binding": true
       },
       {
@@ -1465,6 +1465,21 @@
   "palsmith": {
     "creation_standard": "standards/palsmith/palsmith-v0.5-creation-standard.md",
     "classification_standard": "standards/palsmith/palsmith-asset-classification-standard.md",
+    "composite_pal_distillation_protocol": "official/pals/PalSmith-pal-governor/core/composite-pal-distillation-protocol.md",
+    "composite_pal_distillation_skill": "official/pals/PalSmith-pal-governor/skills/composite-pal-distillation-skill.md",
+    "composite_pal_creation_plan_template": "official/pals/PalSmith-pal-governor/templates/composite-pal-creation-plan.md",
+    "composite_pal_distillation_eval": "official/pals/PalSmith-pal-governor/evals/composite-pal-distillation-eval.md",
+    "r169_composite_creation_real_task_tests": "evals/palbench/v0.5/palsmith/r169-composite-creation-real-task-tests.md",
+    "r169_case_01_public_thinking_role": "evals/palbench/v0.5/palsmith/r169-case-01-public-thinking-role.md",
+    "r169_case_02_voice_style_risk_reviewer": "evals/palbench/v0.5/palsmith/r169-case-02-voice-style-risk-reviewer.md",
+    "r169_case_03_private_expert_role_pal": "evals/palbench/v0.5/palsmith/r169-case-03-private-expert-role-pal.md",
+    "r169_quinn_review": "evals/palbench/v0.5/palsmith/r169-quinn-review.md",
+    "r170_docs_and_examples_closure": "evals/palbench/v0.5/palsmith/r170-docs-and-examples-closure.md",
+    "r171_palsmith_host_dialogue": "evals/palbench/v0.5/palsmith/r171-palsmith-host-dialogue.md",
+    "r171_quinn_host_review": "evals/palbench/v0.5/palsmith/r171-quinn-host-review.md",
+    "r171_manual_host_acceptance_script": "evals/palbench/v0.5/palsmith/r171-manual-host-acceptance-script.md",
+    "r170_composite_pal_creation_examples": "examples/palsmith/composite-pal-creation-examples.md",
+    "r170_create_composite_pal_prompt": "prompts/palsmith/create-composite-pal.md",
     "minimal_pal_checklist": "templates/palsmith/minimal-pal-generation-checklist.md",
     "standard_pal_checklist": "templates/palsmith/standard-pal-generation-checklist.md",
     "asset_classification_template": "templates/palsmith/pal-asset-classification-result-template.json",

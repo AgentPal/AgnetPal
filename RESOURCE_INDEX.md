@@ -556,6 +556,18 @@ Use the current docs directories as the public entry points. Archived research n
 | --- | --- |
 | `standards/palsmith/palsmith-v0.5-creation-standard.md` | R98-C PalSmith creation standard |
 | `standards/palsmith/palsmith-asset-classification-standard.md` | R98-C PalSmith asset classification standard |
+| `official/pals/PalSmith-pal-governor/core/composite-pal-distillation-protocol.md` | R168 PalSmith composite Pal creation protocol |
+| `official/pals/PalSmith-pal-governor/skills/composite-pal-distillation-skill.md` | R168 PalSmith composite Pal distillation Skill |
+| `official/pals/PalSmith-pal-governor/templates/composite-pal-creation-plan.md` | R168 composite Pal creation plan template |
+| `official/pals/PalSmith-pal-governor/evals/composite-pal-distillation-eval.md` | R168 composite Pal distillation eval |
+| `evals/palbench/v0.5/palsmith/r169-composite-creation-real-task-tests.md` | R169 PalSmith composite creation real-task test summary |
+| `evals/palbench/v0.5/palsmith/r169-quinn-review.md` | R169 Quinn / QA review for PalSmith composite creation tests |
+| `evals/palbench/v0.5/palsmith/r170-docs-and-examples-closure.md` | R170 PalSmith docs and examples closure evidence note |
+| `evals/palbench/v0.5/palsmith/r171-palsmith-host-dialogue.md` | R171 PalSmith real host dialogue evidence |
+| `evals/palbench/v0.5/palsmith/r171-quinn-host-review.md` | R171 Quinn host review evidence |
+| `evals/palbench/v0.5/palsmith/r171-manual-host-acceptance-script.md` | R171 manual real-host acceptance script |
+| `examples/palsmith/composite-pal-creation-examples.md` | R170 user-facing composite Pal creation examples |
+| `prompts/palsmith/create-composite-pal.md` | R170 copyable PalSmith composite Pal creation prompt |
 | `templates/palsmith/minimal-pal-generation-checklist.md` | Minimal Pal generation checklist |
 | `templates/palsmith/standard-pal-generation-checklist.md` | Standard Pal generation checklist |
 | `templates/palsmith/pal-asset-classification-result-template.json` | Pal asset classification result JSON template |

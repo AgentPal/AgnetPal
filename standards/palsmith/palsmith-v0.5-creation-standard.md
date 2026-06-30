@@ -13,6 +13,7 @@ PalSmith remains a Pal asset governance Pal. It designs, classifies, packages, a
 This standard applies to:
 
 - new Pal creation plans;
+- composite Pal creation plans, including Human-to-Pal, Voice-to-Pal, Role-to-Pal, Human + Role-to-Pal, Knowledge-to-Pal, Skill-to-Pal, Agent-to-Pal, and Library-to-Workgroup;
 - generated Pal Pack file checklists;
 - existing Pal upgrade reports;
 - user material ingestion into Pal assets;
@@ -30,12 +31,45 @@ Required flow:
 1. Capture Pal name, id, intended users, responsibilities, goals, usage scenarios, and non-responsibilities.
 2. Identify source materials, privacy level, intended publication status, and whether optional external research is allowed.
 3. Build a job expertise model: recurring tasks, decisions, knowledge needs, workflow needs, risk cases, output needs, and acceptance evidence.
-4. Decide Minimal Pal or Standard Pal target.
-5. Classify user material into asset types before writing.
-6. Produce a target file checklist and allowed write paths.
-7. Ask user confirmation before Runtime file writes.
-8. Runtime writes approved files and returns evidence.
-9. PalSmith reviews evidence and produces a readiness or upgrade report.
+4. For composite creation, separate role architecture, cognitive distillation, voice/personality distillation, knowledge curation, Skill / plugin / Agent capability mapping, memory design, collaboration boundary, evals, and Marketplace metadata.
+5. Decide Minimal Pal or Standard Pal target.
+6. Classify user material into asset types before writing.
+7. Produce a target file checklist and allowed write paths.
+8. Ask user confirmation before Runtime file writes.
+9. Runtime writes approved files and returns evidence.
+10. PalSmith reviews evidence and produces a readiness or upgrade report.
+
+## Composite Pal Creation
+
+PalSmith must support these creation modes as composable design modes, not keyword routes:
+
+- From Blank
+- Role-to-Pal
+- Human-to-Pal
+- Voice-to-Pal
+- Human + Role-to-Pal
+- Book-to-Pal
+- Doc-to-Pal
+- Team-to-Pal
+- Knowledge-to-Pal
+- Skill-to-Pal
+- Agent-to-Pal
+- Library-to-Workgroup
+
+For composite Pal creation, PalSmith must include:
+
+- intake assumptions and minimum follow-up questions;
+- role architecture with responsibilities, non-responsibilities, deliverables, and acceptance criteria;
+- cognitive distillation for thinking patterns, mental models, decision heuristics, anti-patterns, and uncertainty;
+- voice and personality distillation for tone, speech pattern, caution, forbidden expressions, and sample dialogue rules;
+- knowledge curation with source scope, update time, confidence, and traceable target assets;
+- Skill / plugin / Agent capability mapping with current-evidence boundaries;
+- memory template design without automatic private memory writeback;
+- collaboration boundary and contacts eligibility notes;
+- quality eval plan;
+- Marketplace metadata draft without implementing Marketplace runtime features.
+
+Composite Pal creation must not claim that a Pal is a real person, represents a rights holder, or can make commitments on behalf of a source. It must not copy long copyrighted text into public Pal assets.
 
 ## Minimal Pal Required Assets
 
@@ -132,6 +166,8 @@ Never place an Agent Skill inside a Pal's `skills/` directory as if it were a Pa
 | identity | `identity/`, `PAL.md`, or `core/output-contract.md` |
 | core protocol | `core/` |
 | knowledge | `knowledge/` |
+| voice/personality | `identity/` and `evals/voice-consistency-tests.md` |
+| cognitive distillation | `knowledge/`, `identity/source-boundary.md`, and `evals/cognitive-distillation-tests.md` |
 | research | `research/` |
 | pal-skill | `skills/` |
 | agent-skill-ref | task package `runtime_skill_candidates`, not Pal `skills/` |
@@ -142,6 +178,7 @@ Never place an Agent Skill inside a Pal's `skills/` directory as if it were a Pa
 | report | `reports/` or approved central report path |
 | eval | `evals/` |
 | example | `examples/` |
+| marketplace metadata draft | `marketplace/` or approved metadata template path |
 | org-pack candidate | `templates/org-pack/`, `examples/org-packs/`, or approved org-pack area |
 | project business doc | active project docs or central project record, not reusable public Pal assets by default |
 
@@ -176,6 +213,8 @@ PalSmith v0.5 creation packages must not:
 - save credentials, tokens, secrets, API keys, cookies, private customer data, or private project memory in public Pal assets;
 - automatically call Runtime tools, external APIs, connectors, browsers, MCP tools, or business systems;
 - auto-update central contacts or registry;
+- encourage real-person impersonation, rights-holder representation, or long copyrighted-text copying;
+- implement Marketplace runtime features while only metadata planning was requested;
 - claim publish readiness without evidence.
 
 ## Upgrade Standard

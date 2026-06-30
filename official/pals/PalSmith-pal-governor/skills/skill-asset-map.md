@@ -21,11 +21,11 @@ This map links each `pal.json` formal skill ID to its actual no-code skill asset
 | pal-publish-readiness-skill | skills/pal-publish-readiness-skill.md | flat-card | mapped | Substantive Markdown skill card. |
 | user-material-ingestion-skill | skills/user-material-ingestion-skill.md | flat-card | mapped | Substantive Markdown skill card. |
 | web-research-to-knowledge-skill | skills/web-research-to-knowledge-skill.md | flat-card | mapped | Substantive Markdown skill card. |
+| composite-pal-distillation-skill | skills/composite-pal-distillation-skill.md | flat-card | mapped | Substantive Markdown skill card. |
 
 ## R13 Mapping Result
 
-- Formal skills listed in `pal.json`: 15.
+- Formal skills listed in `pal.json`: 16.
 - Missing assets under the R13 standard: 0.
 - Empty placeholder directories created by R13: 0.
 - Runtime code created by R13: 0.
-
