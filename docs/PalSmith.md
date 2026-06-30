@@ -166,6 +166,8 @@ This is a no-code collaboration chain inside the current host runtime. It is not
 ## Next Reading
 
 - [PalSmith index](06-palsmith/README.md)
+- [PalSmith v0.5 user flow](06-palsmith/palsmith-v05-user-flow.md)
+- [PalSmith v0.5 capability summary](06-palsmith/palsmith-v05-capability-summary.md)
 - [PalSmith end-to-end productization](06-palsmith/palsmith-end-to-end-productization.md)
 - [Custom Pal creation to authorization flow](06-palsmith/custom-pal-creation-to-authorization-flow.md)
 - [PalSmith v0.5 Pal creation and upgrade](03-user-guides/palsmith-v0.5-pal-creation-and-upgrade.md)

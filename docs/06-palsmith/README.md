@@ -118,6 +118,8 @@ PalSmith can then turn a Faye Build Request into a Pal or Pal Team design. Quinn
 
 ## Next Links
 
+- [PalSmith v0.5 user flow](palsmith-v05-user-flow.md)
+- [PalSmith v0.5 capability summary](palsmith-v05-capability-summary.md)
 - [PalSmith end-to-end productization](palsmith-end-to-end-productization.md)
 - [Custom Pal creation to authorization flow](custom-pal-creation-to-authorization-flow.md)
 - [PalSmith v0.5 creation and upgrade](../03-user-guides/palsmith-v0.5-pal-creation-and-upgrade.md)

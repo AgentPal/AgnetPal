@@ -28,6 +28,10 @@ R170 adds user-facing documentation, copyable prompts, and examples for composit
 
 R179 adds a no-code draft-to-user-custom Pal installation flow. This lets PalSmith plan how a reviewed draft Pal Pack can become a user custom Pal under a private-by-default user custom area, without promoting it to official Pal status, without writing central contacts, and without building an installer or runtime service.
 
+R185-R191 add user custom Pal discovery authorization, explicit invocation boundaries, revocation readiness, real host read-only regression, and external readability review. User custom Pals remain private by default and are not central contacts or official Pals.
+
+R192 closes the PalSmith v0.5 phase as ready for release prep. This is not remote publication, tag creation, or GitHub Release authorization.
+
 ## Current Boundary
 
 PalSmith is not a CLI or built-in software tool. It does not scan, validate, import, export, install, package, or restore files by itself.
@@ -40,45 +44,45 @@ Task package examples live in `examples/task-packages/`. Reusable task package t
 
 Draft-to-custom installation planning is governed by `core/custom-pal-installation-protocol.md`. The default suggested target is `workspace/resources/user-pals/<pal-id>/`, but PalSmith must present an installation plan and receive explicit user confirmation before any Runtime write.
 
-Release readiness is checked through Markdown evals, including `evals/palsmith-release-scope-eval.md`.
+Release readiness is checked through Markdown evals, including `official/pals/PalSmith-pal-governor/evals/palsmith-release-scope-eval.md` and the R192 closeout reviews under `evals/palbench/v0.5/palsmith/`.
 
 Docs entry points:
 
 - `docs/PalSmith.md`
 - `docs/06-palsmith/README.md`
+- `docs/06-palsmith/palsmith-v05-user-flow.md`
+- `docs/06-palsmith/palsmith-v05-capability-summary.md`
 - `docs/06-palsmith/palsmith-end-to-end-productization.md`
+- `docs/06-palsmith/custom-pal-creation-to-authorization-flow.md`
+- `docs/06-palsmith/user-custom-pal-discovery-authorization.md`
+- `docs/06-palsmith/user-custom-pal-discovery-authorization-protocol.md`
 - `docs/03-pal-pack-standard/14-runtime-task-package.md`
 - `docs/07-authoring-pals/12-use-palsmith.md`
 - `docs/07-authoring-pals/13-palsmith-end-to-end-workflows.md`
-- `evals/palbench/v0.5/documentation/archive/docs/08-release-candidate/05-no-code-release-checklist.md`
-- `evals/palbench/v0.5/documentation/archive/docs/08-release-candidate/06-palsmith-release-scope-review.md`
-- `evals/palbench/v0.5/documentation/archive/docs/08-release-candidate/11-palsmith-e2e-test-summary.md`
 - `docs/07-authoring-pals/14-palsmith-pal-lifecycle.md`
 - `docs/07-authoring-pals/15-palsmith-quickstart-ai-team.md`
 - `docs/07-authoring-pals/16-palsmith-demo-script.md`
-- `evals/palbench/v0.5/documentation/archive/docs/08-release-candidate/12-palsmith-v0.4-regression-test-plan.md`
-- `pals/PalSmith-pal-governor/examples/ai-team-blueprints/README.md`
-- `pals/PalSmith-pal-governor/core/pal-readiness-matrix.md`
-- `pals/PalSmith-pal-governor/core/pal-quality-inspection-protocol.md`
-- `pals/PalSmith-pal-governor/core/user-material-ingestion-protocol.md`
-- `pals/PalSmith-pal-governor/core/content-preservation-protocol.md`
-- `pals/PalSmith-pal-governor/core/web-research-to-knowledge-protocol.md`
-- `pals/PalSmith-pal-governor/skills/README.md`
-- `pals/PalSmith-pal-governor/knowledge/README.md`
-- `pals/PalSmith-pal-governor/templates/source-coverage-report-template.md`
-- `pals/PalSmith-pal-governor/templates/task-packages/create-first-professional-pal.md`
-- `pals/PalSmith-pal-governor/templates/task-packages/create-ai-team-from-goal.md`
-- `pals/PalSmith-pal-governor/templates/user-material-ingestion-map.md`
-- `pals/PalSmith-pal-governor/templates/health-check-report.md`
-- `pals/PalSmith-pal-governor/templates/repair-package.md`
-- `pals/PalSmith-pal-governor/workflows/user-material-ingestion-to-pal-assets.md`
-- `pals/PalSmith-pal-governor/runbooks/classify-user-materials.md`
-- `pals/PalSmith-pal-governor/runbooks/pal-health-check.md`
-- `pals/PalSmith-pal-governor/runbooks/ai-team-health-check.md`
-- `pals/PalSmith-pal-governor/examples/task-packages/example-long-user-material-ingestion.md`
-- `pals/PalSmith-pal-governor/examples/create-first-professional-pal.md`
-- `pals/PalSmith-pal-governor/examples/create-ai-team-from-user-goal.md`
-- `pals/PalSmith-pal-governor/evals/palsmith-e2e-creation-self-test.md`
+- `prompts/palsmith/create-composite-pal.md`
+- `prompts/palsmith/install-draft-as-custom-pal.md`
+- `prompts/palsmith/authorize-user-custom-pal-discovery.md`
+- `prompts/palsmith/revoke-user-custom-pal-discovery.md`
+- `templates/palsmith/user-custom-pal-authorization-record.md`
+- `templates/palsmith/user-custom-pal-discovery-policy.md`
+- `official/pals/PalSmith-pal-governor/examples/ai-team-blueprints/README.md`
+- `official/pals/PalSmith-pal-governor/core/pal-readiness-matrix.md`
+- `official/pals/PalSmith-pal-governor/core/pal-quality-inspection-protocol.md`
+- `official/pals/PalSmith-pal-governor/core/user-material-ingestion-protocol.md`
+- `official/pals/PalSmith-pal-governor/core/custom-pal-installation-protocol.md`
+- `official/pals/PalSmith-pal-governor/core/user-custom-pal-discovery-authorization-protocol.md`
+- `official/pals/PalSmith-pal-governor/core/composite-pal-distillation-protocol.md`
+- `official/pals/PalSmith-pal-governor/skills/README.md`
+- `official/pals/PalSmith-pal-governor/knowledge/README.md`
+- `official/pals/PalSmith-pal-governor/templates/task-packages/create-first-professional-pal.md`
+- `official/pals/PalSmith-pal-governor/templates/task-packages/create-ai-team-from-goal.md`
+- `official/pals/PalSmith-pal-governor/runbooks/pal-health-check.md`
+- `official/pals/PalSmith-pal-governor/runbooks/ai-team-health-check.md`
+- `official/pals/PalSmith-pal-governor/evals/palsmith-e2e-creation-self-test.md`
+- `evals/palbench/v0.5/palsmith/r192-palsmith-phase-evidence-audit-matrix.md`
 
 ## Direct Call Examples
 

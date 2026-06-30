@@ -199,6 +199,8 @@ Use:
 | `docs/02-getting-started/multi-pal-collaboration-prompt-cards.md` | Multi-Pal prompt cards | copyable user prompts for Mira, `/pal`, `@Pal`, Context Packet, review, handoff, and summary paths |
 | `evals/v0.2-integration/v0.2-integration-test-matrix.md` | v0.2 integration matrix | R46 integrated readiness test matrix |
 | `docs/06-palsmith/README.md` | PalSmith v0.5 user index | PalSmith creation, Pal Team design, Task Package, and governance work |
+| `docs/06-palsmith/palsmith-v05-user-flow.md` | PalSmith v0.5 user flow | external user path for creation, draft, custom Pal, authorization, revocation, and review |
+| `docs/06-palsmith/palsmith-v05-capability-summary.md` | PalSmith v0.5 capability summary | PalSmith v0.5 capability and readiness summary |
 | `docs/06-palsmith/palsmith-end-to-end-productization.md` | PalSmith v0.5 end-to-end user path | PalSmith creation and Pal Team productization work |
 | `official/pals/PalSmith-pal-governor/templates/task-packages/create-first-professional-pal.md` | Copyable first professional Pal creation task package | PalSmith single-Pal creation work |
 | `official/pals/PalSmith-pal-governor/templates/task-packages/create-ai-team-from-goal.md` | Copyable AI team creation task package | PalSmith Pal Team creation work |
@@ -621,6 +623,10 @@ Use the current docs directories as the public entry points. Archived research n
 | `evals/palbench/v0.5/palsmith/r191-external-user-readability-review.md` | R191 external user readability review for custom Pal creation and authorization |
 | `evals/palbench/v0.5/palsmith/r191-quinn-revocation-and-readability-review.md` | R191 Quinn QA review for revocation and readability |
 | `evals/palbench/v0.5/palsmith/r191-custom-pal-revocation-readability-summary.md` | R191 custom Pal revocation and readability summary |
+| `evals/palbench/v0.5/palsmith/r192-palsmith-phase-evidence-audit-matrix.md` | R192 PalSmith phase evidence audit matrix |
+| `evals/palbench/v0.5/palsmith/r192-resource-index-consistency-review.md` | R192 PalSmith resource index consistency review |
+| `evals/palbench/v0.5/palsmith/r192-no-code-boundary-audit.md` | R192 PalSmith no-code boundary audit |
+| `evals/palbench/v0.5/palsmith/r192-quinn-phase-closeout-review.md` | R192 Quinn PalSmith phase closeout review |
 | `templates/palsmith/minimal-pal-generation-checklist.md` | Minimal Pal generation checklist |
 | `templates/palsmith/standard-pal-generation-checklist.md` | Standard Pal generation checklist |
 | `templates/palsmith/pal-asset-classification-result-template.json` | Pal asset classification result JSON template |
