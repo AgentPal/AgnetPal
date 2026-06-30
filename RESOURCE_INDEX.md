@@ -201,6 +201,9 @@ Use:
 | `docs/06-palsmith/README.md` | PalSmith v0.5 user index | PalSmith creation, Pal Team design, Task Package, and governance work |
 | `docs/06-palsmith/palsmith-v05-user-flow.md` | PalSmith v0.5 user flow | external user path for creation, draft, custom Pal, authorization, revocation, and review |
 | `docs/06-palsmith/palsmith-v05-capability-summary.md` | PalSmith v0.5 capability summary | PalSmith v0.5 capability and readiness summary |
+| `docs/06-palsmith/palsmith-v05-release-prep.md` | PalSmith v0.5 release prep | local release-preparation scope and publication boundary |
+| `docs/06-palsmith/palsmith-v05-known-limits.md` | PalSmith v0.5 known limits | current limits for user custom Pal discovery, runtime, evidence, and publication claims |
+| `docs/06-palsmith/palsmith-v05-release-checklist.md` | PalSmith v0.5 release checklist | local checks before remote authorization decisions |
 | `docs/06-palsmith/palsmith-end-to-end-productization.md` | PalSmith v0.5 end-to-end user path | PalSmith creation and Pal Team productization work |
 | `official/pals/PalSmith-pal-governor/templates/task-packages/create-first-professional-pal.md` | Copyable first professional Pal creation task package | PalSmith single-Pal creation work |
 | `official/pals/PalSmith-pal-governor/templates/task-packages/create-ai-team-from-goal.md` | Copyable AI team creation task package | PalSmith Pal Team creation work |
@@ -627,6 +630,12 @@ Use the current docs directories as the public entry points. Archived research n
 | `evals/palbench/v0.5/palsmith/r192-resource-index-consistency-review.md` | R192 PalSmith resource index consistency review |
 | `evals/palbench/v0.5/palsmith/r192-no-code-boundary-audit.md` | R192 PalSmith no-code boundary audit |
 | `evals/palbench/v0.5/palsmith/r192-quinn-phase-closeout-review.md` | R192 Quinn PalSmith phase closeout review |
+| `docs/06-palsmith/palsmith-v05-release-prep.md` | R193 PalSmith v0.5 release-prep note |
+| `docs/06-palsmith/palsmith-v05-known-limits.md` | R193 PalSmith v0.5 known limits |
+| `docs/06-palsmith/palsmith-v05-release-checklist.md` | R193 PalSmith v0.5 release checklist |
+| `evals/palbench/v0.5/palsmith/r193-release-prep-package-review.md` | R193 PalSmith release-prep package review |
+| `evals/palbench/v0.5/palsmith/r193-release-boundary-pressure-tests.md` | R193 PalSmith release boundary pressure tests |
+| `evals/palbench/v0.5/palsmith/r193-quinn-release-prep-review.md` | R193 Quinn release-prep review |
 | `templates/palsmith/minimal-pal-generation-checklist.md` | Minimal Pal generation checklist |
 | `templates/palsmith/standard-pal-generation-checklist.md` | Standard Pal generation checklist |
 | `templates/palsmith/pal-asset-classification-result-template.json` | Pal asset classification result JSON template |
