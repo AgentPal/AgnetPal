@@ -72,6 +72,8 @@ Use:
 | `GITHUB_RELEASE_DRAFT.md` | manual GitHub Release draft | release publishing |
 | `RELEASE_CHECKLIST.md` | maintainer release checklist | release validation |
 | `docs/release/v0.5-release-candidate-preflight.md` | local v0.5 release candidate preflight | user-authorized release decision; not release completion |
+| `docs/release/v0.5-user-authorization-decision.md` | local v0.5 user authorization decision | choose push / tag / GitHub Release scope; not release execution |
+| `docs/release/v0.5-release-notes-draft.md` | draft v0.5 release notes | user review before release publication; not published release notes |
 | `CONTRIBUTING.md` | contribution rules | contributor onboarding |
 | `THIRD_PARTY_NOTICES.md` | license and third-party notice policy | release validation |
 | `LICENSE` | MIT License | release validation |
@@ -1221,6 +1223,11 @@ Use the current docs directories as the public entry points. Archived research n
 | `evals/palbench/v0.5/release/r194-release-boundary-scan.md` | R194 release/runtime/Marketplace/contacts boundary scan |
 | `evals/palbench/v0.5/release/r194-external-readability-spot-check.md` | R194 external readability spot check |
 | `evals/palbench/v0.5/release/r194-quinn-release-candidate-review.md` | R194 Quinn release candidate review |
+| `docs/release/v0.5-user-authorization-decision.md` | R195 user authorization decision for GitHub sync / tag / GitHub Release |
+| `docs/release/v0.5-release-notes-draft.md` | R195 draft release notes for user review; not published |
+| `evals/palbench/v0.5/release/r195-release-authorization-decision-package.md` | R195 release authorization decision package evidence |
+| `evals/palbench/v0.5/release/r195-release-notes-draft-review.md` | R195 release notes draft review |
+| `evals/palbench/v0.5/release/r195-quinn-release-authorization-review.md` | R195 Quinn release authorization review |
 
 ## Do Not Load By Default
 
