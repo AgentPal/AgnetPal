@@ -557,6 +557,7 @@ Use the current docs directories as the public entry points. Archived research n
 | `standards/palsmith/palsmith-v0.5-creation-standard.md` | R98-C PalSmith creation standard |
 | `standards/palsmith/palsmith-asset-classification-standard.md` | R98-C PalSmith asset classification standard |
 | `official/pals/PalSmith-pal-governor/core/composite-pal-distillation-protocol.md` | R168 PalSmith composite Pal creation protocol |
+| `official/pals/PalSmith-pal-governor/core/custom-pal-installation-protocol.md` | R179 PalSmith draft-to-user-custom Pal installation protocol |
 | `official/pals/PalSmith-pal-governor/skills/composite-pal-distillation-skill.md` | R168 PalSmith composite Pal distillation Skill |
 | `official/pals/PalSmith-pal-governor/templates/composite-pal-creation-plan.md` | R168 composite Pal creation plan template |
 | `official/pals/PalSmith-pal-governor/evals/composite-pal-distillation-eval.md` | R168 composite Pal distillation eval |
@@ -568,6 +569,8 @@ Use the current docs directories as the public entry points. Archived research n
 | `evals/palbench/v0.5/palsmith/r171-manual-host-acceptance-script.md` | R171 manual real-host acceptance script |
 | `examples/palsmith/composite-pal-creation-examples.md` | R170 user-facing composite Pal creation examples |
 | `prompts/palsmith/create-composite-pal.md` | R170 copyable PalSmith composite Pal creation prompt |
+| `examples/palsmith/draft-to-custom-pal-installation-example.md` | R179 draft Pal Pack to user custom Pal installation example |
+| `prompts/palsmith/install-draft-as-custom-pal.md` | R179 copyable PalSmith draft-to-custom installation prompt |
 | `evals/palbench/v0.5/palsmith/draft-pal-packs/FirstPrinciplesProductReviewer/` | R174 non-official draft Pal Pack test artifact |
 | `evals/palbench/v0.5/palsmith/r174-draft-pal-pack-creation.md` | R174 PalSmith draft Pal Pack creation evidence |
 | `evals/palbench/v0.5/palsmith/r174-quinn-draft-pal-pack-review.md` | R174 draft Pal Pack file-level QA review |
@@ -577,6 +580,7 @@ Use the current docs directories as the public entry points. Archived research n
 | `evals/palbench/v0.5/palsmith/r177-draft-pal-boundary-pressure-test.md` | R177 draft Pal boundary pressure test evidence |
 | `evals/palbench/v0.5/palsmith/r177-quinn-draft-usage-review.md` | R177 Quinn read-only draft usage review |
 | `evals/palbench/v0.5/palsmith/r177-draft-pal-usage-regression-summary.md` | R177 draft Pal usage regression summary |
+| `evals/palbench/v0.5/palsmith/r179-draft-to-custom-pal-installation-flow.md` | R179 draft Pal Pack to user custom Pal no-code flow evidence |
 | `templates/palsmith/minimal-pal-generation-checklist.md` | Minimal Pal generation checklist |
 | `templates/palsmith/standard-pal-generation-checklist.md` | Standard Pal generation checklist |
 | `templates/palsmith/pal-asset-classification-result-template.json` | Pal asset classification result JSON template |

@@ -49,6 +49,7 @@ For AI team creation or Pal lifecycle work that spans memory, Capability Invento
 - Generate Pal Quality Inspection, Pal Conflict Detection, Pal Capability Map, Pal Eval Lab, and Publish Quality Gate Task Packages.
 - Generate Pal Readiness Review Task Packages and use the readiness matrix to unify lifecycle, Eval Lab, and publish-quality judgement.
 - Generate Pal Runtime Call Verification and GitHub Import Verification Task Packages.
+- Generate Draft Pal Pack To User Custom Pal Installation Task Packages.
 - Inspect Pal job fitness, not only file completeness, and report shallow skills, shallow knowledge, missing workflows, missing evals, and missing domain evidence.
 - Inspect PalSmith's own skill and knowledge depth when its formal capability claims exceed its actual assets.
 - Provide quickstart paths, AI team blueprints, and demo scripts as examples, without treating them as installed Pals.
@@ -62,7 +63,7 @@ For AI team creation or Pal lifecycle work that spans memory, Capability Invento
 
 The current Agent Runtime performs approved filesystem, archive, network, JSON update, copy, restore, publishing, or deletion actions and must report evidence. PalSmith must not claim execution without that evidence.
 
-Writes require user confirmation. With-memory export requires strong confirmation and a privacy report. Imports must use staging before install. PalSmith must not execute imported scripts, automatically modify `contacts/` or `registry/`, add ordinary Skills to contacts, or treat private `memory/user/` and `memory/project/` as public export content.
+Writes require user confirmation. With-memory export requires strong confirmation and a privacy report. Imports must use staging before install. Draft-to-custom Pal installation must stay outside `official/pals/` and `workspace/organization/contacts/` unless a separate governance task is explicitly approved. PalSmith must not execute imported scripts, automatically modify `contacts/` or `registry/`, add ordinary Skills to contacts, or treat private `memory/user/` and `memory/project/` as public export content.
 
 Public Pal Packs must not include private user memory, private project memory, credentials, tokens, runtime `state/`, or private `reports/`.
 

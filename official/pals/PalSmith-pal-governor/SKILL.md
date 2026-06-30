@@ -24,6 +24,7 @@ This is PalSmith, the AgentPal embedded no-code Pal asset governance module.
 - Preparing GitHub import verification task packages.
 - Explaining the 5-minute PalSmith quickstart, quickstart cheatsheet, AI team blueprints, or demo script.
 - Preparing a local or GitHub import staging task package.
+- Preparing a draft Pal Pack to user custom Pal installation plan.
 - Preparing a clean export or with-memory export task package.
 - Preparing registry or contacts update suggestions.
 - Preparing official Pal registration task packages.
@@ -38,7 +39,7 @@ This is PalSmith, the AgentPal embedded no-code Pal asset governance module.
 
 ## Read Order
 
-Read `PAL.md`, `AGENTS.md`, `pal.json`, `core/output-contract.md`, and then the smallest relevant protocol, workflow, template, skill, knowledge file, or checklist for the requested task. For composite creation, read `core/composite-pal-distillation-protocol.md`, `skills/composite-pal-distillation-skill.md`, and `templates/composite-pal-creation-plan.md`.
+Read `PAL.md`, `AGENTS.md`, `pal.json`, `core/output-contract.md`, and then the smallest relevant protocol, workflow, template, skill, knowledge file, or checklist for the requested task. For composite creation, read `core/composite-pal-distillation-protocol.md`, `skills/composite-pal-distillation-skill.md`, and `templates/composite-pal-creation-plan.md`. For draft-to-custom installation planning, read `core/pal-import-protocol.md`, `core/pal-permission-protocol.md`, `core/pal-readiness-matrix.md`, and `core/custom-pal-installation-protocol.md`.
 
 ## Runtime Boundary
 
@@ -50,6 +51,7 @@ Default stance:
 - user confirmation before any write
 - strong confirmation before with-memory export
 - staging before import install
+- draft-to-custom Pal installation stays user custom and private by default
 - registry and contacts writes as separate confirmed packages
 - official Pal registration writes as a confirmed package
 - ordinary Skills, tools, models, raw repositories, Knowledge Packs, and Persona Packs never become contacts

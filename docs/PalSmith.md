@@ -18,6 +18,7 @@ It can help with:
 - checking Pal health, privacy, job fitness, and release readiness
 - detecting responsibility conflicts
 - reviewing imports, exports, snapshots, rollbacks, and version upgrades as no-code governance tasks
+- planning how a reviewed draft Pal Pack can become a user custom Pal
 - designing validation tasks and Marketplace metadata for draft Pals without building Marketplace runtime features
 
 ## Composite Pal Creation
@@ -111,6 +112,31 @@ Drafting a Pal does not register it.
 Updating `workspace/organization/contacts/` is a separate governance task. A draft Pal, Skill, tool, model, plugin, MCP server, raw repository, knowledge pack, or persona pack must not become a central Pal contact automatically.
 
 For v0.5, the official bundled roster remains 10 Pals and includes Faye.
+
+## Draft To User Custom Pal
+
+PalSmith can plan a no-code path from reviewed draft Pal Pack to user custom Pal.
+
+Default shape:
+
+1. Read the draft Pal Pack and its review evidence.
+2. Output an installation plan.
+3. Ask the user to confirm the target path and exact write scope.
+4. Let the host runtime copy approved Pal assets only after confirmation.
+5. Keep the copied Pal `official: false`, private by default, and discovery disabled by default.
+6. Write an install report and rollback instructions.
+
+Suggested target when no user-specific rule exists:
+
+```text
+workspace/resources/user-pals/<pal-id>/
+```
+
+This is not an official Pal path and does not update central contacts. Public Marketplace listing and official promotion require separate review.
+
+Copyable prompt: [`../prompts/palsmith/install-draft-as-custom-pal.md`](../prompts/palsmith/install-draft-as-custom-pal.md)
+
+Example: [`../examples/palsmith/draft-to-custom-pal-installation-example.md`](../examples/palsmith/draft-to-custom-pal-installation-example.md)
 
 ## Faye To PalSmith To Quinn
 

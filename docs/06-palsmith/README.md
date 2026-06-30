@@ -12,6 +12,7 @@ In v0.5, PalSmith is a no-code Pal asset governor. It can help a user turn goals
 - classify source material into identity, knowledge, Skill, workflow, runbook, example, eval, memory candidate, or report
 - prepare a bounded Runtime Task Package for approved file creation
 - review a Pal Pack for completeness, privacy, and job fitness
+- plan how a reviewed draft Pal Pack can become a user custom Pal
 - prepare repair steps when a draft is shallow, unsafe, or incomplete
 - distinguish Pal-owned Skills from host runtime Skills
 - generate validation cases and Marketplace metadata drafts without building Marketplace runtime features
@@ -72,6 +73,25 @@ Copy a longer prompt from:
 See examples:
 
 - [`../../examples/palsmith/composite-pal-creation-examples.md`](../../examples/palsmith/composite-pal-creation-examples.md)
+- [`../../examples/palsmith/draft-to-custom-pal-installation-example.md`](../../examples/palsmith/draft-to-custom-pal-installation-example.md)
+
+## Draft To User Custom Pal
+
+PalSmith may help install a reviewed draft Pal Pack as a user custom Pal only through a no-code plan and a separately confirmed Runtime Task Package.
+
+Default boundary:
+
+- suggested target: `workspace/resources/user-pals/<pal-id>/`
+- `official: false`
+- private by default
+- discovery disabled by default
+- no central contacts write
+- no public Marketplace listing
+- no installer, scanner, daemon, connector, backend service, or runtime code
+
+Copyable prompt:
+
+- [`../../prompts/palsmith/install-draft-as-custom-pal.md`](../../prompts/palsmith/install-draft-as-custom-pal.md)
 
 ## Relationship With Faye
 

@@ -26,6 +26,8 @@ R168 upgrades PalSmith into a composite Pal creation architect. PalSmith can now
 
 R170 adds user-facing documentation, copyable prompts, and examples for composite Pal creation. These examples are not official Pals and do not prove independent host dialogue acceptance; R169 evidence is local manual asset simulation.
 
+R179 adds a no-code draft-to-user-custom Pal installation flow. This lets PalSmith plan how a reviewed draft Pal Pack can become a user custom Pal under a private-by-default user custom area, without promoting it to official Pal status, without writing central contacts, and without building an installer or runtime service.
+
 ## Current Boundary
 
 PalSmith is not a CLI or built-in software tool. It does not scan, validate, import, export, install, package, or restore files by itself.
@@ -35,6 +37,8 @@ PalSmith generates Runtime Task Packages. The current Agent Runtime, such as Cod
 PalSmith collaboration is selected by current Pal + current Brain / AI judgement. AgentPal Core does not do keyword routing, and Mira is the default entry Pal rather than the only Pal that can call PalSmith.
 
 Task package examples live in `examples/task-packages/`. Reusable task package templates live in `templates/task-packages/`. Their indexes are `examples/task-packages/README.md` and `templates/task-packages/README.md`.
+
+Draft-to-custom installation planning is governed by `core/custom-pal-installation-protocol.md`. The default suggested target is `workspace/resources/user-pals/<pal-id>/`, but PalSmith must present an installation plan and receive explicit user confirmation before any Runtime write.
 
 Release readiness is checked through Markdown evals, including `evals/palsmith-release-scope-eval.md`.
 
@@ -95,6 +99,7 @@ Docs entry points:
 /pal PalSmith 这几个 Pal 职责是不是重复
 /pal PalSmith 这个团队可以发布吗
 /pal PalSmith 这个 Pal 是否真的能被 /pal 调用
+/pal PalSmith 请把这个草稿 Pal Pack 安装为我的用户自定义 Pal，先输出安装计划，不要写 official/pals，也不要改 contacts
 ```
 
 ## Composite Creation User Path
