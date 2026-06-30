@@ -558,6 +558,7 @@ Use the current docs directories as the public entry points. Archived research n
 | `standards/palsmith/palsmith-asset-classification-standard.md` | R98-C PalSmith asset classification standard |
 | `official/pals/PalSmith-pal-governor/core/composite-pal-distillation-protocol.md` | R168 PalSmith composite Pal creation protocol |
 | `official/pals/PalSmith-pal-governor/core/custom-pal-installation-protocol.md` | R179 PalSmith draft-to-user-custom Pal installation protocol |
+| `official/pals/PalSmith-pal-governor/core/user-custom-pal-discovery-authorization-protocol.md` | R185 user custom Pal discovery authorization protocol |
 | `official/pals/PalSmith-pal-governor/skills/composite-pal-distillation-skill.md` | R168 PalSmith composite Pal distillation Skill |
 | `official/pals/PalSmith-pal-governor/templates/composite-pal-creation-plan.md` | R168 composite Pal creation plan template |
 | `official/pals/PalSmith-pal-governor/evals/composite-pal-distillation-eval.md` | R168 composite Pal distillation eval |
@@ -593,6 +594,16 @@ Use the current docs directories as the public entry points. Archived research n
 | `evals/palbench/v0.5/palsmith/r183-unauthorized-delegation-refusal.md` | R183 unauthorized delegation refusal evidence |
 | `evals/palbench/v0.5/palsmith/r183-quinn-user-custom-pal-discovery-review.md` | R183 Quinn review for user custom Pal invocation and discovery boundaries |
 | `evals/palbench/v0.5/palsmith/r183-user-custom-pal-invocation-discovery-summary.md` | R183 user custom Pal invocation and discovery refusal summary |
+| `docs/06-palsmith/user-custom-pal-discovery-authorization.md` | R185 user custom Pal discovery authorization user guide |
+| `prompts/palsmith/authorize-user-custom-pal-discovery.md` | R185 copyable PalSmith authorization prompt |
+| `templates/palsmith/user-custom-pal-authorization-record.md` | R185 user custom Pal authorization record template |
+| `templates/palsmith/user-custom-pal-discovery-policy.md` | R185 user custom Pal discovery policy template |
+| `evals/palbench/v0.5/palsmith/r185-user-custom-pal-discovery-authorization-design.md` | R185 discovery authorization design evidence |
+| `evals/palbench/v0.5/palsmith/r185-user-custom-pal-authorization-boundary-cases.md` | R185 authorization boundary cases evidence |
+| `evals/palbench/v0.5/palsmith/r185-quinn-authorization-flow-review.md` | R185 Quinn review for user custom Pal authorization flow |
+| `evals/palbench/v0.5/palsmith/r186-user-custom-pal-authorization-quality-regression.md` | R186 user custom Pal authorization quality regression |
+| `evals/palbench/v0.5/palsmith/r186-authorization-boundary-pressure-tests.md` | R186 authorization boundary pressure tests |
+| `evals/palbench/v0.5/palsmith/r186-quinn-authorization-regression-review.md` | R186 Quinn authorization regression review |
 | `templates/palsmith/minimal-pal-generation-checklist.md` | Minimal Pal generation checklist |
 | `templates/palsmith/standard-pal-generation-checklist.md` | Standard Pal generation checklist |
 | `templates/palsmith/pal-asset-classification-result-template.json` | Pal asset classification result JSON template |

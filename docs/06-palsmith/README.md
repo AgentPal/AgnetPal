@@ -16,6 +16,7 @@ In v0.5, PalSmith is a no-code Pal asset governor. It can help a user turn goals
 - prepare repair steps when a draft is shallow, unsafe, or incomplete
 - distinguish Pal-owned Skills from host runtime Skills
 - generate validation cases and Marketplace metadata drafts without building Marketplace runtime features
+- design explicit authorization for user custom Pal discovery, invocation, limited delegation, contacts registration, and Marketplace draft work
 
 ## Composite Pal Creation
 
@@ -92,6 +93,19 @@ Default boundary:
 Copyable prompt:
 
 - [`../../prompts/palsmith/install-draft-as-custom-pal.md`](../../prompts/palsmith/install-draft-as-custom-pal.md)
+
+## User Custom Pal Discovery Authorization
+
+After a user custom Pal exists, it remains private by default. PalSmith can help the user prepare scoped authorization for workspace discovery, workspace invocation, limited delegation, contacts registration, or Marketplace draft metadata.
+
+Discovery does not imply delegation. Contacts registration and public Marketplace listing remain separate governance tasks.
+
+Read:
+
+- [`user-custom-pal-discovery-authorization.md`](user-custom-pal-discovery-authorization.md)
+- [`../../prompts/palsmith/authorize-user-custom-pal-discovery.md`](../../prompts/palsmith/authorize-user-custom-pal-discovery.md)
+- [`../../templates/palsmith/user-custom-pal-authorization-record.md`](../../templates/palsmith/user-custom-pal-authorization-record.md)
+- [`../../templates/palsmith/user-custom-pal-discovery-policy.md`](../../templates/palsmith/user-custom-pal-discovery-policy.md)
 
 ## Relationship With Faye
 

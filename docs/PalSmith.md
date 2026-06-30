@@ -19,6 +19,7 @@ It can help with:
 - detecting responsibility conflicts
 - reviewing imports, exports, snapshots, rollbacks, and version upgrades as no-code governance tasks
 - planning how a reviewed draft Pal Pack can become a user custom Pal
+- designing explicit authorization for user custom Pal discovery, invocation, limited delegation, contacts registration, and Marketplace draft work
 - designing validation tasks and Marketplace metadata for draft Pals without building Marketplace runtime features
 
 ## Composite Pal Creation
@@ -137,6 +138,18 @@ This is not an official Pal path and does not update central contacts. Public Ma
 Copyable prompt: [`../prompts/palsmith/install-draft-as-custom-pal.md`](../prompts/palsmith/install-draft-as-custom-pal.md)
 
 Example: [`../examples/palsmith/draft-to-custom-pal-installation-example.md`](../examples/palsmith/draft-to-custom-pal-installation-example.md)
+
+## User Custom Pal Discovery Authorization
+
+After install, a user custom Pal stays private by default. Discovery, unified invocation, limited delegation, contacts registration, and Marketplace draft work are separate authorization fields. Turning on discovery does not turn on delegation, contacts registration, official status, or public Marketplace listing.
+
+Use:
+
+- [`06-palsmith/user-custom-pal-discovery-authorization.md`](06-palsmith/user-custom-pal-discovery-authorization.md)
+- [`../prompts/palsmith/authorize-user-custom-pal-discovery.md`](../prompts/palsmith/authorize-user-custom-pal-discovery.md)
+- [`../templates/palsmith/user-custom-pal-authorization-record.md`](../templates/palsmith/user-custom-pal-authorization-record.md)
+
+PalSmith must keep the authorization auditable and revocable, and must ask for explicit approval before any write.
 
 ## Faye To PalSmith To Quinn
 
