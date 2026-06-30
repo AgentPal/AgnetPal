@@ -572,6 +572,11 @@ Use the current docs directories as the public entry points. Archived research n
 | `evals/palbench/v0.5/palsmith/r174-draft-pal-pack-creation.md` | R174 PalSmith draft Pal Pack creation evidence |
 | `evals/palbench/v0.5/palsmith/r174-quinn-draft-pal-pack-review.md` | R174 draft Pal Pack file-level QA review |
 | `evals/palbench/v0.5/palsmith/r175-draft-pal-pack-quality-regression.md` | R175 PalSmith draft Pal Pack quality regression and commit readiness evidence |
+| `evals/palbench/v0.5/palsmith/r177-draft-pal-loading-regression.md` | R177 draft Pal loading and identity regression evidence |
+| `evals/palbench/v0.5/palsmith/r177-draft-pal-product-review-task.md` | R177 draft Pal product review task evidence |
+| `evals/palbench/v0.5/palsmith/r177-draft-pal-boundary-pressure-test.md` | R177 draft Pal boundary pressure test evidence |
+| `evals/palbench/v0.5/palsmith/r177-quinn-draft-usage-review.md` | R177 Quinn read-only draft usage review |
+| `evals/palbench/v0.5/palsmith/r177-draft-pal-usage-regression-summary.md` | R177 draft Pal usage regression summary |
 | `templates/palsmith/minimal-pal-generation-checklist.md` | Minimal Pal generation checklist |
 | `templates/palsmith/standard-pal-generation-checklist.md` | Standard Pal generation checklist |
 | `templates/palsmith/pal-asset-classification-result-template.json` | Pal asset classification result JSON template |
